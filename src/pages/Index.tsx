@@ -167,25 +167,6 @@ const Index = () => {
               />
             </div>
             <div className="flex flex-col justify-center">
-              <div className="text-terra mb-6">
-                <svg
-                  className="w-16 h-16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 4H4V10H10V4Z"
-                    fill="currentColor"
-                    fillOpacity="0.3"
-                  />
-                  <path
-                    d="M20 4H14V10H20V4Z"
-                    fill="currentColor"
-                    fillOpacity="0.3"
-                  />
-                </svg>
-              </div>
               <blockquote className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-6">
                 "The trails pushed me to my limits, but the breathtaking views and the sense of accomplishment made every step worth it. This wasn't just a run - it was a life-changing experience."
               </blockquote>
