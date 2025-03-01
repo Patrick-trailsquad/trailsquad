@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, Mountain, MapPin } from "lucide-react";
 
@@ -14,7 +13,7 @@ const Index = () => {
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-black/20" /> {/* Reduced overlay opacity for better visibility */}
+          <div className="absolute inset-0 bg-black/40" /> {/* Increased overlay opacity for better text readability */}
         </div>
         
         <div className="container mx-auto px-4 z-10">
