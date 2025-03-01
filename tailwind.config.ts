@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,6 +64,12 @@ export default {
       },
       borderColor: {
         border: 'hsl(var(--border))',
+      },
+      backgroundColor: {
+        background: 'hsl(var(--background))',
+      },
+      textColor: {
+        foreground: 'hsl(var(--foreground))',
       }
     }
   },
