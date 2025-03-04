@@ -36,10 +36,12 @@ const SwissAlps = () => {
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
-                <li><strong>Date:</strong> June 2024</li>
+                <li><strong>Location:</strong> Courmayeur, Italy</li>
+                <li><strong>Date of run:</strong> June 25, 2024</li>
+                <li><strong>Dates of trip:</strong> June 23-27, 2024</li>
                 <li><strong>Duration:</strong> 5 days</li>
-                <li><strong>Difficulty:</strong> Intermediate to Advanced</li>
-                <li><strong>Spots Available:</strong> 8</li>
+                <li><strong>Available distances:</strong> 30km, 50km, 100km</li>
+                <li><strong>Spots available:</strong> 8</li>
               </ul>
             </div>
           </div>
