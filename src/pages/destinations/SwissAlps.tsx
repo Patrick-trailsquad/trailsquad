@@ -25,7 +25,7 @@ const SwissAlps = () => {
 
       <div className="container mx-auto px-4 py-12">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-          Swiss Alps Adventure
+          Courmayeur Grand Trail, Italy
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
