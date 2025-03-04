@@ -49,13 +49,24 @@ const NewZealand = () => {
               Book Your Spot
             </button>
             <div className="bg-stone p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">What's Included</h2>
+              <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
               <ul className="space-y-2 list-disc pl-4">
+                <li>Entry ticket to trail run</li>
+                <li>Plane ticket from Copenhagen and back</li>
+                <li>Transportation from airport to destination hotel</li>
                 <li>Expert local guides</li>
-                <li>Luxury eco-lodge accommodation</li>
+                <li>Minimum 4 star hotel experience for the duration of the trip</li>
                 <li>All meals and snacks</li>
                 <li>Transportation during the trip</li>
                 <li>Cultural experiences with local Maori</li>
+              </ul>
+            </div>
+            <div className="bg-stone p-6 rounded-xl">
+              <h2 className="font-cabinet text-2xl font-bold mb-4">What can be added</h2>
+              <ul className="space-y-2 list-disc pl-4">
+                <li>Dedicated running coach for the group or individually</li>
+                <li>Weekly run schedules based on participants' current running form</li>
+                <li>Marketing material if used for corporate trips</li>
               </ul>
             </div>
           </div>
