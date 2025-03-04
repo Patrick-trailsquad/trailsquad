@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const destinations = [
   {
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
     location: "Courmayeur Grand Trail, Italy",
     date: "July 2025",
     spots: "8 spots left",
