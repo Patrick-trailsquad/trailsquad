@@ -11,7 +11,7 @@ const features = [
   {
     icon: <Trophy className="w-8 h-8 text-terra" />,
     title: "Wonderful Sports Experiences",
-    description: "Run with experienced local guides who know every twist and turn."
+    description: "Set healthy goals for yourself and support an active lifestyle by training towards - and succeeding in - sports adventures"
   },
   {
     icon: <Users className="w-8 h-8 text-terra" />,
