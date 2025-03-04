@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -24,7 +25,7 @@ const HeroSection = () => {
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-white/10 backdrop-blur-sm rounded-full text-white">
             Epic Trail Adventures
           </span>
-          <h1 className="font-cabinet text-6xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="font-cabinet text-4xl md:text-7xl font-bold text-white mb-6">
             Run in the World's
             <br />
             Most Stunning Locations
