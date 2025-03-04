@@ -31,7 +31,7 @@ const Menu = () => {
             <div className="flex items-center justify-center py-4 space-x-12">
               {[
                 { href: '#', label: 'Home', icon: Home },
-                { href: '#upcoming-trips', label: 'Upcoming trips', icon: Calendar },
+                { href: '#upcoming-trips', label: 'Upcoming destinations', icon: Calendar },
                 { href: '#about', label: 'About', icon: Info }
               ].map((item) => (
                 <a
