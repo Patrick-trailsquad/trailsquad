@@ -32,7 +32,7 @@ const Menu = () => {
               <img 
                 src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
                 alt="Trail Squad Logo" 
-                className="h-8"
+                className="h-10" /* Changed from h-8 to h-10 */
               />
               <div className="flex items-center space-x-12">
                 {[
