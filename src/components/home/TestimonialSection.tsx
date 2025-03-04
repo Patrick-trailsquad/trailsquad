@@ -6,7 +6,7 @@ const TestimonialSection = () => {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+          <div className="relative aspect-square rounded-2xl overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211"
               alt="Tired but happy runner after finishing race"
