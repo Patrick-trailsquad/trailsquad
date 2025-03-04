@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -25,11 +24,11 @@ const destinations = [
     href: "/destinations/norwegian-fjords"
   },
   {
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
-    location: "Dolomites Skyrace, Italy",
-    date: "September 2024",
-    spots: "10 spots left",
-    href: "/destinations/dolomites"
+    image: "/lovable-uploads/609b48d8-13b5-4f5b-b65e-9e75141d6c2d.png",
+    location: "Transylvania 100, Romania",
+    date: "May 2026",
+    spots: "15 spots left",
+    href: "/destinations/transylvania"
   },
   {
     image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",
