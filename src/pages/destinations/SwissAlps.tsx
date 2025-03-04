@@ -28,12 +28,30 @@ const SwissAlps = () => {
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-lg mb-4">
-              Embark on an extraordinary adventure through the heart of the Italian Alps at the prestigious Grand Trail Courmayeur. Set against the backdrop of Europe's highest peak, Mont Blanc, this iconic trail running event offers an unparalleled blend of challenging terrain and breathtaking alpine scenery. Wind your way through ancient glacial valleys, pristine mountain lakes, and historic mountain villages that tell tales of centuries-old Alpine culture.
+            <div className="space-y-6">
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <p className="text-lg">
+                  Embark on an extraordinary adventure through the heart of the Italian Alps at the prestigious Grand Trail Courmayeur. Set against the backdrop of Europe's highest peak, Mont Blanc, this iconic trail running event offers an unparalleled blend of challenging terrain and breathtaking alpine scenery. Wind your way through ancient glacial valleys, pristine mountain lakes, and historic mountain villages that tell tales of centuries-old Alpine culture.
+                </p>
+              </div>
 
-              As you traverse the well-marked trails, you'll experience dramatic elevation changes that reveal new perspectives of the majestic Mont Blanc massif at every turn. The route takes you through flowering meadows in summer bloom, across technical rocky sections, and along panoramic ridgelines that offer views extending into three countries - Italy, France, and Switzerland. Whether you choose the 30km, 55km, or the ultimate challenge of 100km, each route has been carefully crafted to showcase the most spectacular sections of the Mont Blanc region.
-            </p>
-            <div className="bg-white p-6 rounded-xl">
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <p className="text-lg">
+                  As you traverse the well-marked trails, you'll experience dramatic elevation changes that reveal new perspectives of the majestic Mont Blanc massif at every turn. The route takes you through flowering meadows in summer bloom and across technical rocky sections that will test your trail running abilities.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <p className="text-lg">
+                  Follow panoramic ridgelines that offer views extending into three countries - Italy, France, and Switzerland. Whether you choose the 30km, 55km, or the ultimate challenge of 100km, each route has been carefully crafted to showcase the most spectacular sections of the Mont Blanc region.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl mt-8">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Courmayeur, Italy</li>
@@ -44,6 +62,7 @@ const SwissAlps = () => {
               </ul>
             </div>
           </div>
+          
           <div className="space-y-6">
             <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
               Book Your Spot
