@@ -1,5 +1,4 @@
-
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NewZealand = () => {
@@ -45,6 +44,16 @@ const NewZealand = () => {
               ultra-runner or taking on your first long-distance trail challenge, MIUT offers various 
               distances to suit your ambitions while showcasing the raw beauty of this Portuguese paradise.
             </p>
+            <a 
+              href="https://www.miutmadeira.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-sage text-white px-6 py-3 rounded-lg hover:bg-sage/90 transition-colors mb-6"
+            >
+              Visit Official Site
+              <ExternalLink className="w-4 h-4" />
+            </a>
+
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
