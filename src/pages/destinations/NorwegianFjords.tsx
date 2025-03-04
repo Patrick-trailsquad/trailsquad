@@ -54,11 +54,7 @@ const NorwegianFjords = () => {
                 <li>Entry ticket to the trail run</li>
                 <li>Plane ticket from Copenhagen and back (if other departure airport, let's discuss)</li>
                 <li>Transportation from airport to destination hotel</li>
-                <li>Professional trail guides</li>
                 <li>Minimum 4 star hotel experience for the duration of the trip</li>
-                <li>All meals during the trip</li>
-                <li>Emergency support</li>
-                <li>Photography service</li>
               </ul>
             </div>
             <div className="bg-stone p-6 rounded-xl">
