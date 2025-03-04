@@ -1,21 +1,20 @@
-
 import { motion } from "framer-motion";
 import { Globe, Mountain, MapPin } from "lucide-react";
 
 const features = [
   {
     icon: <Globe className="w-8 h-8 text-terra" />,
-    title: "Global Destinations",
+    title: "Epic\nDestinations",
     description: "Access to exclusive trails across different continents and terrains."
   },
   {
     icon: <Mountain className="w-8 h-8 text-terra" />,
-    title: "Expert Guides",
+    title: "Wonderful Sports\nExperiences",
     description: "Run with experienced local guides who know every twist and turn."
   },
   {
     icon: <MapPin className="w-8 h-8 text-terra" />,
-    title: "Curated Experiences",
+    title: "Coaching &\nCommunity",
     description: "Carefully planned adventures combining running and cultural experiences."
   }
 ];
@@ -43,7 +42,7 @@ const FeaturesSection = () => {
               className="bg-stone p-8 rounded-2xl hover:shadow-lg transition-shadow duration-300"
             >
               <div className="mb-6">{feature.icon}</div>
-              <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">
+              <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3 whitespace-pre-line">
                 {feature.title}
               </h3>
               <p className="font-inter text-charcoal/80">
