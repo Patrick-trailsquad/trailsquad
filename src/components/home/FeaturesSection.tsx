@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Globe2, Trophy, Users } from "lucide-react";
 
@@ -6,7 +5,7 @@ const features = [
   {
     icon: <Globe2 className="w-8 h-8 text-terra" />,
     title: "Epic Destinations",
-    description: "Access to exclusive trails across different continents and terrains."
+    description: "Let us do the boring planning so you can travel the world and experience thrilling trails across continents and terrains"
   },
   {
     icon: <Trophy className="w-8 h-8 text-terra" />,
