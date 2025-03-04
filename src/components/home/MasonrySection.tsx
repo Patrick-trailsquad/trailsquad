@@ -8,8 +8,8 @@ const images = [
     className: "col-span-2 row-span-2"
   },
   {
-    src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
-    alt: "Low angle photography of trees at daytime",
+    src: "https://images.unsplash.com/photo-1486611367184-17759508999c",
+    alt: "Trail runner crossing mountain stream",
     className: "col-span-1"
   },
   {
@@ -18,13 +18,23 @@ const images = [
     className: "col-span-1"
   },
   {
-    src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05",
-    alt: "Foggy mountain summit",
+    src: "https://images.unsplash.com/photo-1504025468847-0e438279542c",
+    alt: "Trail runner ascending mountain path",
     className: "col-span-1 row-span-2"
   },
   {
     src: "https://images.unsplash.com/photo-1458668383970-8ddd3927deed",
     alt: "Mountain alps landscape",
+    className: "col-span-1"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1533646775192-0deded7f5a31",
+    alt: "Runner at sunset in mountains",
+    className: "col-span-2"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05",
+    alt: "Foggy mountain summit",
     className: "col-span-1"
   }
 ];
