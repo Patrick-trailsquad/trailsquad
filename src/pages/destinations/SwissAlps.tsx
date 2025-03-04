@@ -28,7 +28,7 @@ const SwissAlps = () => {
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <div className="space-y-6">
+            <div className="space-y-6 mb-8">
               <div>
                 <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
                 <p className="text-lg">
