@@ -30,7 +30,7 @@ const Menu = () => {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between py-4">
               <img 
-                src="/lovable-uploads/912fc842-fa5a-4c14-ab70-34c62312f9c6.png" 
+                src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
                 alt="Trail Squad Logo" 
                 className="h-8"
               />
