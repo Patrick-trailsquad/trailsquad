@@ -1,4 +1,3 @@
-
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -7,8 +6,8 @@ const NewZealand = () => {
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
         <img
-          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
-          alt="New Zealand Trails"
+          src="/lovable-uploads/af5c6191-258b-4a41-9a6d-7e722d1dad97.png"
+          alt="Madeira Island Ultra Trail"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
