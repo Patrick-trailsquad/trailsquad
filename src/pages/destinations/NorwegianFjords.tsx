@@ -77,15 +77,15 @@ const NorwegianFjords = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <HotelTile
               name="Hotel Ullensvang"
-              imageUrl="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a"
+              imageUrl="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e"
             />
             <HotelTile
               name="Fretheim Hotel"
-              imageUrl="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
+              imageUrl="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a"
             />
             <HotelTile
               name="Storfjord Hotel"
-              imageUrl="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+              imageUrl="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
             />
           </div>
         </div>
