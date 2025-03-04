@@ -36,11 +36,11 @@ const NewZealand = () => {
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
-                <li><strong>Location:</strong> Madeira Island, Portugal</li>
-                <li><strong>Date of run:</strong> July 15, 2024</li>
-                <li><strong>Dates of trip:</strong> July 12-18, 2024</li>
-                <li><strong>Duration:</strong> 7 days</li>
-                <li><strong>Available distances:</strong> 25km, 42km, 85km</li>
+                <li><strong>Location:</strong> Funchal, Madeira Island, Portugal</li>
+                <li><strong>Date of run:</strong> April 26, 2025</li>
+                <li><strong>Dates of trip:</strong> April 24-27, 2025</li>
+                <li><strong>Duration:</strong> 4 days</li>
+                <li><strong>Available distances:</strong> 16 km, 42 km, 60 km, 85km, 115 km</li>
               </ul>
             </div>
           </div>
