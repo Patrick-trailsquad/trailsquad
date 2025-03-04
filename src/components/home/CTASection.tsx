@@ -1,3 +1,4 @@
+import EmailSubscribeForm from "./EmailSubscribeForm";
 
 const CTASection = () => {
   return (
@@ -18,16 +19,7 @@ const CTASection = () => {
           <p className="font-inter text-xl text-white/90 mb-8">
             Join our community of trail runners and experience the world's most beautiful paths.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-white/20"
-            />
-            <button className="bg-white text-terra px-8 py-4 rounded-full font-cabinet font-medium hover:bg-stone transition-colors duration-300">
-              Get Started
-            </button>
-          </form>
+          <EmailSubscribeForm />
         </div>
       </div>
     </section>
