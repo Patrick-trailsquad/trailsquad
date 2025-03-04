@@ -1,11 +1,12 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const destinations = [
   {
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-    location: "New Zealand",
-    date: "July 2024",
+    image: "/lovable-uploads/af5c6191-258b-4a41-9a6d-7e722d1dad97.png",
+    location: "Madeira Island Ultra Trail, Portugal",
+    date: "April 2025",
     spots: "12 spots left",
     href: "/destinations/new-zealand"
   },
