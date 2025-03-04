@@ -38,7 +38,7 @@ const TestimonialSection = () => {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
                 <div className="flex flex-col items-center text-center">
-                  <div className="relative w-1/4 aspect-square rounded-full overflow-hidden mb-6">
+                  <div className="relative w-64 aspect-square rounded-2xl overflow-hidden mb-6">
                     <img
                       src={testimonial.image}
                       alt={`${testimonial.author} testimonial`}
@@ -46,10 +46,10 @@ const TestimonialSection = () => {
                       loading="lazy"
                     />
                   </div>
-                  <blockquote className="font-cabinet text-lg md:text-xl font-bold text-charcoal mb-4">
+                  <blockquote className="font-cabinet text-lg md:text-xl font-bold text-charcoal mb-4 max-w-[16rem]">
                     "{testimonial.quote}"
                   </blockquote>
-                  <div>
+                  <div className="max-w-[16rem]">
                     <p className="font-cabinet text-lg font-bold text-charcoal">{testimonial.author}</p>
                     <p className="text-charcoal/60">{testimonial.title}</p>
                   </div>
