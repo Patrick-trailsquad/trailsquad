@@ -73,9 +73,6 @@ const NewZealand = () => {
                   <p className="font-cabinet text-4xl font-bold text-charcoal">16.399 DKK</p>
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
-                <div className="bg-sage/10 px-4 py-2 rounded-full">
-                  <p className="text-sage font-medium">All-inclusive</p>
-                </div>
               </div>
               <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
                 Book Your Spot
