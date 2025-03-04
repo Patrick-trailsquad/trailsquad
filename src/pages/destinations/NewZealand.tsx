@@ -56,9 +56,6 @@ const NewZealand = () => {
                 <li>Transportation from airport to destination hotel</li>
                 <li>Expert local guides</li>
                 <li>Minimum 4 star hotel experience for the duration of the trip</li>
-                <li>All meals and snacks</li>
-                <li>Transportation during the trip</li>
-                <li>Cultural experiences with local Maori</li>
               </ul>
             </div>
             <div className="bg-stone p-6 rounded-xl">
