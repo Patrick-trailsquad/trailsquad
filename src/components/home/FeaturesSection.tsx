@@ -1,19 +1,20 @@
+
 import { motion } from "framer-motion";
-import { Globe, Mountain, MapPin } from "lucide-react";
+import { Globe2, Trophy, Users } from "lucide-react";
 
 const features = [
   {
-    icon: <Globe className="w-8 h-8 text-terra" />,
+    icon: <Globe2 className="w-8 h-8 text-terra" />,
     title: "Epic\nDestinations",
     description: "Access to exclusive trails across different continents and terrains."
   },
   {
-    icon: <Mountain className="w-8 h-8 text-terra" />,
+    icon: <Trophy className="w-8 h-8 text-terra" />,
     title: "Wonderful Sports\nExperiences",
     description: "Run with experienced local guides who know every twist and turn."
   },
   {
-    icon: <MapPin className="w-8 h-8 text-terra" />,
+    icon: <Users className="w-8 h-8 text-terra" />,
     title: "Coaching &\nCommunity",
     description: "Carefully planned adventures combining running and cultural experiences."
   }
