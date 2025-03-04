@@ -45,9 +45,20 @@ const NorwegianFjords = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
-              Book Your Spot
-            </button>
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="flex justify-between items-center mb-6">
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">Starting from</p>
+                  <p className="font-cabinet text-4xl font-bold text-charcoal">€1,999</p>
+                </div>
+                <div className="bg-sage/10 px-4 py-2 rounded-full">
+                  <p className="text-sage font-medium">All-inclusive</p>
+                </div>
+              </div>
+              <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
+                Book Your Spot
+              </button>
+            </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
               <ul className="space-y-2 list-disc pl-4">
