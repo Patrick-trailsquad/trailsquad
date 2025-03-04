@@ -33,7 +33,7 @@ const destinations = [
   },
   {
     image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",
-    location: "Mallorca by UTMB",
+    location: "Mallorca by UTMB, Spain",
     date: "November 2025",
     spots: "20 spots left",
     href: "/destinations/mallorca"
