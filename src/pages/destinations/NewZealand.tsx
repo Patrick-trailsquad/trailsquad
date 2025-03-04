@@ -1,3 +1,4 @@
+
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -29,9 +30,20 @@ const NewZealand = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <p className="text-lg mb-4">
-              Discover the diverse landscapes of New Zealand on foot. From lush forests 
-              to volcanic terrains, this adventure will take you through some of the 
-              most spectacular running trails in the Southern Hemisphere.
+              Embark on an extraordinary running adventure through the stunning landscapes of Madeira Island, 
+              where the legendary MIUT (Madeira Island Ultra Trail) awaits. This prestigious race takes you 
+              on an unforgettable journey from the northern shores of Porto Moniz to the southern town of 
+              Machico, traversing the entire island through its most breathtaking terrain. You'll experience 
+              the thrill of running from sea level to Pico Ruivo, Madeira's highest peak at 1,862 meters, 
+              where the Atlantic Ocean stretches endlessly in every direction.
+            </p>
+            <p className="text-lg mb-4">
+              The trail combines technical mountain paths, ancient levada waterways, and lush laurel forests 
+              that are UNESCO World Heritage sites. As you navigate through diverse microclimates, you'll 
+              encounter everything from misty mountain peaks to subtropical valleys, making this one of 
+              Europe's most unique and challenging ultra-trail experiences. Whether you're an experienced 
+              ultra-runner or taking on your first long-distance trail challenge, MIUT offers various 
+              distances to suit your ambitions while showcasing the raw beauty of this Portuguese paradise.
             </p>
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
