@@ -18,7 +18,7 @@ const ChiantiUltraTrail = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="font-cabinet text-4xl md:text-6xl font-bold text-white mb-4">
-              Chianti Ultra Trail By UTMB
+              Chianti Ultra Trail By UTMB, Italy
             </h1>
             <p className="font-inter text-xl text-white/90">March 2026</p>
           </div>

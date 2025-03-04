@@ -40,7 +40,7 @@ const destinations = [
   },
   {
     image: "/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png",
-    location: "Chianti Ultra Trail By UTMB",
+    location: "Chianti Ultra Trail By UTMB, Italy",
     date: "March 2026",
     spots: "15 spots left",
     href: "/destinations/chianti"
