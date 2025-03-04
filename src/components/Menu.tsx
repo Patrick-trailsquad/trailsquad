@@ -32,7 +32,7 @@ const Menu = () => {
               <img 
                 src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
                 alt="Trail Squad Logo" 
-                className="h-10" /* Changed from h-8 to h-10 */
+                className="h-10"
               />
               <div className="flex items-center space-x-12">
                 {[
@@ -43,7 +43,7 @@ const Menu = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="flex items-center gap-2 text-charcoal hover:text-terra transition-colors duration-300"
+                    className="flex items-center gap-2 text-charcoal hover:text-terra hover:font-bold transition-all duration-300"
                   >
                     <item.icon className="w-4 h-4" />
                     <span className="font-cabinet font-medium">{item.label}</span>
