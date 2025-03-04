@@ -1,21 +1,20 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const destinations = [
-  {
-    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
-    location: "Courmayeur Grand Trail, Italy",
-    date: "July 2025",
-    spots: "8 spots left",
-    href: "/destinations/swiss-alps"
-  },
   {
     image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
     location: "New Zealand",
     date: "July 2024",
     spots: "12 spots left",
     href: "/destinations/new-zealand"
+  },
+  {
+    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
+    location: "Courmayeur Grand Trail, Italy",
+    date: "July 2025",
+    spots: "8 spots left",
+    href: "/destinations/swiss-alps"
   },
   {
     image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
