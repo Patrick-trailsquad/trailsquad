@@ -32,11 +32,11 @@ const destinations = [
     href: "/destinations/dolomites"
   },
   {
-    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
-    location: "Mont Blanc Ultra Trail, France",
-    date: "June 2025",
-    spots: "4 spots left",
-    href: "/destinations/mont-blanc"
+    image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",
+    location: "Mallorca by UTMB",
+    date: "November 2025",
+    spots: "20 spots left",
+    href: "/destinations/mallorca"
   },
   {
     image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",

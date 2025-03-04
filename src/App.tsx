@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,7 @@ import NorwegianFjords from "./pages/destinations/NorwegianFjords";
 import Dolomites from "./pages/destinations/Dolomites";
 import MontBlanc from "./pages/destinations/MontBlanc";
 import BlackForest from "./pages/destinations/BlackForest";
+import Mallorca from "./pages/destinations/Mallorca";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
           <Route path="/destinations/dolomites" element={<Dolomites />} />
           <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
+          <Route path="/destinations/mallorca" element={<Mallorca />} />
           <Route path="/destinations/black-forest" element={<BlackForest />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
