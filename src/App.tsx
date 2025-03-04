@@ -9,6 +9,9 @@ import NotFound from "./pages/NotFound";
 import SwissAlps from "./pages/destinations/SwissAlps";
 import NewZealand from "./pages/destinations/NewZealand";
 import NorwegianFjords from "./pages/destinations/NorwegianFjords";
+import Dolomites from "./pages/destinations/Dolomites";
+import MontBlanc from "./pages/destinations/MontBlanc";
+import BlackForest from "./pages/destinations/BlackForest";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +26,9 @@ const App = () => (
           <Route path="/destinations/gtc" element={<SwissAlps />} />
           <Route path="/destinations/miut" element={<NewZealand />} />
           <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
+          <Route path="/destinations/dolomites" element={<Dolomites />} />
+          <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
+          <Route path="/destinations/black-forest" element={<BlackForest />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

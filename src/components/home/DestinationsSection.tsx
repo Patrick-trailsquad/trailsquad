@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -17,11 +18,32 @@ const destinations = [
     href: "/destinations/gtc"
   },
   {
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
     location: "Norwegian Fjords",
     date: "August 2024",
     spots: "6 spots left",
     href: "/destinations/norwegian-fjords"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+    location: "Dolomites Skyrace, Italy",
+    date: "September 2024",
+    spots: "10 spots left",
+    href: "/destinations/dolomites"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+    location: "Mont Blanc Ultra Trail, France",
+    date: "June 2025",
+    spots: "4 spots left",
+    href: "/destinations/mont-blanc"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
+    location: "Black Forest Ultra Trail, Germany",
+    date: "May 2025",
+    spots: "15 spots left",
+    href: "/destinations/black-forest"
   }
 ];
 
