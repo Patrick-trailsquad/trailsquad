@@ -102,7 +102,7 @@ const Index = () => {
               Upcoming Adventures
             </span>
             <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-              Next Destinations
+              Upcoming Destinations
             </h2>
           </div>
 
