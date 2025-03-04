@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, Mountain, MapPin } from "lucide-react";
+import Menu from "../components/Menu";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-stone">
+      <Menu />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -13,7 +15,7 @@ const Index = () => {
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-black/40" /> {/* Increased overlay opacity for better text readability */}
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         <div className="container mx-auto px-4 z-10">
@@ -93,7 +95,7 @@ const Index = () => {
       </section>
 
       {/* Upcoming Trips Section */}
-      <section className="py-24 bg-stone">
+      <section id="upcoming-trips" className="py-24 bg-stone">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-white rounded-full text-charcoal">
