@@ -41,7 +41,6 @@ const NorwegianFjords = () => {
                 <li><strong>Dates of trip:</strong> August 18-23, 2024</li>
                 <li><strong>Duration:</strong> 6 days</li>
                 <li><strong>Available distances:</strong> 21km, 42km</li>
-                <li><strong>Spots available:</strong> 6</li>
               </ul>
             </div>
           </div>

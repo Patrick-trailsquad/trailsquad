@@ -41,7 +41,6 @@ const SwissAlps = () => {
                 <li><strong>Dates of trip:</strong> June 23-27, 2024</li>
                 <li><strong>Duration:</strong> 5 days</li>
                 <li><strong>Available distances:</strong> 30km, 50km, 100km</li>
-                <li><strong>Spots available:</strong> 8</li>
               </ul>
             </div>
           </div>

@@ -41,7 +41,6 @@ const NewZealand = () => {
                 <li><strong>Dates of trip:</strong> July 12-18, 2024</li>
                 <li><strong>Duration:</strong> 7 days</li>
                 <li><strong>Available distances:</strong> 25km, 42km, 85km</li>
-                <li><strong>Spots available:</strong> 12</li>
               </ul>
             </div>
           </div>
