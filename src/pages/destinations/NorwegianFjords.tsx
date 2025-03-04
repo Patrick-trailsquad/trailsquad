@@ -1,6 +1,5 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import HotelTile from "../../components/destinations/HotelTile";
 
 const NorwegianFjords = () => {
   return (
@@ -67,26 +66,6 @@ const NorwegianFjords = () => {
                 <li>Video material for marketing purposes</li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-16">
-          <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-8">
-            Hotels we work with
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <HotelTile
-              name="Hotel Ullensvang"
-              imageUrl="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e"
-            />
-            <HotelTile
-              name="Fretheim Hotel"
-              imageUrl="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a"
-            />
-            <HotelTile
-              name="Storfjord Hotel"
-              imageUrl="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
-            />
           </div>
         </div>
       </div>

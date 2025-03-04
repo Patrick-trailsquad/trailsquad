@@ -1,6 +1,5 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import HotelTile from "../../components/destinations/HotelTile";
 
 const SwissAlps = () => {
   return (
@@ -67,26 +66,6 @@ const SwissAlps = () => {
                 <li>Video material for marketing purposes</li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-16">
-          <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-8">
-            Hotels we work with
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <HotelTile
-              name="Grand Hotel Royal & Golf"
-              imageUrl="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
-            />
-            <HotelTile
-              name="Auberge Du Cheval Blanc"
-              imageUrl="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e"
-            />
-            <HotelTile
-              name="Hotel Mont Blanc"
-              imageUrl="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a"
-            />
           </div>
         </div>
       </div>
