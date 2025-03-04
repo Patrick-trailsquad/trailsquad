@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -26,16 +25,12 @@ const HeroSection = () => {
             Epic Trail Adventures
           </span>
           <h1 className="font-cabinet text-6xl md:text-7xl font-bold text-white mb-6">
-            Get incredible experiences
+            Run in the World's
             <br />
-            and boost your active life style
-            <br />
-            by defeating the summits
-            <br />
-            of Europe's mountains
+            Most Stunning Locations
           </h1>
           <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join our community of trail runners exploring breathtaking routes from Turkey's magical valleys to the world's most spectacular trails.
+            Get incredible experiences and boost your active life style by defeating the summits of Europe's mountains
           </p>
           <button className="bg-white text-charcoal px-8 py-4 rounded-full font-cabinet font-medium hover:bg-stone transition-colors duration-300 flex items-center gap-2 mx-auto">
             Start Your Journey
