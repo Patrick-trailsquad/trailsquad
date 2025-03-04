@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -8,7 +7,7 @@ const destinations = [
     location: "Madeira Island Ultra Trail, Portugal",
     date: "April 2025",
     spots: "12 spots left",
-    href: "/destinations/new-zealand"
+    href: "/destinations/miut"
   },
   {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",

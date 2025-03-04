@@ -21,7 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/destinations/swiss-alps" element={<SwissAlps />} />
-          <Route path="/destinations/new-zealand" element={<NewZealand />} />
+          <Route path="/destinations/miut" element={<NewZealand />} />
           <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
