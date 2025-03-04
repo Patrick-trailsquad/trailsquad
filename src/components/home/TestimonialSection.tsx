@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -33,6 +32,9 @@ const TestimonialSection = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
+        <h1 className="text-4xl md:text-5xl font-cabinet font-bold text-center text-charcoal mb-16">
+          Happy Trail Squad Alumni!
+        </h1>
         <Carousel className="mx-auto max-w-7xl">
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
