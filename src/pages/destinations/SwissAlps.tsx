@@ -49,7 +49,7 @@ const SwissAlps = () => {
             </button>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's Included</h2>
-              <ul className="space-y-2">
+              <ul className="space-y-2 list-disc pl-4">
                 <li>Professional trail guides</li>
                 <li>Accommodation in mountain lodges</li>
                 <li>All meals during the trip</li>

@@ -49,7 +49,7 @@ const NewZealand = () => {
             </button>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's Included</h2>
-              <ul className="space-y-2">
+              <ul className="space-y-2 list-disc pl-4">
                 <li>Expert local guides</li>
                 <li>Luxury eco-lodge accommodation</li>
                 <li>All meals and snacks</li>
