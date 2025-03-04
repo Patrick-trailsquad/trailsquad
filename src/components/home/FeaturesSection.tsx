@@ -5,17 +5,17 @@ import { Globe2, Trophy, Users } from "lucide-react";
 const features = [
   {
     icon: <Globe2 className="w-8 h-8 text-terra" />,
-    title: "Epic\nDestinations",
+    title: "Epic Destinations",
     description: "Access to exclusive trails across different continents and terrains."
   },
   {
     icon: <Trophy className="w-8 h-8 text-terra" />,
-    title: "Wonderful Sports\nExperiences",
+    title: "Wonderful Sports Experiences",
     description: "Run with experienced local guides who know every twist and turn."
   },
   {
     icon: <Users className="w-8 h-8 text-terra" />,
-    title: "Coaching &\nCommunity",
+    title: "Coaching & Community",
     description: "Carefully planned adventures combining running and cultural experiences."
   }
 ];
