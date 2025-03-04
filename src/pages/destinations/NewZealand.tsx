@@ -63,6 +63,7 @@ const NewZealand = () => {
                 <li>Dedicated running coach for the group or individually</li>
                 <li>Weekly run schedules based on participants' current running form</li>
                 <li>Marketing material if used for corporate trips</li>
+                <li>Video material for marketing purposes</li>
               </ul>
             </div>
           </div>
