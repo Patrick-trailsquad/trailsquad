@@ -14,7 +14,7 @@ const destinations = [
     location: "Courmayeur Grand Trail, Italy",
     date: "July 2025",
     spots: "8 spots left",
-    href: "/destinations/swiss-alps"
+    href: "/destinations/gtc"
   },
   {
     image: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
