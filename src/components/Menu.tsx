@@ -1,11 +1,18 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Calendar, Info } from 'lucide-react';
+import { Home, Calendar, Info, Menu as MenuIcon } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Menu = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const menuItems = [
+    { href: '#', label: 'Home', icon: Home },
+    { href: '#upcoming-trips', label: 'Upcoming destinations', icon: Calendar },
+    { href: '#about', label: 'About', icon: Info }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +24,23 @@ const Menu = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
+
+  const MobileMenu = () => (
+    <SheetContent side="top" className="w-full h-[100dvh] bg-black/95 flex items-center justify-center border-none">
+      <div className="flex flex-col items-center space-y-8">
+        {menuItems.map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            className="flex items-center gap-2 text-white hover:text-terra hover:font-bold transition-all duration-300"
+          >
+            <item.icon className="w-6 h-6" />
+            <span className="font-cabinet text-xl">{item.label}</span>
+          </a>
+        ))}
+      </div>
+    </SheetContent>
+  );
 
   return (
     <AnimatePresence>
@@ -34,12 +58,10 @@ const Menu = () => {
                 alt="Trail Squad Logo" 
                 className="h-10"
               />
-              <div className="flex items-center space-x-12">
-                {[
-                  { href: '#', label: 'Home', icon: Home },
-                  { href: '#upcoming-trips', label: 'Upcoming destinations', icon: Calendar },
-                  { href: '#about', label: 'About', icon: Info }
-                ].map((item) => (
+              
+              {/* Desktop Menu */}
+              <div className="hidden md:flex items-center space-x-12">
+                {menuItems.map((item) => (
                   <a
                     key={item.label}
                     href={item.href}
@@ -50,6 +72,14 @@ const Menu = () => {
                   </a>
                 ))}
               </div>
+
+              {/* Mobile Menu */}
+              <Sheet>
+                <SheetTrigger className="md:hidden">
+                  <MenuIcon className="w-6 h-6 text-charcoal" />
+                </SheetTrigger>
+                <MobileMenu />
+              </Sheet>
             </div>
           </div>
         </motion.nav>
