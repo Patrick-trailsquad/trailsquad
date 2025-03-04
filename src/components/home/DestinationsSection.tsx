@@ -39,11 +39,11 @@ const destinations = [
     href: "/destinations/mallorca"
   },
   {
-    image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
-    location: "Black Forest Ultra Trail, Germany",
-    date: "May 2025",
+    image: "/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png",
+    location: "Chianti Ultra Trail By UTMB",
+    date: "March 2026",
     spots: "15 spots left",
-    href: "/destinations/black-forest"
+    href: "/destinations/chianti"
   }
 ];
 
