@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Globe2, Trophy, Users } from "lucide-react";
 
@@ -15,7 +16,7 @@ const features = [
   {
     icon: <Users className="w-8 h-8 text-terra" />,
     title: "Coaching & Community",
-    description: "Carefully planned adventures combining running and cultural experiences."
+    description: "Supported by running coaches and experts you can safely train towards ambitious running goals while getting special deals from our community"
   }
 ];
 
