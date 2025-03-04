@@ -26,9 +26,13 @@ const HeroSection = () => {
             Epic Trail Adventures
           </span>
           <h1 className="font-cabinet text-6xl md:text-7xl font-bold text-white mb-6">
-            Run in the World's
+            Get incredible experiences
             <br />
-            Most Stunning Locations
+            and boost your active life style
+            <br />
+            by defeating the summits
+            <br />
+            of Europe's mountains
           </h1>
           <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Join our community of trail runners exploring breathtaking routes from Turkey's magical valleys to the world's most spectacular trails.
