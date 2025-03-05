@@ -28,15 +28,29 @@ const Vesuvio = () => {
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-lg mb-4">
-              Embark on an extraordinary journey through the ancient paths of Mount Vesuvius in this legendary ultra marathon. 
-              Run along the iconic volcano's trails, where history and nature intertwine dramatically. Wind through pine forests, 
-              cross black lava fields, and traverse paths carved by centuries of volcanic activity. As you ascend to heights of up 
-              to 1,281 meters, you'll be rewarded with breathtaking panoramic views of the Gulf of Naples, the islands of Capri and 
-              Ischia, and the stunning Amalfi Coast. This unique race combines the raw power of volcanic terrain with the rich 
-              cultural heritage of the Campania region, offering runners an unforgettable experience where each step tells a story 
-              of geological wonder and human perseverance.
-            </p>
+            <div className="space-y-6 mb-8">
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <p className="text-lg">
+                  Set against the dramatic backdrop of Italy's most iconic volcano, the Vesuvio Ultra Marathon takes you through a unique landscape where ancient history and raw natural power converge. Mount Vesuvius, standing sentinel over the Gulf of Naples, offers runners an unparalleled opportunity to experience one of the world's most historically significant volcanic regions.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <p className="text-lg">
+                  Wind through pristine pine forests, traverse black lava fields, and follow paths carved by centuries of volcanic activity. As you ascend to heights of up to 1,281 meters, each turn reveals breathtaking new vistas - from the sparkling Gulf of Naples to the islands of Capri and Ischia, and the stunning Amalfi Coast stretched out before you.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <p className="text-lg">
+                  This unique race combines the raw power of volcanic terrain with the rich cultural heritage of the Campania region. Whether you choose the 23 km, 45 km, or the ultimate 72 km challenge, each route has been carefully designed to test your endurance while offering an unforgettable journey where each step tells a story of geological wonder and human perseverance.
+                </p>
+              </div>
+            </div>
+
             <a 
               href="https://www.vesuvioultramarathon.it/en/"
               target="_blank"
