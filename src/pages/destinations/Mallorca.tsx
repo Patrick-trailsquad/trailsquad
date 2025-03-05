@@ -81,7 +81,7 @@ const Mallorca = () => {
                 <li><strong>Date of run:</strong> November 1, 2025</li>
                 <li><strong>Dates of trip:</strong> October 30-November 2, 2025</li>
                 <li><strong>Duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 20km, 50km, 100km, 100m</li>
+                <li><strong>Available distances:</strong> 20 km, 50 km, 100 km, 100m</li>
               </ul>
             </div>
           </div>
