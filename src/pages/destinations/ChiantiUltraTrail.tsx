@@ -1,62 +1,119 @@
-import Menu from "../../components/Menu";
-import Footer from "../../components/Footer";
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ChiantiUltraTrail = () => {
   return (
     <div className="min-h-screen bg-stone">
-      <Menu />
-      
-      {/* Hero Section */}
-      <div className="relative h-[60vh] md:h-[80vh]">
+      <div className="relative h-[60vh]">
         <img
           src="/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png"
           alt="Chianti Ultra Trail"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="font-cabinet text-4xl md:text-6xl font-bold text-white mb-4">
-              Chianti Ultra Trail By UTMB, Italy
-            </h1>
-            <p className="font-inter text-xl text-white/90">March 2026</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Content Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-cabinet text-3xl font-bold text-charcoal mb-8">
-            Run Through the Heart of Tuscan Wine Country
-          </h2>
-          <div className="prose prose-lg">
-            <p>
-              Experience the breathtaking beauty of the Chianti region as you run through historic vineyards,
-              medieval villages, and rolling hills. This unique ultra trail combines the challenge of trail
-              running with the cultural richness of one of Italy's most famous wine regions.
-            </p>
-            <p>
-              The route takes you through the stunning Tuscan landscape, offering panoramic views of
-              endless vineyards, olive groves, and ancient castles. As you traverse the technical trails
-              between the vines, you'll experience the authentic charm of the Chianti region.
-            </p>
-          </div>
-          <a 
-            href="#" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute top-6 left-6">
+          <Link
+            to="/"
+            className="flex items-center gap-2 text-white hover:text-stone transition-colors"
           >
-            Visit Official Race Website
-            <ExternalLink className="w-4 h-4" />
-          </a>
+            <ArrowLeft className="w-5 h-5" />
+            Back to Home
+          </Link>
         </div>
       </div>
 
-      <Footer />
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
+          Chianti Ultra Trail By UTMB, Italy
+        </h1>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <div className="space-y-6 mb-8">
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <p className="text-lg">
+                  Experience the breathtaking beauty of the Chianti region as you run through historic vineyards,
+                  medieval villages, and rolling hills. This unique ultra trail combines the challenge of trail
+                  running with the cultural richness of one of Italy's most famous wine regions.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <p className="text-lg">
+                  The route takes you through the stunning Tuscan landscape, offering panoramic views of
+                  endless vineyards, olive groves, and ancient castles. As you traverse the technical trails
+                  between the vines, you'll experience the authentic charm of the Chianti region.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <p className="text-lg">
+                  Follow winding paths through historic wine estates and medieval villages, testing your endurance
+                  while surrounded by the timeless beauty of Tuscany. Each route is carefully designed to showcase
+                  the most spectacular sections of the Chianti wine region.
+                </p>
+              </div>
+            </div>
+
+            <a 
+              href="https://www.chiantiultratrail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-sage text-white px-6 py-3 rounded-lg hover:bg-sage/90 transition-colors mb-6"
+            >
+              Visit Official Site
+              <ExternalLink className="w-4 h-4" />
+            </a>
+
+            <div className="bg-white p-6 rounded-xl">
+              <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
+              <ul className="space-y-2">
+                <li><strong>Location:</strong> Chianti Region, Italy</li>
+                <li><strong>Date of run:</strong> March 15, 2026</li>
+                <li><strong>Dates of trip:</strong> March 13-16, 2026</li>
+                <li><strong>Duration:</strong> 4 days</li>
+                <li><strong>Available distances:</strong> 15km, 35km, 60km, 100km</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="flex justify-between items-center mb-6">
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">Starting from</p>
+                  <p className="font-cabinet text-4xl font-bold text-charcoal">7.500 DKK</p>
+                  <p className="text-sm text-gray-500">incl. VAT</p>
+                </div>
+              </div>
+              <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
+                Book Your Spot
+              </button>
+            </div>
+            <div className="bg-stone p-6 rounded-xl">
+              <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
+              <ul className="space-y-2 list-disc pl-4">
+                <li>Entry ticket to the trail run</li>
+                <li>Plane ticket from Copenhagen and back (if other departure airport, let's discuss)</li>
+                <li>Transportation from airport to destination hotel</li>
+                <li>Minimum 4 star hotel experience for the duration of the trip</li>
+              </ul>
+            </div>
+            <div className="bg-stone p-6 rounded-xl">
+              <h2 className="font-cabinet text-2xl font-bold mb-4">What can be added</h2>
+              <ul className="space-y-2 list-disc pl-4">
+                <li>Dedicated running coach for the group or individually</li>
+                <li>Weekly run schedules based on participants' current running form</li>
+                <li>Marketing material if used for corporate trips</li>
+                <li>Video material for marketing purposes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
