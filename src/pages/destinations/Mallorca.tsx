@@ -1,4 +1,3 @@
-
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -37,11 +36,11 @@ const Mallorca = () => {
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
-                <li><strong>Location:</strong> Mallorca, Spain</li>
-                <li><strong>Date of run:</strong> November 15, 2025</li>
-                <li><strong>Dates of trip:</strong> November 13-17, 2025</li>
-                <li><strong>Duration:</strong> 5 days</li>
-                <li><strong>Available distances:</strong> 25km, 50km, 112km</li>
+                <li><strong>Location:</strong> Sóller, Mallorca, Spain</li>
+                <li><strong>Date of run:</strong> November 1, 2025</li>
+                <li><strong>Dates of trip:</strong> October 30-November 2, 2025</li>
+                <li><strong>Duration:</strong> 4 days</li>
+                <li><strong>Available distances:</strong> 20km, 50km, 100km, 100m</li>
               </ul>
             </div>
           </div>
