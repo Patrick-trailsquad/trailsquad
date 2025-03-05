@@ -59,8 +59,7 @@ const NewZealand = () => {
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Funchal, Madeira Island, Portugal</li>
                 <li><strong>Date of run:</strong> April 26, 2025</li>
-                <li><strong>Dates of trip:</strong> April 24-27, 2025</li>
-                <li><strong>Duration:</strong> 4 days</li>
+                <li><strong>Trip duration:</strong> April 24-27, 2025 (4 days)</li>
                 <li><strong>Available distances:</strong> 16 km, 42 km, 60 km, 85km, 115 km</li>
               </ul>
             </div>
