@@ -48,7 +48,7 @@ const Vesuvio = () => {
                 <li><strong>Location:</strong> Mount Vesuvius, Naples, Italy</li>
                 <li><strong>Date of run:</strong> May 2026</li>
                 <li><strong>Duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 23km, 45km, 72km</li>
+                <li><strong>Available distances:</strong> 23 km, 45 km, 72 km</li>
               </ul>
             </div>
           </div>
