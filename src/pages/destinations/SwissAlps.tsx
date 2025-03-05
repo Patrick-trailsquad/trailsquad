@@ -55,9 +55,9 @@ const SwissAlps = () => {
               href="https://www.gtcourmayeur.com/en/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-sage text-white px-6 py-3 rounded-lg hover:bg-sage/90 transition-colors mb-6"
+              className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
             >
-              Visit Official Site
+              Visit Official Race Website
               <ExternalLink className="w-4 h-4" />
             </a>
 

@@ -34,9 +34,9 @@ const MontBlanc = () => {
               breathtaking alpine scenery while testing your limits in this legendary race.
             </p>
             <a 
-              href="#" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
             >
               Visit Official Race Website
