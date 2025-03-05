@@ -69,13 +69,13 @@ const NewZealand = () => {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Starting from</p>
-                  <p className="font-cabinet text-4xl font-bold text-charcoal">7.500 DKK</p>
-                  <p className="text-sm text-gray-500">incl. VAT</p>
+                  <p className="text-sm text-gray-600 mb-1">Trip status</p>
+                  <p className="font-cabinet text-2xl font-bold text-charcoal">Sold Out</p>
+                  <p className="text-sm text-gray-500">Check back later for new dates</p>
                 </div>
               </div>
-              <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
-                Book Your Spot
+              <button disabled className="w-full bg-gray-300 text-white px-8 py-4 rounded-full font-cabinet font-medium cursor-not-allowed">
+                No More Tickets
               </button>
             </div>
             <div className="bg-stone p-6 rounded-xl">

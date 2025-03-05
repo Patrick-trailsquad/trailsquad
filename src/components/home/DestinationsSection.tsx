@@ -7,7 +7,7 @@ const destinations = [
     image: "/lovable-uploads/af5c6191-258b-4a41-9a6d-7e722d1dad97.png",
     location: "Madeira Island Ultra Trail, Portugal",
     date: "April 2025",
-    spots: "12 spots left",
+    spots: "Sold out",
     href: "/destinations/miut"
   },
   {
