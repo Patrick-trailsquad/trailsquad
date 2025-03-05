@@ -1,4 +1,5 @@
-import { ArrowLeft } from "lucide-react";
+
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Mallorca = () => {
@@ -33,6 +34,15 @@ const Mallorca = () => {
               in this UTMB World Series event. Run through dramatic limestone peaks, ancient dry-stone 
               paths, and coastal trails with spectacular Mediterranean views.
             </p>
+            <a 
+              href="https://mallorca.utmb.world/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
+            >
+              Visit Official Race Website
+              <ExternalLink className="w-4 h-4" />
+            </a>
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
