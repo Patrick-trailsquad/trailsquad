@@ -29,9 +29,13 @@ const Vesuvio = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <p className="text-lg mb-4">
-              Challenge yourself on the historic trails of Mount Vesuvius in this unique ultra marathon event. 
-              Run through volcanic landscapes with breathtaking views of the Bay of Naples and experience the 
-              perfect blend of natural beauty and ancient history.
+              Embark on an extraordinary journey through the ancient paths of Mount Vesuvius in this legendary ultra marathon. 
+              Run along the iconic volcano's trails, where history and nature intertwine dramatically. Wind through pine forests, 
+              cross black lava fields, and traverse paths carved by centuries of volcanic activity. As you ascend to heights of up 
+              to 1,281 meters, you'll be rewarded with breathtaking panoramic views of the Gulf of Naples, the islands of Capri and 
+              Ischia, and the stunning Amalfi Coast. This unique race combines the raw power of volcanic terrain with the rich 
+              cultural heritage of the Campania region, offering runners an unforgettable experience where each step tells a story 
+              of geological wonder and human perseverance.
             </p>
             <a 
               href="https://www.vesuvioultramarathon.it/en/"
