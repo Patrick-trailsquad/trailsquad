@@ -47,8 +47,7 @@ const NorwegianFjords = () => {
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Bergen Region, Norway</li>
                 <li><strong>Date of run:</strong> August 20, 2024</li>
-                <li><strong>Dates of trip:</strong> August 18-23, 2024</li>
-                <li><strong>Duration:</strong> 6 days</li>
+                <li><strong>Trip duration:</strong> August 18-23, 2024 (6 days)</li>
                 <li><strong>Available distances:</strong> 21km, 42km</li>
               </ul>
             </div>

@@ -47,8 +47,7 @@ const BlackForest = () => {
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Black Forest, Germany</li>
                 <li><strong>Date of run:</strong> May 15, 2025</li>
-                <li><strong>Dates of trip:</strong> May 13-16, 2025</li>
-                <li><strong>Duration:</strong> 4 days</li>
+                <li><strong>Trip duration:</strong> May 13-16, 2025 (4 days)</li>
                 <li><strong>Available distances:</strong> 30km, 60km, 120km</li>
               </ul>
             </div>

@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -55,8 +54,7 @@ const Transylvania100 = () => {
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Carpathian Mountains, Romania</li>
                 <li><strong>Date of run:</strong> May 15, 2025</li>
-                <li><strong>Dates of trip:</strong> May 13-16, 2025</li>
-                <li><strong>Duration:</strong> 4 days</li>
+                <li><strong>Trip duration:</strong> May 13-16, 2025 (4 days)</li>
                 <li><strong>Available distances:</strong> 20km, 50km, 100km</li>
               </ul>
             </div>
