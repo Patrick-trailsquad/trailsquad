@@ -24,13 +24,6 @@ const destinations = [
     href: "/destinations/vesuvio"
   },
   {
-    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
-    location: "Norwegian Fjords",
-    date: "August 2024",
-    spots: "6 spots left",
-    href: "/destinations/norwegian-fjords"
-  },
-  {
     image: "/lovable-uploads/609b48d8-13b5-4f5b-b65e-9e75141d6c2d.png",
     location: "Transylvania 100, Romania",
     date: "May 2026",
