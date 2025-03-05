@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -33,6 +34,12 @@ const Transylvania100 = () => {
               Wind through the dramatic Carpathian Mountains, past medieval castles, and through pristine 
               wilderness in this unforgettable ultra-running adventure.
             </p>
+            <p className="text-lg mb-4">
+              This legendary race takes you through some of Romania's most spectacular landscapes, 
+              from dense forests to rugged mountain peaks. You'll experience the thrill of running 
+              through historic paths where legends were born, making this not just a race, but a 
+              journey through time and nature.
+            </p>
             <a 
               href="#"
               target="_blank"
@@ -42,11 +49,13 @@ const Transylvania100 = () => {
               Visit Official Race Website
               <ExternalLink className="w-4 h-4" />
             </a>
+
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Carpathian Mountains, Romania</li>
-                <li><strong>Date of run:</strong> May 2026</li>
+                <li><strong>Date of run:</strong> May 15, 2025</li>
+                <li><strong>Dates of trip:</strong> May 13-16, 2025</li>
                 <li><strong>Duration:</strong> 4 days</li>
                 <li><strong>Available distances:</strong> 20km, 50km, 100km</li>
               </ul>
@@ -65,19 +74,23 @@ const Transylvania100 = () => {
                 Book Your Spot
               </button>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <span className="font-bold">Date:</span>
-                <span>May 2026</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="font-bold">Location:</span>
-                <span>Carpathian Mountains, Romania</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="font-bold">Available Spots:</span>
-                <span>15</span>
-              </div>
+            <div className="bg-stone p-6 rounded-xl">
+              <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
+              <ul className="space-y-2 list-disc pl-4">
+                <li>Entry ticket to the trail run</li>
+                <li>Plane ticket from Copenhagen and back (if other departure airport, let's discuss)</li>
+                <li>Transportation from airport to destination hotel</li>
+                <li>Minimum 4 star hotel experience for the duration of the trip</li>
+              </ul>
+            </div>
+            <div className="bg-stone p-6 rounded-xl">
+              <h2 className="font-cabinet text-2xl font-bold mb-4">What can be added</h2>
+              <ul className="space-y-2 list-disc pl-4">
+                <li>Dedicated running coach for the group or individually</li>
+                <li>Weekly run schedules based on participants' current running form</li>
+                <li>Marketing material if used for corporate trips</li>
+                <li>Video material for marketing purposes</li>
+              </ul>
             </div>
           </div>
         </div>
