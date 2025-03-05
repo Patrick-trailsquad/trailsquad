@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -81,7 +82,11 @@ const DestinationsSection = () => {
                     {trip.location}
                   </h3>
                   <p className="font-inter text-white/90 mb-2">{trip.date}</p>
-                  <span className="inline-block px-3 py-1 text-sm font-medium bg-white/20 backdrop-blur-sm rounded-full text-white">
+                  <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
+                    trip.spots === "Sold out" 
+                      ? "bg-white/20 backdrop-blur-sm text-white" 
+                      : "bg-[#FFDC00] text-black"
+                  }`}>
                     {trip.spots}
                   </span>
                 </div>
