@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <img src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" alt="Trail Squad Logo" className="h-8" />
-            <span className="font-cabinet text-charcoal font-semibold">Trail Squad Inc.</span>
+            <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
           </div>
           
           <div className="text-charcoal/80 font-inter">hello@trailsquad.dk</div>
