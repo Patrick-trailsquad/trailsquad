@@ -56,7 +56,7 @@ const DestinationsSection = () => {
             Upcoming Adventures
           </span>
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-            Trail Squad's Upcoming Destinations
+            The Squad's Upcoming Destinations
           </h2>
         </div>
 
