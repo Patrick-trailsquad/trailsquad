@@ -17,6 +17,13 @@ const destinations = [
     href: "/destinations/gtc"
   },
   {
+    image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
+    location: "Vesuvio Ultra Marathon, Italy",
+    date: "May 2026",
+    spots: "10 spots left",
+    href: "/destinations/vesuvio"
+  },
+  {
     image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
     location: "Norwegian Fjords",
     date: "August 2024",
