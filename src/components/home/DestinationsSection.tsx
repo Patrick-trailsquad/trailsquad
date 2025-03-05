@@ -4,13 +4,6 @@ import { Link } from "react-router-dom";
 
 const destinations = [
   {
-    image: "/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png",
-    location: "Chianti Ultra Trail By UTMB, Italy",
-    date: "March 2026",
-    spots: "15 spots left",
-    href: "/destinations/chianti"
-  },
-  {
     image: "/lovable-uploads/af5c6191-258b-4a41-9a6d-7e722d1dad97.png",
     location: "Madeira Island Ultra Trail, Portugal",
     date: "April 2025",
@@ -30,6 +23,13 @@ const destinations = [
     date: "November 2025",
     spots: "20 spots left",
     href: "/destinations/mallorca"
+  },
+  {
+    image: "/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png",
+    location: "Chianti Ultra Trail By UTMB, Italy",
+    date: "March 2026",
+    spots: "15 spots left",
+    href: "/destinations/chianti"
   },
   {
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
