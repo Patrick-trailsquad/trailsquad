@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -33,7 +32,7 @@ const HeroSection = () => {
           <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Get incredible experiences and boost your active life style by defeating the summits of Europe's mountains
           </p>
-          <button className="bg-white text-charcoal px-8 py-4 rounded-full font-cabinet font-medium hover:bg-stone transition-colors duration-300 flex items-center gap-2 mx-auto">
+          <button className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto">
             Start Your Journey
             <ArrowRight className="w-5 h-5" />
           </button>
