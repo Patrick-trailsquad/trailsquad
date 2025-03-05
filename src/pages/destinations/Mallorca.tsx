@@ -28,11 +28,42 @@ const Mallorca = () => {
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-lg mb-4">
-              Experience the breathtaking beauty of Mallorca's Serra de Tramuntana mountain range 
-              in this UTMB World Series event. Run through dramatic limestone peaks, ancient dry-stone 
-              paths, and coastal trails with spectacular Mediterranean views.
-            </p>
+            <div className="space-y-6 mb-8">
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <p className="text-lg">
+                  Set in the stunning Serra de Tramuntana mountain range, a UNESCO World Heritage site, 
+                  Mallorca by UTMB offers runners an exceptional journey through Mediterranean landscapes. 
+                  This challenging trail running event takes place along the GR221, also known as the 
+                  "Dry Stone Route," showcasing centuries-old engineering and the island's rich cultural heritage.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <p className="text-lg">
+                  As you traverse the ancient pathways, you'll experience the diverse terrains of Mallorca, 
+                  from rugged coastlines to limestone peaks reaching heights of 1,100 meters. The route winds 
+                  through traditional mountain villages, past historic monasteries, and along spectacular 
+                  cliff-top trails offering breathtaking views of the Mediterranean Sea. The mild climate 
+                  and varied terrain make this an ideal destination for both seasoned ultra-runners and 
+                  those new to trail running.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <p className="text-lg">
+                  Each course presents its own unique challenges, from the intense 112km ultra-trail to 
+                  the more accessible 20km route. Runners will navigate technical mountain paths, ancient 
+                  stone steps, and rocky terrain while experiencing elevation changes that test both 
+                  physical endurance and mental fortitude. The race's inclusion in the UTMB World Series 
+                  ensures top-quality organization and an unforgettable trail running experience in one 
+                  of Europe's most beautiful islands.
+                </p>
+              </div>
+            </div>
+
             <a 
               href="https://mallorca.utmb.world/" 
               target="_blank" 
@@ -42,6 +73,7 @@ const Mallorca = () => {
               Visit Official Race Website
               <ExternalLink className="w-4 h-4" />
             </a>
+
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
