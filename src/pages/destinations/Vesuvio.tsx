@@ -34,7 +34,7 @@ const Vesuvio = () => {
               perfect blend of natural beauty and ancient history.
             </p>
             <a 
-              href="#"
+              href="https://www.vesuvioultramarathon.it/en/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
@@ -48,7 +48,7 @@ const Vesuvio = () => {
                 <li><strong>Location:</strong> Mount Vesuvius, Naples, Italy</li>
                 <li><strong>Date of run:</strong> May 2026</li>
                 <li><strong>Duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 20km, 42km, 60km</li>
+                <li><strong>Available distances:</strong> 23km, 45km, 72km</li>
               </ul>
             </div>
           </div>
