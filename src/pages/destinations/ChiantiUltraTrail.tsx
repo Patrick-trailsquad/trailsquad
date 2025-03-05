@@ -1,6 +1,7 @@
-
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ChiantiUltraTrail = () => {
   return (
@@ -43,6 +44,15 @@ const ChiantiUltraTrail = () => {
               between the vines, you'll experience the authentic charm of the Chianti region.
             </p>
           </div>
+          <a 
+            href="#" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
+          >
+            Visit Official Race Website
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
       </div>
 

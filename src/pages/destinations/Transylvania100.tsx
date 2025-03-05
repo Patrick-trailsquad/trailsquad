@@ -1,11 +1,9 @@
-
-import Menu from "../../components/Menu";
-import Footer from "../../components/Footer";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Transylvania100 = () => {
   return (
     <div className="min-h-screen bg-stone">
-      <Menu />
       
       <div className="relative h-[60vh] overflow-hidden">
         <img
@@ -17,14 +15,25 @@ const Transylvania100 = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
+        
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Transylvania 100, Romania
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
+            
             <p className="text-lg mb-6">
               Experience the mystical challenge of the Transylvania 100 trail running event in Romania. Wind through the dramatic Carpathian Mountains, past medieval castles, and through pristine wilderness in this unforgettable ultra-running adventure.
             </p>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
+            >
+              Visit Official Race Website
+              <ExternalLink className="w-4 h-4" />
+            </a>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <span className="font-bold">Date:</span>
@@ -40,6 +49,7 @@ const Transylvania100 = () => {
               </div>
             </div>
           </div>
+          
           <div className="space-y-6">
             <h2 className="text-2xl font-bold">What to Expect</h2>
             <ul className="list-disc pl-5 space-y-2">
@@ -52,8 +62,6 @@ const Transylvania100 = () => {
           </div>
         </div>
       </div>
-      
-      <Footer />
     </div>
   );
 };

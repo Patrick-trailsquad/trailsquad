@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -34,6 +33,15 @@ const MontBlanc = () => {
               circling the Mont Blanc massif through France, Italy, and Switzerland. Experience 
               breathtaking alpine scenery while testing your limits in this legendary race.
             </p>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
+            >
+              Visit Official Race Website
+              <ExternalLink className="w-4 h-4" />
+            </a>
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">

@@ -1,4 +1,5 @@
-
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
 
@@ -25,6 +26,15 @@ const Vesuvio = () => {
             <p className="text-lg mb-6">
               Challenge yourself on the historic trails of Mount Vesuvius in this unique ultra marathon event. Run through volcanic landscapes with breathtaking views of the Bay of Naples and experience the perfect blend of natural beauty and ancient history.
             </p>
+            <a 
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
+            >
+              Visit Official Race Website
+              <ExternalLink className="w-4 h-4" />
+            </a>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <span className="font-bold">Date:</span>
