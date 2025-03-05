@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -28,17 +29,42 @@ const Transylvania100 = () => {
         </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-lg mb-4">
-              Experience the mystical challenge of the Transylvania 100 trail running event in Romania. 
-              Wind through the dramatic Carpathian Mountains, past medieval castles, and through pristine 
-              wilderness in this unforgettable ultra-running adventure.
-            </p>
-            <p className="text-lg mb-4">
-              This legendary race takes you through some of Romania's most spectacular landscapes, 
-              from dense forests to rugged mountain peaks. You'll experience the thrill of running 
-              through historic paths where legends were born, making this not just a race, but a 
-              journey through time and nature.
-            </p>
+            <div className="space-y-6 mb-8">
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <p className="text-lg">
+                  Set in the mystical heart of Romania's Carpathian Mountains, the Transylvania 100 
+                  offers runners an extraordinary journey through one of Europe's most legendary 
+                  landscapes. This challenging ultra trail winds through dense forests, past medieval 
+                  castles, and along dramatic mountain ridges, all within sight of the iconic Bran 
+                  Castle, known worldwide as "Dracula's Castle."
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <p className="text-lg">
+                  As you traverse this historic route, you'll experience the raw beauty of the 
+                  Carpathians while running through pristine wilderness and traditional Romanian 
+                  villages. The trail combines technical mountain sections with scenic forest paths, 
+                  offering a perfect blend of challenge and natural beauty. Each kilometer brings new 
+                  views of the surrounding peaks and valleys, creating an unforgettable mountain 
+                  running experience.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <p className="text-lg">
+                  This legendary race tests both physical endurance and mental resilience as you 
+                  navigate varying terrains and weather conditions. Whether you choose the 20km, 50km, 
+                  or the ultimate 100km challenge, each route has been carefully designed to showcase 
+                  the most spectacular sections of the Carpathian Mountains while pushing your limits 
+                  as a trail runner.
+                </p>
+              </div>
+            </div>
+
             <a 
               href="#"
               target="_blank"
