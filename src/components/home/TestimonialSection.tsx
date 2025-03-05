@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -5,26 +6,25 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { motion } from "framer-motion";
 
 const testimonials = [
   {
     quote: "The trails pushed me to my limits, but the breathtaking views and the sense of accomplishment made every step worth it. This wasn't just a run - it was a life-changing experience.",
     author: "Sarah Mitchell",
     title: "Cappadocia Trail Runner",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?fit=crop&w=800&h=800"
   },
   {
     quote: "From the rugged peaks to the serene valleys, every moment was an adventure. The guides were exceptional, and the group became like family.",
     author: "Michael Chen",
     title: "Swiss Alps Explorer",
-    image: "https://images.unsplash.com/photo-1502224562085-639556652f33"
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?fit=crop&w=800&h=800"
   },
   {
     quote: "The fjords were even more magnificent than I imagined. Running through this pristine landscape was truly a once-in-a-lifetime experience.",
     author: "Emma Anderson",
     title: "Norwegian Trails Enthusiast",
-    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5"
+    image: "https://images.unsplash.com/photo-1611042553365-9b101441c135?fit=crop&w=800&h=800"
   }
 ];
 
