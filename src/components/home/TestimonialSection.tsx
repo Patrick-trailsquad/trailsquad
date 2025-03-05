@@ -12,19 +12,19 @@ const testimonials = [
     quote: "The trails pushed me to my limits, but the breathtaking views and the sense of accomplishment made every step worth it. This wasn't just a run - it was a life-changing experience.",
     author: "Sarah Mitchell",
     title: "Cappadocia Trail Runner",
-    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211"
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
   },
   {
     quote: "From the rugged peaks to the serene valleys, every moment was an adventure. The guides were exceptional, and the group became like family.",
     author: "Michael Chen",
     title: "Swiss Alps Explorer",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05"
+    image: "https://images.unsplash.com/photo-1502224562085-639556652f33"
   },
   {
     quote: "The fjords were even more magnificent than I imagined. Running through this pristine landscape was truly a once-in-a-lifetime experience.",
     author: "Emma Anderson",
     title: "Norwegian Trails Enthusiast",
-    image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716"
+    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5"
   }
 ];
 
