@@ -93,15 +93,15 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-terra">
-        <div className="container mx-auto px-4 text-center text-white">
+      <section className="py-24 bg-[#FFDC00]">
+        <div className="container mx-auto px-4 text-center text-black">
           <h2 className="text-4xl font-cabinet font-bold mb-6">Ready to Start Your Adventure?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Join us for an unforgettable trail running experience in some of the world's most stunning locations.</p>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-black/90">Join us for an unforgettable trail running experience in some of the world's most stunning locations.</p>
           <div className="flex items-center justify-center gap-4">
-            <a href="#upcoming-trips" className="bg-white text-terra px-8 py-3 rounded-md font-bold hover:bg-stone transition-colors">
+            <a href="#upcoming-trips" className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300">
               View Destinations
             </a>
-            <a href="mailto:info@trailsquad.com" className="flex items-center gap-2 px-8 py-3 rounded-md font-bold border-2 border-white hover:bg-white/10 transition-colors">
+            <a href="mailto:info@trailsquad.com" className="flex items-center gap-2 px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-black/10 transition-colors duration-300">
               <Mail className="w-5 h-5" />
               Contact Us
             </a>
