@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -8,7 +9,7 @@ const HeroSection = () => {
         <img
           src="/lovable-uploads/419d5e82-8ab8-4c5f-b1e6-4b77ae8486a8.png"
           alt="Trail runners in Cappadocia with hot air balloons"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover md:object-center object-[25%_center]"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black/40" />
