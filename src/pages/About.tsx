@@ -20,7 +20,7 @@ const About = () => {
     align: "start",
     slidesToScroll: 1,
     dragFree: true,
-    speed: 10,
+    duration: 10,
     containScroll: "trimSnaps"
   }, [Autoplay({ 
     delay: 2000,
