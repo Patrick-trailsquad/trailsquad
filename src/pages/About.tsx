@@ -1,8 +1,16 @@
-import { Mail, Award, Flag } from "lucide-react";
+
+import { Mail, Award, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const About = () => {
   usePageTitle('About');
@@ -21,7 +29,7 @@ const About = () => {
     "/lovable-uploads/0e5e44b1-9987-47c2-bce2-d393f955a6a7.png",
     "/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png",
     "/lovable-uploads/1b6826f9-cff2-41ad-96c7-a6aa39c0e051.png"
-  ].sort(() => Math.random() - 0.5);
+  ];
 
   const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -49,8 +57,29 @@ const About = () => {
             <h2 className="text-4xl font-cabinet font-bold mb-6">Our Story</h2>
             <p className="text-lg text-gray-600 mb-8">Born from a passion for trail running and adventure, Trail Squad brings together experienced runners and travel enthusiasts to create unforgettable running experiences in the world's most stunning locations.</p>
             
-            {/* Masonry Gallery */}
-            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-12">
+            {/* Mobile Carousel */}
+            <div className="md:hidden w-full mt-12">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {images.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <img 
+                          src={image} 
+                          alt={`Trail running moment ${index + 1}`}
+                          className="w-full rounded-lg"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
+            </div>
+
+            {/* Desktop Masonry Gallery */}
+            <div className="hidden md:block columns-2 lg:columns-4 gap-4 mt-12">
               {images.map((image, index) => (
                 <div key={index} className="break-inside-avoid mb-4">
                   <img 
