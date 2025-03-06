@@ -82,7 +82,7 @@ const About = () => {
                         <img 
                           src={image} 
                           alt={`Trail running moment ${index + 1}`}
-                          className="h-[200px] w-full object-cover rounded-lg"
+                          className="h-[200px] w-full object-contain rounded-lg"
                         />
                       </div>
                     </CarouselItem>
