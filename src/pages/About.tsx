@@ -1,5 +1,4 @@
-
-import { Users, Award, Flag, Mail, Mountains } from "lucide-react";
+import { Users, Award, Flag, Mail, Mountain } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
@@ -30,7 +29,7 @@ const About = () => {
             <p className="text-lg text-gray-600 mb-8">Born from a passion for trail running and adventure, Trail Squad brings together experienced runners and travel enthusiasts to create unforgettable running experiences in the world's most stunning locations.</p>
             <div className="flex items-center justify-center gap-12 mt-12">
               <div className="text-center">
-                <Mountains className="w-12 h-12 text-terra mx-auto mb-4" />
+                <Mountain className="w-12 h-12 text-terra mx-auto mb-4" />
                 <h3 className="font-bold mb-2">20+ Destinations</h3>
               </div>
               <div className="text-center">
