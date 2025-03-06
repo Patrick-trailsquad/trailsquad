@@ -1,20 +1,16 @@
 import { Users, Award, Flag, Mail, Mountain } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
+import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
 
 const About = () => {
   usePageTitle('About');
-  const navigate = useNavigate();
+  const navigateAndScroll = useNavigateAndScroll();
 
   const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    navigate('/#upcoming-trips');
-    const element = document.getElementById('upcoming-trips');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigateAndScroll('/', 'upcoming-trips');
   };
 
   return (
