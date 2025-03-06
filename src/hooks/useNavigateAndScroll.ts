@@ -11,7 +11,7 @@ export const useNavigateAndScroll = () => {
       return;
     }
 
-    navigate(path, { replace: true });
+    navigate(path);
     
     // Wait for navigation to complete before scrolling
     setTimeout(() => {
