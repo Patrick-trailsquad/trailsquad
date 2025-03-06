@@ -97,12 +97,12 @@ const About = () => {
           <h2 className="text-4xl font-cabinet font-bold text-center mb-12">Meet the Team</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-lg p-6 text-center">
-              <img src="/lovable-uploads/c9f1a696-b9d9-406b-8ae1-6e14b85b3e22.png" alt="Alex Thompson" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <img src="/lovable-uploads/1023bdb7-a56d-4712-88cb-c6b747627029.png" alt="Alex Thompson" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
               <h3 className="font-bold text-xl mb-2">Alex Thompson</h3>
               <p className="text-gray-600">Founder & Lead Guide</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center">
-              <img src="/lovable-uploads/1023bdb7-a56d-4712-88cb-c6b747627029.png" alt="Sarah Chen" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+              <img src="/lovable-uploads/c9f1a696-b9d9-406b-8ae1-6e14b85b3e22.png" alt="Sarah Chen" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
               <h3 className="font-bold text-xl mb-2">Sarah Chen</h3>
               <p className="text-gray-600">Route Planner</p>
             </div>
