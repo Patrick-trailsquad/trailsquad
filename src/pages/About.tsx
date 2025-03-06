@@ -1,17 +1,42 @@
-import { Users, Award, Flag, Mail, Mountain } from "lucide-react";
+
+import { Mail } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const About = () => {
   usePageTitle('About');
   const navigateAndScroll = useNavigateAndScroll();
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
 
   const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     navigateAndScroll('/', 'upcoming-trips');
   };
+
+  // Shuffle the images array
+  const images = [
+    "/lovable-uploads/e809c741-198a-406a-a1d0-7112f8220309.png",
+    "/lovable-uploads/25d3f586-ac0f-49eb-b707-422bf6f2a1a2.png",
+    "/lovable-uploads/8f2e413d-62c8-4590-b8f6-731f17391272.png",
+    "/lovable-uploads/c5ad0d53-d3e9-4acf-9182-5c642ad97194.png",
+    "/lovable-uploads/cf8dc3b8-2664-43db-9f7f-b5647f7dea9b.png",
+    "/lovable-uploads/2b43a391-e48b-4a13-891c-2d98c0c00ced.png",
+    "/lovable-uploads/9ea72ff1-70a6-414d-8077-a9b1f279df00.png",
+    "/lovable-uploads/237914c4-acc0-4941-870b-d611a3bc5056.png",
+    "/lovable-uploads/0e5e44b1-9987-47c2-bce2-d393f955a6a7.png",
+    "/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png",
+    "/lovable-uploads/1b6826f9-cff2-41ad-96c7-a6aa39c0e051.png"
+  ].sort(() => Math.random() - 0.5);
 
   return (
     <div className="min-h-screen bg-stone">
@@ -33,19 +58,31 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-cabinet font-bold mb-6">Our Story</h2>
             <p className="text-lg text-gray-600 mb-8">Born from a passion for trail running and adventure, Trail Squad brings together experienced runners and travel enthusiasts to create unforgettable running experiences in the world's most stunning locations.</p>
-            <div className="flex items-center justify-center gap-12 mt-12">
-              <div className="text-center">
-                <Mountain className="w-12 h-12 text-terra mx-auto mb-4" />
-                <h3 className="font-bold mb-2">20+ Destinations</h3>
-              </div>
-              <div className="text-center">
-                <Flag className="w-12 h-12 text-terra mx-auto mb-4" />
-                <h3 className="font-bold mb-2">5+ Years Experience</h3>
-              </div>
-              <div className="text-center">
-                <Users className="w-12 h-12 text-terra mx-auto mb-4" />
-                <h3 className="font-bold mb-2">1000+ Happy Runners</h3>
-              </div>
+            
+            {/* Carousel */}
+            <div className="mt-12">
+              <Carousel
+                ref={emblaRef}
+                className="w-full"
+                opts={{
+                  align: "center",
+                  loop: true,
+                }}
+              >
+                <CarouselContent>
+                  {images.map((image, index) => (
+                    <CarouselItem key={index} className="basis-full">
+                      <div className="flex items-center justify-center">
+                        <img 
+                          src={image} 
+                          alt={`Trail running moment ${index + 1}`}
+                          className="h-[200px] object-cover rounded-lg"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
           </div>
         </div>
