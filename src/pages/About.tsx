@@ -23,9 +23,10 @@ const About = () => {
     duration: 10,
     containScroll: "trimSnaps"
   }, [Autoplay({ 
-    delay: 2000,
+    delay: 3000,
     stopOnInteraction: false,
-    stopOnMouseEnter: false
+    stopOnMouseEnter: false,
+    playOnInit: true
   })]);
 
   const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
