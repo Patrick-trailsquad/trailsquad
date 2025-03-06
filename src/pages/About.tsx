@@ -1,5 +1,4 @@
-
-import { Mail } from "lucide-react";
+import { Mail, Award, Flag } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
