@@ -1,4 +1,3 @@
-
 import { Mail, Award, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
@@ -111,29 +110,6 @@ const About = () => {
               <img src="/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png" alt="Team Member" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
               <h3 className="font-bold text-xl mb-2">Marco Rossi</h3>
               <p className="text-gray-600">Adventure Coordinator</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-cabinet font-bold text-center mb-12">Why Choose Us</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="flex gap-4">
-              <Award className="w-8 h-8 text-terra shrink-0" />
-              <div>
-                <h3 className="font-bold text-xl mb-2">Expert Guides</h3>
-                <p className="text-gray-600">Our guides are certified professionals with extensive knowledge of trail running and local terrain.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <Flag className="w-8 h-8 text-terra shrink-0" />
-              <div>
-                <h3 className="font-bold text-xl mb-2">Unique Routes</h3>
-                <p className="text-gray-600">Carefully curated trails that showcase the most breathtaking landscapes and cultural experiences.</p>
-              </div>
             </div>
           </div>
         </div>
