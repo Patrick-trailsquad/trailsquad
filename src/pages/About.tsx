@@ -16,11 +16,17 @@ const About = () => {
   usePageTitle('About');
   const navigateAndScroll = useNavigateAndScroll();
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true, 
+    loop: true,
     align: "start",
-    slidesToScroll: 2,
+    slidesToScroll: 1,
+    dragFree: true,
+    speed: 10,
     containScroll: "trimSnaps"
-  }, [Autoplay({ delay: 3000 })]);
+  }, [Autoplay({ 
+    delay: 2000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: false
+  })]);
 
   const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
