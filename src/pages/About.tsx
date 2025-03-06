@@ -26,7 +26,6 @@ const About = () => {
     "/lovable-uploads/9ea72ff1-70a6-414d-8077-a9b1f279df00.png",
     "/lovable-uploads/237914c4-acc0-4941-870b-d611a3bc5056.png",
     "/lovable-uploads/0e5e44b1-9987-47c2-bce2-d393f955a6a7.png",
-    "/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png",
     "/lovable-uploads/1b6826f9-cff2-41ad-96c7-a6aa39c0e051.png"
   ];
 
