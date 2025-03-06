@@ -15,14 +15,18 @@ import Autoplay from "embla-carousel-autoplay";
 const About = () => {
   usePageTitle('About');
   const navigateAndScroll = useNavigateAndScroll();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: "start",
+    slidesToScroll: 2,
+    containScroll: "trimSnaps"
+  }, [Autoplay({ delay: 3000 })]);
 
   const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     navigateAndScroll('/', 'upcoming-trips');
   };
 
-  // Shuffle the images array
   const images = [
     "/lovable-uploads/e809c741-198a-406a-a1d0-7112f8220309.png",
     "/lovable-uploads/25d3f586-ac0f-49eb-b707-422bf6f2a1a2.png",
@@ -54,28 +58,24 @@ const About = () => {
       {/* Our Story Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-4xl font-cabinet font-bold mb-6">Our Story</h2>
             <p className="text-lg text-gray-600 mb-8">Born from a passion for trail running and adventure, Trail Squad brings together experienced runners and travel enthusiasts to create unforgettable running experiences in the world's most stunning locations.</p>
             
             {/* Carousel */}
-            <div className="mt-12">
+            <div className="mt-12 -mx-4">
               <Carousel
                 ref={emblaRef}
                 className="w-full"
-                opts={{
-                  align: "center",
-                  loop: true,
-                }}
               >
-                <CarouselContent>
+                <CarouselContent className="-ml-4">
                   {images.map((image, index) => (
-                    <CarouselItem key={index} className="basis-full">
+                    <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                       <div className="flex items-center justify-center">
                         <img 
                           src={image} 
                           alt={`Trail running moment ${index + 1}`}
-                          className="h-[200px] object-cover rounded-lg"
+                          className="h-[200px] w-full object-cover rounded-lg"
                         />
                       </div>
                     </CarouselItem>
