@@ -85,7 +85,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-4xl font-cabinet font-bold mb-6">Our Story</h2>
-            <p className="text-lg text-gray-600 mb-8">Born from a passion for trail running and adventure, Trail Squad brings together experienced runners and travel enthusiasts to create unforgettable running experiences in the world's most stunning locations.</p>
+            <p className="text-lg text-gray-600 mb-8">The Trail Squad project is born from a passion for trail and ultra running, coupled with the awesomeness of going sports adventures in exciting locations. We have been running many races across the continent, and though the pain is real when you hit the wall on the long runs, the post-race celebratory beers taste heavenly and make it all worthwhile. We just want to give many more runners similar experiences - and you will always have the bragging rights at the office on the following Monday!</p>
             
             {/* Mobile Carousel */}
             <div className="md:hidden w-full mt-12">
