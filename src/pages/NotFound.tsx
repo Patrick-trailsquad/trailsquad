@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 const NotFound = () => {
   const location = useLocation();
@@ -10,6 +11,8 @@ const NotFound = () => {
       location.pathname
     );
   }, [location.pathname]);
+
+  usePageTitle('Page Not Found');
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">

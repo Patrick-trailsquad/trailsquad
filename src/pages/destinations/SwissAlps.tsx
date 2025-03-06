@@ -1,7 +1,11 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { usePageTitle } from "../../hooks/usePageTitle";
 
 const SwissAlps = () => {
+  usePageTitle('Grand Trail Courmayeur');
+  
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
