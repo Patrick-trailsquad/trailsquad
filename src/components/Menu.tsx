@@ -9,9 +9,9 @@ const Menu = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const menuItems = [
-    { href: '#', label: 'Home', icon: Home },
+    { href: '/', label: 'Home', icon: Home },
     { href: '#upcoming-trips', label: 'Upcoming destinations', icon: Calendar },
-    { href: '#about', label: 'About', icon: Info }
+    { href: '/about', label: 'About', icon: Info }
   ];
 
   useEffect(() => {
