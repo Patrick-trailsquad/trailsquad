@@ -1,3 +1,4 @@
+
 import { Instagram, Linkedin } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-white py-8 border-t">
@@ -8,7 +9,7 @@ const Footer = () => {
             <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
           </div>
           
-          <div className="text-charcoal/80 font-inter">hello@trailsquad.dk</div>
+          <a href="mailto:hello@trailsquad.dk" className="text-charcoal/80 font-inter hover:text-terra transition-colors">hello@trailsquad.dk</a>
           
           <div className="flex items-center gap-4">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-charcoal hover:text-terra transition-colors">
