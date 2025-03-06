@@ -9,7 +9,7 @@ const HeroSection = () => {
         <img
           src="/lovable-uploads/419d5e82-8ab8-4c5f-b1e6-4b77ae8486a8.png"
           alt="Trail runners in Cappadocia with hot air balloons"
-          className="w-full h-full object-cover md:object-center object-[15%_center]"
+          className="w-full h-full object-cover md:object-center object-[250px_center]"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black/40" />
