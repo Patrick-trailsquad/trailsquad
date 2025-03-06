@@ -12,7 +12,7 @@ const About = () => {
       <Menu />
       
       {/* Hero Section */}
-      <div className="relative h-[60vh] bg-[#FEF7CD]">
+      <div className="relative h-[60vh] bg-[#FFDC00]">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-[#000000e6]">
             <h1 className="text-5xl font-cabinet font-bold mb-4">About Trail Squad</h1>
