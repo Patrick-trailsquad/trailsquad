@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Calendar, Info, Menu as MenuIcon } from 'lucide-react';
@@ -12,18 +13,19 @@ const Menu = () => {
 
   const handleDestinationsClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    window.scrollTo(0, 0); // Reset scroll position first
     navigateAndScroll('/', 'upcoming-trips');
   };
 
   const menuItems = [
-    { href: '/', label: 'Home', icon: Home, onClick: undefined },
+    { href: '/', label: 'Home', icon: Home, onClick: () => window.scrollTo(0, 0) },
     { 
       href: '#upcoming-trips', 
       label: 'Upcoming destinations', 
       icon: Calendar,
       onClick: handleDestinationsClick 
     },
-    { href: '/about', label: 'About', icon: Info, onClick: undefined }
+    { href: '/about', label: 'About', icon: Info, onClick: () => window.scrollTo(0, 0) }
   ];
 
   useEffect(() => {
