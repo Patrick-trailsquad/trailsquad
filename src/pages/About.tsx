@@ -3,36 +3,10 @@ import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import { useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 
 const About = () => {
   usePageTitle('About');
   const navigateAndScroll = useNavigateAndScroll();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    align: "start",
-    slidesToScroll: 1,
-    dragFree: true,
-    duration: 30,
-    containScroll: "trimSnaps"
-  }, [Autoplay({ 
-    delay: 3000,
-    stopOnInteraction: false,
-    stopOnMouseEnter: false,
-    playOnInit: true
-  })]);
-
-  const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    navigateAndScroll('/', 'upcoming-trips');
-  };
 
   const images = [
     "/lovable-uploads/e809c741-198a-406a-a1d0-7112f8220309.png",
@@ -47,6 +21,11 @@ const About = () => {
     "/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png",
     "/lovable-uploads/1b6826f9-cff2-41ad-96c7-a6aa39c0e051.png"
   ].sort(() => Math.random() - 0.5);
+
+  const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigateAndScroll('/', 'upcoming-trips');
+  };
 
   return (
     <div className="min-h-screen bg-stone">
@@ -69,26 +48,17 @@ const About = () => {
             <h2 className="text-4xl font-cabinet font-bold mb-6">Our Story</h2>
             <p className="text-lg text-gray-600 mb-8">Born from a passion for trail running and adventure, Trail Squad brings together experienced runners and travel enthusiasts to create unforgettable running experiences in the world's most stunning locations.</p>
             
-            {/* Carousel */}
-            <div className="mt-12 -mx-4">
-              <Carousel
-                ref={emblaRef}
-                className="w-full"
-              >
-                <CarouselContent className="-ml-4">
-                  {images.map((image, index) => (
-                    <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                      <div className="flex items-center justify-center">
-                        <img 
-                          src={image} 
-                          alt={`Trail running moment ${index + 1}`}
-                          className="h-[200px] w-full object-contain rounded-lg"
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
+            {/* Masonry Gallery */}
+            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-12">
+              {images.map((image, index) => (
+                <div key={index} className="break-inside-avoid mb-4">
+                  <img 
+                    src={image} 
+                    alt={`Trail running moment ${index + 1}`}
+                    className="w-full rounded-lg"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
