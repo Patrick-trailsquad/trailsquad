@@ -1,20 +1,20 @@
 import { Users, Award, Flag, Mail, Mountain } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
 
 const About = () => {
   usePageTitle('About');
+  const navigate = useNavigate();
 
   const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    // Navigate to home page and scroll to destinations section
-    window.location.href = '/#upcoming-trips';
-    setTimeout(() => {
-      const element = document.getElementById('upcoming-trips');
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    navigate('/#upcoming-trips');
+    const element = document.getElementById('upcoming-trips');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
