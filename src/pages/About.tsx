@@ -56,7 +56,7 @@ const About = () => {
                   <img 
                     src={image} 
                     alt={`Trail running moment ${index + 1}`}
-                    className="w-full rounded-lg"
+                    className="w-full md:w-full sm:w-full max-w-[25%] md:max-w-full sm:max-w-full rounded-lg mx-auto block"
                   />
                 </div>
               ))}
