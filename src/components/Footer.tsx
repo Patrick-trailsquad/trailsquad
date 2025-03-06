@@ -15,7 +15,7 @@ const Footer = () => {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-charcoal hover:text-terra transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-charcoal hover:text-terra transition-colors">
+            <a href="https://www.linkedin.com/company/trail-squad/" target="_blank" rel="noopener noreferrer" className="text-charcoal hover:text-terra transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
           </div>
