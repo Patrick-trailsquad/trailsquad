@@ -2,9 +2,11 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 const SwissAlps = () => {
   usePageTitle('Grand Trail Courmayeur');
+  useScrollToTop();
   
   return (
     <div className="min-h-screen bg-stone">

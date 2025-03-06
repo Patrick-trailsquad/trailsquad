@@ -2,9 +2,11 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 const NorwegianFjords = () => {
   usePageTitle('Norwegian Fjords');
+  useScrollToTop();
   
   return (
     <div className="min-h-screen bg-stone">
