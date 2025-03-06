@@ -1,22 +1,18 @@
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Calendar, Info, Menu as MenuIcon } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigateAndScroll } from '../hooks/useNavigateAndScroll';
 
 const Menu = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const navigate = useNavigate();
+  const navigateAndScroll = useNavigateAndScroll();
 
   const handleDestinationsClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate('/#upcoming-trips');
-    const element = document.getElementById('upcoming-trips');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigateAndScroll('/', 'upcoming-trips');
   };
 
   const menuItems = [
