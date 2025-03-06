@@ -1,10 +1,21 @@
 import { Users, Award, Flag, Mail, Mountain } from "lucide-react";
+import { Link } from "react-router-dom";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
 
 const About = () => {
   usePageTitle('About');
+
+  const handleViewDestinations = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    // Navigate to home page and scroll to destinations section
+    window.location.href = '/#upcoming-trips';
+    setTimeout(() => {
+      const element = document.getElementById('upcoming-trips');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   return (
     <div className="min-h-screen bg-stone">
@@ -97,7 +108,11 @@ const About = () => {
           <h2 className="text-4xl font-cabinet font-bold mb-6">Ready to Start Your Adventure?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-black/90">Join us for an unforgettable trail running experience in some of the world's most stunning locations.</p>
           <div className="flex items-center justify-center gap-4">
-            <a href="/#upcoming-trips" className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300">
+            <a 
+              href="/#upcoming-trips" 
+              onClick={handleViewDestinations}
+              className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300"
+            >
               View Destinations
             </a>
             <a href="mailto:info@trailsquad.com" className="flex items-center gap-2 px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-black/10 transition-colors duration-300">
