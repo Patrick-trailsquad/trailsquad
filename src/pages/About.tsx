@@ -1,4 +1,3 @@
-
 import { Mail, Award, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
@@ -41,7 +40,7 @@ const About = () => {
       <Menu />
       
       {/* Hero Section */}
-      <div className="relative h-[60vh] bg-[#FFDC00] flex items-center justify-center">
+      <div className="relative h-[60vh] bg-[#FFDC00] flex items-center justify-center mb-8">
         <div className="text-center text-[#000000e6] px-6 md:px-4 flex flex-col">
           <h1 className="text-5xl font-cabinet font-bold">About Trail Squad</h1>
           <p className="text-xl max-w-2xl mx-auto mt-2">Trail Squad is a travel company focused on running epic trail races across the globe.</p>
