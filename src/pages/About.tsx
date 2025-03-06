@@ -9,6 +9,7 @@ const About = () => {
   const navigateAndScroll = useNavigateAndScroll();
 
   const images = [
+    "/lovable-uploads/0ff6cfdb-d0ab-4ba7-8894-63e7eae03549.png",
     "/lovable-uploads/e809c741-198a-406a-a1d0-7112f8220309.png",
     "/lovable-uploads/25d3f586-ac0f-49eb-b707-422bf6f2a1a2.png",
     "/lovable-uploads/8f2e413d-62c8-4590-b8f6-731f17391272.png",
