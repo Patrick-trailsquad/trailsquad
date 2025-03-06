@@ -1,3 +1,4 @@
+
 import { Users, Award, Flag, Mail, Mountain } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
@@ -11,10 +12,9 @@ const About = () => {
       <Menu />
       
       {/* Hero Section */}
-      <div className="relative h-[60vh] bg-[url('/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/50" />
+      <div className="relative h-[60vh] bg-[#FEF7CD]">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
+          <div className="text-center text-[#000000e6]">
             <h1 className="text-5xl font-cabinet font-bold mb-4">About Trail Squad</h1>
             <p className="text-xl max-w-2xl mx-auto">Your trusted partner in discovering the world's most breathtaking trail running adventures.</p>
           </div>
