@@ -1,8 +1,10 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 const Transylvania100 = () => {
+  useScrollToTop();
+  
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
