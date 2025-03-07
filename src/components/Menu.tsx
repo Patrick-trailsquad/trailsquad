@@ -99,7 +99,27 @@ const Menu = () => {
                         strokeWidth="3"
                         strokeLinecap="round"
                         strokeLinejoin="round"
+                        strokeDasharray="10,10"
                         className="opacity-70"
+                      />
+                      <path
+                        d="M50 200 C150 170 250 140 350 120 C450 160 550 180 650 190 C750 140 850 100 950 80 C1050 120 1150 140 1200 160 L1200 200 L50 200 Z"
+                        fill="none"
+                        stroke="#FFDC00"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeDasharray="5,15"
+                        className="opacity-40"
+                      />
+                      <path
+                        d="M0 200 C100 160 200 130 300 110 C400 150 500 170 600 185 C700 130 800 90 900 70 C1000 110 1100 130 1200 150 L1200 200 L0 200 Z"
+                        fill="none"
+                        stroke="#FFDC00"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="opacity-30"
                       />
                     </svg>
 
