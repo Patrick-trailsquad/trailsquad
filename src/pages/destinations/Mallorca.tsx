@@ -1,9 +1,10 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
-import Button from "../../components/Button";
+import { Button } from "@/components/ui/button";
 
 const Mallorca = () => {
   useScrollToTop();
