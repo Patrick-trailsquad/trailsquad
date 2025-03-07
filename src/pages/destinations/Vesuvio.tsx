@@ -61,6 +61,7 @@ const Vesuvio = () => {
               asChild
               variant="charcoal"
               size="md"
+              className="mb-8"
             >
               <a 
                 href="https://www.vesuvioultramarathon.it/en/"

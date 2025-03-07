@@ -74,6 +74,7 @@ const Transylvania100 = () => {
               asChild
               variant="charcoal"
               size="md"
+              className="mb-8"
             >
               <a 
                 href="https://www.transylvania100k.com/"

@@ -75,11 +75,12 @@ const Mallorca = () => {
               asChild
               variant="charcoal"
               size="md"
+              className="mb-8"
             >
               <a 
-                href="https://mallorca.utmb.world/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                href="https://mallorca.utmb.world/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
               >
                 Visit Official Race Website
