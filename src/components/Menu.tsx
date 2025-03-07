@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Calendar, Info, Menu as MenuIcon } from 'lucide-react';
@@ -14,6 +15,11 @@ const Menu = () => {
     e.preventDefault();
     window.scrollTo(0, 0); // Reset scroll position first
     navigateAndScroll('/', 'upcoming-trips');
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigateAndScroll('/', 'top');
   };
 
   const menuItems = [
@@ -49,11 +55,17 @@ const Menu = () => {
         >
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between py-4">
-              <img 
-                src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
-                alt="Trail Squad Logo" 
-                className="h-10"
-              />
+              <a 
+                href="/"
+                onClick={handleLogoClick}
+                className="cursor-pointer"
+              >
+                <img 
+                  src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
+                  alt="Trail Squad Logo" 
+                  className="h-10"
+                />
+              </a>
               
               <div className="hidden md:flex items-center space-x-12">
                 {menuItems.map((item) => (
