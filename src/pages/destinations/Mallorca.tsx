@@ -90,15 +90,14 @@ const Mallorca = () => {
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Trip status</p>
-                  <p className="font-cabinet text-2xl font-bold text-charcoal">Sold Out</p>
-                  <p className="text-sm text-gray-500">Check back later for new dates</p>
+                  <p className="font-cabinet text-2xl font-bold text-charcoal">6 spots left</p>
+                  <p className="text-sm text-gray-500">Book now to secure your spot</p>
                 </div>
               </div>
               <button 
-                disabled 
-                className="w-full bg-gray-300 text-white px-8 py-4 rounded-full font-cabinet font-medium cursor-not-allowed"
+                className="w-full bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium hover:bg-white transition-colors border-2 border-black"
               >
-                No More Tickets
+                Request Price Quote
               </button>
             </div>
             <div className="bg-stone p-6 rounded-xl">
