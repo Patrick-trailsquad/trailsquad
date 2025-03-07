@@ -48,7 +48,7 @@ const NewZealand = () => {
               distances to suit your ambitions while showcasing the raw beauty of this Portuguese paradise.
             </p>
             <a 
-              href="#" 
+              href="https://www.miutmadeira.com/en/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
