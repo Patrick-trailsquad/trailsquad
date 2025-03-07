@@ -63,8 +63,12 @@ const MontBlanc = () => {
                   <p className="font-cabinet text-4xl font-bold text-charcoal">7.500 DKK</p>
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">Trip status</p>
+                  <p className="font-cabinet text-xl font-bold text-charcoal">+15 spots</p>
+                </div>
               </div>
-              <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300">
+              <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                 Request price quote
               </button>
             </div>
