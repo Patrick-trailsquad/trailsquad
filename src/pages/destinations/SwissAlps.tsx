@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -38,7 +37,7 @@ const SwissAlps = () => {
               <div>
                 <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
                 <p className="text-lg">
-                  Embark on an extraordinary adventure through the heart of the Italian Alps at the prestigious Grand Trail Courmayeur. Set against the backdrop of Europe's highest peak, Mont Blanc, this iconic trail running event offers an unparalleled blend of challenging terrain and breathtaking alpine scenery. Wind your way through ancient glacial valleys, pristine mountain lakes, and historic mountain villages that tell tales of centuries-old Alpine culture.
+                  Embark on an extraordinary adventure through the heart of the Italian Alps at the prestigious Gran Trail Courmayeur. Set against the backdrop of Europe's highest peak, Mont Blanc, this iconic trail running event offers an unparalleled blend of challenging terrain and breathtaking alpine scenery. Wind your way through ancient glacial valleys, pristine mountain lakes, and historic mountain villages that tell tales of centuries-old Alpine culture.
                 </p>
               </div>
 
