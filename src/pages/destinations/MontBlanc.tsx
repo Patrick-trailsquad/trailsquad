@@ -1,6 +1,7 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
 
 const MontBlanc = () => {
   useScrollToTop();
@@ -68,9 +69,10 @@ const MontBlanc = () => {
                   <p className="font-cabinet text-xl font-bold text-charcoal">+15 spots</p>
                 </div>
               </div>
-              <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                Request price quote
-              </button>
+              <PriceQuoteForm 
+                destinationName="Mont Blanc Ultra Trail" 
+                availableDistances={["40km", "90km", "170km"]}
+              />
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>

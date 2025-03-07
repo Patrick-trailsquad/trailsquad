@@ -2,6 +2,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
 
 const NorwegianFjords = () => {
   usePageTitle('Norwegian Fjords');
@@ -66,9 +67,10 @@ const NorwegianFjords = () => {
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
               </div>
-              <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300">
-                Request price quote
-              </button>
+              <PriceQuoteForm 
+                destinationName="Norwegian Fjords" 
+                availableDistances={["21km", "42km"]}
+              />
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>

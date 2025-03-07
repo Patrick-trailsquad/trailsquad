@@ -101,7 +101,10 @@ const Transylvania100 = () => {
                   <p className="font-cabinet text-xl font-bold text-charcoal">+15 spots</p>
                 </div>
               </div>
-              <PriceQuoteForm destinationName="Transylvania 100" />
+              <PriceQuoteForm 
+                destinationName="Transylvania 100" 
+                availableDistances={["20km", "50km", "100km"]}
+              />
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
