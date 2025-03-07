@@ -15,9 +15,9 @@ const testimonials = [
   },
   {
     quote: "From the rugged peaks to the serene valleys, every moment was an adventure. The guides were exceptional, and the group became like family.",
-    author: "Michael Chen",
-    title: "Swiss Alps Explorer",
-    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?fit=crop&w=800&h=800"
+    author: "Mathias Lund",
+    title: "Gran Trail Courmayeur",
+    image: "/lovable-uploads/7225d714-9535-49a1-810d-8357e51c97ef.png"
   },
   {
     quote: "The fjords were even more magnificent than I imagined. Running through this pristine landscape was truly a once-in-a-lifetime experience.",
