@@ -1,12 +1,12 @@
-
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../components/ui/sheet";
-import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info } from "lucide-react";
-import { Label } from "../components/ui/label";
+import { Label } from "./ui/label";
 import { useForm } from "react-hook-form";
-import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 import { useToast } from "../hooks/use-toast";
+import PhoneInput from "./PhoneInput";
 
 interface PriceQuoteFormProps {
   destinationName: string;
@@ -23,7 +23,7 @@ interface FormValues {
 
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
   const { toast } = useToast();
-  const { register, handleSubmit, formState: { errors } } = useForm<FormValues>();
+  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>();
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
@@ -85,19 +85,12 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                 )}
               </div>
 
-              <div>
-                <Label htmlFor="phone">Phone Number</Label>
-                <Input 
-                  id="phone"
-                  type="tel"
-                  {...register("phone", { required: true })}
-                  className="mt-1.5"
-                  placeholder="Enter your phone number"
-                />
-                {errors.phone && (
-                  <p className="text-red-500 text-sm mt-1">Please enter your phone number</p>
-                )}
-              </div>
+              <PhoneInput 
+                value={watch("phone")}
+                onChange={(value) => setValue("phone", value)}
+                error={!!errors.phone}
+                errorMessage={errors.phone ? "Please enter a valid phone number" : undefined}
+              />
 
               <div>
                 <Label htmlFor="participants">Number of Participants</Label>

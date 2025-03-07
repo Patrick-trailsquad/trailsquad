@@ -1,0 +1,64 @@
+
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { useEffect, useState } from "react";
+import { getCountries, getCountryCallingCode } from "libphonenumber-js";
+
+interface PhoneInputProps {
+  value: string;
+  onChange: (value: string) => void;
+  error?: boolean;
+  errorMessage?: string;
+}
+
+const PhoneInput = ({ value, onChange, error, errorMessage }: PhoneInputProps) => {
+  const [countryCode, setCountryCode] = useState("DK");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  useEffect(() => {
+    const formatted = `+${getCountryCallingCode(countryCode)}${phoneNumber}`;
+    onChange(formatted);
+  }, [countryCode, phoneNumber, onChange]);
+
+  useEffect(() => {
+    // Parse initial value if provided
+    if (value && !phoneNumber) {
+      const numberWithoutCode = value.replace(/^\+\d+/, '');
+      setPhoneNumber(numberWithoutCode);
+    }
+  }, [value, phoneNumber]);
+
+  return (
+    <div className="space-y-1.5">
+      <Label htmlFor="phone">Phone Number</Label>
+      <div className="flex gap-2">
+        <Select value={countryCode} onValueChange={setCountryCode}>
+          <SelectTrigger className="w-[140px]">
+            <SelectValue placeholder="Select country" />
+          </SelectTrigger>
+          <SelectContent>
+            {getCountries().map((country) => (
+              <SelectItem key={country} value={country}>
+                {country} (+{getCountryCallingCode(country)})
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Input
+          id="phone"
+          type="tel"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, ''))}
+          placeholder="Enter phone number"
+          className="flex-1"
+        />
+      </div>
+      {error && errorMessage && (
+        <p className="text-red-500 text-sm">{errorMessage}</p>
+      )}
+    </div>
+  );
+};
+
+export default PhoneInput;
