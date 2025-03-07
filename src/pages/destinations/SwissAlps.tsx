@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
+import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 
 const SwissAlps = () => {
   usePageTitle('Gran Trail Courmayeur');
@@ -116,6 +117,7 @@ const SwissAlps = () => {
             </div>
           </div>
         </div>
+        <BackToDestinationsButton />
       </div>
     </div>
   );

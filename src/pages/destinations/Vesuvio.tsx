@@ -2,6 +2,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
+import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 
 const Vesuvio = () => {
   useScrollToTop();
@@ -112,6 +113,7 @@ const Vesuvio = () => {
             </div>
           </div>
         </div>
+        <BackToDestinationsButton />
       </div>
     </div>
   );

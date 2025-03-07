@@ -1,6 +1,7 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
+import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 
 const NewZealand = () => {
   useScrollToTop();
@@ -100,6 +101,7 @@ const NewZealand = () => {
             </div>
           </div>
         </div>
+        <BackToDestinationsButton />
       </div>
     </div>
   );

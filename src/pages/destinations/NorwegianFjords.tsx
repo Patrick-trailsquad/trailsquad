@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
+import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 
 const NorwegianFjords = () => {
   usePageTitle('Norwegian Fjords');
@@ -92,6 +93,7 @@ const NorwegianFjords = () => {
             </div>
           </div>
         </div>
+        <BackToDestinationsButton />
       </div>
     </div>
   );
