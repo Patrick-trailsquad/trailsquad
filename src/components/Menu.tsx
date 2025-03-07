@@ -87,7 +87,7 @@ const Menu = () => {
                         d="M0 200 C50 180 150 100 300 80 C350 70 380 120 400 140 C450 100 480 70 500 60 C550 90 580 140 600 160 C650 120 750 60 800 40 C900 70 950 100 1000 120 C1100 90 1150 85 1200 80 L1200 200 L0 200 Z"
                         fill="none"
                         stroke="#FFDC00"
-                        strokeWidth="4"
+                        strokeWidth="8"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         style={{ strokeDasharray: '8,8', opacity: 0.8 }}
@@ -96,7 +96,7 @@ const Menu = () => {
                         d="M100 200 C200 150 300 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140 C1150 120 1180 110 1200 100 L1200 200 L100 200 Z"
                         fill="none"
                         stroke="#FFDC00"
-                        strokeWidth="4"
+                        strokeWidth="8"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         style={{ opacity: 0.6 }}
