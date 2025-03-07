@@ -137,3 +137,7 @@ const Menu = () => {
       )}
     </AnimatePresence>
   );
+};
+
+export default Menu;
+
