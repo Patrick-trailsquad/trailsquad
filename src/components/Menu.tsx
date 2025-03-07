@@ -78,7 +78,7 @@ const Menu = () => {
                 <SheetContent side="right" className="w-full bg-black/95 p-0 border-none">
                   <div className="flex flex-col items-center justify-center min-h-screen relative">
                     <svg 
-                      className="absolute w-full transform -translate-y-12"
+                      className="absolute w-full transform translate-y-[30px]"
                       viewBox="0 0 1200 200" 
                       xmlns="http://www.w3.org/2000/svg"
                       style={{ filter: 'brightness(1.5)' }}
@@ -94,15 +94,6 @@ const Menu = () => {
                           strokeDasharray: '12,8',
                           opacity: 0.9 
                         }}
-                      />
-                      <path
-                        d="M100 200 C200 150 300 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140 C1150 120 1180 110 1200 100 L1200 200 L100 200 Z"
-                        fill="none"
-                        stroke="#F97316"
-                        strokeWidth="5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        style={{ opacity: 0.8 }}
                       />
                     </svg>
 
