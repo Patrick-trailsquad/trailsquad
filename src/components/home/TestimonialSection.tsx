@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -10,9 +9,9 @@ import {
 const testimonials = [
   {
     quote: "The trails pushed me to my limits, but the breathtaking views and the sense of accomplishment made every step worth it. This wasn't just a run - it was a life-changing experience.",
-    author: "Sarah Mitchell",
-    title: "Cappadocia Trail Runner",
-    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?fit=crop&w=800&h=800"
+    author: "Simon Meinertz",
+    title: "Grand Trail du Lac",
+    image: "/lovable-uploads/9600454e-7c7f-4482-8216-a6e55e2a1c6e.png"
   },
   {
     quote: "From the rugged peaks to the serene valleys, every moment was an adventure. The guides were exceptional, and the group became like family.",
