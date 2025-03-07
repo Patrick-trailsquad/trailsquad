@@ -17,6 +17,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         black: "bg-black text-white font-cabinet font-medium hover:bg-black/90 transition-colors duration-300",
         yellow: "bg-[#FFDC00] text-black font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black",
+        charcoal: "bg-charcoal text-white font-cabinet font-medium hover:bg-charcoal/90 transition-colors duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -24,6 +25,7 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
         xl: "px-8 py-4 rounded-full",
+        md: "px-6 py-3 rounded-full",
       },
     },
     defaultVariants: {
