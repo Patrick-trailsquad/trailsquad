@@ -86,9 +86,10 @@ const Vesuvio = () => {
                   <p className="font-cabinet text-xl font-bold text-charcoal">+15 spots</p>
                 </div>
               </div>
-              <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                Request price quote
-              </button>
+              <PriceQuoteForm 
+                destinationName="Vesuvio Ultra Marathon"
+                availableDistances={["23 km", "45 km", "72 km"]}
+              />
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
