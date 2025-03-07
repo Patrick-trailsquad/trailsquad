@@ -40,14 +40,14 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
           Request price quote
         </button>
       </SheetTrigger>
-      <SheetContent className="w-full sm:max-w-lg">
+      <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
         <SheetHeader>
           <SheetTitle className="text-2xl font-cabinet">
             Request Quote for {destinationName}
           </SheetTitle>
         </SheetHeader>
         
-        <div className="mt-6">
+        <div className="mt-6 pb-6">
           <div className="bg-stone/50 rounded-lg p-4 flex items-start gap-3 mb-6">
             <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
             <p className="text-sm text-gray-600">
