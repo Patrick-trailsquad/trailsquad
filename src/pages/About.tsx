@@ -178,33 +178,25 @@ const About = () => {
           preserveAspectRatio="none"
         >
           <path
-            d="M0 180 L100 120 L200 180 L300 120 L400 180 L500 120 L600 180 L700 120 L800 180 L900 120 L1000 180 L1100 120 L1200 180"
+            d="M0 180 C100 120 150 100 300 80 C350 70 380 120 400 140 C450 100 480 70 500 60 C550 90 580 140 600 160 C650 120 750 60 800 40 C900 70 950 100 1000 120 C1100 90 1150 85 1200 80"
             fill="none"
             stroke="black"
-            strokeWidth="3"
+            strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="animate-pulse opacity-10"
+            style={{ 
+              strokeDasharray: '8,8',
+              opacity: 0.8 
+            }}
           />
           <path
-            d="M50 160 L150 100 L250 160 L350 100 L450 160 L550 100 L650 160 L750 100 L850 160 L950 100 L1050 160 L1150 100"
+            d="M100 200 C200 150 300 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140 C1150 120 1180 110 1200 100"
             fill="none"
             stroke="black"
-            strokeWidth="3"
+            strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeDasharray="10,10"
-            className="opacity-5"
-          />
-          <path
-            d="M25 140 L125 80 L225 140 L325 80 L425 140 L525 80 L625 140 L725 80 L825 140 L925 80 L1025 140 L1125 80"
-            fill="none"
-            stroke="black"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeDasharray="5,15"
-            className="opacity-10"
+            style={{ opacity: 0.6 }}
           />
         </svg>
       </section>
