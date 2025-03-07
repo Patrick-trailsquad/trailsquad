@@ -18,6 +18,7 @@ interface FormValues {
   email: string;
   phone: string;
   preferredDistance: string;
+  participants: number;
 }
 
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
@@ -95,6 +96,25 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">Please enter your phone number</p>
+                )}
+              </div>
+
+              <div>
+                <Label htmlFor="participants">Number of Participants</Label>
+                <Input 
+                  id="participants"
+                  type="number"
+                  min="1"
+                  {...register("participants", { 
+                    required: true,
+                    min: 1,
+                    valueAsNumber: true 
+                  })}
+                  className="mt-1.5"
+                  placeholder="Enter number of participants"
+                />
+                {errors.participants && (
+                  <p className="text-red-500 text-sm mt-1">Please enter a valid number of participants</p>
                 )}
               </div>
 
