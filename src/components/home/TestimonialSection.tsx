@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -23,7 +24,7 @@ const testimonials = [
     quote: "The fjords were even more magnificent than I imagined. Running through this pristine landscape was truly a once-in-a-lifetime experience.",
     author: "Lasse Stokholm",
     title: "Madeira Island Ultra Trail",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?fit=crop&w=800&h=800"
+    image: "/lovable-uploads/a91cfa89-2256-458c-8ba1-bfd2d0b4a1b1.png"
   }
 ];
 
