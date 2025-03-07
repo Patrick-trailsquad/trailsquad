@@ -96,8 +96,8 @@ const Transylvania100 = () => {
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
               </div>
-              <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
-                Book Your Spot
+              <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300">
+                Request price quote
               </button>
             </div>
             <div className="bg-stone p-6 rounded-xl">
