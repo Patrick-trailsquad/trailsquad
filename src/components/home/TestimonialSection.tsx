@@ -21,9 +21,9 @@ const testimonials = [
   },
   {
     quote: "The fjords were even more magnificent than I imagined. Running through this pristine landscape was truly a once-in-a-lifetime experience.",
-    author: "Emma Anderson",
-    title: "Norwegian Trails Enthusiast",
-    image: "https://images.unsplash.com/photo-1611042553365-9b101441c135?fit=crop&w=800&h=800"
+    author: "Lasse Stokholm",
+    title: "Madeira Island Ultra Trail",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?fit=crop&w=800&h=800"
   }
 ];
 
