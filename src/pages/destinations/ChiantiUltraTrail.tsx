@@ -91,7 +91,7 @@ const ChiantiUltraTrail = () => {
                 </div>
               </div>
               <button className="w-full bg-terra text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-terra/90 transition-colors duration-300">
-                Book Your Spot
+                Request price quote
               </button>
             </div>
             <div className="bg-stone p-6 rounded-xl">
