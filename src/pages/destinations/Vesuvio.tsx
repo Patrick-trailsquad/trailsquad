@@ -1,6 +1,7 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
 
 const Vesuvio = () => {
   useScrollToTop();
