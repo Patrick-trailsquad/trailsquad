@@ -13,7 +13,7 @@ const BackToDestinationsButton = () => {
     <div className="flex justify-center mt-16 mb-8">
       <button
         onClick={handleClick}
-        className="bg-charcoal text-white px-8 py-4 rounded-lg hover:bg-charcoal/90 transition-colors duration-300"
+        className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300"
       >
         Back to Destinations
       </button>
