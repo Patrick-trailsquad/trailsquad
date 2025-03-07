@@ -68,7 +68,7 @@ const Transylvania100 = () => {
             </div>
 
             <a 
-              href="#"
+              href="https://www.transylvania100k.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
