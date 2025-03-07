@@ -1,5 +1,6 @@
 
 import { useNavigateAndScroll } from "../../hooks/useNavigateAndScroll";
+import { Button } from "../ui/button";
 
 const BackToDestinationsButton = () => {
   const navigateAndScroll = useNavigateAndScroll();
@@ -11,12 +12,13 @@ const BackToDestinationsButton = () => {
 
   return (
     <div className="flex justify-center mt-16 mb-8">
-      <button
+      <Button
         onClick={handleClick}
-        className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300"
+        variant="black"
+        size="xl"
       >
         Back to Destinations
-      </button>
+      </Button>
     </div>
   );
 };
