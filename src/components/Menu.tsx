@@ -75,7 +75,7 @@ const Menu = () => {
                     <MenuIcon className="w-6 h-6 text-charcoal" />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-full bg-black/95 p-0 border-none">
+                <SheetContent side="right" className="w-full bg-black/95 p-0 !border-0">
                   <div className="flex flex-col items-center justify-center min-h-screen relative">
                     <svg 
                       className="absolute bottom-0 left-0 w-full h-48"
