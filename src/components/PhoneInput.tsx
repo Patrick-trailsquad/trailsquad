@@ -37,9 +37,9 @@ const PhoneInput = ({ value, onChange, error, errorMessage }: PhoneInputProps) =
           <SelectTrigger className="w-[140px]">
             <SelectValue placeholder="Select country" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-white border rounded-md shadow-lg">
             {getCountries().map((country) => (
-              <SelectItem key={country} value={country}>
+              <SelectItem key={country} value={country} className="hover:bg-gray-100">
                 {country} (+{getCountryCallingCode(country)})
               </SelectItem>
             ))}
