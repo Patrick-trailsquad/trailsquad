@@ -1,3 +1,4 @@
+
 import { Mail, Award, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
@@ -36,11 +37,41 @@ const About = () => {
       <Menu />
       
       {/* Hero Section */}
-      <div className="relative h-[60vh] bg-[#FFDC00] flex items-center justify-center">
-        <div className="text-center text-[#000000e6] px-6 md:px-4 flex flex-col">
+      <div className="relative h-[60vh] bg-[#FFDC00] flex items-center justify-center overflow-hidden">
+        <div className="text-center text-[#000000e6] px-6 md:px-4 flex flex-col relative z-10">
           <h1 className="text-5xl font-cabinet font-bold">About Trail Squad</h1>
           <p className="text-xl max-w-2xl mx-auto mt-2">Trail Squad is a travel company focused on running epic trail races across the globe.</p>
         </div>
+        
+        {/* Mountain Range Sketch */}
+        <svg 
+          className="absolute bottom-0 left-0 w-full"
+          viewBox="0 0 1200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ filter: 'brightness(1.2)' }}
+        >
+          <path
+            d="M0 200 L300 80 L400 140 L500 60 L600 160 L800 40 L1000 120 L1200 80 L1200 200 L0 200 Z"
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ 
+              strokeDasharray: '5,5',
+              opacity: 0.8 
+            }}
+          />
+          <path
+            d="M100 200 L400 100 L600 180 L900 60 L1100 140 L1200 100 L1200 200 L100 200 Z"
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ opacity: 0.6 }}
+          />
+        </svg>
       </div>
 
       {/* Team Section */}
