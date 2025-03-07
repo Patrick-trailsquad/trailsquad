@@ -1,7 +1,8 @@
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Calendar, Info, Menu as MenuIcon } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Link } from 'react-router-dom';
 import { useNavigateAndScroll } from '../hooks/useNavigateAndScroll';
 
@@ -40,6 +41,9 @@ const Menu = () => {
 
   const MobileMenu = () => (
     <SheetContent side="top" className="w-full h-[100dvh] bg-black/95 flex items-center justify-center border-none relative overflow-hidden">
+      <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+      <SheetDescription className="sr-only">Main navigation links</SheetDescription>
+      
       {/* Mountain Range Sketch - Yellow Version */}
       <svg 
         className="absolute bottom-0 left-0 w-full"
@@ -120,8 +124,10 @@ const Menu = () => {
 
               {/* Mobile Menu */}
               <Sheet>
-                <SheetTrigger className="md:hidden">
-                  <MenuIcon className="w-6 h-6 text-charcoal" />
+                <SheetTrigger asChild>
+                  <button className="md:hidden">
+                    <MenuIcon className="w-6 h-6 text-charcoal" />
+                  </button>
                 </SheetTrigger>
                 <MobileMenu />
               </Sheet>
@@ -131,6 +137,3 @@ const Menu = () => {
       )}
     </AnimatePresence>
   );
-};
-
-export default Menu;
