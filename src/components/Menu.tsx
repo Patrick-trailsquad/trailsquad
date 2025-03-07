@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, Calendar, Info, Menu as MenuIcon } from 'lucide-react';
@@ -13,7 +12,6 @@ const Menu = () => {
 
   const handleDestinationsClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.scrollTo(0, 0); // Reset scroll position first
     navigateAndScroll('/', 'upcoming-trips');
   };
 

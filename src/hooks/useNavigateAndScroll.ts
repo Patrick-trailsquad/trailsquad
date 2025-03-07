@@ -6,20 +6,20 @@ export const useNavigateAndScroll = () => {
   const navigate = useNavigate();
 
   const navigateAndScroll = useCallback((path: string, elementId: string) => {
-    if (elementId === 'top') {
-      navigate(path);
-      return;
-    }
-
     navigate(path);
     
-    // Wait for navigation to complete before scrolling
-    setTimeout(() => {
-      const element = document.getElementById(elementId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
+    // Always scroll to top first
+    window.scrollTo(0, 0);
+    
+    // If we need to scroll to a specific element, wait for navigation and do it
+    if (elementId !== 'top') {
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
   }, [navigate]);
 
   return navigateAndScroll;
