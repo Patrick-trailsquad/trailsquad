@@ -4,6 +4,7 @@ import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
+import { Button } from "@/components/ui/button";
 
 const NorwegianFjords = () => {
   usePageTitle('Norwegian Fjords');
@@ -40,15 +41,21 @@ const NorwegianFjords = () => {
               adventure. Run along ancient Viking paths, through pristine valleys, and 
               beside spectacular fjords in the land of the midnight sun.
             </p>
-            <a 
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-charcoal text-white px-6 py-3 rounded-lg hover:bg-charcoal/90 transition-colors mb-6"
+            <Button 
+              asChild
+              variant="charcoal"
+              size="md"
             >
-              Visit Official Race Website
-              <ExternalLink className="w-4 h-4" />
-            </a>
+              <a 
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
+                Visit Official Race Website
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </Button>
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
