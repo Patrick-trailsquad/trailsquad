@@ -3,7 +3,7 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { useEffect, useState } from "react";
-import { getCountries, getCountryCallingCode } from "libphonenumber-js";
+import { getCountries, getCountryCallingCode, CountryCode } from "libphonenumber-js";
 
 interface PhoneInputProps {
   value: string;
@@ -13,7 +13,7 @@ interface PhoneInputProps {
 }
 
 const PhoneInput = ({ value, onChange, error, errorMessage }: PhoneInputProps) => {
-  const [countryCode, setCountryCode] = useState("DK");
+  const [countryCode, setCountryCode] = useState<CountryCode>("DK");
   const [phoneNumber, setPhoneNumber] = useState("");
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const PhoneInput = ({ value, onChange, error, errorMessage }: PhoneInputProps) =
     <div className="space-y-1.5">
       <Label htmlFor="phone">Phone Number</Label>
       <div className="flex gap-2">
-        <Select value={countryCode} onValueChange={setCountryCode}>
+        <Select value={countryCode} onValueChange={(value) => setCountryCode(value as CountryCode)}>
           <SelectTrigger className="w-[140px]">
             <SelectValue placeholder="Select country" />
           </SelectTrigger>
