@@ -25,13 +25,6 @@ const destinations = [
     href: "/destinations/chianti"
   },
   {
-    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
-    location: "Grand Trail Courmayeur, Italy",
-    date: "July 2026",
-    spots: "8 spots left",
-    href: "/destinations/gtc"
-  },
-  {
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
     location: "Vesuvio Ultra Marathon, Italy",
     date: "May 2026",
@@ -44,6 +37,13 @@ const destinations = [
     date: "May 2026",
     spots: "15 spots left",
     href: "/destinations/transylvania"
+  },
+  {
+    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
+    location: "Grand Trail Courmayeur, Italy",
+    date: "July 2026",
+    spots: "8 spots left",
+    href: "/destinations/gtc"
   }
 ];
 
