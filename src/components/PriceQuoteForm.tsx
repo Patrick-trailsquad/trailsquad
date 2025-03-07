@@ -1,3 +1,4 @@
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info } from "lucide-react";
@@ -114,7 +115,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
               <div className="space-y-3">
                 <Label>Preferred Distance</Label>
                 <RadioGroup 
-                  {...register("preferredDistance", { required: true })}
+                  defaultValue={availableDistances[0]}
+                  onValueChange={(value) => setValue('preferredDistance', value)}
                   className="gap-3"
                 >
                   {availableDistances.map((distance) => (
