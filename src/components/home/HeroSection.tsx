@@ -31,7 +31,7 @@ const HeroSection = () => {
             Most Stunning Locations
           </h1>
           <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get incredible experiences and boost your active life style by defeating the summits of Europe's mountains
+            Get incredible experiences and boost your active lifestyle by defeating the summits of Europe's mountains
           </p>
           <button className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto">
             Start Your Journey
