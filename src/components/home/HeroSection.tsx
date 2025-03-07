@@ -1,8 +1,15 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigateAndScroll } from "../../hooks/useNavigateAndScroll";
 
 const HeroSection = () => {
+  const navigateAndScroll = useNavigateAndScroll();
+
+  const handleDestinationsClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    navigateAndScroll('/', 'upcoming-trips');
+  };
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -33,8 +40,11 @@ const HeroSection = () => {
           <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Get incredible experiences and boost your active lifestyle by defeating the summits of Europe's mountains
           </p>
-          <button className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto">
-            Start Your Journey
+          <button 
+            onClick={handleDestinationsClick}
+            className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto"
+          >
+            See upcoming trips
             <ArrowRight className="w-5 h-5" />
           </button>
         </motion.div>
