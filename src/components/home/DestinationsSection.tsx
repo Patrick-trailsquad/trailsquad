@@ -40,7 +40,7 @@ const destinations = [
   },
   {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
-    location: "Grand Trail Courmayeur, Italy",
+    location: "Gran Trail Courmayeur, Italy",
     date: "July 2026",
     spots: "+15 spots",
     href: "/destinations/gtc"
