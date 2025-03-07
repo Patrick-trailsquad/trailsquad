@@ -11,13 +11,6 @@ const destinations = [
     href: "/destinations/miut"
   },
   {
-    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
-    location: "Grand Trail Courmayeur, Italy",
-    date: "July 2025",
-    spots: "8 spots left",
-    href: "/destinations/gtc"
-  },
-  {
     image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",
     location: "Mallorca by UTMB, Spain",
     date: "November 2025",
@@ -30,6 +23,13 @@ const destinations = [
     date: "March 2026",
     spots: "15 spots left",
     href: "/destinations/chianti"
+  },
+  {
+    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
+    location: "Grand Trail Courmayeur, Italy",
+    date: "July 2026",
+    spots: "8 spots left",
+    href: "/destinations/gtc"
   },
   {
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
