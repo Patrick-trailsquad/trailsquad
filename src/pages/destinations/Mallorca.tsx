@@ -1,7 +1,11 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
 
 const Mallorca = () => {
+  useScrollToTop();
+  
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
@@ -98,11 +102,10 @@ const Mallorca = () => {
                   <p className="font-cabinet text-xl font-bold text-charcoal">6 spots left</p>
                 </div>
               </div>
-              <button 
-                className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
-              >
-                Request price quote
-              </button>
+              <PriceQuoteForm 
+                destinationName="Mallorca by UTMB"
+                availableDistances={["20 km", "50 km", "100 km", "100 m"]}
+              />
             </div>
 
             <div className="bg-stone p-6 rounded-xl">
