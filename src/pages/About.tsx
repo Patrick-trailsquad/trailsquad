@@ -151,8 +151,8 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#FFDC00]">
-        <div className="container mx-auto px-4 text-center text-black">
+      <section className="py-24 bg-[#FFDC00] relative">
+        <div className="container mx-auto px-4 text-center text-black relative z-10">
           <h2 className="text-4xl font-cabinet font-bold mb-6">Ready to Start Your Adventure?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-black/90">Join us for an unforgettable trail running experience in some of the world's most stunning locations.</p>
           <div className="flex items-center justify-center gap-4">
@@ -169,6 +169,44 @@ const About = () => {
             </a>
           </div>
         </div>
+
+        {/* Decorative Lines */}
+        <svg 
+          className="absolute bottom-0 left-0 w-full h-48"
+          viewBox="0 0 1200 200" 
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 200 C50 180 150 100 300 80 C350 70 380 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140"
+            fill="none"
+            stroke="black"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="animate-pulse opacity-10"
+          />
+          <path
+            d="M100 200 C200 150 300 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140"
+            fill="none"
+            stroke="black"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeDasharray="10,10"
+            className="opacity-5"
+          />
+          <path
+            d="M50 200 C150 170 250 140 350 120 C450 160 550 180 650 190 C750 140 850 100 950 80"
+            fill="none"
+            stroke="black"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeDasharray="5,15"
+            className="opacity-10"
+          />
+        </svg>
       </section>
 
       <Footer />
