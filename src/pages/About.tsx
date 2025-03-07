@@ -16,10 +16,8 @@ const About = () => {
   const navigateAndScroll = useNavigateAndScroll();
 
   const images = [
-    "/lovable-uploads/0ff6cfdb-d0ab-4ba7-8894-63e7eae03549.png",
     "/lovable-uploads/e809c741-198a-406a-a1d0-7112f8220309.png",
     "/lovable-uploads/25d3f586-ac0f-49eb-b707-422bf6f2a1a2.png",
-    "/lovable-uploads/8f2e413d-62c8-4590-b8f6-731f17391272.png",
     "/lovable-uploads/c5ad0d53-d3e9-4acf-9182-5c642ad97194.png",
     "/lovable-uploads/cf8dc3b8-2664-43db-9f7f-b5647f7dea9b.png",
     "/lovable-uploads/2b43a391-e48b-4a13-891c-2d98c0c00ced.png",
