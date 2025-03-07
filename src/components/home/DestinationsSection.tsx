@@ -21,28 +21,28 @@ const destinations = [
     image: "/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png",
     location: "Chianti Ultra Trail By UTMB, Italy",
     date: "March 2026",
-    spots: "15 spots left",
+    spots: "+15 spots",
     href: "/destinations/chianti"
   },
   {
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
     location: "Vesuvio Ultra Marathon, Italy",
     date: "May 2026",
-    spots: "10 spots left",
+    spots: "+15 spots",
     href: "/destinations/vesuvio"
   },
   {
     image: "/lovable-uploads/609b48d8-13b5-4f5b-b65e-9e75141d6c2d.png",
     location: "Transylvania 100, Romania",
     date: "May 2026",
-    spots: "15 spots left",
+    spots: "+15 spots",
     href: "/destinations/transylvania"
   },
   {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
     location: "Grand Trail Courmayeur, Italy",
     date: "July 2026",
-    spots: "8 spots left",
+    spots: "+15 spots",
     href: "/destinations/gtc"
   }
 ];
