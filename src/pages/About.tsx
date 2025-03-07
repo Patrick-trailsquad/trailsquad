@@ -151,7 +151,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#FFDC00] relative">
+      <section className="py-32 bg-[#FFDC00] relative min-h-[600px]">
         <div className="container mx-auto px-4 text-center text-black relative z-10">
           <h2 className="text-4xl font-cabinet font-bold mb-6">Ready to Start Your Adventure?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-black/90">Join us for an unforgettable trail running experience in some of the world's most stunning locations.</p>
@@ -172,13 +172,13 @@ const About = () => {
 
         {/* Decorative Lines */}
         <svg 
-          className="absolute bottom-0 left-0 w-full h-48"
+          className="absolute bottom-0 left-0 w-full h-64"
           viewBox="0 0 1200 200" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <path
-            d="M0 200 C50 180 150 100 300 80 C350 70 380 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140"
+            d="M0 180 L100 120 L200 180 L300 120 L400 180 L500 120 L600 180 L700 120 L800 180 L900 120 L1000 180 L1100 120 L1200 180"
             fill="none"
             stroke="black"
             strokeWidth="3"
@@ -187,7 +187,7 @@ const About = () => {
             className="animate-pulse opacity-10"
           />
           <path
-            d="M100 200 C200 150 300 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140"
+            d="M50 160 L150 100 L250 160 L350 100 L450 160 L550 100 L650 160 L750 100 L850 160 L950 100 L1050 160 L1150 100"
             fill="none"
             stroke="black"
             strokeWidth="3"
@@ -197,7 +197,7 @@ const About = () => {
             className="opacity-5"
           />
           <path
-            d="M50 200 C150 170 250 140 350 120 C450 160 550 180 650 190 C750 140 850 100 950 80"
+            d="M25 140 L125 80 L225 140 L325 80 L425 140 L525 80 L625 140 L725 80 L825 140 L925 80 L1025 140 L1125 80"
             fill="none"
             stroke="black"
             strokeWidth="2"
