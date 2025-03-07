@@ -1,4 +1,3 @@
-
 import { Mail, Award, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
@@ -54,11 +53,11 @@ const About = () => {
             d="M0 200 L300 80 L400 140 L500 60 L600 160 L800 40 L1000 120 L1200 80 L1200 200 L0 200 Z"
             fill="none"
             stroke="white"
-            strokeWidth="2"
+            strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
             style={{ 
-              strokeDasharray: '5,5',
+              strokeDasharray: '8,8',
               opacity: 0.8 
             }}
           />
@@ -66,7 +65,7 @@ const About = () => {
             d="M100 200 L400 100 L600 180 L900 60 L1100 140 L1200 100 L1200 200 L100 200 Z"
             fill="none"
             stroke="white"
-            strokeWidth="2"
+            strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
             style={{ opacity: 0.6 }}
