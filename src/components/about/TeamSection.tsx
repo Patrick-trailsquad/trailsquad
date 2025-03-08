@@ -1,6 +1,6 @@
 
 import { FC } from 'react';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
 
 const TeamSection: FC = () => {
   return (
@@ -55,7 +55,33 @@ const TeamSection: FC = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/40 rounded-lg" />
             <div className="absolute bottom-4 left-0 right-0 text-center">
               <h3 className="font-bold text-xl mb-1 text-[#FFDC00]">Emil Albrechtsen</h3>
-              <p className="text-[#FFDC00]">Co-founder, Running coach & Physiotherapist</p>
+              <p className="text-[#FFDC00] mb-3">Co-founder, Running coach & Physiotherapist</p>
+              <div className="flex justify-center gap-3">
+                <a 
+                  href="https://www.strava.com/athletes/92236720"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#FFDC00] hover:text-[#FFDC00]/80 transition-colors"
+                >
+                  <svg 
+                    viewBox="0 0 24 24" 
+                    width="24" 
+                    height="24" 
+                    fill="currentColor"
+                    className="hover:scale-110 transition-transform"
+                  >
+                    <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+                  </svg>
+                </a>
+                <a 
+                  href="https://www.instagram.com/emil.fysio.albrechtsen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#FFDC00] hover:text-[#FFDC00]/80 transition-colors"
+                >
+                  <Instagram className="size-6 hover:scale-110 transition-transform" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
