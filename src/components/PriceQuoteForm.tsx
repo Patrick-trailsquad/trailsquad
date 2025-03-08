@@ -36,20 +36,12 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
   const onSubmit = async (data: FormValues) => {
     try {
-      const response = await fetch(ZAPIER_WEBHOOK_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        mode: 'no-cors',
-        body: JSON.stringify({
-          destinationName,
-          submittedAt: new Date().toISOString(),
-          ...data
-        }),
+      console.log('Form submitted with data:', {
+        destinationName,
+        submittedAt: new Date().toISOString(),
+        ...data
       });
-
-      console.log('Form data sent:', data);
+      
       setIsSubmitted(true);
       
       toast({
@@ -57,7 +49,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         description: "Your request has been submitted successfully!",
       });
     } catch (error) {
-      console.error('Error sending form data:', error);
+      console.error('Error handling form submission:', error);
       toast({
         title: "Error",
         description: "Failed to submit your request. Please try again.",
