@@ -1,3 +1,4 @@
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info, CheckCircle2 } from "lucide-react";
@@ -6,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { useToast } from "./ui/use-toast";
 import PhoneInput from "./PhoneInput";
 
 interface PriceQuoteFormProps {
@@ -23,6 +25,7 @@ interface FormValues {
 }
 
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
+  const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
     defaultValues: {
@@ -30,9 +33,48 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
     }
   });
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
-    setIsSubmitted(true);
+  const onSubmit = async (data: FormValues) => {
+    // Replace this URL with your actual Zapier Webhook URL
+    const ZAPIER_WEBHOOK_URL = '';
+    
+    if (!ZAPIER_WEBHOOK_URL) {
+      toast({
+        title: "Configuration Error",
+        description: "Please set up your Zapier webhook URL first",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch(ZAPIER_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'no-cors', // Required for Zapier webhooks
+        body: JSON.stringify({
+          destinationName,
+          submittedAt: new Date().toISOString(),
+          ...data
+        }),
+      });
+
+      console.log('Form data sent:', data);
+      setIsSubmitted(true);
+      
+      toast({
+        title: "Success",
+        description: "Your request has been submitted successfully!",
+      });
+    } catch (error) {
+      console.error('Error sending form data:', error);
+      toast({
+        title: "Error",
+        description: "Failed to submit your request. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
