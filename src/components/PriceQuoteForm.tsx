@@ -23,10 +23,11 @@ interface FormValues {
   preferredLanguage: string;
 }
 
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
+
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState(() => localStorage.getItem('zapierWebhookUrl') || '');
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
     defaultValues: {
       preferredLanguage: 'english'
@@ -34,22 +35,13 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   });
 
   const onSubmit = async (data: FormValues) => {
-    if (!webhookUrl) {
-      toast({
-        title: "Configuration Error",
-        description: "Please set up your Zapier webhook URL first",
-        variant: "destructive",
-      });
-      return;
-    }
-
     try {
-      const response = await fetch(webhookUrl, {
+      const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'no-cors', // Required for Zapier webhooks
+        mode: 'no-cors',
         body: JSON.stringify({
           destinationName,
           submittedAt: new Date().toISOString(),
@@ -74,12 +66,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
     }
   };
 
-  const handleWebhookUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const url = e.target.value;
-    setWebhookUrl(url);
-    localStorage.setItem('zapierWebhookUrl', url);
-  };
-
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -87,6 +73,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
           Request price quote
         </button>
       </SheetTrigger>
+      
       <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
         <SheetHeader>
           <SheetTitle className="text-2xl font-cabinet">
@@ -119,18 +106,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-4">
-                  <div>
-                    <Label htmlFor="webhookUrl">Zapier Webhook URL</Label>
-                    <Input 
-                      id="webhookUrl"
-                      type="url"
-                      value={webhookUrl}
-                      onChange={handleWebhookUrlChange}
-                      className="mt-1.5"
-                      placeholder="Enter your Zapier webhook URL"
-                    />
-                  </div>
-
                   <div>
                     <Label htmlFor="fullName">Full Name</Label>
                     <Input 
