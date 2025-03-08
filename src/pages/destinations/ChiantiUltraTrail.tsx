@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
 
 const ChiantiUltraTrail = () => {
   useScrollToTop();
@@ -103,9 +104,10 @@ const ChiantiUltraTrail = () => {
                   <p className="font-cabinet text-xl font-bold text-charcoal">+15 spots</p>
                 </div>
               </div>
-              <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                Request price quote
-              </button>
+              <PriceQuoteForm 
+                destinationName="Chianti Ultra Trail"
+                availableDistances={["15km", "35km", "60km", "100km"]}
+              />
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
