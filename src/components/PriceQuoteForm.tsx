@@ -19,11 +19,16 @@ interface FormValues {
   phone: string;
   preferredDistance: string;
   participants: number;
+  preferredLanguage: string;
 }
 
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>();
+  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
+    defaultValues: {
+      preferredLanguage: 'english'
+    }
+  });
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
@@ -119,6 +124,27 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     />
                     {errors.participants && (
                       <p className="text-red-500 text-sm mt-1">Please enter a valid number of participants</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label>Preferred Language</Label>
+                    <RadioGroup 
+                      defaultValue="english"
+                      onValueChange={(value) => setValue('preferredLanguage', value)}
+                      className="gap-3"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="english" id="english" />
+                        <Label htmlFor="english">English</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="danish" id="danish" />
+                        <Label htmlFor="danish">Danish</Label>
+                      </div>
+                    </RadioGroup>
+                    {errors.preferredLanguage && (
+                      <p className="text-red-500 text-sm">Please select a preferred language</p>
                     )}
                   </div>
 
