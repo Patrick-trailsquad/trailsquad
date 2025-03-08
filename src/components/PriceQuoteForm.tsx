@@ -128,7 +128,26 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                   </div>
 
                   <div className="space-y-3">
-                    <Label>Preferred Language</Label>
+                    <Label>Preferred Distance</Label>
+                    <RadioGroup 
+                      defaultValue={availableDistances[0]}
+                      onValueChange={(value) => setValue('preferredDistance', value)}
+                      className="gap-3"
+                    >
+                      {availableDistances.map((distance) => (
+                        <div key={distance} className="flex items-center space-x-2">
+                          <RadioGroupItem value={distance} id={distance} />
+                          <Label htmlFor={distance}>{distance}</Label>
+                        </div>
+                      ))}
+                    </RadioGroup>
+                    {errors.preferredDistance && (
+                      <p className="text-red-500 text-sm">Please select a preferred distance</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label>Preferred Language of upcoming communication</Label>
                     <RadioGroup 
                       defaultValue="english"
                       onValueChange={(value) => setValue('preferredLanguage', value)}
@@ -145,25 +164,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </RadioGroup>
                     {errors.preferredLanguage && (
                       <p className="text-red-500 text-sm">Please select a preferred language</p>
-                    )}
-                  </div>
-
-                  <div className="space-y-3">
-                    <Label>Preferred Distance</Label>
-                    <RadioGroup 
-                      defaultValue={availableDistances[0]}
-                      onValueChange={(value) => setValue('preferredDistance', value)}
-                      className="gap-3"
-                    >
-                      {availableDistances.map((distance) => (
-                        <div key={distance} className="flex items-center space-x-2">
-                          <RadioGroupItem value={distance} id={distance} />
-                          <Label htmlFor={distance}>{distance}</Label>
-                        </div>
-                      ))}
-                    </RadioGroup>
-                    {errors.preferredDistance && (
-                      <p className="text-red-500 text-sm">Please select a preferred distance</p>
                     )}
                   </div>
                 </div>
