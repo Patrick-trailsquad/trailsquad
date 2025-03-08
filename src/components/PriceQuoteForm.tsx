@@ -36,10 +36,21 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
   const onSubmit = async (data: FormValues) => {
     try {
-      console.log('Form submitted with data:', {
+      const formData = {
         destinationName,
         submittedAt: new Date().toISOString(),
         ...data
+      };
+
+      console.log('Form submitted with data:', formData);
+      
+      const response = await fetch(ZAPIER_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'no-cors',
+        body: JSON.stringify(formData),
       });
       
       setIsSubmitted(true);
