@@ -1,4 +1,3 @@
-
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info, CheckCircle2 } from "lucide-react";
@@ -27,6 +26,7 @@ interface FormValues {
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [webhookUrl, setWebhookUrl] = useState(() => localStorage.getItem('zapierWebhookUrl') || '');
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
     defaultValues: {
       preferredLanguage: 'english'
@@ -34,10 +34,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   });
 
   const onSubmit = async (data: FormValues) => {
-    // Replace this URL with your actual Zapier Webhook URL
-    const ZAPIER_WEBHOOK_URL = '';
-    
-    if (!ZAPIER_WEBHOOK_URL) {
+    if (!webhookUrl) {
       toast({
         title: "Configuration Error",
         description: "Please set up your Zapier webhook URL first",
@@ -47,7 +44,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
     }
 
     try {
-      const response = await fetch(ZAPIER_WEBHOOK_URL, {
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,6 +72,12 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         variant: "destructive",
       });
     }
+  };
+
+  const handleWebhookUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const url = e.target.value;
+    setWebhookUrl(url);
+    localStorage.setItem('zapierWebhookUrl', url);
   };
 
   return (
@@ -116,6 +119,18 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-4">
+                  <div>
+                    <Label htmlFor="webhookUrl">Zapier Webhook URL</Label>
+                    <Input 
+                      id="webhookUrl"
+                      type="url"
+                      value={webhookUrl}
+                      onChange={handleWebhookUrlChange}
+                      className="mt-1.5"
+                      placeholder="Enter your Zapier webhook URL"
+                    />
+                  </div>
+
                   <div>
                     <Label htmlFor="fullName">Full Name</Label>
                     <Input 
