@@ -47,8 +47,19 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         preferred_language: data.preferredLanguage
       };
 
-      console.log('Form data being sent to Zapier:', JSON.stringify(formData, null, 2));
+      console.log('Raw form data object:', formData);
+      console.log('Stringified form data:', JSON.stringify(formData));
       
+      console.log('Request configuration:', {
+        url: ZAPIER_WEBHOOK_URL,
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'no-cors',
+        body: JSON.stringify(formData)
+      });
+
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
         headers: {
@@ -58,7 +69,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         body: JSON.stringify(formData),
       });
 
-      console.log('Request sent to Zapier. Response object:', response);
+      console.log('Full response object:', response);
+      console.log('Response type:', response.type);
       
       setIsSubmitted(true);
       
@@ -67,7 +79,12 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         description: "Your request has been submitted successfully!",
       });
     } catch (error) {
-      console.error('Detailed error when submitting to Zapier:', error);
+      console.error('Error details:', {
+        error,
+        message: error instanceof Error ? error.message : 'Unknown error',
+        stack: error instanceof Error ? error.stack : undefined
+      });
+      
       toast({
         title: "Error",
         description: "Failed to submit your request. Please try again.",
