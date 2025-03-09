@@ -37,9 +37,14 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   const onSubmit = async (data: FormValues) => {
     try {
       const formData = {
-        destinationName,
-        submittedAt: new Date().toISOString(),
-        ...data
+        destination_name: destinationName,
+        submitted_at: new Date().toISOString(),
+        full_name: data.fullName,
+        email_address: data.email,
+        phone_number: data.phone,
+        preferred_distance: data.preferredDistance,
+        number_of_participants: data.participants,
+        preferred_language: data.preferredLanguage
       };
 
       console.log('Form submitted with data:', formData);
