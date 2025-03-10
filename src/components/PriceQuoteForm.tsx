@@ -30,7 +30,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
     defaultValues: {
-      preferredLanguage: 'english'
+      preferredLanguage: 'english',
+      preferredDistance: availableDistances[0]
     }
   });
 
@@ -190,7 +191,10 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     <Label>Preferred Distance</Label>
                     <RadioGroup 
                       defaultValue={availableDistances[0]}
-                      onValueChange={(value) => setValue('preferredDistance', value)}
+                      onValueChange={(value) => {
+                        setValue('preferredDistance', value);
+                        console.log('Setting preferred distance:', value);
+                      }}
                       className="gap-3"
                     >
                       {availableDistances.map((distance) => (
