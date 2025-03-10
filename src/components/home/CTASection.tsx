@@ -1,5 +1,48 @@
 
+import { useState } from 'react';
+import { useToast } from "@/hooks/use-toast";
+
 const CTASection = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qey8br/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'no-cors',
+        body: JSON.stringify({
+          email,
+          source: 'homepage_cta',
+          submitted_at: new Date().toISOString()
+        }),
+      });
+
+      console.log('Form submission response:', response);
+      setEmail('');
+      toast({
+        title: "Success!",
+        description: "Thanks for signing up. We'll be in touch soon!",
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-24 bg-[#FFDC00] relative min-h-[600px]">
       <div className="container mx-auto px-4 relative z-10">
@@ -10,14 +53,21 @@ const CTASection = () => {
           <p className="font-inter text-xl text-black/90 mb-8">
             Join our community of trail runners and experience the world's most beautiful paths.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
+              required
               className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
             />
-            <button className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300">
-              Get Started
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300 disabled:opacity-50"
+            >
+              {isSubmitting ? 'Submitting...' : 'Get Started'}
             </button>
           </form>
         </div>
