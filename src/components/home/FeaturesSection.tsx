@@ -39,9 +39,9 @@ const FeaturesSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-stone p-8 rounded-2xl transition-shadow duration-300"
+              className="bg-stone p-8 rounded-2xl transition-shadow duration-300 w-full"
             >
-              <div className="mb-6 h-48 w-full overflow-hidden rounded-xl">
+              <div className="mb-6 h-24 w-full overflow-hidden rounded-xl">
                 <img 
                   src={feature.image} 
                   alt={feature.title}
