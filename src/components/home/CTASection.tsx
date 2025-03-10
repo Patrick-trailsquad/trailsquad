@@ -63,14 +63,13 @@ const CTASection = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
               required
               disabled={isSuccess}
               className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20 disabled:opacity-50"
             />
             {isSuccess ? (
-              <div className="bg-black text-white px-8 py-4 rounded-full flex items-center justify-center">
-                <ThumbsUp className="w-6 h-6 animate-fade-in" />
+              <div className="bg-transparent border-2 border-black text-black px-8 py-4 rounded-full flex items-center justify-center">
+                <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
               </div>
             ) : (
               <button 
