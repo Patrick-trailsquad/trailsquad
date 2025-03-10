@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    image: "/lovable-uploads/cf8dc3b8-2664-43db-9f7f-b5647f7dea9b.png", // Trail running in mountains
+    image: "/lovable-uploads/bec62159-47fc-4e21-9d40-11bebd51957a.png", // Trail running in mountains
     title: "Epic Destinations",
     description: "Let us do the boring planning so you can travel the world and experience thrilling trails across continents and terrains"
   },
