@@ -59,7 +59,7 @@ const MontBlanc = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Chamonix, France</li>
-                <li><strong>Date of run:</strong> June 20, 2025</li>
+                <li><strong>Date of race:</strong> June 20, 2025</li>
                 <li><strong>Trip duration:</strong> June 18-21, 2025 (4 days)</li>
                 <li><strong>Available distances:</strong> 40km, 90km, 170km</li>
               </ul>

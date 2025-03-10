@@ -61,7 +61,7 @@ const NorwegianFjords = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Bergen Region, Norway</li>
-                <li><strong>Date of run:</strong> August 20, 2024</li>
+                <li><strong>Date of race:</strong> August 20, 2024</li>
                 <li><strong>Trip duration:</strong> August 18-23, 2024 (6 days)</li>
                 <li><strong>Available distances:</strong> 21km, 42km</li>
               </ul>

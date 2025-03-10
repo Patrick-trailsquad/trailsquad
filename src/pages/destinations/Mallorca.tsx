@@ -91,7 +91,7 @@ const Mallorca = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Sóller, Mallorca, Spain</li>
-                <li><strong>Date of run:</strong> November 1, 2025</li>
+                <li><strong>Date of race:</strong> November 1, 2025</li>
                 <li><strong>Dates of trip:</strong> October 30-November 2, 2025</li>
                 <li><strong>Duration:</strong> 4 days</li>
                 <li><strong>Available distances:</strong> 20 km, 50 km, 100 km, 100 m</li>

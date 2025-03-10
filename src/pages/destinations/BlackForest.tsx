@@ -59,7 +59,7 @@ const BlackForest = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Black Forest, Germany</li>
-                <li><strong>Date of run:</strong> May 15, 2025</li>
+                <li><strong>Date of race:</strong> May 15, 2025</li>
                 <li><strong>Trip duration:</strong> May 13-16, 2025 (4 days)</li>
                 <li><strong>Available distances:</strong> 30km, 60km, 120km</li>
               </ul>

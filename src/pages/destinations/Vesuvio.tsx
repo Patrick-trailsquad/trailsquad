@@ -78,7 +78,7 @@ const Vesuvio = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Mount Vesuvius, Naples, Italy</li>
-                <li><strong>Date of run:</strong> May 31, 2026</li>
+                <li><strong>Date of race:</strong> May 31, 2026</li>
                 <li><strong>Trip duration:</strong> May 29 - June 1, 2026 (4 days)</li>
                 <li><strong>Available distances:</strong> 23 km, 45 km, 72 km</li>
               </ul>
