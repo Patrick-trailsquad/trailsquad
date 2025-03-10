@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const features = [
@@ -13,7 +12,7 @@ const features = [
     description: "Set healthy goals for yourself and support an active lifestyle by training towards - and succeeding in - sports adventures"
   },
   {
-    image: "/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png", // Group of runners
+    image: "/lovable-uploads/5bc2909f-5d00-491a-81ad-7524df77eab1.png", // Group training session
     title: "Coaching & Community",
     description: "Supported by running coaches and experts you can safely train towards ambitious running goals while getting special deals from our community"
   }
