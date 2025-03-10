@@ -48,12 +48,12 @@ const TestimonialSection = () => {
                       loading="lazy"
                     />
                   </div>
-                  <blockquote className="font-cabinet text-lg md:text-xl font-bold text-charcoal mb-4 max-w-[16rem]">
+                  <blockquote className="font-cabinet text-base md:text-lg font-bold text-charcoal mb-4 max-w-[16rem]">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="max-w-[16rem]">
-                    <p className="font-cabinet text-lg font-bold text-charcoal">{testimonial.author}</p>
-                    <p className="text-charcoal/60">{testimonial.title}</p>
+                    <p className="font-cabinet text-base font-bold text-charcoal">{testimonial.author}</p>
+                    <p className="text-sm text-charcoal/60">{testimonial.title}</p>
                   </div>
                 </div>
               </CarouselItem>
