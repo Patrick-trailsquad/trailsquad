@@ -23,21 +23,19 @@ const CTASection = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
         },
+        mode: 'no-cors', // This is needed for Zapier webhooks
         body: JSON.stringify(payload),
       });
 
-      if (response.ok || response.status === 200) {
-        setEmail('');
-        setIsSuccess(true);
-        toast({
-          title: "Success!",
-          description: "Thanks for signing up. We'll be in touch soon!",
-        });
-      } else {
-        throw new Error(`Failed to submit: ${response.status}`);
-      }
+      // With no-cors mode, we won't get response details
+      // So we'll assume success and handle the UI accordingly
+      setEmail('');
+      setIsSuccess(true);
+      toast({
+        title: "Success!",
+        description: "Thanks for signing up. We'll be in touch soon!",
+      });
     } catch (error) {
       console.error('Submission error:', error);
       toast({
