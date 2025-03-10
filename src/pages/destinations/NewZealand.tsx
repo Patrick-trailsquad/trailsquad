@@ -53,6 +53,7 @@ const NewZealand = () => {
               asChild
               variant="charcoal"
               size="md"
+              className="mb-8"
             >
               <a 
                 href="https://www.miutmadeira.com/en/"
