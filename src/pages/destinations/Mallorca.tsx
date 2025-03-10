@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -138,9 +137,8 @@ const Mallorca = () => {
             </div>
           </div>
         </div>
+        <BackToDestinationsButton />
       </div>
-
-      <BackToDestinationsButton />
     </div>
   );
 };
