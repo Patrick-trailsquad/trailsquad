@@ -11,28 +11,43 @@ const CTASection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const payload = {
+      email,
+      source: 'homepage_cta',
+      submitted_at: new Date().toISOString()
+    };
+
+    console.log('Sending payload to Zapier:', payload);
+
     try {
-      const response = await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qey8br/', {
+      console.log('Making request to Zapier webhook...');
+      const response = await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         mode: 'no-cors',
-        body: JSON.stringify({
-          email,
-          source: 'homepage_cta',
-          submitted_at: new Date().toISOString()
-        }),
+        body: JSON.stringify(payload),
       });
 
-      console.log('Form submission response:', response);
+      console.log('Zapier response:', {
+        status: response.status,
+        statusText: response.statusText,
+        type: response.type,
+        ok: response.ok
+      });
+
       setEmail('');
       toast({
         title: "Success!",
         description: "Thanks for signing up. We'll be in touch soon!",
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error details:', {
+        error,
+        message: error instanceof Error ? error.message : 'Unknown error',
+        stack: error instanceof Error ? error.stack : undefined
+      });
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
