@@ -41,7 +41,7 @@ const FeaturesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-stone rounded-2xl transition-shadow duration-300 w-full overflow-hidden"
             >
-              <div className="w-full h-24 overflow-hidden">
+              <div className="w-full h-32 overflow-hidden">
                 <img 
                   src={feature.image} 
                   alt={feature.title}
