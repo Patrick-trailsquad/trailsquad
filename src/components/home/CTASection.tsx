@@ -77,7 +77,7 @@ const CTASection = () => {
                 disabled={isSubmitting}
                 className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300 disabled:opacity-50"
               >
-                {isSubmitting ? 'Submitting...' : 'Get Started'}
+                {isSubmitting ? 'Submitting...' : 'Subscribe'}
               </button>
             )}
           </form>
