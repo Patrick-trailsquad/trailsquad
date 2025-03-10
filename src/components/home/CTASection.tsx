@@ -12,7 +12,7 @@ const CTASection = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/', {
+      const response = await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qey8br/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
