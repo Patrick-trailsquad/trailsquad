@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
@@ -17,37 +16,27 @@ const CTASection = () => {
       submitted_at: new Date().toISOString()
     };
 
-    console.log('Sending payload to Zapier:', payload);
-
     try {
-      console.log('Making request to Zapier webhook...');
       const response = await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        mode: 'no-cors',
         body: JSON.stringify(payload),
       });
 
-      console.log('Zapier response:', {
-        status: response.status,
-        statusText: response.statusText,
-        type: response.type,
-        ok: response.ok
-      });
-
-      setEmail('');
-      toast({
-        title: "Success!",
-        description: "Thanks for signing up. We'll be in touch soon!",
-      });
+      if (response.ok || response.status === 200) {
+        setEmail('');
+        toast({
+          title: "Success!",
+          description: "Thanks for signing up. We'll be in touch soon!",
+        });
+      } else {
+        throw new Error(`Failed to submit: ${response.status}`);
+      }
     } catch (error) {
-      console.error('Error details:', {
-        error,
-        message: error instanceof Error ? error.message : 'Unknown error',
-        stack: error instanceof Error ? error.stack : undefined
-      });
+      console.error('Submission error:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
