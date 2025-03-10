@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const features = [
@@ -7,7 +8,7 @@ const features = [
     description: "Let us do the boring planning so you can travel the world and experience thrilling trails across continents and terrains"
   },
   {
-    image: "/lovable-uploads/1023bdb7-a56d-4712-88cb-c6b747627029.png", // Runner crossing finish line
+    image: "/lovable-uploads/6df07c5b-767f-47d4-8edb-24d097efcb3f.png", // Mountain runner
     title: "Wonderful Sports Experiences",
     description: "Set healthy goals for yourself and support an active lifestyle by training towards - and succeeding in - sports adventures"
   },
