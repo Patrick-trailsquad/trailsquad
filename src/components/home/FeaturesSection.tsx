@@ -39,21 +39,23 @@ const FeaturesSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-stone p-8 rounded-2xl transition-shadow duration-300 w-full"
+              className="bg-stone rounded-2xl transition-shadow duration-300 w-full overflow-hidden"
             >
-              <div className="mb-6 h-24 w-full overflow-hidden rounded-xl">
+              <div className="w-full h-24 overflow-hidden">
                 <img 
                   src={feature.image} 
                   alt={feature.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">
-                {feature.title}
-              </h3>
-              <p className="font-inter text-charcoal/80">
-                {feature.description}
-              </p>
+              <div className="p-8">
+                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">
+                  {feature.title}
+                </h3>
+                <p className="font-inter text-charcoal/80">
+                  {feature.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
