@@ -91,7 +91,7 @@ const Transylvania100 = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Carpathian Mountains, Romania</li>
-                <li><strong>Date of race:</strong> May (TBD), 2026</li>
+                <li><strong>Date of race:</strong> May (to be determined), 2026</li>
                 <li><strong>Trip duration:</strong> 4 days</li>
                 <li><strong>Available distances:</strong> 20km, 50km, 100km</li>
               </ul>
