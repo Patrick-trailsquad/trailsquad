@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
+import { ThumbsUp } from "lucide-react";
 
 const CTASection = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -28,6 +30,7 @@ const CTASection = () => {
 
       if (response.ok || response.status === 200) {
         setEmail('');
+        setIsSuccess(true);
         toast({
           title: "Success!",
           description: "Thanks for signing up. We'll be in touch soon!",
@@ -64,20 +67,26 @@ const CTASection = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
-              className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
+              disabled={isSuccess}
+              className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20 disabled:opacity-50"
             />
-            <button 
-              type="submit"
-              disabled={isSubmitting}
-              className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300 disabled:opacity-50"
-            >
-              {isSubmitting ? 'Submitting...' : 'Get Started'}
-            </button>
+            {isSuccess ? (
+              <div className="bg-black text-white px-8 py-4 rounded-full flex items-center justify-center">
+                <ThumbsUp className="w-6 h-6 animate-fade-in" />
+              </div>
+            ) : (
+              <button 
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300 disabled:opacity-50"
+              >
+                {isSubmitting ? 'Submitting...' : 'Get Started'}
+              </button>
+            )}
           </form>
         </div>
       </div>
 
-      {/* Decorative Lines */}
       <svg 
         className="absolute bottom-0 left-0 w-full h-32 md:h-64"
         viewBox="0 0 1200 200" 
