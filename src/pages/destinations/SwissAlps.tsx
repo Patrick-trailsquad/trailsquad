@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink, Clock } from "lucide-react";
+import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -10,12 +10,15 @@ import { useToast } from "@/hooks/use-toast";
 
 const SwissAlps = () => {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
   usePageTitle('Gran Trail Courmayeur');
   useScrollToTop();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const payload = {
       email,
       source: 'gtc_waitlist',
@@ -31,6 +34,7 @@ const SwissAlps = () => {
         body: JSON.stringify(payload)
       });
       setEmail('');
+      setIsSuccess(true);
       toast({
         title: "Success!",
         description: "Thanks for signing up. We'll notify you when registration opens!"
@@ -41,6 +45,8 @@ const SwissAlps = () => {
         description: "Something went wrong. Please try again.",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
   
@@ -147,16 +153,24 @@ const SwissAlps = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    disabled={isSuccess}
                     placeholder="Enter your email"
                     className="flex-1 h-[56px] px-6 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
                   />
-                  <Button 
-                    type="submit"
-                    variant="black"
-                    size="xl"
-                  >
-                    Notify me
-                  </Button>
+                  {isSuccess ? (
+                    <div className="bg-transparent border-2 border-black text-black h-[56px] px-8 rounded-full flex items-center justify-center">
+                      <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
+                    </div>
+                  ) : (
+                    <Button 
+                      type="submit"
+                      variant="black"
+                      size="xl"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Notify me'}
+                    </Button>
+                  )}
                 </form>
               </div>
             </div>
