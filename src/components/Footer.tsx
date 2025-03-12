@@ -1,4 +1,3 @@
-
 import { Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -91,56 +90,61 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
             <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
           </div>
           
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <a 
-              href="mailto:hello@trailsquad.dk" 
-              className="flex items-center gap-2 text-charcoal/80 font-inter hover:text-terra transition-colors group"
-            >
-              <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
-                hello@trailsquad.dk
-              </span>
-            </a>
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <div className="flex items-center gap-4 text-charcoal/80">
+              <a 
+                href="mailto:hello@trailsquad.dk" 
+                className="font-inter group"
+              >
+                <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
+                  hello@trailsquad.dk
+                </span>
+              </a>
+              <span>•</span>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group"
+              >
+                <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
+                  Instagram
+                </span>
+              </a>
+              <span>•</span>
+              <a 
+                href="https://www.linkedin.com/company/trail-squad/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group"
+              >
+                <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
+                  LinkedIn
+                </span>
+              </a>
+            </div>
             <div className="flex gap-4 text-sm text-charcoal/60">
               <button 
                 onClick={() => setSelectedPolicy(policies.privacy)}
-                className="hover:text-terra transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
               >
                 Privacy Notice
               </button>
               <span>•</span>
               <button 
                 onClick={() => setSelectedPolicy(policies.cookies)}
-                className="hover:text-terra transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
               >
                 Cookie Policy
               </button>
               <span>•</span>
               <button 
                 onClick={() => setSelectedPolicy(policies.terms)}
-                className="hover:text-terra transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+                className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
               >
                 Terms & Conditions
               </button>
             </div>
-          </div>
-          
-          <div className="flex items-center gap-4">
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-charcoal hover:text-terra transition-colors group"
-            >
-              <Instagram className="w-5 h-5 transform group-hover:scale-110 transition-transform" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/company/trail-squad/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-charcoal hover:text-terra transition-colors group"
-            >
-              <Linkedin className="w-5 h-5 transform group-hover:scale-110 transition-transform" />
-            </a>
           </div>
         </div>
       </div>
