@@ -1,3 +1,4 @@
+
 import { Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -11,7 +12,7 @@ const Footer = () => {
   const policies = {
     privacy: {
       title: "Privacy Notice",
-      content: `Effective Date: 1st of March 2024
+      content: `Effective Date: 1st of March 2025
 
 1. Introduction
 Welcome to Trail Squad ("we," "our," "us"). We are committed to protecting your personal data and respecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit our website or request a price quote.
@@ -65,7 +66,7 @@ We implement appropriate security measures to protect your personal data from un
 10. Contact Information
 If you have any questions or concerns about this Privacy Policy, please contact us at:
 
-Trail Squad
+Trail Squad ApS
 Email: hello@trailsquad.dk
 
 11. Changes to This Privacy Policy
