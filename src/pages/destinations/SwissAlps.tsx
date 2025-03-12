@@ -24,8 +24,11 @@ const SwissAlps = () => {
       source: 'gtc_waitlist',
       submitted_at: new Date().toISOString()
     };
+    
+    console.log('Submitting to Zapier:', payload);
+    
     try {
-      await fetch('https://hooks.zapier.com/hooks/catch/21931910/2l4yeck/', {
+      const response = await fetch('https://hooks.zapier.com/hooks/catch/21931910/2l4yeck/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -33,6 +36,9 @@ const SwissAlps = () => {
         mode: 'no-cors',
         body: JSON.stringify(payload)
       });
+      
+      console.log('Zapier response:', response);
+      
       setEmail('');
       setIsSuccess(true);
       toast({
@@ -40,6 +46,7 @@ const SwissAlps = () => {
         description: "Thanks for signing up. We'll notify you when registration opens!"
       });
     } catch (error) {
+      console.error('Error submitting to Zapier:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
