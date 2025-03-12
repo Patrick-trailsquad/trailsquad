@@ -1,4 +1,3 @@
-
 import { Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -92,7 +91,7 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
           </div>
           
           <div className="flex flex-col items-center md:items-start gap-6">
-            <div className="flex items-center gap-4 text-charcoal/80 text-sm">
+            <div className="flex flex-col gap-2 text-charcoal/80 text-sm">
               <a 
                 href="mailto:hello@trailsquad.dk" 
                 className="group"
@@ -101,7 +100,6 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
                   hello@trailsquad.dk
                 </span>
               </a>
-              <span>•</span>
               <a 
                 href="https://instagram.com" 
                 target="_blank" 
@@ -112,7 +110,6 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
                   Instagram
                 </span>
               </a>
-              <span>•</span>
               <a 
                 href="https://www.linkedin.com/company/trail-squad/" 
                 target="_blank" 
@@ -125,21 +122,19 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
               </a>
             </div>
 
-            <div className="flex gap-4 text-sm text-charcoal/80">
+            <div className="flex flex-col gap-2 text-sm text-charcoal/80">
               <button 
                 onClick={() => setSelectedPolicy(policies.privacy)}
                 className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
               >
                 Privacy Notice
               </button>
-              <span>•</span>
               <button 
                 onClick={() => setSelectedPolicy(policies.cookies)}
                 className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
               >
                 Cookie Policy
               </button>
-              <span>•</span>
               <button 
                 onClick={() => setSelectedPolicy(policies.terms)}
                 className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
