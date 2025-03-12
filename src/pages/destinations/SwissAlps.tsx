@@ -138,20 +138,19 @@ const SwissAlps = () => {
               </div>
               <div className="text-center py-8">
                 <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Get notified when registration opens</h3>
-                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
                   <Input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="Enter your email"
-                    className="px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
+                    className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
                   />
                   <Button 
                     type="submit"
                     variant="black"
                     size="xl"
-                    className="w-full"
                   >
                     Notify me
                   </Button>
