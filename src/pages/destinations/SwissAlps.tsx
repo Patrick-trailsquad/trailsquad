@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -132,7 +132,10 @@ const SwissAlps = () => {
                 <div className="text-right">
                   <p className="text-sm text-gray-600 mb-1">Registration status</p>
                   <div className="bg-[#F1F0FB] px-3 py-1.5 rounded-full">
-                    <p className="font-cabinet text-sm font-medium text-[#9F9EA1]">Opens later</p>
+                    <p className="font-cabinet text-sm font-medium text-[#9F9EA1] flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      Opens later
+                    </p>
                   </div>
                 </div>
               </div>
