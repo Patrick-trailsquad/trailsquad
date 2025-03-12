@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -95,15 +95,26 @@ const SwissAlps = () => {
                   <p className="font-cabinet text-4xl font-bold text-charcoal">10.000 DKK</p>
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Trip status</p>
-                  <p className="font-cabinet text-xl font-bold text-charcoal">+15 spots</p>
+                <div className="text-right">
+                  <p className="text-sm text-gray-600 mb-1">Registration status</p>
+                  <div className="flex items-center gap-2 bg-[#F1F0FB] px-3 py-1.5 rounded-full">
+                    <Clock className="w-4 h-4 text-[#9F9EA1]" />
+                    <p className="font-cabinet text-sm font-medium text-[#9F9EA1]">Opening January 2025</p>
+                  </div>
                 </div>
               </div>
-              <PriceQuoteForm 
-                destinationName="Gran Trail Courmayeur"
-                availableDistances={["30 km", "55 km", "100 km"]}
-              />
+              <div className="text-center py-8">
+                <Clock className="w-12 h-12 text-[#9F9EA1] mx-auto mb-4" />
+                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Registration opens in</h3>
+                <p className="text-[#9F9EA1] mb-4">January 2025</p>
+                <Button 
+                  variant="outline" 
+                  className="w-full text-[#9F9EA1] border-[#9F9EA1] hover:bg-[#F1F0FB]"
+                  disabled
+                >
+                  Registration not yet open
+                </Button>
+              </div>
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
