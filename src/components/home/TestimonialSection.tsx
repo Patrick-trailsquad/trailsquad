@@ -15,7 +15,7 @@ const testimonials = [
     image: "/lovable-uploads/9600454e-7c7f-4482-8216-a6e55e2a1c6e.png"
   },
   {
-    quote: "From the rugged peaks to the serene valleys, every moment was an adventure. The guides were exceptional, and the group became like family.",
+    quote: "I ran the GTC30 and I'm going back next year! The trail was awesome, climbing the mountain tops and getting crazy scenaries were a breath-taking experience - quite literally!",
     author: "Mathias Lund",
     title: "Gran Trail Courmayeur",
     image: "/lovable-uploads/7225d714-9535-49a1-810d-8357e51c97ef.png"
