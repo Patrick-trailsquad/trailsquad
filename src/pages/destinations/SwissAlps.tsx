@@ -25,7 +25,7 @@ const SwissAlps = () => {
       submitted_at: new Date().toISOString()
     };
     try {
-      await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/', {
+      await fetch('https://hooks.zapier.com/hooks/catch/21931910/2l4yeck/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
