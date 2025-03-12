@@ -84,13 +84,13 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
   return (
     <footer className="bg-white py-8 border-t">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
           <div className="flex items-center gap-4">
             <img src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" alt="Trail Squad Logo" className="h-8" />
             <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
           </div>
           
-          <div className="flex flex-col items-center md:items-start gap-6">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-20">
             <div className="flex flex-col gap-2 text-charcoal/80 text-sm">
               <a 
                 href="mailto:hello@trailsquad.dk" 
