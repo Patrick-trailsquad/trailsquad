@@ -9,7 +9,7 @@ import {
 
 const testimonials = [
   {
-    quote: "The trails pushed me to my limits, but the breathtaking views and the sense of accomplishment made every step worth it. This wasn't just a run - it was a life-changing experience.",
+    quote: "Grand Trail du Lac was my first trail race. Great experience to push myself to the limits in a well-organised race. The entire trip was planned and executed super smoothly!",
     author: "Simon Meinertz",
     title: "Grand Trail du Lac",
     image: "/lovable-uploads/9600454e-7c7f-4482-8216-a6e55e2a1c6e.png"
