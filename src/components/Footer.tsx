@@ -90,8 +90,8 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
             <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-20">
-            <div className="flex flex-col gap-2 text-charcoal/80 text-sm">
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-20">
+            <div className="flex flex-col items-start gap-2 text-charcoal/80 text-sm">
               <a 
                 href="mailto:hello@trailsquad.dk" 
                 className="group"
@@ -122,7 +122,7 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
               </a>
             </div>
 
-            <div className="flex flex-col gap-2 text-sm text-charcoal/80">
+            <div className="flex flex-col items-start gap-2 text-sm text-charcoal/80">
               <button 
                 onClick={() => setSelectedPolicy(policies.privacy)}
                 className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
