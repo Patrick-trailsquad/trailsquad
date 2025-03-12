@@ -17,11 +17,11 @@ interface PolicyModalProps {
 const PolicyModal = ({ isOpen, onClose, title, content }: PolicyModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl">
+      <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-cabinet">{title}</DialogTitle>
         </DialogHeader>
-        <DialogDescription className="text-base leading-relaxed">
+        <DialogDescription className="text-base leading-relaxed whitespace-pre-line">
           {content}
         </DialogDescription>
       </DialogContent>

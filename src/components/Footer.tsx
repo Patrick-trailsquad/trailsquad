@@ -1,4 +1,3 @@
-
 import { Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -12,7 +11,65 @@ const Footer = () => {
   const policies = {
     privacy: {
       title: "Privacy Notice",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      content: `Effective Date: 1st of March 2024
+
+1. Introduction
+Welcome to Trail Squad ("we," "our," "us"). We are committed to protecting your personal data and respecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you visit our website or request a price quote.
+
+2. Information We Collect
+When you request a price quote or contact us, we may collect the following personal data:
+• Name
+• Email address
+• Phone number (if provided)
+• IP address (automatically collected for security and analytics purposes)
+
+3. How We Use Your Information
+We use your personal data for the following purposes:
+• To provide requested price quotes and respond to inquiries
+• To improve our services and customer experience
+• To send marketing emails (only if you have provided explicit consent)
+• To comply with legal obligations
+
+4. Legal Basis for Processing
+We process your personal data based on:
+• Contractual necessity (to provide price quotes and respond to inquiries)
+• Legitimate interest (to improve our services and security)
+• Consent (for marketing communications, which you may opt out of at any time)
+
+5. Data Sharing & Third Parties
+We do not sell your personal data. However, we may share it with:
+• Service providers who assist in operating our business (e.g., email platforms, cloud hosting)
+• Legal authorities, if required by law
+
+All third parties are contractually required to protect your data in compliance with GDPR.
+
+6. Data Retention
+We retain your personal data only as long as necessary to fulfill the purposes outlined in this policy. If you request deletion, we will remove your data unless we have a legal obligation to retain it.
+
+7. Your Rights Under GDPR
+You have the right to:
+• Access your personal data
+• Request correction or deletion of your data
+• Restrict or object to data processing
+• Withdraw consent for marketing communications
+• Request data portability (if applicable)
+
+To exercise your rights, contact us at hello@trailsquad.dk.
+
+8. Cookies & Tracking Technologies
+We use cookies to enhance your browsing experience. You can manage or disable cookies through your browser settings. For more details, see our Cookie Policy.
+
+9. Data Security
+We implement appropriate security measures to protect your personal data from unauthorized access, loss, or misuse.
+
+10. Contact Information
+If you have any questions or concerns about this Privacy Policy, please contact us at:
+
+Trail Squad
+Email: hello@trailsquad.dk
+
+11. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. Any changes will be posted on our website with the updated effective date.`,
     },
     cookies: {
       title: "Cookie Policy",
