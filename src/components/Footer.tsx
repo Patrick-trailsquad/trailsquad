@@ -1,3 +1,4 @@
+
 import { Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -90,11 +91,11 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
             <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
           </div>
           
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="flex items-center gap-4 text-charcoal/80">
+          <div className="flex flex-col items-center md:items-start gap-6">
+            <div className="flex items-center gap-4 text-charcoal/80 text-sm">
               <a 
                 href="mailto:hello@trailsquad.dk" 
-                className="font-inter group"
+                className="group"
               >
                 <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
                   hello@trailsquad.dk
@@ -123,7 +124,8 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
                 </span>
               </a>
             </div>
-            <div className="flex gap-4 text-sm text-charcoal/60">
+
+            <div className="flex gap-4 text-sm text-charcoal/80">
               <button 
                 onClick={() => setSelectedPolicy(policies.privacy)}
                 className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
