@@ -1,4 +1,3 @@
-
 import { FC } from 'react';
 import { Linkedin, Instagram } from 'lucide-react';
 
@@ -48,7 +47,7 @@ const TeamSection: FC = () => {
           </div>
           <div className="relative aspect-square">
             <img 
-              src="/lovable-uploads/c9f1a696-b9d9-406b-8ae1-6e14b85b3e22.png" 
+              src="/lovable-uploads/c8830ced-c6b1-45fb-a5cb-e9f5535dfc8b.png" 
               alt="Emil Albrechtsen" 
               className="w-full h-full rounded-lg object-cover"
             />
