@@ -1,3 +1,4 @@
+
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -90,14 +91,14 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
             <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
           </div>
           
-          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-20">
+          <div className="flex gap-20">
             <div className="flex flex-col items-start gap-2 text-charcoal/80 text-sm">
               <a 
                 href="mailto:hello@trailsquad.dk" 
                 className="group flex items-center gap-2"
               >
                 <Mail className="h-4 w-4" />
-                <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
+                <span className="relative hidden md:inline after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
                   hello@trailsquad.dk
                 </span>
               </a>
@@ -108,7 +109,7 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
                 className="group flex items-center gap-2"
               >
                 <Instagram className="h-4 w-4" />
-                <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
+                <span className="relative hidden md:inline after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
                   Instagram
                 </span>
               </a>
@@ -119,7 +120,7 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
                 className="group flex items-center gap-2"
               >
                 <Linkedin className="h-4 w-4" />
-                <span className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
+                <span className="relative hidden md:inline after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform">
                   LinkedIn
                 </span>
               </a>
