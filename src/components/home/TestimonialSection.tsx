@@ -21,7 +21,7 @@ const testimonials = [
     image: "/lovable-uploads/7225d714-9535-49a1-810d-8357e51c97ef.png"
   },
   {
-    quote: "The fjords were even more magnificent than I imagined. Running through this pristine landscape was truly a once-in-a-lifetime experience.",
+    quote: "I never thought I could push myself to run 85 km but the vibe amongst the other runners and the general thrill of nailing this badboy drove me through the race! What a day!",
     author: "Lasse Stokholm",
     title: "Bornholm Hammer Trail",
     image: "/lovable-uploads/a91cfa89-2256-458c-8ba1-bfd2d0b4a1b1.png"
