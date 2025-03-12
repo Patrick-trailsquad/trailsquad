@@ -1,14 +1,48 @@
-import { ArrowLeft, ExternalLink, Clock } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const SwissAlps = () => {
+  const [email, setEmail] = useState('');
+  const { toast } = useToast();
   usePageTitle('Gran Trail Courmayeur');
   useScrollToTop();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const payload = {
+      email,
+      source: 'gtc_waitlist',
+      submitted_at: new Date().toISOString()
+    };
+    try {
+      await fetch('https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        mode: 'no-cors',
+        body: JSON.stringify(payload)
+      });
+      setEmail('');
+      toast({
+        title: "Success!",
+        description: "Thanks for signing up. We'll notify you when registration opens!"
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    }
+  };
   
   return (
     <div className="min-h-screen bg-stone">
@@ -97,23 +131,31 @@ const SwissAlps = () => {
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-600 mb-1">Registration status</p>
-                  <div className="flex items-center gap-2 bg-[#F1F0FB] px-3 py-1.5 rounded-full">
-                    <Clock className="w-4 h-4 text-[#9F9EA1]" />
-                    <p className="font-cabinet text-sm font-medium text-[#9F9EA1]">Opening January 2025</p>
+                  <div className="bg-[#F1F0FB] px-3 py-1.5 rounded-full">
+                    <p className="font-cabinet text-sm font-medium text-[#9F9EA1]">Opens later</p>
                   </div>
                 </div>
               </div>
               <div className="text-center py-8">
-                <Clock className="w-12 h-12 text-[#9F9EA1] mx-auto mb-4" />
-                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Registration opens in</h3>
-                <p className="text-[#9F9EA1] mb-4">January 2025</p>
-                <Button 
-                  variant="outline" 
-                  className="w-full text-[#9F9EA1] border-[#9F9EA1] hover:bg-[#F1F0FB]"
-                  disabled
-                >
-                  Registration not yet open
-                </Button>
+                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Get notified when registration opens</h3>
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                  <Input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    placeholder="Enter your email"
+                    className="px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
+                  />
+                  <Button 
+                    type="submit"
+                    variant="black"
+                    size="xl"
+                    className="w-full"
+                  >
+                    Notify me
+                  </Button>
+                </form>
               </div>
             </div>
             <div className="bg-stone p-6 rounded-xl">

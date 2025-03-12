@@ -41,7 +41,7 @@ const destinations = [
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
     location: "Gran Trail Courmayeur, Italy",
     date: "July 2026",
-    spots: "Opening January 2025",
+    spots: "Opens later",
     href: "/destinations/gtc"
   }
 ];
@@ -84,7 +84,7 @@ const DestinationsSection = () => {
                   <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
                     trip.spots === "Sold out" 
                       ? "bg-white/20 backdrop-blur-sm text-white" 
-                      : trip.spots.includes("Opening")
+                      : trip.spots === "Opens later"
                       ? "bg-[#F1F0FB] text-[#9F9EA1]"
                       : "bg-[#FFDC00] text-black"
                   }`}>
