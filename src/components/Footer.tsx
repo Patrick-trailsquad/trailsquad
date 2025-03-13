@@ -75,7 +75,31 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
     },
     cookies: {
       title: "Cookie Policy",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      content: `Cookie Policy
+
+Effective Date: 1st of March 2026
+
+1. Introduction
+Trail Squad ("we," "our," "us") currently does not use any cookies or similar tracking technologies on our website.
+
+2. What Are Cookies?
+Cookies are small text files that websites place on your device to store information about your browsing preferences, improve your user experience, and collect anonymous statistical information.
+
+3. Our Current Cookie Usage
+• We currently do not use any cookies on our website
+• We do not collect any automatic tracking information through cookies
+• No third-party cookies are present on our site
+
+4. Future Changes
+• If we decide to implement cookies in the future, we will update this policy
+• You will be informed of any changes and asked for consent where required by law
+• This policy will be updated to detail what cookies are used and their purposes
+
+5. Contact Information
+If you have any questions about our cookie practices, please contact us at:
+
+Trail Squad
+Email: hello@trailsquad.dk`,
     },
     terms: {
       title: "Terms & Conditions",
