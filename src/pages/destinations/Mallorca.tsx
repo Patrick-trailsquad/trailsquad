@@ -4,6 +4,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
+import Footer from "../../components/Footer";
 
 const Mallorca = () => {
   useScrollToTop();
@@ -139,6 +140,7 @@ const Mallorca = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <Footer />
     </div>
   );
 };
