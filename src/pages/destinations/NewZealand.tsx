@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
+import Footer from "../../components/Footer";
 
 const NewZealand = () => {
   useScrollToTop();
@@ -111,6 +112,7 @@ const NewZealand = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <Footer />
     </div>
   );
 };

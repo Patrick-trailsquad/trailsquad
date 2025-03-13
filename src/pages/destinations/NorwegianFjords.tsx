@@ -5,6 +5,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
+import Footer from "../../components/Footer";
 
 const NorwegianFjords = () => {
   usePageTitle('Norwegian Fjords');
@@ -103,6 +104,7 @@ const NorwegianFjords = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <Footer />
     </div>
   );
 };

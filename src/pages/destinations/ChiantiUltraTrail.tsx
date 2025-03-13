@@ -4,6 +4,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
+import Footer from "../../components/Footer";
 
 const ChiantiUltraTrail = () => {
   useScrollToTop();
@@ -131,6 +132,7 @@ const ChiantiUltraTrail = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <Footer />
     </div>
   );
 };
