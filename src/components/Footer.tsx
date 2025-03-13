@@ -1,3 +1,4 @@
+
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -79,7 +80,63 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
     },
     terms: {
       title: "Terms & Conditions",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      content: `Terms & Conditions
+
+Effective Date: 1st of March 2026
+
+1. Introduction
+Welcome to Trail Squad ApS ("we," "our," "us"). By using our website and services, you agree to these Terms & Conditions. If you do not agree, please do not use our services.
+
+2. Services Provided
+Trail Squad organizes and facilitates trail running trips across Europe (and globally) for companies and individuals. We act as an intermediary between customers and service providers such as hotels, transport providers, and event organizers.
+
+3. Booking & Payments
+All bookings are subject to availability and confirmation.
+
+Payments must be made in accordance with the payment terms specified during booking.
+
+Failure to complete payment may result in cancellation of your reservation.
+
+4. Cancellations & Refunds
+Cancellation policies vary depending on the trip and service providers. Specific details will be provided at the time of booking.
+
+Refunds, if applicable, will be processed based on our refund policy and any supplier terms.
+
+We reserve the right to cancel a trip due to unforeseen circumstances. In such cases, we will offer a rescheduled date or a refund.
+
+5. Customer Responsibilities
+You must ensure you are physically fit to participate in trail running activities.
+
+You are responsible for obtaining any necessary travel insurance, visas, and health documents.
+
+You must comply with local laws and regulations during the trip.
+
+6. Liability Disclaimer
+Trail Squad is not liable for any injury, illness, loss, or damage incurred during the trip.
+
+We do not take responsibility for delays, cancellations, or changes caused by third-party service providers or force majeure events (e.g., natural disasters, strikes, extreme weather conditions).
+
+7. Data Protection & Privacy
+We collect and process personal data in accordance with our Privacy Policy.
+
+By using our services, you consent to the processing of your personal data as outlined in our Privacy Policy.
+
+8. Intellectual Property
+All content on our website, including text, images, and branding, is owned by Trail Squad and may not be used without our permission.
+
+9. Governing Law & Disputes
+These Terms & Conditions are governed by the laws of Denmark.
+
+Any disputes shall be resolved through negotiation or, if necessary, legal proceedings in Denmark.
+
+10. Changes to Terms & Conditions
+We reserve the right to update these Terms & Conditions at any time. Any changes will be posted on our website with the updated effective date.
+
+11. Contact Information
+For any inquiries regarding these Terms & Conditions, please contact us at:
+
+Trail Squad
+Email: hello@trailsquad.dk`,
     },
   };
 
