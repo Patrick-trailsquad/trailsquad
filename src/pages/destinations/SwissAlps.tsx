@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import Footer from "../../components/Footer";
 
 const SwissAlps = () => {
   const [email, setEmail] = useState('');
@@ -203,6 +204,7 @@ const SwissAlps = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <Footer />
     </div>
   );
 };
