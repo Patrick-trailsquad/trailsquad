@@ -4,6 +4,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
+import Footer from "../../components/Footer";
 
 const Transylvania100 = () => {
   useScrollToTop();
@@ -137,6 +138,7 @@ const Transylvania100 = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <Footer />
     </div>
   );
 };
