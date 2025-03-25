@@ -82,8 +82,8 @@ const SwissPeaksTrail = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Valais canton, Switzerland</li>
-                <li><strong>Date of race:</strong> September 1-7, 2025</li>
-                <li><strong>Trip duration:</strong> August 30 - September 9, 2025 (10 days)</li>
+                <li><strong>Date of race:</strong> September 6-7, 2025</li>
+                <li><strong>Trip duration:</strong> September 4-7, 2025 (4 days)</li>
                 <li><strong>Available distances:</strong> 21km, 42km, 100km, 170km, 360km</li>
               </ul>
             </div>
