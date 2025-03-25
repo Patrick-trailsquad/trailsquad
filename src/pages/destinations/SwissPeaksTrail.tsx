@@ -68,7 +68,7 @@ const SwissPeaksTrail = () => {
               className="mb-8"
             >
               <a 
-                href="https://swisspeaks.ch/en/"
+                href="https://swisspeaks.ch/?lang=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
@@ -84,7 +84,7 @@ const SwissPeaksTrail = () => {
                 <li><strong>Location:</strong> Valais canton, Switzerland</li>
                 <li><strong>Date of race:</strong> September 1-7, 2025</li>
                 <li><strong>Trip duration:</strong> August 30 - September 9, 2025 (10 days)</li>
-                <li><strong>Available distances:</strong> 42km, 100km, 170km, 360km</li>
+                <li><strong>Available distances:</strong> 21km, 42km, 100km, 170km, 360km</li>
               </ul>
             </div>
           </div>
@@ -103,7 +103,7 @@ const SwissPeaksTrail = () => {
               </div>
               <PriceQuoteForm 
                 destinationName="SwissPeaks Trail" 
-                availableDistances={["42km", "100km", "170km", "360km"]}
+                availableDistances={["21km", "42km", "100km", "170km", "360km"]}
               />
             </div>
             <div className="bg-stone p-6 rounded-xl">
