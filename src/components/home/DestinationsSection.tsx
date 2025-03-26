@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -22,6 +23,13 @@ const destinations = [
     date: "October 2025",
     spots: "12 spots",
     href: "/destinations/belfortrail"
+  },
+  {
+    image: "/lovable-uploads/b1a8a192-9867-4c4b-bf05-de316bf2498f.png",
+    location: "Grand Raid des Cathares, France",
+    date: "October 2025",
+    spots: "15 spots",
+    href: "/destinations/grand-raid-cathares"
   },
   {
     image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",

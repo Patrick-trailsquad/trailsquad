@@ -18,6 +18,7 @@ import ChiantiUltraTrail from "./pages/destinations/ChiantiUltraTrail";
 import Vesuvio from "./pages/destinations/Vesuvio";
 import SwissPeaksTrail from "./pages/destinations/SwissPeaksTrail";
 import BelforTrail from "./pages/destinations/BelforTrail";
+import GrandRaidCathares from "./pages/destinations/GrandRaidCathares";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/destinations/chianti" element={<ChiantiUltraTrail />} />
           <Route path="/destinations/swisspeaks" element={<SwissPeaksTrail />} />
           <Route path="/destinations/belfortrail" element={<BelforTrail />} />
+          <Route path="/destinations/grand-raid-cathares" element={<GrandRaidCathares />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
