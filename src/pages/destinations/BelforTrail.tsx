@@ -82,8 +82,8 @@ const BelforTrail = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Territoire de Belfort, Vosges Mountains, France</li>
-                <li><strong>Date of race:</strong> October 12-13, 2025</li>
-                <li><strong>Trip duration:</strong> October 10-14, 2025 (5 days)</li>
+                <li><strong>Date of race:</strong> October 19, 2025</li>
+                <li><strong>Trip duration:</strong> October 18-20, 2025 (3 days)</li>
                 <li><strong>Available distances:</strong> 14km, 27km, 55km</li>
               </ul>
             </div>
