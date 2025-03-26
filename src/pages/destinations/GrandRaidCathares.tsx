@@ -82,9 +82,9 @@ const GrandRaidCathares = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
                 <li><strong>Location:</strong> Languedoc-Roussillon, Southern France</li>
-                <li><strong>Date of race:</strong> October 11, 2025</li>
-                <li><strong>Trip duration:</strong> October 9-13, 2025 (5 days)</li>
-                <li><strong>Available distances:</strong> 25km, 50km, 100km, 165km</li>
+                <li><strong>Date of race:</strong> October 24-25, 2025</li>
+                <li><strong>Trip duration:</strong> October 22-26, 2025 (4 days)</li>
+                <li><strong>Available distances:</strong> 12km, 25km, 40km, 63km, 101km, 161km</li>
               </ul>
             </div>
           </div>
@@ -103,7 +103,7 @@ const GrandRaidCathares = () => {
               </div>
               <PriceQuoteForm 
                 destinationName="Grand Raid des Cathares" 
-                availableDistances={["25km", "50km", "100km", "165km"]}
+                availableDistances={["12km", "25km", "40km", "63km", "101km", "161km"]}
               />
             </div>
             <div className="bg-stone p-6 rounded-xl">

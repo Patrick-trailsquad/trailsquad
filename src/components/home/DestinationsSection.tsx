@@ -27,7 +27,7 @@ const destinations = [
   {
     image: "/lovable-uploads/b1a8a192-9867-4c4b-bf05-de316bf2498f.png",
     location: "Grand Raid des Cathares, France",
-    date: "October 2025",
+    date: "October 24-25, 2025",
     spots: "15 spots",
     href: "/destinations/grand-raid-cathares"
   },
