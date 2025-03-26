@@ -18,6 +18,13 @@ const destinations = [
     href: "/destinations/swisspeaks"
   },
   {
+    image: "/lovable-uploads/b81d77d9-a9b1-4b51-b6f8-3353af8a0f10.png",
+    location: "BelforTrail, France",
+    date: "October 2025",
+    spots: "12 spots",
+    href: "/destinations/belfortrail"
+  },
+  {
     image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",
     location: "Mallorca by UTMB, Spain",
     date: "November 2025",
