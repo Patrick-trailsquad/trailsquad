@@ -16,8 +16,8 @@ const BelforTrail = () => {
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
         <img
-          src="/lovable-uploads/b81d77d9-a9b1-4b51-b6f8-3353af8a0f10.png"
-          alt="BelforTrail"
+          src="/lovable-uploads/d2a56511-3d0c-43a6-bf23-206a90c0d017.png"
+          alt="BelforTrail Mountain Running"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />

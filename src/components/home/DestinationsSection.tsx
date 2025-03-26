@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -18,7 +17,7 @@ const destinations = [
     href: "/destinations/swisspeaks"
   },
   {
-    image: "/lovable-uploads/b81d77d9-a9b1-4b51-b6f8-3353af8a0f10.png",
+    image: "/lovable-uploads/d2a56511-3d0c-43a6-bf23-206a90c0d017.png",
     location: "BelforTrail, France",
     date: "October 2025",
     spots: "12 spots",
