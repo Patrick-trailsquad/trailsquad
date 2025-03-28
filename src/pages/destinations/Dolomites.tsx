@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -62,9 +61,9 @@ const Dolomites = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
               <ul className="space-y-2 list-disc pl-4">
                 <li>Entry ticket to the trail run</li>
-                <li>Plane ticket from Copenhagen and back (if other departure airport, let's discuss)</li>
-                <li>Transportation from airport to destination hotel</li>
-                <li>Minimum 4 star hotel experience for the duration of the trip</li>
+                <li>Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)</li>
+                <li>Transportation from airport to destination hotel (if tickets are organised by Trail Squad)</li>
+                <li>Minimum 4 star hotel experience for the duration of the trip (if possible)</li>
               </ul>
             </div>
             <div className="bg-stone p-6 rounded-xl">
