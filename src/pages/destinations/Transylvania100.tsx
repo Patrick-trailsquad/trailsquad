@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -114,10 +113,10 @@ const Transylvania100 = () => {
                 <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
                 <p className="text-lg">
                   This legendary race tests both physical endurance and mental resilience as you 
-                  navigate varying terrains and weather conditions. Whether you choose the 20km, 50km, 
-                  or the ultimate 100km challenge, each route has been carefully designed to showcase 
-                  the most spectacular sections of the Carpathian Mountains while pushing your limits 
-                  as a trail runner.
+                  navigate varying terrains and weather conditions. Whether you choose the 20km, 
+                  30km, 50km, 80km, or the ultimate 100km challenge, each route has been carefully 
+                  designed to showcase the most spectacular sections of the Carpathian Mountains 
+                  while pushing your limits as a trail runner.
                 </p>
               </div>
             </div>
@@ -145,7 +144,7 @@ const Transylvania100 = () => {
                 <li><strong>Location:</strong> Carpathian Mountains, Romania</li>
                 <li><strong>Date of race:</strong> May (to be determined), 2026</li>
                 <li><strong>Trip duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 20km, 50km, 100km</li>
+                <li><strong>Available distances:</strong> 20km, 30km, 50km, 80km, 100km</li>
               </ul>
             </div>
           </div>
