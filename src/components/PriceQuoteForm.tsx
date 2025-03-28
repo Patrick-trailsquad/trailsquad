@@ -23,6 +23,7 @@ interface FormValues {
   participants: number;
   preferredLanguage: string;
   accommodationPreference: string;
+  flightPreference: string;
 }
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
@@ -34,7 +35,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
-      accommodationPreference: 'double'
+      accommodationPreference: 'double',
+      flightPreference: 'no-tickets'
     }
   });
 
@@ -49,7 +51,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         preferred_distance: data.preferredDistance,
         number_of_participants: data.participants,
         preferred_language: data.preferredLanguage,
-        accommodation_preference: data.accommodationPreference
+        accommodation_preference: data.accommodationPreference,
+        flight_preference: data.flightPreference
       };
 
       console.log('Raw form data object:', formData);
@@ -238,6 +241,30 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </RadioGroup>
                     {errors.accommodationPreference && (
                       <p className="text-red-500 text-sm">Please select an accommodation preference</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label>Preference for flights</Label>
+                    <RadioGroup 
+                      defaultValue="no-tickets"
+                      onValueChange={(value) => {
+                        setValue('flightPreference', value);
+                        console.log('Setting flight preference:', value);
+                      }}
+                      className="gap-3"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="no-tickets" id="no-tickets" />
+                        <Label htmlFor="no-tickets">We don't need plane tickets</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="include-tickets" id="include-tickets" />
+                        <Label htmlFor="include-tickets">We prefer plane tickets included (everyone will be on the same planes)</Label>
+                      </div>
+                    </RadioGroup>
+                    {errors.flightPreference && (
+                      <p className="text-red-500 text-sm">Please select a flight preference</p>
                     )}
                   </div>
 
