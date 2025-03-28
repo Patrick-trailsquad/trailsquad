@@ -1,6 +1,7 @@
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
-import { Info, CheckCircle2 } from "lucide-react";
+import { Info, CheckCircle2, Radio } from "lucide-react";
 import { Label } from "./ui/label";
 import { useForm } from "react-hook-form";
 import { Input } from "./ui/input";
@@ -21,6 +22,7 @@ interface FormValues {
   preferredDistance: string;
   participants: number;
   preferredLanguage: string;
+  accommodationPreference: string;
 }
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
@@ -31,7 +33,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
     defaultValues: {
       preferredLanguage: 'english',
-      preferredDistance: availableDistances[0]
+      preferredDistance: availableDistances[0],
+      accommodationPreference: 'double'
     }
   });
 
@@ -45,7 +48,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         phone_number: data.phone,
         preferred_distance: data.preferredDistance,
         number_of_participants: data.participants,
-        preferred_language: data.preferredLanguage
+        preferred_language: data.preferredLanguage,
+        accommodation_preference: data.accommodationPreference
       };
 
       console.log('Raw form data object:', formData);
@@ -206,6 +210,34 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </RadioGroup>
                     {errors.preferredDistance && (
                       <p className="text-red-500 text-sm">Please select a preferred distance</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-3">
+                    <Label>Preference for accommodation</Label>
+                    <RadioGroup 
+                      defaultValue="double"
+                      onValueChange={(value) => {
+                        setValue('accommodationPreference', value);
+                        console.log('Setting accommodation preference:', value);
+                      }}
+                      className="gap-3"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="single" id="single-room" />
+                        <Label htmlFor="single-room">Single rooms</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="double" id="double-room" />
+                        <Label htmlFor="double-room">Shared double rooms</Label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="both" id="both-room" />
+                        <Label htmlFor="both-room">Both are ok</Label>
+                      </div>
+                    </RadioGroup>
+                    {errors.accommodationPreference && (
+                      <p className="text-red-500 text-sm">Please select an accommodation preference</p>
                     )}
                   </div>
 
