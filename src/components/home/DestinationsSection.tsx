@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -48,7 +49,7 @@ const destinations = [
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
     location: "Vesuvio Ultra Marathon, Italy",
     date: "May 2026",
-    spots: "+15 spots",
+    spots: "Opens later",
     href: "/destinations/vesuvio"
   },
   {
