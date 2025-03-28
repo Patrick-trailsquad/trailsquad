@@ -144,10 +144,12 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                 {/* Progress Indicator */}
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-medium">
-                    <span className={step === 1 ? "text-black" : "text-gray-500"}>Your Contact</span>
-                    <span className={step === 2 ? "text-black" : "text-gray-500"}>Trip Details</span>
+                    <span className={step === 1 ? "text-green-600 font-semibold" : "text-gray-500"}>Your Info</span>
+                    <span className={step === 2 ? "text-green-600 font-semibold" : "text-gray-500"}>Trip Details</span>
                   </div>
-                  <Progress value={step === 1 ? 50 : 100} className="h-2" />
+                  <div className="w-[95%] mx-auto">
+                    <Progress value={step === 1 ? 50 : 100} className="h-2" variant="success" />
+                  </div>
                 </div>
               </div>
 
