@@ -29,7 +29,7 @@ const Progress = React.forwardRef<
           <ProgressPrimitive.Root
             ref={ref}
             className={cn(
-              "relative h-1 flex-1 overflow-hidden rounded-full",
+              "relative h-1 w-full overflow-hidden rounded-full", // Changed from flex-1 to w-full
               index < step ? "bg-green-500" : "bg-gray-200",
               className
             )}
