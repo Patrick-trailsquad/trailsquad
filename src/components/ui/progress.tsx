@@ -12,11 +12,11 @@ const Progress = React.forwardRef<
     totalSteps: number;
   }
 >(({ className, value, step, totalSteps, ...props }, ref) => (
-  <div className="flex items-center space-x-4 w-full">
+  <div className="w-full"> {/* Ensure full width container */}
     {[...Array(totalSteps)].map((_, index) => (
       <div 
         key={index} 
-        className="flex items-center space-x-2 flex-1"
+        className="flex items-center space-x-2 w-full" // Added w-full here
       >
         {index < step ? (
           <CheckCircle2 className="text-green-500 w-6 h-6" />
@@ -29,7 +29,7 @@ const Progress = React.forwardRef<
           <ProgressPrimitive.Root
             ref={ref}
             className={cn(
-              "relative h-1 w-full overflow-hidden rounded-full", // Changed from flex-1 to w-full
+              "relative h-1 w-full overflow-hidden rounded-full", 
               index < step ? "bg-green-500" : "bg-gray-200",
               className
             )}
