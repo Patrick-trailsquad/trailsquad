@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink, Clock, ThumbsUp, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -137,7 +136,6 @@ const SwissAlps = () => {
           </div>
           
           <div className="space-y-6">
-            {/* YouTube video embed at the top of right column */}
             <div className="rounded-xl overflow-hidden aspect-video">
               <iframe
                 src="https://www.youtube.com/embed/4dWum9fxE0g?si=Ac4yHBjPyU_DZleF"
@@ -153,7 +151,7 @@ const SwissAlps = () => {
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Starting from</p>
-                  <p className="font-cabinet text-4xl font-bold text-charcoal">10.000 DKK</p>
+                  <p className="font-cabinet text-4xl font-bold text-charcoal">7.500 DKK</p>
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
                 <div className="text-right">
