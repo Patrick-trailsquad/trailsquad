@@ -1,3 +1,4 @@
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info, CheckCircle2, Radio } from "lucide-react";
@@ -255,11 +256,11 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="no-tickets" id="no-tickets" />
-                        <Label htmlFor="no-tickets">We'll arrange our own tickets</Label>
+                        <Label htmlFor="no-tickets">We'll arrange our own tickets (cheapest and more flexible)</Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="organizer-tickets" id="organizer-tickets" />
-                        <Label htmlFor="organizer-tickets">We prefer organizer to book tickets (most cost-effective)</Label>
+                        <Label htmlFor="organizer-tickets">We prefer Trail Squad to book tickets (everyone on the same planes)</Label>
                       </div>
                     </RadioGroup>
                     {errors.flightPreference && (
