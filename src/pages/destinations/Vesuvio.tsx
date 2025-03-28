@@ -5,9 +5,11 @@ import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
+import { usePageTitle } from "../../hooks/usePageTitle";
 
 const Vesuvio = () => {
   useScrollToTop();
+  usePageTitle("Vesuvio Ultra Marathon");
   
   return (
     <div className="min-h-screen bg-stone">
@@ -86,6 +88,17 @@ const Vesuvio = () => {
             </div>
           </div>
           <div className="space-y-6">
+            <div className="rounded-xl overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/lKZvRrlkODQ?si=3oCd8QgkfgjZ5EBs"
+                title="Vesuvio Ultra Marathon Trail Running"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <div>
