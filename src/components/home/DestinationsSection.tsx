@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -53,7 +52,7 @@ const destinations = [
     href: "/destinations/vesuvio"
   },
   {
-    image: "/lovable-uploads/609b48d8-13b5-4f5b-b65e-9e75141d6c2d.png",
+    image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
     location: "Transylvania 100, Romania",
     date: "May 2026",
     spots: "+15 spots",
