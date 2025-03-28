@@ -1,4 +1,5 @@
-import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
+
+import { ArrowLeft, ExternalLink, Clock, ThumbsUp, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -136,6 +137,18 @@ const SwissAlps = () => {
           </div>
           
           <div className="space-y-6">
+            {/* YouTube video embed at the top of right column */}
+            <div className="rounded-xl overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/4dWum9fxE0g?si=Ac4yHBjPyU_DZleF"
+                title="Gran Trail Courmayeur"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <div>
@@ -186,9 +199,10 @@ const SwissAlps = () => {
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
               <ul className="space-y-2 list-disc pl-4">
                 <li>Entry ticket to the trail run</li>
-                <li>Plane ticket from Copenhagen and back (if other departure airport, let's discuss)</li>
-                <li>Transportation from airport to destination hotel</li>
-                <li>Minimum 4 star hotel experience for the duration of the trip</li>
+                <li>Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)</li>
+                <li>Transportation from airport to destination hotel (if tickets are organised by Trail Squad)</li>
+                <li>Minimum 4 star hotel experience for the duration of the trip (if possible)</li>
+                <li>Pre-race briefing with running coach with running and nutrition strategies</li>
               </ul>
             </div>
             <div className="bg-stone p-6 rounded-xl">
