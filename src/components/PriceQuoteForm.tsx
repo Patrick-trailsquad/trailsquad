@@ -35,7 +35,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
       accommodationPreference: 'double',
-      flightPreference: 'no-tickets'
+      flightPreference: 'organizer-tickets'
     }
   });
 
@@ -246,7 +246,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                   <div className="space-y-3">
                     <Label>Preference for flights</Label>
                     <RadioGroup 
-                      defaultValue="no-tickets"
+                      defaultValue="organizer-tickets"
                       onValueChange={(value) => {
                         setValue('flightPreference', value);
                         console.log('Setting flight preference:', value);
@@ -255,11 +255,11 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="no-tickets" id="no-tickets" />
-                        <Label htmlFor="no-tickets">We don't need plane tickets</Label>
+                        <Label htmlFor="no-tickets">We'll arrange our own tickets</Label>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="include-tickets" id="include-tickets" />
-                        <Label htmlFor="include-tickets">We prefer plane tickets included (everyone will be on the same planes)</Label>
+                        <RadioGroupItem value="organizer-tickets" id="organizer-tickets" />
+                        <Label htmlFor="organizer-tickets">We prefer organizer to book tickets (most cost-effective)</Label>
                       </div>
                     </RadioGroup>
                     {errors.flightPreference && (
