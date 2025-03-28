@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -5,16 +6,18 @@ import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
+import { usePageTitle } from "../../hooks/usePageTitle";
 
 const Transylvania100 = () => {
   useScrollToTop();
+  usePageTitle("Transylvania 100");
   
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
         <img
-          src="/lovable-uploads/609b48d8-13b5-4f5b-b65e-9e75141d6c2d.png"
-          alt="Transylvania 100 trail running"
+          src="/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png"
+          alt="Transylvania 100 trail running in the Carpathian Mountains"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
