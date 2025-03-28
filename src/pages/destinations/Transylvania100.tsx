@@ -122,7 +122,7 @@ const Transylvania100 = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Trip status</p>
-                  <p className="font-cabinet text-xl font-bold text-charcoal">+15 spots</p>
+                  <p className="font-cabinet text-xl font-bold text-[#9F9EA1]">Get notified when registration opens</p>
                 </div>
               </div>
               <PriceQuoteForm 
