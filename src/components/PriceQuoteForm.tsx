@@ -1,3 +1,4 @@
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info, CheckCircle2, ArrowRight } from "lucide-react";
@@ -140,12 +141,14 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
           ) : (
             <>
               <div className="mb-6">
-                <Progress 
-                  step={step - 1} 
-                  totalSteps={2} 
-                  value={step === 1 ? 50 : 100} 
-                  className="h-2" 
-                />
+                {/* Progress Indicator */}
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm font-medium">
+                    <span className={step === 1 ? "text-black" : "text-gray-500"}>Your Contact</span>
+                    <span className={step === 2 ? "text-black" : "text-gray-500"}>Trip Details</span>
+                  </div>
+                  <Progress value={step === 1 ? 50 : 100} className="h-2" />
+                </div>
               </div>
 
               <div className="bg-stone/50 rounded-lg p-4 flex items-start gap-3 mb-6">
@@ -158,6 +161,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {step === 1 ? (
+                  // Step 1: Contact Information
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="fullName">Full Name</Label>
@@ -203,6 +207,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </Button>
                   </div>
                 ) : (
+                  // Step 2: Trip Details
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="participants">Number of Participants</Label>
