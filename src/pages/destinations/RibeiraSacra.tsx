@@ -51,20 +51,20 @@ const RibeiraSacra = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Luintra</h1>
-              <h2 className="font-cabinet text-lg text-terra">Province of Ourense, Spain</h2>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Location</h1>
+              <h2 className="font-cabinet text-lg text-terra">Luintra, Province of Ourense, Spain</h2>
             </div>
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">October 12</h1>
-              <h2 className="font-cabinet text-lg text-terra">2025 Race Day</h2>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
+              <h2 className="font-cabinet text-lg text-terra">October 12, 2025</h2>
             </div>
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">4 Days</h1>
-              <h2 className="font-cabinet text-lg text-terra">October 10-13, 2025</h2>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
+              <h2 className="font-cabinet text-lg text-terra">October 10-13, 2025 (4 days)</h2>
             </div>
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">48km</h1>
-              <h2 className="font-cabinet text-lg text-terra">Trail Distance</h2>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
+              <h2 className="font-cabinet text-lg text-terra">48km</h2>
             </div>
           </div>
         </div>
