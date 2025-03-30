@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -135,12 +136,15 @@ const RibeiraSacra = () => {
             </div>
           </div>
         </div>
-        
-        <div className="mt-16">
-          <IncludedAmenities className="bg-transparent p-0" />
-        </div>
-        
-        <div className="mt-16 bg-white rounded-xl overflow-hidden">
+      </div>
+      
+      {/* Moved outside the container for full-width display */}
+      <div className="mt-16 w-full">
+        <IncludedAmenities className="bg-transparent" />
+      </div>
+      
+      <div className="container mx-auto px-4 py-12">
+        <div className="bg-white rounded-xl overflow-hidden">
           <div className="grid md:grid-cols-2">
             <div className="relative">
               <Carousel className="w-full">
