@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -22,7 +23,7 @@ const RibeiraSacra = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[40vh]">
         <img
           src="/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png"
           alt="Trail Ribeira Sacra"
@@ -37,6 +38,11 @@ const RibeiraSacra = () => {
             <ArrowLeft className="w-5 h-5" />
             Back to Home
           </Link>
+        </div>
+        <div className="absolute bottom-6 left-0 right-0 text-center">
+          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md">
+            Trail Ribeira Sacra, Spain
+          </h1>
         </div>
       </div>
 
@@ -65,9 +71,6 @@ const RibeiraSacra = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-          Trail Ribeira Sacra, Spain
-        </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
