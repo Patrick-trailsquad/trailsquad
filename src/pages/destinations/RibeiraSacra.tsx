@@ -193,8 +193,17 @@ const RibeiraSacra = () => {
                   <CarouselItem>
                     <div className="h-[400px]">
                       <img 
-                        src="/lovable-uploads/6e408263-b312-4b43-b0a1-ea08f93e31f0.png" 
-                        alt="Parador de Santo Estevo exterior" 
+                        src="/lovable-uploads/d82fbf4a-a04e-41cb-8857-059331238963.png" 
+                        alt="Parador de Santo Estevo room interior" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="/lovable-uploads/969011ad-2594-4761-bf33-8468779ced1b.png" 
+                        alt="Parador de Santo Estevo monastery view" 
                         className="w-full h-full object-cover"
                       />
                     </div>
