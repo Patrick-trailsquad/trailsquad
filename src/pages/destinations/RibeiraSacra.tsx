@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -42,23 +41,22 @@ const RibeiraSacra = () => {
       </div>
 
       {/* Trip Details - Yellow Background Section */}
-      <div className="bg-[#FEF7CD] py-10">
+      <div className="bg-[#FFDC00] py-10">
         <div className="container mx-auto px-4">
-          <h2 className="font-cabinet text-3xl font-bold mb-8 text-center text-charcoal">Trip Details</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
               <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Location</h3>
               <p className="text-charcoal">Luintra, Province of Ourense, Spain</p>
             </div>
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
               <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Date of Race</h3>
               <p className="text-charcoal">October 12, 2025</p>
             </div>
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
               <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Trip Duration</h3>
               <p className="text-charcoal">October 10-13, 2025 (4 days)</p>
             </div>
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
               <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Available Distance</h3>
               <p className="text-charcoal">48km</p>
             </div>
