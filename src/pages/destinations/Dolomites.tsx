@@ -1,7 +1,12 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
+import IconList from "../../components/destinations/IconList";
 
 const Dolomites = () => {
+  useScrollToTop();
+  
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
@@ -57,25 +62,27 @@ const Dolomites = () => {
                 Book Your Spot
               </button>
             </div>
-            <div className="bg-stone p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
-              <ul className="space-y-2 list-disc pl-4">
-                <li>Entry ticket to the trail run</li>
-                <li>Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)</li>
-                <li>Transportation from airport to destination hotel (if tickets are organised by Trail Squad)</li>
-                <li>Minimum 4 star hotel experience for the duration of the trip (if possible)</li>
-                <li>Pre-race briefing with running coach with running and nutrition strategies</li>
-              </ul>
-            </div>
-            <div className="bg-stone p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">What can be added</h2>
-              <ul className="space-y-2 list-disc pl-4">
-                <li>Dedicated running coach for the group or individually</li>
-                <li>Weekly run schedules based on participants' current running form</li>
-                <li>Marketing material if used for corporate trips</li>
-                <li>Video material for marketing purposes</li>
-              </ul>
-            </div>
+
+            <IconList 
+              title="What's included in the standard package"
+              items={[
+                { type: 'entry', text: 'Entry ticket to the trail run' },
+                { type: 'travel', text: 'Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)' },
+                { type: 'transport', text: 'Transportation from airport to destination hotel (if tickets are organised by Trail Squad)' },
+                { type: 'hotel', text: 'Minimum 4 star hotel experience for the duration of the trip (if possible)' },
+                { type: 'coaching', text: 'Pre-race briefing with running coach with running and nutrition strategies' }
+              ]}
+            />
+            
+            <IconList 
+              title="What can be added"
+              items={[
+                { type: 'coaching', text: 'Dedicated running coach for the group or individually' },
+                { type: 'schedule', text: 'Weekly run schedules based on participants' current running form' },
+                { type: 'marketing', text: 'Marketing material if used for corporate trips' },
+                { type: 'video', text: 'Video material for marketing purposes' }
+              ]}
+            />
           </div>
         </div>
       </div>
