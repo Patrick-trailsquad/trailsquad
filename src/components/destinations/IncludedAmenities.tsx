@@ -46,6 +46,11 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
       description: "4-star hotel during your stay"
     },
     {
+      icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
+      title: "Social",
+      description: "Group run and post race drinks"
+    },
+    {
       icon: "/lovable-uploads/a18f161c-12fd-4a39-819c-2ffac95a8982.png",
       title: "Coaching",
       description: "Pre-race briefing and strategy"
@@ -55,7 +60,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
   return (
     <div className={`${className}`}>
       <h2 className="font-cabinet text-2xl font-bold mb-8 text-center">What's Included in Your Package</h2>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 container mx-auto px-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 container mx-auto px-4">
         {amenities.map((amenity, index) => (
           <Amenity
             key={index}
