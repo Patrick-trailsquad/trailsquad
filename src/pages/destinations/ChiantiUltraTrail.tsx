@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -118,15 +119,6 @@ const ChiantiUltraTrail = () => {
                 <li>Transportation from airport to destination hotel (if tickets are organised by Trail Squad)</li>
                 <li>Minimum 4 star hotel experience for the duration of the trip (if possible)</li>
                 <li>Pre-race briefing with running coach with running and nutrition strategies</li>
-              </ul>
-            </div>
-            <div className="bg-stone p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">What can be added</h2>
-              <ul className="space-y-2 list-disc pl-4">
-                <li>Dedicated running coach for the group or individually</li>
-                <li>Weekly run schedules based on participants' current running form</li>
-                <li>Marketing material if used for corporate trips</li>
-                <li>Video material for marketing purposes</li>
               </ul>
             </div>
           </div>

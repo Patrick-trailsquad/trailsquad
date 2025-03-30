@@ -80,16 +80,6 @@ const Dolomites = () => {
                 { type: 'coaching', text: "Pre-race briefing with running coach with running and nutrition strategies" }
               ]}
             />
-            
-            <IconList 
-              title="What can be added"
-              items={[
-                { type: 'coaching', text: "Dedicated running coach for the group or individually" },
-                { type: 'schedule', text: "Weekly run schedules based on participants' current running form" },
-                { type: 'marketing', text: "Marketing material if used for corporate trips" },
-                { type: 'video', text: "Video material for marketing purposes" }
-              ]}
-            />
           </div>
         </div>
 
