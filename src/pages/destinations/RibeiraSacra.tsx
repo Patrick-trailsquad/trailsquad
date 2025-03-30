@@ -23,7 +23,7 @@ const RibeiraSacra = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[50vh]">
+      <div className="relative h-[70vh]">
         <img
           src="/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png"
           alt="Trail Ribeira Sacra"
@@ -40,37 +40,37 @@ const RibeiraSacra = () => {
           </Link>
         </div>
         <div className="absolute bottom-6 left-0 right-0 text-center">
-          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md">
+          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-8">
             Trail Ribeira Sacra, Spain
           </h1>
         </div>
-      </div>
-
-      {/* Trip Details - Yellow Background Section */}
-      <div className="bg-[#FFDC00] py-10 mt-4">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Location</h3>
-              <p className="text-charcoal">Luintra, Province of Ourense, Spain</p>
-            </div>
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Date of Race</h3>
-              <p className="text-charcoal">October 12, 2025</p>
-            </div>
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Trip Duration</h3>
-              <p className="text-charcoal">October 10-13, 2025 (4 days)</p>
-            </div>
-            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Available Distance</h3>
-              <p className="text-charcoal">48km</p>
+        
+        {/* Info boxes at the bottom of hero */}
+        <div className="absolute -bottom-16 left-0 right-0">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
+                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Location</h3>
+                <p className="text-charcoal">Luintra, Province of Ourense, Spain</p>
+              </div>
+              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
+                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Date of Race</h3>
+                <p className="text-charcoal">October 12, 2025</p>
+              </div>
+              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
+                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Trip Duration</h3>
+                <p className="text-charcoal">October 10-13, 2025 (4 days)</p>
+              </div>
+              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
+                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Available Distance</h3>
+                <p className="text-charcoal">48km</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 mt-20">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
