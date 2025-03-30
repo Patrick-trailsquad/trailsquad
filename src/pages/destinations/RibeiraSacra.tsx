@@ -88,10 +88,10 @@ const RibeiraSacra = () => {
             <div className="bg-white p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
               <ul className="space-y-2">
-                <li><strong>Location:</strong> Ribeira Sacra, Galicia, Spain</li>
-                <li><strong>Date of race:</strong> October 18, 2025</li>
-                <li><strong>Trip duration:</strong> October 16-19, 2025 (4 days)</li>
-                <li><strong>Available distances:</strong> 15km, 30km, 55km</li>
+                <li><strong>Location:</strong> Luintra, Province of Ourense, Spain</li>
+                <li><strong>Date of race:</strong> October 12, 2025</li>
+                <li><strong>Trip duration:</strong> October 10-13, 2025 (4 days)</li>
+                <li><strong>Available distances:</strong> 48km</li>
               </ul>
             </div>
           </div>
@@ -111,7 +111,7 @@ const RibeiraSacra = () => {
               </div>
               <PriceQuoteForm 
                 destinationName="Trail Ribeira Sacra"
-                availableDistances={["15km", "30km", "55km"]}
+                availableDistances={["48km"]}
               />
             </div>
             <div className="bg-stone p-6 rounded-xl">
