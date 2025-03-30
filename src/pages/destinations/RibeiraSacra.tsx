@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -136,9 +136,8 @@ const RibeiraSacra = () => {
           </div>
         </div>
         
-        {/* New Included Amenities Section */}
         <div className="mt-16">
-          <IncludedAmenities />
+          <IncludedAmenities className="bg-transparent p-0" />
         </div>
         
         <div className="mt-16 bg-white rounded-xl overflow-hidden">
