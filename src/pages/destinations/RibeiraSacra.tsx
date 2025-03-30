@@ -139,7 +139,7 @@ const RibeiraSacra = () => {
                 { type: "entry", text: "Entry ticket to the trail run" },
                 { type: "travel", text: "Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)" },
                 { type: "transport", text: "Transportation from airport to destination hotel (if tickets are organised by Trail Squad)" },
-                { type: "hotel", text: "Minimum 4 star hotel experience for the duration of the trip (if possible)" },
+                { type: "hotel", text: "4 star hotel for the duration of the trip (see below)" },
                 { type: "coaching", text: "Pre-race briefing with running coach with running and nutrition strategies" }
               ]}
             />
