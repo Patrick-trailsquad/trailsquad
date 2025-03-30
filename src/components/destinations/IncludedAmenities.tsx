@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface AmenityProps {
@@ -53,7 +52,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/a18f161c-12fd-4a39-819c-2ffac95a8982.png",
       title: "Social",
-      description: "Group run and post race drinks"
+      description: "Social jog and post race celebrations"
     }
   ];
 
