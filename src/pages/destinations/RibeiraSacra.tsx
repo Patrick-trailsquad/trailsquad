@@ -8,6 +8,13 @@ import BackToDestinationsButton from "../../components/destinations/BackToDestin
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
 import IconList from "../../components/destinations/IconList";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const RibeiraSacra = () => {
   useScrollToTop();
@@ -149,6 +156,58 @@ const RibeiraSacra = () => {
             />
           </div>
         </div>
+        
+        {/* Hotel Section with Carousel */}
+        <div className="mt-16 bg-white rounded-xl overflow-hidden">
+          <div className="grid md:grid-cols-2">
+            <div className="relative">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="https://images.unsplash.com/photo-1487958449943-2429e8be8625" 
+                        alt="Parador de Santo Estevo exterior" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="https://images.unsplash.com/photo-1518005020951-eccb494ad742" 
+                        alt="Parador de Santo Estevo courtyard" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="https://images.unsplash.com/photo-1721322800607-8c38375eef04" 
+                        alt="Parador de Santo Estevo suite" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
+            </div>
+            <div className="p-8 flex flex-col justify-center">
+              <h1 className="font-cabinet text-3xl font-bold text-charcoal mb-2">Parador de Santo Estevo</h1>
+              <h2 className="font-cabinet text-xl text-terra mb-4">Nogueira de Ramuín, Ourense</h2>
+              <p className="text-lg">
+                Set in a stunning 12th-century monastery, this luxury hotel offers an unforgettable stay in the heart of the Ribeira Sacra. 
+                The beautifully restored building features original stone architecture, elegant cloisters, and magnificent views of the 
+                surrounding valleys. You'll enjoy spacious rooms, gourmet Galician cuisine, and a peaceful spa - perfect for recovery 
+                after your trail adventure.
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <BackToDestinationsButton />
       </div>
       <Footer />

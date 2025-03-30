@@ -3,6 +3,13 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import IconList from "../../components/destinations/IconList";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Dolomites = () => {
   useScrollToTop();
@@ -83,6 +90,57 @@ const Dolomites = () => {
                 { type: 'video', text: "Video material for marketing purposes" }
               ]}
             />
+          </div>
+        </div>
+
+        {/* Hotel Section with Carousel */}
+        <div className="mt-16 bg-white rounded-xl overflow-hidden">
+          <div className="grid md:grid-cols-2">
+            <div className="relative">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="https://images.unsplash.com/photo-1487958449943-2429e8be8625" 
+                        alt="Hotel Ciasa Salares exterior" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="https://images.unsplash.com/photo-1518005020951-eccb494ad742" 
+                        alt="Hotel Ciasa Salares view" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="https://images.unsplash.com/photo-1721322800607-8c38375eef04" 
+                        alt="Hotel Ciasa Salares room" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
+            </div>
+            <div className="p-8 flex flex-col justify-center">
+              <h1 className="font-cabinet text-3xl font-bold text-charcoal mb-2">Hotel Ciasa Salares</h1>
+              <h2 className="font-cabinet text-xl text-terra mb-4">Alta Badia, South Tyrol</h2>
+              <p className="text-lg">
+                This elegant family-run hotel offers the perfect blend of alpine tradition and modern luxury in the heart of the Dolomites.
+                With stunning mountain views from every window, spacious rooms decorated with local wood, and exceptional farm-to-table dining,
+                Ciasa Salares provides the ideal base for your Dolomites adventure. After your run, relax in the wellness center with saunas, 
+                steam baths, and treatment rooms.
+              </p>
+            </div>
           </div>
         </div>
       </div>
