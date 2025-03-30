@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -37,6 +38,31 @@ const RibeiraSacra = () => {
             <ArrowLeft className="w-5 h-5" />
             Back to Home
           </Link>
+        </div>
+      </div>
+
+      {/* Trip Details - Yellow Background Section */}
+      <div className="bg-[#FEF7CD] py-10">
+        <div className="container mx-auto px-4">
+          <h2 className="font-cabinet text-3xl font-bold mb-8 text-center text-charcoal">Trip Details</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Location</h3>
+              <p className="text-charcoal">Luintra, Province of Ourense, Spain</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Date of Race</h3>
+              <p className="text-charcoal">October 12, 2025</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Trip Duration</h3>
+              <p className="text-charcoal">October 10-13, 2025 (4 days)</p>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FEF7CD]/80">
+              <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Available Distance</h3>
+              <p className="text-charcoal">48km</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -92,16 +118,6 @@ const RibeiraSacra = () => {
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
-
-            <div className="bg-white p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
-              <ul className="space-y-2">
-                <li><strong>Location:</strong> Luintra, Province of Ourense, Spain</li>
-                <li><strong>Date of race:</strong> October 12, 2025</li>
-                <li><strong>Trip duration:</strong> October 10-13, 2025 (4 days)</li>
-                <li><strong>Available distances:</strong> 48km</li>
-              </ul>
-            </div>
           </div>
           
           <div className="space-y-6">
