@@ -23,7 +23,7 @@ const RibeiraSacra = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[40vh]">
+      <div className="relative h-[50vh]">
         <img
           src="/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png"
           alt="Trail Ribeira Sacra"
@@ -47,7 +47,7 @@ const RibeiraSacra = () => {
       </div>
 
       {/* Trip Details - Yellow Background Section */}
-      <div className="bg-[#FFDC00] py-10">
+      <div className="bg-[#FFDC00] py-10 mt-4">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <div className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
