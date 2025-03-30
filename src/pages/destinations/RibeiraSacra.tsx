@@ -44,33 +44,33 @@ const RibeiraSacra = () => {
             Trail Ribeira Sacra, Spain
           </h1>
         </div>
-        
-        {/* Info boxes at the bottom of hero */}
-        <div className="absolute -bottom-16 left-0 right-0">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Location</h3>
-                <p className="text-charcoal">Luintra, Province of Ourense, Spain</p>
-              </div>
-              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Date of Race</h3>
-                <p className="text-charcoal">October 12, 2025</p>
-              </div>
-              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Trip Duration</h3>
-                <p className="text-charcoal">October 10-13, 2025 (4 days)</p>
-              </div>
-              <div className="bg-[#FFDC00] p-5 rounded-lg shadow-md flex flex-col items-center text-center border border-[#FFDC00]/80">
-                <h3 className="font-cabinet text-lg font-bold mb-2 text-charcoal">Available Distance</h3>
-                <p className="text-charcoal">48km</p>
-              </div>
+      </div>
+      
+      {/* Yellow banner underneath hero */}
+      <div className="w-full bg-[#FFDC00] py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Luintra</h1>
+              <h2 className="font-cabinet text-lg text-terra">Province of Ourense, Spain</h2>
+            </div>
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">October 12</h1>
+              <h2 className="font-cabinet text-lg text-terra">2025 Race Day</h2>
+            </div>
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">4 Days</h1>
+              <h2 className="font-cabinet text-lg text-terra">October 10-13, 2025</h2>
+            </div>
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">48km</h1>
+              <h2 className="font-cabinet text-lg text-terra">Trail Distance</h2>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12 mt-20">
+      <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
