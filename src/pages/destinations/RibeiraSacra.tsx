@@ -137,21 +137,21 @@ const RibeiraSacra = () => {
             <IconList 
               title="What's included in the standard package"
               items={[
-                { type: 'entry', text: "Entry ticket to the trail run" },
-                { type: 'travel', text: "Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)" },
-                { type: 'transport', text: "Transportation from airport to destination hotel (if tickets are organised by Trail Squad)" },
-                { type: 'hotel', text: "Minimum 4 star hotel experience for the duration of the trip (if possible)" },
-                { type: 'coaching', text: "Pre-race briefing with running coach with running and nutrition strategies" }
+                { type: "entry", text: "Entry ticket to the trail run" },
+                { type: "travel", text: "Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)" },
+                { type: "transport", text: "Transportation from airport to destination hotel (if tickets are organised by Trail Squad)" },
+                { type: "hotel", text: "Minimum 4 star hotel experience for the duration of the trip (if possible)" },
+                { type: "coaching", text: "Pre-race briefing with running coach with running and nutrition strategies" }
               ]}
             />
             
             <IconList 
               title="What can be added"
               items={[
-                { type: 'coaching', text: "Dedicated running coach for the group or individually" },
-                { type: 'schedule', text: "Weekly run schedules based on participants' current running form" },
-                { type: 'marketing', text: "Marketing material if used for corporate trips" },
-                { type: 'video', text: "Video material for marketing purposes" }
+                { type: "coaching", text: "Dedicated running coach for the group or individually" },
+                { type: "schedule", text: "Weekly run schedules based on participants' current running form" },
+                { type: "marketing", text: "Marketing material if used for corporate trips" },
+                { type: "video", text: "Video material for marketing purposes" }
               ]}
             />
           </div>
@@ -166,16 +166,7 @@ const RibeiraSacra = () => {
                   <CarouselItem>
                     <div className="h-[400px]">
                       <img 
-                        src="https://images.unsplash.com/photo-1487958449943-2429e8be8625" 
-                        alt="Parador de Santo Estevo exterior" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="h-[400px]">
-                      <img 
-                        src="https://images.unsplash.com/photo-1518005020951-eccb494ad742" 
+                        src="/lovable-uploads/c410cbf0-1be2-4f66-9ae9-cbd7356a5dcf.png" 
                         alt="Parador de Santo Estevo courtyard" 
                         className="w-full h-full object-cover"
                       />
@@ -184,8 +175,26 @@ const RibeiraSacra = () => {
                   <CarouselItem>
                     <div className="h-[400px]">
                       <img 
-                        src="https://images.unsplash.com/photo-1721322800607-8c38375eef04" 
-                        alt="Parador de Santo Estevo suite" 
+                        src="/lovable-uploads/f28071a7-dd02-4fb2-96e4-f46fe1e26c54.png" 
+                        alt="Parador de Santo Estevo room" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="/lovable-uploads/817df969-5c3c-456f-ac27-c783a07686ca.png" 
+                        alt="Parador de Santo Estevo spa" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="h-[400px]">
+                      <img 
+                        src="/lovable-uploads/6e408263-b312-4b43-b0a1-ea08f93e31f0.png" 
+                        alt="Parador de Santo Estevo exterior" 
                         className="w-full h-full object-cover"
                       />
                     </div>
