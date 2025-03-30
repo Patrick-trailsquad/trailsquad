@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -14,7 +14,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Star from "lucide-react";
 
 const RibeiraSacra = () => {
   useScrollToTop();
@@ -157,7 +156,6 @@ const RibeiraSacra = () => {
           </div>
         </div>
         
-        {/* Hotel Section with Carousel */}
         <div className="mt-16 bg-white rounded-xl overflow-hidden">
           <div className="grid md:grid-cols-2">
             <div className="relative">
