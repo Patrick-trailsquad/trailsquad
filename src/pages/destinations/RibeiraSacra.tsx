@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -75,7 +74,7 @@ const RibeiraSacra = () => {
               className="mb-8"
             >
               <a 
-                href="https://www.trailribeirasacra.com"
+                href="https://www.trailribeirasacra.es/index-en.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
