@@ -25,6 +25,13 @@ const destinations = [
     href: "/destinations/belfortrail"
   },
   {
+    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+    location: "Trail Ribeira Sacra, Spain",
+    date: "October 2025",
+    spots: "10 spots",
+    href: "/destinations/ribeira-sacra"
+  },
+  {
     image: "/lovable-uploads/b1a8a192-9867-4c4b-bf05-de316bf2498f.png",
     location: "Grand Raid des Cathares, France",
     date: "October 24-25, 2025",
