@@ -16,7 +16,7 @@ const RibeiraSacra = () => {
     <div className="min-h-screen bg-stone">
       <div className="relative h-[60vh]">
         <img
-          src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9"
+          src="/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png"
           alt="Trail Ribeira Sacra"
           className="w-full h-full object-cover"
         />
