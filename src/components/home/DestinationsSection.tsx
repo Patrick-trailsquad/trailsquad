@@ -32,13 +32,6 @@ const destinations = [
     href: "/destinations/ribeira-sacra"
   },
   {
-    image: "/lovable-uploads/b1a8a192-9867-4c4b-bf05-de316bf2498f.png",
-    location: "Grand Raid des Cathares, France",
-    date: "October 24-25, 2025",
-    spots: "15 spots",
-    href: "/destinations/grand-raid-cathares"
-  },
-  {
     image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",
     location: "Mallorca by UTMB, Spain",
     date: "November 2025",
