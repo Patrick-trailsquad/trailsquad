@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -30,20 +29,6 @@ const destinations = [
     date: "October 2025",
     spots: "10 spots",
     href: "/destinations/ribeira-sacra"
-  },
-  {
-    image: "/lovable-uploads/e6c9a5c5-4aa1-45c5-95c3-f74254e22e1a.png",
-    location: "Mallorca by UTMB, Spain",
-    date: "November 2025",
-    spots: "6 spots",
-    href: "/destinations/mallorca"
-  },
-  {
-    image: "/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png",
-    location: "Chianti Ultra Trail By UTMB, Italy",
-    date: "March 2026",
-    spots: "+15 spots",
-    href: "/destinations/chianti"
   },
   {
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
