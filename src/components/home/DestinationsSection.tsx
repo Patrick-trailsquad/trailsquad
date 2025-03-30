@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -8,13 +9,6 @@ const destinations = [
     date: "April 2025",
     spots: "Sold out",
     href: "/destinations/miut"
-  },
-  {
-    image: "/lovable-uploads/f4d3d6be-2bfe-444a-ab76-ce90fdb7278d.png",
-    location: "SwissPeaks Trail, Switzerland",
-    date: "September 2025",
-    spots: "8 spots",
-    href: "/destinations/swisspeaks"
   },
   {
     image: "/lovable-uploads/d2a56511-3d0c-43a6-bf23-206a90c0d017.png",
