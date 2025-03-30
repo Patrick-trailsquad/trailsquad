@@ -47,13 +47,13 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     },
     {
       icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
-      title: "Social",
-      description: "Group run and post race drinks"
+      title: "Coaching",
+      description: "Pre-race briefing and strategy"
     },
     {
       icon: "/lovable-uploads/a18f161c-12fd-4a39-819c-2ffac95a8982.png",
-      title: "Coaching",
-      description: "Pre-race briefing and strategy"
+      title: "Social",
+      description: "Group run and post race drinks"
     }
   ];
 
