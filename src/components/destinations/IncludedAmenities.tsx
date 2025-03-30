@@ -53,9 +53,9 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
   ];
 
   return (
-    <div className={`bg-white p-8 rounded-xl shadow-sm ${className}`}>
+    <div className={`${className}`}>
       <h2 className="font-cabinet text-2xl font-bold mb-8 text-center">What's Included in Your Package</h2>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 container mx-auto px-4">
         {amenities.map((amenity, index) => (
           <Amenity
             key={index}

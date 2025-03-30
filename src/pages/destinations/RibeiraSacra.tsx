@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -138,8 +137,7 @@ const RibeiraSacra = () => {
         </div>
       </div>
       
-      {/* Moved outside the container for full-width display */}
-      <div className="mt-16 w-full">
+      <div className="mt-16">
         <IncludedAmenities className="bg-transparent" />
       </div>
       
