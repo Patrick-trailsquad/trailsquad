@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -6,7 +7,7 @@ import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
-import IconList from "../../components/destinations/IconList";
+import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 import {
   Carousel,
   CarouselContent,
@@ -132,18 +133,12 @@ const RibeiraSacra = () => {
                 availableDistances={["48km"]}
               />
             </div>
-
-            <IconList 
-              title="What's included in the standard package"
-              items={[
-                { type: "entry", text: "Entry ticket to the trail run" },
-                { type: "travel", text: "Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)" },
-                { type: "transport", text: "Transportation from airport to destination hotel (if tickets are organised by Trail Squad)" },
-                { type: "hotel", text: "4 star hotel for the duration of the trip (see below)" },
-                { type: "coaching", text: "Pre-race briefing with running coach with running and nutrition strategies" }
-              ]}
-            />
           </div>
+        </div>
+        
+        {/* New Included Amenities Section */}
+        <div className="mt-16">
+          <IncludedAmenities />
         </div>
         
         <div className="mt-16 bg-white rounded-xl overflow-hidden">
