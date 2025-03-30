@@ -130,21 +130,21 @@ const RibeiraSacra = () => {
             <IconList 
               title="What's included in the standard package"
               items={[
-                { type: 'entry', text: 'Entry ticket to the trail run' },
-                { type: 'travel', text: 'Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)' },
-                { type: 'transport', text: 'Transportation from airport to destination hotel (if tickets are organised by Trail Squad)' },
-                { type: 'hotel', text: 'Minimum 4 star hotel experience for the duration of the trip (if possible)' },
-                { type: 'coaching', text: 'Pre-race briefing with running coach with running and nutrition strategies' }
+                { type: 'entry', text: "Entry ticket to the trail run" },
+                { type: 'travel', text: "Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)" },
+                { type: 'transport', text: "Transportation from airport to destination hotel (if tickets are organised by Trail Squad)" },
+                { type: 'hotel', text: "Minimum 4 star hotel experience for the duration of the trip (if possible)" },
+                { type: 'coaching', text: "Pre-race briefing with running coach with running and nutrition strategies" }
               ]}
             />
-
+            
             <IconList 
               title="What can be added"
               items={[
-                { type: 'coaching', text: 'Dedicated running coach for the group or individually' },
-                { type: 'schedule', text: 'Weekly run schedules based on participants' current running form' },
-                { type: 'marketing', text: 'Marketing material if used for corporate trips' },
-                { type: 'video', text: 'Video material for marketing purposes' }
+                { type: 'coaching', text: "Dedicated running coach for the group or individually" },
+                { type: 'schedule', text: "Weekly run schedules based on participants' current running form" },
+                { type: 'marketing', text: "Marketing material if used for corporate trips" },
+                { type: 'video', text: "Video material for marketing purposes" }
               ]}
             />
           </div>
