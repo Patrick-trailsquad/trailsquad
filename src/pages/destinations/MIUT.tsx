@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -38,7 +37,6 @@ const MIUT = () => {
         </div>
       </div>
 
-      {/* Yellow banner underneath hero */}
       <div className="w-full bg-[#FFDC00] py-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -117,7 +115,7 @@ const MIUT = () => {
           <div className="space-y-6">
             <div className="rounded-xl overflow-hidden aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/xFbDmDJVZpI?si=9iSfgpnVVxAYwuDA"
+                src="https://www.youtube.com/embed/0RXss51DMhg?si=I5dBXpbWTdgB_LJ7"
                 title="Madeira Island Ultra Trail"
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
