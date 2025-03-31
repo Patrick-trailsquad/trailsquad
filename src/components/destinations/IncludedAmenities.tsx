@@ -42,7 +42,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/ba002ac9-1745-47a1-a01f-ca8bfa53b60d.png",
       title: "Luxury Hotel",
-      description: "4-star hotel during your stay"
+      description: "5-star Savoy Palace hotel"
     },
     {
       icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
