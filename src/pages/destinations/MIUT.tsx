@@ -1,11 +1,17 @@
-import { ArrowLeft, ExternalLink } from "lucide-react";
+
+import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
+import { usePageTitle } from "../../hooks/usePageTitle";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
+import Footer from "../../components/Footer";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
+import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 
 const MIUT = () => {
   useScrollToTop();
+  usePageTitle('Madeira Island Ultra Trail');
   
   return (
     <div className="min-h-screen bg-stone">
@@ -25,35 +31,76 @@ const MIUT = () => {
             Back to Home
           </Link>
         </div>
+        <div className="absolute bottom-6 left-0 right-0 text-center">
+          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-8">
+            Madeira Island Ultra Trail, Portugal
+          </h1>
+        </div>
+      </div>
+
+      {/* Yellow banner underneath hero */}
+      <div className="w-full bg-[#FFDC00] py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Location</h1>
+              <h2 className="font-cabinet text-lg text-charcoal">Funchal, Madeira Island, Portugal</h2>
+            </div>
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
+              <h2 className="font-cabinet text-lg text-charcoal">April 26, 2025</h2>
+            </div>
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
+              <h2 className="font-cabinet text-lg text-charcoal">April 24-27, 2025 (4 days)</h2>
+            </div>
+            <div>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
+              <h2 className="font-cabinet text-lg text-charcoal">16km, 42km, 60km, 85km, 115km</h2>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-          Madeira Island Ultra Trail, Portugal
-        </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-lg mb-4">
-              Embark on an extraordinary running adventure through the stunning landscapes of Madeira Island, 
-              where the legendary MIUT (Madeira Island Ultra Trail) awaits. This prestigious race takes you 
-              on an unforgettable journey from the northern shores of Porto Moniz to the southern town of 
-              Machico, traversing the entire island through its most breathtaking terrain. You'll experience 
-              the thrill of running from sea level to Pico Ruivo, Madeira's highest peak at 1,862 meters, 
-              where the Atlantic Ocean stretches endlessly in every direction.
-            </p>
-            <p className="text-lg mb-4">
-              The trail combines technical mountain paths, ancient levada waterways, and lush laurel forests 
-              that are UNESCO World Heritage sites. As you navigate through diverse microclimates, you'll 
-              encounter everything from misty mountain peaks to subtropical valleys, making this one of 
-              Europe's most unique and challenging ultra-trail experiences. Whether you're an experienced 
-              ultra-runner or taking on your first long-distance trail challenge, MIUT offers various 
-              distances to suit your ambitions while showcasing the raw beauty of this Portuguese paradise.
-            </p>
+            <div className="space-y-6 mb-8">
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <p className="text-lg">
+                  Embark on an extraordinary running adventure through the stunning landscapes of Madeira Island, 
+                  where the legendary MIUT (Madeira Island Ultra Trail) awaits. This prestigious race takes you 
+                  on an unforgettable journey from the northern shores of Porto Moniz to the southern town of 
+                  Machico, traversing the entire island through its most breathtaking terrain.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <p className="text-lg">
+                  The trail combines technical mountain paths, ancient levada waterways, and lush laurel forests 
+                  that are UNESCO World Heritage sites. As you navigate through diverse microclimates, you'll 
+                  encounter everything from misty mountain peaks to subtropical valleys, making this one of 
+                  Europe's most unique and challenging ultra-trail experiences.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <p className="text-lg">
+                  With challenging elevation changes and technical terrain, MIUT offers distances for everyone from 
+                  the 16km Mini MIUT to the epic 115km ultra that climbs to Pico Ruivo, Madeira's highest peak at 
+                  1,862 meters, where the Atlantic Ocean stretches endlessly in every direction.
+                </p>
+              </div>
+            </div>
+
             <Button 
               asChild
               variant="charcoal"
               size="md"
-              className="mb-12"
+              className="mb-8"
             >
               <a 
                 href="https://www.miutmadeira.com/en/"
@@ -65,52 +112,75 @@ const MIUT = () => {
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
-
-            <div className="bg-white p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
-              <ul className="space-y-2">
-                <li><strong>Location:</strong> Funchal, Madeira Island, Portugal</li>
-                <li><strong>Date of run:</strong> April 26, 2025</li>
-                <li><strong>Trip duration:</strong> April 24-27, 2025 (4 days)</li>
-                <li><strong>Available distances:</strong> 16 km, 42 km, 60 km, 85km, 115 km</li>
-              </ul>
-            </div>
           </div>
+          
           <div className="space-y-6">
+            <div className="rounded-xl overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/xFbDmDJVZpI?si=9iSfgpnVVxAYwuDA"
+                title="Madeira Island Ultra Trail"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <div>
+                  <p className="text-sm text-gray-600 mb-1">Starting from</p>
+                  <p className="font-cabinet text-4xl font-bold text-charcoal">9.500 DKK</p>
+                  <p className="text-sm text-gray-500">incl. VAT</p>
+                </div>
+                <div>
                   <p className="text-sm text-gray-600 mb-1">Trip status</p>
-                  <p className="font-cabinet text-2xl font-bold text-charcoal">Sold Out</p>
-                  <p className="text-sm text-gray-500">Check back later for new dates</p>
+                  <p className="font-cabinet text-xl font-bold text-charcoal">8 spots</p>
                 </div>
               </div>
-              <button disabled className="w-full bg-gray-300 text-white px-8 py-4 rounded-full font-cabinet font-medium cursor-not-allowed">
-                No More Tickets
-              </button>
-            </div>
-            <div className="bg-stone p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
-              <ul className="space-y-2 list-disc pl-4">
-                <li>Entry ticket to the trail run</li>
-                <li>Plane ticket from Copenhagen and back (if other departure airport, let's discuss)</li>
-                <li>Transportation from airport to destination hotel</li>
-                <li>Minimum 4 star hotel experience for the duration of the trip</li>
-              </ul>
-            </div>
-            <div className="bg-stone p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">What can be added</h2>
-              <ul className="space-y-2 list-disc pl-4">
-                <li>Dedicated running coach for the group or individually</li>
-                <li>Weekly run schedules based on participants' current running form</li>
-                <li>Marketing material if used for corporate trips</li>
-                <li>Video material for marketing purposes</li>
-              </ul>
+              <PriceQuoteForm 
+                destinationName="Madeira Island Ultra Trail"
+                availableDistances={["16km", "42km", "60km", "85km", "115km"]}
+              />
             </div>
           </div>
         </div>
+      </div>
+      
+      <div className="mt-16">
+        <IncludedAmenities className="bg-transparent" />
+      </div>
+      
+      <div className="container mx-auto px-4 py-12">
+        <div className="bg-white rounded-xl overflow-hidden">
+          <div className="grid md:grid-cols-2">
+            <div className="p-8 flex flex-col justify-center">
+              <h1 className="font-cabinet text-3xl font-bold text-charcoal mb-2">Savoy Palace</h1>
+              <h2 className="font-cabinet text-xl text-terra mb-4">Funchal, Madeira</h2>
+              <div className="flex items-center mb-4">
+                <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                <span className="text-md text-gray-600">5-Star Hotel</span>
+              </div>
+              <p className="text-lg">
+                Located in Funchal's city center, the luxurious Savoy Palace offers breathtaking ocean views and 
+                elegant accommodations. Enjoy innovative cuisine at the hotel's restaurants, relax in the 
+                infinity pool overlooking the Atlantic, and recover in the world-class spa after your trail 
+                adventure. Perfect for both pre-race preparation and post-race relaxation.
+              </p>
+            </div>
+            <div className="h-[400px]">
+              <img 
+                src="/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png" 
+                alt="Savoy Palace Hotel in Madeira" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+        
         <BackToDestinationsButton />
       </div>
+      <Footer />
     </div>
   );
 };

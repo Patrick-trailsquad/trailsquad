@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import SwissAlps from "./pages/destinations/SwissAlps";
-import NewZealand from "./pages/destinations/NewZealand";
+import MIUT from "./pages/destinations/MIUT";
 import NorwegianFjords from "./pages/destinations/NorwegianFjords";
 import Transylvania100 from "./pages/destinations/Transylvania100";
 import MontBlanc from "./pages/destinations/MontBlanc";
@@ -30,7 +30,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/destinations/gtc" element={<SwissAlps />} />
-          <Route path="/destinations/miut" element={<NewZealand />} />
+          <Route path="/destinations/miut" element={<MIUT />} />
           <Route path="/destinations/vesuvio" element={<Vesuvio />} />
           <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
           <Route path="/destinations/transylvania" element={<Transylvania100 />} />
