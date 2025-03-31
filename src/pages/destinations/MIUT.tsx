@@ -33,9 +33,12 @@ const MIUT = () => {
           </Link>
         </div>
         <div className="absolute bottom-6 left-0 right-0 text-center">
-          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-8">
+          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-2">
             Madeira Island Ultra Trail, Portugal
           </h1>
+          <div className="inline-block bg-[#ea384c] text-white px-4 py-1.5 rounded-full font-cabinet font-medium text-sm md:text-base">
+            RACE SOLD OUT
+          </div>
         </div>
       </div>
 
@@ -133,10 +136,15 @@ const MIUT = () => {
                   <p className="font-cabinet text-4xl font-bold text-charcoal">9.500 DKK</p>
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Trip status</p>
-                  <p className="font-cabinet text-xl font-bold text-charcoal">8 spots</p>
+                <div className="text-right">
+                  <p className="text-sm text-gray-600 mb-1">Race status</p>
+                  <p className="font-cabinet text-xl font-bold text-[#ea384c]">SOLD OUT</p>
                 </div>
+              </div>
+              <div className="mb-4 bg-gray-100 rounded-lg p-4">
+                <p className="text-sm text-gray-700">
+                  <strong>Note:</strong> The race is sold out, but you can still join us for this incredible trip and enjoy Madeira's beauty. We can help you find alternative running routes or experiences during your stay.
+                </p>
               </div>
               <PriceQuoteForm 
                 destinationName="Madeira Island Ultra Trail"
