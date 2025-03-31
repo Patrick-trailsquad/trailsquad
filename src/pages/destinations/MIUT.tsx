@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -8,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
-import SavoyPalaceCarousel from "../../components/destinations/miut/SavoyPalaceCarousel";
 
 const MIUT = () => {
   useScrollToTop();
@@ -176,11 +174,6 @@ const MIUT = () => {
               />
             </div>
           </div>
-        </div>
-
-        <div className="mt-8 mb-12">
-          <h2 className="font-cabinet text-2xl font-bold text-charcoal mb-6 text-center">Explore Savoy Palace Amenities</h2>
-          <SavoyPalaceCarousel />
         </div>
         
         <BackToDestinationsButton />
