@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -124,7 +123,7 @@ const RibeiraSacra = () => {
           <div className="space-y-6">
             <div className="rounded-xl overflow-hidden aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/0RXss51DMhg?si=I5dBXpbWTdgB_LJ7"
+                src="https://www.youtube.com/embed/AEhnSUNgI-c?si=z53vIFltEnBiUBrn"
                 title="Trail Ribeira Sacra"
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
