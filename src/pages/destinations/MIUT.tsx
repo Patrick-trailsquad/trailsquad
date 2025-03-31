@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -7,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import SavoyPalaceCarousel from "../../components/destinations/miut/SavoyPalaceCarousel";
 
 const MIUT = () => {
   useScrollToTop();
@@ -150,31 +152,7 @@ const MIUT = () => {
       </div>
       
       <div className="container mx-auto px-4 py-12">
-        <div className="bg-white rounded-xl overflow-hidden">
-          <div className="grid md:grid-cols-2">
-            <div className="p-8 flex flex-col justify-center">
-              <h1 className="font-cabinet text-3xl font-bold text-charcoal mb-2">Savoy Palace</h1>
-              <h2 className="font-cabinet text-xl text-terra mb-4">Funchal, Madeira</h2>
-              <div className="flex items-center mb-4">
-                <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                <span className="text-md text-gray-600">5-Star Hotel</span>
-              </div>
-              <p className="text-lg">
-                Located in Funchal's city center, the luxurious Savoy Palace offers breathtaking ocean views and 
-                elegant accommodations. Enjoy innovative cuisine at the hotel's restaurants, relax in the 
-                infinity pool overlooking the Atlantic, and recover in the world-class spa after your trail 
-                adventure. Perfect for both pre-race preparation and post-race relaxation.
-              </p>
-            </div>
-            <div className="h-[400px]">
-              <img 
-                src="/lovable-uploads/ce6a399e-3005-4109-a936-5bbeb4762393.png" 
-                alt="Savoy Palace Hotel in Madeira" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
+        <SavoyPalaceCarousel />
         
         <BackToDestinationsButton />
       </div>
