@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -6,7 +5,6 @@ import { usePageTitle } from "../../hooks/usePageTitle";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 import SavoyPalaceCarousel from "../../components/destinations/miut/SavoyPalaceCarousel";
 
@@ -140,11 +138,6 @@ const MIUT = () => {
                   <p className="text-sm text-gray-600 mb-1">Race status</p>
                   <p className="font-cabinet text-xl font-bold text-[#ea384c]">SOLD OUT</p>
                 </div>
-              </div>
-              <div className="mb-4 bg-gray-100 rounded-lg p-4">
-                <p className="text-sm text-gray-700">
-                  <strong>Note:</strong> The race is sold out, but you can still join us for this incredible trip and enjoy Madeira's beauty. We can help you find alternative running routes or experiences during your stay.
-                </p>
               </div>
               <button 
                 disabled
