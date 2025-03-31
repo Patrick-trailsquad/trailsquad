@@ -34,24 +34,31 @@ const SavoyPalaceCarousel = () => {
 
   return (
     <div className="md:px-8 py-6">
-      <Carousel className="w-full">
+      <Carousel
+        opts={{
+          loop: true,
+        }}
+        className="w-full"
+      >
         <CarouselContent>
           {hotelImages.map((image, index) => (
-            <CarouselItem key={index}>
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <AspectRatio ratio={16/9} className="bg-stone overflow-hidden rounded-xl shadow-lg">
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </AspectRatio>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-2 lg:-left-4" />
-        <CarouselNext className="right-2 lg:-right-4" />
+        <div className="hidden md:block">
+          <CarouselPrevious className="left-2 lg:-left-4" />
+          <CarouselNext className="right-2 lg:-right-4" />
+        </div>
       </Carousel>
     </div>
   );
