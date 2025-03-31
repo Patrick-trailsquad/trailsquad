@@ -146,10 +146,12 @@ const MIUT = () => {
                   <strong>Note:</strong> The race is sold out, but you can still join us for this incredible trip and enjoy Madeira's beauty. We can help you find alternative running routes or experiences during your stay.
                 </p>
               </div>
-              <PriceQuoteForm 
-                destinationName="Madeira Island Ultra Trail"
-                availableDistances={["16km", "42km", "60km", "85km", "115km"]}
-              />
+              <button 
+                disabled
+                className="w-full bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400"
+              >
+                Currently unavailable for booking
+              </button>
             </div>
           </div>
         </div>
