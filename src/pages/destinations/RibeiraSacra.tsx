@@ -124,7 +124,7 @@ const RibeiraSacra = () => {
           <div className="space-y-6">
             <div className="rounded-xl overflow-hidden aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/AEhnSUNgI-c?si=fP9AVjhxn45lm7gE"
+                src="https://www.youtube.com/embed/0RXss51DMhg?si=I5dBXpbWTdgB_LJ7"
                 title="Trail Ribeira Sacra"
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
