@@ -20,8 +20,10 @@ const RibeiraDescription = () => {
         <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
         <p className="text-lg">
           The trail winds through lush forests, traditional stone villages, and alongside the iconic 
-          terraced vineyards that cling to the steep canyon walls. The combination of natural beauty, 
-          cultural heritage, and world-class wines makes this a truly unforgettable running adventure.
+          terraced vineyards that cling to the steep canyon walls. With a challenging elevation gain of 
+          3,450 D+, this course will test your endurance while rewarding you with spectacular views. 
+          We'll enhance your experience with social activities including a communal run the day before 
+          the race and a group strategy session to prepare you for the challenge ahead.
         </p>
       </div>
 
