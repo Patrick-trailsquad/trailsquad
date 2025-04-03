@@ -170,7 +170,7 @@ Email: hello@trailsquad.dk`,
             <img 
               src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
               alt="Trail Squad Logo" 
-              className="h-8" 
+              className="h-8 self-center" 
             />
             <span className="font-cabinet text-charcoal font-semibold self-center">Trail Squad ApS</span>
           </button>
