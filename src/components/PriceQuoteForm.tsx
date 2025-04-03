@@ -1,4 +1,3 @@
-
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info, CheckCircle2, ArrowRight } from "lucide-react";
@@ -27,8 +26,7 @@ interface FormValues {
   flightPreference: string;
 }
 
-// Updated webhook URL for the two-step form
-const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/3eg88j7/';
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
 
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
   const { toast } = useToast();
@@ -142,7 +140,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
           ) : (
             <>
               <div className="mb-6">
-                {/* Progress Indicator */}
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-medium">
                     <span className={step === 1 ? "text-green-600 font-semibold" : "text-gray-500"}>Your Info</span>
@@ -164,7 +161,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {step === 1 ? (
-                  // Step 1: Contact Information
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="fullName">Full Name</Label>
@@ -210,7 +206,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </Button>
                   </div>
                 ) : (
-                  // Step 2: Trip Details
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="participants">Number of Participants</Label>
