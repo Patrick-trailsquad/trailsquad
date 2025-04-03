@@ -27,7 +27,8 @@ interface FormValues {
   flightPreference: string;
 }
 
-const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
+// Updated webhook URL for the two-step form
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/3eg88j7/';
 
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
   const { toast } = useToast();
