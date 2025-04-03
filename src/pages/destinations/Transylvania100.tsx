@@ -1,8 +1,6 @@
-
 import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
@@ -10,6 +8,7 @@ import { usePageTitle } from "../../hooks/usePageTitle";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
+import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 
 const Transylvania100 = () => {
   const [email, setEmail] = useState('');
@@ -218,6 +217,10 @@ const Transylvania100 = () => {
             </div>
           </div>
         </div>
+        <div className="mt-16">
+          <IncludedAmenities className="bg-transparent" />
+        </div>
+        
         <BackToDestinationsButton />
       </div>
       <Footer />

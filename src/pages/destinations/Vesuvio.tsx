@@ -1,8 +1,6 @@
-
 import { ArrowLeft, ExternalLink, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
@@ -11,6 +9,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import { ThumbsUp } from "lucide-react";
+import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 
 const Vesuvio = () => {
   const [email, setEmail] = useState('');
@@ -207,6 +206,10 @@ const Vesuvio = () => {
             </div>
           </div>
         </div>
+        <div className="mt-16">
+          <IncludedAmenities className="bg-transparent" />
+        </div>
+        
         <BackToDestinationsButton />
       </div>
       <Footer />

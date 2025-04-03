@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Footer from "../../components/Footer";
+import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 
 const SwissAlps = () => {
   const [email, setEmail] = useState('');
@@ -206,6 +207,11 @@ const SwissAlps = () => {
             </div>
           </div>
         </div>
+        
+        <div className="mt-16">
+          <IncludedAmenities className="bg-transparent" />
+        </div>
+        
         <BackToDestinationsButton />
       </div>
       <Footer />
