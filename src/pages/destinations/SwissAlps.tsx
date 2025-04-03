@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink, Clock, ThumbsUp, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -194,16 +193,6 @@ const SwissAlps = () => {
                   )}
                 </form>
               </div>
-            </div>
-            <div className="bg-stone p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
-              <ul className="space-y-2 list-disc pl-4">
-                <li>Entry ticket to the trail run</li>
-                <li>Assistance with plane tickets from Copenhagen and back (if other departure airport, let's discuss)</li>
-                <li>Transportation from airport to destination hotel (if tickets are organised by Trail Squad)</li>
-                <li>Minimum 4 star hotel experience for the duration of the trip (if possible)</li>
-                <li>Pre-race briefing with running coach with running and nutrition strategies</li>
-              </ul>
             </div>
           </div>
         </div>
