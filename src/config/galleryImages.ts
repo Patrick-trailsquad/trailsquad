@@ -1,8 +1,9 @@
 
-// Randomized array of gallery images including the two new ones
+// Randomized array of gallery images including the new image
 export const galleryImages = [
-  "/lovable-uploads/a260e2c1-80c6-4dc5-9052-b51b8bd48e28.png", // New image 1
-  "/lovable-uploads/54169f4c-6a5e-4a57-8289-fcc347272501.png", // New image 2
+  "/lovable-uploads/835065e6-c6b4-42a1-aa12-9ddcf4461ad0.png", // New image added as first
+  "/lovable-uploads/a260e2c1-80c6-4dc5-9052-b51b8bd48e28.png",
+  "/lovable-uploads/54169f4c-6a5e-4a57-8289-fcc347272501.png",
   "/lovable-uploads/25d3f586-ac0f-49eb-b707-422bf6f2a1a2.png",
   "/lovable-uploads/c5ad0d53-d3e9-4acf-9182-5c642ad97194.png",
   "/lovable-uploads/e809c741-198a-406a-a1d0-7112f8220309.png",
@@ -10,4 +11,3 @@ export const galleryImages = [
   "/lovable-uploads/237914c4-acc0-4941-870b-d611a3bc5056.png",
   "/lovable-uploads/1b6826f9-cff2-41ad-96c7-a6aa39c0e051.png"
 ];
-
