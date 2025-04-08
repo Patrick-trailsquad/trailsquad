@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -13,7 +14,7 @@ const destinations = [
     image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
     location: "Trail Ribeira Sacra, Spain",
     date: "October 2025",
-    spots: "10 spots",
+    spots: "8 spots", // Updated from "10 spots"
     href: "/destinations/ribeira-sacra"
   },
   {
