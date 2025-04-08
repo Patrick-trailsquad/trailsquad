@@ -14,7 +14,6 @@ import Transylvania100 from "./pages/destinations/Transylvania100";
 import MontBlanc from "./pages/destinations/MontBlanc";
 import BlackForest from "./pages/destinations/BlackForest";
 import Vesuvio from "./pages/destinations/Vesuvio";
-import BelforTrail from "./pages/destinations/BelforTrail";
 import RibeiraSacra from "./pages/destinations/RibeiraSacra";
 import Dolomites from "./pages/destinations/Dolomites";
 
@@ -36,7 +35,6 @@ const App = () => (
           <Route path="/destinations/transylvania" element={<Transylvania100 />} />
           <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
           <Route path="/destinations/black-forest" element={<BlackForest />} />
-          <Route path="/destinations/belfortrail" element={<BelforTrail />} />
           <Route path="/destinations/ribeira-sacra" element={<RibeiraSacra />} />
           <Route path="/destinations/dolomites" element={<Dolomites />} />
           <Route path="*" element={<NotFound />} />

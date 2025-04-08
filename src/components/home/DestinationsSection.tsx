@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -9,13 +8,6 @@ const destinations = [
     date: "April 2025",
     spots: "Sold out",
     href: "/destinations/miut"
-  },
-  {
-    image: "/lovable-uploads/d2a56511-3d0c-43a6-bf23-206a90c0d017.png",
-    location: "BelforTrail, France",
-    date: "October 2025",
-    spots: "12 spots",
-    href: "/destinations/belfortrail"
   },
   {
     image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
