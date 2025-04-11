@@ -53,10 +53,6 @@ const RibeiraAccommodation = () => {
             </div>
           </div>
           <h2 className="font-cabinet text-xl text-terra mb-4">Nogueira de Ramuín, Ourense</h2>
-          <div className="flex items-center mb-4">
-            <Star className="w-5 h-5 text-yellow-500 mr-2" />
-            <span className="text-md text-gray-600">4-Star Hotel + half board (breakfast &amp; dinner)</span>
-          </div>
           <p className="text-lg">
             Set in a stunning 12th-century monastery, this luxury hotel offers an unforgettable stay in the heart of the Ribeira Sacra. 
             The beautifully restored building features original stone architecture, elegant cloisters, and magnificent views of the 
