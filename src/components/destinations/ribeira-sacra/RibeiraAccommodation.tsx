@@ -55,12 +55,13 @@ const RibeiraAccommodation = () => {
           <h2 className="font-cabinet text-xl text-terra mb-4">Nogueira de Ramuín, Ourense</h2>
           <p className="text-lg">
             Set in a stunning 12th-century monastery, this luxury hotel offers an unforgettable stay in the heart of the Ribeira Sacra. 
-            The beautifully restored building features original stone architecture, elegant cloisters, and magnificent views of the 
-            surrounding valleys. You'll enjoy spacious rooms, gourmet Galician cuisine, and a peaceful spa - perfect for recovery 
-            after your trail adventure.
-          </p>
-          <p className="text-lg mt-4">Nestled in a 12th-century monastery, this luxury hotel offers an exceptional stay in Ribeira Sacra. The beautifully restored building showcases original stone architecture, elegant cloisters, and breathtaking valley views, conveniently located only 10 minutes from the race start and finish. Relax at the spa as part of your pre-race strategy. </p>
-        </div>
+          The beautifully restored building features original stone architecture, elegant cloisters, and magnificent views of the 
+          surrounding valleys. You'll enjoy spacious rooms, gourmet Galician cuisine, and a peaceful spa - perfect for recovery 
+          after your trail adventure.
+        </p>
+        <p className="text-lg mt-4">
+          The hotel's restaurant, Dos Abades, offers a delightful half-board experience with breakfast and dinner, featuring local Galician specialties that will perfectly complement your trail running journey.
+        </p>
       </div>
     </div>;
 };
