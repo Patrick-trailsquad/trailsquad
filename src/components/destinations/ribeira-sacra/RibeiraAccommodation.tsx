@@ -58,9 +58,9 @@ const RibeiraAccommodation = () => {
             after your trail adventure.
           </p>
           <p className="text-lg mt-4">
-            Your half board includes dinners at the renowned Dos Abades restaurant, where you'll savor authentic Galician cuisine 
+            Your half board includes breakfast and dinner at the renowned Dos Abades restaurant, where you'll savor authentic Galician cuisine 
             featuring locally-sourced ingredients. The restaurant's menu highlights regional specialties, including fresh seafood, 
-            locally-raised meats, and vegetables from nearby farms, perfectly paired with excellent Ribeira Sacra wines.
+            locally-raised meats, and vegetables from nearby farms.
           </p>
         </div>
       </div>
