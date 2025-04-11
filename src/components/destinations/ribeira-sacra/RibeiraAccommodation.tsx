@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
 const RibeiraAccommodation = () => {
   return <div className="bg-white rounded-xl overflow-hidden">
       <div className="grid md:grid-cols-2">
@@ -45,32 +43,21 @@ const RibeiraAccommodation = () => {
           </Carousel>
         </div>
         <div className="p-8 flex flex-col justify-center">
-          <div className="flex items-center mb-2">
-            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Parador de Santo Estevo</h1>
-            <div className="flex">
-              {[...Array(4)].map((_, index) => (
-                <Star 
-                  key={index} 
-                  className="w-5 h-5 text-yellow-500 fill-yellow-500" 
-                />
-              ))}
-            </div>
-          </div>
+          <h1 className="font-cabinet text-3xl font-bold text-charcoal mb-2">Parador de Santo Estevo</h1>
           <h2 className="font-cabinet text-xl text-terra mb-4">Nogueira de Ramuín, Ourense</h2>
+          <div className="flex items-center mb-4">
+            <Star className="w-5 h-5 text-yellow-500 mr-2" />
+            <span className="text-md text-gray-600">4-Star Hotel + half board (breakfast &amp; dinner)</span>
+          </div>
           <p className="text-lg">
-            Nestled in a 12th-century monastery, this luxury hotel offers an exceptional stay in Ribeira Sacra. 
-            The beautifully restored building showcases original stone architecture, elegant cloisters, and breathtaking 
-            valley views, providing a unique blend of historic charm and modern comfort.
+            Set in a stunning 12th-century monastery, this luxury hotel offers an unforgettable stay in the heart of the Ribeira Sacra. 
+            The beautifully restored building features original stone architecture, elegant cloisters, and magnificent views of the 
+            surrounding valleys. You'll enjoy spacious rooms, gourmet Galician cuisine, and a peaceful spa - perfect for recovery 
+            after your trail adventure.
           </p>
-          <p className="text-lg mt-4">
-            Your half board includes breakfast and dinner at the renowned Dos Abades restaurant, 
-            where you'll savor authentic Galician cuisine featuring fresh, locally-sourced ingredients 
-            that highlight the region's rich culinary traditions. The hotel also features a tranquil spa 
-            perfect for relaxation after your trail adventure.
-          </p>
+          <p className="text-lg mt-4">Nestled in a 12th-century monastery, this luxury hotel offers an exceptional stay in Ribeira Sacra. The beautifully restored building showcases original stone architecture, elegant cloisters, and breathtaking valley views, conveniently located only 10 minutes from the race start and finish. Relax at the spa as part of your pre-race strategy. </p>
         </div>
       </div>
     </div>;
 };
-
 export default RibeiraAccommodation;
