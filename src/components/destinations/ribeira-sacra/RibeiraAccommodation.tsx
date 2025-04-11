@@ -65,7 +65,8 @@ const RibeiraAccommodation = () => {
           <p className="text-lg mt-4">
             Your half board includes breakfast and dinner at the renowned Dos Abades restaurant, 
             where you'll savor authentic Galician cuisine featuring fresh, locally-sourced ingredients 
-            that highlight the region's rich culinary traditions.
+            that highlight the region's rich culinary traditions. The hotel also features a tranquil spa 
+            perfect for relaxation after your trail adventure.
           </p>
         </div>
       </div>
@@ -73,4 +74,3 @@ const RibeiraAccommodation = () => {
 };
 
 export default RibeiraAccommodation;
-
