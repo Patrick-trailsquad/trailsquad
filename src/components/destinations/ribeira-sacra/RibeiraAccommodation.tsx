@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const RibeiraAccommodation = () => {
   return <div className="bg-white rounded-xl overflow-hidden">
       <div className="grid md:grid-cols-2">
@@ -55,8 +57,14 @@ const RibeiraAccommodation = () => {
             surrounding valleys. You'll enjoy spacious rooms, gourmet Galician cuisine, and a peaceful spa - perfect for recovery 
             after your trail adventure.
           </p>
+          <p className="text-lg mt-4">
+            Your half board includes dinners at the renowned Dos Abades restaurant, where you'll savor authentic Galician cuisine 
+            featuring locally-sourced ingredients. The restaurant's menu highlights regional specialties, including fresh seafood, 
+            locally-raised meats, and vegetables from nearby farms, perfectly paired with excellent Ribeira Sacra wines.
+          </p>
         </div>
       </div>
     </div>;
 };
+
 export default RibeiraAccommodation;
