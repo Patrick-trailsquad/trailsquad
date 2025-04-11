@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const RibeiraAccommodation = () => {
   return <div className="bg-white rounded-xl overflow-hidden">
       <div className="grid md:grid-cols-2">
@@ -43,7 +44,14 @@ const RibeiraAccommodation = () => {
           </Carousel>
         </div>
         <div className="p-8 flex flex-col justify-center">
-          <h1 className="font-cabinet text-3xl font-bold text-charcoal mb-2">Parador de Santo Estevo</h1>
+          <div className="flex items-center mb-2">
+            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Parador de Santo Estevo</h1>
+            <div className="flex">
+              {[...Array(4)].map((_, index) => (
+                <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
+              ))}
+            </div>
+          </div>
           <h2 className="font-cabinet text-xl text-terra mb-4">Nogueira de Ramuín, Ourense</h2>
           <div className="flex items-center mb-4">
             <Star className="w-5 h-5 text-yellow-500 mr-2" />
@@ -60,4 +68,5 @@ const RibeiraAccommodation = () => {
       </div>
     </div>;
 };
+
 export default RibeiraAccommodation;
