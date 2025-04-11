@@ -45,12 +45,18 @@ const RibeiraAccommodation = () => {
           </Carousel>
         </div>
         <div className="p-8 flex flex-col justify-center">
-          <h1 className="font-cabinet text-3xl font-bold text-charcoal mb-2">Parador de Santo Estevo</h1>
-          <h2 className="font-cabinet text-xl text-terra mb-4">Nogueira de Ramuín, Ourense</h2>
-          <div className="flex items-center mb-4">
-            <Star className="w-5 h-5 text-yellow-500 mr-2" />
-            <span className="text-md text-gray-600">4-Star Hotel + half board (breakfast &amp; dinner)</span>
+          <div className="flex items-center mb-2">
+            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Parador de Santo Estevo</h1>
+            <div className="flex">
+              {[...Array(4)].map((_, index) => (
+                <Star 
+                  key={index} 
+                  className="w-5 h-5 text-yellow-500 fill-yellow-500" 
+                />
+              ))}
+            </div>
           </div>
+          <h2 className="font-cabinet text-xl text-terra mb-4">Nogueira de Ramuín, Ourense</h2>
           <p className="text-lg">
             Set in a stunning 12th-century monastery, this luxury hotel offers an unforgettable stay in the heart of the Ribeira Sacra. 
             The beautifully restored building features original stone architecture, elegant cloisters, and magnificent views of the 
