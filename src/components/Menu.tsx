@@ -1,9 +1,32 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Calendar, Info, Menu as MenuIcon } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from 'react-router-dom';
 import { useNavigateAndScroll } from '../hooks/useNavigateAndScroll';
+
+const HomeIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" className="w-5 h-5 md:w-6 md:h-6">
+    <path d="M32 10L6 32h8v20h36V32h8z" fill="#FFB74D"/>
+    <path d="M32 10L6 32l26-22 26 22z" fill="#E57373"/>
+    <path d="M22 52V36h20v16z" fill="#2196F3"/>
+  </svg>
+);
+
+const DestinationsIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" className="w-5 h-5 md:w-6 md:h-6">
+    <path d="M32 10c-12.15 0-22 9.85-22 22s9.85 22 22 22 22-9.85 22-22-9.85-22-22-22z" fill="#8BC34A"/>
+    <path d="M32 4c-16.54 0-30 13.46-30 30s13.46 30 30 30 30-13.46 30-30-13.46-30-30-30zm0 54c-13.23 0-24-10.77-24-24s10.77-24 24-24 24 10.77 24 24-10.77 24-24 24z" fill="#2E7D32"/>
+    <path d="M32 16c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16z" fill="#DCEDC8"/>
+    <circle cx="32" cy="32" r="8" fill="#33691E"/>
+  </svg>
+);
+
+const AboutIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" className="w-5 h-5 md:w-6 md:h-6">
+    <path d="M32 4C16.54 4 4 16.54 4 32s12.54 28 28 28 28-12.54 28-28S47.46 4 32 4z" fill="#FFC107"/>
+    <path d="M32 32c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" fill="#455A64"/>
+    <path d="M32 40c-6.63 0-12 5.37-12 12 0 6.63 5.37 12 12 12s12-5.37 12-12c0-6.63-5.37-12-12-12z" fill="#FF5722"/>
+  </svg>
+);
 
 const Menu = () => {
   const [visible, setVisible] = useState(true);
@@ -21,14 +44,24 @@ const Menu = () => {
   };
 
   const menuItems = [
-    { href: '/', label: 'Home', icon: Home, onClick: () => window.scrollTo(0, 0) },
+    { 
+      href: '/', 
+      label: 'Home', 
+      icon: HomeIcon,
+      onClick: () => window.scrollTo(0, 0) 
+    },
     { 
       href: '#upcoming-trips', 
       label: 'Upcoming destinations', 
-      icon: Calendar,
+      icon: DestinationsIcon,
       onClick: handleDestinationsClick 
     },
-    { href: '/about', label: 'About', icon: Info, onClick: () => window.scrollTo(0, 0) }
+    { 
+      href: '/about', 
+      label: 'About', 
+      icon: AboutIcon, 
+      onClick: () => window.scrollTo(0, 0) 
+    }
   ];
 
   useEffect(() => {
@@ -73,8 +106,8 @@ const Menu = () => {
                     onClick={item.onClick}
                     className="flex items-center gap-2 text-charcoal hover:text-terra hover:font-bold transition-all duration-300"
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span className="font-cabinet font-medium">{item.label}</span>
+                    <item.icon />
+                    <span className="font-cabinet font-medium text-base md:text-lg">{item.label}</span>
                   </Link>
                 ))}
               </div>
