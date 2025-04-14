@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PriceQuoteForm from "../../../components/PriceQuoteForm";
 import { Asterisk } from 'lucide-react';
@@ -20,9 +19,9 @@ const RibeiraMediaSection = () => {
       <div className="bg-white rounded-xl p-8 shadow-lg">
         <div className="flex justify-between items-center mb-6">
           <div>
-            <div className="flex items-center">
-              <p className="text-sm text-gray-600 mb-1 mr-1">Starting from</p>
-              <Asterisk className="w-3 h-3 text-red-500" />
+            <div className="flex items-center relative">
+              <p className="text-sm text-gray-600 mb-1 mr-0.5">Starting from</p>
+              <Asterisk className="w-3 h-3 text-gray-600 relative -top-0.5" />
             </div>
             <p className="font-cabinet text-4xl font-bold text-charcoal">9.500 DKK</p>
             <p className="text-sm text-gray-500">incl. VAT</p>
@@ -45,4 +44,3 @@ const RibeiraMediaSection = () => {
 };
 
 export default RibeiraMediaSection;
-
