@@ -116,7 +116,7 @@ const Menu = () => {
                         className="animate-pulse"
                       />
                       <path
-                        d="M100 200 C200 150 300 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140"
+                        d="M100 200 C200 150 300 120 400 100 C500 140 550 160 600 180"
                         fill="none"
                         stroke="#FFDC00"
                         strokeWidth="3"
@@ -152,9 +152,9 @@ const Menu = () => {
                           key={item.label}
                           to={item.href}
                           onClick={item.onClick}
-                          className="flex items-center gap-2 text-white hover:text-terra hover:font-bold transition-all duration-300"
+                          className="flex items-center gap-4 text-white hover:text-terra hover:font-bold transition-all duration-300"
                         >
-                          <item.icon />
+                          <item.icon className="w-8 h-8" />
                           <span className="font-cabinet text-xl">{item.label}</span>
                         </Link>
                       ))}
