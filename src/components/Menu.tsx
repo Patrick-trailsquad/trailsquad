@@ -1,5 +1,8 @@
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Menu as MenuIcon } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Link } from 'react-router-dom';
 import { useNavigateAndScroll } from '../hooks/useNavigateAndScroll';
 
@@ -174,7 +177,7 @@ const Menu = () => {
                           onClick={item.onClick}
                           className="flex items-center gap-2 text-white hover:text-terra hover:font-bold transition-all duration-300"
                         >
-                          <item.icon className="w-6 h-6" />
+                          <item.icon />
                           <span className="font-cabinet text-xl">{item.label}</span>
                         </Link>
                       ))}
