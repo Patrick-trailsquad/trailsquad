@@ -1,6 +1,7 @@
 
 import React from 'react';
 import PriceQuoteForm from "../../../components/PriceQuoteForm";
+import { Asterisk } from 'lucide-react';
 
 const RibeiraMediaSection = () => {
   return (
@@ -19,7 +20,10 @@ const RibeiraMediaSection = () => {
       <div className="bg-white rounded-xl p-8 shadow-lg">
         <div className="flex justify-between items-center mb-6">
           <div>
-            <p className="text-sm text-gray-600 mb-1">Starting from</p>
+            <div className="flex items-center">
+              <p className="text-sm text-gray-600 mb-1 mr-1">Starting from</p>
+              <Asterisk className="w-3 h-3 text-red-500" />
+            </div>
             <p className="font-cabinet text-4xl font-bold text-charcoal">9.500 DKK</p>
             <p className="text-sm text-gray-500">incl. VAT</p>
           </div>
@@ -32,9 +36,13 @@ const RibeiraMediaSection = () => {
           destinationName="Trail Ribeira Sacra"
           availableDistances={["48km"]}
         />
+        <p className="text-xs text-gray-500 mt-4">
+          * Price variations are mainly due to your preferences for sleeping solo or sharing a double room
+        </p>
       </div>
     </div>
   );
 };
 
 export default RibeiraMediaSection;
+
