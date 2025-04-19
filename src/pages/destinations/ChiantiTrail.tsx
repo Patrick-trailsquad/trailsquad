@@ -1,5 +1,4 @@
-
-import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
+import { ArrowLeft, ExternalLink, Clock, ThumbsUp, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -189,6 +188,17 @@ const ChiantiTrail = () => {
                 Price variations are mainly due to your preferences for sleeping solo or sharing a double room
               </p>
             </div>
+
+            <div className="rounded-xl overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/i2WF8VcSLCM"
+                title="Chianti Ultra Trail Video"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
         <div className="mt-16">
@@ -202,4 +212,3 @@ const ChiantiTrail = () => {
 };
 
 export default ChiantiTrail;
-
