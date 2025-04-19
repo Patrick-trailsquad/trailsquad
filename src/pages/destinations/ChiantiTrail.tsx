@@ -132,7 +132,7 @@ const ChiantiTrail = () => {
                 <li><strong>Location:</strong> Chianti Region, Tuscany, Italy</li>
                 <li><strong>Date of race:</strong> March (to be determined), 2026</li>
                 <li><strong>Trip duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 15km, 32km, 60km, 100km</li>
+                <li><strong>Available distances:</strong> 20km, 46km, 73km, 120km</li>
               </ul>
             </div>
           </div>
