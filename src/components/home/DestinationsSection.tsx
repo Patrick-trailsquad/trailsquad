@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -14,8 +13,15 @@ const destinations = [
     image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
     location: "Trail Ribeira Sacra, Spain",
     date: "October 2025",
-    spots: "8 spots", // Updated from "10 spots"
+    spots: "8 spots",
     href: "/destinations/ribeira-sacra"
+  },
+  {
+    image: "/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png",
+    location: "Chianti Ultra Trail by UTMB, Italy",
+    date: "March 2026",
+    spots: "Opens later",
+    href: "/destinations/chianti"
   },
   {
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
@@ -30,13 +36,6 @@ const destinations = [
     date: "May 2026",
     spots: "Opens later",
     href: "/destinations/transylvania"
-  },
-  {
-    image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
-    location: "Gran Trail Courmayeur, Italy",
-    date: "July 2026",
-    spots: "Opens later",
-    href: "/destinations/gtc"
   }
 ];
 
