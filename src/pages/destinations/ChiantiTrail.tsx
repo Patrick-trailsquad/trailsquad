@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink, Clock, ThumbsUp, Youtube } from "lucide-react";
+import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import ChiantiAccommodation from "../../components/destinations/chianti/ChiantiAccommodation";
 
 const ChiantiTrail = () => {
   const [email, setEmail] = useState('');
@@ -204,7 +205,10 @@ const ChiantiTrail = () => {
         <div className="mt-16">
           <IncludedAmenities className="bg-transparent" />
         </div>
-        <BackToDestinationsButton />
+        <div className="container mx-auto px-4 py-12">
+          <ChiantiAccommodation />
+          <BackToDestinationsButton />
+        </div>
       </div>
       <Footer />
     </div>
