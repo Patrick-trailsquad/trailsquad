@@ -136,6 +136,17 @@ const ChiantiTrail = () => {
             </div>
           </div>
           <div className="space-y-6">
+            <div className="rounded-xl overflow-hidden aspect-video mb-6">
+              <iframe
+                src="https://www.youtube.com/embed/i2WF8VcSLCM"
+                title="Chianti Ultra Trail Video"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <div>
@@ -187,17 +198,6 @@ const ChiantiTrail = () => {
               <p className="text-sm text-gray-500 text-center mt-4">
                 Price variations are mainly due to your preferences for sleeping solo or sharing a double room
               </p>
-            </div>
-
-            <div className="rounded-xl overflow-hidden aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/i2WF8VcSLCM"
-                title="Chianti Ultra Trail Video"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
             </div>
           </div>
         </div>
