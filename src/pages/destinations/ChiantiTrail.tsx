@@ -115,7 +115,7 @@ const ChiantiTrail = () => {
               className="mb-8"
             >
               <a 
-                href="https://www.utmbworld.com"
+                href="https://chianti.utmb.world/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
