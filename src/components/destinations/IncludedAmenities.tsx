@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SpaIcon, Utensils, Shirt, Users } from 'lucide-react';
+import { Spa, Utensils, Shirt, Users } from 'lucide-react';
 
 interface AmenityProps {
   icon: string | React.ReactNode;
@@ -64,7 +64,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
       description: "Social jog and post race celebrations"
     },
     {
-      icon: <SpaIcon className="w-8 h-8" />,
+      icon: <Spa className="w-8 h-8" />,
       title: "Recovery",
       description: "Post-race massage therapy",
       isLucideIcon: true
