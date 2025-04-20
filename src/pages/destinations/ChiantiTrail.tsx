@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
