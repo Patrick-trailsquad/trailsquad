@@ -142,56 +142,48 @@ const ChiantiTrail = () => {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <div className="flex items-center relative">
-                    <p className="text-sm text-gray-600 mb-1 mr-0.5">Starting from</p>
-                    <span className="text-gray-600 relative -top-0.5">*</span>
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="p-6 bg-[#F1F0FB] rounded-lg">
+                    <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Shared Superior Room</h3>
+                    <p className="font-cabinet text-3xl font-bold text-charcoal">10.850 DKK</p>
+                    <p className="text-sm text-gray-500">incl. VAT</p>
                   </div>
-                  <p className="font-cabinet text-4xl font-bold text-charcoal">10.000 DKK</p>
-                  <p className="text-sm text-gray-500">incl. VAT</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm text-gray-600 mb-1">Registration status</p>
-                  <div className="bg-[#F1F0FB] px-3 py-1.5 rounded-full">
-                    <p className="font-cabinet text-sm font-medium text-[#9F9EA1] flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      Opens later
-                    </p>
+                  <div className="p-6 bg-[#F1F0FB] rounded-lg">
+                    <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Individual Double Room</h3>
+                    <p className="font-cabinet text-3xl font-bold text-charcoal">12.100 DKK</p>
+                    <p className="text-sm text-gray-500">incl. VAT</p>
                   </div>
                 </div>
+                <div className="text-center py-4">
+                  <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Get notified when registration opens</h3>
+                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+                    <Input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      disabled={isSuccess}
+                      placeholder="Enter your email"
+                      className="flex-1 h-[56px] px-6 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
+                    />
+                    {isSuccess ? (
+                      <div className="bg-transparent border-2 border-black text-black h-[56px] px-8 rounded-full flex items-center justify-center">
+                        <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
+                      </div>
+                    ) : (
+                      <Button 
+                        type="submit"
+                        variant="black"
+                        size="xl"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? 'Submitting...' : 'Notify me'}
+                      </Button>
+                    )}
+                  </form>
+                </div>
               </div>
-              <div className="text-center py-8">
-                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Get notified when registration opens</h3>
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
-                  <Input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    disabled={isSuccess}
-                    placeholder="Enter your email"
-                    className="flex-1 h-[56px] px-6 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
-                  />
-                  {isSuccess ? (
-                    <div className="bg-transparent border-2 border-black text-black h-[56px] px-8 rounded-full flex items-center justify-center">
-                      <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
-                    </div>
-                  ) : (
-                    <Button 
-                      type="submit"
-                      variant="black"
-                      size="xl"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? 'Submitting...' : 'Notify me'}
-                    </Button>
-                  )}
-                </form>
-              </div>
-              <p className="text-sm text-gray-500 text-center mt-4">
-                Price variations are mainly due to your preferences for sleeping solo or sharing a double room
-              </p>
             </div>
           </div>
         </div>
