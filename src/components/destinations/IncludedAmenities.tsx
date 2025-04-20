@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Bath, Utensils, Shirt, Users } from 'lucide-react';
 
@@ -81,7 +80,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/91b914ac-eb58-43d2-b8b9-c464cad202da.png",
       title: "Community",
-      description: "Connect with fellow runners via monthly runs"
+      description: "Monthly training runs for fellow runners"
     }
   ];
 
