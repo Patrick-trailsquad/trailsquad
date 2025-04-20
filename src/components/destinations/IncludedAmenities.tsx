@@ -63,28 +63,24 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
       description: "Social jog and post race celebrations"
     },
     {
-      icon: <Bath className="w-8 h-8" />,
+      icon: "/lovable-uploads/f7ffb7d1-9191-46d5-ae2a-7b1a4d9c5350.png",
       title: "Recovery",
-      description: "Post-race massage therapy",
-      isLucideIcon: true
+      description: "Post-race massage therapy"
     },
     {
-      icon: <Utensils className="w-8 h-8" />,
+      icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
       title: "Local Cuisine",
-      description: "Traditional Spanish meals",
-      isLucideIcon: true
+      description: "Traditional Spanish meals"
     },
     {
-      icon: <Shirt className="w-8 h-8" />,
+      icon: "/lovable-uploads/1c4eceb7-97ce-45ca-b50f-0844491ca83a.png",
       title: "Race Kit",
-      description: "Official event merchandise",
-      isLucideIcon: true
+      description: "Official event merchandise"
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: "/lovable-uploads/91b914ac-eb58-43d2-b8b9-c464cad202da.png",
       title: "Community",
-      description: "Connect with fellow runners",
-      isLucideIcon: true
+      description: "Connect with fellow runners"
     }
   ];
 
@@ -98,7 +94,6 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
             icon={amenity.icon}
             title={amenity.title}
             description={amenity.description}
-            isLucideIcon={amenity.isLucideIcon}
           />
         ))}
       </div>
