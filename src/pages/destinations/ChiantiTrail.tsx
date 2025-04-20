@@ -144,16 +144,20 @@ const ChiantiTrail = () => {
 
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-[#F1F0FB] rounded-lg">
-                    <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Shared Superior Room</h3>
-                    <p className="font-cabinet text-3xl font-bold text-charcoal">10.850 DKK</p>
+                <div className="flex justify-between items-center mb-6">
+                  <div>
+                    <p className="text-sm text-gray-600 mb-1">Starting from</p>
+                    <p className="font-cabinet text-4xl font-bold text-charcoal">10.850 DKK</p>
                     <p className="text-sm text-gray-500">incl. VAT</p>
                   </div>
-                  <div className="p-6 bg-[#F1F0FB] rounded-lg">
-                    <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Individual Double Room</h3>
-                    <p className="font-cabinet text-3xl font-bold text-charcoal">12.100 DKK</p>
-                    <p className="text-sm text-gray-500">incl. VAT</p>
+                  <div className="text-right">
+                    <p className="text-sm text-gray-600 mb-1">Registration status</p>
+                    <div className="bg-[#F1F0FB] px-3 py-1.5 rounded-full">
+                      <p className="font-cabinet text-sm font-medium text-[#9F9EA1] flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        Opens later
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="text-center py-4">
