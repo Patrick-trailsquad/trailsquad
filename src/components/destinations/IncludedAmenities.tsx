@@ -70,7 +70,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/f7ffb7d1-9191-46d5-ae2a-7b1a4d9c5350.png",
       title: "Recovery",
-      description: "Physiotherapy available if necessary"
+      description: "Trail Squad physiotherapy available"
     },
     {
       icon: "/lovable-uploads/1c4eceb7-97ce-45ca-b50f-0844491ca83a.png",
