@@ -55,7 +55,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
       title: "Local Cuisine",
-      description: "Traditional Spanish meals"
+      description: "Breakfasts and dinners included"
     },
     {
       icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
