@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Massage, Spaghetti, Shirt, Handshake } from 'lucide-react';
+import { SpaIcon, Utensils, Shirt, Users } from 'lucide-react';
 
 interface AmenityProps {
   icon: string | React.ReactNode;
@@ -64,13 +64,13 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
       description: "Social jog and post race celebrations"
     },
     {
-      icon: <Massage className="w-8 h-8" />,
+      icon: <SpaIcon className="w-8 h-8" />,
       title: "Recovery",
       description: "Post-race massage therapy",
       isLucideIcon: true
     },
     {
-      icon: <Spaghetti className="w-8 h-8" />,
+      icon: <Utensils className="w-8 h-8" />,
       title: "Local Cuisine",
       description: "Traditional Spanish meals",
       isLucideIcon: true
@@ -82,7 +82,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
       isLucideIcon: true
     },
     {
-      icon: <Handshake className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8" />,
       title: "Community",
       description: "Connect with fellow runners",
       isLucideIcon: true
