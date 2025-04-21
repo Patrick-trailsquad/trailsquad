@@ -23,7 +23,6 @@ interface FormValues {
   participants: number;
   preferredLanguage: string;
   accommodationPreference: string;
-  flightPreference: string;
 }
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
@@ -36,8 +35,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
-      accommodationPreference: 'double',
-      flightPreference: 'organizer-tickets'
+      accommodationPreference: 'double'
     }
   });
 
@@ -52,8 +50,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         preferred_distance: data.preferredDistance,
         number_of_participants: data.participants,
         preferred_language: data.preferredLanguage,
-        accommodation_preference: data.accommodationPreference,
-        flight_preference: data.flightPreference
+        accommodation_preference: data.accommodationPreference
       };
 
       console.log('Raw form data object:', formData);
@@ -157,9 +154,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                   <p className="text-sm text-gray-600 mb-2">
                     Fill out this form and we'll get back to you with a personalized quote for your adventure.
                     We typically respond within 24 hours during business days.
-                  </p>
-                  <p className="text-sm text-gray-700">
-                    The quote will contain a Stripe link to pay 75% of the price to confirm. We will revert back 60 days before departure to collect the remaining 25% of the price.
                   </p>
                 </div>
               </div>
@@ -276,29 +270,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                       </RadioGroup>
                       {errors.accommodationPreference && (
                         <p className="text-red-500 text-sm">Please select an accommodation preference</p>
-                      )}
-                    </div>
-
-                    <div className="space-y-3">
-                      <Label>Preference for flights</Label>
-                      <RadioGroup 
-                        defaultValue="organizer-tickets"
-                        onValueChange={(value) => {
-                          setValue('flightPreference', value);
-                        }}
-                        className="gap-3"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="no-tickets" id="no-tickets" />
-                          <Label htmlFor="no-tickets">We'll arrange our own tickets (cheapest and more flexible)</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="organizer-tickets" id="organizer-tickets" />
-                          <Label htmlFor="organizer-tickets">We prefer Trail Squad to book tickets (everyone on the same planes)</Label>
-                        </div>
-                      </RadioGroup>
-                      {errors.flightPreference && (
-                        <p className="text-red-500 text-sm">Please select a flight preference</p>
                       )}
                     </div>
 
