@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -8,7 +7,7 @@ const RibeiraAccommodation = () => {
     <div className="bg-white rounded-xl overflow-hidden">
       <div className="grid md:grid-cols-2">
         <div className="relative">
-          <Carousel className="w-full">
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {[
                 "/lovable-uploads/8ef737f6-6db5-426b-b7c1-30dd1237f3f5.png",
