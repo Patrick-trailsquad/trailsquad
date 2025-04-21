@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -16,7 +17,18 @@ const PriceQuoteTripDetailsStep = ({
   availableDistances,
   onBack,
 }: PriceQuoteTripDetailsStepProps) => {
-  const { register, setValue, formState: { errors } } = form;
+  const { register, setValue, watch, formState: { errors } } = form;
+
+  // Watch the values we care about
+  const participants = watch("participants");
+  const accommodationPreference = watch("accommodationPreference");
+
+  // If participants is 1 but a non-single option is selected, switch to "single"
+  useEffect(() => {
+    if (participants === 1 && accommodationPreference !== "single") {
+      setValue("accommodationPreference", "single");
+    }
+  }, [participants, accommodationPreference, setValue]);
 
   return (
     <div className="space-y-4">
@@ -64,6 +76,7 @@ const PriceQuoteTripDetailsStep = ({
         <Label>Preference for accommodation</Label>
         <RadioGroup 
           defaultValue="single"
+          value={accommodationPreference}
           onValueChange={(value) => {
             setValue('accommodationPreference', value);
           }}
@@ -74,12 +87,24 @@ const PriceQuoteTripDetailsStep = ({
             <Label htmlFor="single-room">Single rooms</Label>
           </div>
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="double" id="double-room" />
-            <Label htmlFor="double-room">Shared double rooms</Label>
+            <RadioGroupItem 
+              value="double"
+              id="double-room"
+              disabled={participants === 1}
+            />
+            <Label htmlFor="double-room" className={participants === 1 ? "opacity-50" : ""}>
+              Shared double rooms
+            </Label>
           </div>
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="both" id="both-room" />
-            <Label htmlFor="both-room">Both are ok</Label>
+            <RadioGroupItem 
+              value="both"
+              id="both-room"
+              disabled={participants === 1}
+            />
+            <Label htmlFor="both-room" className={participants === 1 ? "opacity-50" : ""}>
+              Both are ok
+            </Label>
           </div>
         </RadioGroup>
         {errors.accommodationPreference && (
@@ -129,4 +154,3 @@ const PriceQuoteTripDetailsStep = ({
 };
 
 export default PriceQuoteTripDetailsStep;
-
