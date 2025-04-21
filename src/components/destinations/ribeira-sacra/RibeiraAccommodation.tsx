@@ -19,11 +19,13 @@ const RibeiraAccommodation = () => {
                 "/lovable-uploads/969011ad-2594-4761-bf33-8468779ced1b.png"
               ].map((src, index) => (
                 <CarouselItem key={index} className="h-full">
-                  <img 
-                    src={src} 
-                    alt={`Parador de Santo Estevo image ${index + 1}`} 
-                    className="w-full h-full object-cover" 
-                  />
+                  <div className="h-full w-full flex items-center justify-center">
+                    <img 
+                      src={src} 
+                      alt={`Parador de Santo Estevo image ${index + 1}`} 
+                      className="w-full h-full object-cover" 
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
