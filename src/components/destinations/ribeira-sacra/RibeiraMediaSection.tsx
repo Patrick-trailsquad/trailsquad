@@ -30,7 +30,7 @@ const RibeiraMediaSection = () => {
           </div>
           <div className="col-span-2">
             <p className="text-sm text-gray-600 mb-1">Trip status</p>
-            <p className="font-cabinet text-xl font-bold text-charcoal">8 spots</p>
+            <p className="font-cabinet text-xl font-bold text-charcoal">8 spots available</p>
           </div>
         </div>
         <PriceQuoteForm 
@@ -43,3 +43,4 @@ const RibeiraMediaSection = () => {
 };
 
 export default RibeiraMediaSection;
+
