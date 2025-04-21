@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Footer from "../../components/Footer";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import GTCInfoBanner from "../../components/destinations/gtc/GTCInfoBanner";
 
 const SwissAlps = () => {
   const [email, setEmail] = useState('');
@@ -79,6 +80,8 @@ const SwissAlps = () => {
         </div>
       </div>
 
+      <GTCInfoBanner />
+
       <div className="container mx-auto px-4 py-12">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Gran Trail Courmayeur, Italy
@@ -124,16 +127,6 @@ const SwissAlps = () => {
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
-
-            <div className="bg-white p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
-              <ul className="space-y-2">
-                <li><strong>Location:</strong> Courmayeur, Italy</li>
-                <li><strong>Date of race:</strong> July (to be determined), 2026</li>
-                <li><strong>Trip duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 30 km, 55 km, 100 km</li>
-              </ul>
-            </div>
           </div>
           
           <div className="space-y-6">
