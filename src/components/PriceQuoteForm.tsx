@@ -33,7 +33,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
-      accommodationPreference: 'double'
+      accommodationPreference: 'single' // Changed from 'double' to 'single'
     }
   });
 
