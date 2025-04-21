@@ -1,4 +1,5 @@
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info, CheckCircle2, ArrowRight } from "lucide-react";
 import { Label } from "./ui/label";
@@ -32,16 +33,27 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState(1);
-  const { register, handleSubmit, formState: { errors }, setValue, watch, trigger } = useForm<FormValues>({
+
+  // Always default flightPreference to "organizer-tickets"
+  const { 
+    register, 
+    handleSubmit, 
+    formState: { errors }, 
+    setValue, 
+    watch, 
+    trigger 
+  } = useForm<FormValues>({
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
       accommodationPreference: 'double',
-      flightPreference: 'organizer-tickets'
+      flightPreference: 'organizer-tickets' // Always set this as default
     }
   });
 
   const onSubmit = async (data: FormValues) => {
+    // Ensure the correct default before submission in case form gets mutated
+    data.flightPreference = "organizer-tickets";
     try {
       const formData = {
         destination_name: destinationName,
@@ -110,19 +122,19 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   };
 
   return (
-    <Sheet>
-      <SheetTrigger asChild>
+    <Drawer>
+      <DrawerTrigger asChild>
         <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
           Request price quote
         </button>
-      </SheetTrigger>
+      </DrawerTrigger>
       
-      <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
-        <SheetHeader>
-          <SheetTitle className="text-2xl font-cabinet">
+      <DrawerContent className="w-full overflow-y-auto">
+        <DrawerHeader>
+          <DrawerTitle className="text-2xl font-cabinet">
             Request Quote for {destinationName}
-          </SheetTitle>
-        </SheetHeader>
+          </DrawerTitle>
+        </DrawerHeader>
         
         <div className="mt-6 pb-6">
           {isSubmitted ? (
@@ -281,29 +293,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </div>
 
                     <div className="space-y-3">
-                      <Label>Preference for flights</Label>
-                      <RadioGroup 
-                        defaultValue="organizer-tickets"
-                        onValueChange={(value) => {
-                          setValue('flightPreference', value);
-                        }}
-                        className="gap-3"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="no-tickets" id="no-tickets" />
-                          <Label htmlFor="no-tickets">We'll arrange our own tickets (cheapest and more flexible)</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="organizer-tickets" id="organizer-tickets" />
-                          <Label htmlFor="organizer-tickets">We prefer Trail Squad to book tickets (everyone on the same planes)</Label>
-                        </div>
-                      </RadioGroup>
-                      {errors.flightPreference && (
-                        <p className="text-red-500 text-sm">Please select a flight preference</p>
-                      )}
-                    </div>
-
-                    <div className="space-y-3">
                       <Label>Preferred Language of upcoming communication</Label>
                       <RadioGroup 
                         defaultValue="english"
@@ -346,8 +335,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
             </>
           )}
         </div>
-      </SheetContent>
-    </Sheet>
+      </DrawerContent>
+    </Drawer>
   );
 };
 
