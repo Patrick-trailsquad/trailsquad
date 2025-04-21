@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import TransylvaniaInfoBanner from "../../components/destinations/transylvania/TransylvaniaInfoBanner";
 
 const Transylvania100 = () => {
   const [email, setEmail] = useState('');
@@ -79,6 +80,8 @@ const Transylvania100 = () => {
         </div>
       </div>
 
+      <TransylvaniaInfoBanner />
+
       <div className="container mx-auto px-4 py-12">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Transylvania 100, Romania
@@ -137,16 +140,6 @@ const Transylvania100 = () => {
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
-
-            <div className="bg-white p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
-              <ul className="space-y-2">
-                <li><strong>Location:</strong> Carpathian Mountains, Romania</li>
-                <li><strong>Date of race:</strong> May (to be determined), 2026</li>
-                <li><strong>Trip duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 20km, 30km, 50km, 80km, 100km</li>
-              </ul>
-            </div>
           </div>
           <div className="space-y-6">
             <div className="rounded-xl overflow-hidden aspect-video">
