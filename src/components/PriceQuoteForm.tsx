@@ -1,5 +1,4 @@
-
-import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Info, CheckCircle2, ArrowRight } from "lucide-react";
 import { Label } from "./ui/label";
@@ -33,27 +32,16 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState(1);
-
-  // Always default flightPreference to "organizer-tickets"
-  const { 
-    register, 
-    handleSubmit, 
-    formState: { errors }, 
-    setValue, 
-    watch, 
-    trigger 
-  } = useForm<FormValues>({
+  const { register, handleSubmit, formState: { errors }, setValue, watch, trigger } = useForm<FormValues>({
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
       accommodationPreference: 'double',
-      flightPreference: 'organizer-tickets' // Always set this as default
+      flightPreference: 'organizer-tickets'
     }
   });
 
   const onSubmit = async (data: FormValues) => {
-    // Ensure the correct default before submission in case form gets mutated
-    data.flightPreference = "organizer-tickets";
     try {
       const formData = {
         destination_name: destinationName,
@@ -122,19 +110,19 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   };
 
   return (
-    <Drawer>
-      <DrawerTrigger asChild>
+    <Sheet>
+      <SheetTrigger asChild>
         <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
           Request price quote
         </button>
-      </DrawerTrigger>
+      </SheetTrigger>
       
-      <DrawerContent className="max-w-md mx-auto overflow-y-auto">
-        <DrawerHeader>
-          <DrawerTitle className="text-2xl font-cabinet">
+      <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
+        <SheetHeader>
+          <SheetTitle className="text-2xl font-cabinet">
             Request Quote for {destinationName}
-          </DrawerTitle>
-        </DrawerHeader>
+          </SheetTitle>
+        </SheetHeader>
         
         <div className="mt-6 pb-6">
           {isSubmitted ? (
@@ -165,16 +153,10 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
               <div className="bg-stone/50 rounded-lg p-4 flex items-start gap-3 mb-6">
                 <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-600">
-                    Fill out this form and we'll get back to you with a personalized quote for your adventure. We typically respond within 24 hours during business days.
-                  </p>
-                  <div className="mt-4">
-                    <p className="text-sm text-gray-700 font-medium">
-                      The quote will contain a Stripe link to pay 75% of the price to confirm. We will revert back 60 days before departure to collect the remaining 25% of the price.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-sm text-gray-600">
+                  Fill out this form and we'll get back to you with a personalized quote for your 
+                  adventure. We typically respond within 24 hours during business days.
+                </p>
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -293,6 +275,29 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </div>
 
                     <div className="space-y-3">
+                      <Label>Preference for flights</Label>
+                      <RadioGroup 
+                        defaultValue="organizer-tickets"
+                        onValueChange={(value) => {
+                          setValue('flightPreference', value);
+                        }}
+                        className="gap-3"
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="no-tickets" id="no-tickets" />
+                          <Label htmlFor="no-tickets">We'll arrange our own tickets (cheapest and more flexible)</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="organizer-tickets" id="organizer-tickets" />
+                          <Label htmlFor="organizer-tickets">We prefer Trail Squad to book tickets (everyone on the same planes)</Label>
+                        </div>
+                      </RadioGroup>
+                      {errors.flightPreference && (
+                        <p className="text-red-500 text-sm">Please select a flight preference</p>
+                      )}
+                    </div>
+
+                    <div className="space-y-3">
                       <Label>Preferred Language of upcoming communication</Label>
                       <RadioGroup 
                         defaultValue="english"
@@ -335,8 +340,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
             </>
           )}
         </div>
-      </DrawerContent>
-    </Drawer>
+      </SheetContent>
+    </Sheet>
   );
 };
 
