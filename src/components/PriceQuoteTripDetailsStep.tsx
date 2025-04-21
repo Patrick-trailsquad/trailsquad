@@ -63,7 +63,7 @@ const PriceQuoteTripDetailsStep = ({
       <div className="space-y-3">
         <Label>Preference for accommodation</Label>
         <RadioGroup 
-          defaultValue="double"
+          defaultValue="single"
           onValueChange={(value) => {
             setValue('accommodationPreference', value);
           }}
