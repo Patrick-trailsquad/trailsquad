@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -6,7 +7,7 @@ const RibeiraAccommodation = () => {
   return (
     <div className="bg-white rounded-xl overflow-hidden h-full">
       <div className="grid md:grid-cols-2 h-full">
-        <div className="h-full">
+        <div className="relative h-full">
           <Carousel className="w-full h-full">
             <CarouselContent className="h-full">
               {[
@@ -21,7 +22,7 @@ const RibeiraAccommodation = () => {
                   <img 
                     src={src} 
                     alt={`Parador de Santo Estevo image ${index + 1}`} 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover scale-[1.2]" 
                   />
                 </CarouselItem>
               ))}
