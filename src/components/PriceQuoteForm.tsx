@@ -1,3 +1,4 @@
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Info, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -106,7 +107,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
                   Quote request sent successfully!
                 </p>
                 <p className="text-sm text-green-700">
-                  We'll get back to you with a personalized quote within 24 hours during business days.
+                  We'll get back to you with a personalized quote within 48 hours during business days.
                 </p>
               </div>
             </div>
