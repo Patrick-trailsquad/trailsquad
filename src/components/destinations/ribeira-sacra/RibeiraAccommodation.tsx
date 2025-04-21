@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -5,8 +6,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const RibeiraAccommodation = () => {
   return (
     <div className="bg-white rounded-xl overflow-hidden">
-      <div className="grid md:grid-cols-2">
-        <div className="relative">
+      <div className="grid md:grid-cols-2 h-full">
+        <div className="relative h-full">
           <Carousel className="w-full h-full">
             <CarouselContent className="h-full">
               {[
@@ -18,7 +19,7 @@ const RibeiraAccommodation = () => {
                 "/lovable-uploads/969011ad-2594-4761-bf33-8468779ced1b.png"
               ].map((src, index) => (
                 <CarouselItem key={index} className="h-full">
-                  <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-full h-full">
                     <img 
                       src={src} 
                       alt={`Parador de Santo Estevo image ${index + 1}`} 

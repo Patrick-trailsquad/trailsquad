@@ -32,7 +32,9 @@ const RibeiraSacra = () => {
       </div>
       
       <div className="container mx-auto px-4 py-12">
-        <RibeiraAccommodation />
+        <div className="min-h-[500px]">
+          <RibeiraAccommodation />
+        </div>
         <BackToDestinationsButton />
       </div>
       <Footer />
