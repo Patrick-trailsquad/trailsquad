@@ -32,16 +32,27 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState(1);
-  const { register, handleSubmit, formState: { errors }, setValue, watch, trigger } = useForm<FormValues>({
+
+  // Always default flightPreference to "organizer-tickets"
+  const { 
+    register, 
+    handleSubmit, 
+    formState: { errors }, 
+    setValue, 
+    watch, 
+    trigger 
+  } = useForm<FormValues>({
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
       accommodationPreference: 'double',
-      flightPreference: 'organizer-tickets'
+      flightPreference: 'organizer-tickets' // Always set this as default
     }
   });
 
   const onSubmit = async (data: FormValues) => {
+    // Ensure the correct default before submission in case form gets mutated
+    data.flightPreference = "organizer-tickets";
     try {
       const formData = {
         destination_name: destinationName,
@@ -281,29 +292,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     </div>
 
                     <div className="space-y-3">
-                      <Label>Preference for flights</Label>
-                      <RadioGroup 
-                        defaultValue="organizer-tickets"
-                        onValueChange={(value) => {
-                          setValue('flightPreference', value);
-                        }}
-                        className="gap-3"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="no-tickets" id="no-tickets" />
-                          <Label htmlFor="no-tickets">We'll arrange our own tickets (cheapest and more flexible)</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="organizer-tickets" id="organizer-tickets" />
-                          <Label htmlFor="organizer-tickets">We prefer Trail Squad to book tickets (everyone on the same planes)</Label>
-                        </div>
-                      </RadioGroup>
-                      {errors.flightPreference && (
-                        <p className="text-red-500 text-sm">Please select a flight preference</p>
-                      )}
-                    </div>
-
-                    <div className="space-y-3">
                       <Label>Preferred Language of upcoming communication</Label>
                       <RadioGroup 
                         defaultValue="english"
@@ -343,8 +331,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                   </div>
                 )}
               </form>
-            </>
-          )}
         </div>
       </SheetContent>
     </Sheet>
