@@ -72,9 +72,6 @@ Subscribe to our newsletter to be looped in. </p>
                 {isSubmitting ? 'Submitting...' : 'Subscribe'}
               </button>}
           </form>
-          <p className="mt-6 text-sm text-black max-w-md mx-auto">
-            After submitting your request you will receive an email with the specific quote, along with a stripe link to pay 75% of the price to confirm. We will revert back 60 days before departure to collect the remaining 25% of the price.
-          </p>
         </div>
       </div>
 
