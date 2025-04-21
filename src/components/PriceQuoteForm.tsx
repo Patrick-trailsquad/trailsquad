@@ -153,10 +153,15 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
               <div className="bg-stone/50 rounded-lg p-4 flex items-start gap-3 mb-6">
                 <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
-                <p className="text-sm text-gray-600">
-                  Fill out this form and we'll get back to you with a personalized quote for your 
-                  adventure. We typically respond within 24 hours during business days.
-                </p>
+                <div>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Fill out this form and we'll get back to you with a personalized quote for your adventure.
+                    We typically respond within 24 hours during business days.
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    The quote will contain a Stripe link to pay 75% of the price to confirm. We will revert back 60 days before departure to collect the remaining 25% of the price.
+                  </p>
+                </div>
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
