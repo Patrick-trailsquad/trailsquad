@@ -9,6 +9,8 @@ import { useState } from "react";
 import { useToast } from "./ui/use-toast";
 import PhoneInput from "./PhoneInput";
 import { Progress } from "./ui/progress";
+import PriceQuotePersonalInfoStep from "./PriceQuotePersonalInfoStep";
+import PriceQuoteTripDetailsStep from "./PriceQuoteTripDetailsStep";
 
 interface PriceQuoteFormProps {
   destinationName: string;
@@ -160,157 +162,17 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {step === 1 ? (
-                  <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="fullName">Full Name</Label>
-                      <Input 
-                        id="fullName"
-                        {...register("fullName", { required: true })}
-                        className="mt-1.5"
-                        placeholder="Enter your full name"
-                      />
-                      {errors.fullName && (
-                        <p className="text-red-500 text-sm mt-1">Please enter your full name</p>
-                      )}
-                    </div>
-
-                    <div>
-                      <Label htmlFor="email">Email</Label>
-                      <Input 
-                        id="email"
-                        type="email"
-                        {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-                        className="mt-1.5"
-                        placeholder="Enter your email address"
-                      />
-                      {errors.email && (
-                        <p className="text-red-500 text-sm mt-1">Please enter a valid email address</p>
-                      )}
-                    </div>
-
-                    <PhoneInput 
-                      value={watch("phone")}
-                      onChange={(value) => setValue("phone", value)}
-                      error={!!errors.phone}
-                      errorMessage={errors.phone ? "Please enter a valid phone number" : undefined}
-                    />
-
-                    <Button 
-                      type="button" 
-                      className="w-full bg-black text-white hover:bg-black/90 mt-4 flex items-center justify-center gap-2"
-                      onClick={advanceStep}
-                    >
-                      Continue
-                      <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </div>
+                  <PriceQuotePersonalInfoStep form={{
+                    ...{register, setValue, watch, formState: { errors }},
+                  }} advanceStep={advanceStep} />
                 ) : (
-                  <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="participants">Number of Participants</Label>
-                      <Input 
-                        id="participants"
-                        type="number"
-                        min="1"
-                        {...register("participants", { 
-                          required: true,
-                          min: 1,
-                          valueAsNumber: true 
-                        })}
-                        className="mt-1.5"
-                        placeholder="Enter number of participants"
-                      />
-                      {errors.participants && (
-                        <p className="text-red-500 text-sm mt-1">Please enter a valid number of participants</p>
-                      )}
-                    </div>
-
-                    <div className="space-y-3">
-                      <Label>Preferred Distance</Label>
-                      <RadioGroup 
-                        defaultValue={availableDistances[0]}
-                        onValueChange={(value) => {
-                          setValue('preferredDistance', value);
-                        }}
-                        className="gap-3"
-                      >
-                        {availableDistances.map((distance) => (
-                          <div key={distance} className="flex items-center space-x-2">
-                            <RadioGroupItem value={distance} id={distance} />
-                            <Label htmlFor={distance}>{distance}</Label>
-                          </div>
-                        ))}
-                      </RadioGroup>
-                      {errors.preferredDistance && (
-                        <p className="text-red-500 text-sm">Please select a preferred distance</p>
-                      )}
-                    </div>
-
-                    <div className="space-y-3">
-                      <Label>Preference for accommodation</Label>
-                      <RadioGroup 
-                        defaultValue="double"
-                        onValueChange={(value) => {
-                          setValue('accommodationPreference', value);
-                        }}
-                        className="gap-3"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="single" id="single-room" />
-                          <Label htmlFor="single-room">Single rooms</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="double" id="double-room" />
-                          <Label htmlFor="double-room">Shared double rooms</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="both" id="both-room" />
-                          <Label htmlFor="both-room">Both are ok</Label>
-                        </div>
-                      </RadioGroup>
-                      {errors.accommodationPreference && (
-                        <p className="text-red-500 text-sm">Please select an accommodation preference</p>
-                      )}
-                    </div>
-
-                    <div className="space-y-3">
-                      <Label>Preferred Language of upcoming communication</Label>
-                      <RadioGroup 
-                        defaultValue="english"
-                        onValueChange={(value) => setValue('preferredLanguage', value)}
-                        className="gap-3"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="english" id="english" />
-                          <Label htmlFor="english">English</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="danish" id="danish" />
-                          <Label htmlFor="danish">Danish</Label>
-                        </div>
-                      </RadioGroup>
-                      {errors.preferredLanguage && (
-                        <p className="text-red-500 text-sm">Please select a preferred language</p>
-                      )}
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-3 mt-6">
-                      <Button 
-                        type="button" 
-                        variant="outline"
-                        className="flex-1"
-                        onClick={() => setStep(1)}
-                      >
-                        Back
-                      </Button>
-                      <Button 
-                        type="submit" 
-                        className="flex-1 bg-black text-white hover:bg-black/90"
-                      >
-                        Submit Request
-                      </Button>
-                    </div>
-                  </div>
+                  <PriceQuoteTripDetailsStep 
+                    form={{
+                      ...{register, setValue, formState: { errors }, watch },
+                    }}
+                    availableDistances={availableDistances}
+                    onBack={() => setStep(1)}
+                  />
                 )}
               </form>
             </>
