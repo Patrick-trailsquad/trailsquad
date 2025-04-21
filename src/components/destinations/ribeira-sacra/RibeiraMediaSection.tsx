@@ -21,7 +21,7 @@ const RibeiraMediaSection = () => {
           loading="lazy"
         ></iframe>
       </div>
-      
+
       <div className="bg-white rounded-xl p-8 shadow-lg">
         <div className="grid grid-cols-2 gap-6 mb-6">
           <div className="col-span-2 space-y-1">
@@ -39,8 +39,9 @@ const RibeiraMediaSection = () => {
                 </AccordionTrigger>
                 <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                   <div>
-                    The price for a <b>Shared Superior Room</b> is 10.850 DKK incl. VAT per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
-                    The price for a <b>Single Double Room</b> is 12.100 DKK incl. VAT.
+                    The price for a <b>Shared Superior Room</b> is 10.850 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
+                    The price for a <b>Single Double Room</b> is 12.100 DKK.<br /><br />
+                    VAT is included in all prices.
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -61,3 +62,4 @@ const RibeiraMediaSection = () => {
 };
 
 export default RibeiraMediaSection;
+
