@@ -18,14 +18,9 @@ const RibeiraMediaSection = () => {
       
       <div className="bg-white rounded-xl p-8 shadow-lg">
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <div className="space-y-1">
-            <p className="text-sm text-gray-600">Shared Superior Room</p>
+          <div className="col-span-2 space-y-1">
+            <p className="text-sm text-gray-600">Prices start at</p>
             <p className="font-cabinet text-4xl font-bold text-charcoal">10.850 DKK</p>
-            <p className="text-sm text-gray-500">incl. VAT</p>
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm text-gray-600">Individual Double Room</p>
-            <p className="font-cabinet text-4xl font-bold text-charcoal">12.100 DKK</p>
             <p className="text-sm text-gray-500">incl. VAT</p>
           </div>
           <div className="col-span-2">
