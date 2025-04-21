@@ -23,7 +23,8 @@ interface FormValues {
   accommodationPreference: string;
 }
 
-const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
+// Updated Zapier webhook URL as requested
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/20kwfiu/';
 
 const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
   const { toast } = useToast();
@@ -156,3 +157,4 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 };
 
 export default PriceQuoteForm;
+
