@@ -1,13 +1,9 @@
+
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
-import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
-import { Info, CheckCircle2, ArrowRight } from "lucide-react";
-import { Label } from "./ui/label";
+import { Info, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
-import { useState } from "react";
 import { useToast } from "./ui/use-toast";
-import PhoneInput from "./PhoneInput";
+import { useState } from "react";
 import { Progress } from "./ui/progress";
 import PriceQuotePersonalInfoStep from "./PriceQuotePersonalInfoStep";
 import PriceQuoteTripDetailsStep from "./PriceQuoteTripDetailsStep";
@@ -33,7 +29,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState(1);
-  const { register, handleSubmit, formState: { errors }, setValue, watch, trigger } = useForm<FormValues>({
+  const form = useForm<FormValues>({
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
@@ -102,7 +98,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
   };
 
   const advanceStep = async () => {
-    const isValid = await trigger(['fullName', 'email', 'phone']);
+    const isValid = await form.trigger(['fullName', 'email', 'phone']);
     if (isValid) {
       setStep(2);
     }
@@ -160,16 +156,12 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 {step === 1 ? (
-                  <PriceQuotePersonalInfoStep form={{
-                    ...{register, setValue, watch, formState: { errors }},
-                  }} advanceStep={advanceStep} />
+                  <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} />
                 ) : (
                   <PriceQuoteTripDetailsStep 
-                    form={{
-                      ...{register, setValue, formState: { errors }, watch },
-                    }}
+                    form={form}
                     availableDistances={availableDistances}
                     onBack={() => setStep(1)}
                   />
