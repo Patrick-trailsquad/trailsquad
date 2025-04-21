@@ -20,8 +20,9 @@ const RibeiraMediaSection = () => {
         <div className="grid grid-cols-2 gap-6 mb-6">
           <div className="col-span-2 space-y-1">
             <p className="text-sm text-gray-600">Prices start at</p>
-            <p className="font-cabinet text-4xl font-bold text-charcoal">10.850 DKK</p>
-            <p className="text-sm text-gray-500">incl. VAT</p>
+            <p className="font-cabinet text-4xl font-bold text-charcoal">
+              10.850 DKK <span className="text-sm text-gray-500">incl. VAT</span>
+            </p>
           </div>
           <div className="col-span-2">
             <p className="text-sm text-gray-600 mb-1">Trip status</p>
