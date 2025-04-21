@@ -129,7 +129,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         </button>
       </DrawerTrigger>
       
-      <DrawerContent className="w-full overflow-y-auto">
+      <DrawerContent className="max-w-md mx-auto overflow-y-auto">
         <DrawerHeader>
           <DrawerTitle className="text-2xl font-cabinet">
             Request Quote for {destinationName}
