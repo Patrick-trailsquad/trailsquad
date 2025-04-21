@@ -51,19 +51,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         accommodation_preference: data.accommodationPreference
       };
 
-      console.log('Raw form data object:', formData);
-      console.log('Stringified form data:', JSON.stringify(formData));
-      
-      console.log('Request configuration:', {
-        url: ZAPIER_WEBHOOK_URL,
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        mode: 'no-cors',
-        body: JSON.stringify(formData)
-      });
-
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
         headers: {
@@ -73,22 +60,13 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
         body: JSON.stringify(formData),
       });
 
-      console.log('Full response object:', response);
-      console.log('Response type:', response.type);
-      
       setIsSubmitted(true);
-      
+
       toast({
         title: "Success",
         description: "Your request has been submitted successfully!",
       });
     } catch (error) {
-      console.error('Error details:', {
-        error,
-        message: error instanceof Error ? error.message : 'Unknown error',
-        stack: error instanceof Error ? error.stack : undefined
-      });
-      
       toast({
         title: "Error",
         description: "Failed to submit your request. Please try again.",
@@ -150,8 +128,10 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                 <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
                 <div>
                   <p className="text-sm text-gray-600 mb-2">
-                    Fill out this form and we'll get back to you with a personalized quote for your adventure.
-                    We typically respond within 24 hours during business days.
+                    Fill out this form and we'll get back to you with a personalized quote for your adventure. We typically respond within 24 hours during business days.
+                  </p>
+                  <p className="text-sm text-gray-600 mb-2">
+                    The quote will contain a Stripe link to pay 75% of the price to confirm. We will revert back 60 days before departure to collect the remaining 25% of the price.
                   </p>
                 </div>
               </div>
