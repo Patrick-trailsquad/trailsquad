@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import { ThumbsUp } from "lucide-react";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import VesuvioInfoBanner from "../../components/destinations/vesuvio/VesuvioInfoBanner";
 
 const Vesuvio = () => {
   const [email, setEmail] = useState('');
@@ -80,6 +81,8 @@ const Vesuvio = () => {
         </div>
       </div>
 
+      <VesuvioInfoBanner />
+
       <div className="container mx-auto px-4 py-12">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Vesuvio Ultra Marathon, Italy
@@ -125,16 +128,6 @@ const Vesuvio = () => {
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
-
-            <div className="bg-white p-6 rounded-xl">
-              <h2 className="font-cabinet text-2xl font-bold mb-4">Trip Details</h2>
-              <ul className="space-y-2">
-                <li><strong>Location:</strong> Mount Vesuvius, Naples, Italy</li>
-                <li><strong>Date of race:</strong> May/June (to be determined), 2026</li>
-                <li><strong>Trip duration:</strong> 4 days</li>
-                <li><strong>Available distances:</strong> 23 km, 45 km, 72 km</li>
-              </ul>
-            </div>
           </div>
           <div className="space-y-6">
             <div className="rounded-xl overflow-hidden aspect-video">
