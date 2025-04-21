@@ -11,6 +11,7 @@ import PriceQuoteTripDetailsStep from "./PriceQuoteTripDetailsStep";
 interface PriceQuoteFormProps {
   destinationName: string;
   availableDistances: string[];
+  maxParticipants?: number;
 }
 
 interface FormValues {
@@ -25,7 +26,7 @@ interface FormValues {
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
 
-const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormProps) => {
+const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants = 100 }: PriceQuoteFormProps) => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState(1);
@@ -33,7 +34,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
     defaultValues: {
       preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
-      accommodationPreference: 'single' // Changed from 'double' to 'single'
+      accommodationPreference: 'single'
     }
   });
 
@@ -144,6 +145,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
                     form={form}
                     availableDistances={availableDistances}
                     onBack={() => setStep(1)}
+                    maxParticipants={maxParticipants}
                   />
                 )}
               </form>
@@ -156,3 +158,4 @@ const PriceQuoteForm = ({ destinationName, availableDistances }: PriceQuoteFormP
 };
 
 export default PriceQuoteForm;
+

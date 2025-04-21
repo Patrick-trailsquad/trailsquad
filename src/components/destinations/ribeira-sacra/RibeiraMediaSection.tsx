@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 
 const RibeiraMediaSection = () => {
+  const spotsLeft = 8;
   return (
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
@@ -49,12 +50,13 @@ const RibeiraMediaSection = () => {
           </div>
           <div className="col-span-2">
             <p className="text-sm text-gray-600 mb-1">Trip status</p>
-            <p className="font-cabinet text-xl font-bold text-charcoal">8 spots left</p>
+            <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} spots left</p>
           </div>
         </div>
         <PriceQuoteForm 
           destinationName="Trail Ribeira Sacra"
           availableDistances={["48km"]}
+          maxParticipants={spotsLeft}
         />
       </div>
     </div>

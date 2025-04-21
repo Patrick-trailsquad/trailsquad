@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
@@ -10,12 +9,14 @@ interface PriceQuoteTripDetailsStepProps {
   form: UseFormReturn<any>;
   availableDistances: string[];
   onBack: () => void;
+  maxParticipants: number;
 }
 
 const PriceQuoteTripDetailsStep = ({
   form,
   availableDistances,
   onBack,
+  maxParticipants
 }: PriceQuoteTripDetailsStepProps) => {
   const { register, setValue, watch, formState: { errors } } = form;
 
@@ -30,6 +31,13 @@ const PriceQuoteTripDetailsStep = ({
     }
   }, [participants, accommodationPreference, setValue]);
 
+  // If participants exceeds max, clamp it down to max
+  useEffect(() => {
+    if (participants > maxParticipants) {
+      setValue("participants", maxParticipants);
+    }
+  }, [participants, maxParticipants, setValue]);
+
   return (
     <div className="space-y-4">
       <div>
@@ -38,16 +46,25 @@ const PriceQuoteTripDetailsStep = ({
           id="participants"
           type="number"
           min="1"
+          max={maxParticipants}
           {...register("participants", { 
             required: true,
             min: 1,
+            max: {
+              value: maxParticipants,
+              message: `There are only ${maxParticipants} spots left`,
+            },
             valueAsNumber: true 
           })}
           className="mt-1.5"
-          placeholder="Enter number of participants"
+          placeholder={`Enter number of participants (max ${maxParticipants})`}
         />
         {errors.participants && (
-          <p className="text-red-500 text-sm mt-1">Please enter a valid number of participants</p>
+          <p className="text-red-500 text-sm mt-1">
+            {errors.participants.type === "max"
+              ? `Cannot exceed ${maxParticipants} participants (spots left).`
+              : "Please enter a valid number of participants"}
+          </p>
         )}
       </div>
 
