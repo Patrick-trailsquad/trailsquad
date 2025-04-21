@@ -1,4 +1,3 @@
-
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Info, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -129,7 +128,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
                 <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
                 <div>
                   <p className="text-sm text-gray-600 mb-2">
-                    Fill out this form and we'll get back to you with a personalized quote for your adventure. We typically respond within 24 hours during business days.
+                    Fill out this form and we'll get back to you with a personalized quote for your adventure. We typically respond within 48 hours during business days.
                   </p>
                   <p className="text-sm text-gray-600 mb-2">
                     The quote will contain a Stripe link to pay 75% of the price to confirm. We will revert back 60 days before departure to collect the remaining 25% of the price.
@@ -158,4 +157,3 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
 };
 
 export default PriceQuoteForm;
-
