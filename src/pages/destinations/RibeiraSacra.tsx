@@ -10,10 +10,12 @@ import RibeiraInfoBanner from "../../components/destinations/ribeira-sacra/Ribei
 import RibeiraDescription from "../../components/destinations/ribeira-sacra/RibeiraDescription";
 import RibeiraMediaSection from "../../components/destinations/ribeira-sacra/RibeiraMediaSection";
 import RibeiraAccommodation from "../../components/destinations/ribeira-sacra/RibeiraAccommodation";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 const RibeiraSacra = () => {
   useScrollToTop();
   usePageTitle('Trail Ribeira Sacra');
+  const isMobile = useIsMobile();
   
   return (
     <div className="min-h-screen bg-stone">
@@ -32,7 +34,7 @@ const RibeiraSacra = () => {
       </div>
       
       <div className="container mx-auto px-4 py-12">
-        <div className="h-[600px]">
+        <div className={isMobile ? "mb-8" : ""}>
           <RibeiraAccommodation />
         </div>
         <BackToDestinationsButton />

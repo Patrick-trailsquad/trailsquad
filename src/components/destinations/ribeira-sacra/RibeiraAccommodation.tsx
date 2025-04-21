@@ -1,11 +1,15 @@
+
 import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useIsMobile } from "../../../hooks/use-mobile";
 
 const RibeiraAccommodation = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <div className="bg-white rounded-xl overflow-hidden">
-      <div className="grid md:grid-cols-2">
+      <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"}`}>
         <div className="relative">
           <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
