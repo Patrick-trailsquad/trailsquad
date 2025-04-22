@@ -22,8 +22,10 @@ const RibeiraDescription = () => {
           The trail winds through lush forests, traditional stone villages, and alongside the iconic 
           terraced vineyards that cling to the steep canyon walls. With a challenging elevation gain of 
           3,450 D+, this course will test your endurance while rewarding you with spectacular views. 
-          We'll enhance your experience with social activities including a communal run the day before 
-          the race and a group strategy session to prepare you for the challenge ahead.
+          Our Trail Squad running coach and physiotherapist will be there to support you throughout the journey,
+          from pre-race preparation to post-race recovery. Join us for optional social activities, including 
+          a light communal run the day before the race to familiarize yourself with the terrain, and celebrate 
+          your achievement with a well-deserved post-race drink with your fellow runners.
         </p>
       </div>
 
