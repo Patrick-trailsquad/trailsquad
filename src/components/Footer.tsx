@@ -1,4 +1,3 @@
-
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
@@ -187,7 +186,7 @@ Email: hello@trailsquad.dk`,
                 </span>
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/trailsquad_dk" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group flex items-center gap-2"
@@ -247,4 +246,3 @@ Email: hello@trailsquad.dk`,
 };
 
 export default Footer;
-
