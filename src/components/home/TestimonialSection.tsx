@@ -66,6 +66,7 @@ const TestimonialSection = () => {
           <Carousel 
             className="mx-auto max-w-7xl"
             setApi={setApi}
+            opts={{ loop: true }}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
