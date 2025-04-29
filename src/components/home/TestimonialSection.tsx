@@ -1,4 +1,5 @@
 
+import React, { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -32,6 +33,7 @@ const testimonials = [
 
 const TestimonialSection = () => {
   const isMobile = useIsMobile();
+  const [activeIndex, setActiveIndex] = useState(0);
   
   return (
     <section className="py-24 bg-white">
@@ -48,7 +50,10 @@ const TestimonialSection = () => {
           </div>
         )}
         
-        <Carousel className="mx-auto max-w-7xl">
+        <Carousel 
+          className="mx-auto max-w-7xl"
+          onSelect={(index) => setActiveIndex(index)}
+        >
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
@@ -77,11 +82,13 @@ const TestimonialSection = () => {
         </Carousel>
         
         {isMobile && (
-          <div className="flex justify-center mt-8 gap-1">
+          <div className="flex justify-center mt-8 gap-2">
             {testimonials.map((_, index) => (
               <div
                 key={index}
-                className="h-2 w-2 rounded-full bg-charcoal/40"
+                className={`h-2 w-2 rounded-full transition-colors ${
+                  activeIndex === index ? "bg-[#FEF7CD] border border-[#FEF7CD] shadow-sm" : "bg-charcoal/40"
+                }`}
               />
             ))}
           </div>
