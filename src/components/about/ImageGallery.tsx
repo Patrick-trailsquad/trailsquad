@@ -1,6 +1,5 @@
 
 import { FC } from 'react';
-import { useIsMobile } from '../../hooks/use-mobile';
 
 interface ImageGalleryProps {
   images: string[];
@@ -15,6 +14,7 @@ const ImageGallery: FC<ImageGalleryProps> = ({ images }) => {
             src={image} 
             alt={`Trail running moment ${index + 1}`}
             className="w-full rounded-lg"
+            loading="lazy"
           />
         </div>
       ))}
