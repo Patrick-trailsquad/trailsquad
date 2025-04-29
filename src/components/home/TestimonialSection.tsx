@@ -6,6 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const testimonials = [
   {
@@ -29,12 +31,23 @@ const testimonials = [
 ];
 
 const TestimonialSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-cabinet font-bold text-center text-charcoal mb-16">
           Happy Trail Squad Alumni!
         </h1>
+        
+        {isMobile && (
+          <div className="text-center text-charcoal/60 mb-6 flex items-center justify-center gap-2">
+            <ChevronLeft className="h-5 w-5" />
+            <span>Swipe to see more testimonials</span>
+            <ChevronRight className="h-5 w-5" />
+          </div>
+        )}
+        
         <Carousel className="mx-auto max-w-7xl">
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
@@ -62,6 +75,17 @@ const TestimonialSection = () => {
           <CarouselPrevious className="hidden md:flex -left-4" />
           <CarouselNext className="hidden md:flex -right-4" />
         </Carousel>
+        
+        {isMobile && (
+          <div className="flex justify-center mt-8 gap-1">
+            {testimonials.map((_, index) => (
+              <div
+                key={index}
+                className="h-2 w-2 rounded-full bg-charcoal/40"
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
