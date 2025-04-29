@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink, Star } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -34,8 +34,8 @@ const MIUT = () => {
           <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-2">
             Madeira Island Ultra Trail, Portugal
           </h1>
-          <div className="inline-block bg-[#ea384c] text-white px-4 py-1.5 rounded-full font-cabinet font-medium text-sm md:text-base">
-            RACE SOLD OUT
+          <div className="inline-block bg-[#ea384c] text-white px-4 py-1.5 rounded-full font-cabinet font-medium text-sm md:text-base border-2 border-[#FFDC00]">
+            RACE FINISHED 🏁
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@ const MIUT = () => {
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-600 mb-1">Race status</p>
-                  <p className="font-cabinet text-xl font-bold text-[#ea384c]">SOLD OUT</p>
+                  <p className="font-cabinet text-xl font-bold text-[#ea384c]">RACE FINISHED 🏁</p>
                 </div>
               </div>
               <button 

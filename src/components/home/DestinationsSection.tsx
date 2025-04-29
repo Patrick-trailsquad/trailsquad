@@ -7,7 +7,7 @@ const destinations = [
     image: "/lovable-uploads/af5c6191-258b-4a41-9a6d-7e722d1dad97.png",
     location: "Madeira Island Ultra Trail, Portugal",
     date: "April 2025",
-    spots: "Sold out",
+    spots: "Race finished 🏁",
     href: "/destinations/miut"
   },
   {
@@ -83,8 +83,8 @@ const DestinationsSection = () => {
                   </h3>
                   <p className="font-inter text-white/90 mb-2">{trip.date}</p>
                   <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
-                    trip.spots === "Sold out" 
-                      ? "bg-white/20 backdrop-blur-sm text-white" 
+                    trip.spots === "Race finished 🏁" 
+                      ? "bg-white/20 backdrop-blur-sm text-white border-2 border-[#FFDC00]" 
                       : trip.spots === "Opens later"
                       ? "bg-[#F1F0FB] text-[#9F9EA1]"
                       : "bg-[#FFDC00] text-black"
