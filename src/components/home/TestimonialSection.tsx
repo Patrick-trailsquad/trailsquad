@@ -62,57 +62,51 @@ const TestimonialSection = () => {
           Happy Trail Squad Alumni!
         </h1>
         
-        {isMobile && (
-          <div className="text-center text-charcoal/60 mb-6 flex items-center justify-center gap-2">
-            <ChevronLeft className="h-5 w-5" />
-            <span>Swipe to see more testimonials</span>
-            <ChevronRight className="h-5 w-5" />
-          </div>
-        )}
-        
-        <Carousel 
-          className="mx-auto max-w-7xl"
-          setApi={setApi}
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative w-64 aspect-square rounded-2xl overflow-hidden mb-6">
-                    <img
-                      src={testimonial.image}
-                      alt={`${testimonial.author} testimonial`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+        <div className="relative mx-auto max-w-7xl">
+          <Carousel 
+            className="mx-auto max-w-7xl"
+            setApi={setApi}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="relative w-64 aspect-square rounded-2xl overflow-hidden mb-6">
+                      <img
+                        src={testimonial.image}
+                        alt={`${testimonial.author} testimonial`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <blockquote className="font-cabinet text-base md:text-lg font-bold text-charcoal mb-4 max-w-[16rem]">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <div className="max-w-[16rem]">
+                      <p className="font-cabinet text-base font-bold text-charcoal">{testimonial.author}</p>
+                      <p className="text-sm text-charcoal/60">{testimonial.title}</p>
+                    </div>
                   </div>
-                  <blockquote className="font-cabinet text-base md:text-lg font-bold text-charcoal mb-4 max-w-[16rem]">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <div className="max-w-[16rem]">
-                    <p className="font-cabinet text-base font-bold text-charcoal">{testimonial.author}</p>
-                    <p className="text-sm text-charcoal/60">{testimonial.title}</p>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-4" />
-          <CarouselNext className="hidden md:flex -right-4" />
-        </Carousel>
-        
-        {isMobile && (
-          <div className="flex justify-center mt-8 gap-2">
-            {testimonials.map((_, index) => (
-              <div
-                key={index}
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  activeIndex === index ? "bg-[#FEF7CD] border border-[#FEF7CD] shadow-sm" : "bg-charcoal/40"
-                }`}
-              />
-            ))}
-          </div>
-        )}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2" />
+            <CarouselNext className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2" />
+          </Carousel>
+          
+          {isMobile && (
+            <div className="flex justify-center mt-8 gap-2">
+              {testimonials.map((_, index) => (
+                <div
+                  key={index}
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                    activeIndex === index ? "bg-[#FFDC00] border border-[#FFDC00] shadow-sm" : "bg-charcoal/40"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
