@@ -62,7 +62,7 @@ const TestimonialSection = () => {
           Happy Trail Squad Alumni!
         </h1>
         
-        <div className="relative mx-auto max-w-7xl">
+        <div className="relative mx-auto max-w-7xl px-8 md:px-16">
           <Carousel 
             className="mx-auto max-w-7xl"
             setApi={setApi}
@@ -90,8 +90,8 @@ const TestimonialSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2" />
+            <CarouselPrevious className="absolute -left-4 md:left-0 top-1/2 -translate-y-1/2" />
+            <CarouselNext className="absolute -right-4 md:right-0 top-1/2 -translate-y-1/2" />
           </Carousel>
           
           {isMobile && (
