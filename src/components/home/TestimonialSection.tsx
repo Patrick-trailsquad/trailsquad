@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -34,6 +35,26 @@ const testimonials = [
 const TestimonialSection = () => {
   const isMobile = useIsMobile();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  
+  // Set up the event listener for when the carousel slides
+  useCallback(() => {
+    if (!api) return;
+    
+    const onChange = () => {
+      if (!api) return;
+      setActiveIndex(api.selectedScrollSnap());
+    };
+    
+    api.on("select", onChange);
+    
+    // Get initial position
+    onChange();
+    
+    return () => {
+      api.off("select", onChange);
+    };
+  }, [api]);
   
   return (
     <section className="py-24 bg-white">
@@ -52,7 +73,7 @@ const TestimonialSection = () => {
         
         <Carousel 
           className="mx-auto max-w-7xl"
-          onSelect={(index) => setActiveIndex(index)}
+          setApi={setApi}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
