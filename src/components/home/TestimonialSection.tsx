@@ -1,5 +1,5 @@
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -38,11 +38,10 @@ const TestimonialSection = () => {
   const [api, setApi] = useState<CarouselApi | null>(null);
   
   // Set up the event listener for when the carousel slides
-  useCallback(() => {
+  useEffect(() => {
     if (!api) return;
     
     const onChange = () => {
-      if (!api) return;
       setActiveIndex(api.selectedScrollSnap());
     };
     
