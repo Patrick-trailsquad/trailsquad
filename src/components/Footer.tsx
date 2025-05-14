@@ -4,6 +4,7 @@ import PolicyModal from "./PolicyModal";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
 import SocialLinks from "./footer/SocialLinks";
 import PolicyLinks from "./footer/PolicyLinks";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const Footer = () => {
   const [selectedPolicy, setSelectedPolicy] = useState<{
@@ -11,11 +12,24 @@ const Footer = () => {
     content: string;
   } | null>(null);
   const navigateAndScroll = useNavigateAndScroll();
+  const isMobile = useIsMobile();
+
+  const rejsegarantiLogo = (
+    <div className="flex items-center">
+      <img 
+        src="/lovable-uploads/0a1509e6-e649-4509-a8ee-ec11b8fe295b.png" 
+        alt="Rejsegaranti Fonden" 
+        className="h-12 object-contain" 
+      />
+    </div>
+  );
 
   return (
     <footer className="bg-white py-8 border-t">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+          {!isMobile && rejsegarantiLogo}
+          
           <button 
             onClick={() => navigateAndScroll('/', 'top')} 
             className="flex items-center gap-4"
@@ -32,6 +46,12 @@ const Footer = () => {
             <SocialLinks />
             <PolicyLinks onPolicyClick={setSelectedPolicy} />
           </div>
+          
+          {isMobile && (
+            <div className="mt-6">
+              {rejsegarantiLogo}
+            </div>
+          )}
         </div>
       </div>
 
