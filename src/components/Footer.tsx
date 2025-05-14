@@ -45,11 +45,13 @@ const Footer = () => {
           {/* On mobile: Trail Squad logo first */}
           {isMobile && trailSquadLogo}
           
-          {/* On desktop: Rejsegaranti logo first (in place of Trail Squad) */}
-          {!isMobile && rejsegarantiLogo}
-          
-          {/* On desktop: Trail Squad logo second (in place of Rejsegaranti) */}
-          {!isMobile && trailSquadLogo}
+          {/* Desktop layout: Trail Squad logo (left) - Rejsegaranti (middle) - SoMe (right) */}
+          {!isMobile && (
+            <>
+              {trailSquadLogo}
+              {rejsegarantiLogo}
+            </>
+          )}
           
           <div className="flex gap-20">
             <SocialLinks />
