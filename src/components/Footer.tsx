@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
@@ -17,8 +16,8 @@ const Footer = () => {
   const rejsegarantiLogo = (
     <div className="flex items-center">
       <img 
-        src="/lovable-uploads/0a1509e6-e649-4509-a8ee-ec11b8fe295b.png" 
-        alt="Rejsegaranti Fonden" 
+        src="/lovable-uploads/e0a85598-cd64-4bf2-b36d-53e9de986ac3.png" 
+        alt="Rejsegaranti Fonden - Travel Guarantee Denmark" 
         className="h-12 object-contain" 
       />
     </div>
