@@ -8,6 +8,7 @@ import { useNavigateAndScroll } from "../../hooks/useNavigateAndScroll";
 const HeroSection = () => {
   const navigateAndScroll = useNavigateAndScroll();
   const [displayedText, setDisplayedText] = useState("");
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = "Run in the World's\nMost Stunning Locations";
   
   useEffect(() => {
@@ -17,6 +18,7 @@ const HeroSection = () => {
         setDisplayedText(fullText.slice(0, currentIndex));
         currentIndex++;
       } else {
+        setIsTypingComplete(true);
         clearInterval(timer);
       }
     }, 50); // Speed of typing effect (50ms per character)
@@ -57,16 +59,25 @@ const HeroSection = () => {
               <span className="animate-pulse">|</span>
             </span>
           </h1>
-          <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get incredible experiences and boost your active lifestyle by defeating the summits of Europe's mountains
-          </p>
-          <button 
-            onClick={handleDestinationsClick} 
-            className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto"
-          >
-            See upcoming trips
-            <ArrowRight className="w-5 h-5" />
-          </button>
+          {isTypingComplete && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="overflow-hidden"
+            >
+              <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Get incredible experiences and boost your active lifestyle by defeating the summits of Europe's mountains
+              </p>
+              <button 
+                onClick={handleDestinationsClick} 
+                className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto"
+              >
+                See upcoming trips
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>
