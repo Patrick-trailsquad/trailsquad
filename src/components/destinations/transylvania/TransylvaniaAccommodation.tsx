@@ -1,29 +1,32 @@
 
 import React from 'react';
-import { Star } from "lucide-react";
+import { Star, Hotel } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "../../../hooks/use-mobile";
 
+const images = [
+  // Replace these paths with actual uploads if you have hotel images, otherwise use representative placeholders.
+  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+];
+
 const TransylvaniaAccommodation = () => {
   const isMobile = useIsMobile();
-  
+
   return (
     <div className="bg-white rounded-xl overflow-hidden">
       <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"}`}>
         <div className="relative">
           <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
-              {[
-                "/lovable-uploads/bec62159-47fc-4e21-9d40-11bebd51957a.png",
-                "/lovable-uploads/bf05c5b2-8ce8-4471-a1d3-d57375061f2c.png", 
-                "/lovable-uploads/c5ad0d53-d3e9-4acf-9182-5c642ad97194.png",
-                "/lovable-uploads/cf8dc3b8-2664-43db-9f7f-b5647f7dea9b.png"
-              ].map((src, index) => (
+              {images.map((src, index) => (
                 <CarouselItem key={index}>
                   <div className="h-[450px] rounded-xl overflow-hidden">
                     <img 
-                      src={src} 
-                      alt={`Bran Castle Hotel image ${index + 1}`} 
+                      src={src}
+                      alt={`Swissôtel Resort Alpin Poiana Brașov room or view ${index + 1}`} 
                       className="w-full h-full object-cover" 
                     />
                   </div>
@@ -36,23 +39,23 @@ const TransylvaniaAccommodation = () => {
         </div>
         <div className="p-8 flex flex-col justify-center">
           <div className="flex items-center mb-2">
-            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Hotel Castel Dracula</h1>
+            <Hotel className="mr-2 w-7 h-7 text-charcoal" />
+            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Swissôtel Resort Alpin Poiana Brașov</h1>
             <div className="flex">
-              {[...Array(4)].map((_, index) => (
+              {[...Array(5)].map((_, index) => (
                 <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
               ))}
             </div>
           </div>
-          <h2 className="font-cabinet text-xl text-terra mb-4">Piatra Fântânele, Brașov County</h2>
+          <h2 className="font-cabinet text-xl text-terra mb-4">Poiana Brașov, Brașov County</h2>
           <p className="text-lg">
-            Experience the mystique of Transylvania at this unique mountain hotel, perfectly positioned near the legendary 
-            Bran Castle. This atmospheric accommodation offers stunning views of the Carpathian Mountains and provides 
-            an authentic Romanian experience with traditional architecture and local hospitality.
+            Nestled in the heart of the Carpathian Mountains, the <b>Swissôtel Resort Alpin Poiana Brașov</b> is an elegant alpine retreat offering unmatched comfort, spectacular views, and direct access to Romania’s premier mountain resort.
           </p>
           <p className="text-lg mt-4">
-            The hotel features comfortable rooms with mountain views, a restaurant serving traditional Romanian cuisine, 
-            and easy access to the trail routes. It's the perfect base for your Transylvania 100 adventure, combining 
-            comfort with the legendary atmosphere of Dracula's homeland.
+            After your day on the trails, unwind in spacious rooms and suites featuring modern Swiss design and panoramic mountain vistas. Enjoy the resort’s state-of-the-art spa and wellness center, indoor pool, and a diverse selection of restaurants offering both international favorites and traditional Romanian cuisine.
+          </p>
+          <p className="text-lg mt-4">
+            With its serene mountain setting, luxurious amenities, and attentive service, Swissôtel Poiana Brașov provides the perfect base for your Transylvania 100 adventure—combining relaxation, world-class hospitality, and alpine atmosphere just minutes from trailheads and the enchanting city of Brașov.
           </p>
         </div>
       </div>
