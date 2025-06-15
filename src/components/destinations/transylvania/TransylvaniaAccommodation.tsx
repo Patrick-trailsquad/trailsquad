@@ -5,11 +5,11 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { useIsMobile } from "../../../hooks/use-mobile";
 
 const images = [
-  // Replace these with real hotel uploads when available
-  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+  "/lovable-uploads/3179d8dd-8bd9-495c-8e95-7e9f275cbb86.png",
+  "/lovable-uploads/a459d0b9-06e8-48ef-97f7-2c508cdcdddb.png",
+  "/lovable-uploads/cc978616-09fd-4ac0-a6c8-cdeddbf402bc.png",
+  "/lovable-uploads/dd40584a-ce0d-4894-977e-6c67d99ecc50.png",
+  "/lovable-uploads/414bab4d-7f7c-49d4-bb2f-c3f955fc4e8b.png"
 ];
 
 const TransylvaniaAccommodation = () => {
@@ -64,3 +64,4 @@ const TransylvaniaAccommodation = () => {
 };
 
 export default TransylvaniaAccommodation;
+
