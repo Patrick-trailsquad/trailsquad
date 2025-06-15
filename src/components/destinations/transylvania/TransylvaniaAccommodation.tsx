@@ -9,7 +9,8 @@ const images = [
   "/lovable-uploads/a459d0b9-06e8-48ef-97f7-2c508cdcdddb.png",
   "/lovable-uploads/cc978616-09fd-4ac0-a6c8-cdeddbf402bc.png",
   "/lovable-uploads/dd40584a-ce0d-4894-977e-6c67d99ecc50.png",
-  "/lovable-uploads/414bab4d-7f7c-49d4-bb2f-c3f955fc4e8b.png"
+  "/lovable-uploads/414bab4d-7f7c-49d4-bb2f-c3f955fc4e8b.png",
+  "/lovable-uploads/5a51837a-4e90-41a3-89f1-77b6635baea3.png" // newly added restaurant image
 ];
 
 const TransylvaniaAccommodation = () => {
@@ -39,7 +40,6 @@ const TransylvaniaAccommodation = () => {
         </div>
         <div className="p-8 flex flex-col justify-center">
           <div className="flex items-center mb-2">
-            {/* Removed the <Hotel /> icon here */}
             <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Swissôtel Poiana Brasov</h1>
             <div className="flex">
               {[...Array(5)].map((_, index) => (
@@ -64,4 +64,3 @@ const TransylvaniaAccommodation = () => {
 };
 
 export default TransylvaniaAccommodation;
-
