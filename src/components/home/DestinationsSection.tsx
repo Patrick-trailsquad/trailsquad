@@ -32,7 +32,7 @@ const destinations = [
     href: "/destinations/vesuvio"
   },
   {
-    image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
+    image: "/lovable-uploads/5df5070a-2e04-4c98-873f-af0f758fe635.png",
     location: "Transylvania 100, Romania",
     date: "May 2026",
     spots: "Opens later",
