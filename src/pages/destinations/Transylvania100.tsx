@@ -81,14 +81,16 @@ const Transylvania100 = () => {
             Back to Home
           </Link>
         </div>
+        <div className="absolute bottom-6 left-0 right-0 text-center">
+          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-8">
+            Transylvania 100, Romania
+          </h1>
+        </div>
       </div>
 
       <TransylvaniaInfoBanner />
 
       <div className="container mx-auto px-4 py-12">
-        <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-          Transylvania 100, Romania
-        </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
