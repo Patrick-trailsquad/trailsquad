@@ -40,7 +40,7 @@ const TransylvaniaAccommodation = () => {
         <div className="p-8 flex flex-col justify-center">
           <div className="flex items-center mb-2">
             {/* Removed the <Hotel /> icon here */}
-            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Swissôtel Resort Alpin Poiana Brașov</h1>
+            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Swissôtel Poiana Brasov</h1>
             <div className="flex">
               {[...Array(5)].map((_, index) => (
                 <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
@@ -49,13 +49,13 @@ const TransylvaniaAccommodation = () => {
           </div>
           <h2 className="font-cabinet text-xl text-terra mb-4">Poiana Brașov, Brașov County</h2>
           <p className="text-lg">
-            Nestled in the heart of the Carpathian Mountains, the <b>Swissôtel Resort Alpin Poiana Brașov</b> is an elegant alpine retreat offering unmatched comfort, spectacular views, and direct access to Romania’s premier mountain resort.
+            Nestled in the heart of the Carpathian Mountains, the <b>Swissôtel Poiana Brasov</b> is an elegant alpine retreat offering unmatched comfort, spectacular views, and direct access to Romania’s premier mountain resort.
           </p>
           <p className="text-lg mt-4">
             After your day on the trails, unwind in spacious rooms and suites featuring modern Swiss design and panoramic mountain vistas. Enjoy the resort’s state-of-the-art spa and wellness center, indoor pool, and a diverse selection of restaurants offering both international favorites and traditional Romanian cuisine.
           </p>
           <p className="text-lg mt-4">
-            With its serene mountain setting, luxurious amenities, and attentive service, Swissôtel Poiana Brașov provides the perfect base for your Transylvania 100 adventure—combining relaxation, world-class hospitality, and alpine atmosphere just minutes from trailheads and the enchanting city of Brașov.
+            With its serene mountain setting, luxurious amenities, and attentive service, Swissôtel Poiana Brasov provides the perfect base for your Transylvania 100 adventure—combining relaxation, world-class hospitality, and alpine atmosphere just minutes from trailheads and the enchanting city of Brașov.
           </p>
         </div>
       </div>
