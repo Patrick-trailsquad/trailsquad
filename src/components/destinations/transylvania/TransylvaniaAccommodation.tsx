@@ -49,13 +49,13 @@ const TransylvaniaAccommodation = () => {
           </div>
           <h2 className="font-cabinet text-xl text-terra mb-4">Poiana Brașov, Brașov County</h2>
           <p className="text-lg">
-            Nestled in the heart of the Carpathian Mountains, the <b>Swissôtel Poiana Brasov</b> is an elegant alpine retreat offering unmatched comfort, spectacular views, and direct access to Romania’s premier mountain resort.
+            Nestled in the Carpathian Mountains, <b>Swissôtel Poiana Brasov</b> is an elegant alpine retreat with modern Swiss design, spectacular mountain views, and direct access to Romania’s premier mountain resort.
           </p>
           <p className="text-lg mt-4">
-            After your day on the trails, unwind in spacious rooms and suites featuring modern Swiss design and panoramic mountain vistas. Enjoy the resort’s state-of-the-art spa and wellness center, indoor pool, and a diverse selection of restaurants offering both international favorites and traditional Romanian cuisine.
+            After a day on the trails, unwind in spacious rooms, enjoy the state-of-the-art spa and wellness center, and discover a selection of gourmet restaurants.
           </p>
           <p className="text-lg mt-4">
-            With its serene mountain setting, luxurious amenities, and attentive service, Swissôtel Poiana Brasov provides the perfect base for your Transylvania 100 adventure—combining relaxation, world-class hospitality, and alpine atmosphere just minutes from trailheads and the enchanting city of Brașov.
+            The tranquil mountain setting, luxurious amenities, and attentive service make Swissôtel Poiana Brasov the perfect base for your Transylvania 100 adventure—combining world-class hospitality and alpine atmosphere just minutes from the trails.
           </p>
         </div>
       </div>
@@ -64,4 +64,3 @@ const TransylvaniaAccommodation = () => {
 };
 
 export default TransylvaniaAccommodation;
-
