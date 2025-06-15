@@ -10,12 +10,15 @@ import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 import TransylvaniaInfoBanner from "../../components/destinations/transylvania/TransylvaniaInfoBanner";
+import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 const Transylvania100 = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
+  const isMobile = useIsMobile();
   useScrollToTop();
   usePageTitle("Transylvania 100");
   
@@ -205,7 +208,12 @@ const Transylvania100 = () => {
           <IncludedAmenities className="bg-transparent" />
         </div>
         
-        <BackToDestinationsButton />
+        <div className="container mx-auto px-4 py-12">
+          <div className={isMobile ? "mb-8" : ""}>
+            <TransylvaniaAccommodation />
+          </div>
+          <BackToDestinationsButton />
+        </div>
       </div>
       <Footer />
     </div>
