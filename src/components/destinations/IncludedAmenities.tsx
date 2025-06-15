@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Bath, Utensils, Shirt, Users } from 'lucide-react';
 
@@ -50,7 +49,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     },
     {
       icon: "/lovable-uploads/ba002ac9-1745-47a1-a01f-ca8bfa53b60d.png",
-      title: "5-Star Hotel",
+      title: "Luxury Hotel",
       description: "5-star hotel accommodation"
     },
     {
@@ -103,4 +102,3 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
 };
 
 export default IncludedAmenities;
-
