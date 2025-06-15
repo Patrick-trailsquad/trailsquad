@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Star, Hotel } from "lucide-react";
+import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "../../../hooks/use-mobile";
 
@@ -39,7 +39,7 @@ const TransylvaniaAccommodation = () => {
         </div>
         <div className="p-8 flex flex-col justify-center">
           <div className="flex items-center mb-2">
-            <Hotel className="mr-2 w-7 h-7 text-charcoal" />
+            {/* Removed the <Hotel /> icon here */}
             <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Swissôtel Resort Alpin Poiana Brașov</h1>
             <div className="flex">
               {[...Array(5)].map((_, index) => (
@@ -64,3 +64,4 @@ const TransylvaniaAccommodation = () => {
 };
 
 export default TransylvaniaAccommodation;
+
