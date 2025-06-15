@@ -12,11 +12,11 @@ const TransylvaniaInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">May (TBD), 2026</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">May 23, 2026</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">4 days</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">May 21-24, 2026</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
