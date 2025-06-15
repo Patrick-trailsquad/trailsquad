@@ -10,8 +10,8 @@ const TransylvaniaHero = () => {
   return (
     <div className="relative h-[60vh]">
       <img
-        src="/lovable-uploads/5df5070a-2e04-4c98-873f-af0f758fe635.png"
-        alt="Trail runners ascend in the Carpathian Mountains, Transylvania 100"
+        src="/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png"
+        alt="Transylvania 100 trail running in the Carpathian Mountains"
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/40" />
