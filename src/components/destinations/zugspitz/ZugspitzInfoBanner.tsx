@@ -12,7 +12,7 @@ const ZugspitzInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">June 20-22, 2025</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">June 19, 2026</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>

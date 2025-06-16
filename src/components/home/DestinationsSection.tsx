@@ -18,13 +18,6 @@ const destinations = [
     href: "/destinations/ribeira-sacra"
   },
   {
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
-    location: "Zugspitz Ultratrail, Germany",
-    date: "June 2025",
-    spots: "12 spots",
-    href: "/destinations/zugspitz"
-  },
-  {
     image: "/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png",
     location: "Chianti Ultra Trail by UTMB, Italy",
     date: "March 2026",
@@ -37,6 +30,13 @@ const destinations = [
     date: "May 2026",
     spots: "Opens later",
     href: "/destinations/vesuvio"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+    location: "Zugspitz Ultratrail, Germany",
+    date: "June 2026",
+    spots: "12 spots",
+    href: "/destinations/zugspitz"
   },
   {
     image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
