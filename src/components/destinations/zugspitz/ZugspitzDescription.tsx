@@ -24,7 +24,7 @@ const ZugspitzDescription = () => {
             Starting and finishing in the charming resort town of <strong>Garmisch-Partenkirchen</strong>, the course winds through the Wetterstein and Ammergau Alps, passing crystal-clear mountain lakes, traditional Alpine huts, and offering panoramic views that will take your breath away.
           </p>
           <p>
-            Choose from three distances: the 25km Base Trail for newcomers, the demanding 50km Zugspitz Trail, or the ultimate 100km Ultra Trail that circles the entire Zugspitz massif. Each route promises unique challenges and unforgettable Alpine scenery.
+            Choose from seven distances: 16km, 29km, 44km, 68km, 86km, 106km, or the ultimate 164km Ultra Trail that circles the entire Zugspitz massif. Each route promises unique challenges and unforgettable Alpine scenery, from shorter trails perfect for newcomers to the demanding ultra-distance for seasoned athletes.
           </p>
           <p>
             Beyond the race, you'll experience authentic Bavarian culture, from traditional mountain huts serving hearty Alpine cuisine to the rich history of this Olympic host city. The perfect blend of athletic challenge and cultural immersion awaits in the heart of the German Alps.
