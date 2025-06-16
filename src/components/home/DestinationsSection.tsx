@@ -32,18 +32,18 @@ const destinations = [
     href: "/destinations/vesuvio"
   },
   {
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
-    location: "Zugspitz Ultratrail, Germany",
-    date: "June 2026",
-    spots: "12 spots",
-    href: "/destinations/zugspitz"
-  },
-  {
     image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
     location: "Transylvania 100, Romania",
     date: "May 2026",
     spots: "Opens later",
     href: "/destinations/transylvania"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+    location: "Zugspitz Ultratrail, Germany",
+    date: "June 2026",
+    spots: "12 spots",
+    href: "/destinations/zugspitz"
   },
   {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
