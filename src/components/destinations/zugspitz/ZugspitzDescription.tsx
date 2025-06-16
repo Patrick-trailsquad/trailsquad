@@ -1,0 +1,43 @@
+
+import React from 'react';
+import IconList from "../IconList";
+
+const ZugspitzDescription = () => {
+  const includedItems = [
+    { type: 'entry' as const, text: 'Official race entry for Zugspitz Ultratrail' },
+    { type: 'travel' as const, text: 'Round trip flights from Copenhagen' },
+    { type: 'transport' as const, text: 'Airport transfers and local transportation' },
+    { type: 'hotel' as const, text: '4-star hotel accommodation in Garmisch-Partenkirchen' },
+    { type: 'coaching' as const, text: 'Pre-race briefing and trail strategy session' },
+    { type: 'schedule' as const, text: 'Guided training run in the Bavarian Alps' }
+  ];
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h2 className="font-cabinet text-3xl font-bold mb-6">Experience Germany's Most Spectacular Alpine Trail</h2>
+        <div className="space-y-4 text-lg">
+          <p>
+            The <strong>Zugspitz Ultratrail</strong> takes you through the stunning Bavarian Alps, offering breathtaking views of Germany's highest peak, the Zugspitze (2,962m). This challenging trail running event features routes through pristine Alpine meadows, ancient forests, and dramatic mountain ridges.
+          </p>
+          <p>
+            Starting and finishing in the charming resort town of <strong>Garmisch-Partenkirchen</strong>, the course winds through the Wetterstein and Ammergau Alps, passing crystal-clear mountain lakes, traditional Alpine huts, and offering panoramic views that will take your breath away.
+          </p>
+          <p>
+            Choose from three distances: the 25km Base Trail for newcomers, the demanding 50km Zugspitz Trail, or the ultimate 100km Ultra Trail that circles the entire Zugspitz massif. Each route promises unique challenges and unforgettable Alpine scenery.
+          </p>
+          <p>
+            Beyond the race, you'll experience authentic Bavarian culture, from traditional mountain huts serving hearty Alpine cuisine to the rich history of this Olympic host city. The perfect blend of athletic challenge and cultural immersion awaits in the heart of the German Alps.
+          </p>
+        </div>
+      </div>
+      
+      <IconList
+        title="What's Included"
+        items={includedItems}
+      />
+    </div>
+  );
+};
+
+export default ZugspitzDescription;

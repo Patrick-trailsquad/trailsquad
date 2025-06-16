@@ -18,6 +18,13 @@ const destinations = [
     href: "/destinations/ribeira-sacra"
   },
   {
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+    location: "Zugspitz Ultratrail, Germany",
+    date: "June 2025",
+    spots: "12 spots",
+    href: "/destinations/zugspitz"
+  },
+  {
     image: "/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png",
     location: "Chianti Ultra Trail by UTMB, Italy",
     date: "March 2026",
