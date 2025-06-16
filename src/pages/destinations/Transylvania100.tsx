@@ -1,4 +1,3 @@
-
 import { ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -8,7 +7,7 @@ import { usePageTitle } from "../../hooks/usePageTitle";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
-import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import TransylvaniaAmenities from "../../components/destinations/transylvania/TransylvaniaAmenities";
 import TransylvaniaInfoBanner from "../../components/destinations/transylvania/TransylvaniaInfoBanner";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
@@ -187,7 +186,7 @@ const Transylvania100 = () => {
           </div>
         </div>
         <div className="mt-16">
-          <IncludedAmenities className="bg-transparent" />
+          <TransylvaniaAmenities className="bg-transparent" />
         </div>
         
         <div className="container mx-auto px-4 py-12">

@@ -1,5 +1,5 @@
+
 import React from 'react';
-import { Bath, Utensils, Shirt, Users } from 'lucide-react';
 
 interface AmenityProps {
   icon: string | React.ReactNode;
@@ -26,11 +26,11 @@ const Amenity = ({ icon, title, description, isLucideIcon = false }: AmenityProp
   );
 };
 
-interface IncludedAmenitiesProps {
+interface TransylvaniaAmenitiesProps {
   className?: string;
 }
 
-const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
+const TransylvaniaAmenities = ({ className = "" }: TransylvaniaAmenitiesProps) => {
   const amenities = [
     {
       icon: "/lovable-uploads/a372fe5f-3385-44a7-bb8b-4961448afc3d.png",
@@ -50,7 +50,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/ba002ac9-1745-47a1-a01f-ca8bfa53b60d.png",
       title: "Luxury Hotel",
-      description: "5-star hotel accommodation"
+      description: "4-star hotel accommodation"
     },
     {
       icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
@@ -101,4 +101,4 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
   );
 };
 
-export default IncludedAmenities;
+export default TransylvaniaAmenities;
