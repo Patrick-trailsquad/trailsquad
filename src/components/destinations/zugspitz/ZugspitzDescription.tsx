@@ -1,9 +1,10 @@
-
 import React from 'react';
+import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ZugspitzDescription = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mb-8">
       <div>
         <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
         <p className="text-lg">
@@ -33,6 +34,22 @@ const ZugspitzDescription = () => {
           city - the perfect blend of athletic challenge and cultural discovery in the heart of the German Alps.
         </p>
       </div>
+      
+      <Button 
+        asChild
+        variant="charcoal"
+        size="md"
+      >
+        <a 
+          href="https://www.zugspitz-ultratrail.com/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2"
+        >
+          Visit Official Race Website
+          <ExternalLink className="w-4 h-4" />
+        </a>
+      </Button>
     </div>
   );
 };
