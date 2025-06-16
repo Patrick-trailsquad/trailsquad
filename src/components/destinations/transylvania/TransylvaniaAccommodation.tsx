@@ -47,9 +47,9 @@ const TransylvaniaAccommodation = () => {
               ))}
             </div>
           </div>
-          <h2 className="font-cabinet text-xl text-terra mb-4">Poiana Brașov, Brașov County</h2>
+          <h2 className="font-cabinet text-xl text-terra mb-4">5-Star Luxury Resort • Poiana Brașov, Brașov County</h2>
           <p className="text-lg">
-            Nestled in the Carpathian Mountains, <b>Swissôtel Poiana Brasov</b> is an elegant alpine retreat with modern Swiss design, spectacular mountain views, and direct access to Romania’s premier mountain resort.
+            Nestled in the Carpathian Mountains, <b>Swissôtel Poiana Brasov</b> is an elegant 5-star alpine retreat with modern Swiss design, spectacular mountain views, and direct access to Romania's premier mountain resort.
           </p>
           <p className="text-lg mt-4">
             After a day on the trails, unwind in spacious rooms, enjoy the state-of-the-art spa and wellness center, and discover a selection of gourmet restaurants.
