@@ -20,8 +20,8 @@ const RibeiraAmenities = ({ className = "" }: RibeiraAmenitiesProps) => {
     },
     {
       icon: <Utensils className="w-6 h-6 text-terra" />,
-      title: "Breakfasts and dinners included",
-      description: "Half board meal plan throughout your stay"
+      title: "Half board",
+      description: "Breakfast and dinner included daily"
     },
     {
       icon: <Car className="w-6 h-6 text-terra" />,
