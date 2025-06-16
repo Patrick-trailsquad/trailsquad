@@ -13,10 +13,12 @@ const ZugspitzMediaSection = () => {
   return (
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
-        <img
-          src="https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1200&q=80"
-          alt="Zugspitz Ultratrail mountain scenery"
-          className="w-full h-full object-cover"
+        <iframe
+          src="https://www.youtube.com/embed/mPx3YCji3kU"
+          title="Zugspitz Ultratrail Video"
+          className="w-full h-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
         />
       </div>
 
