@@ -1,17 +1,7 @@
 
 import React from 'react';
-import IconList from "../IconList";
 
 const ZugspitzDescription = () => {
-  const includedItems = [
-    { type: 'entry' as const, text: 'Official race entry for Zugspitz Ultratrail' },
-    { type: 'travel' as const, text: 'Round trip flights from Copenhagen' },
-    { type: 'transport' as const, text: 'Airport transfers and local transportation' },
-    { type: 'hotel' as const, text: '4-star hotel accommodation in Garmisch-Partenkirchen' },
-    { type: 'coaching' as const, text: 'Pre-race briefing and trail strategy session' },
-    { type: 'schedule' as const, text: 'Guided training run in the Bavarian Alps' }
-  ];
-
   return (
     <div className="space-y-6">
       <div>
@@ -31,11 +21,6 @@ const ZugspitzDescription = () => {
           </p>
         </div>
       </div>
-      
-      <IconList
-        title="What's Included"
-        items={includedItems}
-      />
     </div>
   );
 };
