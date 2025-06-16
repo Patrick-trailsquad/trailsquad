@@ -4,7 +4,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import Footer from "../../components/Footer";
-import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import RibeiraAmenities from "../../components/destinations/ribeira-sacra/RibeiraAmenities";
 import RibeiraHero from "../../components/destinations/ribeira-sacra/RibeiraHero";
 import RibeiraInfoBanner from "../../components/destinations/ribeira-sacra/RibeiraInfoBanner";
 import RibeiraDescription from "../../components/destinations/ribeira-sacra/RibeiraDescription";
@@ -30,7 +30,7 @@ const RibeiraSacra = () => {
       </div>
       
       <div className="mt-16">
-        <IncludedAmenities className="bg-transparent" />
+        <RibeiraAmenities className="bg-transparent" />
       </div>
       
       <div className="container mx-auto px-4 py-12">
