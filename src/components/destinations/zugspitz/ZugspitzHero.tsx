@@ -6,7 +6,7 @@ const ZugspitzHero = () => {
   return (
     <div className="relative h-[70vh]">
       <img
-        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80"
+        src="/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png"
         alt="Zugspitz Ultratrail in the Bavarian Alps"
         className="w-full h-full object-cover"
       />

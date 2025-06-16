@@ -39,7 +39,7 @@ const destinations = [
     href: "/destinations/transylvania"
   },
   {
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png",
     location: "Zugspitz Ultratrail, Germany",
     date: "June 2026",
     spots: "12 spots",
