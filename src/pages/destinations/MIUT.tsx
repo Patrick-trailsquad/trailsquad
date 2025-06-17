@@ -131,7 +131,7 @@ const MIUT = () => {
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <p className="text-sm text-gray-600 mb-1">Starting from</p>
-                  <p className="font-cabinet text-4xl font-bold text-charcoal">9.500 DKK</p>
+                  <p className="font-cabinet text-4xl font-bold text-charcoal">12.000 DKK</p>
                   <p className="text-sm text-gray-500">incl. VAT</p>
                 </div>
                 <div className="text-right">
