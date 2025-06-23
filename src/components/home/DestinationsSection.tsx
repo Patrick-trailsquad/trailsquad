@@ -35,7 +35,7 @@ const destinations = [
     image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
     location: "Transylvania 100, Romania",
     date: "May 2026",
-    spots: "Opens later",
+    spots: "13 spots",
     href: "/destinations/transylvania"
   },
   {
