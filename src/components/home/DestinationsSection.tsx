@@ -55,6 +55,9 @@ const destinations = [
 ];
 
 const DestinationsSection = () => {
+  // Filter out Chianti destination for now
+  const visibleDestinations = destinations.filter(dest => dest.href !== "/destinations/chianti");
+
   return (
     <section id="upcoming-trips" className="py-24 bg-stone">
       <div className="container mx-auto px-4">
@@ -68,7 +71,7 @@ const DestinationsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((trip, index) => (
+          {visibleDestinations.map((trip, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
