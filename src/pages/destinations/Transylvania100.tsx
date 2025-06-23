@@ -1,4 +1,3 @@
-
 import { ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -164,8 +163,8 @@ const Transylvania100 = () => {
                       </AccordionTrigger>
                       <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                         <div>
-                          The price for a <b>Shared Superior Room</b> is 8.250 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
-                          The price for an <b>Individual Double Room</b> is 9.550 DKK.<br /><br />
+                          The price for a <b>Shared Swiss Grand Room</b> is 8.250 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
+                          The price for an <b>Individual Swiss Grand Room</b> is 11.500 DKK.<br /><br />
                           VAT is included in all prices.
                         </div>
                       </AccordionContent>
