@@ -1,3 +1,4 @@
+
 import { ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -13,6 +14,13 @@ import TransylvaniaAccommodation from "../../components/destinations/transylvani
 import { useIsMobile } from "../../hooks/use-mobile";
 import TransylvaniaHero from "../../components/destinations/transylvania/TransylvaniaHero";
 import TransylvaniaIncludedAmenities from "../../components/destinations/transylvania/TransylvaniaIncludedAmenities";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 const Transylvania100 = () => {
   const [email, setEmail] = useState('');
@@ -20,6 +28,7 @@ const Transylvania100 = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
   const isMobile = useIsMobile();
+  const spotsLeft = 13;
   useScrollToTop();
   usePageTitle("Transylvania 100");
   
@@ -139,31 +148,40 @@ const Transylvania100 = () => {
             </div>
             
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Starting from</p>
-                  <p className="font-cabinet text-4xl font-bold text-charcoal">8.250 DKK</p>
-                  <p className="text-sm text-gray-500">incl. VAT</p>
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                <div className="col-span-2 space-y-1">
+                  <p className="text-sm text-gray-600">Prices start at</p>
+                  <p className="font-cabinet text-4xl font-bold text-charcoal">
+                    8.250 DKK <span className="text-sm text-gray-500">incl. VAT</span>
+                  </p>
+                  <Accordion type="single" collapsible className="w-full mt-2">
+                    <AccordionItem value="price-details" className="border-none">
+                      <AccordionTrigger
+                        className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] after:hidden focus:ring-0 focus:outline-none"
+                        style={{ background: 'none', boxShadow: 'none' }}
+                      >
+                        Explain price variations
+                      </AccordionTrigger>
+                      <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
+                        <div>
+                          The price for a <b>Shared Superior Room</b> is 8.250 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
+                          The price for an <b>Individual Double Room</b> is 9.550 DKK.<br /><br />
+                          VAT is included in all prices.
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
-                <div className="text-right">
-                  <p className="text-sm text-gray-600 mb-1">Registration status</p>
-                  <div className="bg-[#FFDC00] px-3 py-1.5 rounded-full">
-                    <p className="font-cabinet text-sm font-medium text-black">
-                      13 spots
-                    </p>
-                  </div>
+                <div className="col-span-2">
+                  <p className="text-sm text-gray-600 mb-1">Trip status</p>
+                  <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} spots left</p>
                 </div>
               </div>
-              <div className="text-center py-8">
-                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Book your spot now</h3>
-                <Button 
-                  variant="black"
-                  size="xl"
-                  className="w-full"
-                >
-                  Book now
-                </Button>
-              </div>
+              <PriceQuoteForm 
+                destinationName="Transylvania 100"
+                availableDistances={["20km", "30km", "50km", "80km", "100km"]}
+                maxParticipants={spotsLeft}
+              />
             </div>
           </div>
         </div>
