@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
 import SocialLinks from "./footer/SocialLinks";
 import PolicyLinks from "./footer/PolicyLinks";
 import { useIsMobile } from "../hooks/use-mobile";
+import DestinationLinks from "./footer/DestinationLinks";
 
 const Footer = () => {
   const [selectedPolicy, setSelectedPolicy] = useState<{
@@ -41,16 +41,26 @@ const Footer = () => {
   return (
     <footer className="bg-white py-8 border-t">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           {/* On mobile: Trail Squad logo first */}
           {isMobile && trailSquadLogo}
           
-          {/* Desktop layout: Trail Squad logo (left) - Rejsegaranti (middle) - SoMe (right) */}
+          {/* Desktop layout with destinations as first column */}
           {!isMobile && (
             <>
-              {trailSquadLogo}
+              <div className="flex gap-20">
+                <DestinationLinks />
+                {trailSquadLogo}
+              </div>
               {rejsegarantiLogo}
             </>
+          )}
+          
+          {/* Mobile layout with destinations after logo */}
+          {isMobile && (
+            <div className="w-full">
+              <DestinationLinks />
+            </div>
           )}
           
           <div className="flex gap-20">
