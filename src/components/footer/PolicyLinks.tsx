@@ -67,7 +67,7 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
       title: "Cookie Policy",
       content: `Cookie Policy
 
-Effective Date: 1st of March 2026
+Effective Date: 1st of March 2025
 
 1. Introduction
 Trail Squad ("we," "our," "us") currently does not use any cookies or similar tracking technologies on our website.
@@ -95,7 +95,7 @@ Email: hello@trailsquad.dk`,
       title: "Terms & Conditions",
       content: `Terms & Conditions
 
-Effective Date: 1st of March 2026
+Effective Date: 1st of March 2025
 
 1. Introduction
 Welcome to Trail Squad ApS ("we," "our," "us"). By using our website and services, you agree to these Terms & Conditions. If you do not agree, please do not use our services.
