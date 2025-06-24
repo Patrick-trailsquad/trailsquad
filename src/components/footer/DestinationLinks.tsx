@@ -21,9 +21,9 @@ const DestinationLinks = () => {
         <Link
           key={destination.href}
           to={destination.href}
-          className="group block"
+          className="group flex items-center justify-between"
         >
-          <div className="text-gray-600 hover:text-terra transition-colors duration-200 text-sm mb-1">
+          <div className="text-gray-600 hover:text-terra transition-colors duration-200 text-sm">
             {destination.name}
           </div>
           <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded-full ${
