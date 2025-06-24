@@ -12,13 +12,16 @@ const destinations = [
 ];
 
 const DestinationLinks = () => {
+  // Filter out Vesuvio destination to match the main destinations section
+  const visibleDestinations = destinations.filter(dest => dest.href !== "/destinations/vesuvio");
+
   return (
-    <div className="space-y-3">
-      {destinations.map((destination) => (
+    <div className="grid grid-cols-1 gap-3">
+      {visibleDestinations.map((destination) => (
         <Link
           key={destination.href}
           to={destination.href}
-          className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
+          className="text-gray-600 hover:text-terra transition-colors duration-200 text-sm"
         >
           {destination.name}
         </Link>
