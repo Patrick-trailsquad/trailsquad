@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
@@ -45,35 +46,31 @@ const Footer = () => {
           {/* On mobile: Trail Squad logo first */}
           {isMobile && trailSquadLogo}
           
-          {/* Desktop layout with destinations as first column */}
+          {/* Desktop layout */}
           {!isMobile && (
             <>
-              <div className="flex gap-20">
-                <DestinationLinks />
-                {trailSquadLogo}
-              </div>
+              {trailSquadLogo}
               {rejsegarantiLogo}
+              <DestinationLinks />
             </>
           )}
           
           {/* Mobile layout with destinations after logo */}
           {isMobile && (
-            <div className="w-full">
-              <DestinationLinks />
-            </div>
+            <>
+              <div className="w-full">
+                <DestinationLinks />
+              </div>
+              <div className="mt-6">
+                {rejsegarantiLogo}
+              </div>
+            </>
           )}
           
           <div className="flex gap-20">
             <SocialLinks />
             <PolicyLinks onPolicyClick={setSelectedPolicy} />
           </div>
-          
-          {/* On mobile: Rejsegaranti logo last */}
-          {isMobile && (
-            <div className="mt-6">
-              {rejsegarantiLogo}
-            </div>
-          )}
         </div>
       </div>
 
