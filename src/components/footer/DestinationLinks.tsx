@@ -21,7 +21,7 @@ const DestinationLinks = () => {
         <Link
           key={destination.href}
           to={destination.href}
-          className="group flex items-center justify-between"
+          className="group flex items-center gap-3"
         >
           <div className="text-gray-600 hover:text-terra transition-colors duration-200 text-sm">
             {destination.name}
