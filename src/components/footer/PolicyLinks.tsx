@@ -1,3 +1,4 @@
+
 const PolicyLinks = ({ onPolicyClick }: { onPolicyClick: (policy: { title: string; content: string }) => void }) => {
   const policies = {
     privacy: {
@@ -148,22 +149,22 @@ Email: hello@trailsquad.dk`,
   };
 
   return (
-    <div className="flex flex-col items-start gap-2 text-sm text-charcoal/80">
+    <div className="space-y-3">
       <button 
         onClick={() => onPolicyClick(policies.privacy)}
-        className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+        className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
       >
         Privacy Notice
       </button>
       <button 
         onClick={() => onPolicyClick(policies.cookies)}
-        className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+        className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
       >
         Cookie Policy
       </button>
       <button 
         onClick={() => onPolicyClick(policies.terms)}
-        className="relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-terra after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+        className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
       >
         Terms & Conditions
       </button>

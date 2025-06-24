@@ -20,7 +20,7 @@ const Footer = () => {
       <img 
         src="/lovable-uploads/e0a85598-cd64-4bf2-b36d-53e9de986ac3.png" 
         alt="Rejsegaranti Fonden - Travel Guarantee Denmark" 
-        className={`${isMobile ? 'h-12' : 'h-16'} object-contain`} 
+        className={`${isMobile ? 'h-10' : 'h-12'} object-contain`} 
       />
     </div>
   );
@@ -28,39 +28,58 @@ const Footer = () => {
   const trailSquadLogo = (
     <button 
       onClick={() => navigateAndScroll('/', 'top')} 
-      className="flex items-center justify-center md:justify-start gap-4"
+      className="flex items-center justify-center md:justify-start gap-3 group"
     >
       <img 
         src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
         alt="Trail Squad Logo" 
         className="h-8" 
       />
-      <span className="font-cabinet text-charcoal font-semibold">Trail Squad ApS</span>
+      <span className="font-cabinet text-charcoal font-semibold group-hover:text-terra transition-colors">Trail Squad ApS</span>
     </button>
   );
 
   return (
-    <footer className="bg-white py-12 border-t">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Destinations Section - 2 columns */}
-          <div className="mb-12">
-            <h3 className="font-cabinet font-semibold text-charcoal text-xl mb-6 text-center md:text-left">
-              Our Destinations
-            </h3>
-            <DestinationLinks />
+    <footer className="bg-white border-t border-gray-100">
+      <div className="container mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            {/* Brand Section */}
+            <div className="space-y-6">
+              {trailSquadLogo}
+              <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
+                Experience epic trail running adventures across Europe with our expertly curated trips.
+              </p>
+              <SocialLinks />
+            </div>
+
+            {/* Destinations */}
+            <div>
+              <h3 className="font-cabinet font-semibold text-charcoal text-lg mb-6">
+                Our Destinations
+              </h3>
+              <DestinationLinks />
+            </div>
+
+            {/* Legal & Support */}
+            <div>
+              <h3 className="font-cabinet font-semibold text-charcoal text-lg mb-6">
+                Support & Legal
+              </h3>
+              <PolicyLinks onPolicyClick={setSelectedPolicy} />
+            </div>
           </div>
 
-          {/* Links Section */}
-          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-8 mb-12">
-            <SocialLinks />
-            <PolicyLinks onPolicyClick={setSelectedPolicy} />
-          </div>
-
-          {/* Logos Section */}
-          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-8 pt-8 border-t border-gray-200">
-            {trailSquadLogo}
-            {rejsegarantiLogo}
+          {/* Bottom Section */}
+          <div className="pt-8 border-t border-gray-100">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <div className="text-sm text-gray-500 text-center md:text-left">
+                © {new Date().getFullYear()} Trail Squad ApS. All rights reserved.
+              </div>
+              {rejsegarantiLogo}
+            </div>
           </div>
         </div>
       </div>

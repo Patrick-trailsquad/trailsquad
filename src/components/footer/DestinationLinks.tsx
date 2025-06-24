@@ -13,12 +13,12 @@ const destinations = [
 
 const DestinationLinks = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+    <div className="space-y-3">
       {destinations.map((destination) => (
         <Link
           key={destination.href}
           to={destination.href}
-          className="text-sm text-gray-600 hover:text-charcoal transition-colors py-1"
+          className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
         >
           {destination.name}
         </Link>
