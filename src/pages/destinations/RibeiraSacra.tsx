@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -41,7 +40,7 @@ const RibeiraSacra = () => {
       <RibeiraHero />
       <RibeiraInfoBanner />
 
-      <div className="container mx-auto px-3 md:px-6 py-8 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <RibeiraDescription />
           <RibeiraMediaSection />
@@ -119,7 +118,7 @@ const RibeiraSacra = () => {
         </svg>
       </div>
       
-      <div className="container mx-auto px-3 md:px-6 py-8 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
         <div className={isMobile ? "mb-12" : ""}>
           <RibeiraAccommodation />
         </div>

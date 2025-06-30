@@ -1,4 +1,3 @@
-
 import { ExternalLink, Clock, ThumbsUp } from "lucide-react";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -98,7 +97,7 @@ const Transylvania100 = () => {
 
       <TransylvaniaInfoBanner />
 
-      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
@@ -275,7 +274,7 @@ const Transylvania100 = () => {
           </svg>
         </div>
         
-        <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+        <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
           <div className={isMobile ? "mb-8" : ""}>
             <TransylvaniaAccommodation />
           </div>
