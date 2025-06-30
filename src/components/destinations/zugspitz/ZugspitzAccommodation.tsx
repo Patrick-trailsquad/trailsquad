@@ -9,10 +9,10 @@ const ZugspitzAccommodation = () => {
   
   return (
     <div className="bg-white rounded-xl overflow-hidden">
-      <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"}`}>
-        <div className="relative">
-          <Carousel className="w-full" opts={{ loop: true }}>
-            <CarouselContent>
+      <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"} min-h-[450px]`}>
+        <div className="relative flex">
+          <Carousel className="w-full h-full" opts={{ loop: true }}>
+            <CarouselContent className="h-full">
               {[
                 "/lovable-uploads/30268898-0fdd-471e-a3a9-0ca6878dc32b.png",
                 "/lovable-uploads/1c46acfc-b2ec-40ff-9e27-72808cf9bbb8.png",
@@ -24,8 +24,8 @@ const ZugspitzAccommodation = () => {
                 "/lovable-uploads/17b26aa9-6d02-43d3-ac64-3f1d51bb6e93.png",
                 "/lovable-uploads/6048864c-8779-4367-b810-28acbdf0456b.png"
               ].map((src, index) => (
-                <CarouselItem key={index}>
-                  <div className="h-[450px] rounded-xl overflow-hidden">
+                <CarouselItem key={index} className="h-full">
+                  <div className="h-full rounded-xl overflow-hidden">
                     <img 
                       src={src} 
                       alt={`Werdenfelserei image ${index + 1}`} 
