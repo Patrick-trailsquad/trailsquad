@@ -34,7 +34,7 @@ const RibeiraSacra = () => {
       </div>
       
       {/* Decorative Lines Section */}
-      <div className="relative py-16 mb-16">
+      <div className="relative py-16 mb-24">
         <svg 
           className="absolute top-0 left-0 w-full h-32 md:h-64"
           viewBox="0 0 1200 200" 
