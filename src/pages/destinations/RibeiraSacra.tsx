@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -47,12 +48,12 @@ const RibeiraSacra = () => {
         </div>
       </div>
       
-      <div className="mt-20">
+      <div className="mt-12">
         <IncludedAmenities className="bg-transparent" />
       </div>
       
       {/* Decorative Lines Section */}
-      <div ref={linesRef} className="relative py-20 mb-28">
+      <div ref={linesRef} className="relative py-12 mb-16">
         <svg 
           className="absolute top-0 left-0 w-full h-32 md:h-64"
           viewBox="0 0 1200 200" 
