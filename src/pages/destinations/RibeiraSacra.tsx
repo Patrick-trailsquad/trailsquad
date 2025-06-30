@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -16,6 +16,25 @@ const RibeiraSacra = () => {
   useScrollToTop();
   usePageTitle('Trail Ribeira Sacra');
   const isMobile = useIsMobile();
+  const [isLinesVisible, setIsLinesVisible] = useState(false);
+  const linesRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isLinesVisible) {
+          setIsLinesVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (linesRef.current) {
+      observer.observe(linesRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isLinesVisible]);
   
   return (
     <div className="min-h-screen bg-stone">
@@ -34,7 +53,7 @@ const RibeiraSacra = () => {
       </div>
       
       {/* Decorative Lines Section */}
-      <div className="relative py-16 mb-24">
+      <div ref={linesRef} className="relative py-16 mb-24">
         <svg 
           className="absolute top-0 left-0 w-full h-32 md:h-64"
           viewBox="0 0 1200 200" 
@@ -49,8 +68,10 @@ const RibeiraSacra = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             style={{ 
-              strokeDasharray: '8,8',
-              opacity: 0.8 
+              strokeDasharray: '1200',
+              strokeDashoffset: isLinesVisible ? '0' : '1200',
+              opacity: 0.8,
+              transition: 'stroke-dashoffset 2s ease-out'
             }}
           />
           <path
@@ -60,7 +81,12 @@ const RibeiraSacra = () => {
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
-            style={{ opacity: 0.6 }}
+            style={{ 
+              strokeDasharray: '1400',
+              strokeDashoffset: isLinesVisible ? '0' : '1400',
+              opacity: 0.6,
+              transition: 'stroke-dashoffset 2.5s ease-out 0.3s'
+            }}
           />
           <path
             d="M50 200 C150 170 250 140 350 120 C450 160 550 180 650 190 C750 140 850 100 950 80"
@@ -69,8 +95,12 @@ const RibeiraSacra = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeDasharray="5,15"
-            style={{ opacity: 0.4 }}
+            style={{ 
+              strokeDasharray: '1000',
+              strokeDashoffset: isLinesVisible ? '0' : '1000',
+              opacity: 0.4,
+              transition: 'stroke-dashoffset 2.2s ease-out 0.6s'
+            }}
           />
           <path
             d="M0 200 C100 160 200 130 300 110 C400 150 500 170 600 185 C700 130 800 90 900 70"
@@ -79,7 +109,12 @@ const RibeiraSacra = () => {
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            style={{ opacity: 0.3 }}
+            style={{ 
+              strokeDasharray: '900',
+              strokeDashoffset: isLinesVisible ? '0' : '900',
+              opacity: 0.3,
+              transition: 'stroke-dashoffset 1.8s ease-out 0.9s'
+            }}
           />
         </svg>
       </div>
