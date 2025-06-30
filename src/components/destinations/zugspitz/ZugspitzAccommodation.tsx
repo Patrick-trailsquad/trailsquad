@@ -50,21 +50,19 @@ const ZugspitzAccommodation = () => {
           </div>
           <h2 className="font-cabinet text-xl text-terra mb-4">Garmisch-Partenkirchen, Bavaria</h2>
           <p className="text-lg">
-            Welcome to the WERDENFELSEREI – a family-owned hotel situated at the foot of the Zugspitze, 
-            the mountain of mountains. Surrounded by impressive peaks and phenomenal views, this is the 
-            perfect basecamp for your trail running adventure through Bavaria's most spectacular terrain.
+            Welcome to the WERDENFELSEREI – a family-owned hotel at the foot of the Zugspitze, 
+            the mountain of mountains. Surrounded by impressive peaks, this is the perfect basecamp 
+            for your trail running adventure through Bavaria's spectacular terrain.
           </p>
           <p className="text-lg mt-4">
-            After conquering the trails, enjoy a special time-out to relax and switch off. Dive into the 
-            rooftop pool with stunning views of the Wetterstein mountains, feast on unmistakable culinary 
-            delights, and let your tired muscles recover in true Alpine comfort. The perfect reward after 
-            a day of trail running through some of Europe's most challenging and beautiful landscapes.
+            After conquering the trails, enjoy a special time-out to relax. Dive into the rooftop 
+            pool with stunning Wetterstein mountain views, feast on culinary delights, and let your 
+            muscles recover in true Alpine comfort.
           </p>
           <p className="text-lg mt-4">
-            Round off your evening with a drink at Bar neun10, perhaps sharing trail stories with fellow 
-            runners and your hosts. Experience the personal, informal, and familiar atmosphere that makes 
-            the WERDENFELSEREI the ideal retreat for trail running groups seeking both adventure and 
-            authentic Bavarian hospitality.
+            Round off your evening with a drink at Bar neun10, sharing trail stories with fellow 
+            runners and your hosts. Experience the personal, familiar atmosphere that makes the 
+            WERDENFELSEREI ideal for trail running groups.
           </p>
         </div>
       </div>
