@@ -2,6 +2,7 @@
 import React from 'react';
 import { Star } from "lucide-react";
 import { useIsMobile } from "../../../hooks/use-mobile";
+import ZugspitzAccommodationCarousel from './ZugspitzAccommodationCarousel';
 
 const ZugspitzAccommodation = () => {
   const isMobile = useIsMobile();
@@ -10,13 +11,7 @@ const ZugspitzAccommodation = () => {
     <div className="bg-white rounded-xl overflow-hidden">
       <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"}`}>
         <div className="relative">
-          <div className="h-[450px] rounded-xl overflow-hidden">
-            <img 
-              src="https://www.werdenfelserei.de/wp-content/uploads/2023/08/Werdenfelserei-Aussenansicht-Sommer-2023-1024x683.jpg"
-              alt="Werdenfelserei traditional Bavarian guesthouse exterior in Garmisch-Partenkirchen" 
-              className="w-full h-full object-cover" 
-            />
-          </div>
+          <ZugspitzAccommodationCarousel />
         </div>
         <div className="p-8 flex flex-col justify-center">
           <div className="flex items-center mb-2">
