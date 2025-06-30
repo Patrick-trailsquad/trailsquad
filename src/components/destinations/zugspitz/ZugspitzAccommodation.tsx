@@ -50,19 +50,21 @@ const ZugspitzAccommodation = () => {
           </div>
           <h2 className="font-cabinet text-xl text-terra mb-4">Garmisch-Partenkirchen, Bavaria</h2>
           <p className="text-lg">
-            Stay at the charming Werdenfelserei, a traditional Bavarian guesthouse located in the heart of 
-            Garmisch-Partenkirchen. This authentic accommodation offers the perfect blend of rustic Alpine 
-            charm and modern comfort, providing an intimate and cozy atmosphere for your trail running adventure.
+            Welcome to the WERDENFELSEREI – a family-owned hotel situated at the foot of the Zugspitze, 
+            the mountain of mountains. Surrounded by impressive peaks and phenomenal views, this is the 
+            perfect basecamp for your trail running adventure through Bavaria's most spectacular terrain.
           </p>
           <p className="text-lg mt-4">
-            The Werdenfelserei captures the essence of Bavarian hospitality with its warm, welcoming ambiance 
-            and traditional decor. Each room is thoughtfully designed to reflect the local heritage while 
-            ensuring modern amenities for your comfort after a day on the trails.
+            After conquering the trails, enjoy a special time-out to relax and switch off. Dive into the 
+            rooftop pool with stunning views of the Wetterstein mountains, feast on unmistakable culinary 
+            delights, and let your tired muscles recover in true Alpine comfort. The perfect reward after 
+            a day of trail running through some of Europe's most challenging and beautiful landscapes.
           </p>
           <p className="text-lg mt-4">
-            Perfectly positioned for exploring the Zugspitz region, the guesthouse offers easy access to 
-            the race routes while immersing you in the authentic culture and traditions of this historic 
-            Alpine town. Experience genuine Bavarian warmth and hospitality at this special accommodation.
+            Round off your evening with a drink at Bar neun10, perhaps sharing trail stories with fellow 
+            runners and your hosts. Experience the personal, informal, and familiar atmosphere that makes 
+            the WERDENFELSEREI the ideal retreat for trail running groups seeking both adventure and 
+            authentic Bavarian hospitality.
           </p>
         </div>
       </div>
