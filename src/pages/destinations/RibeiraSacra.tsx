@@ -44,7 +44,7 @@ const RibeiraSacra = () => {
           <path
             d="M0 180 C100 120 150 100 300 80 C350 70 380 120 400 140 C450 100 480 70 500 60 C550 90 580 140 600 160 C650 120 750 60 800 40 C900 70 950 100 1000 120 C1100 90 1150 85 1200 80"
             fill="none"
-            stroke="black"
+            stroke="#FFDC00"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -65,7 +65,7 @@ const RibeiraSacra = () => {
           <path
             d="M50 200 C150 170 250 140 350 120 C450 160 550 180 650 190 C750 140 850 100 950 80"
             fill="none"
-            stroke="black"
+            stroke="#FFDC00"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
