@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -63,7 +64,7 @@ const MIUT = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
@@ -154,7 +155,7 @@ const MIUT = () => {
         <IncludedAmenities className="bg-transparent" />
       </div>
       
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         <SavoyPalaceCarousel />
         
         <BackToDestinationsButton />

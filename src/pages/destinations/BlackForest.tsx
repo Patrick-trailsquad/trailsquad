@@ -30,7 +30,7 @@ const BlackForest = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Black Forest Ultra Trail, Germany
         </h1>
