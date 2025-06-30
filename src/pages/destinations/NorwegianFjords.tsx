@@ -1,4 +1,3 @@
-
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -32,7 +31,7 @@ const NorwegianFjords = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+      <div className="container mx-auto px-3 md:px-6 py-8 md:py-16">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Norwegian Fjords
         </h1>
