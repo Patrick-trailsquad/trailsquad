@@ -63,7 +63,7 @@ const MIUT = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
@@ -150,11 +150,11 @@ const MIUT = () => {
         </div>
       </div>
       
-      <div className="mt-16">
+      <div className="mt-12">
         <IncludedAmenities className="bg-transparent" />
       </div>
       
-      <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
         <SavoyPalaceCarousel />
         
         <BackToDestinationsButton />

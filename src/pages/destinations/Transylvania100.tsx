@@ -97,7 +97,7 @@ const Transylvania100 = () => {
 
       <TransylvaniaInfoBanner />
 
-      <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
@@ -203,12 +203,12 @@ const Transylvania100 = () => {
             </div>
           </div>
         </div>
-        <div className="mt-16">
+        <div className="mt-12">
           <TransylvaniaIncludedAmenities className="bg-transparent" />
         </div>
         
         {/* Decorative Lines Section */}
-        <div ref={linesRef} className="relative py-16 mb-24">
+        <div ref={linesRef} className="relative py-12 mb-16">
           <svg 
             className="absolute top-0 left-0 w-full h-32 md:h-64"
             viewBox="0 0 1200 200" 
@@ -274,7 +274,7 @@ const Transylvania100 = () => {
           </svg>
         </div>
         
-        <div className="container mx-auto px-2 md:px-6 py-6 md:py-16">
+        <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
           <div className={isMobile ? "mb-8" : ""}>
             <TransylvaniaAccommodation />
           </div>
