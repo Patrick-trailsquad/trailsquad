@@ -12,8 +12,8 @@ const ZugspitzAccommodation = () => {
         <div className="relative">
           <div className="h-[450px] rounded-xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
-              alt="Werdenfelserei Hotel in Garmisch-Partenkirchen with Alpine views" 
+              src="https://www.werdenfelserei.de/wp-content/uploads/2023/08/Werdenfelserei-Aussenansicht-Sommer-2023-1024x683.jpg"
+              alt="Werdenfelserei traditional Bavarian guesthouse exterior in Garmisch-Partenkirchen" 
               className="w-full h-full object-cover" 
             />
           </div>
