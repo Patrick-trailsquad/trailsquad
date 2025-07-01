@@ -9,6 +9,7 @@ import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Footer from "../../components/Footer";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import GTCAccommodation from "../../components/destinations/gtc/GTCAccommodation";
 import GTCInfoBanner from "../../components/destinations/gtc/GTCInfoBanner";
 
 const SwissAlps = () => {
@@ -278,6 +279,10 @@ const SwissAlps = () => {
               }}
             />
           </svg>
+        </div>
+        
+        <div className="mb-12">
+          <GTCAccommodation />
         </div>
         
         <BackToDestinationsButton />
