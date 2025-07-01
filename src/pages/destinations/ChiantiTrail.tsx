@@ -215,7 +215,7 @@ const ChiantiTrail = () => {
         </div>
         
         {/* Decorative Lines Section */}
-        <div ref={linesRef} className="relative py-12 mb-16">
+        <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
           <svg 
             className="absolute top-0 left-0 w-full h-32 md:h-64"
             viewBox="0 0 1200 200" 
