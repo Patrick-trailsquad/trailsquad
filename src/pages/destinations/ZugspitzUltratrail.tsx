@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
@@ -53,7 +52,7 @@ const ZugspitzUltratrail = () => {
       </div>
       
       {/* Decorative Lines Section */}
-      <div ref={linesRef} className="relative py-12 mb-8">
+      <div ref={linesRef} className="relative py-12 mb-24">
         <svg 
           className="absolute top-0 left-0 w-full h-32 md:h-64"
           viewBox="0 0 1200 200" 
