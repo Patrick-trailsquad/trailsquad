@@ -1,9 +1,8 @@
 
 import React from 'react';
-import { Star, ExternalLink } from "lucide-react";
+import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "../../../hooks/use-mobile";
-import { Button } from "@/components/ui/button";
 
 const GTCAccommodation = () => {
   const isMobile = useIsMobile();
@@ -54,23 +53,6 @@ const GTCAccommodation = () => {
           understands the needs of trail running athletes. The hotel's wellness facilities 
           provide the perfect recovery space after conquering the challenging alpine terrain.
         </p>
-        <div className="mt-6">
-          <Button 
-            asChild
-            variant="charcoal"
-            size="md"
-          >
-            <a 
-              href="https://www.aucoeurdesneiges.com/en/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2"
-            >
-              Visit Hotel Website
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </Button>
-        </div>
       </div>
     </div>
   );
