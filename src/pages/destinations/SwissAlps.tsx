@@ -217,7 +217,7 @@ const SwissAlps = () => {
         {/* Decorative Lines Section */}
         <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
           <svg 
-            className="absolute top-0 left-0 w-full h-32 md:h-64"
+            className="absolute top-0 left-0 w-full h-32 md:h-64 z-0"
             viewBox="0 0 1200 200" 
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
@@ -281,7 +281,7 @@ const SwissAlps = () => {
           </svg>
         </div>
         
-        <div className="mb-12">
+        <div className="mb-12 relative z-10">
           <GTCAccommodation />
         </div>
         
