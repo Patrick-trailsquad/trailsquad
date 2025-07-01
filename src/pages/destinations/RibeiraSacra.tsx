@@ -40,7 +40,7 @@ const RibeiraSacra = () => {
       <RibeiraHero />
       <RibeiraInfoBanner />
 
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
           <RibeiraDescription />
           <RibeiraMediaSection />
@@ -118,7 +118,7 @@ const RibeiraSacra = () => {
         </svg>
       </div>
       
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className={isMobile ? "mb-12" : ""}>
           <RibeiraAccommodation />
         </div>

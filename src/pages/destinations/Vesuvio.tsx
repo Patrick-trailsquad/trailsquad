@@ -1,3 +1,4 @@
+
 import { ArrowLeft, ExternalLink, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -102,7 +103,7 @@ const Vesuvio = () => {
 
       <VesuvioInfoBanner />
 
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Vesuvio Ultra Marathon, Italy
         </h1>

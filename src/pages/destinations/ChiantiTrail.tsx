@@ -102,7 +102,7 @@ const ChiantiTrail = () => {
 
       <ChiantiInfoBanner />
 
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
           Chianti Ultra Trail by UTMB, Italy
         </h1>
@@ -281,7 +281,7 @@ const ChiantiTrail = () => {
           </svg>
         </div>
         
-        <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
+        <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
           <ChiantiAccommodation />
           <BackToDestinationsButton />
         </div>

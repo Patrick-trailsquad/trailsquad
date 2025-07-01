@@ -97,7 +97,7 @@ const Transylvania100 = () => {
 
       <TransylvaniaInfoBanner />
 
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6 mb-8">
@@ -274,7 +274,7 @@ const Transylvania100 = () => {
           </svg>
         </div>
         
-        <div className="container mx-auto px-2 md:px-6 py-4 md:py-16">
+        <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
           <div className={isMobile ? "mb-8" : ""}>
             <TransylvaniaAccommodation />
           </div>
