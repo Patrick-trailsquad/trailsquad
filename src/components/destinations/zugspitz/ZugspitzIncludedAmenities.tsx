@@ -27,11 +27,11 @@ const Amenity = ({ icon, title, description, isLucideIcon = false }: AmenityProp
   );
 };
 
-interface IncludedAmenitiesProps {
+interface ZugspitzIncludedAmenitiesProps {
   className?: string;
 }
 
-const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
+const ZugspitzIncludedAmenities = ({ className = "" }: ZugspitzIncludedAmenitiesProps) => {
   const amenities = [
     {
       icon: "/lovable-uploads/a372fe5f-3385-44a7-bb8b-4961448afc3d.png",
@@ -56,7 +56,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
       title: "Local Cuisine",
-      description: "Breakfasts and dinners included"
+      description: "Breakfasts and lunches included"
     },
     {
       icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
@@ -102,4 +102,4 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
   );
 };
 
-export default IncludedAmenities;
+export default ZugspitzIncludedAmenities;

@@ -3,7 +3,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import Footer from "../../components/Footer";
-import IncludedAmenities from "../../components/destinations/IncludedAmenities";
+import ZugspitzIncludedAmenities from "../../components/destinations/zugspitz/ZugspitzIncludedAmenities";
 import ZugspitzHero from "../../components/destinations/zugspitz/ZugspitzHero";
 import ZugspitzInfoBanner from "../../components/destinations/zugspitz/ZugspitzInfoBanner";
 import ZugspitzDescription from "../../components/destinations/zugspitz/ZugspitzDescription";
@@ -48,7 +48,7 @@ const ZugspitzUltratrail = () => {
       </div>
       
       <div className="mt-12">
-        <IncludedAmenities className="bg-transparent" />
+        <ZugspitzIncludedAmenities className="bg-transparent" />
       </div>
       
       {/* Decorative Lines Section */}
