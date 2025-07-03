@@ -17,47 +17,45 @@ const TransylvaniaAccommodation = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="bg-white rounded-xl overflow-hidden">
-      <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"}`}>
-        <div className="relative">
-          <Carousel className="w-full" opts={{ loop: true }}>
-            <CarouselContent>
-              {images.map((src, index) => (
-                <CarouselItem key={index}>
-                  <div className="h-[450px] rounded-xl overflow-hidden">
-                    <img 
-                      src={src}
-                      alt={`Swissôtel Resort Alpin Poiana Brașov room or view ${index + 1}`} 
-                      className="w-full h-full object-cover" 
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
-          </Carousel>
-        </div>
-        <div className="p-8 flex flex-col justify-center">
-          <div className="flex items-center mb-2">
-            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Swissôtel Poiana Brasov</h1>
-            <div className="flex">
-              {[...Array(5)].map((_, index) => (
-                <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
-              ))}
-            </div>
+    <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"} gap-8`}>
+      <div className="relative">
+        <Carousel className="w-full" opts={{ loop: true }}>
+          <CarouselContent>
+            {images.map((src, index) => (
+              <CarouselItem key={index}>
+                <div className="h-[450px] rounded-xl overflow-hidden">
+                  <img 
+                    src={src}
+                    alt={`Swissôtel Resort Alpin Poiana Brașov room or view ${index + 1}`} 
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
+      </div>
+      <div className="flex flex-col justify-center">
+        <div className="flex items-center mb-2">
+          <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Swissôtel Poiana Brasov</h1>
+          <div className="flex">
+            {[...Array(5)].map((_, index) => (
+              <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
+            ))}
           </div>
-          <h2 className="font-cabinet text-xl text-terra mb-4">5-Star Luxury Resort • Poiana Brașov, Brașov County</h2>
-          <p className="text-lg">
-            Nestled in the Carpathian Mountains, <b>Swissôtel Poiana Brasov</b> is an elegant 5-star alpine retreat with modern Swiss design, spectacular mountain views, and direct access to Romania's premier mountain resort.
-          </p>
-          <p className="text-lg mt-4">
-            After a day on the trails, unwind in spacious rooms, enjoy the state-of-the-art spa and wellness center, and discover a selection of gourmet restaurants.
-          </p>
-          <p className="text-lg mt-4">
-            The tranquil mountain setting, luxurious amenities, and attentive service make Swissôtel Poiana Brasov the perfect base for your Transylvania 100 adventure—combining world-class hospitality and alpine atmosphere just minutes from the trails.
-          </p>
         </div>
+        <h2 className="font-cabinet text-xl text-terra mb-4">5-Star Luxury Resort • Poiana Brașov, Brașov County</h2>
+        <p className="text-lg">
+          Nestled in the Carpathian Mountains, <b>Swissôtel Poiana Brasov</b> is an elegant 5-star alpine retreat with modern Swiss design, spectacular mountain views, and direct access to Romania's premier mountain resort.
+        </p>
+        <p className="text-lg mt-4">
+          After a day on the trails, unwind in spacious rooms, enjoy the state-of-the-art spa and wellness center, and discover a selection of gourmet restaurants.
+        </p>
+        <p className="text-lg mt-4">
+          The tranquil mountain setting, luxurious amenities, and attentive service make Swissôtel Poiana Brasov the perfect base for your Transylvania 100 adventure—combining world-class hospitality and alpine atmosphere just minutes from the trails.
+        </p>
       </div>
     </div>
   );
