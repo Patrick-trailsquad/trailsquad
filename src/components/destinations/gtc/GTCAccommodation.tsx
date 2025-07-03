@@ -13,9 +13,8 @@ const GTCAccommodation = () => {
         <Carousel className="w-full" opts={{ loop: true }}>
           <CarouselContent>
             {[
-              "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop",
-              "https://images.unsplash.com/photo-1483058712412-e9573fc25ebb?w=800&h=600&fit=crop",
-              "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop"
+              "/lovable-uploads/3ebbfa1f-36d8-475e-b637-37f308efc5cd.png",
+              "/lovable-uploads/e2dddc4a-5c0f-4343-b69d-1729e0adf7fd.png"
             ].map((src, index) => (
               <CarouselItem key={index}>
                 <div className="h-[450px] rounded-xl overflow-hidden">
