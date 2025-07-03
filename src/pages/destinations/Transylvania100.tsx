@@ -1,4 +1,3 @@
-
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import Footer from "../../components/Footer";
@@ -25,19 +24,7 @@ const Transylvania100 = () => {
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
           <TransylvaniaMainContent />
-          <div className="space-y-6">
-            <div className="rounded-xl overflow-hidden aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/KYjEArAHdiY?si=VyqXLw-q6sxCgPIJ"
-                title="Transylvania 100 Trail Running"
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
-            </div>
-            <TransylvaniaPricingSection />
-          </div>
+          <TransylvaniaPricingSection />
         </div>
       </div>
       
