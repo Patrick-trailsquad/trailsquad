@@ -45,7 +45,6 @@ const VideoThumbnailBanner = () => {
                   team (in Danish 🇩🇰)
                 </p>
               </div>
-              <div className="mt-8 w-16 h-1 bg-terra rounded-full"></div>
             </div>
             
             {/* Videos Section - Right Side */}
