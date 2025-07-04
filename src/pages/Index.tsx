@@ -1,5 +1,7 @@
+
 import Menu from "../components/Menu";
 import HeroSection from "../components/home/HeroSection";
+import VideoThumbnailBanner from "../components/home/VideoThumbnailBanner";
 import FeaturesSection from "../components/home/FeaturesSection";
 import DestinationsSection from "../components/home/DestinationsSection";
 import TestimonialSection from "../components/home/TestimonialSection";
@@ -14,6 +16,7 @@ const Index = () => {
     <div className="min-h-screen bg-stone">
       <Menu />
       <HeroSection />
+      <VideoThumbnailBanner />
       <FeaturesSection />
       <DestinationsSection />
       <TestimonialSection />
