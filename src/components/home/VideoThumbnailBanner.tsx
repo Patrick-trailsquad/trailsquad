@@ -58,11 +58,11 @@ const VideoThumbnailBanner = () => {
                   }`}
                   onClick={() => openVideo(video.videoUrl)}
                 >
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20 group-hover:scale-105">
                     <img
                       src={video.thumbnail}
                       alt="Trail Squad Video"
-                      className="w-52 h-80 md:w-60 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                     
