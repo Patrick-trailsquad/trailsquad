@@ -10,7 +10,7 @@ const VideoThumbnailBanner = () => {
     {
       id: 1,
       thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop",
-      title: "Trail Running Adventure",
+      title: "Hej, mit navn er Emil...",
       videoUrl: "https://www.youtube.com/embed/nGv8ppEnOhk?autoplay=1"
     },
     {
