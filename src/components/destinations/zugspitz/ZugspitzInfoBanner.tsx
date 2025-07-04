@@ -20,7 +20,7 @@ const ZugspitzInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">16km, 29km, 44km, 68km, 86km, 106km, 164km</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">16km, 29km, 44km, 68km, 86km, 106km</h2>
           </div>
         </div>
       </div>
