@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Play } from "lucide-react";
-import VideoLightbox from './VideoLightbox';
+import VideoLightbox from '../VideoLightbox';
 
 const VideoThumbnailBanner = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
