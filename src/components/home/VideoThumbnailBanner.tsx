@@ -68,8 +68,8 @@ const VideoThumbnailBanner = () => {
                     
                     {/* Play Button */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-xl">
-                        <Play className="w-9 h-9 text-charcoal ml-1" fill="currentColor" />
+                      <div className="w-20 h-20 bg-white/50 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
+                        <Play className="w-9 h-9 text-charcoal/50 ml-1" fill="currentColor" />
                       </div>
                     </div>
                   </div>
