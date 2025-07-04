@@ -11,13 +11,13 @@ const VideoThumbnailBanner = () => {
       id: 1,
       thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop",
       title: "Trail Running Adventure",
-      videoUrl: "https://www.youtube.com/embed/mPx3YCji3kU" // placeholder video
+      videoUrl: "https://www.youtube.com/embed/nGv8ppEnOhk?autoplay=1"
     },
     {
       id: 2,
       thumbnail: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop",
       title: "Mountain Expedition",
-      videoUrl: "https://www.youtube.com/embed/mPx3YCji3kU" // placeholder video
+      videoUrl: "https://www.youtube.com/embed/mPx3YCji3kU?autoplay=1"
     }
   ];
 
