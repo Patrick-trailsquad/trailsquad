@@ -33,6 +33,9 @@ const VideoThumbnailBanner = () => {
     <>
       <section className="w-full bg-[#FFDC00] py-12">
         <div className="container mx-auto px-4">
+          <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal text-center mb-8">
+            Hvem er Trail Squad? 🇩🇰
+          </h2>
           <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
             {videos.map((video) => (
               <div
