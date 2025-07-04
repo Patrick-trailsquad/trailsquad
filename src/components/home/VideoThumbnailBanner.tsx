@@ -73,9 +73,6 @@ const VideoThumbnailBanner = () => {
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Floating Element */}
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-terra rounded-full opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"></div>
                 </div>
               ))}
             </div>
