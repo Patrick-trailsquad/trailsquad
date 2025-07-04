@@ -9,13 +9,13 @@ const VideoThumbnailBanner = () => {
   const videos = [
     {
       id: 1,
-      thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop",
+      thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=300&h=533&fit=crop",
       title: "Hej, mit navn er Emil...",
       videoUrl: "https://www.youtube.com/embed/nGv8ppEnOhk?autoplay=1"
     },
     {
       id: 2,
-      thumbnail: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop",
+      thumbnail: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=300&h=533&fit=crop",
       title: "Jeg hedder Patrick...",
       videoUrl: "https://www.youtube.com/embed/_zQUIzIeF7s?autoplay=1"
     }
@@ -47,7 +47,7 @@ const VideoThumbnailBanner = () => {
                   <img
                     src={video.thumbnail}
                     alt={video.title}
-                    className="w-80 h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-64 h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center">
