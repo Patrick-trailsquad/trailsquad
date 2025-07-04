@@ -62,19 +62,18 @@ const VideoThumbnailBanner = () => {
                     <img
                       src={video.thumbnail}
                       alt="Trail Squad Video"
-                      className="w-52 h-80 md:w-60 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-52 h-80 md:w-60 md:h-96 object-cover group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300 rounded-2xl" />
                     
                     {/* Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute inset-0 flex items-center justify-center rounded-2xl">
                       <div className="w-20 h-20 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-xl">
                         <Play className="w-9 h-9 text-charcoal ml-1" fill="currentColor" />
                       </div>
                     </div>
                     
-                    {/* Decorative Border */}
-                    <div className="absolute inset-0 rounded-2xl ring-2 ring-white/20 group-hover:ring-white/40 transition-all duration-300"></div>
+                    {/* Decorative Border - removed to prevent radius override */}
                   </div>
                   
                   {/* Floating Element */}
