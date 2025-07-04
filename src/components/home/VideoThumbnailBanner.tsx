@@ -10,13 +10,11 @@ const VideoThumbnailBanner = () => {
     {
       id: 1,
       thumbnail: "/lovable-uploads/8e46cfd5-2e7d-48e9-900f-ec22af9a9884.png",
-      title: "Hej, mit navn er Emil...",
       videoUrl: "https://www.youtube.com/embed/nGv8ppEnOhk?autoplay=1"
     },
     {
       id: 2,
       thumbnail: "/lovable-uploads/2ecef890-c534-4140-8b55-73551ef9f522.png",
-      title: "Jeg hedder Patrick...",
       videoUrl: "https://www.youtube.com/embed/_zQUIzIeF7s?autoplay=1"
     }
   ];
@@ -46,7 +44,7 @@ const VideoThumbnailBanner = () => {
                 <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <img
                     src={video.thumbnail}
-                    alt={video.title}
+                    alt="Trail Squad Video"
                     className="w-64 h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300" />
@@ -56,9 +54,6 @@ const VideoThumbnailBanner = () => {
                     </div>
                   </div>
                 </div>
-                <h3 className="font-cabinet text-lg font-medium text-charcoal mt-3 text-center">
-                  {video.title}
-                </h3>
               </div>
             ))}
           </div>
