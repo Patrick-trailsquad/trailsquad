@@ -53,12 +53,12 @@ const VideoThumbnailBanner = () => {
               {videos.map((video, index) => (
                 <div
                   key={video.id}
-                  className={`relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 ${
+                  className={`relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 ${
                     index === 0 ? 'mt-8' : 'mb-8'
                   }`}
                   onClick={() => openVideo(video.videoUrl)}
                 >
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20 group-hover:scale-105">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
                     <img
                       src={video.thumbnail}
                       alt="Trail Squad Video"
@@ -68,7 +68,7 @@ const VideoThumbnailBanner = () => {
                     
                     {/* Play Button */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/50 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
+                      <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
                         <Play className="w-9 h-9 text-charcoal/50 ml-1" fill="currentColor" />
                       </div>
                     </div>
