@@ -35,14 +35,11 @@ const VideoThumbnailBanner = () => {
             {/* Text Section - Left Side */}
             <div className="flex-1 max-w-lg">
               <div className="space-y-2">
-                <h2 className="font-cabinet text-2xl md:text-3xl font-medium text-charcoal/80 leading-tight">
-                  Meet the
-                </h2>
                 <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
-                  Trail Squad
+                  Meet the Trail Squad team
                 </h1>
                 <p className="font-cabinet text-xl md:text-2xl font-medium text-charcoal/80 leading-relaxed">
-                  team (in Danish 🇩🇰)
+                  (in Danish 🇩🇰)
                 </p>
               </div>
             </div>
