@@ -16,7 +16,7 @@ const VideoThumbnailBanner = () => {
     {
       id: 2,
       thumbnail: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop",
-      title: "Mountain Expedition",
+      title: "Jeg hedder Patrick...",
       videoUrl: "https://www.youtube.com/embed/mPx3YCji3kU?autoplay=1"
     }
   ];
