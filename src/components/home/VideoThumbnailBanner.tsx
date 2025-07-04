@@ -31,9 +31,9 @@ const VideoThumbnailBanner = () => {
     <>
       <section className="w-full bg-gradient-to-br from-[#FFDC00] to-[#FFE642] py-16 md:py-20">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-            {/* Text Section - Left Side */}
-            <div className="flex-1 max-w-lg flex flex-col items-center text-center">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
+            {/* Text Section - 60% */}
+            <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
                 <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
                   Meet the Trail Squad team
@@ -44,8 +44,8 @@ const VideoThumbnailBanner = () => {
               </div>
             </div>
             
-            {/* Videos Section - Right Side */}
-            <div className="flex-1 flex gap-8 justify-center lg:justify-end items-end">
+            {/* Videos Section - 40% */}
+            <div className="lg:col-span-4 flex gap-8 justify-center items-end">
               {videos.map((video, index) => (
                 <div
                   key={video.id}
