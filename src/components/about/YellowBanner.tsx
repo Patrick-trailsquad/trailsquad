@@ -29,7 +29,7 @@ const YellowBanner = () => {
 
   return (
     <>
-      <section className="w-full bg-gradient-to-br from-[#FFDC00] to-[#FFE642] py-16 md:py-20">
+      <section className="w-full py-16 md:py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Text Section - 60% */}
