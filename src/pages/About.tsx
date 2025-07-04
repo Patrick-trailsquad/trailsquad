@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
 import AboutHero from "../components/about/AboutHero";
 import TeamSection from "../components/about/TeamSection";
+import YellowBanner from "../components/about/YellowBanner";
 import StorySection from "../components/about/StorySection";
 import CallToAction from "../components/about/CallToAction";
 import { galleryImages } from "../config/galleryImages";
@@ -16,6 +17,7 @@ const About = () => {
       <Menu />
       <AboutHero />
       <TeamSection />
+      <YellowBanner />
       <StorySection images={galleryImages} />
       <CallToAction />
       <Footer />
