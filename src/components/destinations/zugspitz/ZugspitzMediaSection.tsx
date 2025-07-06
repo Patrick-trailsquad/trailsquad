@@ -40,8 +40,8 @@ const ZugspitzMediaSection = () => {
                 </AccordionTrigger>
                 <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                   <div>
-                    The price for a <b>Shared Superior Room</b> is 11.050 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
-                    The price for an <b>Individual Double Room</b> is 16.050 DKK.<br /><br />
+                    The price for a <b>Shared Garden Studio</b> is 11.050 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
+                    The price for an <b>Individual Garden Studio</b> is 16.050 DKK.<br /><br />
                     VAT is included in all prices.
                   </div>
                 </AccordionContent>
