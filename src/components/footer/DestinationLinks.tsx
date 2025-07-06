@@ -7,7 +7,7 @@ const destinations = [
   { name: "Chianti Ultra Trail", href: "/destinations/chianti", spots: "Opens later" },
   { name: "Vesuvio Ultra Marathon", href: "/destinations/vesuvio", spots: "Opens later" },
   { name: "Transylvania 100", href: "/destinations/transylvania", spots: "13 spots" },
-  { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "Opens later" },
+  { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "15 spots" },
   { name: "Gran Trail Courmayeur", href: "/destinations/gtc", spots: "Opens later" },
 ];
 
