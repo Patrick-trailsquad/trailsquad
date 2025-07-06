@@ -12,8 +12,10 @@ const destinations = [
 ];
 
 const DestinationLinks = () => {
-  // Filter out Vesuvio destination to match the main destinations section
-  const visibleDestinations = destinations.filter(dest => dest.href !== "/destinations/vesuvio");
+  // Filter out Vesuvio and Chianti destinations
+  const visibleDestinations = destinations.filter(dest => 
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti"
+  );
 
   return (
     <div className="grid grid-cols-1 gap-4">

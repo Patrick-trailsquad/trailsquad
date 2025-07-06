@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -55,8 +54,10 @@ const destinations = [
 ];
 
 const DestinationsSection = () => {
-  // Filter out Vesuvio destination for now
-  const visibleDestinations = destinations.filter(dest => dest.href !== "/destinations/vesuvio");
+  // Filter out Vesuvio and Chianti destinations
+  const visibleDestinations = destinations.filter(dest => 
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti"
+  );
 
   return (
     <section id="upcoming-trips" className="py-24 bg-stone">
