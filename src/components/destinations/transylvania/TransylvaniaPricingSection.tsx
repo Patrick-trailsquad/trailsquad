@@ -19,7 +19,7 @@ const TransylvaniaPricingSection = () => {
         <div className="col-span-2 space-y-1">
           <p className="text-sm text-gray-600">Prices start at</p>
           <p className="font-cabinet text-4xl font-bold text-charcoal">
-            8.250 DKK <span className="text-sm text-gray-500">incl. VAT</span>
+            9.350 DKK <span className="text-sm text-gray-500">incl. VAT</span>
           </p>
           <Accordion type="single" collapsible className="w-full mt-2">
             <AccordionItem value="price-details" className="border-none">
@@ -31,8 +31,8 @@ const TransylvaniaPricingSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  The price for a <b>Shared Swiss Grand Room</b> is 8.250 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
-                  The price for an <b>Individual Swiss Grand Room</b> is 11.500 DKK.<br /><br />
+                  The price for a <b>Shared Swiss Grand Room</b> is 9.350 DKK per person and you will share the room with someone from your own group. This means that you cannot book a shared room if you join solo.<br /><br />
+                  The price for an <b>Individual Swiss Grand Room</b> is 12.300 DKK.<br /><br />
                   VAT is included in all prices.
                 </div>
               </AccordionContent>
