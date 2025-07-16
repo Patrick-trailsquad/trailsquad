@@ -2,6 +2,7 @@
 // Randomized array of gallery images including the new image
 export const galleryImages = [
   "/lovable-uploads/835065e6-c6b4-42a1-aa12-9ddcf4461ad0.png", // New image added as first
+  "/lovable-uploads/6ee6d8db-8307-4111-9e28-1ec213ede9e4.png", // New trail running group image
   "/lovable-uploads/a260e2c1-80c6-4dc5-9052-b51b8bd48e28.png",
   "/lovable-uploads/54169f4c-6a5e-4a57-8289-fcc347272501.png",
   "/lovable-uploads/25d3f586-ac0f-49eb-b707-422bf6f2a1a2.png",
