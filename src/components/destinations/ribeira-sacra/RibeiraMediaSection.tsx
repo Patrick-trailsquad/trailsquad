@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PriceQuoteForm from "../../../components/PriceQuoteForm";
 import {
@@ -9,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 
 const RibeiraMediaSection = () => {
-  const spotsLeft = 8;
+  const spotsLeft = 7;
   return (
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
@@ -64,4 +63,3 @@ const RibeiraMediaSection = () => {
 };
 
 export default RibeiraMediaSection;
-
