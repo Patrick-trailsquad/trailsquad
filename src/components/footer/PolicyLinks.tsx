@@ -115,6 +115,7 @@ Trail Squad organizes and facilitates trail running trips across Europe (and glo
 • Cancellation policies vary depending on the trip and service providers. Specific details will be provided at the time of booking
 • Refunds, if applicable, will be processed based on our refund policy and any supplier terms
 • We reserve the right to cancel a trip due to unforeseen circumstances. In such cases, we will offer a rescheduled date or a refund
+• Please note: When purchasing trips and package tours through Trail Squad, the right of withdrawal does not apply in accordance with Section 18(2)(12) of the Danish Consumer Contracts Act (Forbrugeraftalelovens § 18, stk. 2, nr. 12). We recommend that you take out travel and cancellation insurance.
 
 5. Customer Responsibilities
 • You must ensure you are physically fit to participate in trail running activities
