@@ -69,7 +69,7 @@ const ForOrganizers = () => {
                 <img 
                   src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
                   alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                  className="w-full max-w-3xl h-96 rounded-xl shadow-lg relative z-0 object-cover object-[center_15%]"
+                  className="w-full max-w-3xl aspect-square rounded-xl shadow-lg relative z-0 object-cover object-[center_bottom]"
                   loading="lazy"
                 />
               </div>
