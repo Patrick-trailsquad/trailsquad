@@ -49,14 +49,14 @@ const ForOrganizers = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-8 text-center">
+            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-16 text-center">
               This is Trail Squad
             </h2>
             
-            <div className="relative grid gap-8 items-center min-h-[600px]" style={{ gridTemplateColumns: '17% 66% 17%' }}>
+            <div className="relative grid grid-cols-3 gap-8 items-center min-h-[600px]">
               {/* Emil - Left side, lower position */}
               <div className="relative flex justify-end">
-                <div className="absolute right-0 top-32 bg-[#FFDC00] rounded-xl shadow-lg p-6 max-w-sm z-10 -mr-8">
+                <div className="absolute right-0 top-32 bg-[#FFDC00] rounded-xl shadow-lg p-6 max-w-sm border-2 border-black z-10 -mr-8">
                   <h3 className="font-cabinet text-2xl font-bold text-black mb-3">Emil Albrechtsen</h3>
                   <p className="text-black">
                     Experienced ultra and trail runner. Running coach and physiotherapist.
@@ -69,14 +69,14 @@ const ForOrganizers = () => {
                 <img 
                   src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
                   alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                  className="w-full max-w-3xl aspect-square rounded-xl shadow-lg relative z-0 object-cover object-[center_bottom]"
+                  className="w-full max-w-2xl rounded-xl shadow-lg relative z-0"
                   loading="lazy"
                 />
               </div>
               
               {/* Patrick - Right side, higher position */}
               <div className="relative flex justify-start">
-                <div className="absolute left-0 -top-16 bg-[#FFDC00] rounded-xl shadow-lg p-6 max-w-sm z-10 -ml-8">
+                <div className="absolute left-0 -top-16 bg-[#FFDC00] rounded-xl shadow-lg p-6 max-w-sm border-2 border-black z-10 -ml-8">
                   <h3 className="font-cabinet text-2xl font-bold text-black mb-3">Patrick Lund</h3>
                   <p className="text-black">
                     Trail enthusiast. Travel aficionado and business development.
