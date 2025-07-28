@@ -7,6 +7,7 @@ import { useNavigateAndScroll } from '../hooks/useNavigateAndScroll';
 import HomeIcon from './icons/HomeIcon';
 import DestinationsIcon from './icons/DestinationsIcon';
 import AboutIcon from './icons/AboutIcon';
+import OrganizersIcon from './icons/OrganizersIcon';
 
 const Menu = () => {
   const [visible, setVisible] = useState(true);
@@ -45,7 +46,7 @@ const Menu = () => {
     { 
       href: '/for-organizers', 
       label: 'For organizers 🇬🇧', 
-      icon: AboutIcon, 
+      icon: OrganizersIcon, 
       onClick: () => window.scrollTo(0, 0) 
     }
   ];
