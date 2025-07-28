@@ -48,41 +48,44 @@ const ForOrganizers = () => {
       {/* This is Trail Squad Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-16 text-center">
+              This is Trail Squad
+            </h2>
+            
+            <div className="relative grid grid-cols-3 gap-8 items-center min-h-[600px]">
+              {/* Emil - Left side, lower position */}
+              <div className="relative flex justify-end">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm mt-32 border border-gray-100">
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-600">
+                      Co-founder specializing in logistics and partnerships, ensuring seamless coordination for all trail running events and experiences.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Image - Center */}
+              <div className="flex justify-center">
                 <img 
                   src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
                   alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                  className="w-full rounded-xl shadow-lg"
+                  className="w-full max-w-lg rounded-xl shadow-lg"
                   loading="lazy"
                 />
               </div>
               
-              <div className="space-y-8">
-                <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal">
-                  This is Trail Squad
-                </h2>
-                
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
-                    <div className="flex items-start gap-4">
-                      <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-600">
-                        Founder & trail enthusiast
-                      </p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
-                    <div className="flex items-start gap-4">
-                      <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-600">
-                        Co-founder specializing in logistics and partnerships, ensuring seamless coordination for all trail running events and experiences.
-                      </p>
-                    </div>
+              {/* Patrick - Right side, higher position */}
+              <div className="relative flex justify-start">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm -mt-16 border border-gray-100">
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-gray-600">
+                      Founder & trail enthusiast
+                    </p>
                   </div>
                 </div>
               </div>
