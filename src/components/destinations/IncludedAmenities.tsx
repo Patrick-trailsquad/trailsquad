@@ -55,7 +55,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     },
     {
       icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
-      title: "Lokale retter",
+      title: "Lokalt cuisine",
       description: "Morgenmad og middag inkluderet"
     },
     {
