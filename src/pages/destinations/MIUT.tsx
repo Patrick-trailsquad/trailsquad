@@ -27,7 +27,7 @@ const MIUT = () => {
             className="flex items-center gap-2 text-white hover:text-stone transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Home
+            Tilbage til forsiden
           </Link>
         </div>
         <div className="absolute bottom-6 left-0 right-0 text-center">
@@ -35,7 +35,7 @@ const MIUT = () => {
             Madeira Island Ultra Trail, Portugal
           </h1>
           <div className="inline-block bg-black text-white px-4 py-1.5 rounded-full font-cabinet font-medium text-sm md:text-base border-2 border-[#FFDC00]">
-            RACE FINISHED 🏁
+            LØB AFSLUTTET 🏁
           </div>
         </div>
       </div>
@@ -44,19 +44,19 @@ const MIUT = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Location</h1>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Lokation</h1>
               <h2 className="font-cabinet text-lg text-charcoal">Funchal, Madeira Island, Portugal</h2>
             </div>
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Løbsdag</h1>
               <h2 className="font-cabinet text-lg text-charcoal">April 26, 2025</h2>
             </div>
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
-              <h2 className="font-cabinet text-lg text-charcoal">April 24-27, 2025 (4 days)</h2>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Rejsevarighed</h1>
+              <h2 className="font-cabinet text-lg text-charcoal">24.-27. april 2025 (4 dage)</h2>
             </div>
             <div>
-              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
+              <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
               <h2 className="font-cabinet text-lg text-charcoal">16km, 42km, 60km, 85km, 115km</h2>
             </div>
           </div>
@@ -68,31 +68,31 @@ const MIUT = () => {
           <div>
             <div className="space-y-6 mb-8">
               <div>
-                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Løbet</h2>
                 <p className="text-lg">
-                  Embark on an extraordinary running adventure through the stunning landscapes of Madeira Island, 
-                  where the legendary MIUT (Madeira Island Ultra Trail) awaits. This prestigious race takes you 
-                  on an unforgettable journey from the northern shores of Porto Moniz to the southern town of 
-                  Machico, traversing the entire island through its most breathtaking terrain.
+                  Begiv dig ud på et ekstraordinært løbeeventyr gennem Madeira-øens fantastiske landskaber, 
+                  hvor det legendariske MIUT (Madeira Island Ultra Trail) venter. Dette prestigefyldte løb tager dig 
+                  på en uforglemmelig rejse fra nordkysten i Porto Moniz til den sydlige by 
+                  Machico og krydser hele øen gennem det mest betagende terræn.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Oplevelsen</h2>
                 <p className="text-lg">
-                  The trail combines technical mountain paths, ancient levada waterways, and lush laurel forests 
-                  that are UNESCO World Heritage sites. As you navigate through diverse microclimates, you'll 
-                  encounter everything from misty mountain peaks to subtropical valleys, making this one of 
-                  Europe's most unique and challenging ultra-trail experiences.
+                  Ruten kombinerer tekniske bjergstier, gamle levada-vandveje og frodige laurbærsove, 
+                  der er UNESCO-verdensarvssteder. Når du navigerer gennem forskellige mikroklimaer, vil du 
+                  støde på alt fra tågede bjergtoppe til subtropiske dale, hvilket gør dette til en af 
+                  Europas mest unikke og udfordrende ultraløbsoplevelser.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Udfordringen</h2>
                 <p className="text-lg">
-                  With challenging elevation changes and technical terrain, MIUT offers distances for everyone from 
-                  the 16km Mini MIUT to the epic 115km ultra that climbs to Pico Ruivo, Madeira's highest peak at 
-                  1,862 meters, where the Atlantic Ocean stretches endlessly in every direction.
+                  Med udfordrende højdeforskelle og teknisk terræn tilbyder MIUT distancer for alle fra 
+                  16km Mini MIUT til det episke 115km ultraløb, der klatrer til Pico Ruivo, Madeiras højeste top på 
+                  1.862 meter, hvor Atlanterhavet strækker sig endeløst i alle retninger.
                 </p>
               </div>
             </div>
@@ -109,7 +109,7 @@ const MIUT = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
               >
-                Visit Official Race Website
+                Besøg officiel løbshjemmeside
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
@@ -130,20 +130,20 @@ const MIUT = () => {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Starting from</p>
+                  <p className="text-sm text-gray-600 mb-1">Fra</p>
                   <p className="font-cabinet text-4xl font-bold text-charcoal">12.000 DKK</p>
-                  <p className="text-sm text-gray-500">incl. VAT</p>
+                  <p className="text-sm text-gray-500">inkl. moms</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm text-gray-600 mb-1">Race status</p>
-                  <p className="font-cabinet text-xl font-bold text-black">RACE FINISHED 🏁</p>
+                  <p className="text-sm text-gray-600 mb-1">Løbsstatus</p>
+                  <p className="font-cabinet text-xl font-bold text-black">LØB AFSLUTTET 🏁</p>
                 </div>
               </div>
               <button 
                 disabled
                 className="w-full bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400"
               >
-                Currently unavailable for booking
+                Ikke tilgængelig for booking i øjeblikket
               </button>
             </div>
           </div>

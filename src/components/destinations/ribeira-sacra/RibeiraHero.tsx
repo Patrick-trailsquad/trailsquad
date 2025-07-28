@@ -18,7 +18,7 @@ const RibeiraHero = () => {
           className="flex items-center gap-2 text-white hover:text-stone transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
-          Back to Home
+          Tilbage til forsiden
         </Link>
       </div>
       <div className="absolute bottom-6 left-0 right-0 text-center">

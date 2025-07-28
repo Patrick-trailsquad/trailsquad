@@ -17,7 +17,7 @@ const BackToDestinationsButton = () => {
         variant="black"
         size="xl"
       >
-        Back to Destinations
+        Tilbage til destinationer
       </Button>
     </div>
   );
