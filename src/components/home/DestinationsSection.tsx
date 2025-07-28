@@ -13,42 +13,42 @@ const destinations = [
   {
     image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
     location: "Trail Ribeira Sacra, Spain",
-    date: "October 2025",
+    date: "Oktober 2025",
     spots: "5 pladser",
     href: "/destinations/ribeira-sacra"
   },
   {
     image: "/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png",
     location: "Chianti Ultra Trail by UTMB, Italy",
-    date: "March 2026",
+    date: "Marts 2026",
     spots: "Åbner senere",
     href: "/destinations/chianti"
   },
   {
     image: "/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png",
     location: "Vesuvio Ultra Marathon, Italy",
-    date: "May 2026",
+    date: "Maj 2026",
     spots: "Åbner senere",
     href: "/destinations/vesuvio"
   },
   {
     image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
     location: "Transylvania 100, Romania",
-    date: "May 2026",
+    date: "Maj 2026",
     spots: "13 pladser",
     href: "/destinations/transylvania"
   },
   {
     image: "/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png",
     location: "Zugspitz Ultratrail, Germany",
-    date: "June 2026",
+    date: "Juni 2026",
     spots: "15 pladser",
     href: "/destinations/zugspitz"
   },
   {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
     location: "Gran Trail Courmayeur, Italy",
-    date: "July 2026",
+    date: "Juli 2026",
     spots: "Åbner senere",
     href: "/destinations/gtc"
   }
