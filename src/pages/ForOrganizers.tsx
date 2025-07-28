@@ -89,9 +89,7 @@ const ForOrganizers = () => {
               </div>
               <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We bring runners to your race</h3>
-                <p className="text-gray-600">
-                  We bring runners to your race
-                </p>
+                <p className="text-gray-600">If your race becomes one of the Trail Squad destinations then we will work our magic to get our network of Nordic runners to join. We fly out of Copenhagen so most of us are probably Danish 🇩🇰</p>
               </div>
             </div>
 
@@ -100,11 +98,8 @@ const ForOrganizers = () => {
                 <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-6">
-                <h3 className="font-cabinet text-xl font-bold mb-3">Quality First</h3>
-                <p className="text-gray-600">
-                  Every detail is carefully planned to ensure an exceptional experience 
-                  for your participants, from luxury accommodation to expert guidance.
-                </p>
+                <h3 className="font-cabinet text-xl font-bold mb-3">We create quality content from your race</h3>
+                <p className="text-gray-600">We are good at social media and we create action shots and short documentaries from our races. Essentially we will market your race for you with high quality video. Our runners love it - and so will you 🫶</p>
               </div>
             </div>
           </div>
