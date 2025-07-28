@@ -51,7 +51,7 @@ const CTASection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-black mb-6">
-            Klar til at Starte Dit Eventyr?
+            Klar til at starte dit eventyr?
           </h2>
           <p className="font-inter text-xl text-black/90 mb-8">Bliv en del af vores fællesskab af trail løbere og vær den første til at høre, når vi planlægger nye løbsdestinationer.
 
