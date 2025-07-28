@@ -49,8 +49,8 @@ const ForOrganizers = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-16 text-center">
-              This is Trail Squad
+            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-8 text-center">
+              We are Trail Squad
             </h2>
             
             <div className="relative flex justify-center min-h-[600px]">
