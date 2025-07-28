@@ -2,7 +2,7 @@
 const PolicyLinks = ({ onPolicyClick }: { onPolicyClick: (policy: { title: string; content: string }) => void }) => {
   const policies = {
     privacy: {
-      title: "Privacy Notice",
+      title: "Privatlivspolitik",
       content: `Effective Date: 1st of March 2025
 
 1. Introduction
@@ -64,7 +64,7 @@ Email: hello@trailsquad.dk
 We may update this Privacy Policy from time to time. Any changes will be posted on our website with the updated effective date.`,
     },
     cookies: {
-      title: "Cookie Policy",
+      title: "Cookie-politik",
       content: `Cookie Policy
 
 Effective Date: 1st of March 2025
@@ -92,7 +92,7 @@ Trail Squad
 Email: hello@trailsquad.dk`,
     },
     terms: {
-      title: "Terms & Conditions",
+      title: "Handelsbetingelser",
       content: `Terms & Conditions
 
 Effective Date: 1st of March 2025
@@ -155,19 +155,19 @@ Email: hello@trailsquad.dk`,
         onClick={() => onPolicyClick(policies.privacy)}
         className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
       >
-        Privacy Notice
+        Privatlivspolitik
       </button>
       <button 
         onClick={() => onPolicyClick(policies.cookies)}
         className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
       >
-        Cookie Policy
+        Cookie-politik
       </button>
       <button 
         onClick={() => onPolicyClick(policies.terms)}
         className="block text-sm text-gray-600 hover:text-terra transition-colors hover:translate-x-1 transform duration-200"
       >
-        Terms & Conditions
+        Handelsbetingelser
       </button>
     </div>
   );

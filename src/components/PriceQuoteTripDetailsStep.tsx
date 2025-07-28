@@ -41,7 +41,7 @@ const PriceQuoteTripDetailsStep = ({
   return (
     <div className="space-y-4">
       <div>
-        <Label htmlFor="participants">Number of Participants</Label>
+        <Label htmlFor="participants">Antal Deltagere</Label>
         <Input 
           id="participants"
           type="number"
@@ -52,24 +52,24 @@ const PriceQuoteTripDetailsStep = ({
             min: 1,
             max: {
               value: maxParticipants,
-              message: `There are only ${maxParticipants} spots left`,
+              message: `Der er kun ${maxParticipants} pladser tilbage`,
             },
             valueAsNumber: true 
           })}
           className="mt-1.5"
-          placeholder={`Enter number of participants (max ${maxParticipants})`}
+          placeholder={`Indtast antal deltagere (maks ${maxParticipants})`}
         />
         {errors.participants && (
           <p className="text-red-500 text-sm mt-1">
             {errors.participants.type === "max"
-              ? `Cannot exceed ${maxParticipants} participants (spots left).`
-              : "Please enter a valid number of participants"}
+              ? `Kan ikke overstige ${maxParticipants} deltagere (pladser tilbage).`
+              : "Venligst indtast et gyldigt antal deltagere"}
           </p>
         )}
       </div>
 
       <div className="space-y-3">
-        <Label>Preferred Distance</Label>
+        <Label>Foretrukken Distance</Label>
         <RadioGroup 
           defaultValue={availableDistances[0]}
           onValueChange={(value) => {
@@ -85,12 +85,12 @@ const PriceQuoteTripDetailsStep = ({
           ))}
         </RadioGroup>
         {errors.preferredDistance && (
-          <p className="text-red-500 text-sm">Please select a preferred distance</p>
+          <p className="text-red-500 text-sm">Venligst vælg en foretrukken distance</p>
         )}
       </div>
 
       <div className="space-y-3">
-        <Label>Preference for accommodation</Label>
+        <Label>Præference for indkvartering</Label>
         <RadioGroup 
           defaultValue="single"
           value={accommodationPreference}
@@ -101,7 +101,7 @@ const PriceQuoteTripDetailsStep = ({
         >
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="single" id="single-room" />
-            <Label htmlFor="single-room">Single rooms</Label>
+            <Label htmlFor="single-room">Enkeltværelser</Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem 
@@ -110,7 +110,7 @@ const PriceQuoteTripDetailsStep = ({
               disabled={participants === 1}
             />
             <Label htmlFor="double-room" className={participants === 1 ? "opacity-50" : ""}>
-              Shared double rooms
+              Delte dobbeltværelser
             </Label>
           </div>
           <div className="flex items-center space-x-2">
@@ -120,17 +120,17 @@ const PriceQuoteTripDetailsStep = ({
               disabled={participants === 1}
             />
             <Label htmlFor="both-room" className={participants === 1 ? "opacity-50" : ""}>
-              Both are ok
+              Begge er i orden
             </Label>
           </div>
         </RadioGroup>
         {errors.accommodationPreference && (
-          <p className="text-red-500 text-sm">Please select an accommodation preference</p>
+          <p className="text-red-500 text-sm">Venligst vælg en indkvarteringspræference</p>
         )}
       </div>
 
       <div className="space-y-3">
-        <Label>Preferred Language of upcoming communication</Label>
+        <Label>Foretrukket sprog for kommende kommunikation</Label>
         <RadioGroup 
           defaultValue="english"
           onValueChange={(value) => setValue('preferredLanguage', value)}
@@ -138,15 +138,15 @@ const PriceQuoteTripDetailsStep = ({
         >
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="english" id="english" />
-            <Label htmlFor="english">English</Label>
+            <Label htmlFor="english">Engelsk</Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="danish" id="danish" />
-            <Label htmlFor="danish">Danish</Label>
+            <Label htmlFor="danish">Dansk</Label>
           </div>
         </RadioGroup>
         {errors.preferredLanguage && (
-          <p className="text-red-500 text-sm">Please select a preferred language</p>
+          <p className="text-red-500 text-sm">Venligst vælg et foretrukket sprog</p>
         )}
       </div>
 
@@ -157,13 +157,13 @@ const PriceQuoteTripDetailsStep = ({
           className="flex-1"
           onClick={onBack}
         >
-          Back
+          Tilbage
         </Button>
         <Button 
           type="submit" 
           className="flex-1 bg-black text-white hover:bg-black/90"
         >
-          Submit Request
+          Send Anmodning
         </Button>
       </div>
     </div>

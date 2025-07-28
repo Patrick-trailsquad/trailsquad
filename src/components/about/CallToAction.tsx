@@ -12,15 +12,15 @@ const CallToAction: FC = () => {
   return (
     <section className="py-32 bg-[#FFDC00] relative min-h-[600px]">
       <div className="container mx-auto px-4 text-center text-black relative z-10">
-        <h2 className="text-4xl font-cabinet font-bold mb-6">Ready to Start Your Adventure?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto text-black/90">Join us for an unforgettable trail running experience in some of the world's most stunning locations.</p>
+        <h2 className="text-4xl font-cabinet font-bold mb-6">Klar til at Starte Dit Eventyr?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto text-black/90">Slut dig til os for en uforglemmelig trail løbeoplevelse i nogle af verdens mest fantastiske steder.</p>
         <div className="flex items-center justify-center">
           <a 
             href="/#upcoming-trips" 
             onClick={handleViewDestinations}
             className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300"
           >
-            View Destinations
+            Se Destinationer
           </a>
         </div>
       </div>

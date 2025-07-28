@@ -9,7 +9,7 @@ const HeroSection = () => {
   const navigateAndScroll = useNavigateAndScroll();
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const fullText = "Run in the World's\nMost Stunning Locations";
+  const fullText = "Løb på Verdens\nMest Fantastiske Steder";
   
   useEffect(() => {
     let currentIndex = 0;
@@ -51,7 +51,7 @@ const HeroSection = () => {
           className="text-center"
         >
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-white/10 backdrop-blur-sm rounded-full text-white">
-            Epic Trail Adventures
+            Episke Trail Eventyr
           </span>
           <h1 className="font-cabinet text-4xl md:text-7xl font-bold text-white mb-6 min-h-[120px] md:min-h-[160px] flex items-center justify-center">
             <span className="whitespace-pre-line">
@@ -67,13 +67,13 @@ const HeroSection = () => {
               className="overflow-hidden"
             >
               <p className="font-inter text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Get incredible experiences and boost your active lifestyle by defeating the summits of Europe's mountains
+                Få utrolige oplevelser og boost dit aktive livsstil ved at besejre toppene af Europas bjerge
               </p>
               <button 
                 onClick={handleDestinationsClick} 
                 className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto"
               >
-                See upcoming trips
+                Se kommende ture
                 <ArrowRight className="w-5 h-5" />
               </button>
             </motion.div>

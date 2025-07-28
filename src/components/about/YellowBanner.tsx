@@ -36,10 +36,10 @@ const YellowBanner = () => {
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
                 <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
-                  Meet the Trail Squad team
+                  Mød Trail Squad teamet
                 </h1>
                 <p className="font-cabinet text-xl md:text-2xl font-medium text-charcoal/80 leading-relaxed">
-                  (in Danish 🇩🇰)
+                  (på dansk 🇩🇰)
                 </p>
               </div>
             </div>

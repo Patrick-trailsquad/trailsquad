@@ -5,8 +5,8 @@ const AboutHero: FC = () => {
   return (
     <div className="relative h-[60vh] bg-[#FFDC00] flex items-center justify-center overflow-hidden">
       <div className="text-center text-[#000000e6] px-6 md:px-4 flex flex-col relative z-10">
-        <h1 className="text-5xl font-cabinet font-bold">About Trail Squad</h1>
-        <p className="text-xl max-w-2xl mx-auto mt-2">Trail Squad is a travel company focused on running epic trail races across the globe.</p>
+        <h1 className="text-5xl font-cabinet font-bold">Om Trail Squad</h1>
+        <p className="text-xl max-w-2xl mx-auto mt-2">Trail Squad er et rejseselskab fokuseret på at løbe episke trail-løb over hele kloden.</p>
       </div>
       
       {/* Mountain Range Sketch */}

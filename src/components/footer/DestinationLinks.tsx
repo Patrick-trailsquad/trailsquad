@@ -2,13 +2,13 @@
 import { Link } from "react-router-dom";
 
 const destinations = [
-  { name: "Madeira Island Ultra Trail", href: "/destinations/miut", spots: "Race finished 🏁" },
-  { name: "Trail Ribeira Sacra", href: "/destinations/ribeira-sacra", spots: "5 spots" },
-  { name: "Chianti Ultra Trail", href: "/destinations/chianti", spots: "Opens later" },
-  { name: "Vesuvio Ultra Marathon", href: "/destinations/vesuvio", spots: "Opens later" },
-  { name: "Transylvania 100", href: "/destinations/transylvania", spots: "13 spots" },
-  { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "15 spots" },
-  { name: "Gran Trail Courmayeur", href: "/destinations/gtc", spots: "Opens later" },
+  { name: "Madeira Island Ultra Trail", href: "/destinations/miut", spots: "Løb afsluttet 🏁" },
+  { name: "Trail Ribeira Sacra", href: "/destinations/ribeira-sacra", spots: "5 pladser" },
+  { name: "Chianti Ultra Trail", href: "/destinations/chianti", spots: "Åbner senere" },
+  { name: "Vesuvio Ultra Marathon", href: "/destinations/vesuvio", spots: "Åbner senere" },
+  { name: "Transylvania 100", href: "/destinations/transylvania", spots: "13 pladser" },
+  { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "15 pladser" },
+  { name: "Gran Trail Courmayeur", href: "/destinations/gtc", spots: "Åbner senere" },
 ];
 
 const DestinationLinks = () => {
@@ -29,9 +29,9 @@ const DestinationLinks = () => {
             {destination.name}
           </div>
           <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded-full ${
-            destination.spots === "Race finished 🏁" 
+            destination.spots === "Løb afsluttet 🏁" 
               ? "bg-yellow-100 text-yellow-800 border border-yellow-300" 
-              : destination.spots === "Opens later"
+              : destination.spots === "Åbner senere"
               ? "bg-gray-100 text-gray-600"
               : "bg-yellow-400 text-black"
           }`}>

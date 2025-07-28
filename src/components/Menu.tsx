@@ -26,19 +26,19 @@ const Menu = () => {
   const menuItems = [
     { 
       href: '/', 
-      label: 'Home', 
+      label: 'Hjem', 
       icon: HomeIcon,
       onClick: () => window.scrollTo(0, 0) 
     },
     { 
       href: '#upcoming-trips', 
-      label: 'Upcoming destinations', 
+      label: 'Kommende destinationer', 
       icon: DestinationsIcon,
       onClick: handleDestinationsClick 
     },
     { 
       href: '/about', 
-      label: 'About', 
+      label: 'Om os', 
       icon: AboutIcon, 
       onClick: () => window.scrollTo(0, 0) 
     }

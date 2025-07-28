@@ -11,10 +11,10 @@ const StorySection: FC<StorySectionProps> = ({ images }) => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-cabinet font-bold mb-6">Our Story</h2>
+          <h2 className="text-4xl font-cabinet font-bold mb-6">Vores Historie</h2>
           <p className="text-lg text-gray-600 mb-8">
-            The Trail Squad project is born from a passion for trail and ultra running, coupled with the awesomeness of going on sports adventures in exciting locations. We have run many races across the continent, and though the pain is real when you hit the wall on the long runs, the post-race celebratory drinks taste heavenly and make it all worthwhile.<br /><br />
-            We just want to give many more runners similar experiences - and you will always have the bragging rights at the office on the following Monday!
+            Trail Squad projektet er født ud af en passion for trail og ultra løb, kombineret med det fantastiske ved at tage på sportseventyr på spændende steder. Vi har løbet mange løb på tværs af kontinentet, og selvom smerten er reel, når man rammer muren på de lange løb, så smager de fejrende drinks efter løbet himmelsk og gør det hele værd.<br /><br />
+            Vi ønsker bare at give mange flere løbere lignende oplevelser - og du vil altid have fanterettigheder på kontoret den følgende mandag!
           </p>
           
           <ImageGallery images={images} />

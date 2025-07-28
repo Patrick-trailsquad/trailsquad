@@ -32,14 +32,14 @@ const CTASection = () => {
       setEmail('');
       setIsSuccess(true);
       toast({
-        title: "Success!",
-        description: "Thanks for signing up. We'll be in touch soon!"
+        title: "Succes!",
+        description: "Tak for tilmeldingen. Vi kontakter dig snart!"
       });
     } catch (error) {
       console.error('Submission error:', error);
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: "Fejl",
+        description: "Noget gik galt. Prøv venligst igen.",
         variant: "destructive"
       });
     } finally {
@@ -51,11 +51,11 @@ const CTASection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-black mb-6">
-            Ready to Start Your Adventure?
+            Klar til at Starte Dit Eventyr?
           </h2>
-          <p className="font-inter text-xl text-black/90 mb-8">Join our community of trail runners and be the first to know when we plan new race destinations.
+          <p className="font-inter text-xl text-black/90 mb-8">Bliv en del af vores fællesskab af trail løbere og vær den første til at høre, når vi planlægger nye løbsdestinationer.
 
-Subscribe to our newsletter to be looped in. </p>
+Tilmeld dig vores nyhedsbrev for at blive holdt opdateret. </p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input 
               type="email" 
@@ -63,13 +63,13 @@ Subscribe to our newsletter to be looped in. </p>
               onChange={e => setEmail(e.target.value)} 
               required 
               disabled={isSuccess}
-              placeholder={isSuccess ? '' : 'Enter email'} 
+              placeholder={isSuccess ? '' : 'Indtast email'} 
               className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20 disabled:opacity-50" 
             />
             {isSuccess ? <div className="bg-transparent border-2 border-black text-black px-8 py-4 rounded-full flex items-center justify-center">
                 <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
               </div> : <button type="submit" disabled={isSubmitting} className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300 disabled:opacity-50">
-                {isSubmitting ? 'Submitting...' : 'Subscribe'}
+                {isSubmitting ? 'Tilmelder...' : 'Tilmeld'}
               </button>}
           </form>
         </div>

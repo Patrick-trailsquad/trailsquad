@@ -64,13 +64,13 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
       setIsSubmitted(true);
 
       toast({
-        title: "Success",
-        description: "Your request has been submitted successfully!",
+        title: "Succes",
+        description: "Din anmodning er blevet sendt succesfuldt!",
       });
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to submit your request. Please try again.",
+        title: "Fejl",
+        description: "Kunne ikke sende din anmodning. Prøv venligst igen.",
         variant: "destructive",
       });
     }
@@ -87,14 +87,14 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
     <Sheet>
       <SheetTrigger asChild>
         <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-          Request price quote
+          Anmod om pristilbud
         </button>
       </SheetTrigger>
       
       <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
         <SheetHeader>
           <SheetTitle className="text-2xl font-cabinet">
-            Request Quote for {destinationName}
+            Anmod om Tilbud for {destinationName}
           </SheetTitle>
         </SheetHeader>
         
@@ -104,10 +104,10 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
               <CheckCircle2 className="w-5 h-5 mt-0.5 text-green-600 shrink-0" />
               <div className="space-y-1">
                 <p className="font-medium text-green-900">
-                  Quote request sent successfully!
+                  Tilbudsanmodning sendt succesfuldt!
                 </p>
                 <p className="text-sm text-green-700">
-                  We'll get back to you with a personalized quote within 48 hours during business days.
+                  Vi vender tilbage til dig med et personligt tilbud inden for 48 timer på hverdage.
                 </p>
               </div>
             </div>
@@ -116,8 +116,8 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
               <div className="mb-6">
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-medium">
-                    <span className={step === 1 ? "text-green-600 font-semibold" : "text-gray-500"}>Your Info</span>
-                    <span className={step === 2 ? "text-green-600 font-semibold" : "text-gray-500"}>Trip Details</span>
+                    <span className={step === 1 ? "text-green-600 font-semibold" : "text-gray-500"}>Dine Oplysninger</span>
+                    <span className={step === 2 ? "text-green-600 font-semibold" : "text-gray-500"}>Rejse Detaljer</span>
                   </div>
                   <div className="w-[95%] mx-auto">
                     <Progress value={step === 1 ? 50 : 100} className="h-2" variant="success" />
@@ -129,10 +129,10 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
                 <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
                 <div>
                   <p className="text-sm text-gray-600 mb-2">
-                    Fill out this form and we'll get back to you with a personalized quote for your adventure. We typically respond within 48 hours during business days.
+                    Udfyld denne formular, og vi vender tilbage til dig med et personligt tilbud til dit eventyr. Vi svarer typisk inden for 48 timer på hverdage.
                   </p>
                   <p className="text-sm text-gray-600 mb-2">
-                    The quote will contain a Stripe link to pay 75% of the price to confirm. We will revert back 60 days before departure to collect the remaining 25% of the price.
+                    Tilbuddet vil indeholde et Stripe-link til at betale 75% af prisen for at bekræfte. Vi vender tilbage 60 dage før afrejse for at indsamle de resterende 25% af prisen.
                   </p>
                 </div>
               </div>

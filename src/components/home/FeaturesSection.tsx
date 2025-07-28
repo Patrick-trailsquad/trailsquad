@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 const features = [
   {
     image: "/lovable-uploads/bec62159-47fc-4e21-9d40-11bebd51957a.png", // Trail running in mountains
-    title: "Epic Destinations",
-    description: "Let us do the boring planning so you can travel the world and experience thrilling trails across continents and terrains"
+    title: "Episke Destinationer",
+    description: "Lad os tage os af den kedelige planlægning, så du kan rejse verden rundt og opleve spændende trails på tværs af kontinenter og terræner"
   },
   {
     image: "/lovable-uploads/6df07c5b-767f-47d4-8edb-24d097efcb3f.png", // Mountain runner
-    title: "Wonderful Sports Experiences",
-    description: "Set healthy goals for yourself and support an active lifestyle by training towards - and succeeding in - sports adventures"
+    title: "Fantastiske Sportsoplevelser",
+    description: "Sæt sunde mål for dig selv og støt en aktiv livsstil ved at træne mod - og lykkes med - sportseventyr"
   },
   {
     image: "/lovable-uploads/5bc2909f-5d00-491a-81ad-7524df77eab1.png", // Group training session
-    title: "Coaching & Community",
-    description: "Supported by running coaches and experts you can safely train towards ambitious running goals while getting special deals from our community"
+    title: "Coaching & Fællesskab",
+    description: "Støttet af løbecoaches og eksperter kan du sikkert træne mod ambitiøse løbemål, mens du får særlige tilbud fra vores fællesskab"
   }
 ];
 
@@ -25,10 +25,10 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-stone rounded-full text-charcoal">
-            Why Choose Us
+            Hvorfor Vælge Os
           </span>
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-            Experience Running Like Never Before
+            Oplev Løb Som Aldrig Før
           </h2>
         </div>
 
