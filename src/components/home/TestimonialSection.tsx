@@ -59,7 +59,7 @@ const TestimonialSection = () => {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-cabinet font-bold text-center text-charcoal mb-16">
-          Glade Trail Squad Alumni!
+          Glade Trail Squad alumni!
         </h1>
         
         <div className="relative mx-auto max-w-7xl px-4 md:px-8">
