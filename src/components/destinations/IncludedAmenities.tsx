@@ -81,7 +81,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/91b914ac-eb58-43d2-b8b9-c464cad202da.png",
       title: "Fællesskab",
-      description: "Månedlige træningsløb for medløbere"
+      description: "Månedlige træningsløb for deltagere"
     }
   ];
 
