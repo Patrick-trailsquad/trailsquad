@@ -9,7 +9,7 @@ const HeroSection = () => {
   const navigateAndScroll = useNavigateAndScroll();
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const fullText = "Løb de mest episke løb\ndu kan forestille dig";
+  const fullText = "Oplev episke destinationer\nmed løbeskoene på";
   
   useEffect(() => {
     let currentIndex = 0;
