@@ -92,7 +92,7 @@ const ForOrganizers = () => {
               Why partner with Trail Squad
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We bring 15+ years of experience in organizing premium trail running adventures 
+              We bring years of experience in organizing premium trail running adventures 
               across Europe's most spectacular destinations.
             </p>
           </div>
