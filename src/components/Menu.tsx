@@ -41,6 +41,12 @@ const Menu = () => {
       label: 'Om os', 
       icon: AboutIcon, 
       onClick: () => window.scrollTo(0, 0) 
+    },
+    { 
+      href: '/for-organizers', 
+      label: 'For organizers 🇬🇧', 
+      icon: AboutIcon, 
+      onClick: () => window.scrollTo(0, 0) 
     }
   ];
 
