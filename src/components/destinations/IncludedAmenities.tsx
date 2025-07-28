@@ -66,7 +66,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/a18f161c-12fd-4a39-819c-2ffac95a8982.png",
       title: "Socialt",
-      description: "Socialt løb og fejring efter løb"
+      description: "Fællesløb før race og fejring efter"
     },
     {
       icon: "/lovable-uploads/f7ffb7d1-9191-46d5-ae2a-7b1a4d9c5350.png",
