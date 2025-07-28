@@ -17,8 +17,8 @@ const ForOrganizers = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/956dbc4e-0e11-433a-9843-6c9ace6e75ab.png" 
-            alt="Trail running organizers meeting" 
+            src="/lovable-uploads/fff510ec-9973-4a99-8cb6-33660b099c4f.png" 
+            alt="Trail runner by mountain lakes in the Dolomites" 
             className="w-full h-full object-cover" 
             loading="lazy" 
           />
