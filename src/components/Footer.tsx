@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="space-y-6">
               {trailSquadLogo}
               <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
-                Experience epic trail running adventures across Europe with our expertly curated trips.
+                Oplev episke trailløbseventyr på tværs af Europa med vores ekspertudvalgte ture.
               </p>
               <SocialLinks />
             </div>
