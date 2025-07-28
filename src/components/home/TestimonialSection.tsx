@@ -13,7 +13,7 @@ import type { CarouselApi } from "@/components/ui/carousel";
 
 const testimonials = [
   {
-    quote: "Grand Trail du Lac var mit første trailløb. Fantastisk oplevelse at skubbe mig selv til grænsen i et velorganiseret løb. Hele turen var planlagt og udført super glat!",
+    quote: "Grand Trail du Lac var mit første trailløb. Fantastisk oplevelse at presse mig selv til grænsen i et velorganiseret løb. Hele turen var stærkt planlagt og super eksekveret.",
     author: "Simon Meinertz",
     title: "Grand Trail du Lac",
     image: "/lovable-uploads/9600454e-7c7f-4482-8216-a6e55e2a1c6e.png"
