@@ -54,7 +54,7 @@ const TransylvaniaIncludedAmenities = ({ className = "" }: TransylvaniaIncludedA
     },
     {
       icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
-      title: "Morgenmad",
+      title: "Lokalt cuisine",
       description: "Daglig morgenmad inkluderet"
     },
     {
