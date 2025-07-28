@@ -19,7 +19,7 @@ const testimonials = [
     image: "/lovable-uploads/9600454e-7c7f-4482-8216-a6e55e2a1c6e.png"
   },
   {
-    quote: "Jeg løb GTC30 og jeg kommer tilbage næste år! Ruterne var fantastiske, at bestige bjergtoppene og opleve de vanvittige landskaber var en betagende oplevelse - bogstaveligt talt!",
+    quote: "Jeg løb GTC30 og jeg kommer tilbage næste år! Ruterne var fantastiske, og at bestige bjergtoppene og opleve de vanvittige landskaber var en vild oplevelse!",
     author: "Mathias Lund",
     title: "Gran Trail Courmayeur 🇮🇹",
     image: "/lovable-uploads/7225d714-9535-49a1-810d-8357e51c97ef.png"
