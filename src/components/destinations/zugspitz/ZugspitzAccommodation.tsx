@@ -47,21 +47,21 @@ const ZugspitzAccommodation = () => {
             ))}
           </div>
         </div>
-        <h2 className="font-cabinet text-xl text-terra mb-4">Garmisch-Partenkirchen, Bavaria</h2>
+        <h2 className="font-cabinet text-xl text-terra mb-4">Garmisch-Partenkirchen, Bayern</h2>
         <p className="text-lg">
-          Welcome to the WERDENFELSEREI – a family-owned hotel at the foot of the Zugspitze, 
-          the mountain of mountains. Surrounded by impressive peaks, this is the perfect basecamp 
-          for your trail running adventure through Bavaria's spectacular terrain.
+          Velkommen til WERDENFELSEREI – et familieejet hotel ved foden af Zugspitze, 
+          bjergenes bjerg. Omgivet af imponerende toppe er dette det perfekte basecamp 
+          for dit trailløbseventyr gennem Bayerns spektakulære terræn.
         </p>
         <p className="text-lg mt-4">
-          After conquering the trails, enjoy a special time-out to relax. Dive into the rooftop 
-          pool with stunning Wetterstein mountain views, feast on culinary delights, and let your 
-          muscles recover in true Alpine comfort.
+          Efter at have erobret stierne kan du nyde en særlig pause til at slappe af. Dyk ned i tagpool 
+          med fantastisk udsigt over Wetterstein-bjergene, nyd kulinariske delikatesser, og lad dine 
+          muskler komme sig i ægte alpin komfort.
         </p>
         <p className="text-lg mt-4">
-          Round off your evening with a drink at Bar neun10, sharing trail stories with fellow 
-          runners and your hosts. Experience the personal, familiar atmosphere that makes the 
-          WERDENFELSEREI ideal for trail running groups.
+          Afslut din aften med en drink på Bar neun10, del trailhistorier med medløbere 
+          og dine værter. Oplev den personlige, familiære atmosfære, der gør 
+          WERDENFELSEREI ideelt for trailløbsgrupper.
         </p>
       </div>
     </div>

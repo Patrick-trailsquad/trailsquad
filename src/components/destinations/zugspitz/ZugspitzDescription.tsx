@@ -6,32 +6,32 @@ const ZugspitzDescription = () => {
   return (
     <div className="space-y-6 mb-8">
       <div>
-        <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+        <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Løbet</h2>
         <p className="text-lg">
-          Experience Germany's most spectacular Alpine trail running event in the stunning Bavarian Alps. 
-          The Zugspitz Ultratrail takes you through pristine Alpine meadows, ancient forests, and dramatic 
-          mountain ridges, offering breathtaking views of Germany's highest peak, the Zugspitze (2,962m).
+          Oplev Tysklands mest spektakulære alpine trailløbsevent i de fantastiske bayerske Alper. 
+          Zugspitz Ultratrail tager dig gennem uberørte alpine enge, ældgamle skove og dramatiske 
+          bjergkamme og tilbyder betagende udsigter over Tysklands højeste top, Zugspitze (2.962m).
         </p>
       </div>
 
       <div>
-        <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+        <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Oplevelsen</h2>
         <p className="text-lg">
-          Starting and finishing in the charming Olympic resort town of Garmisch-Partenkirchen, 
-          the course winds through the Wetterstein and Ammergau Alps, passing crystal-clear mountain 
-          lakes and traditional Alpine huts. Choose from seven challenging distances: 16km, 29km, 44km, 
-          68km, 86km, 106km, or the ultimate 164km Ultra Trail that circles the entire Zugspitz massif. 
-          Each route promises unique challenges and unforgettable Alpine scenery.
+          Med start og finish i den charmerende olympiske resort-by Garmisch-Partenkirchen 
+          slynger ruten sig gennem Wetterstein- og Ammergau-Alperne og passerer krystalklare bjerg-
+          søer og traditionelle alpine hytter. Vælg mellem syv udfordrende distancer: 16km, 29km, 44km, 
+          68km, 86km, 106km eller det ultimative 164km Ultra Trail, der omkredser hele Zugspitz-massivet. 
+          Hver rute lover unikke udfordringer og uforglemmelige alpine landskaber.
         </p>
       </div>
 
       <div>
-        <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+        <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Udfordringen</h2>
         <p className="text-lg">
-          From shorter trails perfect for newcomers to the demanding ultra-distance for seasoned athletes, 
-          each route offers panoramic views and authentic Bavarian culture. Experience traditional mountain 
-          huts serving hearty Alpine cuisine and immerse yourself in the rich history of this Olympic host 
-          city - the perfect blend of athletic challenge and cultural discovery in the heart of the German Alps.
+          Fra kortere trails perfekte for nybegyndere til de krævende ultradistancer for erfarne atleter 
+          tilbyder hver rute panoramaudsigter og autentisk bayersk kultur. Oplev traditionelle bjerg-
+          hytter, der serverer kraftig alpin mad, og fordyb dig i den rige historie fra denne olympiske værtsby 
+          - den perfekte blanding af atletisk udfordring og kulturel opdagelse i hjertet af de tyske Alper.
         </p>
       </div>
       
@@ -46,7 +46,7 @@ const ZugspitzDescription = () => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2"
         >
-          Visit Official Race Website
+          Besøg officiel løbshjemmeside
           <ExternalLink className="w-4 h-4" />
         </a>
       </Button>

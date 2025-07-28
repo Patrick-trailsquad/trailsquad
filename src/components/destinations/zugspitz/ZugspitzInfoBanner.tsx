@@ -7,19 +7,19 @@ const ZugspitzInfoBanner = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Location</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">Garmisch-Partenkirchen, Bavaria, Germany</h2>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Lokation</h1>
+            <h2 className="font-cabinet text-lg text-charcoal">Garmisch-Partenkirchen, Bayern, Tyskland</h2>
           </div>
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">June 19, 2026</h2>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Løbsdag</h1>
+            <h2 className="font-cabinet text-lg text-charcoal">19. juni 2026</h2>
           </div>
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">4 days</h2>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Rejsevarighed</h1>
+            <h2 className="font-cabinet text-lg text-charcoal">4 dage</h2>
           </div>
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
             <h2 className="font-cabinet text-lg text-charcoal">16km, 29km, 44km, 68km, 86km, 106km</h2>
           </div>
         </div>
