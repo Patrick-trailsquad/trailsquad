@@ -58,12 +58,9 @@ const ForOrganizers = () => {
               <div className="relative flex justify-end">
                 <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm mt-32 border border-gray-100">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
-                  <div className="flex items-start gap-4">
-                    <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-600">
-                      Co-founder specializing in logistics and partnerships, ensuring seamless coordination for all trail running events and experiences.
-                    </p>
-                  </div>
+                  <p className="text-gray-600">
+                    Experienced ultra and trail runner. Running coach and physiotherapist.
+                  </p>
                 </div>
               </div>
               
@@ -81,12 +78,9 @@ const ForOrganizers = () => {
               <div className="relative flex justify-start">
                 <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm -mt-16 border border-gray-100">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
-                  <div className="flex items-start gap-4">
-                    <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-600">
-                      Founder & trail enthusiast
-                    </p>
-                  </div>
+                  <p className="text-gray-600">
+                    Trail enthusiast. Travel aficionado and business development.
+                  </p>
                 </div>
               </div>
             </div>
