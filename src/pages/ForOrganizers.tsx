@@ -90,8 +90,7 @@ const ForOrganizers = () => {
               <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">Our Community</h3>
                 <p className="text-gray-600">
-                  Join a vibrant community of trail runners who share the passion for adventure 
-                  and exploration across Europe's most beautiful destinations.
+                  We bring runners to your race
                 </p>
               </div>
             </div>
