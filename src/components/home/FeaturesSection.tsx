@@ -25,7 +25,7 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-            Oplev Løb Som Aldrig Før
+            Oplev løb som aldrig før
           </h2>
         </div>
 
