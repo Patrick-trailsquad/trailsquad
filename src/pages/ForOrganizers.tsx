@@ -45,6 +45,52 @@ const ForOrganizers = () => {
         </div>
       </section>
 
+      {/* This is Trail Squad Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <img 
+                  src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
+                  alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
+                  className="w-full rounded-xl shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div className="space-y-8">
+                <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal">
+                  This is Trail Squad
+                </h2>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
+                    <div className="flex items-start gap-4">
+                      <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-600">
+                        Co-founder and experienced trail runner with over 15 years of organizing premium trail running adventures across Europe.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
+                    <div className="flex items-start gap-4">
+                      <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-600">
+                        Co-founder specializing in logistics and partnerships, ensuring seamless coordination for all trail running events and experiences.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What We Offer Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
