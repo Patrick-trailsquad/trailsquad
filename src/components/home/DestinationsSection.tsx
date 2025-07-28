@@ -64,9 +64,6 @@ const DestinationsSection = () => {
     <section id="upcoming-trips" className="py-24 bg-stone">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-white rounded-full text-charcoal">
-            Kommende Eventyr
-          </span>
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
             Squad'ens kommende destinationer
           </h2>
