@@ -70,7 +70,7 @@ const ForOrganizers = () => {
                     <div className="flex items-start gap-4">
                       <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
                       <p className="text-gray-600">
-                        Co-founder and experienced trail runner with over 15 years of organizing premium trail running adventures across Europe.
+                        Founder & trail enthusiast
                       </p>
                     </div>
                   </div>
