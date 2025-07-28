@@ -63,7 +63,7 @@ const ForOrganizers = () => {
               />
               
               {/* Emil - Overlaying from left, 15% over the photo */}
-              <div className="absolute left-1/2 top-1/2 transform -translate-x-[calc(100%-15%+50px)] translate-y-[calc(2rem+30px)]">
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-[calc(100%-15%+100px)] translate-y-[calc(2rem+90px)]">
                 <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm border border-gray-100">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
                   <p className="text-gray-600">
