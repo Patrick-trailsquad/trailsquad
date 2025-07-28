@@ -27,7 +27,7 @@ const testimonials = [
   {
     quote: "Jeg troede aldrig, jeg kunne skubbe mig selv til at løbe 85 km, men stemningen blandt de andre løbere og den generelle spænding ved at klare den her badboy drev mig gennem løbet! Sikke en dag!",
     author: "Lasse Stokholm",
-    title: "Bornholm Hammer Trail",
+    title: "Bornholm Hammer Trail 🇩🇰",
     image: "/lovable-uploads/a91cfa89-2256-458c-8ba1-bfd2d0b4a1b1.png"
   }
 ];
