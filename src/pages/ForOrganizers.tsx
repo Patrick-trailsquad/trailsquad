@@ -49,7 +49,7 @@ const ForOrganizers = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-16 text-center">
+            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-8 text-center">
               This is Trail Squad
             </h2>
             
@@ -69,7 +69,7 @@ const ForOrganizers = () => {
                 <img 
                   src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
                   alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                  className="w-full max-w-2xl rounded-xl shadow-lg relative z-0"
+                  className="w-full max-w-3xl rounded-xl shadow-lg relative z-0"
                   loading="lazy"
                 />
               </div>
