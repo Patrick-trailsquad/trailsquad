@@ -89,7 +89,7 @@ const ForOrganizers = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-              What Trail Squad Offers
+              Why partner with Trail Squad
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We bring 15+ years of experience in organizing premium trail running adventures 
