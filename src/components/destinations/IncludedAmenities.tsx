@@ -41,7 +41,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/38b791a4-b1f2-46b4-94e9-3a846f425922.png",
       title: "Flybilletter",
-      description: "Retur fra København"
+      description: "Tur/retur fra København"
     },
     {
       icon: "/lovable-uploads/c84fb355-d0d8-4186-98d2-586a852eff71.png",
