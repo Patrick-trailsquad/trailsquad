@@ -46,15 +46,15 @@ const TransylvaniaAccommodation = () => {
             ))}
           </div>
         </div>
-        <h2 className="font-cabinet text-xl text-terra mb-4">5-Star Luxury Resort • Poiana Brașov, Brașov County</h2>
+        <h2 className="font-cabinet text-xl text-terra mb-4">5-Stjernet Luksus Resort • Poiana Brașov, Brașov County</h2>
         <p className="text-lg">
-          Nestled in the Carpathian Mountains, <b>Swissôtel Poiana Brasov</b> is an elegant 5-star alpine retreat with modern Swiss design, spectacular mountain views, and direct access to Romania's premier mountain resort.
+          Beliggende i Karpaterne er <b>Swissôtel Poiana Brasov</b> et elegant 5-stjernet alpint tilflugtssted med moderne schweizisk design, spektakulære bjergudssigter og direkte adgang til Rumæniens førende bjergresort.
         </p>
         <p className="text-lg mt-4">
-          After a day on the trails, unwind in spacious rooms, enjoy the state-of-the-art spa and wellness center, and discover a selection of gourmet restaurants.
+          Efter en dag på stierne kan du slappe af i rummelige værelser, nyde det avancerede spa og wellness center og opdage et udvalg af gourmetrestauranter.
         </p>
         <p className="text-lg mt-4">
-          The tranquil mountain setting, luxurious amenities, and attentive service make Swissôtel Poiana Brasov the perfect base for your Transylvania 100 adventure—combining world-class hospitality and alpine atmosphere just minutes from the trails.
+          Det rolige bjergsetting, luksuriøse faciliteter og opmærksomme service gør Swissôtel Poiana Brasov til det perfekte udgangspunkt for dit Transylvania 100-eventyr - kombineret med verdensklasse gæstfrihed og alpin atmosfære blot få minutter fra stierne.
         </p>
       </div>
     </div>
