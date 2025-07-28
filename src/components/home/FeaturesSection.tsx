@@ -24,9 +24,6 @@ const FeaturesSection = () => {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-stone rounded-full text-charcoal">
-            Hvorfor Vælge Os
-          </span>
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
             Oplev Løb Som Aldrig Før
           </h2>
