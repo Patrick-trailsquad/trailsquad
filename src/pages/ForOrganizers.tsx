@@ -53,10 +53,18 @@ const ForOrganizers = () => {
               This is Trail Squad
             </h2>
             
-            <div className="relative grid grid-cols-3 gap-8 items-center min-h-[600px]">
-              {/* Emil - Left side, lower position */}
-              <div className="relative flex justify-end">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm mt-32 border border-gray-100">
+            <div className="relative flex justify-center min-h-[600px]">
+              {/* Image - Center */}
+              <img 
+                src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
+                alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
+                className="w-full max-w-lg rounded-xl shadow-lg"
+                loading="lazy"
+              />
+              
+              {/* Emil - Overlaying from left, 15% over the photo */}
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-[calc(100%-15%)] translate-y-8">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm border border-gray-100">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
                   <p className="text-gray-600">
                     Experienced ultra and trail runner. Running coach and physiotherapist.
@@ -64,19 +72,9 @@ const ForOrganizers = () => {
                 </div>
               </div>
               
-              {/* Image - Center */}
-              <div className="flex justify-center">
-                <img 
-                  src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
-                  alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                  className="w-full max-w-lg rounded-xl shadow-lg"
-                  loading="lazy"
-                />
-              </div>
-              
-              {/* Patrick - Right side, higher position */}
-              <div className="relative flex justify-start">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm -mt-16 border border-gray-100">
+              {/* Patrick - Overlaying from right */}
+              <div className="absolute right-1/2 top-1/2 transform translate-x-[calc(100%-15%)] -translate-y-8">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm border border-gray-100">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
                   <p className="text-gray-600">
                     Trail enthusiast. Travel aficionado and business development.
