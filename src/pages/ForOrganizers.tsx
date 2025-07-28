@@ -97,6 +97,41 @@ const ForOrganizers = () => {
             </p>
           </div>
 
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="h-48 w-full">
+                <img 
+                  src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" 
+                  alt="Trail Squad community at various trail running events" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-cabinet text-xl font-bold mb-3">Our Community</h3>
+                <p className="text-gray-600">
+                  Join a vibrant community of trail runners who share the passion for adventure 
+                  and exploration across Europe's most beautiful destinations.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="h-48 w-full bg-gradient-to-r from-[#FFDC00] to-yellow-400">
+                <div className="h-full flex items-center justify-center">
+                  <h4 className="font-cabinet text-2xl font-bold text-black">Premium Experience</h4>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-cabinet text-xl font-bold mb-3">Quality First</h3>
+                <p className="text-gray-600">
+                  Every detail is carefully planned to ensure an exceptional experience 
+                  for your participants, from luxury accommodation to expert guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-[#FFDC00] rounded-full flex items-center justify-center mx-auto mb-4">
