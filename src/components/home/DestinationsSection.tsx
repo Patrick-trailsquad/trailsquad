@@ -68,7 +68,7 @@ const DestinationsSection = () => {
             Kommende Eventyr
           </span>
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-            Squad'ets Kommende Destinationer
+            Squad'ens kommende destinationer
           </h2>
         </div>
 
