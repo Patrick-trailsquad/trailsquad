@@ -73,7 +73,7 @@ const ForOrganizers = () => {
               </div>
               
               {/* Patrick - Overlaying from right */}
-              <div className="absolute right-1/2 top-1/2 transform translate-x-[calc(100%-15%+100px)] -translate-y-[calc(2rem+190px)]">
+              <div className="absolute right-1/2 top-1/2 transform translate-x-[calc(100%-15%+100px)] -translate-y-[calc(2rem+290px)]">
                 <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm border border-gray-100">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
                   <p className="text-gray-600">
