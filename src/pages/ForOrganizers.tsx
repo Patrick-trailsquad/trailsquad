@@ -97,10 +97,8 @@ const ForOrganizers = () => {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="h-48 w-full bg-gradient-to-r from-[#FFDC00] to-yellow-400">
-                <div className="h-full flex items-center justify-center">
-                  <h4 className="font-cabinet text-2xl font-bold text-black">Premium Experience</h4>
-                </div>
+              <div className="h-48 w-full">
+                <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">Quality First</h3>
