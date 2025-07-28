@@ -4,24 +4,16 @@ import { usePageTitle } from "../hooks/usePageTitle";
 import { Button } from "@/components/ui/button";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 import { ArrowRight, Users, Globe, Trophy, Heart } from "lucide-react";
-
 const ForOrganizers = () => {
   usePageTitle('For Organizers');
   useScrollToTop();
-
-  return (
-    <div className="min-h-screen bg-stone">
+  return <div className="min-h-screen bg-stone">
       <Menu />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/lovable-uploads/fff510ec-9973-4a99-8cb6-33660b099c4f.png" 
-            alt="Trail runner by mountain lakes in the Dolomites" 
-            className="w-full h-full object-cover" 
-            loading="lazy" 
-          />
+          <img src="/lovable-uploads/fff510ec-9973-4a99-8cb6-33660b099c4f.png" alt="Trail runner by mountain lakes in the Dolomites" className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         
@@ -33,9 +25,7 @@ const ForOrganizers = () => {
             <p className="font-inter text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
               Trail Squad organizes premium trips for enthusiastic runners, who wish to race the best trails across Europe - should we join yours?
             </p>
-            <Button 
-              className="bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto text-lg"
-            >
+            <Button className="bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto text-lg">
               Start Partnership Discussion
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -53,12 +43,7 @@ const ForOrganizers = () => {
             
             <div className="relative flex justify-center min-h-[600px]">
               {/* Image - Center */}
-              <img 
-                src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
-                alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                className="w-full max-w-lg rounded-xl shadow-lg"
-                loading="lazy"
-              />
+              <img src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" className="w-full max-w-lg rounded-xl shadow-lg" loading="lazy" />
               
               {/* Emil - Overlaying from left, 15% over the photo */}
               <div className="absolute left-1/2 top-1/2 transform -translate-x-[calc(100%-15%+100px)] translate-y-[calc(2rem+90px)]">
@@ -100,12 +85,7 @@ const ForOrganizers = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="h-48 w-full">
-                <img 
-                  src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" 
-                  alt="Trail Squad community at various trail running events" 
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <img src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" alt="Trail Squad community at various trail running events" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">Our Community</h3>
@@ -132,51 +112,7 @@ const ForOrganizers = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#FFDC00] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-black" />
-              </div>
-              <h3 className="font-cabinet text-xl font-bold mb-3">Premium Group Management</h3>
-              <p className="text-gray-600">
-                Expert handling of small, exclusive groups (5-15 participants) ensuring 
-                personalized attention and premium service.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#FFDC00] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-black" />
-              </div>
-              <h3 className="font-cabinet text-xl font-bold mb-3">European Expertise</h3>
-              <p className="text-gray-600">
-                Extensive network across Europe's top trail running destinations, 
-                from the Alps to the Pyrenees and beyond.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#FFDC00] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Trophy className="w-8 h-8 text-black" />
-              </div>
-              <h3 className="font-cabinet text-xl font-bold mb-3">Race Integration</h3>
-              <p className="text-gray-600">
-                Seamless integration with major trail running events, 
-                handling registrations, logistics, and race-day support.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#FFDC00] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-black" />
-              </div>
-              <h3 className="font-cabinet text-xl font-bold mb-3">Full-Service Experience</h3>
-              <p className="text-gray-600">
-                Complete package including flights, luxury accommodation, 
-                coaching, physiotherapy, and cultural experiences.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -190,12 +126,7 @@ const ForOrganizers = () => {
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <img 
-                  src="/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png" 
-                  alt="Trail Squad team meeting" 
-                  className="w-full rounded-xl shadow-lg"
-                  loading="lazy"
-                />
+                <img src="/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png" alt="Trail Squad team meeting" className="w-full rounded-xl shadow-lg" loading="lazy" />
               </div>
               
               <div className="space-y-6">
@@ -267,9 +198,7 @@ const ForOrganizers = () => {
                   Looking to add premium travel packages to your trail running events? 
                   We handle the complete travel experience for your participants.
                 </p>
-                <Button 
-                  className="bg-charcoal text-white hover:bg-gray-800 w-full"
-                >
+                <Button className="bg-charcoal text-white hover:bg-gray-800 w-full">
                   Partner as Event Organizer
                 </Button>
               </div>
@@ -280,9 +209,7 @@ const ForOrganizers = () => {
                   Expand your portfolio with specialized trail running adventures. 
                   Perfect for agencies focusing on active and adventure travel.
                 </p>
-                <Button 
-                  className="bg-charcoal text-white hover:bg-gray-800 w-full"
-                >
+                <Button className="bg-charcoal text-white hover:bg-gray-800 w-full">
                   Partner as Travel Agency
                 </Button>
               </div>
@@ -303,8 +230,6 @@ const ForOrganizers = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ForOrganizers;
