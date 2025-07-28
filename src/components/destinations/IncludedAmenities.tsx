@@ -61,7 +61,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     {
       icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
       title: "Coaching",
-      description: "Briefing før løb og strategi"
+      description: "Strategi og forberedelse inden løb"
     },
     {
       icon: "/lovable-uploads/a18f161c-12fd-4a39-819c-2ffac95a8982.png",
