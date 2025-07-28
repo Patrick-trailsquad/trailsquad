@@ -53,7 +53,7 @@ const ForOrganizers = () => {
               This is Trail Squad
             </h2>
             
-            <div className="relative grid grid-cols-3 gap-8 items-center min-h-[600px]">
+            <div className="relative grid gap-8 items-center min-h-[600px]" style={{ gridTemplateColumns: '17% 66% 17%' }}>
               {/* Emil - Left side, lower position */}
               <div className="relative flex justify-end">
                 <div className="absolute right-0 top-32 bg-[#FFDC00] rounded-xl shadow-lg p-6 max-w-sm z-10 -mr-8">
@@ -69,7 +69,7 @@ const ForOrganizers = () => {
                 <img 
                   src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
                   alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                  className="w-full max-w-3xl rounded-xl shadow-lg relative z-0"
+                  className="w-full max-w-3xl h-96 rounded-xl shadow-lg relative z-0 object-cover object-[center_15%]"
                   loading="lazy"
                 />
               </div>
