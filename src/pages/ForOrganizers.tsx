@@ -88,7 +88,7 @@ const ForOrganizers = () => {
                 <img src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" alt="Trail Squad community at various trail running events" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-6">
-                <h3 className="font-cabinet text-xl font-bold mb-3">Our Community</h3>
+                <h3 className="font-cabinet text-xl font-bold mb-3">We bring runners to your race</h3>
                 <p className="text-gray-600">
                   We bring runners to your race
                 </p>
