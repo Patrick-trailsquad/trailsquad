@@ -13,19 +13,19 @@ import type { CarouselApi } from "@/components/ui/carousel";
 
 const testimonials = [
   {
-    quote: "Grand Trail du Lac was my first trail race. Great experience to push myself to the limits in a well-organised race. The entire trip was planned and executed super smoothly!",
+    quote: "Grand Trail du Lac var mit første trailløb. Fantastisk oplevelse at skubbe mig selv til grænsen i et velorganiseret løb. Hele turen var planlagt og udført super glat!",
     author: "Simon Meinertz",
     title: "Grand Trail du Lac",
     image: "/lovable-uploads/9600454e-7c7f-4482-8216-a6e55e2a1c6e.png"
   },
   {
-    quote: "I ran the GTC30 and I'm going back next year! The trail was awesome, climbing the mountain tops and getting crazy scenaries were a breath-taking experience - quite literally!",
+    quote: "Jeg løb GTC30 og jeg kommer tilbage næste år! Ruterne var fantastiske, at bestige bjergtoppene og opleve de vanvittige landskaber var en betagende oplevelse - bogstaveligt talt!",
     author: "Mathias Lund",
     title: "Gran Trail Courmayeur",
     image: "/lovable-uploads/7225d714-9535-49a1-810d-8357e51c97ef.png"
   },
   {
-    quote: "I never thought I could push myself to run 85 km but the vibe amongst the other runners and the general thrill of nailing this badboy drove me through the race! What a day!",
+    quote: "Jeg troede aldrig, jeg kunne skubbe mig selv til at løbe 85 km, men stemningen blandt de andre løbere og den generelle spænding ved at klare den her badboy drev mig gennem løbet! Sikke en dag!",
     author: "Lasse Stokholm",
     title: "Bornholm Hammer Trail",
     image: "/lovable-uploads/a91cfa89-2256-458c-8ba1-bfd2d0b4a1b1.png"
