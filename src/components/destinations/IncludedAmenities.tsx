@@ -75,7 +75,7 @@ const IncludedAmenities = ({ className = "" }: IncludedAmenitiesProps) => {
     },
     {
       icon: "/lovable-uploads/1c4eceb7-97ce-45ca-b50f-0844491ca83a.png",
-      title: "Løbsudstyr",
+      title: "Goodie bag",
       description: "Førsteklasses Trail Squad merchandise"
     },
     {
