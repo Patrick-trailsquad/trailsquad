@@ -51,7 +51,7 @@ const TransylvaniaAccommodation = () => {
           Beliggende i Karpaterne er <b>Swissôtel Poiana Brasov</b> et elegant 5-stjernet alpint tilflugtssted med moderne schweizisk design, spektakulære bjergudssigter og direkte adgang til Rumæniens førende bjergresort.
         </p>
         <p className="text-lg mt-4">
-          Efter en dag på stierne kan du slappe af i rummelige værelser, nyde det avancerede spa og wellness center og opdage et udvalg af gourmetrestauranter.
+          Efter en dag på trailruten kan du slappe af i rummelige værelser, nyde det avancerede spa og wellness center og opdage et udvalg af gourmetrestauranter.
         </p>
         <p className="text-lg mt-4">
           Det rolige bjergsetting, luksuriøse faciliteter og opmærksomme service gør Swissôtel Poiana Brasov til det perfekte udgangspunkt for dit Transylvania 100-eventyr - kombineret med verdensklasse gæstfrihed og alpin atmosfære blot få minutter fra stierne.
