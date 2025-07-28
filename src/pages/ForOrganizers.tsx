@@ -31,7 +31,7 @@ const ForOrganizers = () => {
               For Race Organizers
             </h1>
             <p className="font-inter text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Trail Squad specializes in taking enthusiastic runners to the best trail races across Europe - should we join your race?
+              Trail Squad organizes premium trips for enthusiastic runners, who wish to race the best trails across Europe - should we join yours?
             </p>
             <Button 
               className="bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium border-2 border-black hover:bg-white transition-colors duration-300 flex items-center gap-2 mx-auto text-lg"
