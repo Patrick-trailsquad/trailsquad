@@ -56,9 +56,9 @@ const ForOrganizers = () => {
             <div className="relative grid grid-cols-3 gap-8 items-center min-h-[600px]">
               {/* Emil - Left side, lower position */}
               <div className="relative flex justify-end">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm mt-32 border border-gray-100">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
-                  <p className="text-gray-600">
+                <div className="absolute right-0 top-32 bg-[#FFDC00] rounded-xl shadow-lg p-6 max-w-sm border-2 border-black z-10 -mr-8">
+                  <h3 className="font-cabinet text-2xl font-bold text-black mb-3">Emil Albrechtsen</h3>
+                  <p className="text-black">
                     Experienced ultra and trail runner. Running coach and physiotherapist.
                   </p>
                 </div>
@@ -69,16 +69,16 @@ const ForOrganizers = () => {
                 <img 
                   src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" 
                   alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" 
-                  className="w-full max-w-lg rounded-xl shadow-lg"
+                  className="w-full max-w-2xl rounded-xl shadow-lg relative z-0"
                   loading="lazy"
                 />
               </div>
               
               {/* Patrick - Right side, higher position */}
               <div className="relative flex justify-start">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm -mt-16 border border-gray-100">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
-                  <p className="text-gray-600">
+                <div className="absolute left-0 -top-16 bg-[#FFDC00] rounded-xl shadow-lg p-6 max-w-sm border-2 border-black z-10 -ml-8">
+                  <h3 className="font-cabinet text-2xl font-bold text-black mb-3">Patrick Lund</h3>
+                  <p className="text-black">
                     Trail enthusiast. Travel aficionado and business development.
                   </p>
                 </div>
