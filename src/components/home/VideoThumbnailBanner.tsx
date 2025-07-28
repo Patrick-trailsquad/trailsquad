@@ -38,9 +38,6 @@ const VideoThumbnailBanner = () => {
                 <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
                   Mød Trail Squad teamet
                 </h1>
-                <p className="font-cabinet text-xl md:text-2xl font-medium text-charcoal/80 leading-relaxed">
-                  (in Danish 🇩🇰)
-                </p>
               </div>
             </div>
             
