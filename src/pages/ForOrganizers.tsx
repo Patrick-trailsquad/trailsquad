@@ -36,10 +36,7 @@ const ForOrganizers = () => {
             <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
               Why partner with Trail Squad
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We bring years of experience in organizing premium trail running adventures 
-              across Europe's most spectacular destinations.
-            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">We bring years of experience in organising premium trail running adventures across Europe's most spectacular destinations.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
