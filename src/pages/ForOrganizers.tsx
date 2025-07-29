@@ -78,7 +78,7 @@ const ForOrganizers = () => {
                 <h2 className="font-cabinet text-xl md:text-2xl text-gray-600">When you give us access to a number of your race tickets, as well as flexibility across distances, then we can create a full trail run travel package.
 
               </h2>
-                <p className="text-lg text-gray-600 mt-4">This is basically all we need.</p>
+                
               </div>
               
               <div className="rounded-xl overflow-hidden">
