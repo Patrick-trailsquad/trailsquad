@@ -118,7 +118,7 @@ const ForOrganizers = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">What Trail Squad needs from you </h1>
-                <h2 className="font-cabinet text-xl md:text-2xl text-gray-600">If you give us access to a number of your race tickets, as well as flexibility across distances, then we can create a full trail run travel package.</h2>
+                <h2 className="font-cabinet text-xl md:text-2xl text-gray-600">When you give us access to a number of your race tickets, as well as flexibility across distances, then we can create a full trail run travel package.</h2>
               </div>
               
               <div className="rounded-xl overflow-hidden">
