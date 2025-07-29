@@ -113,7 +113,7 @@ const ForOrganizers = () => {
               </div>
               <div className="p-6 pt-8">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We bring runners to your race</h3>
-                <p className="text-gray-600">If your race becomes one of the Trail Squad destinations then we will work our magic to get our network of Nordic runners to join. We fly out of Copenhagen so most of us are probably Danish 🇩🇰</p>
+                <p className="text-gray-600">If your race becomes one of the Trail Squad destinations then we will work our magic to get our network of enthusiastic runners to join. We fly out of Copenhagen so most of us are probably Danish 🇩🇰</p>
               </div>
             </div>
 
