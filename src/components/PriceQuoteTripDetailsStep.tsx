@@ -129,26 +129,6 @@ const PriceQuoteTripDetailsStep = ({
         )}
       </div>
 
-      <div className="space-y-3">
-        <Label>Foretrukket sprog for kommende kommunikation</Label>
-        <RadioGroup 
-          defaultValue="english"
-          onValueChange={(value) => setValue('preferredLanguage', value)}
-          className="gap-3"
-        >
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="english" id="english" />
-            <Label htmlFor="english">Engelsk</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="danish" id="danish" />
-            <Label htmlFor="danish">Dansk</Label>
-          </div>
-        </RadioGroup>
-        {errors.preferredLanguage && (
-          <p className="text-red-500 text-sm">Venligst vælg et foretrukket sprog</p>
-        )}
-      </div>
 
       <div className="flex flex-col sm:flex-row gap-3 mt-6">
         <Button 

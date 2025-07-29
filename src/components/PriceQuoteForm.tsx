@@ -20,7 +20,6 @@ interface FormValues {
   phone: string;
   preferredDistance: string;
   participants: number;
-  preferredLanguage: string;
   accommodationPreference: string;
 }
 
@@ -32,7 +31,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
   const [step, setStep] = useState(1);
   const form = useForm<FormValues>({
     defaultValues: {
-      preferredLanguage: 'english',
       preferredDistance: availableDistances[0],
       accommodationPreference: 'single'
     }
@@ -48,7 +46,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
         phone_number: data.phone,
         preferred_distance: data.preferredDistance,
         number_of_participants: data.participants,
-        preferred_language: data.preferredLanguage,
         accommodation_preference: data.accommodationPreference
       };
 
