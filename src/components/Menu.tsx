@@ -159,9 +159,11 @@ const Menu = () => {
                           key={item.label}
                           to={item.href}
                           onClick={item.onClick}
-                          className="flex items-center gap-4 text-white hover:text-terra hover:font-bold transition-all duration-300"
+                          className={`flex gap-4 text-white hover:text-terra hover:font-bold transition-all duration-300 ${
+                            item.label === 'For organizers 🇬🇧' ? 'items-start' : 'items-center'
+                          }`}
                         >
-                          <item.icon className="w-8 h-8" />
+                          <item.icon className="w-8 h-8 flex-shrink-0 mt-1" />
                           <span className="font-cabinet text-xl">
                             {item.label === 'For organizers 🇬🇧' ? (
                               <>
