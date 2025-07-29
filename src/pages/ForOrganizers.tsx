@@ -56,7 +56,7 @@ const ForOrganizers = () => {
               </div>
               <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We create quality content from your race</h3>
-                <p className="text-gray-600">We are good at social media and we create action shots and short documentaries from our races. Essentially we will market your race for you with high quality video. Our runners love it - and so will you 🫶</p>
+                <p className="text-gray-600">We are good at social media and we create action shots and short documentaries from our races. Essentially we will market your race for you with high quality video and engagement. Our runners love it - and so will you 🫶</p>
               </div>
             </div>
           </div>
