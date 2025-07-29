@@ -109,58 +109,7 @@ const ForOrganizers = () => {
       </section>
 
       {/* Partnership Benefits */}
-      <section className="py-24 bg-stone">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-12 text-center">
-              Partnership Benefits
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <img src="/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png" alt="Trail Squad team meeting" className="w-full rounded-xl shadow-lg" loading="lazy" />
-              </div>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="font-cabinet text-xl font-bold mb-2">Revenue Sharing</h3>
-                    <p className="text-gray-600">
-                      Competitive commission structure with transparent revenue sharing 
-                      for successful partnerships.
-                    </p>
-                  </div>
-                </div>
-
-                
-
-                <div className="flex items-start gap-4">
-                  <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="font-cabinet text-xl font-bold mb-2">Operational Excellence</h3>
-                    <p className="text-gray-600">
-                      Proven systems for participant management, logistics coordination, 
-                      and on-ground execution.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="font-cabinet text-xl font-bold mb-2">Quality Assurance</h3>
-                    <p className="text-gray-600">
-                      Rigorous quality standards ensuring exceptional participant 
-                      satisfaction and repeat business.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* New Section */}
       <section className="py-24 bg-white">
