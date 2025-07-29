@@ -117,9 +117,7 @@ const ForOrganizers = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-                  Ready to Elevate Your Event?
-                </h1>
+                <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">This is whatw</h1>
                 <h2 className="font-cabinet text-2xl md:text-3xl text-gray-600">
                   Join our network of premium trail running experiences across Europe
                 </h2>
