@@ -118,9 +118,7 @@ const ForOrganizers = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">This is what we need </h1>
-                <h2 className="font-cabinet text-2xl md:text-3xl text-gray-600">
-                  Join our network of premium trail running experiences across Europe
-                </h2>
+                <h2 className="font-cabinet text-2xl md:text-3xl text-gray-600">If you give us access to a number o</h2>
               </div>
               
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
