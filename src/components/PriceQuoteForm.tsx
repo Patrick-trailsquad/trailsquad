@@ -1,4 +1,3 @@
-
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Info, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -7,13 +6,11 @@ import { useState } from "react";
 import { Progress } from "./ui/progress";
 import PriceQuotePersonalInfoStep from "./PriceQuotePersonalInfoStep";
 import PriceQuoteTripDetailsStep from "./PriceQuoteTripDetailsStep";
-
 interface PriceQuoteFormProps {
   destinationName: string;
   availableDistances: string[];
   maxParticipants?: number;
 }
-
 interface FormValues {
   fullName: string;
   email: string;
@@ -22,11 +19,15 @@ interface FormValues {
   participants: number;
   accommodationPreference: string;
 }
-
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8br/';
-
-const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants = 100 }: PriceQuoteFormProps) => {
-  const { toast } = useToast();
+const PriceQuoteForm = ({
+  destinationName,
+  availableDistances,
+  maxParticipants = 100
+}: PriceQuoteFormProps) => {
+  const {
+    toast
+  } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [step, setStep] = useState(1);
   const form = useForm<FormValues>({
@@ -35,7 +36,6 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
       accommodationPreference: 'single'
     }
   });
-
   const onSubmit = async (data: FormValues) => {
     try {
       const formData = {
@@ -48,40 +48,34 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
         number_of_participants: data.participants,
         accommodation_preference: data.accommodationPreference
       };
-
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         mode: 'no-cors',
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       });
-
       setIsSubmitted(true);
-
       toast({
         title: "Succes",
-        description: "Din anmodning er blevet sendt succesfuldt!",
+        description: "Din anmodning er blevet sendt succesfuldt!"
       });
     } catch (error) {
       toast({
         title: "Fejl",
         description: "Kunne ikke sende din anmodning. Prøv venligst igen.",
-        variant: "destructive",
+        variant: "destructive"
       });
     }
   };
-
   const advanceStep = async () => {
     const isValid = await form.trigger(['fullName', 'email', 'phone']);
     if (isValid) {
       setStep(2);
     }
   };
-
-  return (
-    <Sheet>
+  return <Sheet>
       <SheetTrigger asChild>
         <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
           Anmod om pristilbud
@@ -96,8 +90,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
         </SheetHeader>
         
         <div className="mt-6 pb-6">
-          {isSubmitted ? (
-            <div className="bg-green-50 rounded-lg p-4 flex items-start gap-3">
+          {isSubmitted ? <div className="bg-green-50 rounded-lg p-4 flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 mt-0.5 text-green-600 shrink-0" />
               <div className="space-y-1">
                 <p className="font-medium text-green-900">
@@ -107,9 +100,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
                   Vi vender tilbage til dig med et personligt tilbud inden for 48 timer på hverdage.
                 </p>
               </div>
-            </div>
-          ) : (
-            <>
+            </div> : <>
               <div className="mb-6">
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-medium">
@@ -125,9 +116,7 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
               <div className="bg-stone/50 rounded-lg p-4 flex items-start gap-3 mb-6">
                 <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-600 mb-2">
-                    Udfyld denne formular, og vi vender tilbage til dig med et personligt tilbud til dit eventyr. Vi svarer typisk inden for 48 timer på hverdage.
-                  </p>
+                  <p className="text-sm text-gray-600 mb-2">Udfyld denne formular, og vi vender tilbage til dig med et personligt tilbud på dit eventyr. Vi svarer typisk inden for 48 timer på hverdage.</p>
                   <p className="text-sm text-gray-600 mb-2">
                     Tilbuddet vil indeholde et Stripe-link til at betale 75% af prisen for at bekræfte. Vi vender tilbage 60 dage før afrejse for at indsamle de resterende 25% af prisen.
                   </p>
@@ -135,23 +124,11 @@ const PriceQuoteForm = ({ destinationName, availableDistances, maxParticipants =
               </div>
 
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                {step === 1 ? (
-                  <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} />
-                ) : (
-                  <PriceQuoteTripDetailsStep 
-                    form={form}
-                    availableDistances={availableDistances}
-                    onBack={() => setStep(1)}
-                    maxParticipants={maxParticipants}
-                  />
-                )}
+                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} />}
               </form>
-            </>
-          )}
+            </>}
         </div>
       </SheetContent>
-    </Sheet>
-  );
+    </Sheet>;
 };
-
 export default PriceQuoteForm;
