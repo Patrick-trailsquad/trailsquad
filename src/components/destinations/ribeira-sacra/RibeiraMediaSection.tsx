@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 
 const RibeiraMediaSection = () => {
-  const spotsLeft = 5;
+  const spotsLeft = 4;
   return (
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
@@ -49,7 +49,7 @@ const RibeiraMediaSection = () => {
           </div>
           <div className="col-span-2">
             <p className="text-sm text-gray-600 mb-1">Rejsestatus</p>
-            <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} pladser tilbage</p>
+            <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} pladser</p>
           </div>
         </div>
         <PriceQuoteForm 
