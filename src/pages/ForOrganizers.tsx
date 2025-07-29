@@ -34,40 +34,7 @@ const ForOrganizers = () => {
       </section>
 
       {/* This is Trail Squad Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-8 text-center">
-              We are Trail Squad
-            </h2>
-            
-            <div className="relative flex justify-center min-h-[600px]">
-              {/* Image - Center */}
-              <img src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" className="w-full max-w-lg rounded-xl shadow-lg" loading="lazy" />
-              
-              {/* Emil - Overlaying from left, 15% over the photo */}
-              <div className="absolute left-1/2 top-1/2 transform -translate-x-[calc(100%-15%+100px)] translate-y-[calc(2rem+90px)]">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm border border-gray-100">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Emil Albrechtsen</h3>
-                  <p className="text-gray-600">
-                    Experienced ultra and trail runner. Running coach and physiotherapist.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Patrick - Overlaying from right */}
-              <div className="absolute right-1/2 top-1/2 transform translate-x-[calc(100%-15%+100px)] -translate-y-[calc(2rem+300px)]">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 max-w-sm border border-gray-100">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-3">Patrick Lund</h3>
-                  <p className="text-gray-600">
-                    Trail enthusiast. Travel aficionado and business development.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* What We Offer Section */}
       <section className="py-24 bg-white">
