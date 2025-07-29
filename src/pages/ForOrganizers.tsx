@@ -34,38 +34,14 @@ const ForOrganizers = () => {
       </section>
 
       {/* This is Trail Squad Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="font-cabinet text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-8 md:mb-12 text-center">
+            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-8 text-center">
               We are Trail Squad
             </h2>
             
-            {/* Mobile Layout - Stack vertically */}
-            <div className="md:hidden space-y-8">
-              <div className="flex justify-center">
-                <img src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" className="w-full max-w-sm rounded-xl shadow-lg" loading="lazy" />
-              </div>
-              
-              <div className="space-y-6">
-                <div className="bg-white rounded-xl shadow-lg p-4 border border-gray-100">
-                  <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Emil Albrechtsen</h3>
-                  <p className="text-gray-600 text-sm">
-                    Experienced ultra and trail runner. Running coach and physiotherapist.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-xl shadow-lg p-4 border border-gray-100">
-                  <h3 className="font-cabinet text-xl font-bold text-charcoal mb-2">Patrick Lund</h3>
-                  <p className="text-gray-600 text-sm">
-                    Trail enthusiast. Travel aficionado and business development.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Desktop Layout - Overlays */}
-            <div className="hidden md:block relative flex justify-center min-h-[600px]">
+            <div className="relative flex justify-center min-h-[600px]">
               {/* Image - Center */}
               <img src="/lovable-uploads/e5e63927-e80f-44e4-acb3-662826c72d0d.png" alt="Patrick Lund and Emil Albrechtsen - Trail Squad founders" className="w-full max-w-lg rounded-xl shadow-lg" loading="lazy" />
               
@@ -108,20 +84,20 @@ const ForOrganizers = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="h-56 w-full overflow-hidden">
-                <img src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" alt="Trail Squad community at various trail running events" className="w-full h-[115%] object-cover" loading="lazy" />
+              <div className="h-48 w-full">
+                <img src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" alt="Trail Squad community at various trail running events" className="w-full h-full object-cover" loading="lazy" />
               </div>
-              <div className="p-6 pt-8">
+              <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We bring runners to your race</h3>
-                <p className="text-gray-600">If your race becomes one of the Trail Squad destinations then we will work our magic to get our network of enthusiastic runners to join. We fly out of Copenhagen so most of us are probably Danish 🇩🇰</p>
+                <p className="text-gray-600">If your race becomes one of the Trail Squad destinations then we will work our magic to get our network of Nordic runners to join. We fly out of Copenhagen so most of us are probably Danish 🇩🇰</p>
               </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="h-56 w-full overflow-hidden">
-                <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-[115%] object-cover" loading="lazy" />
+              <div className="h-48 w-full">
+                <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-full object-cover" loading="lazy" />
               </div>
-              <div className="p-6 pt-8">
+              <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We create quality content from your race</h3>
                 <p className="text-gray-600">We are good at social media and we create action shots and short documentaries from our races. Essentially we will market your race for you with high quality video. Our runners love it - and so will you 🫶</p>
               </div>
@@ -141,8 +117,8 @@ const ForOrganizers = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="overflow-hidden rounded-xl shadow-lg">
-                <img src="/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png" alt="Trail Squad team meeting" className="w-full h-[115%] object-cover" loading="lazy" />
+              <div>
+                <img src="/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png" alt="Trail Squad team meeting" className="w-full rounded-xl shadow-lg" loading="lazy" />
               </div>
               
               <div className="space-y-6">
@@ -157,16 +133,7 @@ const ForOrganizers = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h3 className="font-cabinet text-xl font-bold mb-2">Marketing Support</h3>
-                    <p className="text-gray-600">
-                      Co-branded marketing materials, social media promotion, 
-                      and access to our established customer base.
-                    </p>
-                  </div>
-                </div>
+                
 
                 <div className="flex items-start gap-4">
                   <div className="w-3 h-3 bg-[#FFDC00] rounded-full mt-2 flex-shrink-0"></div>
@@ -220,7 +187,7 @@ const ForOrganizers = () => {
               </div>
 
               <div className="bg-stone rounded-xl p-8">
-                <h3 className="font-cabinet text-xl font-bold mb-4">Travel Agencies</h3>
+                
                 <p className="text-gray-600 mb-6">
                   Expand your portfolio with specialized trail running adventures. 
                   Perfect for agencies focusing on active and adventure travel.
