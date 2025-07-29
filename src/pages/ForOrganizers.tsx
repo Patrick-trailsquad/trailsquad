@@ -121,14 +121,8 @@ const ForOrganizers = () => {
                 <h2 className="font-cabinet text-2xl md:text-3xl text-gray-600">If you give us access to a number of your race tickets, as well as flexibility across distances, then we can create a full trail run travel package.</h2>
               </div>
               
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="h-56 w-full">
-                  
-                </div>
-                <div className="p-6">
-                  <h3 className="font-cabinet text-xl font-bold mb-3">Partnership Opportunity</h3>
-                  <p className="text-gray-600">Connect with passionate trail runners and expand your event's reach through our curated travel experiences.</p>
-                </div>
+              <div className="rounded-xl overflow-hidden">
+                <img src="/lovable-uploads/ec4f24fc-7514-4f14-b1fc-db1b9fbd342d.png" alt="Trail Squad founders in branded gear" className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
           </div>
