@@ -105,7 +105,7 @@ const PriceQuoteForm = ({
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-medium">
                     <span className={step === 1 ? "text-green-600 font-semibold" : "text-gray-500"}>Dine Oplysninger</span>
-                    <span className={step === 2 ? "text-green-600 font-semibold" : "text-gray-500"}>Rejse Detaljer</span>
+                    <span className={step === 2 ? "text-green-600 font-semibold" : "text-gray-500"}>Rejsedetaljer</span>
                   </div>
                   <div className="w-[95%] mx-auto">
                     <Progress value={step === 1 ? 50 : 100} className="h-2" variant="success" />
