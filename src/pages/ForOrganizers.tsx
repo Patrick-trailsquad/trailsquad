@@ -141,8 +141,8 @@ const ForOrganizers = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <img src="/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png" alt="Trail Squad team meeting" className="w-full rounded-xl shadow-lg" loading="lazy" />
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img src="/lovable-uploads/8dc149c5-e618-4029-a98a-8879e6aeb758.png" alt="Trail Squad team meeting" className="w-full h-[115%] object-cover" loading="lazy" />
               </div>
               
               <div className="space-y-6">
