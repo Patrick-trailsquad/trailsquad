@@ -84,7 +84,7 @@ const ForOrganizers = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="h-48 w-full">
+              <div className="h-48 w-full overflow-hidden">
                 <img src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" alt="Trail Squad community at various trail running events" className="w-full h-[115%] object-cover" loading="lazy" />
               </div>
               <div className="p-6">
