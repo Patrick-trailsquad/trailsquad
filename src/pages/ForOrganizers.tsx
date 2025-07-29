@@ -140,54 +140,7 @@ const ForOrganizers = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-              Ready to Partner?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how Trail Squad can enhance your trail running events 
-              and create unforgettable experiences for your participants.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
-              <div className="bg-stone rounded-xl p-8">
-                <h3 className="font-cabinet text-xl font-bold mb-4">Event Organizers</h3>
-                <p className="text-gray-600 mb-6">
-                  Looking to add premium travel packages to your trail running events? 
-                  We handle the complete travel experience for your participants.
-                </p>
-                <Button className="bg-charcoal text-white hover:bg-gray-800 w-full">
-                  Partner as Event Organizer
-                </Button>
-              </div>
-
-              <div className="bg-stone rounded-xl p-8">
-                
-                <p className="text-gray-600 mb-6">
-                  Expand your portfolio with specialized trail running adventures. 
-                  Perfect for agencies focusing on active and adventure travel.
-                </p>
-                <Button className="bg-charcoal text-white hover:bg-gray-800 w-full">
-                  Partner as Travel Agency
-                </Button>
-              </div>
-            </div>
-
-            <div className="mt-12 p-8 bg-gray-50 rounded-xl">
-              <h3 className="font-cabinet text-xl font-bold mb-4">Direct Contact</h3>
-              <p className="text-gray-600 mb-4">
-                For immediate partnership discussions, reach out directly:
-              </p>
-              <div className="space-y-2">
-                <p className="font-medium">partnerships@trailsquad.com</p>
-                <p className="text-gray-600">+45 XX XX XX XX</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </div>;
