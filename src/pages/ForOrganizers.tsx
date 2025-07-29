@@ -108,20 +108,20 @@ const ForOrganizers = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="h-48 w-full">
-                <img src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" alt="Trail Squad community at various trail running events" className="w-full h-full object-cover" loading="lazy" />
+              <div className="h-55 w-full overflow-hidden">
+                <img src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png" alt="Trail Squad community at various trail running events" className="w-full h-[115%] object-cover" loading="lazy" />
               </div>
-              <div className="p-6">
+              <div className="p-6 pt-8">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We bring runners to your race</h3>
                 <p className="text-gray-600">If your race becomes one of the Trail Squad destinations then we will work our magic to get our network of Nordic runners to join. We fly out of Copenhagen so most of us are probably Danish 🇩🇰</p>
               </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="h-48 w-full">
-                <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-full object-cover" loading="lazy" />
+              <div className="h-55 w-full overflow-hidden">
+                <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-[115%] object-cover" loading="lazy" />
               </div>
-              <div className="p-6">
+              <div className="p-6 pt-8">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We create quality content from your race</h3>
                 <p className="text-gray-600">We are good at social media and we create action shots and short documentaries from our races. Essentially we will market your race for you with high quality video. Our runners love it - and so will you 🫶</p>
               </div>
