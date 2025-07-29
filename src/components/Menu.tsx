@@ -45,7 +45,7 @@ const Menu = () => {
     },
     { 
       href: '/for-organizers', 
-      label: 'For organizers 🇬🇧', 
+      label: 'For organizers (In English)', 
       icon: OrganizersIcon, 
       onClick: () => window.scrollTo(0, 0) 
     }
@@ -160,12 +160,12 @@ const Menu = () => {
                           to={item.href}
                           onClick={item.onClick}
                           className={`flex gap-4 text-white hover:text-terra hover:font-bold transition-all duration-300 ${
-                            item.label === 'For organizers 🇬🇧' ? 'items-start' : 'items-center'
+                            item.label === 'For organizers (In English)' ? 'items-start' : 'items-center'
                           }`}
                         >
                           <item.icon className="w-8 h-8 flex-shrink-0 mt-1" />
                           <span className="font-cabinet text-xl">
-                            {item.label === 'For organizers 🇬🇧' ? (
+                            {item.label === 'For organizers (In English)' ? (
                               <>
                                 For organizers
                                 <br />
