@@ -95,7 +95,7 @@ const ForOrganizers = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="h-48 w-full">
-                <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-full object-cover" loading="lazy" />
+                <img src="/lovable-uploads/21be0cf9-d864-4e72-a063-93d2cf7cdc0c.png" alt="Trail Squad premium experience" className="w-full h-[115%] object-cover" loading="lazy" />
               </div>
               <div className="p-6">
                 <h3 className="font-cabinet text-xl font-bold mb-3">We create quality content from your race</h3>
