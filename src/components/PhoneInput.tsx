@@ -50,7 +50,7 @@ const PhoneInput = ({ value, onChange, error, errorMessage }: PhoneInputProps) =
           type="tel"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, ''))}
-          placeholder="Enter phone number"
+          placeholder="Indtast telefonnummer"
           className="flex-1"
         />
       </div>
