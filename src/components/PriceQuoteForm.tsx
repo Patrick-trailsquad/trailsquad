@@ -85,7 +85,7 @@ const PriceQuoteForm = ({
       <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
         <SheetHeader>
           <SheetTitle className="text-2xl font-cabinet">
-            Anmod om Tilbud på {destinationName}
+            Anmod om Tilbudt på {destinationName}
           </SheetTitle>
         </SheetHeader>
         
