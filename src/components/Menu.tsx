@@ -94,7 +94,15 @@ const Menu = () => {
                     className="flex items-center gap-2 text-charcoal hover:text-terra hover:font-bold transition-all duration-300"
                   >
                     <item.icon />
-                    <span className="font-cabinet font-medium text-base md:text-lg">{item.label}</span>
+                    <span className="font-cabinet font-medium text-base md:text-lg">
+                      {item.label === 'For organizers (In English)' ? (
+                        <>
+                          For organizers <span className="text-sm">(In English)</span>
+                        </>
+                      ) : (
+                        item.label
+                      )}
+                    </span>
                   </Link>
                 ))}
               </div>
