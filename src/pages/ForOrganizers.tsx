@@ -19,9 +19,7 @@ const ForOrganizers = () => {
         
         <div className="container mx-auto px-4 z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-cabinet text-4xl md:text-7xl font-bold text-white mb-6">
-              For Race Organizers
-            </h1>
+            <h1 className="font-cabinet text-4xl md:text-7xl font-bold text-white mb-6">For Race Organisers</h1>
             <p className="font-inter text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
               Trail Squad organizes premium trips for enthusiastic runners, who wish to race the best trails across Europe - should we join yours?
             </p>
