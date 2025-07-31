@@ -7,19 +7,19 @@ const GTCInfoBanner = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Location</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">Courmayeur, Italy</h2>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Lokation</h1>
+            <h2 className="font-cabinet text-lg text-charcoal">Courmayeur, Italien</h2>
           </div>
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">July (TBD), 2026</h2>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Løbsdag</h1>
+            <h2 className="font-cabinet text-lg text-charcoal">Juli (TBA), 2026</h2>
           </div>
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">4 days</h2>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Rejsevarighed</h1>
+            <h2 className="font-cabinet text-lg text-charcoal">4 dage</h2>
           </div>
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
             <h2 className="font-cabinet text-lg text-charcoal">30km, 55km, 100km</h2>
           </div>
         </div>

@@ -40,17 +40,17 @@ const GTCAccommodation = () => {
             ))}
           </div>
         </div>
-        <h2 className="font-cabinet text-xl text-terra mb-4">Courmayeur, Italy</h2>
+        <h2 className="font-cabinet text-xl text-terra mb-4">Courmayeur, Italien</h2>
         <p className="text-lg">
-          Nestled in the heart of Courmayeur, Au Coeur des Neiges offers the perfect alpine retreat 
-          for trail runners. This charming boutique hotel combines traditional mountain hospitality 
-          with modern comfort, providing an ideal base for your Gran Trail Courmayeur adventure.
+          Beliggende i hjertet af Courmayeur tilbyder Au Coeur des Neiges det perfekte alpine tilflugtssted 
+          for trailløbere. Dette charmerende boutique hotel kombinerer traditionel bjerggæstfrihed 
+          med moderne komfort og giver et ideelt udgangspunkt for dit Gran Trail Courmayeur eventyr.
         </p>
         <p className="text-lg mt-4">
-          Located just minutes from the race start/finish area, you'll enjoy spacious rooms with 
-          stunning Mont Blanc views, exceptional local cuisine, and personalized service that 
-          understands the needs of trail running athletes. The hotel's wellness facilities 
-          provide the perfect recovery space after conquering the challenging alpine terrain.
+          Beliggende kun få minutter fra løbets start/mål område vil du nyde rummelige værelser med 
+          fantastisk udsigt til Mont Blanc, exceptionel lokal madlavning og personlig service, der 
+          forstår behovene hos trailløbsatleter. Hotellets wellness faciliteter 
+          giver det perfekte restitutionssted efter at have erobret det udfordrende alpine terræn.
         </p>
       </div>
     </div>

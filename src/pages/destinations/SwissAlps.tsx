@@ -68,14 +68,14 @@ const SwissAlps = () => {
       setEmail('');
       setIsSuccess(true);
       toast({
-        title: "Success!",
-        description: "Thanks for signing up. We'll notify you when registration opens!"
+        title: "Succes!",
+        description: "Tak for tilmeldingen. Vi giver dig besked når registreringen åbner!"
       });
     } catch (error) {
       console.error('Error submitting to Zapier:', error);
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: "Fejl",
+        description: "Noget gik galt. Prøv venligst igen.",
         variant: "destructive"
       });
     } finally {
@@ -98,7 +98,7 @@ const SwissAlps = () => {
             className="flex items-center gap-2 text-white hover:text-stone transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Home
+            Tilbage til hjem
           </Link>
         </div>
       </div>
@@ -113,23 +113,23 @@ const SwissAlps = () => {
           <div>
             <div className="space-y-6 mb-8">
               <div>
-                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Setting</h2>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Miljøet</h2>
                 <p className="text-lg">
-                  Embark on an extraordinary adventure through the heart of the Italian Alps at the prestigious Gran Trail Courmayeur. Set against the backdrop of Europe's highest peak, Mont Blanc, this iconic trail running event offers an unparalleled blend of challenging terrain and breathtaking alpine scenery. Wind your way through ancient glacial valleys, pristine mountain lakes, and historic mountain villages that tell tales of centuries-old Alpine culture.
+                  Begiv dig ud på et ekstraordinært eventyr gennem hjertet af de italienske alper ved det prestigefyldte Gran Trail Courmayeur. Med Europas højeste bjerg, Mont Blanc, som baggrund tilbyder dette ikoniske trailløbsevent en uovertruffen blanding af udfordrende terræn og betagende alpenatuur. Snogle dig gennem gamle gletsjerdalen, uberørte bjergsøer og historiske bjerglandsbyer, der fortæller historier om århundreder gammel alpekultur.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Experience</h2>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Oplevelsen</h2>
                 <p className="text-lg">
-                  As you traverse the well-marked trails, you'll experience dramatic elevation changes that reveal new perspectives of the majestic Mont Blanc massif at every turn. The route takes you through flowering meadows in summer bloom and across technical rocky sections that will test your trail running abilities.
+                  Når du krydser de velmarkerede stier, vil du opleve dramatiske højdeændringer, der afslører nye perspektiver af det majestætiske Mont Blanc-massiv ved hvert sving. Ruten tager dig gennem blomstrende enge i sommerblomst og gennem tekniske stenede sektioner, der vil teste dine trailløbsevner.
                 </p>
               </div>
 
               <div>
-                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">The Challenge</h2>
+                <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Udfordringen</h2>
                 <p className="text-lg">
-                  Follow panoramic ridgelines that offer views extending into three countries - Italy, France, and Switzerland. Whether you choose the 30km, 55km, or the ultimate challenge of 100km, each route has been carefully crafted to showcase the most spectacular sections of the Mont Blanc region.
+                  Følg panoramiske bjergrygge, der tilbyder udsigt, som strækker sig ind i tre lande - Italien, Frankrig og Schweiz. Uanset om du vælger 30km, 55km eller den ultimative udfordring på 100km, er hver rute blevet omhyggeligt udarbejdet for at fremvise de mest spektakulære sektioner af Mont Blanc-regionen.
                 </p>
               </div>
             </div>
@@ -146,7 +146,7 @@ const SwissAlps = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
               >
-                Visit Official Race Website
+                Besøg officiel løbshjemmeside
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
@@ -167,22 +167,22 @@ const SwissAlps = () => {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex justify-between items-center mb-6">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Starting from</p>
+                  <p className="text-sm text-gray-600 mb-1">Fra</p>
                   <p className="font-cabinet text-4xl font-bold text-charcoal">10.000 DKK</p>
-                  <p className="text-sm text-gray-500">incl. VAT</p>
+                  <p className="text-sm text-gray-500">inkl. moms</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm text-gray-600 mb-1">Registration status</p>
+                  <p className="text-sm text-gray-600 mb-1">Registreringsstatus</p>
                   <div className="bg-[#F1F0FB] px-3 py-1.5 rounded-full">
                     <p className="font-cabinet text-sm font-medium text-[#9F9EA1] flex items-center gap-1">
                       <Clock className="w-4 h-4" />
-                      Opens later
+                      Åbner senere
                     </p>
                   </div>
                 </div>
               </div>
               <div className="text-center py-8">
-                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Get notified when registration opens</h3>
+                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Få besked når tilmeldingen åbner</h3>
                 <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
                   <Input
                     type="email"
@@ -190,7 +190,7 @@ const SwissAlps = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     disabled={isSuccess}
-                    placeholder="Enter your email"
+                    placeholder="Indtast din email"
                     className="flex-1 h-[56px] px-6 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
                   />
                   {isSuccess ? (
@@ -204,7 +204,7 @@ const SwissAlps = () => {
                       size="xl"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? 'Submitting...' : 'Notify me'}
+                      {isSubmitting ? 'Indsender...' : 'Giv mig besked'}
                     </Button>
                   )}
                 </form>
