@@ -19,7 +19,7 @@ const TransylvaniaPricingSection = () => {
         <div className="col-span-2 space-y-1">
           <p className="text-sm text-gray-600">Priser fra</p>
           <p className="font-cabinet text-4xl font-bold text-charcoal">
-            9.350 DKK <span className="text-sm text-gray-500">inkl. moms</span>
+            9.500 DKK <span className="text-sm text-gray-500">inkl. moms</span>
           </p>
           <Accordion type="single" collapsible className="w-full mt-2">
             <AccordionItem value="price-details" className="border-none">
@@ -31,8 +31,8 @@ const TransylvaniaPricingSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  Prisen for et <b>Delt Swiss Grand Værelse</b> er 9.350 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                  Prisen for et <b>Individuelt Swiss Grand Værelse</b> er 12.300 DKK.<br /><br />
+                  Prisen for et <b>Delt Swiss Grand Værelse</b> er 9.500 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                  Prisen for et <b>Individuelt Swiss Grand Værelse</b> er 12.500 DKK.<br /><br />
                   Moms er inkluderet i alle priser.
                 </div>
               </AccordionContent>
