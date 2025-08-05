@@ -30,7 +30,7 @@ const ForOrganizers = () => {
       
 
       {/* What We Offer Section */}
-      <section className="py-24 bg-white">
+      <section className="pt-24 pb-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
@@ -69,7 +69,7 @@ const ForOrganizers = () => {
       
 
       {/* New Section */}
-      <section className="py-24 bg-white">
+      <section className="pt-12 pb-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
