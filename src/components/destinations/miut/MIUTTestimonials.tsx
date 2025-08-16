@@ -96,6 +96,15 @@ const MIUTTestimonials = () => {
             </Card>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <button className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors">
+            Tilføj din anmeldelse
+          </button>
+          <p className="text-sm text-charcoal/60 mt-2">
+            Deltog du i MIUT 2024? Del din oplevelse med os
+          </p>
+        </div>
       </div>
     </section>
   );
