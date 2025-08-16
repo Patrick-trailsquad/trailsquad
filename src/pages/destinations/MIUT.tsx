@@ -155,11 +155,13 @@ const MIUT = () => {
         <IncludedAmenities className="bg-transparent" />
       </div>
       
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
+        <SavoyPalaceCarousel />
+      </div>
+      
       <MIUTTestimonials />
       
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
-        <SavoyPalaceCarousel />
-        
         <BackToDestinationsButton />
       </div>
       <Footer />
