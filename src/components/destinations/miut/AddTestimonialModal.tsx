@@ -182,7 +182,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
 
           <div>
             <Label className="text-charcoal font-cabinet font-medium">
-              Billede
+              Tilføj et fedt billede fra turen!
             </Label>
             <div
               className={`mt-1 border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
