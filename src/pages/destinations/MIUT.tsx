@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 import SavoyPalaceCarousel from "../../components/destinations/miut/SavoyPalaceCarousel";
+import MIUTTestimonials from "../../components/destinations/miut/MIUTTestimonials";
 
 const MIUT = () => {
   useScrollToTop();
@@ -153,6 +154,8 @@ const MIUT = () => {
       <div className="mt-12">
         <IncludedAmenities className="bg-transparent" />
       </div>
+      
+      <MIUTTestimonials />
       
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <SavoyPalaceCarousel />
