@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import AddTestimonialModal from "./AddTestimonialModal";
 
 const testimonials = [
   {
@@ -37,6 +39,7 @@ const testimonials = [
 ];
 
 const MIUTTestimonials = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const renderStars = (rating: number) => {
     return (
       <div className="flex gap-1">
@@ -98,7 +101,10 @@ const MIUTTestimonials = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors"
+          >
             Tilføj din anmeldelse
           </button>
           <p className="text-sm text-charcoal/60 mt-2">
@@ -106,6 +112,11 @@ const MIUTTestimonials = () => {
           </p>
         </div>
       </div>
+
+      <AddTestimonialModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 };
