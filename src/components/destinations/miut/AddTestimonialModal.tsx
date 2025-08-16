@@ -151,30 +151,32 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
             </div>
           </div>
 
-          <div>
-            <Label className="text-charcoal font-cabinet font-medium">
-              Distance *
-            </Label>
-            <Select value={formData.distance} onValueChange={(value) => setFormData(prev => ({ ...prev, distance: value }))}>
-              <SelectTrigger className="mt-1 bg-white">
-                <SelectValue placeholder="Vælg din distance" />
-              </SelectTrigger>
-              <SelectContent className="bg-white z-50">
-                <SelectItem value="MIUT 16km">MIUT 16km</SelectItem>
-                <SelectItem value="MIUT 42km">MIUT 42km</SelectItem>
-                <SelectItem value="MIUT 60km">MIUT 60km</SelectItem>
-                <SelectItem value="MIUT 85km">MIUT 85km</SelectItem>
-                <SelectItem value="MIUT 115km">MIUT 115km</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label className="text-charcoal font-cabinet font-medium">
+                Distance *
+              </Label>
+              <Select value={formData.distance} onValueChange={(value) => setFormData(prev => ({ ...prev, distance: value }))}>
+                <SelectTrigger className="mt-1 bg-white">
+                  <SelectValue placeholder="Vælg din distance" />
+                </SelectTrigger>
+                <SelectContent className="bg-white z-50">
+                  <SelectItem value="MIUT 16km">MIUT 16km</SelectItem>
+                  <SelectItem value="MIUT 42km">MIUT 42km</SelectItem>
+                  <SelectItem value="MIUT 60km">MIUT 60km</SelectItem>
+                  <SelectItem value="MIUT 85km">MIUT 85km</SelectItem>
+                  <SelectItem value="MIUT 115km">MIUT 115km</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
 
-          <div>
-            <Label className="text-charcoal font-cabinet font-medium">
-              Bedømmelse *
-            </Label>
-            <div className="mt-2">
-              {renderStars()}
+            <div>
+              <Label className="text-charcoal font-cabinet font-medium">
+                Bedømmelse *
+              </Label>
+              <div className="mt-2">
+                {renderStars()}
+              </div>
             </div>
           </div>
 
