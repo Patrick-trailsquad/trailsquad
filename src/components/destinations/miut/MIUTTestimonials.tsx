@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Star, User } from "lucide-react";
+import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import AddTestimonialModal from "./AddTestimonialModal";
 
@@ -10,8 +10,7 @@ const testimonials = [
     rating: 5,
     review: "MIUT var helt fantastisk! Landskaberne var utrolige - fra de grønne levadas til de dramatiske bjergtoppe. Organisationen var perfekt, og oplevelsen var uforglemmelig. Kan varmt anbefales!",
     race: "MIUT 85km",
-    date: "April 2024",
-    photo: "/lovable-uploads/c410cbf0-1be2-4f66-9ae9-cbd7356a5dcf.png"
+    date: "April 2024"
   },
   {
     name: "Maria Andersen",
@@ -19,8 +18,7 @@ const testimonials = [
     rating: 5,
     review: "Mit første ultraløb nogensinde, og jeg kunne ikke have valgt bedre! Trail Squad tog sig af alt, så jeg kunne fokusere på løbet. Madeira er simpelthen magisk at løbe gennem.",
     race: "MIUT 42km",
-    date: "April 2024",
-    photo: null
+    date: "April 2024"
   },
   {
     name: "Thomas Larsen",
@@ -28,8 +26,7 @@ const testimonials = [
     rating: 4,
     review: "Fantastisk oplevelse! Ruten var udfordrende men smuk. Hotellet var perfekt placeret, og maden var fantastisk. Kommer helt sikkert igen næste år!",
     race: "MIUT 60km", 
-    date: "April 2024",
-    photo: "/lovable-uploads/9142e80e-2cbe-4cc9-936a-e4237d2c8654.png"
+    date: "April 2024"
   },
   {
     name: "Anne Møller",
@@ -37,8 +34,7 @@ const testimonials = [
     rating: 5,
     review: "Utrolig professionel planlægning fra Trail Squad. Alle detaljer var tænkt igennem. Madeira er et paradis for trailløbere - kan ikke vente med at komme tilbage!",
     race: "MIUT 115km",
-    date: "April 2024",
-    photo: null
+    date: "April 2024"
   }
 ];
 
@@ -77,76 +73,27 @@ const MIUTTestimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-6">
-                {/* Desktop Layout: Photo left, content right */}
-                <div className="hidden md:flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                      {testimonial.photo ? (
-                        <img 
-                          src={testimonial.photo} 
-                          alt={testimonial.name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <User className="w-8 h-8 text-gray-400" />
-                      )}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h3 className="font-cabinet font-bold text-lg text-charcoal">
-                          {testimonial.name}
-                        </h3>
-                        <p className="text-sm text-charcoal/60">{testimonial.location}</p>
-                      </div>
-                      <div className="text-right">
-                        {renderStars(testimonial.rating)}
-                        <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
-                      </div>
-                    </div>
-                    
-                    <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium mb-3">
-                      {testimonial.race}
-                    </span>
-                    
-                    <blockquote className="text-charcoal/80 italic">
-                      "{testimonial.review}"
-                    </blockquote>
-                  </div>
-                </div>
-
-                {/* Mobile Layout: Photo top, content below */}
-                <div className="md:hidden">
-                  <div className="flex flex-col items-center text-center mb-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center mb-3">
-                      {testimonial.photo ? (
-                        <img 
-                          src={testimonial.photo} 
-                          alt={testimonial.name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <User className="w-8 h-8 text-gray-400" />
-                      )}
-                    </div>
+                <div className="flex items-start justify-between mb-4">
+                  <div>
                     <h3 className="font-cabinet font-bold text-lg text-charcoal">
                       {testimonial.name}
                     </h3>
-                    <p className="text-sm text-charcoal/60 mb-2">{testimonial.location}</p>
+                    <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                  </div>
+                  <div className="text-right">
                     {renderStars(testimonial.rating)}
-                    <p className="text-xs text-charcoal/60 mt-1">{testimonial.date}</p>
+                    <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
                   </div>
-                  
-                  <div className="text-center mb-4">
-                    <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
-                      {testimonial.race}
-                    </span>
-                  </div>
-                  
-                  <blockquote className="text-charcoal/80 italic text-center">
-                    "{testimonial.review}"
-                  </blockquote>
+                </div>
+                
+                <blockquote className="text-charcoal/80 mb-4 italic">
+                  "{testimonial.review}"
+                </blockquote>
+                
+                <div className="flex items-center justify-between">
+                  <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
+                    {testimonial.race}
+                  </span>
                 </div>
               </CardContent>
             </Card>
