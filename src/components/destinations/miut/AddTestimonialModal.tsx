@@ -185,7 +185,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
               Tilføj et fedt billede fra turen!
             </Label>
             <div
-              className={`mt-1 border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
+              className={`mt-1 border-2 border-dashed rounded-lg p-4 text-center transition-colors ${
                 dragActive 
                   ? "border-[#FFDC00] bg-[#FFDC00]/10" 
                   : "border-gray-300 hover:border-[#FFDC00]"
@@ -197,22 +197,25 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
             >
               {formData.photo ? (
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-charcoal">{formData.photo.name}</span>
+                  <span className="text-sm text-charcoal truncate">{formData.photo.name}</span>
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
                     onClick={() => setFormData(prev => ({ ...prev, photo: null }))}
+                    className="h-6 w-6 p-0"
                   >
                     <X className="w-4 h-4" />
                   </Button>
                 </div>
               ) : (
-                <>
-                  <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                  <p className="text-sm text-gray-600 mb-2">
-                    Træk og slip et billede her, eller klik for at vælge
-                  </p>
+                <div className="flex items-center gap-3">
+                  <Upload className="w-5 h-5 text-gray-400" />
+                  <div className="flex-1 text-left">
+                    <p className="text-sm text-gray-600">
+                      Træk og slip eller <button type="button" className="text-[#FFDC00] hover:underline" onClick={() => document.getElementById('photo-upload')?.click()}>vælg billede</button>
+                    </p>
+                  </div>
                   <input
                     type="file"
                     accept="image/*"
@@ -220,15 +223,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
                     className="hidden"
                     id="photo-upload"
                   />
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="sm"
-                    onClick={() => document.getElementById('photo-upload')?.click()}
-                  >
-                    Vælg billede
-                  </Button>
-                </>
+                </div>
               )}
             </div>
           </div>
