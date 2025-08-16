@@ -73,9 +73,9 @@ const MIUTTestimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
-                <div className="grid grid-cols-3 min-h-[200px]">
+                <div className="grid grid-cols-3 h-full">
                   {/* Image column - 1/3 of the container */}
-                  <div className="bg-gray-100 flex items-center justify-center">
+                  <div className="bg-gray-100 flex items-center justify-center h-full min-h-[200px]">
                     <div className="w-20 h-20 bg-charcoal/10 rounded-full flex items-center justify-center">
                       <User className="w-10 h-10 text-charcoal/40" />
                     </div>
