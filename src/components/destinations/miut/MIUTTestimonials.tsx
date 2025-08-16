@@ -62,7 +62,7 @@ const MIUTTestimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-4">
-            Anmeldelser fra deltagere
+            Anmeldelser fra deltagere (dummy text, design under construction)
           </h2>
           <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
             Hør hvad vores tidligere deltagere siger om deres MIUT oplevelse
