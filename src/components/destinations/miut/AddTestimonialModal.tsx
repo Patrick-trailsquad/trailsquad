@@ -131,7 +131,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
                 value={formData.name}
                 onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                 className="mt-1"
-                placeholder="Dit fulde navn"
+                placeholder="Dit navn"
                 required
               />
             </div>
