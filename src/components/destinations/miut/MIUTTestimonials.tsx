@@ -3,42 +3,35 @@ import { Star, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import AddTestimonialModal from "./AddTestimonialModal";
 import { supabase } from "@/integrations/supabase/client";
-
-const testimonials = [
-  {
-    name: "Kasper Nielsen",
-    location: "København",
-    rating: 5,
-    review: "MIUT var helt fantastisk! Landskaberne var utrolige - fra de grønne levadas til de dramatiske bjergtoppe. Organisationen var perfekt, og oplevelsen var uforglemmelig. Kan varmt anbefales!",
-    race: "MIUT 85km",
-    date: "April 2024"
-  },
-  {
-    name: "Maria Andersen",
-    location: "Aarhus", 
-    rating: 5,
-    review: "Mit første ultraløb nogensinde, og jeg kunne ikke have valgt bedre! Trail Squad tog sig af alt, så jeg kunne fokusere på løbet. Madeira er simpelthen magisk at løbe gennem.",
-    race: "MIUT 42km",
-    date: "April 2024"
-  },
-  {
-    name: "Thomas Larsen",
-    location: "Odense",
-    rating: 4,
-    review: "Fantastisk oplevelse! Ruten var udfordrende men smuk. Hotellet var perfekt placeret, og maden var fantastisk. Kommer helt sikkert igen næste år!",
-    race: "MIUT 60km", 
-    date: "April 2024"
-  },
-  {
-    name: "Anne Møller",
-    location: "Aalborg",
-    rating: 5,
-    review: "Utrolig professionel planlægning fra Trail Squad. Alle detaljer var tænkt igennem. Madeira er et paradis for trailløbere - kan ikke vente med at komme tilbage!",
-    race: "MIUT 115km",
-    date: "April 2024"
-  }
-];
-
+const testimonials = [{
+  name: "Kasper Nielsen",
+  location: "København",
+  rating: 5,
+  review: "MIUT var helt fantastisk! Landskaberne var utrolige - fra de grønne levadas til de dramatiske bjergtoppe. Organisationen var perfekt, og oplevelsen var uforglemmelig. Kan varmt anbefales!",
+  race: "MIUT 85km",
+  date: "April 2024"
+}, {
+  name: "Maria Andersen",
+  location: "Aarhus",
+  rating: 5,
+  review: "Mit første ultraløb nogensinde, og jeg kunne ikke have valgt bedre! Trail Squad tog sig af alt, så jeg kunne fokusere på løbet. Madeira er simpelthen magisk at løbe gennem.",
+  race: "MIUT 42km",
+  date: "April 2024"
+}, {
+  name: "Thomas Larsen",
+  location: "Odense",
+  rating: 4,
+  review: "Fantastisk oplevelse! Ruten var udfordrende men smuk. Hotellet var perfekt placeret, og maden var fantastisk. Kommer helt sikkert igen næste år!",
+  race: "MIUT 60km",
+  date: "April 2024"
+}, {
+  name: "Anne Møller",
+  location: "Aalborg",
+  rating: 5,
+  review: "Utrolig professionel planlægning fra Trail Squad. Alle detaljer var tænkt igennem. Madeira er et paradis for trailløbere - kan ikke vente med at komme tilbage!",
+  race: "MIUT 115km",
+  date: "April 2024"
+}];
 interface Testimonial {
   id?: string;
   name: string;
@@ -48,25 +41,21 @@ interface Testimonial {
   distance: string;
   created_at?: string;
 }
-
 const MIUTTestimonials = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     fetchTestimonials();
   }, []);
-
   const fetchTestimonials = async () => {
     try {
-      const { data, error } = await supabase
-        .from('testimonials')
-        .select('*')
-        .eq('destination', 'MIUT')
-        .eq('status', 'approved')
-        .order('created_at', { ascending: false });
-
+      const {
+        data,
+        error
+      } = await supabase.from('testimonials').select('*').eq('destination', 'MIUT').eq('status', 'approved').order('created_at', {
+        ascending: false
+      });
       if (error) throw error;
       setDbTestimonials(data || []);
     } catch (error) {
@@ -75,44 +64,30 @@ const MIUTTestimonials = () => {
       setIsLoading(false);
     }
   };
-
   const handleModalClose = () => {
     setIsModalOpen(false);
     // Refresh testimonials when modal closes in case a new one was added
     fetchTestimonials();
   };
   const renderStars = (rating: number) => {
-    return (
-      <div className="flex gap-1">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`w-4 h-4 ${
-              star <= rating
-                ? "fill-[#FFDC00] text-[#FFDC00]"
-                : "text-gray-300"
-            }`}
-          />
-        ))}
-      </div>
-    );
+    return <div className="flex gap-1">
+        {[1, 2, 3, 4, 5].map(star => <Star key={star} className={`w-4 h-4 ${star <= rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />)}
+      </div>;
   };
 
   // Combine database testimonials with dummy data, prioritizing database data
-  const allTestimonials = isLoading ? testimonials : [
-    ...dbTestimonials.map(t => ({
-      name: t.name,
-      location: t.location || '',
-      rating: t.rating,
-      review: t.review,
-      race: t.distance,
-      date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' }) : ''
-    })),
-    ...testimonials
-  ];
-
-  return (
-    <section className="py-16 bg-white">
+  const allTestimonials = isLoading ? testimonials : [...dbTestimonials.map(t => ({
+    name: t.name,
+    location: t.location || '',
+    rating: t.rating,
+    review: t.review,
+    race: t.distance,
+    date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', {
+      month: 'long',
+      year: 'numeric'
+    }) : ''
+  })), ...testimonials];
+  return <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-4">
@@ -125,17 +100,13 @@ const MIUTTestimonials = () => {
 
         {/* Mobile CTA - positioned after header, before reviews */}
         <div className="md:hidden text-center mb-8">
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors"
-          >
+          <button onClick={() => setIsModalOpen(true)} className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors">
             Tilføj din anmeldelse
           </button>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {allTestimonials.map((testimonial, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+          {allTestimonials.map((testimonial, index) => <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
               <CardContent className="p-0 h-full">
                 {/* Mobile layout - stacked */}
                 <div className="md:hidden">
@@ -211,29 +182,18 @@ const MIUTTestimonials = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="text-center mt-12">
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors"
-          >
+          <button onClick={() => setIsModalOpen(true)} className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors">
             Tilføj din anmeldelse
           </button>
-          <p className="text-sm text-charcoal/60 mt-2">
-            Deltog du i MIUT 2024? Del din oplevelse med os
-          </p>
+          
         </div>
       </div>
 
-      <AddTestimonialModal 
-        isOpen={isModalOpen} 
-        onClose={handleModalClose} 
-      />
-    </section>
-  );
+      <AddTestimonialModal isOpen={isModalOpen} onClose={handleModalClose} />
+    </section>;
 };
-
 export default MIUTTestimonials;
