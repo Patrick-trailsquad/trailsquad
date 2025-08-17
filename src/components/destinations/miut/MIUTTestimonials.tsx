@@ -250,7 +250,7 @@ const MIUTTestimonials = () => {
             </button>
             
             <p className="text-sm text-charcoal/50 mt-6">
-              Det tager kun 2 minutter og hjælper virkelig andre løbere
+              Det tager under 90 sekunder
             </p>
           </div>
         )}
