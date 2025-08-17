@@ -138,7 +138,7 @@ const MIUTTestimonials = () => {
           {allTestimonials.map((testimonial, index) => <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
               <CardContent className="p-0 h-full">
                 {/* Image on top */}
-                <div className="bg-gray-100 h-48 flex items-center justify-center">
+                <div className="bg-gray-100 h-60 flex items-center justify-center">
                   {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
                     <img 
                       src={testimonial.photo_url} 
