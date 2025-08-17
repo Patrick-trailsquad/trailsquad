@@ -86,31 +86,41 @@ const MIUTTestimonials = () => {
   const ReviewText = ({ text, index }: { text: string; index: number }) => {
     const textRef = useRef<HTMLDivElement>(null);
     const [needsExpansion, setNeedsExpansion] = useState(false);
+    const [fullHeight, setFullHeight] = useState(0);
     const isExpanded = expandedReviews[index] || false;
 
     useEffect(() => {
       if (textRef.current) {
         const lineHeight = 24; // Approximate line height in pixels
         const maxHeight = lineHeight * 6; // 6 lines
-        setNeedsExpansion(textRef.current.scrollHeight > maxHeight);
+        const scrollHeight = textRef.current.scrollHeight;
+        setFullHeight(scrollHeight);
+        setNeedsExpansion(scrollHeight > maxHeight);
       }
     }, [text]);
 
+    const sixLinesHeight = 144; // 6 lines * 24px line height
+
     return (
-      <div className="relative">
+      <div className="mb-4">
         <div
-          ref={textRef}
-          className={`text-charcoal/80 italic transition-all duration-300 ${
-            !isExpanded && needsExpansion ? 'line-clamp-6' : ''
-          }`}
-          style={{ lineHeight: '1.5rem' }}
+          className="overflow-hidden transition-all duration-500 ease-in-out"
+          style={{
+            maxHeight: isExpanded ? `${fullHeight}px` : `${sixLinesHeight}px`
+          }}
         >
-          "{text}"
+          <div
+            ref={textRef}
+            className="text-charcoal/80 italic"
+            style={{ lineHeight: '1.5rem' }}
+          >
+            "{text}"
+          </div>
         </div>
         {needsExpansion && (
           <button
             onClick={() => toggleReviewExpansion(index)}
-            className="mt-2 text-sm text-[#FFDC00] hover:underline font-medium transition-colors"
+            className="mt-2 text-sm text-[#FFDC00] hover:underline font-medium transition-colors duration-200"
           >
             {isExpanded ? 'Læs mindre' : 'Læs mere'}
           </button>
@@ -189,7 +199,6 @@ const MIUTTestimonials = () => {
                         <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
                       </div>
                     </div>
-                    
                     <ReviewText text={testimonial.review} index={index} />
                     
                     
@@ -233,7 +242,6 @@ const MIUTTestimonials = () => {
                           <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
                         </div>
                       </div>
-                      
                       <ReviewText text={testimonial.review} index={index} />
                     </div>
                     
