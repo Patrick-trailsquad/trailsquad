@@ -287,11 +287,11 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
               onDrop={handleDrop}
             >
               {formData.photo && imagePreview ? (
-                <div className="relative">
+                <div className="relative max-w-xs">
                   <img 
                     src={imagePreview} 
                     alt="Preview" 
-                    className="w-full h-32 object-cover rounded-lg"
+                    className="w-48 h-28 object-cover rounded-lg"
                   />
                   <Button
                     type="button"
@@ -304,11 +304,11 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
                       setImagePreview(null);
                       setFormData(prev => ({ ...prev, photo: null }));
                     }}
-                    className="absolute top-2 right-2 h-8 w-8 p-0 bg-white/80 hover:bg-white shadow-sm"
+                    className="absolute top-1 right-1 h-6 w-6 p-0 bg-white/80 hover:bg-white shadow-sm"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-3 h-3" />
                   </Button>
-                  <div className="mt-2 text-xs text-gray-600 truncate">
+                  <div className="mt-1 text-xs text-gray-600 truncate">
                     {formData.photo.name}
                   </div>
                 </div>
