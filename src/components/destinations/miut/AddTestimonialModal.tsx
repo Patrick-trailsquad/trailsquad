@@ -85,14 +85,15 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
           distance: formData.distance,
           rating: formData.rating,
           review: formData.review,
-          destination: 'MIUT'
+          destination: 'MIUT',
+          status: 'approved'
         });
 
       if (error) throw error;
 
       toast({
         title: "Tak for din anmeldelse!",
-        description: "Din anmeldelse er blevet sendt og vil blive gennemgået inden offentliggørelse.",
+        description: "Din anmeldelse er nu offentliggjort på siden.",
       });
       
       // Reset form and close modal
