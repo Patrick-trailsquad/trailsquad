@@ -3,39 +3,6 @@ import { Star, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import AddTestimonialModal from "./AddTestimonialModal";
 import { supabase } from "@/integrations/supabase/client";
-const testimonials = [{
-  name: "Kasper Nielsen",
-  location: "København",
-  rating: 5,
-  review: "MIUT var helt fantastisk! Landskaberne var utrolige - fra de grønne levadas til de dramatiske bjergtoppe. Organisationen var perfekt, og oplevelsen var uforglemmelig. Kan varmt anbefales!",
-  race: "MIUT 85km",
-  date: "April 2024",
-  photo_url: null
-}, {
-  name: "Maria Andersen",
-  location: "Aarhus",
-  rating: 5,
-  review: "Mit første ultraløb nogensinde, og jeg kunne ikke have valgt bedre! Trail Squad tog sig af alt, så jeg kunne fokusere på løbet. Madeira er simpelthen magisk at løbe gennem.",
-  race: "MIUT 42km",
-  date: "April 2024",
-  photo_url: null
-}, {
-  name: "Thomas Larsen",
-  location: "Odense",
-  rating: 4,
-  review: "Fantastisk oplevelse! Ruten var udfordrende men smuk. Hotellet var perfekt placeret, og maden var fantastisk. Kommer helt sikkert igen næste år!",
-  race: "MIUT 60km",
-  date: "April 2024",
-  photo_url: null
-}, {
-  name: "Anne Møller",
-  location: "Aalborg",
-  rating: 5,
-  review: "Utrolig professionel planlægning fra Trail Squad. Alle detaljer var tænkt igennem. Madeira er et paradis for trailløbere - kan ikke vente med at komme tilbage!",
-  race: "MIUT 115km",
-  date: "April 2024",
-  photo_url: null
-}];
 interface Testimonial {
   id?: string;
   name: string;
@@ -133,8 +100,8 @@ const MIUTTestimonials = () => {
       </div>;
   };
 
-  // Combine database testimonials with dummy data, prioritizing database data
-  const allTestimonials = isLoading ? testimonials : [...dbTestimonials.map(t => ({
+  // Use only database testimonials
+  const allTestimonials = dbTestimonials.map(t => ({
     name: t.name,
     location: t.location || '',
     rating: t.rating,
@@ -145,7 +112,7 @@ const MIUTTestimonials = () => {
       month: 'long',
       year: 'numeric'
     }).replace(/^\w/, c => c.toUpperCase()) : ''
-  })), ...testimonials];
+  }));
   return <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
