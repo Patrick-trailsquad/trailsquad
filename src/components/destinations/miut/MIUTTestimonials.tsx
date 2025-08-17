@@ -123,6 +123,16 @@ const MIUTTestimonials = () => {
           </p>
         </div>
 
+        {/* Mobile CTA - positioned after header, before reviews */}
+        <div className="md:hidden text-center mb-8">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors"
+          >
+            Tilføj din anmeldelse
+          </button>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {allTestimonials.map((testimonial, index) => (
             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
