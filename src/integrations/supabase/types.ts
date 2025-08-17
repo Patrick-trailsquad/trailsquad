@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      testimonials: {
+        Row: {
+          created_at: string
+          destination: string
+          distance: string
+          id: string
+          location: string | null
+          name: string
+          photo_url: string | null
+          rating: number
+          review: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          destination?: string
+          distance: string
+          id?: string
+          location?: string | null
+          name: string
+          photo_url?: string | null
+          rating: number
+          review: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          destination?: string
+          distance?: string
+          id?: string
+          location?: string | null
+          name?: string
+          photo_url?: string | null
+          rating?: number
+          review?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
