@@ -134,51 +134,79 @@ const MIUTTestimonials = () => {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {allTestimonials.map((testimonial, index) => <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
-              <CardContent className="p-0 h-full">
-                {/* Image on top */}
-                <div className="bg-gray-100 h-60 flex items-center justify-center">
-                  {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
-                    <img 
-                      src={testimonial.photo_url} 
-                      alt={`Photo from ${testimonial.name}`}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <img 
-                      src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
-                      alt="Trail runner illustration"
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-                
-                {/* Content below image */}
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="font-cabinet font-bold text-lg text-charcoal">
-                        {testimonial.name}
-                      </h3>
-                      <p className="text-sm text-charcoal/60">{testimonial.location}</p>
-                    </div>
-                    <div className="text-right">
-                      {renderStars(testimonial.rating)}
-                      <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
-                    </div>
+        {allTestimonials.length > 0 ? (
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {allTestimonials.map((testimonial, index) => <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <CardContent className="p-0 h-full">
+                  {/* Image on top */}
+                  <div className="bg-gray-100 h-60 flex items-center justify-center">
+                    {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
+                      <img 
+                        src={testimonial.photo_url} 
+                        alt={`Photo from ${testimonial.name}`}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <img 
+                        src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
+                        alt="Trail runner illustration"
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                   </div>
-                  <ReviewText text={testimonial.review} index={index} />
                   
-                  <div className="flex items-center justify-between">
-                    <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
-                      {testimonial.race}
-                    </span>
+                  {/* Content below image */}
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="font-cabinet font-bold text-lg text-charcoal">
+                          {testimonial.name}
+                        </h3>
+                        <p className="text-sm text-charcoal/60">{testimonial.location}</p>
+                      </div>
+                      <div className="text-right">
+                        {renderStars(testimonial.rating)}
+                        <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
+                      </div>
+                    </div>
+                    <ReviewText text={testimonial.review} index={index} />
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
+                        {testimonial.race}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>)}
-        </div>
+                </CardContent>
+              </Card>)}
+          </div>
+        ) : (
+          /* Zero State */
+          <div className="max-w-2xl mx-auto text-center py-16">
+            <div className="mb-8">
+              <div className="w-32 h-32 mx-auto mb-6 bg-stone rounded-full flex items-center justify-center">
+                <Star className="w-16 h-16 text-[#FFDC00]" />
+              </div>
+              <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">
+                Vær den første til at anmelde!
+              </h3>
+              <p className="text-lg text-charcoal/70 mb-8">
+                Har du deltaget i MIUT? Del din oplevelse og hjælp andre løbere med at forberede sig til eventyret.
+              </p>
+            </div>
+            
+            <button 
+              onClick={() => setIsModalOpen(true)} 
+              className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-12 py-6 rounded-full font-cabinet font-bold text-xl transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform"
+            >
+              ⭐ Skriv den første anmeldelse
+            </button>
+            
+            <p className="text-sm text-charcoal/50 mt-6">
+              Det tager kun 2 minutter og hjælper virkelig andre løbere
+            </p>
+          </div>
+        )}
 
         <div className="text-center mt-12">
           <button onClick={() => setIsModalOpen(true)} className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors">
