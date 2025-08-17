@@ -118,21 +118,25 @@ const MIUTTestimonials = () => {
   });
   return <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-4">
-            Anmeldelser fra deltagere
-          </h2>
-          <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
-            Hør hvad vores tidligere deltagere siger om deres MIUT oplevelse
-          </p>
-        </div>
+        {allTestimonials.length > 0 && (
+          <>
+            <div className="text-center mb-12">
+              <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-4">
+                Anmeldelser fra deltagere
+              </h2>
+              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                Hør hvad vores tidligere deltagere siger om deres MIUT oplevelse
+              </p>
+            </div>
 
-        {/* Mobile CTA - positioned after header, before reviews */}
-        <div className="md:hidden text-center mb-8">
-          <button onClick={() => setIsModalOpen(true)} className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors">
-            Tilføj din anmeldelse
-          </button>
-        </div>
+            {/* Mobile CTA - positioned after header, before reviews */}
+            <div className="md:hidden text-center mb-8">
+              <button onClick={() => setIsModalOpen(true)} className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors">
+                Tilføj din anmeldelse
+              </button>
+            </div>
+          </>
+        )}
 
         {allTestimonials.length > 0 ? (
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -208,12 +212,13 @@ const MIUTTestimonials = () => {
           </div>
         )}
 
-        <div className="text-center mt-12">
-          <button onClick={() => setIsModalOpen(true)} className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors">
-            Tilføj din anmeldelse
-          </button>
-          
-        </div>
+        {allTestimonials.length > 0 && (
+          <div className="text-center mt-12">
+            <button onClick={() => setIsModalOpen(true)} className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg transition-colors">
+              Tilføj din anmeldelse
+            </button>
+          </div>
+        )}
       </div>
 
       <AddTestimonialModal isOpen={isModalOpen} onClose={handleModalClose} />
