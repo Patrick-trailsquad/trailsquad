@@ -94,6 +94,49 @@ const MIUTTestimonials = () => {
       </div>
     );
   };
+  
+  const AnimatedStars = () => {
+    const [currentRating, setCurrentRating] = useState(1);
+    const [isIncreasing, setIsIncreasing] = useState(true);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentRating(prev => {
+          if (isIncreasing) {
+            if (prev >= 5) {
+              setIsIncreasing(false);
+              return 4;
+            }
+            return prev + 1;
+          } else {
+            if (prev <= 1) {
+              setIsIncreasing(true);
+              return 2;
+            }
+            return prev - 1;
+          }
+        });
+      }, 800); // Change every 800ms for smooth animation
+
+      return () => clearInterval(interval);
+    }, [isIncreasing]);
+
+    return (
+      <div className="flex gap-1">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key={star}
+            className={`w-16 h-16 transition-all duration-300 ${
+              star <= currentRating
+                ? "fill-[#FFDC00] text-[#FFDC00]"
+                : "text-gray-300"
+            }`}
+          />
+        ))}
+      </div>
+    );
+  };
+
   const renderStars = (rating: number) => {
     return <div className="flex gap-1">
         {[1, 2, 3, 4, 5].map(star => <Star key={star} className={`w-4 h-4 ${star <= rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />)}
@@ -188,8 +231,8 @@ const MIUTTestimonials = () => {
           /* Zero State */
           <div className="max-w-2xl mx-auto text-center py-16">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 bg-stone rounded-full flex items-center justify-center">
-                <Star className="w-16 h-16 text-[#FFDC00]" />
+              <div className="mx-auto mb-6 flex items-center justify-center">
+                <AnimatedStars />
               </div>
               <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">
                 Vær den første til at anmelde!
