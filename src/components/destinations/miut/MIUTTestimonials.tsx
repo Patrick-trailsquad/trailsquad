@@ -134,95 +134,46 @@ const MIUTTestimonials = () => {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {allTestimonials.map((testimonial, index) => <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
               <CardContent className="p-0 h-full">
-                {/* Mobile layout - stacked */}
-                <div className="md:hidden">
-                  {/* Image - square on mobile */}
-                  <div className="bg-gray-100 h-48 flex items-center justify-center">
-                    {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
-                      <img 
-                        src={testimonial.photo_url} 
-                        alt={`Photo from ${testimonial.name}`}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <img 
-                        src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
-                        alt="Trail runner illustration"
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                  </div>
-                  
-                  {/* Content below image on mobile */}
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="font-cabinet font-bold text-lg text-charcoal">
-                          {testimonial.name}
-                        </h3>
-                        <p className="text-sm text-charcoal/60">{testimonial.location}</p>
-                      </div>
-                      <div className="text-right">
-                        {renderStars(testimonial.rating)}
-                        <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
-                      </div>
-                    </div>
-                    <ReviewText text={testimonial.review} index={index} />
-                    
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
-                        {testimonial.race}
-                      </span>
-                    </div>
-                  </div>
+                {/* Image on top */}
+                <div className="bg-gray-100 h-48 flex items-center justify-center">
+                  {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
+                    <img 
+                      src={testimonial.photo_url} 
+                      alt={`Photo from ${testimonial.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <img 
+                      src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
+                      alt="Trail runner illustration"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
-
-                {/* Desktop layout - side by side */}
-                <div className="hidden md:grid grid-cols-3 h-full min-h-[200px]">
-                  {/* Image column - 1/3 of the container */}
-                  <div className="bg-gray-100 flex items-center justify-center">
-                    {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
-                      <img 
-                        src={testimonial.photo_url} 
-                        alt={`Photo from ${testimonial.name}`}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <img 
-                        src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
-                        alt="Trail runner illustration"
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                  </div>
-                  
-                  {/* Content column - 2/3 of the container */}
-                  <div className="col-span-2 p-6 flex flex-col justify-between">
+                
+                {/* Content below image */}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
                     <div>
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <h3 className="font-cabinet font-bold text-lg text-charcoal">
-                            {testimonial.name}
-                          </h3>
-                          <p className="text-sm text-charcoal/60">{testimonial.location}</p>
-                        </div>
-                        <div className="text-right">
-                          {renderStars(testimonial.rating)}
-                          <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
-                        </div>
-                      </div>
-                      <ReviewText text={testimonial.review} index={index} />
+                      <h3 className="font-cabinet font-bold text-lg text-charcoal">
+                        {testimonial.name}
+                      </h3>
+                      <p className="text-sm text-charcoal/60">{testimonial.location}</p>
                     </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
-                        {testimonial.race}
-                      </span>
+                    <div className="text-right">
+                      {renderStars(testimonial.rating)}
+                      <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
                     </div>
+                  </div>
+                  <ReviewText text={testimonial.review} index={index} />
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
+                      {testimonial.race}
+                    </span>
                   </div>
                 </div>
               </CardContent>
