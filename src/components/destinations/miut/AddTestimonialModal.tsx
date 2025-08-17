@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star, Upload, X } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -26,7 +26,17 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
   const [dragActive, setDragActive] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showImageReminder, setShowImageReminder] = useState(false);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
   const { toast } = useToast();
+
+  // Clean up image preview URL when component unmounts or image changes
+  useEffect(() => {
+    return () => {
+      if (imagePreview) {
+        URL.revokeObjectURL(imagePreview);
+      }
+    };
+  }, [imagePreview]);
 
   const handleStarClick = (rating: number) => {
     setFormData(prev => ({ ...prev, rating }));
@@ -51,6 +61,12 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
     if (files && files[0]) {
       const file = files[0];
       if (file.type.startsWith('image/')) {
+        // Clean up previous preview URL
+        if (imagePreview) {
+          URL.revokeObjectURL(imagePreview);
+        }
+        const previewUrl = URL.createObjectURL(file);
+        setImagePreview(previewUrl);
         setFormData(prev => ({ ...prev, photo: file }));
         setShowImageReminder(false); // Hide reminder when image is added via drag and drop
       }
@@ -60,6 +76,12 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files[0]) {
+      // Clean up previous preview URL
+      if (imagePreview) {
+        URL.revokeObjectURL(imagePreview);
+      }
+      const previewUrl = URL.createObjectURL(files[0]);
+      setImagePreview(previewUrl);
       setFormData(prev => ({ ...prev, photo: files[0] }));
       setShowImageReminder(false); // Hide reminder when image is added
     }
@@ -136,6 +158,10 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
       });
       
       // Reset form and close modal
+      if (imagePreview) {
+        URL.revokeObjectURL(imagePreview);
+      }
+      setImagePreview(null);
       setFormData({
         name: "",
         location: "",
@@ -260,18 +286,31 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
               onDragOver={handleDrag}
               onDrop={handleDrop}
             >
-              {formData.photo ? (
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-charcoal truncate">{formData.photo.name}</span>
+              {formData.photo && imagePreview ? (
+                <div className="relative">
+                  <img 
+                    src={imagePreview} 
+                    alt="Preview" 
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    onClick={() => setFormData(prev => ({ ...prev, photo: null }))}
-                    className="h-6 w-6 p-0"
+                    onClick={() => {
+                      if (imagePreview) {
+                        URL.revokeObjectURL(imagePreview);
+                      }
+                      setImagePreview(null);
+                      setFormData(prev => ({ ...prev, photo: null }));
+                    }}
+                    className="absolute top-2 right-2 h-8 w-8 p-0 bg-white/80 hover:bg-white shadow-sm"
                   >
                     <X className="w-4 h-4" />
                   </Button>
+                  <div className="mt-2 text-xs text-gray-600 truncate">
+                    {formData.photo.name}
+                  </div>
                 </div>
               ) : (
                 <div className="flex items-center gap-3">
