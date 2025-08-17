@@ -108,7 +108,7 @@ const MIUTTestimonials = () => {
       <div className="mb-4">
         <div
           ref={textRef}
-          className="text-charcoal/80 italic text-sm overflow-hidden transition-all duration-500 ease-in-out"
+          className="text-charcoal/80 italic text-sm overflow-hidden transition-all duration-500 ease-in-out whitespace-pre-wrap"
           style={{ 
             lineHeight: '1.5rem',
             maxHeight: isExpanded ? fullHeight : '216px'
