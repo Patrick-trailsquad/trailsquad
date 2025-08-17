@@ -25,6 +25,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
   });
   const [dragActive, setDragActive] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showImageReminder, setShowImageReminder] = useState(false);
   const { toast } = useToast();
 
   const handleStarClick = (rating: number) => {
@@ -51,6 +52,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
       const file = files[0];
       if (file.type.startsWith('image/')) {
         setFormData(prev => ({ ...prev, photo: file }));
+        setShowImageReminder(false); // Hide reminder when image is added via drag and drop
       }
     }
   };
@@ -59,6 +61,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
     const files = e.target.files;
     if (files && files[0]) {
       setFormData(prev => ({ ...prev, photo: files[0] }));
+      setShowImageReminder(false); // Hide reminder when image is added
     }
   };
 
@@ -73,6 +76,18 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
       });
       return;
     }
+
+    // Check if no photo is provided and reminder hasn't been shown
+    if (!formData.photo && !showImageReminder) {
+      setShowImageReminder(true);
+      return;
+    }
+
+    await submitReview();
+  };
+
+  const submitReview = async () => {
+    setShowImageReminder(false);  // Hide reminder when submitting
 
     setIsSubmitting(true);
     
@@ -292,6 +307,44 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
             />
           </div>
 
+          {/* Image Reminder Notice */}
+          {showImageReminder && (
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 space-y-4">
+              <div className="flex items-start gap-3">
+                <Upload className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <h4 className="font-cabinet font-bold text-orange-800 mb-2">
+                    Mangler du et billede?
+                  </h4>
+                  <p className="text-sm text-orange-700 mb-4">
+                    Billeder gør din anmeldelse mere engagerende og hjælper andre løbere. 
+                    <strong> Bemærk: Du kan ikke tilføje billeder efter indsendelse.</strong>
+                  </p>
+                  <div className="flex gap-3">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => document.getElementById('photo-upload')?.click()}
+                      className="border-orange-300 text-orange-700 hover:bg-orange-100"
+                    >
+                      📸 Tilføj billede
+                    </Button>
+                    <Button
+                      type="button"
+                      size="sm"
+                      onClick={submitReview}
+                      disabled={isSubmitting}
+                      className="bg-orange-600 hover:bg-orange-700 text-white"
+                    >
+                      {isSubmitting ? "Sender..." : "Send uden billede"}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="flex gap-3 pt-4">
             <Button
               type="button"
@@ -301,13 +354,15 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
             >
               Annuller
             </Button>
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-              className="flex-1 bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal font-cabinet font-bold disabled:opacity-50"
-            >
-              {isSubmitting ? "Sender..." : "Send anmeldelse"}
-            </Button>
+            {!showImageReminder && (
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-1 bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal font-cabinet font-bold disabled:opacity-50"
+              >
+                {isSubmitting ? "Sender..." : "Send anmeldelse"}
+              </Button>
+            )}
           </div>
         </form>
       </DialogContent>
