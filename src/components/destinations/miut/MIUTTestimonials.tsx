@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Star, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import AddTestimonialModal from "./AddTestimonialModal";
@@ -50,6 +50,7 @@ const MIUTTestimonials = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [expandedReviews, setExpandedReviews] = useState<{ [key: number]: boolean }>({});
   useEffect(() => {
     fetchTestimonials();
   }, []);
@@ -73,6 +74,49 @@ const MIUTTestimonials = () => {
     setIsModalOpen(false);
     // Refresh testimonials when modal closes in case a new one was added
     fetchTestimonials();
+  };
+
+  const toggleReviewExpansion = (index: number) => {
+    setExpandedReviews(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const ReviewText = ({ text, index }: { text: string; index: number }) => {
+    const textRef = useRef<HTMLDivElement>(null);
+    const [needsExpansion, setNeedsExpansion] = useState(false);
+    const isExpanded = expandedReviews[index] || false;
+
+    useEffect(() => {
+      if (textRef.current) {
+        const lineHeight = 24; // Approximate line height in pixels
+        const maxHeight = lineHeight * 6; // 6 lines
+        setNeedsExpansion(textRef.current.scrollHeight > maxHeight);
+      }
+    }, [text]);
+
+    return (
+      <div className="relative">
+        <div
+          ref={textRef}
+          className={`text-charcoal/80 italic transition-all duration-300 ${
+            !isExpanded && needsExpansion ? 'line-clamp-6' : ''
+          }`}
+          style={{ lineHeight: '1.5rem' }}
+        >
+          "{text}"
+        </div>
+        {needsExpansion && (
+          <button
+            onClick={() => toggleReviewExpansion(index)}
+            className="mt-2 text-sm text-[#FFDC00] hover:underline font-medium transition-colors"
+          >
+            {isExpanded ? 'Læs mindre' : 'Læs mere'}
+          </button>
+        )}
+      </div>
+    );
   };
   const renderStars = (rating: number) => {
     return <div className="flex gap-1">
@@ -146,9 +190,8 @@ const MIUTTestimonials = () => {
                       </div>
                     </div>
                     
-                    <blockquote className="text-charcoal/80 mb-4 italic">
-                      "{testimonial.review}"
-                    </blockquote>
+                    <ReviewText text={testimonial.review} index={index} />
+                    
                     
                     <div className="flex items-center justify-between">
                       <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
@@ -191,9 +234,7 @@ const MIUTTestimonials = () => {
                         </div>
                       </div>
                       
-                      <blockquote className="text-charcoal/80 mb-4 italic">
-                        "{testimonial.review}"
-                      </blockquote>
+                      <ReviewText text={testimonial.review} index={index} />
                     </div>
                     
                     <div className="flex items-center justify-between">
