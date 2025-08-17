@@ -86,36 +86,35 @@ const MIUTTestimonials = () => {
   const ReviewText = ({ text, index }: { text: string; index: number }) => {
     const textRef = useRef<HTMLDivElement>(null);
     const [needsExpansion, setNeedsExpansion] = useState(false);
-    const [fullHeight, setFullHeight] = useState(0);
+    const [fullHeight, setFullHeight] = useState('auto');
     const isExpanded = expandedReviews[index] || false;
 
     useEffect(() => {
       if (textRef.current) {
-        const lineHeight = 24; // Approximate line height in pixels
-        const maxHeight = lineHeight * 6; // 6 lines
+        // Temporarily set to auto to measure full height
+        textRef.current.style.maxHeight = 'none';
         const scrollHeight = textRef.current.scrollHeight;
-        setFullHeight(scrollHeight);
-        setNeedsExpansion(scrollHeight > maxHeight);
+        const sixLinesHeight = 144; // 6 lines * 24px line height
+        
+        setFullHeight(`${scrollHeight}px`);
+        setNeedsExpansion(scrollHeight > sixLinesHeight);
+        
+        // Reset to controlled height
+        textRef.current.style.maxHeight = isExpanded ? `${scrollHeight}px` : `${sixLinesHeight}px`;
       }
-    }, [text]);
-
-    const sixLinesHeight = 144; // 6 lines * 24px line height
+    }, [text, isExpanded]);
 
     return (
       <div className="mb-4">
         <div
-          className="overflow-hidden transition-all duration-500 ease-in-out"
-          style={{
-            maxHeight: isExpanded ? `${fullHeight}px` : `${sixLinesHeight}px`
+          ref={textRef}
+          className="text-charcoal/80 italic overflow-hidden transition-all duration-500 ease-in-out"
+          style={{ 
+            lineHeight: '1.5rem',
+            maxHeight: isExpanded ? fullHeight : '144px'
           }}
         >
-          <div
-            ref={textRef}
-            className="text-charcoal/80 italic"
-            style={{ lineHeight: '1.5rem' }}
-          >
-            "{text}"
-          </div>
+          "{text}"
         </div>
         {needsExpansion && (
           <button
