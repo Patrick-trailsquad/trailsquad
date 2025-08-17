@@ -144,7 +144,7 @@ const MIUTTestimonials = () => {
     date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', {
       month: 'long',
       year: 'numeric'
-    }) : ''
+    }).replace(/^\w/, c => c.toUpperCase()) : ''
   })), ...testimonials];
   return <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
