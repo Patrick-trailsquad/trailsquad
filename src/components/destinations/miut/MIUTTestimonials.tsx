@@ -101,18 +101,21 @@ const MIUTTestimonials = () => {
   };
 
   // Use only database testimonials
-  const allTestimonials = dbTestimonials.map(t => ({
-    name: t.name,
-    location: t.location || '',
-    rating: t.rating,
-    review: t.review,
-    race: t.distance,
-    photo_url: t.photo_url,
-    date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', {
-      month: 'long',
-      year: 'numeric'
-    }).replace(/^\w/, c => c.toUpperCase()) : ''
-  }));
+  const allTestimonials = dbTestimonials.map(t => {
+    console.log('Photo URL for', t.name, ':', t.photo_url, 'Type:', typeof t.photo_url);
+    return {
+      name: t.name,
+      location: t.location || '',
+      rating: t.rating,
+      review: t.review,
+      race: t.distance,
+      photo_url: t.photo_url,
+      date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', {
+        month: 'long',
+        year: 'numeric'
+      }).replace(/^\w/, c => c.toUpperCase()) : ''
+    };
+  });
   return <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -138,7 +141,7 @@ const MIUTTestimonials = () => {
                 <div className="md:hidden">
                   {/* Image - square on mobile */}
                   <div className="bg-gray-100 h-48 flex items-center justify-center">
-                    {testimonial.photo_url ? (
+                    {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
                       <img 
                         src={testimonial.photo_url} 
                         alt={`Photo from ${testimonial.name}`}
@@ -182,7 +185,7 @@ const MIUTTestimonials = () => {
                 <div className="hidden md:grid grid-cols-3 h-full min-h-[200px]">
                   {/* Image column - 1/3 of the container */}
                   <div className="bg-gray-100 flex items-center justify-center">
-                    {testimonial.photo_url ? (
+                    {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
                       <img 
                         src={testimonial.photo_url} 
                         alt={`Photo from ${testimonial.name}`}
