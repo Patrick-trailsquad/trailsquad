@@ -94,13 +94,13 @@ const MIUTTestimonials = () => {
         // Temporarily set to auto to measure full height
         textRef.current.style.maxHeight = 'none';
         const scrollHeight = textRef.current.scrollHeight;
-        const sixLinesHeight = 144; // 6 lines * 24px line height
+        const nineLinesHeight = 216; // 9 lines * 24px line height
         
         setFullHeight(`${scrollHeight}px`);
-        setNeedsExpansion(scrollHeight > sixLinesHeight);
+        setNeedsExpansion(scrollHeight > nineLinesHeight);
         
         // Reset to controlled height
-        textRef.current.style.maxHeight = isExpanded ? `${scrollHeight}px` : `${sixLinesHeight}px`;
+        textRef.current.style.maxHeight = isExpanded ? `${scrollHeight}px` : `${nineLinesHeight}px`;
       }
     }, [text, isExpanded]);
 
@@ -108,10 +108,10 @@ const MIUTTestimonials = () => {
       <div className="mb-4">
         <div
           ref={textRef}
-          className="text-charcoal/80 italic overflow-hidden transition-all duration-500 ease-in-out"
+          className="text-charcoal/80 italic text-sm overflow-hidden transition-all duration-500 ease-in-out"
           style={{ 
             lineHeight: '1.5rem',
-            maxHeight: isExpanded ? fullHeight : '144px'
+            maxHeight: isExpanded ? fullHeight : '216px'
           }}
         >
           "{text}"
