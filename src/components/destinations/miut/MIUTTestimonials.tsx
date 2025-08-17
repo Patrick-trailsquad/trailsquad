@@ -145,9 +145,11 @@ const MIUTTestimonials = () => {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="w-20 h-20 bg-charcoal/10 rounded-full flex items-center justify-center">
-                        <User className="w-10 h-10 text-charcoal/40" />
-                      </div>
+                      <img 
+                        src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
+                        alt="Trail runner illustration"
+                        className="w-full h-full object-cover"
+                      />
                     )}
                   </div>
                   
@@ -187,9 +189,11 @@ const MIUTTestimonials = () => {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="w-20 h-20 bg-charcoal/10 rounded-full flex items-center justify-center">
-                        <User className="w-10 h-10 text-charcoal/40" />
-                      </div>
+                      <img 
+                        src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
+                        alt="Trail runner illustration"
+                        className="w-full h-full object-cover"
+                      />
                     )}
                   </div>
                   
