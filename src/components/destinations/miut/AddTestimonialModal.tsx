@@ -77,6 +77,28 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
     setIsSubmitting(true);
     
     try {
+      let photoUrl = null;
+      
+      // Upload photo if provided
+      if (formData.photo) {
+        const fileExt = formData.photo.name.split('.').pop();
+        const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;
+        
+        const { data: uploadData, error: uploadError } = await supabase.storage
+          .from('testimonial-photos')
+          .upload(fileName, formData.photo);
+          
+        if (uploadError) {
+          console.error('Error uploading photo:', uploadError);
+        } else {
+          // Get public URL
+          const { data: { publicUrl } } = supabase.storage
+            .from('testimonial-photos')
+            .getPublicUrl(fileName);
+          photoUrl = publicUrl;
+        }
+      }
+
       const { error } = await supabase
         .from('testimonials')
         .insert({
@@ -86,7 +108,8 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
           rating: formData.rating,
           review: formData.review,
           destination: 'MIUT',
-          status: 'approved'
+          status: 'approved',
+          photo_url: photoUrl
         });
 
       if (error) throw error;

@@ -9,28 +9,32 @@ const testimonials = [{
   rating: 5,
   review: "MIUT var helt fantastisk! Landskaberne var utrolige - fra de grønne levadas til de dramatiske bjergtoppe. Organisationen var perfekt, og oplevelsen var uforglemmelig. Kan varmt anbefales!",
   race: "MIUT 85km",
-  date: "April 2024"
+  date: "April 2024",
+  photo_url: null
 }, {
   name: "Maria Andersen",
   location: "Aarhus",
   rating: 5,
   review: "Mit første ultraløb nogensinde, og jeg kunne ikke have valgt bedre! Trail Squad tog sig af alt, så jeg kunne fokusere på løbet. Madeira er simpelthen magisk at løbe gennem.",
   race: "MIUT 42km",
-  date: "April 2024"
+  date: "April 2024",
+  photo_url: null
 }, {
   name: "Thomas Larsen",
   location: "Odense",
   rating: 4,
   review: "Fantastisk oplevelse! Ruten var udfordrende men smuk. Hotellet var perfekt placeret, og maden var fantastisk. Kommer helt sikkert igen næste år!",
   race: "MIUT 60km",
-  date: "April 2024"
+  date: "April 2024",
+  photo_url: null
 }, {
   name: "Anne Møller",
   location: "Aalborg",
   rating: 5,
   review: "Utrolig professionel planlægning fra Trail Squad. Alle detaljer var tænkt igennem. Madeira er et paradis for trailløbere - kan ikke vente med at komme tilbage!",
   race: "MIUT 115km",
-  date: "April 2024"
+  date: "April 2024",
+  photo_url: null
 }];
 interface Testimonial {
   id?: string;
@@ -39,6 +43,7 @@ interface Testimonial {
   rating: number;
   review: string;
   distance: string;
+  photo_url?: string | null;
   created_at?: string;
 }
 const MIUTTestimonials = () => {
@@ -82,6 +87,7 @@ const MIUTTestimonials = () => {
     rating: t.rating,
     review: t.review,
     race: t.distance,
+    photo_url: t.photo_url,
     date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', {
       month: 'long',
       year: 'numeric'
@@ -112,9 +118,17 @@ const MIUTTestimonials = () => {
                 <div className="md:hidden">
                   {/* Image - square on mobile */}
                   <div className="bg-gray-100 h-48 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-charcoal/10 rounded-full flex items-center justify-center">
-                      <User className="w-10 h-10 text-charcoal/40" />
-                    </div>
+                    {testimonial.photo_url ? (
+                      <img 
+                        src={testimonial.photo_url} 
+                        alt={`Photo from ${testimonial.name}`}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-20 h-20 bg-charcoal/10 rounded-full flex items-center justify-center">
+                        <User className="w-10 h-10 text-charcoal/40" />
+                      </div>
+                    )}
                   </div>
                   
                   {/* Content below image on mobile */}
@@ -148,9 +162,17 @@ const MIUTTestimonials = () => {
                 <div className="hidden md:grid grid-cols-3 h-full min-h-[200px]">
                   {/* Image column - 1/3 of the container */}
                   <div className="bg-gray-100 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-charcoal/10 rounded-full flex items-center justify-center">
-                      <User className="w-10 h-10 text-charcoal/40" />
-                    </div>
+                    {testimonial.photo_url ? (
+                      <img 
+                        src={testimonial.photo_url} 
+                        alt={`Photo from ${testimonial.name}`}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-20 h-20 bg-charcoal/10 rounded-full flex items-center justify-center">
+                        <User className="w-10 h-10 text-charcoal/40" />
+                      </div>
+                    )}
                   </div>
                   
                   {/* Content column - 2/3 of the container */}
