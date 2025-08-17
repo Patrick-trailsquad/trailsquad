@@ -11,7 +11,7 @@ const BackToDestinationsButton = () => {
   };
 
   return (
-    <div className="flex justify-center mt-16 mb-8">
+    <div className="flex justify-center mt-8 mb-4">
       <Button
         onClick={handleClick}
         variant="black"
