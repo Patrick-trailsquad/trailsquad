@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface AddTestimonialModalProps {
   isOpen: boolean;
@@ -23,6 +24,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
     photo: null as File | null
   });
   const [dragActive, setDragActive] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleStarClick = (rating: number) => {
@@ -60,7 +62,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.distance || !formData.rating || !formData.review) {
@@ -72,24 +74,47 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
       return;
     }
 
-    // Here you would typically send the data to your backend
-    console.log("Testimonial data:", formData);
+    setIsSubmitting(true);
     
-    toast({
-      title: "Tak for din anmeldelse!",
-      description: "Din anmeldelse er blevet sendt og vil blive gennemgået inden offentliggørelse.",
-    });
-    
-    // Reset form and close modal
-    setFormData({
-      name: "",
-      location: "",
-      distance: "",
-      rating: 0,
-      review: "",
-      photo: null
-    });
-    onClose();
+    try {
+      const { error } = await supabase
+        .from('testimonials')
+        .insert({
+          name: formData.name,
+          location: formData.location || null,
+          distance: formData.distance,
+          rating: formData.rating,
+          review: formData.review,
+          destination: 'MIUT'
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: "Tak for din anmeldelse!",
+        description: "Din anmeldelse er blevet sendt og vil blive gennemgået inden offentliggørelse.",
+      });
+      
+      // Reset form and close modal
+      setFormData({
+        name: "",
+        location: "",
+        distance: "",
+        rating: 0,
+        review: "",
+        photo: null
+      });
+      onClose();
+    } catch (error) {
+      console.error('Error submitting testimonial:', error);
+      toast({
+        title: "Fejl",
+        description: "Der opstod en fejl ved indsendelse af din anmeldelse. Prøv igen.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderStars = () => {
@@ -253,9 +278,10 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
             </Button>
             <Button
               type="submit"
-              className="flex-1 bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal font-cabinet font-bold"
+              disabled={isSubmitting}
+              className="flex-1 bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal font-cabinet font-bold disabled:opacity-50"
             >
-              Send anmeldelse
+              {isSubmitting ? "Sender..." : "Send anmeldelse"}
             </Button>
           </div>
         </form>

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import AddTestimonialModal from "./AddTestimonialModal";
+import { supabase } from "@/integrations/supabase/client";
 
 const testimonials = [
   {
@@ -38,8 +39,48 @@ const testimonials = [
   }
 ];
 
+interface Testimonial {
+  id?: string;
+  name: string;
+  location: string | null;
+  rating: number;
+  review: string;
+  distance: string;
+  created_at?: string;
+}
+
 const MIUTTestimonials = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchTestimonials();
+  }, []);
+
+  const fetchTestimonials = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('testimonials')
+        .select('*')
+        .eq('destination', 'MIUT')
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      setDbTestimonials(data || []);
+    } catch (error) {
+      console.error('Error fetching testimonials:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    // Refresh testimonials when modal closes in case a new one was added
+    fetchTestimonials();
+  };
   const renderStars = (rating: number) => {
     return (
       <div className="flex gap-1">
@@ -57,12 +98,25 @@ const MIUTTestimonials = () => {
     );
   };
 
+  // Combine database testimonials with dummy data, prioritizing database data
+  const allTestimonials = isLoading ? testimonials : [
+    ...dbTestimonials.map(t => ({
+      name: t.name,
+      location: t.location || '',
+      rating: t.rating,
+      review: t.review,
+      race: t.distance,
+      date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' }) : ''
+    })),
+    ...testimonials
+  ];
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-4">
-            Anmeldelser fra deltagere (dummy text, design under construction)
+            Anmeldelser fra deltagere {dbTestimonials.length === 0 ? '(dummy text, design under construction)' : ''}
           </h2>
           <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
             Hør hvad vores tidligere deltagere siger om deres MIUT oplevelse
@@ -70,7 +124,7 @@ const MIUTTestimonials = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+          {allTestimonials.map((testimonial, index) => (
             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
               <CardContent className="p-0 h-full">
                 <div className="grid grid-cols-3 h-full min-h-[200px]">
@@ -129,7 +183,7 @@ const MIUTTestimonials = () => {
 
       <AddTestimonialModal 
         isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+        onClose={handleModalClose} 
       />
     </section>
   );
