@@ -14,7 +14,7 @@ const destinations = [
     image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2025",
-    spots: "4 pladser",
+    spots: "3 pladser",
     href: "/destinations/ribeira-sacra"
   },
   {

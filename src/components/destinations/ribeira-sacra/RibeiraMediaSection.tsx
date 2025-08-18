@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 
 const RibeiraMediaSection = () => {
-  const spotsLeft = 4;
+  const spotsLeft = 3;
   return (
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
