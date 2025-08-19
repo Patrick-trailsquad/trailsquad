@@ -99,7 +99,7 @@ const AdminDashboard = () => {
             <p className="text-muted-foreground">Participant Management Dashboard</p>
           </div>
           <div className="flex items-center gap-4">
-            <Button onClick={() => setIsAddDialogOpen(true)}>
+            <Button variant="ghost" onClick={() => setIsAddDialogOpen(true)}>
               <Plus className="h-4 w-4 mr-2" />
               Add Participant
             </Button>
