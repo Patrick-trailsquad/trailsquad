@@ -17,16 +17,19 @@ interface AddParticipantDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onAdd: (data: AddParticipantData) => Promise<{ success: boolean; error?: string }>;
+  trail: string;
 }
 
 export const AddParticipantDialog: React.FC<AddParticipantDialogProps> = ({
   open,
   onOpenChange,
   onAdd,
+  trail,
 }) => {
   const [formData, setFormData] = useState<AddParticipantData>({
     name: '',
     email: '',
+    trail,
   });
   const [loading, setLoading] = useState(false);
 
@@ -37,7 +40,7 @@ export const AddParticipantDialog: React.FC<AddParticipantDialogProps> = ({
     const result = await onAdd(formData);
     
     if (result.success) {
-      setFormData({ name: '', email: '' });
+      setFormData({ name: '', email: '', trail });
       onOpenChange(false);
     }
     
@@ -48,7 +51,7 @@ export const AddParticipantDialog: React.FC<AddParticipantDialogProps> = ({
     if (!loading) {
       onOpenChange(open);
       if (!open) {
-        setFormData({ name: '', email: '' });
+        setFormData({ name: '', email: '', trail });
       }
     }
   };

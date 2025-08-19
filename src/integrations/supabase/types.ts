@@ -27,6 +27,7 @@ export type Database = {
           paid_remaining_balance: boolean
           received_quote: boolean
           requested_quote: boolean
+          trail: string
           updated_at: string
         }
         Insert: {
@@ -41,6 +42,7 @@ export type Database = {
           paid_remaining_balance?: boolean
           received_quote?: boolean
           requested_quote?: boolean
+          trail?: string
           updated_at?: string
         }
         Update: {
@@ -55,6 +57,7 @@ export type Database = {
           paid_remaining_balance?: boolean
           received_quote?: boolean
           requested_quote?: boolean
+          trail?: string
           updated_at?: string
         }
         Relationships: []

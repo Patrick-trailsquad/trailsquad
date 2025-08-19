@@ -6,6 +6,7 @@ export interface Participant {
   id: string;
   name: string;
   email: string;
+  trail: string;
   requested_quote: boolean;
   received_quote: boolean;
   paid_deposit: boolean;
@@ -19,9 +20,10 @@ export interface Participant {
 export interface AddParticipantData {
   name: string;
   email: string;
+  trail: string;
 }
 
-export const useParticipants = () => {
+export const useParticipants = (trail?: string) => {
   const [participants, setParticipants] = useState<Participant[]>([]);
   const [loading, setLoading] = useState(true);
   const { toast } = useToast();
@@ -29,10 +31,15 @@ export const useParticipants = () => {
   const fetchParticipants = async () => {
     try {
       setLoading(true);
-      const { data, error } = await supabase
+      let query = supabase
         .from('participants')
-        .select('*')
-        .order('created_at', { ascending: false });
+        .select('*');
+      
+      if (trail) {
+        query = query.eq('trail', trail);
+      }
+      
+      const { data, error } = await query.order('created_at', { ascending: false });
 
       if (error) throw error;
       setParticipants(data || []);
