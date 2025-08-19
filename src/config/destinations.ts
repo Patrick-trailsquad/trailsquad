@@ -22,7 +22,7 @@ export const DESTINATIONS: Destination[] = [
     name: 'Zugspitz Ultratrail',
     route: '/destinations/zugspitz',
     status: 'open' as const,
-    date: '2025-06-28',
+    date: '2026-06-28',
     published: true
   },
   {
@@ -38,7 +38,7 @@ export const DESTINATIONS: Destination[] = [
     name: 'Transylvania 100',
     route: '/destinations/transylvania',
     status: 'open' as const,
-    date: '2025-09-12',
+    date: '2026-09-12',
     published: true
   },
   {
