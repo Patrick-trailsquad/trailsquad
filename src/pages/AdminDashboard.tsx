@@ -5,65 +5,50 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
 import { ParticipantsTable } from '@/components/admin/ParticipantsTable';
 import { AddParticipantDialog } from '@/components/admin/AddParticipantDialog';
-import { LogOut, Plus, Search, X } from 'lucide-react';
-
-interface Trail {
-  id: string;
-  name: string;
-}
+import { LogOut, Plus, Search } from 'lucide-react';
+import { DESTINATIONS, type Destination } from '@/config/destinations';
 
 const AdminDashboard = () => {
   const { signOut, user } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('ribeira-sacra');
-  const [trails, setTrails] = useState<Trail[]>([
-    { id: 'ribeira-sacra', name: 'Ribeira Sacra' }
-  ]);
-  const [newTrailName, setNewTrailName] = useState('');
-  const [isAddingTrail, setIsAddingTrail] = useState(false);
+  const [activeTab, setActiveTab] = useState(DESTINATIONS[0]?.id || 'gtc');
 
-  // Get participants for the active trail
-  const activeTrail = trails.find(t => t.id === activeTab);
-  const { participants, loading, addParticipant, updateParticipant, deleteParticipant } = useParticipants(activeTrail?.name);
+  // Get participants for the active destination
+  const activeDestination = DESTINATIONS.find(d => d.id === activeTab);
+  const { participants, loading, addParticipant, updateParticipant, deleteParticipant } = useParticipants(activeDestination?.name);
 
   const filteredParticipants = participants.filter(participant =>
     participant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     participant.email.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const handleAddTrail = () => {
-    if (newTrailName.trim()) {
-      const newTrail = {
-        id: newTrailName.toLowerCase().replace(/\s+/g, '-'),
-        name: newTrailName.trim()
-      };
-      setTrails(prev => [...prev, newTrail]);
-      setActiveTab(newTrail.id);
-      setNewTrailName('');
-      setIsAddingTrail(false);
+  const getStatusColor = (status: Destination['status']) => {
+    switch (status) {
+      case 'upcoming':
+        return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'open':
+        return 'bg-green-100 text-green-800 border-green-200';
+      case 'closed':
+        return 'bg-orange-100 text-orange-800 border-orange-200';
+      case 'completed':
+        return 'bg-gray-100 text-gray-800 border-gray-200';
+      default:
+        return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
-  const handleRemoveTrail = (trailId: string) => {
-    if (trails.length > 1) {
-      setTrails(prev => prev.filter(t => t.id !== trailId));
-      if (activeTab === trailId) {
-        setActiveTab(trails[0].id === trailId ? trails[1].id : trails[0].id);
-      }
-    }
-  };
-
-  const EmptyState = ({ trailName }: { trailName: string }) => (
+  const EmptyState = ({ destinationName }: { destinationName: string }) => (
     <div className="text-center py-12">
       <div className="mx-auto w-24 h-24 bg-muted rounded-full flex items-center justify-center mb-4">
         <Plus className="h-8 w-8 text-muted-foreground" />
       </div>
       <h3 className="text-lg font-semibold mb-2">No participants yet</h3>
       <p className="text-muted-foreground mb-4">
-        Get started by adding your first participant to {trailName}.
+        Get started by adding your first participant to {destinationName}.
       </p>
       <Button onClick={() => setIsAddDialogOpen(true)}>
         <Plus className="h-4 w-4 mr-2" />
@@ -72,10 +57,10 @@ const AdminDashboard = () => {
     </div>
   );
 
-  const TrailContent = ({ trail }: { trail: Trail }) => {
-    const { participants: trailParticipants, loading: trailLoading, addParticipant: addTrailParticipant, updateParticipant: updateTrailParticipant, deleteParticipant: deleteTrailParticipant } = useParticipants(trail.name);
+  const DestinationContent = ({ destination }: { destination: Destination }) => {
+    const { participants: destinationParticipants, loading: destinationLoading, addParticipant: addDestinationParticipant, updateParticipant: updateDestinationParticipant, deleteParticipant: deleteDestinationParticipant } = useParticipants(destination.name);
     
-    const filteredTrailParticipants = trailParticipants.filter(participant =>
+    const filteredDestinationParticipants = destinationParticipants.filter(participant =>
       participant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       participant.email.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -89,7 +74,7 @@ const AdminDashboard = () => {
               <CardTitle className="text-sm font-medium">Total Participants</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{trailParticipants.length}</div>
+              <div className="text-2xl font-bold">{destinationParticipants.length}</div>
             </CardContent>
           </Card>
           
@@ -99,7 +84,7 @@ const AdminDashboard = () => {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {trailParticipants.filter(p => p.requested_quote).length}
+                {destinationParticipants.filter(p => p.requested_quote).length}
               </div>
             </CardContent>
           </Card>
@@ -110,7 +95,7 @@ const AdminDashboard = () => {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {trailParticipants.filter(p => p.paid_deposit).length}
+                {destinationParticipants.filter(p => p.paid_deposit).length}
               </div>
             </CardContent>
           </Card>
@@ -121,30 +106,30 @@ const AdminDashboard = () => {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {trailParticipants.filter(p => p.paid_remaining_balance).length}
+                {destinationParticipants.filter(p => p.paid_remaining_balance).length}
               </div>
             </CardContent>
           </Card>
         </div>
 
         {/* Content */}
-        {trailParticipants.length === 0 && !trailLoading ? (
-          <EmptyState trailName={trail.name} />
+        {destinationParticipants.length === 0 && !destinationLoading ? (
+          <EmptyState destinationName={destination.name} />
         ) : (
           <ParticipantsTable
-            participants={filteredTrailParticipants}
-            loading={trailLoading}
-            onUpdate={updateTrailParticipant}
-            onDelete={deleteTrailParticipant}
+            participants={filteredDestinationParticipants}
+            loading={destinationLoading}
+            onUpdate={updateDestinationParticipant}
+            onDelete={deleteDestinationParticipant}
           />
         )}
 
-        {/* Add Participant Dialog for this trail */}
+        {/* Add Participant Dialog for this destination */}
         <AddParticipantDialog
-          open={isAddDialogOpen && activeTab === trail.id}
+          open={isAddDialogOpen && activeTab === destination.id}
           onOpenChange={setIsAddDialogOpen}
-          onAdd={addTrailParticipant}
-          trail={trail.name}
+          onAdd={addDestinationParticipant}
+          trail={destination.name}
         />
       </div>
     );
@@ -171,59 +156,33 @@ const AdminDashboard = () => {
 
       <main className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <div className="flex items-center justify-between mb-6">
-            <TabsList className="grid w-auto grid-cols-auto">
-              {trails.map((trail) => (
-                <div key={trail.id} className="flex items-center">
-                  <TabsTrigger 
-                    value={trail.id} 
-                    className="flex items-center gap-2"
-                  >
-                    {trail.name}
-                    {trails.length > 1 && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleRemoveTrail(trail.id);
-                        }}
-                        className="ml-2 text-muted-foreground hover:text-foreground"
-                      >
-                        <X className="h-3 w-3" />
-                      </button>
-                    )}
-                  </TabsTrigger>
-                </div>
-              ))}
-              {isAddingTrail ? (
-                <div className="flex items-center gap-2 px-3">
-                  <Input
-                    placeholder="Trail name..."
-                    value={newTrailName}
-                    onChange={(e) => setNewTrailName(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') handleAddTrail();
-                      if (e.key === 'Escape') {
-                        setIsAddingTrail(false);
-                        setNewTrailName('');
-                      }
-                    }}
-                    className="h-8 w-32"
-                    autoFocus
-                  />
-                  <Button size="sm" onClick={handleAddTrail}>Add</Button>
-                </div>
-              ) : (
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  onClick={() => setIsAddingTrail(true)}
-                  className="text-muted-foreground"
+          <div className="mb-6">
+            <div className="flex flex-wrap gap-2">
+              {DESTINATIONS.map((destination) => (
+                <button
+                  key={destination.id}
+                  onClick={() => setActiveTab(destination.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
+                    activeTab === destination.id
+                      ? 'bg-primary text-primary-foreground border-primary'
+                      : 'bg-background hover:bg-muted border-border'
+                  }`}
                 >
-                  <Plus className="h-4 w-4 mr-1" />
-                  Add Trail
-                </Button>
-              )}
-            </TabsList>
+                  <span className="font-medium">{destination.name}</span>
+                  <Badge 
+                    variant="outline" 
+                    className={`text-xs ${getStatusColor(destination.status)}`}
+                  >
+                    {destination.status}
+                  </Badge>
+                  {destination.date && (
+                    <span className="text-xs text-muted-foreground">
+                      {new Date(destination.date).toLocaleDateString()}
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Actions */}
@@ -244,9 +203,9 @@ const AdminDashboard = () => {
           </div>
 
           {/* Tab Content */}
-          {trails.map((trail) => (
-            <TabsContent key={trail.id} value={trail.id}>
-              <TrailContent trail={trail} />
+          {DESTINATIONS.map((destination) => (
+            <TabsContent key={destination.id} value={destination.id}>
+              <DestinationContent destination={destination} />
             </TabsContent>
           ))}
         </Tabs>
