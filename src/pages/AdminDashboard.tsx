@@ -163,7 +163,7 @@ const AdminDashboard = () => {
                   onClick={() => setActiveTab(destination.id)}
                   className={`flex items-center gap-2 px-4 py-3 rounded-lg border transition-all duration-200 ${
                     activeTab === destination.id
-                      ? 'bg-primary text-primary-foreground border-primary shadow-md scale-105 font-semibold'
+                      ? 'bg-gradient-to-r from-primary to-primary/90 text-primary-foreground border-primary shadow-lg shadow-primary/25 scale-105 font-semibold ring-2 ring-primary/20'
                       : 'bg-card hover:bg-muted border-border hover:border-primary/20 hover:shadow-sm'
                   }`}
                 >
