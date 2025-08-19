@@ -21,6 +21,7 @@ export type Database = {
           email_1_sent: boolean
           email_2_sent: boolean
           email_3_sent: boolean
+          email_remaining_payment: boolean
           id: string
           name: string
           paid_deposit: boolean
@@ -36,6 +37,7 @@ export type Database = {
           email_1_sent?: boolean
           email_2_sent?: boolean
           email_3_sent?: boolean
+          email_remaining_payment?: boolean
           id?: string
           name: string
           paid_deposit?: boolean
@@ -51,6 +53,7 @@ export type Database = {
           email_1_sent?: boolean
           email_2_sent?: boolean
           email_3_sent?: boolean
+          email_remaining_payment?: boolean
           id?: string
           name?: string
           paid_deposit?: boolean
