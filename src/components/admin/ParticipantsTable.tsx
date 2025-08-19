@@ -23,7 +23,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { EditParticipantDialog } from '@/components/admin/EditParticipantDialog';
-import { Trash2, Edit, Loader2 } from 'lucide-react';
+import { Trash2, Edit, Loader2, CheckSquare } from 'lucide-react';
 
 interface ParticipantsTableProps {
   participants: Participant[];
@@ -52,6 +52,14 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
 
   const handleStepToggle = async (participant: Participant, step: string, checked: boolean) => {
     await onUpdate(participant.id, { [step]: checked });
+  };
+
+  const handleCheckAll = async (participant: Participant) => {
+    const updates: Partial<Participant> = {};
+    journeySteps.forEach(step => {
+      (updates as any)[step.key] = true;
+    });
+    await onUpdate(participant.id, updates);
   };
 
   const getProgressPercentage = (participant: Participant) => {
@@ -94,6 +102,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead>Email 2</TableHead>
               <TableHead>Email 3</TableHead>
               <TableHead>Fully Paid</TableHead>
+              <TableHead>Quick Actions</TableHead>
               <TableHead>Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -126,6 +135,18 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
                     />
                   </TableCell>
                 ))}
+                
+                <TableCell>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => handleCheckAll(participant)}
+                    className="text-xs"
+                  >
+                    <CheckSquare className="h-3 w-3 mr-1" />
+                    All
+                  </Button>
+                </TableCell>
                 
                 <TableCell>
                   <div className="flex items-center gap-2">
