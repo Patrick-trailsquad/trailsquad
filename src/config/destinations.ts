@@ -18,6 +18,14 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
+    id: 'transylvania',
+    name: 'Transylvania 100',
+    route: '/destinations/transylvania',
+    status: 'open' as const,
+    date: '2025-05-12',
+    published: true
+  },
+  {
     id: 'ribeira-sacra',
     name: 'Ribeira Sacra',
     route: '/destinations/ribeira-sacra',
@@ -39,14 +47,6 @@ export const DESTINATIONS: Destination[] = [
     route: '/destinations/gtc',
     status: 'upcoming' as const,
     date: '2026-07-15',
-    published: true
-  },
-  {
-    id: 'transylvania',
-    name: 'Transylvania 100',
-    route: '/destinations/transylvania',
-    status: 'open' as const,
-    date: '2026-09-12',
     published: true
   }
 ].filter(destination => destination.published); // Only return published destinations
