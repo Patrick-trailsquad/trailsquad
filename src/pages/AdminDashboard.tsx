@@ -161,10 +161,10 @@ const AdminDashboard = () => {
                 <button
                   key={destination.id}
                   onClick={() => setActiveTab(destination.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
+                  className={`flex items-center gap-2 px-4 py-3 rounded-lg border transition-all duration-200 ${
                     activeTab === destination.id
-                      ? 'bg-primary text-primary-foreground border-primary'
-                      : 'bg-background hover:bg-muted border-border'
+                      ? 'bg-primary text-primary-foreground border-primary shadow-md scale-105 font-semibold'
+                      : 'bg-card hover:bg-muted border-border hover:border-primary/20 hover:shadow-sm'
                   }`}
                 >
                   <span className="font-medium">{destination.name}</span>
