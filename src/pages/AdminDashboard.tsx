@@ -144,6 +144,10 @@ const AdminDashboard = () => {
             <p className="text-muted-foreground">Participant Management Dashboard</p>
           </div>
           <div className="flex items-center gap-4">
+            <Button onClick={() => setIsAddDialogOpen(true)}>
+              <Plus className="h-4 w-4 mr-2" />
+              Add Participant
+            </Button>
             <span className="text-sm text-muted-foreground">{user?.email}</span>
             <Button variant="outline" size="sm" onClick={signOut}>
               <LogOut className="h-4 w-4 mr-2" />
@@ -178,14 +182,6 @@ const AdminDashboard = () => {
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <Button onClick={() => setIsAddDialogOpen(true)}>
-              <Plus className="h-4 w-4 mr-2" />
-              Add Participant
-            </Button>
           </div>
 
           {/* Tab Content */}
