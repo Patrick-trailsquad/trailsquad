@@ -76,7 +76,6 @@ export const useParticipants = () => {
   };
 
   const updateParticipant = async (id: string, updates: Partial<Participant>) => {
-    console.log('updateParticipant called:', { id, updates });
     try {
       const { data, error } = await supabase
         .from('participants')
@@ -84,8 +83,6 @@ export const useParticipants = () => {
         .eq('id', id)
         .select()
         .single();
-
-      console.log('Supabase update response:', { data, error });
 
       if (error) throw error;
 
