@@ -97,16 +97,30 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
                 <TableCell className="font-medium">{participant.name}</TableCell>
                 <TableCell>{participant.email}</TableCell>
                 <TableCell>
-                  <div className="flex items-center gap-2">
-                    <div className="w-16 h-2 bg-muted rounded-full overflow-hidden">
-                      <div className="h-full bg-primary transition-all" style={{
-                    width: `${getProgressPercentage(participant)}%`
-                  }} />
-                    </div>
-                    <Badge variant="secondary" className="text-xs">
-                      {getProgressPercentage(participant)}%
-                    </Badge>
-                  </div>
+                  {(() => {
+                    const progress = getProgressPercentage(participant);
+                    let bgColor = 'bg-red-500';
+                    let textColor = 'text-white';
+                    
+                    if (progress >= 67) {
+                      bgColor = 'bg-green-500';
+                    } else if (progress >= 34) {
+                      bgColor = 'bg-yellow-500';
+                      textColor = 'text-black';
+                    }
+                    
+                    return (
+                      <div className="w-20 h-6 bg-muted rounded-full overflow-hidden relative">
+                        <div 
+                          className={`h-full transition-all ${bgColor}`}
+                          style={{ width: `${progress}%` }}
+                        />
+                        <div className={`absolute inset-0 flex items-center justify-center text-xs font-medium ${textColor}`}>
+                          {progress}%
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </TableCell>
                 
                 {journeySteps.map(step => <TableCell key={step.key}>
