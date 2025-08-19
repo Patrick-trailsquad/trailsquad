@@ -10,6 +10,7 @@ import { AddParticipantDialog } from '@/components/admin/AddParticipantDialog';
 import { LogOut, Plus, Users } from 'lucide-react';
 import { DESTINATIONS, type Destination } from '@/config/destinations';
 
+// Fixed Search reference error
 const AdminDashboard = () => {
   const { signOut, user } = useAuth();
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
