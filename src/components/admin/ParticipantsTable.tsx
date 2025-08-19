@@ -51,7 +51,13 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
   const [editingParticipant, setEditingParticipant] = useState<Participant | null>(null);
 
   const handleStepToggle = async (participant: Participant, step: string, checked: boolean) => {
-    await onUpdate(participant.id, { [step]: checked });
+    console.log('Checkbox clicked:', { participantId: participant.id, step, checked });
+    try {
+      await onUpdate(participant.id, { [step]: checked });
+      console.log('Update successful');
+    } catch (error) {
+      console.error('Update failed:', error);
+    }
   };
 
   const getProgressPercentage = (participant: Participant) => {
