@@ -20,11 +20,11 @@ const journeySteps = [{
   key: 'received_quote',
   label: 'Quote Received'
 }, {
-  key: 'paid_deposit',
-  label: 'Deposit Paid'
-}, {
   key: 'email_1_sent',
   label: 'Email 1'
+}, {
+  key: 'paid_deposit',
+  label: 'Deposit Paid'
 }, {
   key: 'email_2_sent',
   label: 'Email 2'
@@ -77,11 +77,10 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead>Name</TableHead>
               <TableHead>Email</TableHead>
               <TableHead>Progress</TableHead>
-              <TableHead>Quote Requested
-            </TableHead>
+              <TableHead>Quote Requested</TableHead>
               <TableHead>Quote Received</TableHead>
-              <TableHead>Deposit</TableHead>
               <TableHead>Email 1</TableHead>
+              <TableHead>Deposit</TableHead>
               <TableHead>Email 2</TableHead>
               <TableHead>Email 3</TableHead>
               <TableHead>Fully Paid</TableHead>
