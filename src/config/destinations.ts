@@ -21,48 +21,8 @@ export const DESTINATIONS: Destination[] = [
     id: 'miut',
     name: 'MIUT Madeira',
     route: '/destinations/miut',
-    status: 'open' as const,
-    date: '2025-04-25',
-    published: true
-  },
-  {
-    id: 'vesuvio',
-    name: 'Vesuvio Trail',
-    route: '/destinations/vesuvio',
-    status: 'open' as const,
-    date: '2025-03-20',
-    published: true
-  },
-  {
-    id: 'norwegian-fjords',
-    name: 'Norwegian Fjords',
-    route: '/destinations/norwegian-fjords',
     status: 'completed' as const,
-    date: '2024-08-20',
-    published: true
-  },
-  {
-    id: 'transylvania',
-    name: 'Transylvania 100',
-    route: '/destinations/transylvania',
-    status: 'open' as const,
-    date: '2025-09-12',
-    published: true
-  },
-  {
-    id: 'mont-blanc',
-    name: 'Mont Blanc Trail',
-    route: '/destinations/mont-blanc',
-    status: 'upcoming' as const,
-    date: '2025-06-20',
-    published: true
-  },
-  {
-    id: 'black-forest',
-    name: 'Black Forest Trail',
-    route: '/destinations/black-forest',
-    status: 'open' as const,
-    date: '2025-05-15',
+    date: '2024-04-25',
     published: true
   },
   {
@@ -74,19 +34,11 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'dolomites',
-    name: 'Dolomites Skyrace',
-    route: '/destinations/dolomites',
-    status: 'upcoming' as const,
-    date: '2025-07-08',
-    published: true
-  },
-  {
-    id: 'chianti',
-    name: 'Chianti Ultra Trail',
-    route: '/destinations/chianti',
+    id: 'transylvania',
+    name: 'Transylvania 100',
+    route: '/destinations/transylvania',
     status: 'open' as const,
-    date: '2025-05-03',
+    date: '2025-09-12',
     published: true
   },
   {
