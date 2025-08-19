@@ -77,19 +77,19 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Name</TableHead>
-              <TableHead>Email</TableHead>
-              <TableHead>Progress</TableHead>
-              <TableHead>Quote Requested</TableHead>
-              <TableHead>Quote Received</TableHead>
-              <TableHead>Deposit paid</TableHead>
-              <TableHead>Mail (deposit received)</TableHead>
-              <TableHead>Info mail (flights, survey, insurance)</TableHead>
-              <TableHead>Info mail (training)</TableHead>
-              <TableHead>Mail (remaining pay req.)</TableHead>
-              <TableHead>Fully Paid</TableHead>
-              <TableHead>Quick Actions</TableHead>
-              <TableHead>Actions</TableHead>
+              <TableHead className="text-xs">Name</TableHead>
+              <TableHead className="text-xs">Email</TableHead>
+              <TableHead className="text-xs">Progress</TableHead>
+              <TableHead className="text-xs">Quote Requested</TableHead>
+              <TableHead className="text-xs">Quote Received</TableHead>
+              <TableHead className="text-xs">Deposit paid</TableHead>
+              <TableHead className="text-xs">Mail (deposit received)</TableHead>
+              <TableHead className="text-xs">Info mail (flights, survey, insurance)</TableHead>
+              <TableHead className="text-xs">Info mail (training)</TableHead>
+              <TableHead className="text-xs">Mail (remaining pay req.)</TableHead>
+              <TableHead className="text-xs">Fully Paid</TableHead>
+              <TableHead className="text-xs">Quick Actions</TableHead>
+              <TableHead className="text-xs">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
