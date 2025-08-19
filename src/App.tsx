@@ -3,10 +3,14 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { ProtectedRoute } from "@/components/admin/ProtectedRoute";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import ForOrganizers from "./pages/ForOrganizers";
 import NotFound from "./pages/NotFound";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 import SwissAlps from "./pages/destinations/SwissAlps";
 import MIUT from "./pages/destinations/MIUT";
 import NorwegianFjords from "./pages/destinations/NorwegianFjords";
@@ -27,23 +31,38 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/for-organizers" element={<ForOrganizers />} />
-          <Route path="/destinations/gtc" element={<SwissAlps />} />
-          <Route path="/destinations/miut" element={<MIUT />} />
-          <Route path="/destinations/vesuvio" element={<Vesuvio />} />
-          <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
-          <Route path="/destinations/transylvania" element={<Transylvania100 />} />
-          <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
-          <Route path="/destinations/black-forest" element={<BlackForest />} />
-          <Route path="/destinations/ribeira-sacra" element={<RibeiraSacra />} />
-          <Route path="/destinations/dolomites" element={<Dolomites />} />
-          <Route path="/destinations/chianti" element={<ChiantiTrail />} />
-          <Route path="/destinations/zugspitz" element={<ZugspitzUltratrail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/for-organizers" element={<ForOrganizers />} />
+            
+            {/* Admin routes */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route 
+              path="/admin" 
+              element={
+                <ProtectedRoute requireAdmin>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              } 
+            />
+            
+            {/* Destination routes */}
+            <Route path="/destinations/gtc" element={<SwissAlps />} />
+            <Route path="/destinations/miut" element={<MIUT />} />
+            <Route path="/destinations/vesuvio" element={<Vesuvio />} />
+            <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
+            <Route path="/destinations/transylvania" element={<Transylvania100 />} />
+            <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
+            <Route path="/destinations/black-forest" element={<BlackForest />} />
+            <Route path="/destinations/ribeira-sacra" element={<RibeiraSacra />} />
+            <Route path="/destinations/dolomites" element={<Dolomites />} />
+            <Route path="/destinations/chianti" element={<ChiantiTrail />} />
+            <Route path="/destinations/zugspitz" element={<ZugspitzUltratrail />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

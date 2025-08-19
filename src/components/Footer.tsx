@@ -75,8 +75,14 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="pt-8 border-t border-gray-100">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="text-sm text-gray-500 text-center md:text-left">
-                © {new Date().getFullYear()} Trail Squad ApS. All rights reserved.
+              <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500 text-center md:text-left">
+                <div>© {new Date().getFullYear()} Trail Squad ApS. All rights reserved.</div>
+                <a 
+                  href="/admin/login" 
+                  className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  Admin
+                </a>
               </div>
               {rejsegarantiLogo}
             </div>
