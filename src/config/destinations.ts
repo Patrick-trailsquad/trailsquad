@@ -14,7 +14,15 @@ export const DESTINATIONS: Destination[] = [
     name: 'MIUT Madeira',
     route: '/destinations/miut',
     status: 'completed' as const,
-    date: '2024-04-25',
+    date: '2025-04-25',
+    published: true
+  },
+  {
+    id: 'ribeira-sacra',
+    name: 'Ribeira Sacra',
+    route: '/destinations/ribeira-sacra',
+    status: 'open' as const,
+    date: '2025-10-05',
     published: true
   },
   {
@@ -39,14 +47,6 @@ export const DESTINATIONS: Destination[] = [
     route: '/destinations/transylvania',
     status: 'open' as const,
     date: '2026-09-12',
-    published: true
-  },
-  {
-    id: 'ribeira-sacra',
-    name: 'Ribeira Sacra',
-    route: '/destinations/ribeira-sacra',
-    status: 'open' as const,
-    date: '2025-10-05',
     published: true
   }
 ].filter(destination => destination.published); // Only return published destinations
