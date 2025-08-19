@@ -32,6 +32,9 @@ const journeySteps = [{
   key: 'email_3_sent',
   label: 'Email 3'
 }, {
+  key: 'email_remaining_payment',
+  label: 'Mail (remaining pay req.)'
+}, {
   key: 'paid_remaining_balance',
   label: 'Fully Paid'
 }];
@@ -83,6 +86,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead>Mail (deposit received)</TableHead>
               <TableHead>Info mail (flights, survey, insurance)</TableHead>
               <TableHead>Info mail (training)</TableHead>
+              <TableHead>Mail (remaining pay req.)</TableHead>
               <TableHead>Fully Paid</TableHead>
               <TableHead>Quick Actions</TableHead>
               <TableHead>Actions</TableHead>
