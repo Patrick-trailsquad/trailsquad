@@ -18,19 +18,19 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'transylvania',
-    name: 'Transylvania 100',
-    route: '/destinations/transylvania',
-    status: 'open' as const,
-    date: '2025-05-12',
-    published: true
-  },
-  {
     id: 'ribeira-sacra',
     name: 'Ribeira Sacra',
     route: '/destinations/ribeira-sacra',
     status: 'open' as const,
     date: '2025-10-05',
+    published: true
+  },
+  {
+    id: 'transylvania',
+    name: 'Transylvania 100',
+    route: '/destinations/transylvania',
+    status: 'open' as const,
+    date: '2026-05-12',
     published: true
   },
   {
