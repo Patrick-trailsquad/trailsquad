@@ -2,29 +2,22 @@ import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useParticipants } from '@/hooks/useParticipants';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { ParticipantsTable } from '@/components/admin/ParticipantsTable';
 import { AddParticipantDialog } from '@/components/admin/AddParticipantDialog';
-import { LogOut, Plus, Search, Users } from 'lucide-react';
+import { LogOut, Plus, Users } from 'lucide-react';
 import { DESTINATIONS, type Destination } from '@/config/destinations';
 
 const AdminDashboard = () => {
   const { signOut, user } = useAuth();
-  const [searchTerm, setSearchTerm] = useState('');
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(DESTINATIONS[0]?.id || 'gtc');
 
   // Get participants for the active destination
   const activeDestination = DESTINATIONS.find(d => d.id === activeTab);
   const { participants, loading, addParticipant, updateParticipant, deleteParticipant } = useParticipants(activeDestination?.name);
-
-  const filteredParticipants = participants.filter(participant =>
-    participant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    participant.email.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   const getStatusColor = (status: Destination['status']) => {
     switch (status) {
@@ -69,11 +62,6 @@ const AdminDashboard = () => {
 
   const DestinationContent = ({ destination }: { destination: Destination }) => {
     const { participants: destinationParticipants, loading: destinationLoading, addParticipant: addDestinationParticipant, updateParticipant: updateDestinationParticipant, deleteParticipant: deleteDestinationParticipant } = useParticipants(destination.name);
-    
-    const filteredDestinationParticipants = destinationParticipants.filter(participant =>
-      participant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      participant.email.toLowerCase().includes(searchTerm.toLowerCase())
-    );
 
     return (
       <div className="space-y-6">
@@ -127,7 +115,7 @@ const AdminDashboard = () => {
           <EmptyState destinationName={destination.name} />
         ) : (
           <ParticipantsTable
-            participants={filteredDestinationParticipants}
+            participants={destinationParticipants}
             loading={destinationLoading}
             onUpdate={updateDestinationParticipant}
             onDelete={deleteDestinationParticipant}
@@ -193,15 +181,6 @@ const AdminDashboard = () => {
 
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Search participants..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-9"
-              />
-            </div>
             <Button onClick={() => setIsAddDialogOpen(true)}>
               <Plus className="h-4 w-4 mr-2" />
               Add Participant
