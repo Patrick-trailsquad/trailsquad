@@ -14,6 +14,66 @@ export type Database = {
   }
   public: {
     Tables: {
+      participants: {
+        Row: {
+          created_at: string
+          email: string
+          email_1_sent: boolean
+          email_2_sent: boolean
+          email_3_sent: boolean
+          id: string
+          name: string
+          paid_deposit: boolean
+          paid_remaining_balance: boolean
+          received_quote: boolean
+          requested_quote: boolean
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          email_1_sent?: boolean
+          email_2_sent?: boolean
+          email_3_sent?: boolean
+          id?: string
+          name: string
+          paid_deposit?: boolean
+          paid_remaining_balance?: boolean
+          received_quote?: boolean
+          requested_quote?: boolean
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          email_1_sent?: boolean
+          email_2_sent?: boolean
+          email_3_sent?: boolean
+          id?: string
+          name?: string
+          paid_deposit?: boolean
+          paid_remaining_balance?: boolean
+          received_quote?: boolean
+          requested_quote?: boolean
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          id: string
+          role: string
+        }
+        Insert: {
+          created_at?: string
+          id: string
+          role?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: string
+        }
+        Relationships: []
+      }
       testimonials: {
         Row: {
           created_at: string
@@ -64,7 +124,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: {
+        Args: Record<PropertyKey, never>
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never
