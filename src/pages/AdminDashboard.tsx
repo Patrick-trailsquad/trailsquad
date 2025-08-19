@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { ParticipantsTable } from '@/components/admin/ParticipantsTable';
 import { AddParticipantDialog } from '@/components/admin/AddParticipantDialog';
-import { LogOut, Plus, Search } from 'lucide-react';
+import { LogOut, Plus, Search, Users } from 'lucide-react';
 import { DESTINATIONS, type Destination } from '@/config/destinations';
 
 const AdminDashboard = () => {
@@ -39,6 +39,16 @@ const AdminDashboard = () => {
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200';
     }
+  };
+
+  const ParticipantCounter = ({ destinationName }: { destinationName: string }) => {
+    const { participants } = useParticipants(destinationName);
+    return (
+      <Badge variant="secondary" className="ml-2">
+        <Users className="h-3 w-3 mr-1" />
+        {participants.length}
+      </Badge>
+    );
   };
 
   const EmptyState = ({ destinationName }: { destinationName: string }) => (
@@ -175,11 +185,7 @@ const AdminDashboard = () => {
                   >
                     {destination.status}
                   </Badge>
-                  {destination.date && (
-                    <span className="text-xs text-muted-foreground">
-                      {new Date(destination.date).toLocaleDateString()}
-                    </span>
-                  )}
+                  <ParticipantCounter destinationName={destination.name} />
                 </button>
               ))}
             </div>

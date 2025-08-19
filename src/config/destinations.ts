@@ -3,7 +3,6 @@ export interface Destination {
   name: string;
   route: string;
   status: 'upcoming' | 'open' | 'closed' | 'completed';
-  date?: string;
   published: boolean;
 }
 
@@ -14,7 +13,6 @@ export const DESTINATIONS: Destination[] = [
     name: 'MIUT Madeira',
     route: '/destinations/miut',
     status: 'completed' as const,
-    date: '2025-04-25',
     published: true
   },
   {
@@ -22,7 +20,6 @@ export const DESTINATIONS: Destination[] = [
     name: 'Ribeira Sacra',
     route: '/destinations/ribeira-sacra',
     status: 'open' as const,
-    date: '2025-10-05',
     published: true
   },
   {
@@ -30,7 +27,6 @@ export const DESTINATIONS: Destination[] = [
     name: 'Transylvania 100',
     route: '/destinations/transylvania',
     status: 'open' as const,
-    date: '2026-05-12',
     published: true
   },
   {
@@ -38,7 +34,6 @@ export const DESTINATIONS: Destination[] = [
     name: 'Zugspitz Ultratrail',
     route: '/destinations/zugspitz',
     status: 'open' as const,
-    date: '2026-06-28',
     published: true
   },
   {
@@ -46,7 +41,6 @@ export const DESTINATIONS: Destination[] = [
     name: 'Gran Trail Courmayeur',
     route: '/destinations/gtc',
     status: 'upcoming' as const,
-    date: '2026-07-15',
     published: true
   }
 ].filter(destination => destination.published); // Only return published destinations
