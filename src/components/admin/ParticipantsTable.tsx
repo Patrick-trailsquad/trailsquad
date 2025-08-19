@@ -81,7 +81,8 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead>Quote Received</TableHead>
               <TableHead>Email 1</TableHead>
               <TableHead>Deposit paid</TableHead>
-              <TableHead>Email 2</TableHead>
+              <TableHead>Info (flights, survey, insurance)
+            </TableHead>
               <TableHead>Email 3</TableHead>
               <TableHead>Fully Paid</TableHead>
               <TableHead>Quick Actions</TableHead>
