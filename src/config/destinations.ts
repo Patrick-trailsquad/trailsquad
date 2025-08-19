@@ -10,14 +10,6 @@ export interface Destination {
 // Only include destinations that have published pages on the site
 export const DESTINATIONS: Destination[] = [
   {
-    id: 'gtc',
-    name: 'GTC Swiss Alps',
-    route: '/destinations/gtc',
-    status: 'upcoming' as const,
-    date: '2025-07-15',
-    published: true
-  },
-  {
     id: 'miut',
     name: 'MIUT Madeira',
     route: '/destinations/miut',
@@ -26,11 +18,19 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'ribeira-sacra',
-    name: 'Ribeira Sacra',
-    route: '/destinations/ribeira-sacra',
+    id: 'zugspitz',
+    name: 'Zugspitz Ultratrail',
+    route: '/destinations/zugspitz',
     status: 'open' as const,
-    date: '2025-10-05',
+    date: '2025-06-28',
+    published: true
+  },
+  {
+    id: 'gtc',
+    name: 'Gran Trail Courmayeur',
+    route: '/destinations/gtc',
+    status: 'upcoming' as const,
+    date: '2025-07-15',
     published: true
   },
   {
@@ -42,11 +42,11 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'zugspitz',
-    name: 'Zugspitz Ultratrail',
-    route: '/destinations/zugspitz',
+    id: 'ribeira-sacra',
+    name: 'Ribeira Sacra',
+    route: '/destinations/ribeira-sacra',
     status: 'open' as const,
-    date: '2025-06-28',
+    date: '2025-10-05',
     published: true
   }
 ].filter(destination => destination.published); // Only return published destinations
