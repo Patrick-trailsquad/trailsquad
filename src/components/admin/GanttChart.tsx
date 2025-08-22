@@ -285,11 +285,11 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
               <div key={typeConfig.value} className="grid grid-cols-12 gap-1 mb-3 min-h-[80px]">
                 {/* Left sidebar with items */}
                 <div className={`col-span-3 ${typeConfig.lightColor} rounded-lg p-4 space-y-2`}>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-start justify-between">
                     <h4 className={`font-semibold text-sm ${typeConfig.textColor}`}>
                       {typeConfig.label}
                     </h4>
-                    <div className="flex gap-1">
+                    <div className="flex flex-col gap-1">
                       <Button
                         variant="ghost"
                         size="sm"
@@ -298,12 +298,32 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                       >
                         <Plus className="h-3 w-3" />
                       </Button>
+                      {typeItems.length > 0 && (
+                        <>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
+                            onClick={() => setEditingItem(typeItems[0])}
+                          >
+                            <Edit2 className="h-3 w-3" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
+                            onClick={() => handleDeleteItem(typeItems[0].id)}
+                          >
+                            <Trash2 className="h-3 w-3" />
+                          </Button>
+                        </>
+                      )}
                     </div>
                   </div>
                    <div className="space-y-1">
                      {typeItems.map(item => (
                        <div key={item.id} className="group">
-                         <div className={`text-xs ${typeConfig.textColor} space-y-1`}>
+                         <div className={`text-xs ${typeConfig.textColor}`}>
                            {item.description && (
                              <Tooltip>
                                <TooltipTrigger asChild>
@@ -316,24 +336,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                                </TooltipContent>
                              </Tooltip>
                            )}
-                           <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                             <Button
-                               variant="ghost"
-                               size="sm"
-                               className="h-6 w-6 p-0"
-                               onClick={() => setEditingItem(item)}
-                             >
-                               <Edit2 className="h-3 w-3" />
-                             </Button>
-                             <Button
-                               variant="ghost"
-                               size="sm"
-                               className="h-6 w-6 p-0"
-                               onClick={() => handleDeleteItem(item.id)}
-                             >
-                               <Trash2 className="h-3 w-3" />
-                             </Button>
-                           </div>
                          </div>
                        </div>
                      ))}
