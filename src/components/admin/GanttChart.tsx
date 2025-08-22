@@ -285,63 +285,63 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
               <div key={typeConfig.value} className="grid grid-cols-12 gap-1 mb-3 min-h-[80px]">
                 {/* Left sidebar with items */}
                 <div className={`col-span-3 ${typeConfig.lightColor} rounded-lg p-4 space-y-2`}>
-                  <div className="flex items-start justify-between mb-2">
-                    <h4 className={`font-semibold text-sm ${typeConfig.textColor}`}>
-                      {typeConfig.label}
-                    </h4>
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1 pr-2">
+                      <h4 className={`font-semibold text-sm ${typeConfig.textColor} mb-2`}>
+                        {typeConfig.label}
+                      </h4>
+                      <div className="space-y-1">
+                        {typeItems.map(item => (
+                          <div key={item.id} className="group">
+                            <div className={`text-xs ${typeConfig.textColor}`}>
+                              {item.description && (
+                                <Tooltip>
+                                  <TooltipTrigger asChild>
+                                    <div className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-help">
+                                      {item.description}
+                                    </div>
+                                  </TooltipTrigger>
+                                  <TooltipContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg z-50">
+                                    <p className="max-w-xs text-sm whitespace-pre-wrap">{item.description}</p>
+                                  </TooltipContent>
+                                </Tooltip>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-1 ml-auto">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
+                        onClick={() => setIsAddDialogOpen(true)}
+                      >
+                        <Plus className="h-3 w-3" />
+                      </Button>
+                      {typeItems.length > 0 && (
+                        <>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
+                            onClick={() => setEditingItem(typeItems[0])}
+                          >
+                            <Edit2 className="h-3 w-3" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
+                            onClick={() => handleDeleteItem(typeItems[0].id)}
+                          >
+                            <Trash2 className="h-3 w-3" />
+                          </Button>
+                        </>
+                      )}
+                    </div>
                   </div>
-                   <div className="flex items-start gap-2">
-                     <div className="flex-1 space-y-1 max-w-[60%]">
-                       {typeItems.map(item => (
-                         <div key={item.id} className="group">
-                           <div className={`text-xs ${typeConfig.textColor}`}>
-                             {item.description && (
-                               <Tooltip>
-                                 <TooltipTrigger asChild>
-                                   <div className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-help">
-                                     {item.description}
-                                   </div>
-                                 </TooltipTrigger>
-                                 <TooltipContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg z-50">
-                                   <p className="max-w-xs text-sm whitespace-pre-wrap">{item.description}</p>
-                                 </TooltipContent>
-                               </Tooltip>
-                             )}
-                           </div>
-                         </div>
-                       ))}
-                     </div>
-                     <div className="flex flex-col gap-1">
-                       <Button
-                         variant="ghost"
-                         size="sm"
-                         className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
-                         onClick={() => setIsAddDialogOpen(true)}
-                       >
-                         <Plus className="h-3 w-3" />
-                       </Button>
-                       {typeItems.length > 0 && (
-                         <>
-                           <Button
-                             variant="ghost"
-                             size="sm"
-                             className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
-                             onClick={() => setEditingItem(typeItems[0])}
-                           >
-                             <Edit2 className="h-3 w-3" />
-                           </Button>
-                           <Button
-                             variant="ghost"
-                             size="sm"
-                             className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
-                             onClick={() => handleDeleteItem(typeItems[0].id)}
-                           >
-                             <Trash2 className="h-3 w-3" />
-                           </Button>
-                         </>
-                       )}
-                     </div>
-                   </div>
                 </div>
 
                 {/* Timeline bars */}
