@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 import { Calendar, Plus, Edit2, Trash2, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { format, startOfMonth, endOfMonth, addMonths, subMonths, eachWeekOfInterval, startOfWeek, endOfWeek, differenceInDays, isWithinInterval, addDays } from 'date-fns';
 import { useTimelineItems, type TimelineItem } from '@/hooks/useTimelineItems';
 
@@ -200,7 +201,8 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
   const groupedItems = getItemsByType();
 
   return (
-    <Card className="mt-6">
+    <TooltipProvider>
+      <Card className="mt-6">
       <CardHeader>
         <div className="flex items-center justify-between">
           <div>
@@ -284,7 +286,16 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                       <div key={item.id} className="flex items-center justify-between group">
                         <div className={`text-xs ${typeConfig.textColor} truncate flex-1`}>
                           {item.description && (
-                            <div className="text-xs opacity-75 mt-1 group-hover:opacity-100 transition-opacity">{item.description}</div>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <div className="text-xs opacity-75 mt-1 group-hover:opacity-100 transition-opacity truncate cursor-help">
+                                  {item.description}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="max-w-xs text-sm">{item.description}</p>
+                              </TooltipContent>
+                            </Tooltip>
                           )}
                         </div>
                         <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -361,5 +372,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
         )}
       </CardContent>
     </Card>
+    </TooltipProvider>
   );
 };
