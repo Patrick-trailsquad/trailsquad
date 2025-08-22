@@ -337,17 +337,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                           <Button
                             variant="ghost"
                             size="sm"
-                            className={`h-6 w-6 p-0 opacity-60 hover:opacity-100 transition-colors ${
-                              typeItems[0].completed ? 'text-green-600' : ''
-                            }`}
-                            onClick={() => toggleCompletion(typeItems[0].id)}
-                            title={typeItems[0].completed ? 'Mark as incomplete' : 'Mark as complete'}
-                          >
-                            <Check className="h-3 w-3" />
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="sm"
                             className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
                             onClick={() => setEditingItem(typeItems[0])}
                           >
@@ -383,7 +372,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                     return (
                       <div
                         key={item.id}
-                        className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1 transition-all duration-300 ${
+                        className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1 transition-all duration-300 cursor-pointer hover:scale-105 ${
                           item.completed ? 'opacity-50 line-through' : ''
                         }`}
                         style={{
@@ -391,9 +380,11 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                           width: '80px',
                           top: `${currentMonthItems.indexOf(item) * 36}px`
                         }}
-                        title={`${item.title} - ${format(item.date, 'MMM dd')} ${item.completed ? '(Completed)' : ''}`}
+                        title={`${item.title} - ${format(item.date, 'MMM dd')} ${item.completed ? '(Completed)' : ''} - Click to toggle`}
+                        onClick={() => toggleCompletion(item.id)}
                       >
-                        <span className="truncate px-2 relative">
+                        <span className="truncate px-2 relative flex items-center gap-1">
+                          {item.completed && <Check className="h-3 w-3 text-white" />}
                           {format(item.date, 'dd/MM')}
                           {item.completed && (
                             <div className="absolute inset-0 flex items-center justify-center">
