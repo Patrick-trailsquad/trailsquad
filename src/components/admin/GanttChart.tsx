@@ -289,45 +289,55 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                     <h4 className={`font-semibold text-sm ${typeConfig.textColor}`}>
                       {typeConfig.label}
                     </h4>
+                    <div className="flex gap-1">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
+                        onClick={() => setIsAddDialogOpen(true)}
+                      >
+                        <Plus className="h-3 w-3" />
+                      </Button>
+                    </div>
                   </div>
-                  <div className="space-y-1">
-                    {typeItems.map(item => (
-                      <div key={item.id} className="flex items-center justify-between group">
-                        <div className={`text-xs ${typeConfig.textColor} truncate flex-1`}>
-                          {item.description && (
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <div className="text-xs opacity-75 mt-1 group-hover:opacity-100 transition-opacity truncate cursor-help">
-                                  {item.description}
-                                </div>
-                              </TooltipTrigger>
-                              <TooltipContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg z-50">
-                                <p className="max-w-xs text-sm whitespace-pre-wrap">{item.description}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          )}
-                        </div>
-                        <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-6 w-6 p-0"
-                            onClick={() => setEditingItem(item)}
-                          >
-                            <Edit2 className="h-3 w-3" />
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-6 w-6 p-0"
-                            onClick={() => handleDeleteItem(item.id)}
-                          >
-                            <Trash2 className="h-3 w-3" />
-                          </Button>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                   <div className="space-y-1">
+                     {typeItems.map(item => (
+                       <div key={item.id} className="group">
+                         <div className={`text-xs ${typeConfig.textColor} space-y-1`}>
+                           {item.description && (
+                             <Tooltip>
+                               <TooltipTrigger asChild>
+                                 <div className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-help">
+                                   {item.description}
+                                 </div>
+                               </TooltipTrigger>
+                               <TooltipContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg z-50">
+                                 <p className="max-w-xs text-sm whitespace-pre-wrap">{item.description}</p>
+                               </TooltipContent>
+                             </Tooltip>
+                           )}
+                           <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                             <Button
+                               variant="ghost"
+                               size="sm"
+                               className="h-6 w-6 p-0"
+                               onClick={() => setEditingItem(item)}
+                             >
+                               <Edit2 className="h-3 w-3" />
+                             </Button>
+                             <Button
+                               variant="ghost"
+                               size="sm"
+                               className="h-6 w-6 p-0"
+                               onClick={() => handleDeleteItem(item.id)}
+                             >
+                               <Trash2 className="h-3 w-3" />
+                             </Button>
+                           </div>
+                         </div>
+                       </div>
+                     ))}
+                   </div>
                 </div>
 
                 {/* Timeline bars */}
