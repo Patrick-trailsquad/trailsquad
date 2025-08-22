@@ -15,7 +15,13 @@ import { DESTINATIONS, type Destination } from '@/config/destinations';
 const AdminDashboard = () => {
   const { signOut, user } = useAuth();
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(DESTINATIONS[0]?.id || 'gtc');
+  const [activeTab, setActiveTab] = useState(() => {
+    // Find the next upcoming trip (priority: open > upcoming > others)
+    const upcomingTrip = DESTINATIONS.find(d => d.status === 'open') || 
+                        DESTINATIONS.find(d => d.status === 'upcoming') ||
+                        DESTINATIONS[0];
+    return upcomingTrip?.id || 'gtc';
+  });
 
   // Get participants for the active destination
   const activeDestination = DESTINATIONS.find(d => d.id === activeTab);
