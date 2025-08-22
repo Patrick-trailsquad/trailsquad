@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
-import { Calendar, Plus, Edit2, Trash2, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { Calendar, Plus, Edit2, Trash2, ChevronLeft, ChevronRight, Loader2, Check } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { format, startOfMonth, endOfMonth, addMonths, subMonths, eachWeekOfInterval, startOfWeek, endOfWeek, differenceInDays, isWithinInterval, addDays, isToday } from 'date-fns';
 import { useTimelineItems, type TimelineItem } from '@/hooks/useTimelineItems';
@@ -26,7 +26,7 @@ const ITEM_TYPES = [
 export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
   console.log('GanttChart rendered with destinationName:', destinationName);
   
-  const { items, loading, addItem, updateItem, deleteItem } = useTimelineItems(destinationName);
+  const { items, loading, addItem, updateItem, deleteItem, toggleCompletion } = useTimelineItems(destinationName);
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<TimelineItem | null>(null);
@@ -290,16 +290,22 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
             return (
               <div key={typeConfig.value} className="grid grid-cols-12 gap-1 mb-3 min-h-[80px]">
                 {/* Left sidebar with items */}
-                <div className={`col-span-3 ${typeConfig.lightColor} rounded-lg p-4 space-y-2`}>
+                <div className={`col-span-3 ${typeConfig.lightColor} rounded-lg p-4 space-y-2 transition-all duration-300 ${
+                  typeItems.every(item => item.completed) ? 'opacity-50' : ''
+                }`}>
                   <div className="flex items-start justify-between">
                     <div className="flex-1 pr-2">
-                      <h4 className={`font-semibold text-sm ${typeConfig.textColor} mb-2`}>
+                      <h4 className={`font-semibold text-sm ${typeConfig.textColor} mb-2 ${
+                        typeItems.every(item => item.completed) ? 'line-through' : ''
+                      }`}>
                         {typeConfig.label}
                       </h4>
                       <div className="space-y-1">
                         {typeItems.map(item => (
                           <div key={item.id} className="group">
-                            <div className={`text-xs ${typeConfig.textColor}`}>
+                            <div className={`text-xs ${typeConfig.textColor} transition-all duration-300 ${
+                              item.completed ? 'line-through opacity-60' : ''
+                            }`}>
                               {item.description && (
                                 <Tooltip>
                                   <TooltipTrigger asChild>
@@ -328,6 +334,17 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                       </Button>
                       {typeItems.length > 0 && (
                         <>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className={`h-6 w-6 p-0 opacity-60 hover:opacity-100 transition-colors ${
+                              typeItems[0].completed ? 'text-green-600' : ''
+                            }`}
+                            onClick={() => toggleCompletion(typeItems[0].id)}
+                            title={typeItems[0].completed ? 'Mark as incomplete' : 'Mark as complete'}
+                          >
+                            <Check className="h-3 w-3" />
+                          </Button>
                           <Button
                             variant="ghost"
                             size="sm"
@@ -366,16 +383,23 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                     return (
                       <div
                         key={item.id}
-                        className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1`}
+                        className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1 transition-all duration-300 ${
+                          item.completed ? 'opacity-50 line-through' : ''
+                        }`}
                         style={{
                           left: `${Math.max(0, Math.min(position, 85))}%`,
                           width: '80px',
                           top: `${currentMonthItems.indexOf(item) * 36}px`
                         }}
-                        title={`${item.title} - ${format(item.date, 'MMM dd')}`}
+                        title={`${item.title} - ${format(item.date, 'MMM dd')} ${item.completed ? '(Completed)' : ''}`}
                       >
-                        <span className="truncate px-2">
+                        <span className="truncate px-2 relative">
                           {format(item.date, 'dd/MM')}
+                          {item.completed && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="w-full h-0.5 bg-white/80"></div>
+                            </div>
+                          )}
                         </span>
                       </div>
                     );

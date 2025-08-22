@@ -13,6 +13,7 @@ export interface TimelineItem {
   created_by?: string;
   created_at: Date;
   updated_at: Date;
+  completed: boolean;
 }
 
 interface AddTimelineItemData {
@@ -167,6 +168,43 @@ export const useTimelineItems = (destination?: string) => {
     }
   };
 
+  const toggleCompletion = async (id: string) => {
+    try {
+      const item = items.find(i => i.id === id);
+      if (!item) return;
+
+      const { data, error } = await supabase
+        .from('timeline_items')
+        .update({ completed: !item.completed })
+        .eq('id', id)
+        .select()
+        .single();
+
+      if (error) {
+        console.error('Error toggling completion:', error);
+        toast.error('Failed to update completion status');
+        return;
+      }
+
+      const updatedItem: TimelineItem = {
+        ...data,
+        date: new Date(data.date),
+        created_at: new Date(data.created_at),
+        updated_at: new Date(data.updated_at),
+        type: data.type as TimelineItem['type'],
+      };
+
+      setItems(prev => 
+        prev.map(item => item.id === id ? updatedItem : item)
+           .sort((a, b) => a.date.getTime() - b.date.getTime())
+      );
+      toast.success(`Item marked as ${!item.completed ? 'completed' : 'incomplete'}`);
+    } catch (error) {
+      console.error('Error in toggleCompletion:', error);
+      toast.error('Failed to update completion status');
+    }
+  };
+
   useEffect(() => {
     fetchItems();
   }, [destination]);
@@ -177,6 +215,7 @@ export const useTimelineItems = (destination?: string) => {
     addItem,
     updateItem,
     deleteItem,
+    toggleCompletion,
     refetch: fetchItems,
   };
 };

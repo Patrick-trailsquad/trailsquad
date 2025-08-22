@@ -133,6 +133,7 @@ export type Database = {
       }
       timeline_items: {
         Row: {
+          completed: boolean
           created_at: string
           created_by: string | null
           date: string
@@ -144,6 +145,7 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          completed?: boolean
           created_at?: string
           created_by?: string | null
           date: string
@@ -155,6 +157,7 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          completed?: boolean
           created_at?: string
           created_by?: string | null
           date?: string
