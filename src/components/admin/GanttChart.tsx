@@ -15,11 +15,11 @@ interface GanttChartProps {
 }
 
 const ITEM_TYPES = [
-  { value: 'registration', label: 'Registration', color: 'bg-emerald-500', lightColor: 'bg-emerald-100', textColor: 'text-emerald-900' },
-  { value: 'payment', label: 'Payment', color: 'bg-amber-500', lightColor: 'bg-amber-100', textColor: 'text-amber-900' },
-  { value: 'event', label: 'Event', color: 'bg-blue-500', lightColor: 'bg-blue-100', textColor: 'text-blue-900' },
-  { value: 'deadline', label: 'Deadline', color: 'bg-red-500', lightColor: 'bg-red-100', textColor: 'text-red-900' },
-  { value: 'milestone', label: 'Milestone', color: 'bg-purple-500', lightColor: 'bg-purple-100', textColor: 'text-purple-900' },
+  { value: 'registration', label: 'Flybilletter', color: 'bg-emerald-500', lightColor: 'bg-emerald-100', textColor: 'text-emerald-900' },
+  { value: 'payment', label: 'Hotelværelser', color: 'bg-amber-500', lightColor: 'bg-amber-100', textColor: 'text-amber-900' },
+  { value: 'event', label: 'Race billetter', color: 'bg-blue-500', lightColor: 'bg-blue-100', textColor: 'text-blue-900' },
+  { value: 'deadline', label: 'Airport shuttle', color: 'bg-red-500', lightColor: 'bg-red-100', textColor: 'text-red-900' },
+  { value: 'milestone', label: 'Deltagerinfo', color: 'bg-purple-500', lightColor: 'bg-purple-100', textColor: 'text-purple-900' },
 ];
 
 export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
