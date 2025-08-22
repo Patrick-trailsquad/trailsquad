@@ -356,7 +356,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                         title={`${item.title} - ${format(item.date, 'MMM dd')}`}
                       >
                         <span className="truncate px-2">
-                          {item.title} ({format(item.date, 'MM/dd')})
+                          {format(item.date, 'dd/MM')}
                         </span>
                       </div>
                     );
