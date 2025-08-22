@@ -289,7 +289,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                     <h4 className={`font-semibold text-sm ${typeConfig.textColor}`}>
                       {typeConfig.label}
                     </h4>
-                    <div className={`w-3 h-3 rounded-full ${typeConfig.color}`} />
                   </div>
                   <div className="space-y-1">
                     {typeItems.map(item => (
