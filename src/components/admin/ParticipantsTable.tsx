@@ -37,6 +37,9 @@ const journeySteps = [{
 }, {
   key: 'paid_remaining_balance',
   label: 'Fully Paid'
+}, {
+  key: 'race_ticket',
+  label: 'Race ticket'
 }];
 export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
   participants,
@@ -88,6 +91,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead className="text-xs">Info mail (training)</TableHead>
               <TableHead className="text-xs">Mail (remaining pay req.)</TableHead>
               <TableHead className="text-xs">Fully Paid</TableHead>
+              <TableHead className="text-xs">Race ticket</TableHead>
               <TableHead className="text-xs">Quick Actions</TableHead>
               <TableHead className="text-xs">Actions</TableHead>
             </TableRow>
