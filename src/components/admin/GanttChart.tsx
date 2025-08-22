@@ -283,7 +283,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                     {typeItems.map(item => (
                       <div key={item.id} className="flex items-center justify-between group">
                         <div className={`text-xs ${typeConfig.textColor} truncate flex-1`}>
-                          <div className="font-medium">{item.title}</div>
                           {item.description && (
                             <div className="text-xs opacity-75 mt-1">{item.description}</div>
                           )}
