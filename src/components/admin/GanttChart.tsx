@@ -339,9 +339,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                       className="absolute top-0 bottom-0 w-0.5 bg-red-500 z-10 opacity-80"
                       style={{ left: `${Math.max(0, Math.min(todayPosition, 95))}%` }}
                     >
-                      <div className="absolute -top-2 -left-3 bg-red-500 text-white text-xs px-1 py-0.5 rounded text-center whitespace-nowrap">
-                        Today
-                      </div>
                     </div>
                   )}
                   
