@@ -126,7 +126,13 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
           description: formData.description
         });
       } else {
-        await handleAddItem();
+        await addItem({
+          destination: destinationName,
+          title: formData.title,
+          date: new Date(formData.date),
+          type: formData.type,
+          description: formData.description
+        });
       }
       onClose();
     };
