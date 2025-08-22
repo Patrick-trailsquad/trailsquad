@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 import { Calendar, Plus, Edit2, Trash2, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { format, startOfMonth, endOfMonth, addMonths, subMonths, eachWeekOfInterval, startOfWeek, endOfWeek, differenceInDays, isWithinInterval, addDays } from 'date-fns';
+import { format, startOfMonth, endOfMonth, addMonths, subMonths, eachWeekOfInterval, startOfWeek, endOfWeek, differenceInDays, isWithinInterval, addDays, isToday } from 'date-fns';
 import { useTimelineItems, type TimelineItem } from '@/hooks/useTimelineItems';
 
 interface GanttChartProps {
@@ -62,6 +62,16 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
     const totalDaysInMonth = endOfMonth(currentMonth).getDate();
     return (dayOfMonth / totalDaysInMonth) * 100;
   };
+
+  const getTodayPosition = () => {
+    const today = new Date();
+    if (!isWithinInterval(today, { start: monthStart, end: monthEnd })) {
+      return null; // Today is not in the current month
+    }
+    return calculateBarPosition(today);
+  };
+
+  const todayPosition = getTodayPosition();
 
   const isItemInCurrentMonth = (item: TimelineItem) => {
     return isWithinInterval(item.date, { start: monthStart, end: monthEnd });
@@ -323,6 +333,18 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
 
                 {/* Timeline bars */}
                 <div className="col-span-8 relative py-4">
+                  {/* Today indicator line */}
+                  {todayPosition !== null && (
+                    <div
+                      className="absolute top-0 bottom-0 w-0.5 bg-red-500 z-10 opacity-80"
+                      style={{ left: `${Math.max(0, Math.min(todayPosition, 95))}%` }}
+                    >
+                      <div className="absolute -top-2 -left-3 bg-red-500 text-white text-xs px-1 py-0.5 rounded text-center whitespace-nowrap">
+                        Today
+                      </div>
+                    </div>
+                  )}
+                  
                   {currentMonthItems.map(item => {
                     const position = calculateBarPosition(item.date);
                     return (
