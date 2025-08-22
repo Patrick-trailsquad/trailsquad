@@ -23,6 +23,8 @@ const ITEM_TYPES = [
 ];
 
 export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
+  console.log('GanttChart rendered with destinationName:', destinationName);
+  
   const { items, loading, addItem, updateItem, deleteItem } = useTimelineItems(destinationName);
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);

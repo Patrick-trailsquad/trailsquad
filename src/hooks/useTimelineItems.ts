@@ -32,6 +32,7 @@ export const useTimelineItems = (destination?: string) => {
     try {
       setLoading(true);
       console.log('Fetching timeline items for destination:', destination);
+      console.log('User authenticated:', !!user);
       
       let query = supabase
         .from('timeline_items')
