@@ -26,6 +26,7 @@ export type Database = {
           name: string
           paid_deposit: boolean
           paid_remaining_balance: boolean
+          race_ticket: boolean
           received_quote: boolean
           requested_quote: boolean
           trail: string
@@ -42,6 +43,7 @@ export type Database = {
           name: string
           paid_deposit?: boolean
           paid_remaining_balance?: boolean
+          race_ticket?: boolean
           received_quote?: boolean
           requested_quote?: boolean
           trail?: string
@@ -58,6 +60,7 @@ export type Database = {
           name?: string
           paid_deposit?: boolean
           paid_remaining_balance?: boolean
+          race_ticket?: boolean
           received_quote?: boolean
           requested_quote?: boolean
           trail?: string
