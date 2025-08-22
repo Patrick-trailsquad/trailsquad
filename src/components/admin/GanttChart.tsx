@@ -6,8 +6,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
-import { Calendar, Plus, Edit2, Trash2, Eye, EyeOff, Loader2 } from 'lucide-react';
-import { format, differenceInDays, startOfMonth, endOfMonth, addMonths, subMonths } from 'date-fns';
+import { Calendar, Plus, Edit2, Trash2, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { format, startOfMonth, endOfMonth, addMonths, subMonths, eachWeekOfInterval, startOfWeek, endOfWeek, differenceInDays, isWithinInterval, addDays } from 'date-fns';
 import { useTimelineItems, type TimelineItem } from '@/hooks/useTimelineItems';
 
 interface GanttChartProps {
@@ -15,11 +15,11 @@ interface GanttChartProps {
 }
 
 const ITEM_TYPES = [
-  { value: 'registration', label: 'Registration', color: 'bg-blue-500' },
-  { value: 'payment', label: 'Payment', color: 'bg-yellow-500' },
-  { value: 'event', label: 'Event', color: 'bg-green-500' },
-  { value: 'deadline', label: 'Deadline', color: 'bg-red-500' },
-  { value: 'milestone', label: 'Milestone', color: 'bg-purple-500' },
+  { value: 'registration', label: 'Registration', color: 'bg-emerald-500', lightColor: 'bg-emerald-100', textColor: 'text-emerald-900' },
+  { value: 'payment', label: 'Payment', color: 'bg-amber-500', lightColor: 'bg-amber-100', textColor: 'text-amber-900' },
+  { value: 'event', label: 'Event', color: 'bg-blue-500', lightColor: 'bg-blue-100', textColor: 'text-blue-900' },
+  { value: 'deadline', label: 'Deadline', color: 'bg-red-500', lightColor: 'bg-red-100', textColor: 'text-red-900' },
+  { value: 'milestone', label: 'Milestone', color: 'bg-purple-500', lightColor: 'bg-purple-100', textColor: 'text-purple-900' },
 ];
 
 export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
@@ -29,7 +29,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<TimelineItem | null>(null);
-  const [showAllItems, setShowAllItems] = useState(true);
   const [newItem, setNewItem] = useState({
     title: '',
     date: format(new Date(), 'yyyy-MM-dd'),
@@ -39,16 +38,32 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
 
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(currentMonth);
+  const weeks = eachWeekOfInterval({ start: monthStart, end: monthEnd }, { weekStartsOn: 1 });
 
-  const getItemsForMonth = () => {
-    return items.filter(item => {
-      const itemDate = new Date(item.date);
-      return itemDate >= monthStart && itemDate <= monthEnd;
-    });
+  const getItemsByType = () => {
+    const grouped = items.reduce((acc, item) => {
+      if (!acc[item.type]) {
+        acc[item.type] = [];
+      }
+      acc[item.type].push(item);
+      return acc;
+    }, {} as Record<TimelineItem['type'], TimelineItem[]>);
+    
+    return grouped;
   };
 
   const getItemColor = (type: TimelineItem['type']) => {
-    return ITEM_TYPES.find(t => t.value === type)?.color || 'bg-gray-500';
+    return ITEM_TYPES.find(t => t.value === type) || ITEM_TYPES[0];
+  };
+
+  const calculateBarPosition = (date: Date) => {
+    const dayOfMonth = date.getDate();
+    const totalDaysInMonth = endOfMonth(currentMonth).getDate();
+    return (dayOfMonth / totalDaysInMonth) * 100;
+  };
+
+  const isItemInCurrentMonth = (item: TimelineItem) => {
+    return isWithinInterval(item.date, { start: monthStart, end: monthEnd });
   };
 
   const handleAddItem = async () => {
@@ -169,6 +184,21 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
     );
   };
 
+  if (loading) {
+    return (
+      <Card className="mt-6">
+        <CardContent className="p-8">
+          <div className="text-center">
+            <Loader2 className="h-8 w-8 mx-auto mb-2 animate-spin" />
+            <p className="text-muted-foreground">Loading timeline...</p>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  const groupedItems = getItemsByType();
+
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -179,28 +209,18 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
               Timeline & Deadlines
             </CardTitle>
             <p className="text-sm text-muted-foreground mt-1">
-              Manage important dates for {destinationName}
+              Visual timeline for {destinationName}
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setShowAllItems(!showAllItems)}
-            >
-              {showAllItems ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-              {showAllItems ? 'Hide Past' : 'Show All'}
-            </Button>
-            <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
-              <DialogTrigger asChild>
-                <Button size="sm">
-                  <Plus className="h-4 w-4 mr-2" />
-                  Add Item
-                </Button>
-              </DialogTrigger>
-              <ItemDialog isOpen={isAddDialogOpen} onClose={() => setIsAddDialogOpen(false)} />
-            </Dialog>
-          </div>
+          <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
+            <DialogTrigger asChild>
+              <Button size="sm">
+                <Plus className="h-4 w-4 mr-2" />
+                Add Item
+              </Button>
+            </DialogTrigger>
+            <ItemDialog isOpen={isAddDialogOpen} onClose={() => setIsAddDialogOpen(false)} />
+          </Dialog>
         </div>
       </CardHeader>
       <CardContent>
@@ -211,9 +231,9 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
             size="sm"
             onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
           >
-            ← Previous
+            <ChevronLeft className="h-4 w-4" />
           </Button>
-          <h3 className="text-lg font-semibold">
+          <h3 className="text-xl font-bold uppercase tracking-wider">
             {format(currentMonth, 'MMMM yyyy')}
           </h3>
           <Button
@@ -221,98 +241,113 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
             size="sm"
             onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
           >
-            Next →
+            <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
 
-        {/* Legend */}
-        <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/50 rounded-lg">
-          {ITEM_TYPES.map(type => (
-            <div key={type.value} className="flex items-center gap-2">
-              <div className={`w-3 h-3 rounded-full ${type.color}`} />
-              <span className="text-sm">{type.label}</span>
-            </div>
-          ))}
-        </div>
+        {/* Gantt Chart */}
+        <div className="space-y-1">
+          {/* Header with weeks */}
+          <div className="grid grid-cols-12 gap-1 mb-4">
+            <div className="col-span-3"></div>
+            {weeks.map((week, index) => (
+              <div key={week.toISOString()} className="col-span-2 text-center">
+                <div className={`py-2 px-3 rounded-lg font-semibold text-sm ${
+                  index === 0 ? 'bg-yellow-200 text-yellow-900 border-2 border-yellow-400' : 'bg-yellow-100 text-yellow-800'
+                }`}>
+                  WEEK {index + 1}
+                </div>
+              </div>
+            ))}
+            <div className="col-span-1"></div>
+          </div>
 
-        {/* Timeline View */}
-        <div className="space-y-4">
-          {loading ? (
-            <div className="text-center py-8">
-              <Loader2 className="h-8 w-8 mx-auto mb-2 animate-spin" />
-              <p className="text-muted-foreground">Loading timeline...</p>
-            </div>
-          ) : getItemsForMonth().length === 0 ? (
-            <div className="text-center py-8 text-muted-foreground">
-              <Calendar className="h-12 w-12 mx-auto mb-2 opacity-50" />
-              <p>No items scheduled for this month</p>
-            </div>
-          ) : (
-            getItemsForMonth()
-              .sort((a, b) => a.date.getTime() - b.date.getTime())
-              .map(item => (
-                <div key={item.id} className="flex items-center gap-4 p-4 bg-card border rounded-lg hover:shadow-sm transition-shadow">
-                  <div className={`w-4 h-4 rounded-full ${getItemColor(item.type)} flex-shrink-0`} />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h4 className="font-medium truncate">{item.title}</h4>
-                      <Badge variant="outline" className="text-xs">
-                        {ITEM_TYPES.find(t => t.value === item.type)?.label}
-                      </Badge>
-                    </div>
-                    {item.description && (
-                      <p className="text-sm text-muted-foreground truncate">{item.description}</p>
-                    )}
+          {/* Timeline Rows */}
+          {ITEM_TYPES.map(typeConfig => {
+            const typeItems = groupedItems[typeConfig.value] || [];
+            const currentMonthItems = typeItems.filter(isItemInCurrentMonth);
+            
+            if (typeItems.length === 0) return null;
+
+            return (
+              <div key={typeConfig.value} className="grid grid-cols-12 gap-1 mb-3 min-h-[80px]">
+                {/* Left sidebar with items */}
+                <div className={`col-span-3 ${typeConfig.lightColor} rounded-lg p-4 space-y-2`}>
+                  <div className="flex items-center justify-between">
+                    <h4 className={`font-semibold text-sm ${typeConfig.textColor}`}>
+                      {typeConfig.label}
+                    </h4>
+                    <div className={`w-3 h-3 rounded-full ${typeConfig.color}`} />
                   </div>
-                  <div className="text-right flex-shrink-0">
-                    <div className="text-sm font-medium">{format(item.date, 'MMM dd')}</div>
-                    <div className="text-xs text-muted-foreground">
-                      {differenceInDays(item.date, new Date()) >= 0 
-                        ? `${differenceInDays(item.date, new Date())} days left`
-                        : `${Math.abs(differenceInDays(item.date, new Date()))} days ago`
-                      }
-                    </div>
-                  </div>
-                  <div className="flex gap-1">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setEditingItem(item)}
-                    >
-                      <Edit2 className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => handleDeleteItem(item.id)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
+                  <div className="space-y-1">
+                    {typeItems.map(item => (
+                      <div key={item.id} className="flex items-center justify-between group">
+                        <div className={`text-xs ${typeConfig.textColor} truncate flex-1`}>
+                          {item.title}
+                        </div>
+                        <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-6 w-6 p-0"
+                            onClick={() => setEditingItem(item)}
+                          >
+                            <Edit2 className="h-3 w-3" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-6 w-6 p-0"
+                            onClick={() => handleDeleteItem(item.id)}
+                          >
+                            <Trash2 className="h-3 w-3" />
+                          </Button>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))
+
+                {/* Timeline bars */}
+                <div className="col-span-8 relative py-4">
+                  {currentMonthItems.map(item => {
+                    const position = calculateBarPosition(item.date);
+                    return (
+                      <div
+                        key={item.id}
+                        className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1`}
+                        style={{
+                          left: `${Math.max(0, Math.min(position, 85))}%`,
+                          width: '120px',
+                          top: `${currentMonthItems.indexOf(item) * 36}px`
+                        }}
+                        title={`${item.title} - ${format(item.date, 'MMM dd')}`}
+                      >
+                        <span className="truncate px-2">
+                          {item.title} ({format(item.date, 'MM/dd')})
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="col-span-1"></div>
+              </div>
+            );
+          })}
+
+          {Object.keys(groupedItems).length === 0 && (
+            <div className="text-center py-12 text-muted-foreground">
+              <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
+              <h3 className="text-lg font-semibold mb-2">No timeline items yet</h3>
+              <p className="mb-4">Create your first timeline item to get started</p>
+              <Button onClick={() => setIsAddDialogOpen(true)}>
+                <Plus className="h-4 w-4 mr-2" />
+                Add Timeline Item
+              </Button>
+            </div>
           )}
         </div>
-
-        {/* All Items List */}
-        {showAllItems && (
-          <div className="mt-8 pt-6 border-t">
-            <h4 className="font-medium mb-4">All Timeline Items</h4>
-            <div className="grid gap-2">
-              {items
-                .sort((a, b) => a.date.getTime() - b.date.getTime())
-                .map(item => (
-                  <div key={item.id} className="flex items-center justify-between p-2 text-sm rounded hover:bg-muted/50">
-                    <div className="flex items-center gap-2">
-                      <div className={`w-2 h-2 rounded-full ${getItemColor(item.type)}`} />
-                      <span>{item.title}</span>
-                    </div>
-                    <span className="text-muted-foreground">{format(item.date, 'MMM dd, yyyy')}</span>
-                  </div>
-                ))}
-            </div>
-          </div>
-        )}
 
         {/* Edit Dialog */}
         {editingItem && (
