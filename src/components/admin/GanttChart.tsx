@@ -292,8 +292,8 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                                   {item.description}
                                 </div>
                               </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="max-w-xs text-sm">{item.description}</p>
+                              <TooltipContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg z-50">
+                                <p className="max-w-xs text-sm whitespace-pre-wrap">{item.description}</p>
                               </TooltipContent>
                             </Tooltip>
                           )}
