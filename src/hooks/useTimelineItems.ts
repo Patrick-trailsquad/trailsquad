@@ -31,6 +31,8 @@ export const useTimelineItems = (destination?: string) => {
   const fetchItems = async () => {
     try {
       setLoading(true);
+      console.log('Fetching timeline items for destination:', destination);
+      
       let query = supabase
         .from('timeline_items')
         .select('*')
@@ -41,6 +43,7 @@ export const useTimelineItems = (destination?: string) => {
       }
 
       const { data, error } = await query;
+      console.log('Timeline items query result:', { data, error, destination });
 
       if (error) {
         console.error('Error fetching timeline items:', error);
@@ -56,6 +59,7 @@ export const useTimelineItems = (destination?: string) => {
         type: item.type as TimelineItem['type'], // Cast to proper type
       }));
 
+      console.log('Formatted timeline items:', formattedItems);
       setItems(formattedItems);
     } catch (error) {
       console.error('Error in fetchItems:', error);
