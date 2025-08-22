@@ -350,7 +350,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                         className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1`}
                         style={{
                           left: `${Math.max(0, Math.min(position, 85))}%`,
-                          width: '120px',
+                          width: '80px',
                           top: `${currentMonthItems.indexOf(item) * 36}px`
                         }}
                         title={`${item.title} - ${format(item.date, 'MMM dd')}`}
