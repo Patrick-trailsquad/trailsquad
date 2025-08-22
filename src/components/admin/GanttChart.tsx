@@ -6,17 +6,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
-import { Calendar, Plus, Edit2, Trash2, Eye, EyeOff } from 'lucide-react';
-import { format, isAfter, isBefore, differenceInDays, startOfMonth, endOfMonth, eachDayOfInterval, addMonths, subMonths } from 'date-fns';
-
-interface GanttItem {
-  id: string;
-  title: string;
-  date: Date;
-  type: 'registration' | 'payment' | 'event' | 'deadline' | 'milestone';
-  description?: string;
-  color?: string;
-}
+import { Calendar, Plus, Edit2, Trash2, Eye, EyeOff, Loader2 } from 'lucide-react';
+import { format, differenceInDays, startOfMonth, endOfMonth, addMonths, subMonths } from 'date-fns';
+import { useTimelineItems, type TimelineItem } from '@/hooks/useTimelineItems';
 
 interface GanttChartProps {
   destinationName: string;
@@ -31,40 +23,10 @@ const ITEM_TYPES = [
 ];
 
 export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
-  const [items, setItems] = useState<GanttItem[]>([
-    {
-      id: '1',
-      title: 'Registration Opens',
-      date: new Date(2024, 2, 1),
-      type: 'registration',
-      description: 'Start accepting participants'
-    },
-    {
-      id: '2', 
-      title: 'Early Bird Deadline',
-      date: new Date(2024, 3, 15),
-      type: 'payment',
-      description: 'Last day for early bird pricing'
-    },
-    {
-      id: '3',
-      title: 'Final Registration',
-      date: new Date(2024, 4, 30),
-      type: 'deadline',
-      description: 'Last day to register'
-    },
-    {
-      id: '4',
-      title: 'Event Day',
-      date: new Date(2024, 5, 15),
-      type: 'event',
-      description: 'Race day!'
-    }
-  ]);
-
+  const { items, loading, addItem, updateItem, deleteItem } = useTimelineItems(destinationName);
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
-  const [editingItem, setEditingItem] = useState<GanttItem | null>(null);
+  const [editingItem, setEditingItem] = useState<TimelineItem | null>(null);
   const [showAllItems, setShowAllItems] = useState(true);
   const [newItem, setNewItem] = useState({
     title: '',
@@ -75,7 +37,6 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
 
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(currentMonth);
-  const monthDays = eachDayOfInterval({ start: monthStart, end: monthEnd });
 
   const getItemsForMonth = () => {
     return items.filter(item => {
@@ -84,36 +45,40 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
     });
   };
 
-  const getItemColor = (type: GanttItem['type']) => {
+  const getItemColor = (type: TimelineItem['type']) => {
     return ITEM_TYPES.find(t => t.value === type)?.color || 'bg-gray-500';
   };
 
-  const addItem = () => {
+  const handleAddItem = async () => {
     if (!newItem.title || !newItem.date) return;
 
-    const item: GanttItem = {
-      id: Date.now().toString(),
+    await addItem({
+      destination: destinationName,
       title: newItem.title,
       date: new Date(newItem.date),
       type: newItem.type,
       description: newItem.description
-    };
+    });
 
-    setItems([...items, item]);
     setNewItem({ title: '', date: format(new Date(), 'yyyy-MM-dd'), type: 'deadline', description: '' });
     setIsAddDialogOpen(false);
   };
 
-  const updateItem = (updatedItem: GanttItem) => {
-    setItems(items.map(item => item.id === updatedItem.id ? updatedItem : item));
+  const handleUpdateItem = async (updatedItem: TimelineItem) => {
+    await updateItem(updatedItem.id, {
+      title: updatedItem.title,
+      date: updatedItem.date,
+      type: updatedItem.type,
+      description: updatedItem.description
+    });
     setEditingItem(null);
   };
 
-  const deleteItem = (id: string) => {
-    setItems(items.filter(item => item.id !== id));
+  const handleDeleteItem = async (id: string) => {
+    await deleteItem(id);
   };
 
-  const ItemDialog = ({ item, isOpen, onClose }: { item?: GanttItem, isOpen: boolean, onClose: () => void }) => {
+  const ItemDialog = ({ item, isOpen, onClose }: { item?: TimelineItem, isOpen: boolean, onClose: () => void }) => {
     const [formData, setFormData] = useState({
       title: item?.title || '',
       date: item ? format(item.date, 'yyyy-MM-dd') : format(new Date(), 'yyyy-MM-dd'),
@@ -121,11 +86,11 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
       description: item?.description || ''
     });
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
       if (!formData.title || !formData.date) return;
 
       if (item) {
-        updateItem({
+        await handleUpdateItem({
           ...item,
           title: formData.title,
           date: new Date(formData.date),
@@ -133,7 +98,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
           description: formData.description
         });
       } else {
-        addItem();
+        await handleAddItem();
       }
       onClose();
     };
@@ -165,7 +130,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
             </div>
             <div>
               <Label htmlFor="type">Type</Label>
-              <Select value={formData.type} onValueChange={(value: GanttItem['type']) => setFormData({ ...formData, type: value })}>
+              <Select value={formData.type} onValueChange={(value: TimelineItem['type']) => setFormData({ ...formData, type: value })}>
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -270,7 +235,12 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
 
         {/* Timeline View */}
         <div className="space-y-4">
-          {getItemsForMonth().length === 0 ? (
+          {loading ? (
+            <div className="text-center py-8">
+              <Loader2 className="h-8 w-8 mx-auto mb-2 animate-spin" />
+              <p className="text-muted-foreground">Loading timeline...</p>
+            </div>
+          ) : getItemsForMonth().length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
               <Calendar className="h-12 w-12 mx-auto mb-2 opacity-50" />
               <p>No items scheduled for this month</p>
@@ -312,7 +282,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={() => deleteItem(item.id)}
+                      onClick={() => handleDeleteItem(item.id)}
                     >
                       <Trash2 className="h-4 w-4" />
                     </Button>

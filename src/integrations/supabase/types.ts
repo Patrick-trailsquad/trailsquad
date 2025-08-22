@@ -131,6 +131,42 @@ export type Database = {
         }
         Relationships: []
       }
+      timeline_items: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          date: string
+          description: string | null
+          destination: string
+          id: string
+          title: string
+          type: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          date: string
+          description?: string | null
+          destination: string
+          id?: string
+          title: string
+          type: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          date?: string
+          description?: string | null
+          destination?: string
+          id?: string
+          title?: string
+          type?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
