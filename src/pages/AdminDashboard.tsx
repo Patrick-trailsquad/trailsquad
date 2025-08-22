@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { ParticipantsTable } from '@/components/admin/ParticipantsTable';
 import { AddParticipantDialog } from '@/components/admin/AddParticipantDialog';
+import { GanttChart } from '@/components/admin/GanttChart';
 import { LogOut, Plus, Users } from 'lucide-react';
 import { DESTINATIONS, type Destination } from '@/config/destinations';
 
@@ -77,6 +78,9 @@ const AdminDashboard = () => {
             onDelete={deleteDestinationParticipant}
           />
         )}
+
+        {/* Gantt Chart */}
+        <GanttChart destinationName={destination.name} />
 
         {/* Add Participant Dialog for this destination */}
         <AddParticipantDialog
