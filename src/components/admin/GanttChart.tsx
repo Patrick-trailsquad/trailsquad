@@ -284,7 +284,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                       <div key={item.id} className="flex items-center justify-between group">
                         <div className={`text-xs ${typeConfig.textColor} truncate flex-1`}>
                           {item.description && (
-                            <div className="text-xs opacity-75 mt-1">{item.description}</div>
+                            <div className="text-xs mt-1 opacity-0 group-hover:opacity-75 transition-opacity">{item.description}</div>
                           )}
                         </div>
                         <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
