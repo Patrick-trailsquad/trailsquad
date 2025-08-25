@@ -7,6 +7,7 @@ import { useIsMobile } from "../hooks/use-mobile";
 import DestinationLinks from "./footer/DestinationLinks";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { useToast } from "./ui/use-toast";
 const Footer = () => {
   const [selectedPolicy, setSelectedPolicy] = useState<{
     title: string;
@@ -16,17 +17,44 @@ const Footer = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigateAndScroll = useNavigateAndScroll();
   const isMobile = useIsMobile();
+  const { toast } = useToast();
+  
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+    
     setIsSubmitting(true);
+    
     try {
-      // Simple form submission - you can integrate with your newsletter service
-      console.log("Newsletter signup:", email);
+      // Use webhook for newsletter signup (same as other form submissions)
+      const webhookUrl = "https://hooks.zapier.com/hooks/catch/your-webhook-id/"; // Configure your webhook URL
+      
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          email: email,
+          type: "newsletter_signup",
+          timestamp: new Date().toISOString(),
+          source: "footer",
+        }),
+      });
+
       setEmail("");
-      // Add success feedback here if needed
+      toast({
+        title: "Tak!",
+        description: "Du er nu tilmeldt vores nyhedsbrev.",
+      });
     } catch (error) {
       console.error("Newsletter signup error:", error);
+      toast({
+        title: "Fejl",
+        description: "Der opstod en fejl. Prøv venligst igen.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
