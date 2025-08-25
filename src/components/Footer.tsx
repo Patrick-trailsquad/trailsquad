@@ -27,7 +27,7 @@ const Footer = () => {
     
     try {
       // Use webhook for newsletter signup (same as other form submissions)
-      const webhookUrl = "https://hooks.zapier.com/hooks/catch/your-webhook-id/"; // Configure your webhook URL
+      const webhookUrl = "https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/";
       
       const response = await fetch(webhookUrl, {
         method: "POST",
