@@ -83,7 +83,7 @@ const Footer = () => {
                 <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
                   <Input
                     type="email"
-                    placeholder="Your email address"
+                    placeholder="Din emailadresse"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="flex-1 text-sm rounded-full"
