@@ -86,7 +86,7 @@ const Footer = () => {
                     placeholder="Your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 text-sm"
+                    className="flex-1 text-sm rounded-full"
                     required
                   />
                   <Button
