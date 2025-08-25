@@ -75,7 +75,7 @@ const Footer = () => {
             {/* Legal & Support */}
             <div>
               <h3 className="font-cabinet font-semibold text-charcoal text-lg mb-6">
-                Support & politikker
+                Betingelser
               </h3>
               <PolicyLinks onPolicyClick={setSelectedPolicy} />
             </div>
