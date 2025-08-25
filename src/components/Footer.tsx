@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import PolicyModal from "./PolicyModal";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
@@ -8,7 +7,6 @@ import { useIsMobile } from "../hooks/use-mobile";
 import DestinationLinks from "./footer/DestinationLinks";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-
 const Footer = () => {
   const [selectedPolicy, setSelectedPolicy] = useState<{
     title: string;
@@ -18,11 +16,9 @@ const Footer = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigateAndScroll = useNavigateAndScroll();
   const isMobile = useIsMobile();
-
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    
     setIsSubmitting(true);
     try {
       // Simple form submission - you can integrate with your newsletter service
@@ -35,33 +31,14 @@ const Footer = () => {
       setIsSubmitting(false);
     }
   };
-
-  const rejsegarantiLogo = (
-    <div className="flex items-center justify-center md:justify-start">
-      <img 
-        src="/lovable-uploads/e0a85598-cd64-4bf2-b36d-53e9de986ac3.png" 
-        alt="Rejsegaranti Fonden - Travel Guarantee Denmark" 
-        className={`${isMobile ? 'h-10' : 'h-12'} object-contain`} 
-      />
-    </div>
-  );
-
-  const trailSquadLogo = (
-    <button 
-      onClick={() => navigateAndScroll('/', 'top')} 
-      className="flex items-center justify-center md:justify-start gap-3 group"
-    >
-      <img 
-        src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" 
-        alt="Trail Squad Logo" 
-        className="h-8" 
-      />
+  const rejsegarantiLogo = <div className="flex items-center justify-center md:justify-start">
+      <img src="/lovable-uploads/e0a85598-cd64-4bf2-b36d-53e9de986ac3.png" alt="Rejsegaranti Fonden - Travel Guarantee Denmark" className={`${isMobile ? 'h-10' : 'h-12'} object-contain`} />
+    </div>;
+  const trailSquadLogo = <button onClick={() => navigateAndScroll('/', 'top')} className="flex items-center justify-center md:justify-start gap-3 group">
+      <img src="/lovable-uploads/6470b7fc-98aa-4a8c-bcf6-79708bbcb60c.png" alt="Trail Squad Logo" className="h-8" />
       <span className="font-cabinet text-charcoal font-semibold group-hover:text-terra transition-colors">Trail Squad ApS</span>
-    </button>
-  );
-
-  return (
-    <footer className="bg-white border-t border-gray-100">
+    </button>;
+  return <footer className="bg-white border-t border-gray-100">
       <div className="container mx-auto px-6 py-16">
         <div className="max-w-7xl mx-auto">
           {/* Main Footer Content */}
@@ -77,23 +54,10 @@ const Footer = () => {
               
               {/* Newsletter */}
               <div className="space-y-3">
-                <h4 className="font-cabinet font-semibold text-charcoal text-sm">
-                  Newsletter
-                </h4>
+                <h4 className="font-cabinet font-semibold text-charcoal text-sm">Nyhedsbrev</h4>
                 <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                  <Input
-                    type="email"
-                    placeholder="Din emailadresse"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 text-sm rounded-full"
-                    required
-                  />
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 text-sm rounded-full"
-                  >
+                  <Input type="email" placeholder="Din emailadresse" value={email} onChange={e => setEmail(e.target.value)} className="flex-1 text-sm rounded-full" required />
+                  <Button type="submit" disabled={isSubmitting} className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 text-sm rounded-full">
                     {isSubmitting ? "..." : "Tilmeld"}
                   </Button>
                 </form>
@@ -122,10 +86,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500 text-center md:text-left">
                 <div>© {new Date().getFullYear()} Trail Squad ApS. All rights reserved.</div>
-                <a 
-                  href="/admin/login" 
-                  className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
-                >
+                <a href="/admin/login" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                   Admin
                 </a>
               </div>
@@ -135,16 +96,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {selectedPolicy && (
-        <PolicyModal
-          isOpen={true}
-          onClose={() => setSelectedPolicy(null)}
-          title={selectedPolicy.title}
-          content={selectedPolicy.content}
-        />
-      )}
-    </footer>
-  );
+      {selectedPolicy && <PolicyModal isOpen={true} onClose={() => setSelectedPolicy(null)} title={selectedPolicy.title} content={selectedPolicy.content} />}
+    </footer>;
 };
-
 export default Footer;
