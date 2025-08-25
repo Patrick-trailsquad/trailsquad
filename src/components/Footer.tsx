@@ -6,14 +6,35 @@ import SocialLinks from "./footer/SocialLinks";
 import PolicyLinks from "./footer/PolicyLinks";
 import { useIsMobile } from "../hooks/use-mobile";
 import DestinationLinks from "./footer/DestinationLinks";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   const [selectedPolicy, setSelectedPolicy] = useState<{
     title: string;
     content: string;
   } | null>(null);
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigateAndScroll = useNavigateAndScroll();
   const isMobile = useIsMobile();
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    try {
+      // Simple form submission - you can integrate with your newsletter service
+      console.log("Newsletter signup:", email);
+      setEmail("");
+      // Add success feedback here if needed
+    } catch (error) {
+      console.error("Newsletter signup error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const rejsegarantiLogo = (
     <div className="flex items-center justify-center md:justify-start">
@@ -53,6 +74,30 @@ const Footer = () => {
                 Episke trailløb på tværs af Europa. Håndplukkede destinationer og værdifuldt fællesskab.
               </p>
               <SocialLinks />
+              
+              {/* Newsletter */}
+              <div className="space-y-3">
+                <h4 className="font-cabinet font-semibold text-charcoal text-sm">
+                  Newsletter
+                </h4>
+                <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+                  <Input
+                    type="email"
+                    placeholder="Your email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="flex-1 text-sm"
+                    required
+                  />
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-terra hover:bg-terra-light text-white px-4 py-2 text-sm"
+                  >
+                    {isSubmitting ? "..." : "Subscribe"}
+                  </Button>
+                </form>
+              </div>
             </div>
 
             {/* Destinations */}
