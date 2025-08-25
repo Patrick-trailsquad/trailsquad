@@ -67,7 +67,7 @@ const Footer = () => {
             {/* Destinations */}
             <div>
               <h3 className="font-cabinet font-semibold text-charcoal text-lg mb-6">
-                Our Destinations
+                Kommende destinationer
               </h3>
               <DestinationLinks />
             </div>
