@@ -42,8 +42,15 @@ const VideoBackgroundSection = () => {
       <div className="absolute inset-0 bg-black/40" />
       
       {/* Content overlay */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        {/* Add any overlay content here */}
+      <div className="relative z-10 flex items-center justify-center h-full px-8">
+        <div className="text-center text-white">
+          <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">
+            Oplev Eventyret
+          </h1>
+          <h2 className="text-xl md:text-2xl font-inter font-light">
+            Følg med på vores rejse gennem spektakulære landskaber
+          </h2>
+        </div>
       </div>
     </section>
   );
