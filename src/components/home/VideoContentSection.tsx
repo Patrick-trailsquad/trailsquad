@@ -19,32 +19,26 @@ const VideoContentSection = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Video thumbnail on the left */}
-            <div className="order-2 lg:order-1">
-              <div className="relative">
-                <div
-                  className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
-                  onClick={openVideo}
-                >
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
-                    <img
-                      src="/lovable-uploads/ae218c4a-347e-4cba-988d-a5f0d447fa57.png"
-                      alt="Trail Squad Experience"
-                      className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
-                    
-                    {/* Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
-                        <Play className="w-9 h-9 text-[#FFDC00] ml-1" fill="currentColor" />
-                      </div>
+            <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
+              <div
+                className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
+                onClick={openVideo}
+              >
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
+                  <img
+                    src="/lovable-uploads/ae218c4a-347e-4cba-988d-a5f0d447fa57.png"
+                    alt="Trail Squad Experience"
+                    className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+                  
+                  {/* Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
+                      <Play className="w-9 h-9 text-[#FFDC00] ml-1" fill="currentColor" />
                     </div>
                   </div>
                 </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/10 rounded-full blur-xl"></div>
               </div>
             </div>
 
