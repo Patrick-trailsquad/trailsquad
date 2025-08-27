@@ -1,7 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
+
+declare global {
+  interface Window {
+    YT: any;
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
 const VideoBackgroundSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
+  const playerRef = useRef<HTMLDivElement>(null);
+  const ytPlayerRef = useRef<any>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
@@ -15,13 +25,57 @@ const VideoBackgroundSection = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Load YouTube IFrame API
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
+
+    // YouTube API ready callback
+    window.onYouTubeIframeAPIReady = () => {
+      if (playerRef.current) {
+        ytPlayerRef.current = new window.YT.Player(playerRef.current, {
+          videoId: 'wgKpri-37EU',
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            loop: 1,
+            playlist: 'wgKpri-37EU',
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            iv_load_policy: 3,
+            modestbranding: 1,
+            playsinline: 1,
+            start: 0
+          },
+          events: {
+            onReady: (event: any) => {
+              event.target.setPlaybackRate(0.8); // Set to 80% speed
+            }
+          }
+        });
+      }
+    };
+
+    return () => {
+      if (ytPlayerRef.current) {
+        ytPlayerRef.current.destroy();
+      }
+    };
+  }, []);
   return <section ref={sectionRef} className="relative w-full h-[95vh] overflow-hidden">
       {/* YouTube video background with parallax */}
       <div className="absolute inset-0 w-full h-[120%]" style={{
       transform: `translateY(${scrollY * -0.5}px) scale(1.2)`,
       transformOrigin: 'center center'
     }}>
-        <iframe src="https://www.youtube.com/embed/wgKpri-37EU?autoplay=1&mute=1&loop=1&playlist=wgKpri-37EU&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&start=0" title="Background Video" className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-150" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+        <div 
+          ref={playerRef}
+          className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-150"
+        />
       </div>
       
       {/* Dark overlay for better content visibility */}
