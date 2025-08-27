@@ -20,7 +20,7 @@ const VideoBackgroundSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full h-[70vh] overflow-hidden">
+    <section ref={sectionRef} className="relative w-full h-[105vh] overflow-hidden">
       {/* YouTube video background with parallax */}
       <div 
         className="absolute inset-0 w-full h-[120%]" 
