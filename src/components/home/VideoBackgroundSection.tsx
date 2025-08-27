@@ -68,7 +68,7 @@ const VideoBackgroundSection = () => {
       transform: `translateY(${scrollY * -0.5}px) scale(1.2)`,
       transformOrigin: 'center center'
     }}>
-        <div ref={playerRef} className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-110 md:scale-150" />
+        <div ref={playerRef} className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 md:scale-150" />
       </div>
       
       {/* Dark overlay for better content visibility */}
