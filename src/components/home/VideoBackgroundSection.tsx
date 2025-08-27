@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-
 declare global {
   interface Window {
     YT: any;
@@ -11,7 +10,6 @@ const VideoBackgroundSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
@@ -25,7 +23,6 @@ const VideoBackgroundSection = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   useEffect(() => {
     // Load YouTube IFrame API
     const tag = document.createElement('script');
@@ -59,7 +56,6 @@ const VideoBackgroundSection = () => {
         });
       }
     };
-
     return () => {
       if (ytPlayerRef.current) {
         ytPlayerRef.current.destroy();
@@ -72,10 +68,7 @@ const VideoBackgroundSection = () => {
       transform: `translateY(${scrollY * -0.5}px) scale(1.2)`,
       transformOrigin: 'center center'
     }}>
-        <div 
-          ref={playerRef}
-          className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-150"
-        />
+        <div ref={playerRef} className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-150" />
       </div>
       
       {/* Dark overlay for better content visibility */}
@@ -84,10 +77,10 @@ const VideoBackgroundSection = () => {
       {/* Content overlay */}
       <div className="relative z-10 flex items-center justify-center h-full px-8">
         <div className="text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Månedlig fællestræning</h1>
-          <h2 className="text-xl md:text-2xl font-inter font-light">
-            Følg med på vores rejse gennem spektakulære landskaber
-          </h2>
+          <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Trail Squad fællesskab</h1>
+          <h2 className="text-xl md:text-2xl font-inter font-light">Løbetræning. Udstyrssnak. Fællesskab. 
+
+        </h2>
         </div>
       </div>
     </section>;
