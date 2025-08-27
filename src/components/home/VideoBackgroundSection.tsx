@@ -79,7 +79,7 @@ const VideoBackgroundSection = () => {
         <div className="text-center text-white">
           <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Trail Squad fællestræning</h1>
           <h2 className="text-xl md:text-2xl font-inter font-light">Løbeteknik, udstyr, energi på løbsdagen...
-Vi har din ryg i forberedelserne op til race day til de månedlige fællestræninger</h2>
+Vi har din ryg i forberedelserne op til race day</h2>
         </div>
       </div>
     </section>;
