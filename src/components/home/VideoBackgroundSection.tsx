@@ -1,23 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const VideoBackgroundSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const scrollProgress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / (window.innerHeight + rect.height)));
+        setScrollY(scrollProgress * 100);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      {/* YouTube video background */}
-      <div className="absolute inset-0 w-full h-full">
+    <section ref={sectionRef} className="relative w-full h-[70vh] overflow-hidden">
+      {/* YouTube video background with parallax */}
+      <div 
+        className="absolute inset-0 w-full h-[120%]" 
+        style={{ 
+          transform: `translateY(${scrollY * -0.5}px) scale(1.2)`,
+          transformOrigin: 'center center'
+        }}
+      >
         <iframe
-          src="https://www.youtube.com/embed/wgKpri-37EU?autoplay=1&mute=1&loop=1&playlist=wgKpri-37EU&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+          src="https://www.youtube.com/embed/wgKpri-37EU?autoplay=1&mute=1&loop=1&playlist=wgKpri-37EU&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&start=0"
           title="Background Video"
-          className="absolute top-1/2 left-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full transform -translate-x-1/2 -translate-y-1/2 object-cover"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-150"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
       </div>
       
       {/* Dark overlay for better content visibility */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/40" />
       
-      {/* Content overlay - you can add content here if needed */}
+      {/* Content overlay */}
       <div className="relative z-10 flex items-center justify-center h-full">
         {/* Add any overlay content here */}
       </div>
