@@ -46,7 +46,7 @@ const VideoBackgroundSection = () => {
             iv_load_policy: 3,
             modestbranding: 1,
             playsinline: 1,
-            start: 0
+            start: 4
           },
           events: {
             onReady: (event: any) => {
