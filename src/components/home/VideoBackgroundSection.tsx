@@ -1,17 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useIsMobile } from '../../hooks/use-mobile';
+
 declare global {
   interface Window {
     YT: any;
     onYouTubeIframeAPIReady: () => void;
   }
 }
+
 const VideoBackgroundSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
@@ -20,11 +23,12 @@ const VideoBackgroundSection = () => {
         setScrollY(scrollProgress * 100);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
 
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   useEffect(() => {
     // Load YouTube IFrame API
     const tag = document.createElement('script');
@@ -52,25 +56,38 @@ const VideoBackgroundSection = () => {
           },
           events: {
             onReady: (event: any) => {
-              event.target.setPlaybackRate(0.8); // Set to 80% speed
+              event.target.setPlaybackRate(0.8);
             }
           }
         });
       }
     };
+
     return () => {
       if (ytPlayerRef.current) {
         ytPlayerRef.current.destroy();
       }
     };
   }, []);
-  return <section ref={sectionRef} className="relative w-full h-[95vh] overflow-hidden">
-      {/* YouTube video background with parallax */}
-      <div className="absolute inset-0 w-full h-full md:h-[120%]" style={{
-      transform: `translateY(${scrollY * -0.5}px) ${isMobile ? 'scale(1)' : 'scale(1.2)'}`,
-      transformOrigin: 'center center'
-    }}>
-        <div ref={playerRef} className="absolute top-1/2 left-1/2 w-full h-full md:w-[200%] md:h-[200%] transform -translate-x-1/2 -translate-y-1/2 md:scale-150" />
+
+  return (
+    <section ref={sectionRef} className="relative w-full h-[95vh] overflow-hidden">
+      {/* YouTube video background */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={isMobile ? {} : {
+          transform: `translateY(${scrollY * -0.5}px) scale(1.2)`,
+          transformOrigin: 'center center',
+          height: '120%'
+        }}
+      >
+        <div 
+          ref={playerRef} 
+          className={isMobile 
+            ? "absolute inset-0 w-full h-full" 
+            : "absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-150"
+          } 
+        />
       </div>
       
       {/* Dark overlay for better content visibility */}
@@ -86,6 +103,8 @@ const VideoBackgroundSection = () => {
           </h2>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default VideoBackgroundSection;
