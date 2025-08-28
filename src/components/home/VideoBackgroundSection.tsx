@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useIsMobile } from '../../hooks/use-mobile';
 declare global {
   interface Window {
     YT: any;
@@ -7,6 +8,7 @@ declare global {
 }
 const VideoBackgroundSection = () => {
   const [scrollY, setScrollY] = useState(0);
+  const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
@@ -64,11 +66,11 @@ const VideoBackgroundSection = () => {
   }, []);
   return <section ref={sectionRef} className="relative w-full h-[95vh] overflow-hidden">
       {/* YouTube video background with parallax */}
-      <div className="absolute inset-0 w-full h-[120%]" style={{
-      transform: `translateY(${scrollY * -0.5}px) scale(1.2)`,
+      <div className="absolute inset-0 w-full h-full md:h-[120%]" style={{
+      transform: `translateY(${scrollY * -0.5}px) ${isMobile ? 'scale(1)' : 'scale(1.2)'}`,
       transformOrigin: 'center center'
     }}>
-        <div ref={playerRef} className="absolute top-1/2 left-1/2 w-[200%] h-[200%] transform -translate-x-1/2 -translate-y-1/2 scale-[0.83] md:scale-150" />
+        <div ref={playerRef} className="absolute top-1/2 left-1/2 w-full h-full md:w-[200%] md:h-[200%] transform -translate-x-1/2 -translate-y-1/2 md:scale-150" />
       </div>
       
       {/* Dark overlay for better content visibility */}
