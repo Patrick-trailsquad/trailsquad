@@ -30,18 +30,16 @@ const Flash = () => {
             <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">
               Hvad er Flash-ture?
             </h2>
-            <div className="grid grid-cols-3">
-              <div className="col-span-2 space-y-4">
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Der er nogle trail-løb, som er sværere at få adgang til end andre. De kan være mere kendte, mere prestigefyldte, der kan være færre pladser osv. Eller det er bare mere besværligt for Trail Squad at få øremærket flere billetter ad gangen (som vi normalt gør).
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Derfår må vi gribe til ukonventionelle metoder - Flash-metoder!
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Vi booker racebilletterne løbende, og lukker Flash-turen når enten løbet er udsolgt, eller når vi har samlet den lille eksklusiv skare, som skal med.
-                </p>
-              </div>
+            <div className="space-y-4">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Der er nogle trail-løb, som er sværere at få adgang til end andre. De kan være mere kendte, mere prestigefyldte, der kan være færre pladser osv. Eller det er bare mere besværligt for Trail Squad at få øremærket flere billetter ad gangen (som vi normalt gør).
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Derfår må vi gribe til ukonventionelle metoder - Flash-metoder!
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Vi booker racebilletterne løbende, og lukker Flash-turen når enten løbet er udsolgt, eller når vi har samlet den lille eksklusiv skare, som skal med.
+              </p>
             </div>
           </div>
 
