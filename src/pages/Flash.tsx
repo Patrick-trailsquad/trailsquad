@@ -22,7 +22,7 @@ const Flash = () => {
         
         <div className="container mx-auto max-w-4xl text-center z-10 px-6">
           <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
-            Flash-ture
+            Kom på eventyr - in a Flash
           </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
             Eksklusiv adgang til begrænsede trail-destinationer. Kun synlig i korte perioder - grib chancen før vinduet lukker.
