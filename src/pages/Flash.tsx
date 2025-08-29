@@ -26,8 +26,8 @@ const Flash = () => {
       {/* Concept Explanation */}
       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="font-cabinet font-bold text-3xl md:text-4xl text-charcoal mb-6">
+          <div className="text-left mb-12">
+            <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">
               Hvad er Flash-ture?
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">Der er nogle trail-løb, som er sværere at få adgang til end andre. Det kan være, at de er mere kendte end andre, der er færre pladser, eller det er bare sværere at få øremærket flere billetter ad gangen. </p>
