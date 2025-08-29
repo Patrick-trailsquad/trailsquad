@@ -117,6 +117,9 @@ const Footer = () => {
                 <a href="/admin/login" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                   Admin
                 </a>
+                <a href="/flash" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                  Flash
+                </a>
               </div>
               {rejsegarantiLogo}
             </div>
