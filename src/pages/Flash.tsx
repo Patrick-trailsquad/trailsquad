@@ -30,7 +30,9 @@ const Flash = () => {
             <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">
               Hvad er Flash-ture?
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">Der er nogle trail-løb, som er sværere at få adgang til end andre. Det kan være, at de er mere kendte end andre, der er færre pladser, eller det er bare sværere at få øremærket flere billetter ad gangen. </p>
+            <div className="grid grid-cols-3">
+              <p className="text-lg text-gray-600 leading-relaxed col-span-2">Der er nogle trail-løb, som er sværere at få adgang til end andre. Det kan være, at de er mere kendte end andre, der er færre pladser, eller det er bare sværere at få øremærket flere billetter ad gangen.</p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
