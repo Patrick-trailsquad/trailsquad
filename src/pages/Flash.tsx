@@ -10,16 +10,25 @@ const Flash = () => {
       <Menu />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6 bg-gradient-to-r from-yellow-400 to-orange-500">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/lovable-uploads/6ff90756-d658-4625-8641-a8d712215b93.png" 
+            alt="Trail runner on mountain peak" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/50 to-orange-500/50" />
+        </div>
+        
+        <div className="container mx-auto max-w-4xl text-center z-10 px-6">
+          <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
             <span className="text-white font-medium text-sm">LIVE NU</span>
           </div>
-          <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6">
+          <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
             Flash-ture
           </h1>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
             Eksklusiv adgang til begrænsede trail-destinationer. Kun synlig i korte perioder - grib chancen før vinduet lukker.
           </p>
         </div>
