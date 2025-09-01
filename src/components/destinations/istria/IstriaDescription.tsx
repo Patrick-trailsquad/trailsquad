@@ -10,7 +10,7 @@ const IstriaDescription = () => {
           <img src="/lovable-uploads/44a37ce3-9606-451d-9697-e984a0ce514e.png" alt="Lightning icon" className="w-6 h-6" />
           <h2 className="font-cabinet text-xl font-bold text-black">Dette er en Flash-tur!</h2>
         </div>
-        <p className="text-black font-medium">
+        <p className="text-black">
           Dette er en særlig Flash Trip - en hurtig og spændende rejse med kort bookingperiode og fantastiske oplevelser!
         </p>
       </div>
