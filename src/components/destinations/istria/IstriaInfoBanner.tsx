@@ -7,7 +7,7 @@ const IstriaInfoBanner = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Lokation</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">Labin, Istria, Kroatien</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">Umag, Istrien, Kroatien</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Løbsdag</h1>
