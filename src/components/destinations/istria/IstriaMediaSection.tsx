@@ -52,11 +52,9 @@ const IstriaMediaSection = () => {
             <p className="font-cabinet text-xl font-bold text-charcoal">Åbner senere</p>
           </div>
         </div>
-        <PriceQuoteForm 
-          destinationName="Istria 100 by UTMB"
-          availableDistances={["21km", "42km", "69km", "110km", "168km"]}
-          maxParticipants={spotsLeft}
-        />
+        <div className="text-center py-4">
+          <p className="text-gray-600">Tilmelding åbner snart. Hold øje med opdateringer.</p>
+        </div>
       </div>
     </div>
   );
