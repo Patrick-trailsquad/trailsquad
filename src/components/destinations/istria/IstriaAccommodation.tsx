@@ -12,9 +12,9 @@ const IstriaAccommodation = () => {
         <Carousel className="w-full" opts={{ loop: true }}>
           <CarouselContent>
             {[
-              "/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png",
-              "/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png",
-              "/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png"
+              "/lovable-uploads/2d41656f-927a-4f76-9d64-e85396702d72.png",
+              "/lovable-uploads/309c5a89-5ba7-4947-a365-8b87fe6ea588.png",
+              "/lovable-uploads/1b579ff4-dd2e-4672-9f1b-0fe41adb0069.png"
             ].map((src, index) => (
               <CarouselItem key={index}>
                 <div className="h-[450px] rounded-xl overflow-hidden">
