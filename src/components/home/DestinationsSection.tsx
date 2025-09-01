@@ -94,7 +94,7 @@ const DestinationsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 {trip.href === "/destinations/istria" && (
-                  <div className="absolute top-4 right-4 bg-yellow-400 border-2 border-charcoal rounded-lg px-3 py-2 flex items-center gap-2">
+                  <div className="absolute top-4 right-4 bg-yellow-400 border-2 border-charcoal rounded-full px-3 py-2 flex items-center gap-2">
                     <img src="/lovable-uploads/376bace9-3e41-4047-95a9-1d882af06797.png" alt="Lightning icon" className="w-4 h-4" />
                     <span className="text-charcoal font-cabinet font-bold text-sm">Flash-tur</span>
                   </div>
