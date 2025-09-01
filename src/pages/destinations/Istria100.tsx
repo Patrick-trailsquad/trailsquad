@@ -8,7 +8,7 @@ const IstriaHero = () => {
   return (
     <div className="relative h-[70vh]">
       <img
-        src="/lovable-uploads/8902731a-8d1d-4cd3-828d-37acdd57acee.png"
+        src="/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png"
         alt="Istria 100 by UTMB"
         className="w-full h-full object-cover"
       />
