@@ -19,8 +19,9 @@ const IstriaDescription = () => {
         <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Løbet</h2>
         <p className="text-lg">
           Oplev Kroatiens mest spektakulære trail running event på den smukke Istria-halvø. 
-          Istria 100 by UTMB tager dig gennem vingårde, olivenlunde, kystskrænter og 
-          charmerende middelalderlige byer i et af Europas bedst bevarede naturområder.
+          Istria 100 by UTMB byder på flere forskellige destinationer og distancer, der tager dig 
+          gennem vingårde, olivenlunde, kystskrænter og charmerende middelalderlige byer i et af 
+          Europas bedst bevarede naturområder.
         </p>
       </div>
 
