@@ -14,18 +14,9 @@ const Flash = () => {
         </div>
         
         <div className="container mx-auto max-w-4xl text-center z-10 px-6">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white drop-shadow-lg">
-              Kom på eventyr - in a Flash
-            </h1>
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-              <img 
-                src="/lovable-uploads/0588ef90-40c2-4ee6-b472-5f1f9454e273.png" 
-                alt="Flash icon" 
-                className="w-10 h-10 md:w-12 md:h-12"
-              />
-            </div>
-          </div>
+          <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
+            Kom på eventyr - in a Flash
+          </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
             Eksklusiv adgang til begrænsede trail-destinationer. Kun synlig i korte perioder - grib chancen før vinduet lukker.
           </p>
