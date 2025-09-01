@@ -8,7 +8,7 @@ const IstriaDescription = () => {
       <div className="bg-yellow-400 border-2 border-black rounded-xl p-4 mb-6">
         <div className="flex items-center gap-2 mb-2">
           <img src="/lovable-uploads/44a37ce3-9606-451d-9697-e984a0ce514e.png" alt="Lightning icon" className="w-6 h-6" />
-          <h2 className="font-cabinet text-xl font-bold text-black">Flash Trip</h2>
+          <h2 className="font-cabinet text-xl font-bold text-black">Dette er en Flash-tur!</h2>
         </div>
         <p className="text-black font-medium">
           Dette er en særlig Flash Trip - en hurtig og spændende rejse med kort bookingperiode og fantastiske oplevelser!
