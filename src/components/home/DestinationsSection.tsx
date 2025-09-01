@@ -93,6 +93,12 @@ const DestinationsSection = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                {trip.href === "/destinations/istria" && (
+                  <div className="absolute top-4 right-4 bg-yellow-400 border-2 border-charcoal rounded-lg px-3 py-2 flex items-center gap-2">
+                    <img src="/lovable-uploads/376bace9-3e41-4047-95a9-1d882af06797.png" alt="Lightning icon" className="w-4 h-4" />
+                    <span className="text-charcoal font-cabinet font-bold text-sm">Flash-tur</span>
+                  </div>
+                )}
                 <div className="absolute bottom-0 left-0 p-8">
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-2">
                     {trip.location}
