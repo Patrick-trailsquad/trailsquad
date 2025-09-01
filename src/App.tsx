@@ -23,6 +23,7 @@ import RibeiraSacra from "./pages/destinations/RibeiraSacra";
 import Dolomites from "./pages/destinations/Dolomites";
 import ChiantiTrail from "./pages/destinations/ChiantiTrail";
 import ZugspitzUltratrail from "./pages/destinations/ZugspitzUltratrail";
+import Istria100 from "./pages/destinations/Istria100";
 
 const queryClient = new QueryClient();
 
@@ -61,8 +62,9 @@ const App = () => (
             <Route path="/destinations/ribeira-sacra" element={<RibeiraSacra />} />
             <Route path="/destinations/dolomites" element={<Dolomites />} />
             <Route path="/destinations/chianti" element={<ChiantiTrail />} />
-            <Route path="/destinations/zugspitz" element={<ZugspitzUltratrail />} />
-            <Route path="*" element={<NotFound />} />
+          <Route path="/destinations/zugspitz" element={<ZugspitzUltratrail />} />
+          <Route path="/destinations/istria" element={<Istria100 />} />
+          <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
       </BrowserRouter>
