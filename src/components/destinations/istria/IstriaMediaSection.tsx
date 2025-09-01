@@ -54,7 +54,7 @@ const IstriaMediaSection = () => {
         </div>
         <PriceQuoteForm 
           destinationName="Istria 100 by UTMB"
-          availableDistances={["50km", "100km"]}
+          availableDistances={["21km", "42km", "69km", "110km", "168km"]}
           maxParticipants={spotsLeft}
         />
       </div>

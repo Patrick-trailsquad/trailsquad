@@ -19,7 +19,7 @@ const IstriaInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">50km, 100km</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">21km, 42km, 69km, 110km, 168km</h2>
           </div>
         </div>
       </div>
