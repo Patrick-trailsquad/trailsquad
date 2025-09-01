@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Zap } from "lucide-react";
+import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "../../../hooks/use-mobile";
 
@@ -41,17 +41,6 @@ const IstriaAccommodation = () => {
           </div>
         </div>
         <h2 className="font-cabinet text-xl text-terra mb-4">Savudrija, Istria, Kroatien</h2>
-        
-        <div className="bg-yellow-400 border-2 border-black rounded-xl p-4 mb-6">
-          <div className="flex items-center gap-2 mb-2">
-            <Zap className="w-6 h-6 text-black" />
-            <h2 className="font-cabinet text-xl font-bold text-black">Flash Trip</h2>
-          </div>
-          <p className="text-black font-medium">
-            Dette er en særlig Flash Trip - en hurtig og spændende rejse med kort bookingperiode og fantastiske oplevelser!
-          </p>
-        </div>
-        
         <p className="text-lg">
           Velkommen til Hotel Kempinski Adriatic – et luksuriøst golf- og spa-resort beliggende 
           på Istriahalvøens smukke kystlinje. Dette ekstraordinære basecamp tilbyder den 
