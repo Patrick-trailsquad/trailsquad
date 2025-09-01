@@ -48,10 +48,44 @@ const Flash = () => {
         </div>
       </section>
 
-      {/* Current Status */}
+      {/* Current Flash Trip */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">
+              Aktuel Flash-tur
+            </h2>
+            <p className="text-lg text-gray-600">
+              Denne destination er kun tilgængelig i en begrænset periode
+            </p>
+          </div>
           
+          <div className="flex justify-center">
+            <div className="group relative overflow-hidden rounded-2xl max-w-md">
+              <a href="/destinations/istria" className="block">
+                <img
+                  src="/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png"
+                  alt="Istria 100 by UTMB, Kroatien"
+                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="absolute top-4 right-4 bg-yellow-400 border-2 border-charcoal rounded-full px-3 py-2 flex items-center gap-2">
+                  <img src="/lovable-uploads/8d81c8f5-9280-4158-b280-f9a85826d595.png" alt="Lightning icon" className="w-4 h-4" />
+                  <span className="text-charcoal font-cabinet font-bold text-sm">Flash-tur</span>
+                </div>
+                <div className="absolute bottom-0 left-0 p-8">
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-2">
+                    Istria 100 by UTMB, Kroatien
+                  </h3>
+                  <p className="font-inter text-white/90 mb-2">April 2026</p>
+                  <span className="inline-block px-3 py-1 text-sm font-medium rounded-full bg-[#FFDC00] text-black">
+                    Åbner senere
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
