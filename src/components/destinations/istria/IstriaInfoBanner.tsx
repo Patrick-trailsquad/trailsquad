@@ -11,7 +11,7 @@ const IstriaInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Løbsdag</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">4. april 2026</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">11. april 2026</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Rejsevarighed</h1>
