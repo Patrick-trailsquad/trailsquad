@@ -11,7 +11,7 @@ const IstriaDescription = () => {
           <h2 className="font-cabinet text-xl font-bold text-black">Dette er en Flash-tur!</h2>
         </div>
         <p className="text-black">
-          Dette er en særlig Flash Trip - en hurtig og spændende rejse med kort bookingperiode og fantastiske oplevelser!
+          Planlægningen og eksekveringen af Flash-ture er lidt mere rock'n'roll. Vi køber ikke et større antal løbsbilletter i forvejen, og lukker hurtigere ned for destinationen ift de andre Trail Squad ture. Læs mere om Flash-ture her.
         </p>
       </div>
       
