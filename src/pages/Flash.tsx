@@ -44,43 +44,7 @@ const Flash = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="font-cabinet font-semibold text-xl text-charcoal mb-3">
-                Lynhurtig booking
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Når vinduet åbner, har du kun timer eller få dage til at sikre din plads, før det lukker igen.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎟️</span>
-              </div>
-              <h3 className="font-cabinet font-semibold text-xl text-charcoal mb-3">
-                Begrænsede billetter
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Disse destinationer har ekstrem begrænsede løbsbilletter, hvilket gør dem til de mest eksklusive oplevelser.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔥</span>
-              </div>
-              <h3 className="font-cabinet font-semibold text-xl text-charcoal mb-3">
-                Premium oplevelser
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                De mest eftertragtede trail-løb med unik adgang til destinationer, der normalt er udsolgte på sekunder.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
