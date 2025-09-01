@@ -49,7 +49,7 @@ const IstriaIncludedAmenities = ({ className = "" }: IstriaIncludedAmenitiesProp
     {
       icon: "/lovable-uploads/ba002ac9-1745-47a1-a01f-ca8bfa53b60d.png",
       title: "Luksushotel",
-      description: "4-stjernet hotelindkvartering"
+      description: "5-stjernet hotelindkvartering"
     },
     {
       icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
