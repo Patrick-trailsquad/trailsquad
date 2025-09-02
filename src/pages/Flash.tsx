@@ -50,8 +50,8 @@ const Flash = () => {
 
       {/* Current Flash Trip */}
       <section className="py-16 px-6 bg-gray-50">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
             <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">
               Aktuel Flash-tur
             </h2>
@@ -60,8 +60,8 @@ const Flash = () => {
             </p>
           </div>
           
-          <div className="flex justify-center">
-            <div className="group relative overflow-hidden rounded-2xl w-full max-w-md md:max-w-lg">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="group relative overflow-hidden rounded-2xl">
               <a href="/destinations/istria" className="block">
                 <img
                   src="/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png"
