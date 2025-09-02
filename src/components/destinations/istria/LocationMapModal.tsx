@@ -113,7 +113,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-6xl max-h-[90vh]">
+      <DialogContent className="max-w-4xl max-h-[80vh]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary" />
@@ -145,7 +145,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
           
           <div 
             ref={mapContainer} 
-            className="w-full h-[600px] rounded-lg bg-muted/30"
+            className="w-full h-[400px] rounded-lg bg-muted/30"
           />
         </div>
       </DialogContent>
