@@ -12,15 +12,16 @@ const IstriaAccommodation = () => {
         <Carousel className="w-full" opts={{ loop: true }}>
           <CarouselContent>
             {[
-              "/lovable-uploads/2d41656f-927a-4f76-9d64-e85396702d72.png",
-              "/lovable-uploads/309c5a89-5ba7-4947-a365-8b87fe6ea588.png",
-              "/lovable-uploads/1b579ff4-dd2e-4672-9f1b-0fe41adb0069.png"
+              "/lovable-uploads/080f4dbb-4114-41be-925b-4d761cf94714.png",
+              "/lovable-uploads/749ebd53-0454-4092-9aec-b2c6d23dcfe3.png",
+              "/lovable-uploads/2d192e70-ba60-4dbe-90ab-e847b00f0e7d.png",
+              "/lovable-uploads/e576139c-c2c6-4a11-89a2-3837846724d9.png"
             ].map((src, index) => (
               <CarouselItem key={index}>
                 <div className="h-[450px] rounded-xl overflow-hidden">
                   <img 
                     src={src} 
-                    alt={`Hotel Kempinski Adriatic image ${index + 1}`} 
+                    alt={`Villa An with Private Pool image ${index + 1}`} 
                     className="w-full h-full object-cover" 
                   />
                 </div>
@@ -33,29 +34,28 @@ const IstriaAccommodation = () => {
       </div>
       <div className="flex flex-col justify-center">
         <div className="flex items-center mb-2">
-          <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Hotel Kempinski Adriatic</h1>
+          <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Villa An with Private Pool</h1>
           <div className="flex">
-            {[...Array(5)].map((_, index) => (
+            {[...Array(4)].map((_, index) => (
               <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
             ))}
           </div>
         </div>
-        <h2 className="font-cabinet text-xl text-terra mb-4">Savudrija, Istria, Kroatien</h2>
+        <h2 className="font-cabinet text-xl text-terra mb-4">Srbarica 55a, Umag, Istria, Kroatien</h2>
         <p className="text-lg">
-          Velkommen til Hotel Kempinski Adriatic – et luksuriøst golf- og spa-resort beliggende 
-          på Istriahalvøens smukke kystlinje. Dette ekstraordinære basecamp tilbyder den 
-          perfekte kombination af adriatisk elegance og moderne luksus.
+          Velkommen til Villa An med privat pool – en moderne, luksuriøs villa beliggende 
+          i det pittoreske Umag på Istriahalvøens smukke kystlinje. Denne ekstraordinære 
+          villa tilbyder den perfekte kombination af moderne komfort og adriatisk charme.
         </p>
         <p className="text-lg mt-4">
-          Efter dit trailløbseventyr kan du nyde verdensklasse spa-faciliteter, dykke ned i 
-          infinity-poolen med havudsigt eller slappe af på den private strand. Hotellet 
-          byder på gourmetmåltider med lokale istriske specialiteter og verdensberømt 
-          kroatisk vinkultur.
+          Efter dit trailløbseventyr kan du slappe af i den private pool, nyde de 
+          elegante indendørs områder med åben grundplan og moderne design. Villaen 
+          byder på fuldt udstyrede køkken- og opholdsområder samt komfortable soveværelser.
         </p>
         <p className="text-lg mt-4">
-          Afslap dig på terrassen med udsigt over golfbanen og det adriatiske hav, 
-          del løbshistorier med medløbere og nyd den perfekte balance mellem atletisk 
-          udfordring og luksus rekreation på Istriahalvøen.
+          Nyd den private terrasse med poolområde og udendørs spiseplads, 
+          del løbshistorier med medløbere og oplev den perfekte balance mellem atletisk 
+          udfordring og afslappende rekreation i det smukke Istria.
         </p>
       </div>
     </div>
