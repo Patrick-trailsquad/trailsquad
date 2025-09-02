@@ -2,16 +2,12 @@ import React from 'react';
 import { Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useIsMobile } from "../../../hooks/use-mobile";
-import istriaHotelExterior from "../../../assets/istria-hotel-exterior.jpg";
-import istriaHotelRoom from "../../../assets/istria-hotel-room.jpg";
-import istriaHotelRestaurant from "../../../assets/istria-hotel-restaurant.jpg";
-import istriaHotelSpa from "../../../assets/istria-hotel-spa.jpg";
 
 const images = [
-  istriaHotelExterior,
-  istriaHotelRoom,
-  istriaHotelRestaurant,
-  istriaHotelSpa
+  "/lovable-uploads/66853c56-083f-4149-be28-741357b2e357.png",
+  "/lovable-uploads/f5869ee6-f6d1-4416-85d1-062e4eb5c2a4.png",
+  "/lovable-uploads/2cbedb27-f66f-4433-b7c9-870d681aa902.png",
+  "/lovable-uploads/5e6c7328-0ac9-4834-86a1-15d99693edd3.png"
 ];
 
 const IstriaAccommodation = () => {
