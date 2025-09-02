@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { supabase } from "@/integrations/supabase/client";
 
 interface LocationMapModalProps {
   open: boolean;
@@ -30,24 +29,11 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
 
       console.log('Starting map initialization...');
 
-      // Fetch Mapbox token from Supabase Edge Function
-      console.log('Calling get-mapbox-token edge function...');
-      const { data, error: tokenError } = await supabase.functions.invoke('get-mapbox-token');
+      // Use the Mapbox token directly
+      const mapboxToken = 'pk.eyJ1IjoidHJhaWxzcXVhZCIsImEiOiJjbWYyOHcyOTcxcDR4MnJzNzYxMjJ1Mmk0In0.ChC7OJ4KStECKkTJ0wwCUA';
       
-      console.log('Edge function response:', { data, error: tokenError });
-      
-      if (tokenError) {
-        console.error('Token error:', tokenError);
-        throw new Error(`Edge function error: ${tokenError.message}`);
-      }
-      
-      if (!data?.token) {
-        console.error('No token in response:', data);
-        throw new Error('No token received from edge function');
-      }
-
       console.log('Setting Mapbox token and initializing map...');
-      mapboxgl.accessToken = data.token;
+      mapboxgl.accessToken = mapboxToken;
       
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
