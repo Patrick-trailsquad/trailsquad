@@ -54,7 +54,7 @@ const IstriaIncludedAmenities = ({ className = "" }: IstriaIncludedAmenitiesProp
     {
       icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
       title: "Lokalt cuisine",
-      description: "Morgenmad og frokost inkluderet"
+      description: "Morgenmad inkluderet"
     },
     {
       icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
