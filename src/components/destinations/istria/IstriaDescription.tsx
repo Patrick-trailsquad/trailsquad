@@ -31,8 +31,8 @@ const IstriaDescription = () => {
           Med start og finish i den historiske mineby Labin slynger ruten sig gennem 
           Istrias varierende landskab fra kystlinje til indre bakker. Du vil løbe forbi 
           venetianske villaer, gennem tætte egeskovene og langs dramatiske klipper med 
-          udsigt over det adriatiske hav. Vælg mellem 50km eller 100km distancerne, 
-          begge designet til at vise det bedste af istrisk natur og kultur.
+          udsigt over det adriatiske hav. Vælg mellem 21km, 42km, 69km, 110km eller 168km 
+          distancerne, alle designet til at vise det bedste af istrisk natur og kultur.
         </p>
       </div>
 
