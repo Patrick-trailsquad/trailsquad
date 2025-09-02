@@ -27,7 +27,7 @@ const IstriaMediaSection = () => {
           <div className="col-span-2 space-y-1">
             <p className="text-sm text-gray-600">Priser fra</p>
             <p className="font-cabinet text-4xl font-bold text-charcoal">
-              7.900 DKK <span className="text-sm text-gray-500">inkl. moms</span>
+              9.900 DKK <span className="text-sm text-gray-500">inkl. moms</span>
             </p>
             <Accordion type="single" collapsible className="w-full mt-2">
               <AccordionItem value="price-details" className="border-none">
@@ -39,8 +39,8 @@ const IstriaMediaSection = () => {
                 </AccordionTrigger>
                 <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                   <div>
-                    Prisen for et <b>Delt Olive Garden View Room</b> er 7.900 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                    Prisen for et <b>Individuelt Olive Garden View Room</b> er 8.800 DKK.<br /><br />
+                    Prisen for et <b>Delt Olive Garden View Room</b> er 9.900 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                    Prisen for et <b>Individuelt Olive Garden View Room</b> er 11.200 DKK.<br /><br />
                     Moms er inkluderet i alle priser.
                   </div>
                 </AccordionContent>
