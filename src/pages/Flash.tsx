@@ -49,10 +49,10 @@ const Flash = () => {
       </section>
 
       {/* Current Flash Trip */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-24 bg-stone">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">
+            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
               Aktuel Flash-tur
             </h2>
             <p className="text-lg text-gray-600">
