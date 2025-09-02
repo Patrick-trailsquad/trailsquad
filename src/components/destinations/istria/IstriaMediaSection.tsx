@@ -40,7 +40,7 @@ const IstriaMediaSection = () => {
                 <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                   <div>
                     Prisen for et <b>Delt hotelværelse</b> er 7.500 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                    Prisen for et <b>Individuelt hotelværelse</b> er 8.800 DKK.<br /><br />
+                    Prisen for et <b>Individuelt værelse</b> er 8.800 DKK.<br /><br />
                     Moms er inkluderet i alle priser.
                   </div>
                 </AccordionContent>
