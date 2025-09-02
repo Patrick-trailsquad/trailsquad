@@ -61,7 +61,7 @@ const Flash = () => {
           </div>
           
           <div className="flex justify-center">
-            <div className="group relative overflow-hidden rounded-2xl max-w-md">
+            <div className="group relative overflow-hidden rounded-2xl w-full max-w-md md:max-w-lg">
               <a href="/destinations/istria" className="block">
                 <img
                   src="/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png"
