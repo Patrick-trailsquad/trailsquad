@@ -5,7 +5,7 @@ const destinations = [
   { name: "Madeira Island Ultra Trail", href: "/destinations/miut", spots: "Løb afsluttet 🏁" },
   { name: "Trail Ribeira Sacra", href: "/destinations/ribeira-sacra", spots: "3 pladser" },
   { name: "Chianti Ultra Trail", href: "/destinations/chianti", spots: "Åbner senere" },
-  { name: "Istria 100 by UTMB", href: "/destinations/istria", spots: "Åbner senere" },
+  { name: "Istria 100 by UTMB", href: "/destinations/istria", spots: "5 pladser" },
   { name: "Vesuvio Ultra Marathon", href: "/destinations/vesuvio", spots: "Åbner senere" },
   { name: "Transylvania 100", href: "/destinations/transylvania", spots: "13 pladser" },
   { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "15 pladser" },
