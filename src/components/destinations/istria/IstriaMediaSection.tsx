@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { Clock, ThumbsUp } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
+import React from 'react';
+import PriceQuoteForm from "../../../components/PriceQuoteForm";
 import {
   Accordion,
   AccordionItem,
@@ -11,44 +8,7 @@ import {
 } from "@/components/ui/accordion";
 
 const IstriaMediaSection = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      const response = await fetch('https://hooks.zapier.com/hooks/catch/18341193/23xf8pn/', {
-        method: 'POST',
-        body: JSON.stringify({ 
-          email,
-          destination: "Istria 100 by UTMB"
-        })
-      });
-      
-      if (response.ok) {
-        setIsSuccess(true);
-        toast({
-          title: "Tak!",
-          description: "Vi giver dig besked, så snart tilmeldingen åbner."
-        });
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    } catch (error) {
-      toast({
-        title: "Fejl",
-        description: "Der opstod en fejl. Prøv igen senere.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
+  const spotsLeft = 3;
   return (
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
@@ -63,9 +23,9 @@ const IstriaMediaSection = () => {
       </div>
 
       <div className="bg-white rounded-xl p-8 shadow-lg">
-        <div className="flex justify-between items-center mb-6">
-          <div>
-            <p className="text-sm text-gray-600 mb-1">Fra</p>
+        <div className="grid grid-cols-2 gap-6 mb-6">
+          <div className="col-span-2 space-y-1">
+            <p className="text-sm text-gray-600">Priser fra</p>
             <p className="font-cabinet text-4xl font-bold text-charcoal">
               7.500 DKK <span className="text-sm text-gray-500">inkl. moms</span>
             </p>
@@ -87,21 +47,16 @@ const IstriaMediaSection = () => {
               </AccordionItem>
             </Accordion>
           </div>
-          <div className="text-right">
-            <p className="text-sm text-gray-600 mb-1">Registreringsstatus</p>
-            <div className="bg-sage px-3 py-1.5 rounded-full">
-              <p className="font-cabinet text-sm font-medium text-white flex items-center justify-center gap-1">
-                3 spots tilbage
-              </p>
-            </div>
+          <div className="col-span-2">
+            <p className="text-sm text-gray-600 mb-1">Rejsestatus</p>
+            <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} pladser</p>
           </div>
         </div>
-        <div className="text-center py-8">
-          <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Tilmeld dig nu</h3>
-          <Button size="xl" className="bg-sage hover:bg-sage-light text-white px-12">
-            Tilmeld dig
-          </Button>
-        </div>
+        <PriceQuoteForm 
+          destinationName="Istria 100 by UTMB"
+          availableDistances={["100km"]}
+          maxParticipants={spotsLeft}
+        />
       </div>
     </div>
   );
