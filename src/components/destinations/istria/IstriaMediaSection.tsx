@@ -89,36 +89,18 @@ const IstriaMediaSection = () => {
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-600 mb-1">Registreringsstatus</p>
-            <div className="bg-[#F1F0FB] px-3 py-1.5 rounded-full">
-              <p className="font-cabinet text-sm font-medium text-[#9F9EA1] flex items-center justify-center gap-1">
-                <Clock className="w-4 h-4 hidden sm:block" />
-                Åbner senere
+            <div className="bg-sage px-3 py-1.5 rounded-full">
+              <p className="font-cabinet text-sm font-medium text-white flex items-center justify-center gap-1">
+                3 spots tilbage
               </p>
             </div>
           </div>
         </div>
         <div className="text-center py-8">
-          <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Få besked når tilmeldingen åbner</h3>
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
-            <Input 
-              type="email" 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
-              required 
-              disabled={isSuccess} 
-              placeholder="Indtast din email" 
-              className="flex-1 h-[56px] px-6 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20" 
-            />
-            {isSuccess ? (
-              <div className="bg-transparent border-2 border-black text-black h-[56px] px-8 rounded-full flex items-center justify-center">
-                <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
-              </div>
-            ) : (
-              <Button type="submit" variant="black" size="xl" disabled={isSubmitting}>
-                {isSubmitting ? 'Indsender...' : 'Giv mig besked'}
-              </Button>
-            )}
-          </form>
+          <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Tilmeld dig nu</h3>
+          <Button size="xl" className="bg-sage hover:bg-sage-light text-white px-12">
+            Tilmeld dig
+          </Button>
         </div>
       </div>
     </div>
