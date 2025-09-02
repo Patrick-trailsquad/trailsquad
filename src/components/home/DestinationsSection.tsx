@@ -28,7 +28,7 @@ const destinations = [
     image: "/lovable-uploads/252cbd72-9c01-4a8c-b76c-fdc820f43886.png",
     location: "Istria 100 by UTMB, Kroatien",
     date: "April 2026",
-    spots: "Åbner senere",
+    spots: "5 pladser",
     href: "/destinations/istria"
   },
   {
