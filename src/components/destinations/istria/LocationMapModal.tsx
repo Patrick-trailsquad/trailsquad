@@ -97,7 +97,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[80vh]">
+      <DialogContent className="max-w-6xl max-h-[90vh]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary" />
@@ -106,7 +106,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         </DialogHeader>
         
         {isLoading && (
-          <div className="flex items-center justify-center h-96 bg-muted/30 rounded-lg">
+          <div className="flex items-center justify-center h-[600px] bg-muted/30 rounded-lg">
             <div className="text-center">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
               <p className="text-muted-foreground">Loading map...</p>
@@ -115,7 +115,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         )}
         
         {error && (
-          <div className="flex items-center justify-center h-96 bg-muted/30 rounded-lg">
+          <div className="flex items-center justify-center h-[600px] bg-muted/30 rounded-lg">
             <div className="text-center">
               <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
               <p className="text-destructive mb-2">{error}</p>
@@ -128,7 +128,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         
         <div 
           ref={mapContainer} 
-          className={`w-full rounded-lg ${isMapInitialized ? 'h-96' : 'h-0'}`}
+          className={`w-full rounded-lg ${isMapInitialized ? 'h-[600px]' : 'h-0'}`}
         />
       </DialogContent>
     </Dialog>
