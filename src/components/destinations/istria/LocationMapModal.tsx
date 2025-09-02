@@ -21,18 +21,26 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
   const umagCoordinates: [number, number] = [13.5219, 45.4303];
 
   const initializeMap = async () => {
-    if (!mapContainer.current) return;
+    if (!mapContainer.current) {
+      console.log('Map container ref is null, cannot initialize');
+      return;
+    }
 
     try {
       setIsLoading(true);
       setError(null);
 
       console.log('Starting map initialization...');
+      console.log('Map container dimensions:', {
+        width: mapContainer.current.offsetWidth,
+        height: mapContainer.current.offsetHeight,
+        visible: mapContainer.current.offsetParent !== null
+      });
 
       // Use the Mapbox token directly
       const mapboxToken = 'pk.eyJ1IjoidHJhaWxzcXVhZCIsImEiOiJjbWYyOHcyOTcxcDR4MnJzNzYxMjJ1Mmk0In0.ChC7OJ4KStECKkTJ0wwCUA';
       
-      console.log('Setting Mapbox token and initializing map...');
+      console.log('Setting Mapbox token:', mapboxToken.substring(0, 20) + '...');
       mapboxgl.accessToken = mapboxToken;
       
       map.current = new mapboxgl.Map({
@@ -42,24 +50,40 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         zoom: 12,
       });
 
-      // Add marker for Umag
-      new mapboxgl.Marker({
-        color: '#FFDC00',
-        scale: 1.2
-      })
-        .setLngLat(umagCoordinates)
-        .setPopup(
-          new mapboxgl.Popup({ offset: 25 })
-            .setHTML('<h3 style="margin: 0; font-weight: bold;">Umag</h3><p style="margin: 4px 0 0 0;">Istria, Croatia</p>')
-        )
-        .addTo(map.current);
+      console.log('Map object created, waiting for load event...');
 
-      // Add navigation controls
-      map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
+      // Wait for the map to load before adding markers and controls
+      map.current.on('load', () => {
+        console.log('Map load event triggered');
+        
+        if (!map.current) return;
 
-      console.log('Map initialized successfully');
-      setIsMapInitialized(true);
-      setIsLoading(false);
+        // Add marker for Umag
+        new mapboxgl.Marker({
+          color: '#FFDC00',
+          scale: 1.2
+        })
+          .setLngLat(umagCoordinates)
+          .setPopup(
+            new mapboxgl.Popup({ offset: 25 })
+              .setHTML('<h3 style="margin: 0; font-weight: bold;">Umag</h3><p style="margin: 4px 0 0 0;">Istria, Croatia</p>')
+          )
+          .addTo(map.current);
+
+        // Add navigation controls
+        map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
+
+        console.log('Map initialized successfully');
+        setIsMapInitialized(true);
+        setIsLoading(false);
+      });
+
+      // Handle map errors
+      map.current.on('error', (e) => {
+        console.error('Mapbox error event:', e);
+        setError(`Map loading failed: ${e.error?.message || 'Unknown error'}`);
+        setIsLoading(false);
+      });
     } catch (error) {
       console.error('Error initializing map:', error);
       setError(`Unable to load map: ${error.message}`);
@@ -69,11 +93,17 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
 
   useEffect(() => {
     if (open) {
-      initializeMap();
+      // Add a small delay to ensure the modal DOM is fully rendered
+      const timeoutId = setTimeout(() => {
+        initializeMap();
+      }, 100);
+      
+      return () => clearTimeout(timeoutId);
     }
 
     return () => {
       if (map.current) {
+        console.log('Cleaning up map');
         map.current.remove();
         map.current = null;
         setIsMapInitialized(false);
