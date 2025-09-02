@@ -24,7 +24,7 @@ const TransylvaniaPricingSection = () => {
           <Accordion type="single" collapsible className="w-full mt-2">
             <AccordionItem value="price-details" className="border-none">
               <AccordionTrigger
-                className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none flex justify-between items-center"
+                className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none flex items-center gap-2"
                 style={{ background: 'none', boxShadow: 'none' }}
               >
                 Forklar prisvariationer
