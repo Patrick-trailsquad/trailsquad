@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { supabase } from "@/integrations/supabase/client";
 
 interface LocationMapModalProps {
   open: boolean;
@@ -14,18 +14,29 @@ interface LocationMapModalProps {
 const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [isMapInitialized, setIsMapInitialized] = useState(false);
 
   // Umag, Istria, Croatia coordinates
   const umagCoordinates: [number, number] = [13.5219, 45.4303];
 
-  const initializeMap = (token: string) => {
-    if (!mapContainer.current || !token) return;
+  const initializeMap = async () => {
+    if (!mapContainer.current) return;
 
-    mapboxgl.accessToken = token;
-    
     try {
+      setIsLoading(true);
+      setError(null);
+
+      // Fetch Mapbox token from Supabase Edge Function
+      const { data, error: tokenError } = await supabase.functions.invoke('get-mapbox-token');
+      
+      if (tokenError || !data?.token) {
+        throw new Error('Unable to load map configuration');
+      }
+
+      mapboxgl.accessToken = data.token;
+      
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v12',
@@ -49,15 +60,17 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
       map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
       setIsMapInitialized(true);
+      setIsLoading(false);
     } catch (error) {
       console.error('Error initializing map:', error);
-      setIsMapInitialized(false);
+      setError('Unable to load map. Please try again later.');
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    if (open && mapboxToken) {
-      initializeMap(mapboxToken);
+    if (open) {
+      initializeMap();
     }
 
     return () => {
@@ -67,7 +80,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         setIsMapInitialized(false);
       }
     };
-  }, [open, mapboxToken]);
+  }, [open]);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -79,33 +92,22 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
           </DialogTitle>
         </DialogHeader>
         
-        {!isMapInitialized && (
-          <div className="space-y-4 p-4">
-            <p className="text-sm text-gray-600">
-              To display the map, please enter your Mapbox public token. You can get one from{' '}
-              <a 
-                href="https://mapbox.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary underline hover:text-primary/80"
-              >
-                mapbox.com
-              </a>
-              {' '}in the Tokens section of your dashboard.
-            </p>
-            <div className="flex gap-2">
-              <Input
-                type="text"
-                placeholder="Enter your Mapbox public token (pk.)"
-                value={mapboxToken}
-                onChange={(e) => setMapboxToken(e.target.value)}
-                className="flex-1"
-              />
-              <Button 
-                onClick={() => initializeMap(mapboxToken)}
-                disabled={!mapboxToken.startsWith('pk.')}
-              >
-                Load Map
+        {isLoading && (
+          <div className="flex items-center justify-center h-96 bg-muted/30 rounded-lg">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+              <p className="text-muted-foreground">Loading map...</p>
+            </div>
+          </div>
+        )}
+        
+        {error && (
+          <div className="flex items-center justify-center h-96 bg-muted/30 rounded-lg">
+            <div className="text-center">
+              <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
+              <p className="text-destructive mb-2">{error}</p>
+              <Button onClick={initializeMap} variant="outline" size="sm">
+                Try Again
               </Button>
             </div>
           </div>
@@ -115,15 +117,6 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
           ref={mapContainer} 
           className={`w-full rounded-lg ${isMapInitialized ? 'h-96' : 'h-0'}`}
         />
-        
-        {!isMapInitialized && mapboxToken && (
-          <div className="flex items-center justify-center h-96 bg-gray-50 rounded-lg">
-            <div className="text-center">
-              <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-              <p className="text-gray-600">Loading map...</p>
-            </div>
-          </div>
-        )}
       </DialogContent>
     </Dialog>
   );
