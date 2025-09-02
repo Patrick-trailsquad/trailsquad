@@ -91,31 +91,33 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
           </DialogTitle>
         </DialogHeader>
         
-        {isLoading && (
-          <div className="flex items-center justify-center h-[600px] bg-muted/30 rounded-lg">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-              <p className="text-muted-foreground">Loading map...</p>
+        <div className="relative">
+          {isLoading && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-background/80 rounded-lg">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
+                <p className="text-muted-foreground">Loading map...</p>
+              </div>
             </div>
-          </div>
-        )}
-        
-        {error && (
-          <div className="flex items-center justify-center h-[600px] bg-muted/30 rounded-lg">
-            <div className="text-center">
-              <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-              <p className="text-destructive mb-2">{error}</p>
-              <Button onClick={initializeMap} variant="outline" size="sm">
-                Try Again
-              </Button>
+          )}
+          
+          {error && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-background/80 rounded-lg">
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
+                <p className="text-destructive mb-2">{error}</p>
+                <Button onClick={initializeMap} variant="outline" size="sm">
+                  Try Again
+                </Button>
+              </div>
             </div>
-          </div>
-        )}
-        
-        <div 
-          ref={mapContainer} 
-          className={`w-full rounded-lg ${isMapInitialized ? 'h-[600px]' : 'h-0'}`}
-        />
+          )}
+          
+          <div 
+            ref={mapContainer} 
+            className="w-full h-[600px] rounded-lg bg-muted/30"
+          />
+        </div>
       </DialogContent>
     </Dialog>
   );
