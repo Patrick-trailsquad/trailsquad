@@ -28,13 +28,25 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
       setIsLoading(true);
       setError(null);
 
+      console.log('Starting map initialization...');
+
       // Fetch Mapbox token from Supabase Edge Function
+      console.log('Calling get-mapbox-token edge function...');
       const { data, error: tokenError } = await supabase.functions.invoke('get-mapbox-token');
       
-      if (tokenError || !data?.token) {
-        throw new Error('Unable to load map configuration');
+      console.log('Edge function response:', { data, error: tokenError });
+      
+      if (tokenError) {
+        console.error('Token error:', tokenError);
+        throw new Error(`Edge function error: ${tokenError.message}`);
+      }
+      
+      if (!data?.token) {
+        console.error('No token in response:', data);
+        throw new Error('No token received from edge function');
       }
 
+      console.log('Setting Mapbox token and initializing map...');
       mapboxgl.accessToken = data.token;
       
       map.current = new mapboxgl.Map({
@@ -59,11 +71,12 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
       // Add navigation controls
       map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
+      console.log('Map initialized successfully');
       setIsMapInitialized(true);
       setIsLoading(false);
     } catch (error) {
       console.error('Error initializing map:', error);
-      setError('Unable to load map. Please try again later.');
+      setError(`Unable to load map: ${error.message}`);
       setIsLoading(false);
     }
   };
