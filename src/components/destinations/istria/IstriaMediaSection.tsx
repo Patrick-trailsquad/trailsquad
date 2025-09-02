@@ -89,7 +89,7 @@ const IstriaMediaSection = () => {
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-600 mb-1">Registreringsstatus</p>
-            <div className="bg-[#F1F0FB] px-3 py-1.5 rounded-full">
+            <div className="bg-[#F1F0FB] px-2 py-1 rounded-full">
               <p className="font-cabinet text-sm font-medium text-[#9F9EA1] flex items-center gap-1">
                 <Clock className="w-4 h-4 hidden sm:block" />
                 Åbner senere
