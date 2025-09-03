@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const destinations = [
   { name: "Madeira Island Ultra Trail", href: "/destinations/miut", spots: "Løb afsluttet 🏁" },
-  { name: "Trail Ribeira Sacra", href: "/destinations/ribeira-sacra", spots: "3 pladser" },
+  { name: "Trail Ribeira Sacra", href: "/destinations/ribeira-sacra", spots: "Billetsalg lukket" },
   { name: "Chianti Ultra Trail", href: "/destinations/chianti", spots: "Åbner senere" },
   { name: "Istria 100 by UTMB", href: "/destinations/istria", spots: "5 pladser" },
   { name: "Vesuvio Ultra Marathon", href: "/destinations/vesuvio", spots: "Åbner senere" },
@@ -34,6 +34,8 @@ const DestinationLinks = () => {
               ? "bg-yellow-100 text-yellow-800 border border-yellow-300" 
               : destination.spots === "Åbner senere"
               ? "bg-gray-100 text-gray-600"
+              : destination.spots === "Billetsalg lukket"
+              ? "bg-orange text-orange-foreground"
               : "bg-yellow-400 text-black"
           }`}>
             {destination.spots}

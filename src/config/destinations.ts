@@ -2,7 +2,7 @@ export interface Destination {
   id: string;
   name: string;
   route: string;
-  status: 'upcoming' | 'open' | 'closed' | 'completed';
+  status: 'upcoming' | 'open' | 'closed' | 'completed' | 'tickets-closed';
   published: boolean;
 }
 

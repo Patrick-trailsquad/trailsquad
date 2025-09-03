@@ -14,7 +14,7 @@ const destinations = [
     image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2025",
-    spots: "3 pladser",
+    spots: "Billetsalg lukket",
     href: "/destinations/ribeira-sacra"
   },
   {
@@ -104,13 +104,15 @@ const DestinationsSection = () => {
                     {trip.location}
                   </h3>
                   <p className="font-inter text-white/90 mb-2">{trip.date}</p>
-                  <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
+                   <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
                     trip.spots === "Løb afsluttet 🏁" 
                       ? "bg-white/20 backdrop-blur-sm text-white border-2 border-[#FFDC00]" 
                       : trip.spots === "Åbner senere"
                       ? "bg-[#F1F0FB] text-[#9F9EA1]"
+                      : trip.spots === "Billetsalg lukket"
+                      ? "bg-orange text-orange-foreground"
                       : "bg-[#FFDC00] text-black"
-                  }`}>
+                   }`}>
                     {trip.spots}
                   </span>
                 </div>

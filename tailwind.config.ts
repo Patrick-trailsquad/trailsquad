@@ -33,6 +33,10 @@ export default {
           light: '#F0937D'
         },
         charcoal: '#2C3539',
+        orange: {
+          DEFAULT: 'hsl(var(--orange))',
+          foreground: 'hsl(var(--orange-foreground))'
+        },
       },
       fontFamily: {
         cabinet: ['Cabinet Grotesk', 'sans-serif'],
