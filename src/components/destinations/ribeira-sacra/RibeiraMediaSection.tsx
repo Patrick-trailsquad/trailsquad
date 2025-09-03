@@ -1,5 +1,4 @@
 import React from 'react';
-import PriceQuoteForm from "../../../components/PriceQuoteForm";
 import {
   Accordion,
   AccordionItem,
@@ -8,7 +7,6 @@ import {
 } from "@/components/ui/accordion";
 
 const RibeiraMediaSection = () => {
-  const spotsLeft = 3;
   return (
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
@@ -49,14 +47,13 @@ const RibeiraMediaSection = () => {
           </div>
           <div className="col-span-2">
             <p className="text-sm text-gray-600 mb-1">Rejsestatus</p>
-            <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} pladser</p>
+            <div className="inline-flex">
+              <span className="bg-orange text-orange-foreground px-3 py-1 text-sm font-medium rounded-full">
+                Billetsalg lukket
+              </span>
+            </div>
           </div>
         </div>
-        <PriceQuoteForm 
-          destinationName="Trail Ribeira Sacra"
-          availableDistances={["48km"]}
-          maxParticipants={spotsLeft}
-        />
       </div>
     </div>
   );
