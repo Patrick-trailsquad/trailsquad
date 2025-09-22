@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
 import { Button } from './ui/button';
 import PhoneInput from './PhoneInput';
 import { Phone, CheckCircle2 } from 'lucide-react';
@@ -9,6 +11,7 @@ const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/u13r20
 const CallMeBackCTA = () => {
   const [showPhoneInput, setShowPhoneInput] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [fullName, setFullName] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -25,6 +28,7 @@ const CallMeBackCTA = () => {
         },
         mode: 'no-cors',
         body: JSON.stringify({
+          full_name: fullName,
           phone_number: phoneNumber,
           request_type: 'call_back_request',
           submitted_at: new Date().toISOString(),
@@ -61,6 +65,17 @@ const CallMeBackCTA = () => {
   if (showPhoneInput) {
     return (
       <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-1.5">
+          <Label htmlFor="fullName">Fulde navn</Label>
+          <Input
+            id="fullName"
+            type="text"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            placeholder="Indtast dit fulde navn"
+            required
+          />
+        </div>
         <PhoneInput
           value={phoneNumber}
           onChange={setPhoneNumber}
@@ -68,7 +83,7 @@ const CallMeBackCTA = () => {
         <div className="flex gap-2">
           <Button 
             type="submit" 
-            disabled={isLoading || !phoneNumber}
+            disabled={isLoading || !phoneNumber || !fullName}
             className="flex-1 bg-green-600 text-white hover:bg-green-700 border-0"
           >
             {isLoading ? "Sender..." : "Send anmodning"}
