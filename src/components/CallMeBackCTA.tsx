@@ -21,7 +21,7 @@ const CallMeBackCTA = () => {
           onChange={setPhoneNumber}
         />
         <div className="flex gap-2">
-          <Button type="submit" variant="ghost" className="flex-1">
+          <Button type="submit" variant="ghost" className="flex-1 border border-input">
             Send anmodning
           </Button>
           <Button 
