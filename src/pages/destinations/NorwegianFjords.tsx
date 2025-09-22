@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
+import CallMeBackCTA from "../../components/CallMeBackCTA";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
@@ -82,6 +83,9 @@ const NorwegianFjords = () => {
                 destinationName="Norwegian Fjords" 
                 availableDistances={["21km", "42km"]}
               />
+              <div className="mt-4">
+                <CallMeBackCTA />
+              </div>
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>

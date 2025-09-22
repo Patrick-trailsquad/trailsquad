@@ -1,6 +1,7 @@
 
 import React from 'react';
 import PriceQuoteForm from "../../../components/PriceQuoteForm";
+import CallMeBackCTA from "../../../components/CallMeBackCTA";
 import {
   Accordion,
   AccordionItem,
@@ -58,6 +59,9 @@ const ZugspitzMediaSection = () => {
           availableDistances={["16km", "29km", "44km", "68km", "86km", "106km"]}
           maxParticipants={spotsLeft}
         />
+        <div className="mt-4">
+          <CallMeBackCTA />
+        </div>
       </div>
     </div>
   );

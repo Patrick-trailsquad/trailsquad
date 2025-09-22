@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import PriceQuoteForm from "../../PriceQuoteForm";
+import CallMeBackCTA from "../../CallMeBackCTA";
 import {
   Accordion,
   AccordionItem,
@@ -49,6 +50,9 @@ const TransylvaniaPricingSection = () => {
         availableDistances={["20km", "30km", "50km", "80km", "100km"]}
         maxParticipants={spotsLeft}
       />
+      <div className="mt-4">
+        <CallMeBackCTA />
+      </div>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
+import CallMeBackCTA from "../../components/CallMeBackCTA";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
 import Footer from "../../components/Footer";
@@ -84,6 +85,9 @@ const BlackForest = () => {
                 destinationName="Black Forest Ultra Trail" 
                 availableDistances={["30km", "60km", "120km"]}
               />
+              <div className="mt-4">
+                <CallMeBackCTA />
+              </div>
             </div>
             <div className="bg-stone p-6 rounded-xl">
               <h2 className="font-cabinet text-2xl font-bold mb-4">What's included in the standard package</h2>
