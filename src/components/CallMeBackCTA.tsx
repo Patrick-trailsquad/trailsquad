@@ -13,12 +13,6 @@ const CallMeBackCTA = () => {
     // Handle phone number submission logic here
     console.log('Phone number submitted:', phoneNumber);
     setIsSubmitted(true);
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setShowPhoneInput(false);
-      setPhoneNumber('');
-    }, 3000);
   };
 
   if (isSubmitted) {
