@@ -1,17 +1,34 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import PhoneInput from './PhoneInput';
-import { Phone } from 'lucide-react';
+import { Phone, CheckCircle2 } from 'lucide-react';
 
 const CallMeBackCTA = () => {
   const [showPhoneInput, setShowPhoneInput] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle phone number submission logic here
     console.log('Phone number submitted:', phoneNumber);
+    setIsSubmitted(true);
+    // Reset after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setShowPhoneInput(false);
+      setPhoneNumber('');
+    }, 3000);
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-green-50 rounded-full p-4 flex items-center justify-center gap-2 border border-green-200">
+        <CheckCircle2 className="h-4 w-4 text-green-600" />
+        <span className="text-green-800 font-medium">Vi ringer til dig snarest!</span>
+      </div>
+    );
+  }
 
   if (showPhoneInput) {
     return (
