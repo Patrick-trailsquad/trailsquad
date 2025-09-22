@@ -40,7 +40,7 @@ const CallMeBackCTA = () => {
     <Button
       onClick={() => setShowPhoneInput(true)}
       variant="outline"
-      className="w-full flex items-center gap-2"
+      className="w-full flex items-center gap-2 rounded-full"
     >
       <Phone className="h-4 w-4" />
       Ring mig op
