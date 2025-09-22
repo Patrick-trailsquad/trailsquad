@@ -33,6 +33,7 @@ const CallMeBackCTA = () => {
           request_type: 'call_back_request',
           submitted_at: new Date().toISOString(),
           triggered_from: window.location.origin,
+          destination_page: window.location.pathname,
         }),
       });
 
