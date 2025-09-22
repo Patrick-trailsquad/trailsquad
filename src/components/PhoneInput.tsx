@@ -27,7 +27,7 @@ const PhoneInput = ({ value, onChange, error, errorMessage }: PhoneInputProps) =
 
   return (
     <div className="space-y-1.5">
-      <Label htmlFor="phone">Phone Number</Label>
+      <Label htmlFor="phone">Telefonnummer</Label>
       <Input
         id="phone"
         type="tel"
