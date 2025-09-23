@@ -93,59 +93,70 @@ Email: hello@trailsquad.dk`,
     },
     terms: {
       title: "Handelsbetingelser",
-      content: `Terms & Conditions
+      content: `Når du rejser med Trail Squad, gælder nedenstående betingelser. Vi anbefaler, at du læser dem grundigt igennem, inden du bestiller rejsen.
 
-Effective Date: 1st of March 2025
 
-1. Introduction
-Welcome to Trail Squad ApS ("we," "our," "us"). By using our website and services, you agree to these Terms & Conditions. If you do not agree, please do not use our services.
+Bestilling og betaling
+Rejsen kan bestilles via formularen på vores hjemmeside. Efter bestilling modtager du en bekræftelsesmail, som indeholder et betalingslink og/eller betalingsinformation ifm bankoverførsel. Dette er så depositummet kan betales. Det er først når depositummet er betalt, at rejsen er endeligt bekræftet. Det er dit ansvar at kontrollere, at oplysninger om rejsen og prisen stemmer overens med din bestilling. 
 
-2. Services Provided
-Trail Squad organizes and facilitates trail running trips across Europe (and globally) for companies and individuals. We act as an intermediary between customers and service providers such as:
-• Hotels
-• Transport providers
-• Event organizers
 
-3. Booking & Payments
-• All bookings are subject to availability and confirmation
-• Payments must be made in accordance with the payment terms specified during booking
-• Failure to complete payment may result in cancellation of your reservation
+Depositum og restbetaling
+Ved bestilling betales et depositum svarende til 75 % af rejsens pris. Depositum skal indbetales senest 48 timer efter modtagelse af faktura og reservationsmail. Indbetaling af depositum er bindende og bekræfter, at deltagerne har læst og accepteret rejsens vilkår.
+Restbeløbet skal være Trail Squad i hænde senest 60 dage inden afrejse. Hvis betalingen udebliver, kan DBP annullere rejsen, og depositummet refunderes ikke. Ved bestilling senere end 60 dage før afrejse skal hele rejsens pris betales straks.
 
-4. Cancellations & Refunds
-• Cancellation policies vary depending on the trip and service providers. Specific details will be provided at the time of booking
-• Refunds, if applicable, will be processed based on our refund policy and any supplier terms
-• We reserve the right to cancel a trip due to unforeseen circumstances. In such cases, we will offer a rescheduled date or a refund
-• Please note: When purchasing trips and package tours through Trail Squad, the right of withdrawal does not apply in accordance with Section 18(2)(12) of the Danish Consumer Contracts Act (Forbrugeraftalelovens § 18, stk. 2, nr. 12). We recommend that you take out travel and cancellation insurance.
 
-5. Customer Responsibilities
-• You must ensure you are physically fit to participate in trail running activities
-• You are responsible for obtaining any necessary travel insurance, visas, and health documents
-• You must comply with local laws and regulations during the trip
+Ændringer i bestillingen
+Det er som udgangspunkt ikke muligt at ændre i flybilletterne, da disse bestilles samlet for hele gruppen. Hvis en senere hjemrejsedato ønskes, står deltageren selv for hjemrejsen. 
+Hvad angår ændring af distance for det respektive løb, så afhænger det af hvad der er muligt hos den relevante løbsorganisator og forudsat at der er ledige pladser på den ønskede distance. For ændringer opkræves et ekspeditionsgebyr på 250 kr. pr. ændring, samt evt meromkostninger for et evt dyrere løb.  
+DBP kan regulere prisen på rejsen, hvis der sker ændringer i valutakurser, skatter, afgifter eller oliepriser. Prisændringer kan dog ikke foretages senere end 20 dage før afrejse.
 
-6. Liability Disclaimer
-• Trail Squad is not liable for any injury, illness, loss, or damage incurred during the trip
-• We do not take responsibility for delays, cancellations, or changes caused by third-party service providers or force majeure events (e.g., natural disasters, strikes, extreme weather conditions)
 
-7. Data Protection & Privacy
-• We collect and process personal data in accordance with our [Privacy Policy]
-• By using our services, you consent to the processing of your personal data as outlined in our Privacy Policy
+Afbestilling fra kundens side
+Afbestilling skal ske skriftligt pr. e-mail til hello@trailsquad.dk, og skal være modtaget inden rejsen begynder. Følgende regler gælder:
+Afbestilles rejsen mere end 60 dage før afrejse, mistes depositum
+Afbestilles mindre end 60 dage før afrejse, mistes hele rejsens pris. 
+Manglende fremmøde ved afrejse berettiger ikke til kompensation.
+Bemærk: Ved køb af rejser og pakkerejser gennem Trail Squad gælder der ikke fortrydelsesret i henhold til Forbrugeraftalelovens § 18, stk. 2, nr. 12. Vi anbefaler, at du tegner en rejse- og afbestillingsforsikring.
 
-8. Intellectual Property
-• All content on our website, including text, images, and branding, is owned by Trail Squad and may not be used without our permission
 
-9. Governing Law & Disputes
-• These Terms & Conditions are governed by the laws of Denmark
-• Any disputes shall be resolved through negotiation or, if necessary, legal proceedings in Denmark
+Arrangørens ret til aflysning
+Trail Squad kan aflyse en rejse, hvis deltagerantallet 30 dage før afrejse er under 75 % af kapaciteten. Deltagerne vil i så fald blive informeret hurtigst muligt. 
 
-10. Changes to Terms & Conditions
-• We reserve the right to update these Terms & Conditions at any time
-• Any changes will be posted on our website with the updated effective date
 
-11. Contact Information
-For any inquiries regarding these Terms & Conditions, please contact us at:
+Ansvarsbegrænsning
+Trail Squad kan ikke gøres ansvarlig for uudnyttede ferieaktiviteter herunder forudbestilt løbsbilletter, udgifter til transport fra lufthavn etc., som skyldes forsinkelser grundet force majeure, vejrlig eller andre omstændigheder, som ligger uden for arrangørens kontrol. 
+Alt ophold og aktiviteter sker på eget ansvar. Trail Squad kan ikke drages til ansvar for personskade eller tingskade påført rejsedeltageren selv eller tredjemand.
 
-Trail Squad
-Email: hello@trailsquad.dk`,
+
+Bagage
+Trail Squad bærer intet ansvar for tabt eller beskadiget bagage. Eventuelle krav rettes til eget forsikringsselskab. Rejsedeltagere bør sikre sig, at de har tilstrækkelig forsikringsdækning.
+
+
+Erstatningspligt
+Trail Squads ansvar følger branchens almindelige regler og normer. Vi dækker ikke, hvis løbsområder lukker pga. sneforhold, laviner, blæst eller myndighedsregler. Ændringer i aktiviteter eller program, som pålægges af lokale myndigheder, giver ikke ret til kompensation.
+
+
+Særlige ønsker
+Vi bestræber os på at imødekomme særlige ønsker, fx specifik beliggenhed af værelser, men kan ikke garantere dette og påtager os intet ansvar, hvis ønsket ikke kan opfyldes. Kun skriftlige aftaler er bindende.
+
+
+Deltagerens ansvar
+Rejsedeltageren skal følge de anvisninger, der gives af DBP, vores repræsentanter og transportører. Overtrædelse af ordensregler kan medføre bortvisning fra rejsearrangementet, uden kompensation.
+Den rejsende er erstatningsansvarlig efter alm. erstatningsregler for skader forvoldt mod Trail Squad, dennes repræsentanter og andre, som Trail Squad samarbejder med. Alle beboere i en lejlighed/hotelværelse hæfter solidarisk for enhver skade på indkvarteringen. 
+Den rejsende er selv ansvarlig for at have gyldigt pas og evt. visum, og det påhviler den rejsende selv at afholde alle eventuelle udgifter, som skyldes mangler i disse formaliteter. 
+Det er også deltagerens pligt at holde sig orienteret om hjemrejsetidspunkt.
+
+
+Reklamation
+Fejl eller mangler skal straks meddeles til rejselederen eller Trail Squads repræsentant, så problemet kan afhjælpes. Hvis sagen ikke kan løses på stedet, skal skriftlig klage sendes til Trail Squad senest 3 uger efter hjemkomst.
+
+
+Forsikring
+Vi anbefaler, at du tegner sygeafbestillingsforsikring, så du er dækket ved sygdom hos dig selv eller nærmeste pårørende frem til afrejse.
+
+
+Rejsegarantifonden
+Trail Squad er registreret i Rejsegarantifonden (medlemsnr. 3723) og er omfattet af den lovpligtige sikkerhedsordning.`,
     },
   };
 
