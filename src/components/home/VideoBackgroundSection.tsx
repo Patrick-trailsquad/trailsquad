@@ -39,13 +39,14 @@ const VideoBackgroundSection = () => {
     // YouTube API ready callback
     window.onYouTubeIframeAPIReady = () => {
       if (playerRef.current) {
+        const videoId = isMobile ? 'wgKpri-37EU' : 'XdgosFbv_wk';
         ytPlayerRef.current = new window.YT.Player(playerRef.current, {
-          videoId: 'wgKpri-37EU',
+          videoId: videoId,
           playerVars: {
             autoplay: 1,
             mute: 1,
             loop: 1,
-            playlist: 'wgKpri-37EU',
+            playlist: videoId,
             controls: 0,
             showinfo: 0,
             rel: 0,
