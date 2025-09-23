@@ -25,10 +25,31 @@ const PolicyModal = ({ isOpen, onClose, title, content }: PolicyModalProps) => {
           <div dangerouslySetInnerHTML={{
             __html: content.split('\n').map(line => {
               const trimmed = line.trim();
-              // Check if line is likely a section title (not empty, doesn't end with period, and appears to be a heading)
-              if (trimmed && !trimmed.endsWith('.') && !trimmed.endsWith(',') && !trimmed.startsWith('•') && !trimmed.startsWith('-') && trimmed.length < 100) {
+              
+              // Skip empty lines
+              if (!trimmed) return '<br>';
+              
+              // Check for bullet-like content (lines that are list items)
+              if (trimmed.startsWith('Afbestilles') || trimmed.startsWith('•') || trimmed.startsWith('-')) {
+                return `• ${line}`;
+              }
+              
+              // Check if line is a section title (standalone short lines that are headers)
+              const isTitle = trimmed && 
+                !trimmed.endsWith('.') && 
+                !trimmed.endsWith(',') && 
+                !trimmed.includes(':') &&
+                !trimmed.startsWith('•') && 
+                !trimmed.startsWith('-') && 
+                !trimmed.startsWith('Afbestilles') &&
+                trimmed.length < 80 &&
+                !trimmed.includes('Trail Squad') &&
+                !line.includes('@');
+                
+              if (isTitle) {
                 return `<strong>${line}</strong>`;
               }
+              
               return line;
             }).join('<br>')
           }} />
