@@ -102,13 +102,13 @@ Rejsen kan bestilles via formularen på vores hjemmeside. Efter bestilling modta
 
 Depositum og restbetaling
 Ved bestilling betales et depositum svarende til 75 % af rejsens pris. Depositum skal indbetales senest 48 timer efter modtagelse af faktura og reservationsmail. Indbetaling af depositum er bindende og bekræfter, at deltagerne har læst og accepteret rejsens vilkår.
-Restbeløbet skal være Trail Squad i hænde senest 60 dage inden afrejse. Hvis betalingen udebliver, kan DBP annullere rejsen, og depositummet refunderes ikke. Ved bestilling senere end 60 dage før afrejse skal hele rejsens pris betales straks.
+Restbeløbet skal være Trail Squad i hænde senest 60 dage inden afrejse. Hvis betalingen udebliver, kan Trail Squad annullere rejsen, og depositummet refunderes ikke. Ved bestilling senere end 60 dage før afrejse skal hele rejsens pris betales straks.
 
 
 Ændringer i bestillingen
 Det er som udgangspunkt ikke muligt at ændre i flybilletterne, da disse bestilles samlet for hele gruppen. Hvis en senere hjemrejsedato ønskes, står deltageren selv for hjemrejsen. 
 Hvad angår ændring af distance for det respektive løb, så afhænger det af hvad der er muligt hos den relevante løbsorganisator og forudsat at der er ledige pladser på den ønskede distance. For ændringer opkræves et ekspeditionsgebyr på 250 kr. pr. ændring, samt evt meromkostninger for et evt dyrere løb.  
-DBP kan regulere prisen på rejsen, hvis der sker ændringer i valutakurser, skatter, afgifter eller oliepriser. Prisændringer kan dog ikke foretages senere end 20 dage før afrejse.
+Trail Squad kan regulere prisen på rejsen, hvis der sker ændringer i valutakurser, skatter, afgifter eller oliepriser. Prisændringer kan dog ikke foretages senere end 20 dage før afrejse.
 
 
 Afbestilling fra kundens side
@@ -141,7 +141,7 @@ Vi bestræber os på at imødekomme særlige ønsker, fx specifik beliggenhed af
 
 
 Deltagerens ansvar
-Rejsedeltageren skal følge de anvisninger, der gives af DBP, vores repræsentanter og transportører. Overtrædelse af ordensregler kan medføre bortvisning fra rejsearrangementet, uden kompensation.
+Rejsedeltageren skal følge de anvisninger, der gives af Trail Squad, vores repræsentanter og transportører. Overtrædelse af ordensregler kan medføre bortvisning fra rejsearrangementet, uden kompensation.
 Den rejsende er erstatningsansvarlig efter alm. erstatningsregler for skader forvoldt mod Trail Squad, dennes repræsentanter og andre, som Trail Squad samarbejder med. Alle beboere i en lejlighed/hotelværelse hæfter solidarisk for enhver skade på indkvarteringen. 
 Den rejsende er selv ansvarlig for at have gyldigt pas og evt. visum, og det påhviler den rejsende selv at afholde alle eventuelle udgifter, som skyldes mangler i disse formaliteter. 
 Det er også deltagerens pligt at holde sig orienteret om hjemrejsetidspunkt.
