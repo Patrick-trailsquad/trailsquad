@@ -26,8 +26,8 @@ const PolicyModal = ({ isOpen, onClose, title, content }: PolicyModalProps) => {
             __html: content.split('\n').map(line => {
               const trimmed = line.trim();
               
-              // Skip empty lines
-              if (!trimmed) return '<br>';
+              // Skip empty lines - they'll be handled by CSS margins
+              if (!trimmed) return '';
               
               // Check for bullet-like content (lines that are list items)
               if (trimmed.startsWith('Afbestilles') || trimmed.startsWith('•') || trimmed.startsWith('-')) {
@@ -47,11 +47,11 @@ const PolicyModal = ({ isOpen, onClose, title, content }: PolicyModalProps) => {
                 !line.includes('@');
                 
               if (isTitle) {
-                return `<strong>${line}</strong>`;
+                return `<strong style="display: block; margin-top: 1.5rem; margin-bottom: 0.5rem;">${line}</strong>`;
               }
               
-              return line;
-            }).join('<br>')
+              return `<span style="display: block; margin-bottom: 0.5rem;">${line}</span>`;
+            }).filter(line => line !== '').join('')
           }} />
         </DialogDescription>
       </DialogContent>
