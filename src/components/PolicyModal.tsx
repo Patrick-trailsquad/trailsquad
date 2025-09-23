@@ -31,7 +31,7 @@ const PolicyModal = ({ isOpen, onClose, title, content }: PolicyModalProps) => {
               
               // Check for bullet-like content (lines that are list items)
               if (trimmed.startsWith('Afbestilles') || trimmed.startsWith('•') || trimmed.startsWith('-')) {
-                return `• ${line}`;
+                return `<span style="display: block; margin-bottom: 0.75rem;">• ${line}</span>`;
               }
               
               // Check if line is a section title (standalone short lines that are headers)
