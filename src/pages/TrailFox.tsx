@@ -46,7 +46,7 @@ const TrailFox = () => {
               </p>
               <div className="flex items-center gap-2 mt-4">
                 <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{filter: 'brightness(0) saturate(100%) invert(51%) sepia(89%) saturate(1446%) hue-rotate(328deg) brightness(92%) contrast(89%)'}} />
-                <span className="text-lg font-cabinet text-terra">Månede</span>
+                <span className="text-lg font-cabinet text-terra">Marts 2026</span>
               </div>
             </div>
           </div>
