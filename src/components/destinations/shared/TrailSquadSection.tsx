@@ -25,7 +25,7 @@ const TrailSquadSection = () => {
               Trail Squad & Trail Fox Series
             </h1>
             <h2 className="font-cabinet text-2xl md:text-3xl font-medium text-charcoal/80">
-              Your Adventure Partner
+              Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde og Røsnæs.
             </h2>
           </div>
         </div>
