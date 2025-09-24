@@ -65,6 +65,8 @@ const TrailFox = () => {
               </h2>
               <p className="text-lg text-terra/80 leading-relaxed">
                 Hvert år giver vi over 1000 trailløbere mulighed for at opleve de smukke spor. Løbet foregår i Tisvilde Hegn og byder på fantastisk og smuk natur, med skov, strand og klitter.
+                <br /><br />
+                Trail Squad løber 30 km distancen og sørger for, at vi alle kommer flot over målstregen!
               </p>
             </div>
           </div>
