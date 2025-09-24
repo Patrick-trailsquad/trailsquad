@@ -8,7 +8,7 @@ const TrailSquadSection = () => {
           <img 
             src={trailRunnersImage} 
             alt="Trail runners in forest" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-xl"
           />
         </div>
         <div className="w-1/2 bg-background p-12 flex flex-col justify-center">
