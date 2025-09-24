@@ -45,7 +45,9 @@ const TrailFox = () => {
                 Trail Squad løber 30 km distancen og sørger for, at vi alle kommer flot over målstregen!
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{filter: 'brightness(0) saturate(100%) invert(51%) sepia(89%) saturate(1446%) hue-rotate(328deg) brightness(92%) contrast(89%)'}} />
+                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{
+                filter: 'brightness(0) saturate(100%) invert(51%) sepia(89%) saturate(1446%) hue-rotate(328deg) brightness(92%) contrast(89%)'
+              }} />
                 <span className="text-lg font-cabinet text-terra">Marts 2026</span>
               </div>
             </div>
@@ -69,7 +71,9 @@ const TrailFox = () => {
                 Team Trail Squad snører løbeskoene stramt og nupper de 32 km.
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{filter: 'grayscale(1) brightness(0.5)'}} />
+                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{
+                filter: 'grayscale(1) brightness(0.5)'
+              }} />
                 <span className="text-lg font-cabinet text-muted-foreground">April 2026</span>
               </div>
             </div>
@@ -95,7 +99,9 @@ const TrailFox = () => {
                 Trail Squad tager hurtigbrillerne på og løber sammen ruten på 30 km.
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{filter: 'brightness(2)'}} />
+                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{
+                filter: 'brightness(2)'
+              }} />
                 <span className="text-lg font-cabinet text-white">August 2026</span>
               </div>
             </div>
@@ -121,8 +127,12 @@ const TrailFox = () => {
                 Trail Squad teamet skal have kilometer i stængerne og løber naturligvis de 30 km.
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{filter: 'brightness(0) saturate(100%) invert(51%) sepia(89%) saturate(1446%) hue-rotate(328deg) brightness(92%) contrast(89%)'}} />
-                <span className="text-lg font-cabinet text-terra">Månede</span>
+                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{
+                filter: 'brightness(0) saturate(100%) invert(51%) sepia(89%) saturate(1446%) hue-rotate(328deg) brightness(92%) contrast(89%)'
+              }} />
+                <span className="text-lg font-cabinet text-terra">Oktober 2026
+
+              </span>
               </div>
             </div>
           </div>
