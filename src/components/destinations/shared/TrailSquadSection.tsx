@@ -34,6 +34,7 @@ const TrailSquadSection = () => {
               asChild
               variant="charcoal"
               size="md"
+              className="w-fit"
             >
               <a 
                 href="#"
