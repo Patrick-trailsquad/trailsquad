@@ -12,7 +12,9 @@ const TrailFox = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative text-center text-white px-6 z-10">
           <img src="/lovable-uploads/trailfox-hero-logo.png" alt="TrailFox Series Logo" className="h-16 md:h-20 mx-auto mb-6 object-contain" />
-          <h1 className="font-cabinet text-5xl md:text-7xl font-bold mb-6">Trail Squad ♥️ Trail Fox</h1>
+          <h1 className="font-cabinet text-5xl md:text-7xl font-bold mb-6 flex items-center justify-center gap-4">
+            Trail Squad <span className="text-red-500">♥️</span> Trail Fox
+          </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
             Danmarks bedste trailløb i naturskønne omgivelser
           </p>
