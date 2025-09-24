@@ -100,8 +100,7 @@ const TrailFox = () => {
                 Mere end bare et løb
               </h2>
               <p className="text-lg text-terra/80 leading-relaxed">
-                TrailFox handler om oplevelsen før, under og efter løbet. Nyd den fantastiske stemning, 
-                det lækre mad og de gode historier der bliver delt når dagens præstation er i mål.
+                Helsingør Trail byder på en spændende og smuk lokation i Telgstrup Hegn i Helsingør, og vi inviterer til en fantastisk trailoplevelse, med spor der strækker sig igennem gamle nåletræer og store bøgeskove.
               </p>
             </div>
           </div>
