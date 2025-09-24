@@ -147,10 +147,10 @@ const TrailFox = () => {
                 alt="Helsingør Trail Logo"
                 className="h-12 mb-4 object-contain"
               />
-              <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-terra mb-6">
                 Mere end bare et løb
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-terra/80 leading-relaxed">
                 TrailFox handler om oplevelsen før, under og efter løbet. Nyd den fantastiske stemning, 
                 det lækre mad og de gode historier der bliver delt når dagens præstation er i mål.
               </p>
