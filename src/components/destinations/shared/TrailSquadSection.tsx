@@ -38,8 +38,6 @@ const TrailSquadSection = () => {
             >
               <a 
                 href="/trailfox"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Læs mere
               </a>
