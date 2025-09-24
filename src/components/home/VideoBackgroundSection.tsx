@@ -86,7 +86,12 @@ const VideoBackgroundSection = () => {
       >
         <div 
           ref={playerRef} 
-          className="absolute inset-0 w-full h-full"
+          className={`absolute inset-0 ${isMobile ? 'w-full h-full' : 'w-full h-full'}`}
+          style={isMobile ? {
+            width: '100vw',
+            height: '100vh',
+            objectFit: 'cover'
+          } : {}}
         />
       </div>
       
