@@ -121,7 +121,7 @@ const TrailFox = () => {
                 Trail Squad teamet skal have kilometer i stængerne og løber naturligvis de 30 km.
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{filter: 'hue-rotate(340deg) saturate(2) brightness(1.2)'}} />
+                <img src={calendarIcon} alt="Calendar" className="w-10 h-10" style={{filter: 'hue-rotate(350deg) saturate(3) brightness(0.9) contrast(1.5)'}} />
                 <span className="text-lg font-cabinet text-terra">Månede</span>
               </div>
             </div>
