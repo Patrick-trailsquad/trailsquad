@@ -77,7 +77,7 @@ const VideoBackgroundSection = () => {
       <div 
         className="absolute inset-0 w-full h-full"
         style={isMobile ? {
-          transform: 'scale(2.5)',
+          transform: 'scale(3.5)',
           transformOrigin: 'center center'
         } : {
           transform: `translateY(${scrollY * -0.5}px) scale(1.25)`,
