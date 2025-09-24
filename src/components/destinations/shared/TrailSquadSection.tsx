@@ -1,5 +1,6 @@
 import trailRunnersImage from "@/assets/trail-runners-forest.jpg";
 import trailSquadLogo from "@/assets/trail-squad-logo.png";
+import { Button } from "@/components/ui/button";
 
 const TrailSquadSection = () => {
   return (
@@ -24,11 +25,14 @@ const TrailSquadSection = () => {
             <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-4">
               Trail Squad & Trail Fox Series
             </h1>
-            <h2 className="text-lg text-charcoal/80">
+            <h2 className="text-lg text-charcoal/80 mb-6">
               Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april).
               <br />
               Vi tager afsted sammen, og får en fest!
             </h2>
+            <Button variant="ghost" size="lg" className="self-start">
+              Læs mere
+            </Button>
           </div>
         </div>
       </div>
