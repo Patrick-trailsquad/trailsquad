@@ -38,7 +38,7 @@ const TrailFox = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/5217692f-4c41-4575-bb01-9039ef65f988.png"
+                src="/lovable-uploads/trailfox-1.jpg"
                 alt="TrailFox løb gennem skoven"
                 className="w-full h-full object-cover"
               />
@@ -62,7 +62,7 @@ const TrailFox = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/749ebd53-0454-4092-9aec-b2c6d23dcfe3.png"
+                src="/lovable-uploads/trailfox-2.jpg"
                 alt="TrailFox deltagere"
                 className="w-full h-full object-cover"
               />
@@ -86,7 +86,7 @@ const TrailFox = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/4e78b4af-a60b-448a-bfe5-f89b198145ea.png"
+                src="/lovable-uploads/trailfox-3.jpg"
                 alt="TrailFox rute og navigation"
                 className="w-full h-full object-cover"
               />
@@ -110,7 +110,7 @@ const TrailFox = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/309c5a89-5ba7-4947-a365-8b87fe6ea588.png"
+                src="/lovable-uploads/trailfox-4.jpg"
                 alt="TrailFox efter løbet"
                 className="w-full h-full object-cover"
               />
