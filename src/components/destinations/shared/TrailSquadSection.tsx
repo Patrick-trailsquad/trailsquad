@@ -26,6 +26,8 @@ const TrailSquadSection = () => {
             </h1>
             <h2 className="text-lg text-charcoal/80">
               Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde og Røsnæs.
+              <br />
+              Vi tager afsted sammen, og får en fest!
             </h2>
           </div>
         </div>
