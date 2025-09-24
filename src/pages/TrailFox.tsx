@@ -100,7 +100,7 @@ const TrailFox = () => {
             <div>
               <img src="/lovable-uploads/trailfox-logo-4.png" alt="Helsingør Trail Logo" className="h-12 mb-4 object-contain" />
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-terra mb-6">
-                Mere end bare et løb
+                Løb i det smukke Teglstrup Hegn
               </h2>
               <p className="text-lg text-terra/80 leading-relaxed">
                 Helsingør Trail byder på en spændende og smuk lokation i Telgstrup Hegn i Helsingør, og vi inviterer til en fantastisk trailoplevelse, med spor der strækker sig igennem gamle nåletræer og store bøgeskove.
