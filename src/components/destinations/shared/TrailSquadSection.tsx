@@ -22,7 +22,7 @@ const TrailSquadSection = () => {
           </div>
           <div className="w-full md:w-1/2 bg-stone p-12 flex flex-col justify-center">
             <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-4">
-              Trail Squad X Trail Fox Series
+              Trail Squad & Trail Fox Series
             </h1>
             <h2 className="font-cabinet text-2xl md:text-3xl font-medium text-charcoal/80">
               Your Adventure Partner
