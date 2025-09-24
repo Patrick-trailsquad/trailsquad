@@ -94,8 +94,7 @@ const TrailFox = () => {
                 Fællesskab og konkurrence
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Mød ligesindede løbere i et stærkt fællesskab hvor alle støtter hinanden. 
-                Uanset om du løber for tiden eller bare for oplevelsen, finder du din plads i TrailFox familien.
+                Det allerede veletablerede trailløb, byder på noget af Danmarks og Kalundborgs absolut smukkeste landskab, masser af bakker, unikke spor og selvfølgelig et top lækkert finisherområde. Alt hvad en trail løber kan be' om.
               </p>
             </div>
           </div>
