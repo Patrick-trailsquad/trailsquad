@@ -16,7 +16,7 @@ const TrailFox = () => {
             Trail Squad <span className="text-red-500">♥️</span> Trail Fox
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Danmarks bedste trailløb i naturskønne omgivelser
+            Trail Squad har teamet op med Trail Fox og sørger for, at Danmarks fedeste trailløb bliver en del af din træning op til dit kommende trail-eventyr!
           </p>
         </div>
         
