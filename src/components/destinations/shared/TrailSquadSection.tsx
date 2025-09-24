@@ -11,7 +11,7 @@ const TrailSquadSection = () => {
             className="w-full h-full object-cover rounded-xl"
           />
         </div>
-        <div className="w-1/2 bg-background p-12 flex flex-col justify-center">
+        <div className="w-1/2 bg-stone p-12 flex flex-col justify-center">
           <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-4">
             Trail Squad Experience
           </h1>
