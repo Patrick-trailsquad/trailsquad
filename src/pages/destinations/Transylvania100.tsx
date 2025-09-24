@@ -11,6 +11,7 @@ import TransylvaniaPricingSection from "../../components/destinations/transylvan
 import TransylvaniaIncludedAmenities from "../../components/destinations/transylvania/TransylvaniaIncludedAmenities";
 import TransylvaniaDecorativeLines from "../../components/destinations/transylvania/TransylvaniaDecorativeLines";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
+import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 
 const Transylvania100 = () => {
   const isMobile = useIsMobile();
@@ -44,6 +45,8 @@ const Transylvania100 = () => {
       <div className="mt-12">
         <TransylvaniaIncludedAmenities className="bg-transparent" />
       </div>
+      
+      <TrailSquadSection />
       
       <TransylvaniaDecorativeLines />
       
