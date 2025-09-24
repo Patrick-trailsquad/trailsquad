@@ -1,5 +1,6 @@
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { Calendar } from "lucide-react";
 import Menu from "@/components/Menu";
 const TrailFox = () => {
   useScrollToTop();
@@ -43,6 +44,10 @@ const TrailFox = () => {
                 <br /><br />
                 Trail Squad løber 30 km distancen og sørger for, at vi alle kommer flot over målstregen!
               </p>
+              <div className="flex items-center gap-2 mt-4">
+                <Calendar className="w-5 h-5 text-terra" />
+                <span className="text-lg font-cabinet text-terra">Månede</span>
+              </div>
             </div>
           </div>
         </div>
@@ -63,6 +68,10 @@ const TrailFox = () => {
                 <br /><br />
                 Team Trail Squad snører løbeskoene stramt og nupper de 32 km.
               </p>
+              <div className="flex items-center gap-2 mt-4">
+                <Calendar className="w-5 h-5 text-muted-foreground" />
+                <span className="text-lg font-cabinet text-muted-foreground">Månede</span>
+              </div>
             </div>
           </div>
         </div>
@@ -85,6 +94,10 @@ const TrailFox = () => {
                 <br /><br />
                 Trail Squad tager hurtigbrillerne på og løber sammen ruten på 30 km.
               </p>
+              <div className="flex items-center gap-2 mt-4">
+                <Calendar className="w-5 h-5 text-white" />
+                <span className="text-lg font-cabinet text-white">Månede</span>
+              </div>
             </div>
           </div>
         </div>
@@ -107,6 +120,10 @@ const TrailFox = () => {
                 <br /><br />
                 Trail Squad teamet skal have kilometer i stængerne og løber naturligvis de 30 km.
               </p>
+              <div className="flex items-center gap-2 mt-4">
+                <Calendar className="w-5 h-5 text-terra" />
+                <span className="text-lg font-cabinet text-terra">Månede</span>
+              </div>
             </div>
           </div>
         </div>
