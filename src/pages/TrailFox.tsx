@@ -60,10 +60,10 @@ const TrailFox = () => {
                 alt="North Coast Ultra Logo"
                 className="h-12 mb-4 object-contain"
               />
-              <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-terra mb-6">
                 Løb gennem Danmarks smukkeste skovområder
               </h2>
-              <p className="text-lg text-white/80 leading-relaxed">
+              <p className="text-lg text-terra/80 leading-relaxed">
                 TrailFox byder på en unik oplevelse gennem danske naturperler. Oplev varierede ruter 
                 der fører dig gennem tætte skove, over bakker og langs skjulte stier som kun de færreste kender.
               </p>
