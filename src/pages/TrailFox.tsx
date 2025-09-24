@@ -94,7 +94,7 @@ const TrailFox = () => {
                 Fællesskab og konkurrence
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Det allerede veletablerede trailløb, byder på noget af Danmarks og Kalundborgs absolut smukkeste landskab, masser af bakker, unikke spor og selvfølgelig et top lækkert finisherområde. Alt hvad en trail løber kan be' om.
+                Det allerede veletablerede trailløb, byder på noget af Danmarks og Kalundborgs absolut smukkeste landskab, masser af bakker, unikke spor og selvfølgelig et top lækkert finisherområde. Alt hvad en trailløber kan be' om.
                 <br /><br />
                 Team Trail Squad snører løbeskoene stramt og nupper de 32 km.
               </p>
