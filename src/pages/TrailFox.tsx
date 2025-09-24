@@ -8,8 +8,14 @@ const TrailFox = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-        <div className="text-center text-white px-6">
+      <section className="relative h-[80vh] flex items-center justify-center">
+        <img
+          src="/lovable-uploads/trailfox-hero.png"
+          alt="TrailFox runners in Danish nature"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative text-center text-white px-6 z-10">
           <h1 className="font-cabinet text-5xl md:text-7xl font-bold mb-6">
             TrailFox
           </h1>
