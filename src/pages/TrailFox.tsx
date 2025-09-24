@@ -76,7 +76,7 @@ const TrailFox = () => {
             <div>
               <img src="/lovable-uploads/trailfox-logo-3.png" alt="Trail Fox Logo" className="h-12 mb-4 object-contain" />
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfekt markerede ruter
+                En fantastisk og unik oplevelse ved Møns Klint
               </h2>
               <p className="text-lg text-white/80 leading-relaxed">
                 Alle vores ruter er omhyggeligt planlagt og markeret så du kan fokusere på løbet. 
