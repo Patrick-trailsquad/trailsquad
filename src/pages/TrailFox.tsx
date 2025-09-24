@@ -101,6 +101,8 @@ const TrailFox = () => {
               </h2>
               <p className="text-lg text-terra/80 leading-relaxed">
                 Helsingør Trail byder på en spændende og smuk lokation i Telgstrup Hegn i Helsingør, og vi inviterer til en fantastisk trailoplevelse, med spor der strækker sig igennem gamle nåletræer og store bøgeskove.
+                <br /><br />
+                Trail Squad teamet skal have kilometer i stængerne og løber naturligvis de 30 km.
               </p>
             </div>
           </div>
