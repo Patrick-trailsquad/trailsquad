@@ -2,6 +2,7 @@
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import Footer from "../../components/Footer";
+import Menu from "../../components/Menu";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useIsMobile } from "../../hooks/use-mobile";
 import TransylvaniaHero from "../../components/destinations/transylvania/TransylvaniaHero";
@@ -20,6 +21,7 @@ const Transylvania100 = () => {
 
   return (
     <div className="min-h-screen bg-stone">
+      <Menu />
       <TransylvaniaHero />
       <TransylvaniaInfoBanner />
       
