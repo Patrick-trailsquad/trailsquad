@@ -76,7 +76,10 @@ const VideoBackgroundSection = () => {
       {/* YouTube video background */}
       <div 
         className="absolute inset-0 w-full h-full"
-        style={isMobile ? {} : {
+        style={isMobile ? {
+          transform: 'scale(1.25)',
+          transformOrigin: 'center center'
+        } : {
           transform: `translateY(${scrollY * -0.5}px) scale(1.25)`,
           transformOrigin: 'center center'
         }}
