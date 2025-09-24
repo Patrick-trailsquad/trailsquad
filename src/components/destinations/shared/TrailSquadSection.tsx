@@ -25,7 +25,7 @@ const TrailSquadSection = () => {
               Trail Squad & Trail Fox Series
             </h1>
             <h2 className="text-lg text-charcoal/80">
-              Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde og Røsnæs.
+              Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april).
               <br />
               Vi tager afsted sammen, og får en fest!
             </h2>
