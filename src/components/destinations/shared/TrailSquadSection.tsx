@@ -15,8 +15,8 @@ const TrailSquadSection = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 h-1/5 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/scu-header-image.jpg" 
-                alt="Trail runner on coastal cliffs" 
+                src={trailSquadLogo} 
+                alt="Trail Squad Logo" 
                 className="h-12 object-contain"
               />
             </div>
