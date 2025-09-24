@@ -1,6 +1,7 @@
 import trailRunnersImage from "@/assets/trail-runners-forest.jpg";
 import trailSquadLogo from "@/assets/trail-squad-logo.png";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const TrailSquadSection = () => {
   return (
@@ -30,8 +31,20 @@ const TrailSquadSection = () => {
               <br />
               Vi tager afsted sammen, og får en fest!
             </h2>
-            <Button variant="ghost" size="lg" className="self-start">
-              Læs mere
+            <Button 
+              asChild
+              variant="charcoal"
+              size="md"
+            >
+              <a 
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
+                Læs mere
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </Button>
           </div>
         </div>
