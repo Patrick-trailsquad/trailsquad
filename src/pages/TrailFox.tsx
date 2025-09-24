@@ -79,8 +79,7 @@ const TrailFox = () => {
                 En fantastisk og unik oplevelse ved Møns Klint
               </h2>
               <p className="text-lg text-white/80 leading-relaxed">
-                Alle vores ruter er omhyggeligt planlagt og markeret så du kan fokusere på løbet. 
-                Fra korte 10km ruter til udfordrende ultraløb på 50km+ - der er noget for enhver smag og niveau.
+                Med GeoCenter Møns Klint som vært, får vi en fantastisk stævneplads med udsigt ud over havet, og Danmarks længste trappe på 500 trin. Området skaber den perfekte ramme for et velorganiseret løb.
               </p>
             </div>
           </div>
