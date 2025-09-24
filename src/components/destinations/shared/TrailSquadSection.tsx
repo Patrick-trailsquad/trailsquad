@@ -5,8 +5,8 @@ const TrailSquadSection = () => {
   return (
     <section className="w-full">
       <div className="container mx-auto px-2 md:px-6">
-        <div className="flex">
-          <div className="w-1/2 relative">
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 relative">
             <img 
               src={trailRunnersImage} 
               alt="Trail runners in forest" 
@@ -20,7 +20,7 @@ const TrailSquadSection = () => {
               />
             </div>
           </div>
-          <div className="w-1/2 bg-stone p-12 flex flex-col justify-center">
+          <div className="w-full md:w-1/2 bg-stone p-12 flex flex-col justify-center">
             <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-4">
               Trail Squad Experience
             </h1>
