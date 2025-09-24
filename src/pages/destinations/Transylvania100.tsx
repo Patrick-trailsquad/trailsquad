@@ -42,7 +42,7 @@ const Transylvania100 = () => {
         </div>
       </div>
       
-      <div className="mt-12">
+      <div className="mt-12 mb-20">
         <TransylvaniaIncludedAmenities className="bg-transparent" />
       </div>
       
