@@ -1,7 +1,7 @@
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { usePageTitle } from "@/hooks/usePageTitle";
-import { Calendar } from "lucide-react";
 import Menu from "@/components/Menu";
+import calendarIcon from "@/assets/calendar-icon.png";
 const TrailFox = () => {
   useScrollToTop();
   usePageTitle("TrailFox");
@@ -45,7 +45,7 @@ const TrailFox = () => {
                 Trail Squad løber 30 km distancen og sørger for, at vi alle kommer flot over målstregen!
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <Calendar className="w-5 h-5 text-terra" />
+                <img src={calendarIcon} alt="Calendar" className="w-5 h-5" style={{filter: 'hue-rotate(20deg) saturate(1.2) brightness(0.7)'}} />
                 <span className="text-lg font-cabinet text-terra">Månede</span>
               </div>
             </div>
@@ -69,7 +69,7 @@ const TrailFox = () => {
                 Team Trail Squad snører løbeskoene stramt og nupper de 32 km.
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <Calendar className="w-5 h-5 text-muted-foreground" />
+                <img src={calendarIcon} alt="Calendar" className="w-5 h-5" style={{filter: 'grayscale(1) brightness(0.5)'}} />
                 <span className="text-lg font-cabinet text-muted-foreground">Månede</span>
               </div>
             </div>
@@ -95,7 +95,7 @@ const TrailFox = () => {
                 Trail Squad tager hurtigbrillerne på og løber sammen ruten på 30 km.
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <Calendar className="w-5 h-5 text-white" />
+                <img src={calendarIcon} alt="Calendar" className="w-5 h-5" style={{filter: 'brightness(2)'}} />
                 <span className="text-lg font-cabinet text-white">Månede</span>
               </div>
             </div>
@@ -121,7 +121,7 @@ const TrailFox = () => {
                 Trail Squad teamet skal have kilometer i stængerne og løber naturligvis de 30 km.
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <Calendar className="w-5 h-5 text-terra" />
+                <img src={calendarIcon} alt="Calendar" className="w-5 h-5" style={{filter: 'hue-rotate(20deg) saturate(1.2) brightness(0.7)'}} />
                 <span className="text-lg font-cabinet text-terra">Månede</span>
               </div>
             </div>
