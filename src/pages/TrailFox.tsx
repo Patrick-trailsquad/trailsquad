@@ -80,6 +80,8 @@ const TrailFox = () => {
               </h2>
               <p className="text-lg text-white/80 leading-relaxed">
                 Med GeoCenter Møns Klint som vært, får vi en fantastisk stævneplads med udsigt ud over havet, og Danmarks længste trappe på 500 trin. Området skaber den perfekte ramme for et velorganiseret løb.
+                <br /><br />
+                Trail Squad tager hurtigbrillerne på og løber sammen ruten på 30 km.
               </p>
             </div>
           </div>
