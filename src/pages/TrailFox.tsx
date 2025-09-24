@@ -1,9 +1,11 @@
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import Menu from "@/components/Menu";
 const TrailFox = () => {
   useScrollToTop();
   usePageTitle("TrailFox");
   return <div className="min-h-screen">
+      <Menu />
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center">
         <img src="/lovable-uploads/trailfox-hero.png" alt="TrailFox runners in Danish nature" className="absolute inset-0 w-full h-full object-cover" />
