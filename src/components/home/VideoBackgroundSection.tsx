@@ -77,7 +77,7 @@ const VideoBackgroundSection = () => {
       <div 
         className="absolute inset-0 w-full h-full"
         style={isMobile ? {
-          transform: 'scale(1.25)',
+          transform: 'scale(2.5)',
           transformOrigin: 'center center'
         } : {
           transform: `translateY(${scrollY * -0.5}px) scale(1.25)`,
@@ -86,12 +86,7 @@ const VideoBackgroundSection = () => {
       >
         <div 
           ref={playerRef} 
-          className={`absolute inset-0 ${isMobile ? 'w-full h-full' : 'w-full h-full'}`}
-          style={isMobile ? {
-            width: '100vw',
-            height: '100vh',
-            objectFit: 'cover'
-          } : {}}
+          className="absolute inset-0 w-full h-full"
         />
       </div>
       
