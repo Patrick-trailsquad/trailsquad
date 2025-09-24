@@ -64,8 +64,7 @@ const TrailFox = () => {
                 Danmarks største trail- og ultraløb
               </h2>
               <p className="text-lg text-terra/80 leading-relaxed">
-                TrailFox byder på en unik oplevelse gennem danske naturperler. Oplev varierede ruter 
-                der fører dig gennem tætte skove, over bakker og langs skjulte stier som kun de færreste kender.
+                Hvert år giver vi over 1000 trailløbere mulighed for at opleve de smukke spor. Løbet foregår i Tisvilde Hegn og byder på fantastisk og smuk natur, med skov, strand og klitter.
               </p>
             </div>
           </div>
