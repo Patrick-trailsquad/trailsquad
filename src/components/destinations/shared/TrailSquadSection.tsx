@@ -37,7 +37,7 @@ const TrailSquadSection = () => {
               className="w-fit"
             >
               <a 
-                href="#"
+                href="/trailfox"
                 target="_blank"
                 rel="noopener noreferrer"
               >
