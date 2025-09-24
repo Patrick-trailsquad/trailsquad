@@ -44,6 +44,11 @@ const TrailFox = () => {
               />
             </div>
             <div>
+              <img 
+                src="/lovable-uploads/trailfox-logo-1.png"
+                alt="North Coast Ultra Logo"
+                className="h-12 mb-4 object-contain"
+              />
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-white mb-6">
                 Løb gennem Danmarks smukkeste skovområder
               </h2>
@@ -68,6 +73,11 @@ const TrailFox = () => {
               />
             </div>
             <div>
+              <img 
+                src="/lovable-uploads/trailfox-logo-2.png"
+                alt="Røsnæs Trail Logo"
+                className="h-12 mb-4 object-contain"
+              />
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Fællesskab og konkurrence
               </h2>
@@ -92,6 +102,11 @@ const TrailFox = () => {
               />
             </div>
             <div>
+              <img 
+                src="/lovable-uploads/trailfox-logo-3.png"
+                alt="Trail Fox Logo"
+                className="h-12 mb-4 object-contain"
+              />
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-white mb-6">
                 Perfekt markerede ruter
               </h2>
@@ -116,6 +131,11 @@ const TrailFox = () => {
               />
             </div>
             <div>
+              <img 
+                src="/lovable-uploads/trailfox-logo-4.png"
+                alt="Helsingør Trail Logo"
+                className="h-12 mb-4 object-contain"
+              />
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Mere end bare et løb
               </h2>
