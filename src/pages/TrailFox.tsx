@@ -8,7 +8,7 @@ const TrailFox = () => {
   return <div className="min-h-screen">
       <Menu />
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center">
         <img src="/lovable-uploads/trailfox-hero.png" alt="TrailFox runners in Danish nature" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative text-center text-white px-6 z-10">
