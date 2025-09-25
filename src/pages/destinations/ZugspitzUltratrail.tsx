@@ -12,6 +12,7 @@ import ZugspitzDescription from "../../components/destinations/zugspitz/Zugspitz
 import ZugspitzMediaSection from "../../components/destinations/zugspitz/ZugspitzMediaSection";
 import ZugspitzAccommodation from "../../components/destinations/zugspitz/ZugspitzAccommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
+import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 
 const ZugspitzUltratrail = () => {
   useScrollToTop();
@@ -49,9 +50,11 @@ const ZugspitzUltratrail = () => {
         </div>
       </div>
       
-      <div className="mt-12">
+      <div className="mt-12 mb-20">
         <ZugspitzIncludedAmenities className="bg-transparent" />
       </div>
+      
+      <TrailSquadSection />
       
       {/* Decorative Lines Section - Full Width */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
