@@ -1,5 +1,5 @@
 
-import { ArrowLeft, ChevronDown } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ZugspitzHero = () => {
@@ -25,18 +25,6 @@ const ZugspitzHero = () => {
           Zugspitz Ultratrail, Tyskland
         </h1>
       </div>
-      
-      {/* Scroll Down Icon */}
-      <button 
-        onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white hover:text-stone transition-colors duration-300 animate-bounce"
-        aria-label="Scroll down"
-      >
-        <div className="flex flex-col items-center gap-1">
-          <ChevronDown className="w-6 h-6" />
-          <ChevronDown className="w-6 h-6 -mt-3 opacity-60" />
-        </div>
-      </button>
     </div>
   );
 };
