@@ -1,6 +1,7 @@
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 import calendarIcon from "@/assets/calendar-icon.png";
 import { ChevronDown } from "lucide-react";
 const TrailFox = () => {
@@ -151,6 +152,7 @@ const TrailFox = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>;
 };
 export default TrailFox;
