@@ -2,6 +2,7 @@ import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import Menu from "@/components/Menu";
 import calendarIcon from "@/assets/calendar-icon.png";
+import { ChevronDown } from "lucide-react";
 const TrailFox = () => {
   useScrollToTop();
   usePageTitle("TrailFox");
@@ -25,6 +26,18 @@ const TrailFox = () => {
         <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 200 C50 180 150 100 300 80 C350 70 380 120 400 140 C450 100 480 70 500 60 C550 90 580 140 600 160 C650 120 750 60 800 40 C900 70 950 100 1000 120 C1100 90 1150 85 1200 80 L1200 200 L0 200 Z" fill="white" opacity="0.1" />
         </svg>
+        
+        {/* Scroll Down Icon */}
+        <button 
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white hover:text-stone transition-colors duration-300 animate-bounce z-20"
+          aria-label="Scroll down"
+        >
+          <div className="flex flex-col items-center gap-1">
+            <ChevronDown className="w-6 h-6" />
+            <ChevronDown className="w-6 h-6 -mt-3 opacity-60" />
+          </div>
+        </button>
       </section>
 
       {/* Section 1 */}
