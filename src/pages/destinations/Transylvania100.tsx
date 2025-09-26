@@ -31,7 +31,7 @@ const Transylvania100 = () => {
           <div className="space-y-6">
             <div className="rounded-xl overflow-hidden aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/KYjEArAHdiY?si=VyqXLw-q6sxCgPIJ"
+                src="https://www.youtube.com/embed/UU8bC3vSsV0"
                 title="Transylvania 100 Trail Running"
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
