@@ -56,7 +56,7 @@ const ZugspitzMediaSection = () => {
         </div>
         <PriceQuoteForm 
           destinationName="Zugspitz Ultratrail"
-          availableDistances={["16km", "29km", "44km", "68km", "86km", "106km"]}
+          availableDistances={["16km", "44km", "68km"]}
           maxParticipants={spotsLeft}
         />
         <div className="mt-4">
