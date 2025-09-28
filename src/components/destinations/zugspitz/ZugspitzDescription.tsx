@@ -17,11 +17,9 @@ const ZugspitzDescription = () => {
       <div>
         <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Oplevelsen</h2>
         <p className="text-lg">
-          Med start og finish i den charmerende olympiske resort-by Garmisch-Partenkirchen 
-          slynger ruten sig gennem Wetterstein- og Ammergau-Alperne og passerer krystalklare bjerg-
-          søer og traditionelle alpine hytter. Vælg mellem syv udfordrende distancer: 16km, 29km, 44km, 
-          68km, 86km, 106km eller det ultimative 164km Ultra Trail, der omkredser hele Zugspitz-massivet. 
-          Hver rute lover unikke udfordringer og uforglemmelige alpine landskaber.
+          Da løbene afholdes over flere dage, vil det være muligt at deltage på 3 forskellige distancer, 
+          nemlig 16 km, 44 km, og 68 km. Så der er bestemt noget for enhver smag. Hver rute lover 
+          unikke udfordringer og uforglemmelige alpine landskaber.
         </p>
       </div>
 
