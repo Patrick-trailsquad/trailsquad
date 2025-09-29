@@ -48,7 +48,7 @@ export const DESTINATIONS: Destination[] = [
     name: 'Istria 100 by UTMB',
     route: '/destinations/istria',
     status: 'open' as const,
-    published: false
+    published: true
   }
 ].filter(destination => destination.published); // Only return published destinations
 
