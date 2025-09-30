@@ -5,8 +5,8 @@ const InfiniteTrailsHero = () => {
   return (
     <div className="relative h-[70vh]">
       <img
-        src="/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png"
-        alt="Infinite Trails"
+        src="/lovable-uploads/infinite-trails.jpg"
+        alt="Infinite Trails - Bad Gastein, Austria"
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/40" />
