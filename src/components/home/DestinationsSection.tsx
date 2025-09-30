@@ -58,6 +58,13 @@ const destinations = [
     date: "Juli 2026",
     spots: "Åbner senere",
     href: "/destinations/gtc"
+  },
+  {
+    image: "/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png",
+    location: "Infinite Trails, Østrig",
+    date: "September 2026",
+    spots: "Åbner senere",
+    href: "/destinations/infinite-trails"
   }
 ];
 
