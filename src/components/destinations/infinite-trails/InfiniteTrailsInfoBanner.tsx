@@ -16,20 +16,20 @@ const InfiniteTrailsInfoBanner = () => {
               className="font-cabinet text-lg text-charcoal hover:text-charcoal/80 transition-colors underline decoration-dotted underline-offset-2 flex items-center gap-1 mx-auto"
             >
               <MapPin className="w-4 h-4" />
-              TBD
+              Bad Gastein, Austria
             </button>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Race Day</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">TBD, 2026</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">September, 2026</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">TBD</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">4 days</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">TBD</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">15km, 30km, 45km, 60km</h2>
           </div>
         </div>
       </div>
