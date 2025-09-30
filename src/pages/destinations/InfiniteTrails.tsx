@@ -3,12 +3,15 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import Footer from "../../components/Footer";
+import Menu from "../../components/Menu";
+import InfiniteTrailsIncludedAmenities from "../../components/destinations/infinite-trails/InfiniteTrailsIncludedAmenities";
 import InfiniteTrailsHero from "../../components/destinations/infinite-trails/InfiniteTrailsHero";
 import InfiniteTrailsInfoBanner from "../../components/destinations/infinite-trails/InfiniteTrailsInfoBanner";
 import InfiniteTrailsDescription from "../../components/destinations/infinite-trails/InfiniteTrailsDescription";
 import InfiniteTrailsMediaSection from "../../components/destinations/infinite-trails/InfiniteTrailsMediaSection";
 import InfiniteTrailsAccommodation from "../../components/destinations/infinite-trails/InfiniteTrailsAccommodation";
-import InfiniteTrailsIncludedAmenities from "../../components/destinations/infinite-trails/InfiniteTrailsIncludedAmenities";
+import InfiniteTrailsDecorativeLines from "../../components/destinations/infinite-trails/InfiniteTrailsDecorativeLines";
+import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 import { useIsMobile } from "../../hooks/use-mobile";
 
 const InfiniteTrails = () => {
@@ -18,6 +21,7 @@ const InfiniteTrails = () => {
   
   return (
     <div className="min-h-screen bg-stone">
+      <Menu />
       <InfiniteTrailsHero />
       <InfiniteTrailsInfoBanner />
 
@@ -28,12 +32,16 @@ const InfiniteTrails = () => {
         </div>
       </div>
       
-      <div className="mt-12">
+      <div className="mt-12 mb-20">
         <InfiniteTrailsIncludedAmenities className="bg-transparent" />
       </div>
       
+      <TrailSquadSection />
+      
+      <InfiniteTrailsDecorativeLines />
+      
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
-        <div className={isMobile ? "mb-12" : ""}>
+        <div className={isMobile ? "mb-8" : ""}>
           <InfiniteTrailsAccommodation />
         </div>
         <BackToDestinationsButton />
