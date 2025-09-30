@@ -5,10 +5,10 @@ import { useIsMobile } from "../../../hooks/use-mobile";
 
 // The Comodo hotel images in filename order
 const images = [
-  "/lovable-uploads/comodo-1.png", // Hotel exterior
+  "/lovable-uploads/comodo-4.png", // Bar/restaurant area
   "/lovable-uploads/comodo-2.png", // Hotel room
   "/lovable-uploads/comodo-3.png", // Spa/pool area
-  "/lovable-uploads/comodo-4.png", // Bar/restaurant area
+  "/lovable-uploads/comodo-1.png", // Hotel exterior
   "/lovable-uploads/comodo-5.png", // Restaurant dining
   "/lovable-uploads/comodo-6.png", // Spa with mountain views
   "/lovable-uploads/comodo-7.png", // Fitness center
