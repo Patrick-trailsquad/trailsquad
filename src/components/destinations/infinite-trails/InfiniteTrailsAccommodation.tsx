@@ -43,7 +43,7 @@ const InfiniteTrailsAccommodation = () => {
         <div className="flex items-center mb-2">
           <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">The Comodo</h1>
           <div className="flex">
-            {[...Array(5)].map((_, index) => (
+            {[...Array(4)].map((_, index) => (
               <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
             ))}
           </div>
