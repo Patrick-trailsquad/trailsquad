@@ -13,7 +13,7 @@ const BlackForest = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86"
           alt="Black Forest Ultra Trail"

@@ -11,7 +11,7 @@ const NewZealand = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="/lovable-uploads/af5c6191-258b-4a41-9a6d-7e722d1dad97.png"
           alt="Madeira Island Ultra Trail"

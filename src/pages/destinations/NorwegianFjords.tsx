@@ -15,7 +15,7 @@ const NorwegianFjords = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
           alt="Norwegian Fjords"

@@ -74,7 +74,7 @@ const SwissAlps = () => {
     }
   };
   return <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img src="/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png" alt="Courmayeur Grand Trail" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute top-6 left-6">

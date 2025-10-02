@@ -13,7 +13,7 @@ const MontBlanc = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb"
           alt="Mont Blanc Ultra Trail"

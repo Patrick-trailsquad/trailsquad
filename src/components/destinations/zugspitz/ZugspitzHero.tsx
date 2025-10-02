@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ZugspitzHero = () => {
   return (
-    <div className="relative h-[70vh]">
+    <div className="relative h-[80vh]">
       <img
         src="/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png"
         alt="Zugspitz Ultratrail in the Bavarian Alps"
@@ -21,7 +21,7 @@ const ZugspitzHero = () => {
         </Link>
       </div>
       <div className="absolute bottom-6 left-0 right-0 text-center">
-        <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-8">
+        <h1 className="font-cabinet text-4xl md:text-6xl font-bold text-white px-4 drop-shadow-md mb-8">
           Zugspitz Ultratrail, Tyskland
         </h1>
       </div>

@@ -15,7 +15,7 @@ const MIUT = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="/lovable-uploads/af5c6191-258b-4a41-9a6d-7e722d1dad97.png"
           alt="Madeira Island Ultra Trail"
@@ -32,7 +32,7 @@ const MIUT = () => {
           </Link>
         </div>
         <div className="absolute bottom-6 left-0 right-0 text-center">
-          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-2">
+          <h1 className="font-cabinet text-4xl md:text-6xl font-bold text-white px-4 drop-shadow-md mb-2">
             Madeira Island Ultra Trail, Portugal
           </h1>
           <div className="inline-block bg-black text-white px-4 py-1.5 rounded-full font-cabinet font-medium text-sm md:text-base border-2 border-[#FFDC00]">

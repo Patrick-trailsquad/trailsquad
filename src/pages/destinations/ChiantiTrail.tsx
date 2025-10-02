@@ -82,7 +82,7 @@ const ChiantiTrail = () => {
 
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png"
           alt="Chianti Ultra Trail runner in vineyard"

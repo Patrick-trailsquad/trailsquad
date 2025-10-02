@@ -82,7 +82,7 @@ const Vesuvio = () => {
 
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="/lovable-uploads/09591b2b-8dda-48fb-be79-ab98d16ccd30.png"
           alt="Vesuvio Ultra Marathon trail running"

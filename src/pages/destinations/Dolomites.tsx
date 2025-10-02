@@ -16,7 +16,7 @@ const Dolomites = () => {
   
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[60vh]">
+      <div className="relative h-[80vh]">
         <img
           src="https://images.unsplash.com/photo-1472396961693-142e6e269027"
           alt="Dolomites Skyrace"
