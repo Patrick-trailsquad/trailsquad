@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
  */
 const TransylvaniaHero = () => {
   return (
-    <div className="relative h-[80vh] mt-16">
+    <div className="relative h-[70vh] mt-16">
       <img
         src="/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png"
         alt="Transylvania 100 trail running in the Carpathian Mountains"
