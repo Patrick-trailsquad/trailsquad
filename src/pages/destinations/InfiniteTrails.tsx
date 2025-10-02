@@ -46,8 +46,8 @@ const InfiniteTrails = () => {
             Tilbage til forsiden
           </Link>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="font-cabinet text-4xl md:text-6xl font-bold text-white text-center px-4">
+        <div className="absolute bottom-6 left-0 right-0 text-center">
+          <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-8">
             Infinite Trails, Bad Gastein
           </h1>
         </div>
