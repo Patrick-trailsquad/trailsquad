@@ -25,7 +25,7 @@ const InfiniteTrailsInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Trip Duration</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">4 days</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">3.-6. september 2026 (4 dage)</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distances</h1>
