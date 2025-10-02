@@ -48,7 +48,7 @@ const InfiniteTrails = () => {
         </div>
         <div className="absolute bottom-6 left-0 right-0 text-center">
           <h1 className="font-cabinet text-3xl md:text-4xl font-bold text-white px-4 drop-shadow-md mb-8">
-            Infinite Trails, Bad Gastein
+            Infinite Trails, Østrig
           </h1>
         </div>
       </div>
