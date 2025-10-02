@@ -46,14 +46,16 @@ const InfiniteTrails = () => {
             Tilbage til forsiden
           </Link>
         </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="font-cabinet text-4xl md:text-6xl font-bold text-white text-center px-4">
+            Infinite Trails, Bad Gastein
+          </h1>
+        </div>
       </div>
 
       <InfiniteTrailsInfoBanner />
 
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
-        <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-          Infinite Trails, Bad Gastein
-        </h1>
         <div className="grid md:grid-cols-2 gap-12">
           <InfiniteTrailsDescription />
           <InfiniteTrailsMediaSection />
