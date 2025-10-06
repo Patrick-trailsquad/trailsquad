@@ -45,7 +45,7 @@ const InfiniteTrailsPricingSection = () => {
       </div>
       <PriceQuoteForm 
         destinationName="Infinite Trails"
-        availableDistances={["30km", "50km", "75km", "100km"]}
+        availableDistances={["15km", "30km", "45km", "60km"]}
         maxParticipants={spotsLeft}
       />
       <div className="mt-4">
