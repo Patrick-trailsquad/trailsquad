@@ -54,7 +54,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'infinite-trails',
     name: 'Infinite Trails',
     route: '/destinations/infinite-trails',
-    status: 'upcoming' as const,
+    status: 'open' as const,
     published: true
   }
 ].filter(destination => destination.published); // Only return published destinations

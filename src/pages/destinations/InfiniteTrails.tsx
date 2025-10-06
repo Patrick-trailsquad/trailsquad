@@ -11,6 +11,7 @@ import InfiniteTrailsInfoBanner from "../../components/destinations/infinite-tra
 import InfiniteTrailsDescription from "../../components/destinations/infinite-trails/InfiniteTrailsDescription";
 import InfiniteTrailsMediaSection from "../../components/destinations/infinite-trails/InfiniteTrailsMediaSection";
 import InfiniteTrailsAccommodation from "../../components/destinations/infinite-trails/InfiniteTrailsAccommodation";
+import InfiniteTrailsPricingSection from "../../components/destinations/infinite-trails/InfiniteTrailsPricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
 
 const InfiniteTrails = () => {
@@ -58,7 +59,10 @@ const InfiniteTrails = () => {
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
           <InfiniteTrailsDescription />
-          <InfiniteTrailsMediaSection />
+          <div className="space-y-6">
+            <InfiniteTrailsMediaSection />
+            <InfiniteTrailsPricingSection />
+          </div>
         </div>
       </div>
       
