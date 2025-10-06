@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 
 const InfiniteTrailsPricingSection = () => {
-  const spotsLeft = 20;
+  const spotsLeft = 13;
   const { toast } = useToast();
 
   return (
