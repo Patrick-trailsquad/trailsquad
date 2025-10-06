@@ -10,7 +10,7 @@ const destinations = [
   { name: "Transylvania 100", href: "/destinations/transylvania", spots: "13 pladser" },
   { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "15 pladser" },
   { name: "Gran Trail Courmayeur", href: "/destinations/gtc", spots: "Åbner senere" },
-  { name: "Infinite Trails", href: "/destinations/infinite-trails", spots: "Åbner senere" },
+  { name: "Infinite Trails", href: "/destinations/infinite-trails", spots: "13 pladser" },
 ];
 
 const DestinationLinks = () => {
