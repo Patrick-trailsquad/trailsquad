@@ -5,7 +5,7 @@ import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { Separator } from "@/components/ui/separator";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
-import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
+import trailSquadLogo from "@/assets/trail-squad-logo-black.png";
 
 declare global {
   interface Window {
