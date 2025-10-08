@@ -40,6 +40,15 @@ const Training = () => {
             modestbranding: 1,
             playsinline: 1,
             start: 3
+          },
+          events: {
+            onStateChange: (event: any) => {
+              // When video ends, seek to 3 seconds and play again
+              if (event.data === window.YT.PlayerState.ENDED) {
+                event.target.seekTo(3);
+                event.target.playVideo();
+              }
+            }
           }
         });
       }
