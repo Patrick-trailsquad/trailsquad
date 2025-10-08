@@ -140,35 +140,6 @@ const Training = () => {
         </div>
       </section>
 
-      {/* Trail Fox & Trail Squad Info */}
-      <section className="bg-stone">
-        {/* Trail Squad - Full Width */}
-        <div className="bg-white py-16 md:py-24">
-          <div className="container mx-auto px-6 max-w-7xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="order-1">
-                <img 
-                  src="/lovable-uploads/trail-squad-runners.jpg" 
-                  alt="Trail Squad" 
-                  className="w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-2xl"
-                />
-              </div>
-              <div className="order-2">
-                <img 
-                  src={trailSquadLogo} 
-                  alt="Trail Squad Logo" 
-                  className="h-16 w-auto mb-6 object-contain"
-                />
-                <h3 className="font-cabinet font-bold text-3xl md:text-4xl text-charcoal mb-6">Trail Squad</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Trail Squad er et niche rejsebureau med fokus på trailløb i udlandet. Vi skaber et fællesskab gennem fælles træning og oplevelser.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Concept Explanation */}
       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
