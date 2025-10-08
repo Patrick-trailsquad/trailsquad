@@ -83,9 +83,9 @@ const Training = () => {
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 w-full h-full" style={{
-            transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
-            transformOrigin: 'center center'
-          }}>
+          transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
+          transformOrigin: 'center center'
+        }}>
             <div ref={player2Ref} className="absolute inset-0 w-full h-full" />
           </div>
           <div className="absolute inset-0 bg-black/50" />
@@ -150,7 +150,7 @@ Med mange års erfaring inden for eventafvikling, og med tusindvis af loyale rac
               <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-white">
                 Trail Squad
               </h1>
-              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">Trail Squad er et niche rejsebureau med fokus på trail-løb i udlandet. Trail Squad håndplukker de fedeste løb, står for det lavpraktiske, </h3>
+              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">Trail Squad er et niche rejsebureau med fokus på trail-løb i udlandet. Trail Squad håndplukker de fedeste løb, står for det lavpraktiske, og sørger for, at alle bliver klar, via fæ </h3>
             </div>
           </div>
         </div>
