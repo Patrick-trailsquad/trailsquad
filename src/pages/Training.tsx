@@ -3,20 +3,17 @@ import { usePageTitle } from "../hooks/usePageTitle";
 import { useIsMobile } from "../hooks/use-mobile";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
-
 declare global {
   interface Window {
     YT: any;
     onYouTubeIframeAPIReady: () => void;
   }
 }
-
 const Training = () => {
   usePageTitle('Training');
   const isMobile = useIsMobile();
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
-
   useEffect(() => {
     // Load YouTube IFrame API
     const tag = document.createElement('script');
@@ -46,40 +43,30 @@ const Training = () => {
         });
       }
     };
-
     return () => {
       if (ytPlayerRef.current) {
         ytPlayerRef.current.destroy();
       }
     };
   }, []);
-
   return <div className="min-h-screen bg-stone">
       <Menu />
       
       {/* Hero Section with YouTube Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 w-full h-full"
-            style={{
-              transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
-              transformOrigin: 'center center'
-            }}
-          >
-            <div 
-              ref={playerRef} 
-              className="absolute inset-0 w-full h-full"
-            />
+          <div className="absolute inset-0 w-full h-full" style={{
+          transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
+          transformOrigin: 'center center'
+        }}>
+            <div ref={playerRef} className="absolute inset-0 w-full h-full" />
           </div>
           <div className="absolute inset-0 bg-black/40" />
         </div>
         
         <div className="container mx-auto max-w-4xl text-center z-10 px-6">
           <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">Trail Fox og Trail Squad trail-træning 2025/2026</h1>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
-            Løbetræning er en holdsport - hvadenten du er ny i trail eller en erfaren trail-ræv
-          </p>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">Løbetræning er en holdsport - både for de nye og for de erfarne</p>
         </div>
       </section>
 
