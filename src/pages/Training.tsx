@@ -180,7 +180,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
                 <div className="aspect-video bg-charcoal/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop" 
+                    src="/lovable-uploads/training-session-1.png" 
                     alt="Training Session 1" 
                     className="w-full h-full object-cover"
                   />
@@ -205,7 +205,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
                 <div className="aspect-video bg-charcoal/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&h=400&fit=crop" 
+                    src="/lovable-uploads/training-session-2.png" 
                     alt="Training Session 2" 
                     className="w-full h-full object-cover"
                   />
