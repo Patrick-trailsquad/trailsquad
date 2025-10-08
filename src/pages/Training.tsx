@@ -179,11 +179,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               {/* Session 1 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
                 <div className="aspect-video bg-charcoal/20">
-                  <img 
-                    src="/lovable-uploads/training-session-1.png" 
-                    alt="Training Session 1" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #1</h3>
@@ -207,11 +203,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               {/* Session 2 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
                 <div className="aspect-video bg-charcoal/20">
-                  <img 
-                    src="/lovable-uploads/training-session-2.png" 
-                    alt="Training Session 2" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #2</h3>
@@ -237,22 +229,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
       </section>
 
       {/* Current Training Trips */}
-      <section className="py-24 bg-stone">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-              Kommende træningsture
-            </h2>
-            <p className="text-lg text-gray-600">
-              Vi opdaterer løbende med nye træningsture
-            </p>
-          </div>
-          
-          <div className="text-center text-gray-600">
-            <p className="text-lg">Ingen træningsture planlagt endnu. Hold øje med denne side for opdateringer.</p>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </div>;
