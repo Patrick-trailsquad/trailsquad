@@ -92,10 +92,10 @@ const Training = () => {
             </div>
 
             {/* Trail Squad - Text + Image */}
-            <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-white p-6 rounded-xl">
+            <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-charcoal p-6 rounded-xl">
               <div className="md:w-1/2 flex flex-col justify-center">
-                <h3 className="font-cabinet font-bold text-2xl text-charcoal mb-4">Trail Squad</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Squad</h3>
+                <p className="text-white leading-relaxed">
                   Trail Squad er fællesskabet af løbere der træner sammen mod fælles mål. Vi tager sammen til internationale trail-løb og skaber uforglemmelige oplevelser.
                 </p>
               </div>
