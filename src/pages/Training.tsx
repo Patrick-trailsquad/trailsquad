@@ -187,7 +187,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 </div>
                 <div className="p-6">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #1</h3>
-                  <div className="space-y-2 text-gray-600">
+                  <div className="space-y-2 text-gray-600 mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Søndag d. 23. november 2025
                     </p>
@@ -198,6 +198,9 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
+                  <button className="w-full bg-charcoal hover:bg-charcoal/90 text-white font-cabinet font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Submit
+                  </button>
                 </div>
               </div>
 
@@ -212,7 +215,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 </div>
                 <div className="p-6">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #2</h3>
-                  <div className="space-y-2 text-gray-600">
+                  <div className="space-y-2 text-gray-600 mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Tirsdag d. 16. december 2025
                     </p>
@@ -223,6 +226,9 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
+                  <button className="w-full bg-charcoal hover:bg-charcoal/90 text-white font-cabinet font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Submit
+                  </button>
                 </div>
               </div>
             </div>
