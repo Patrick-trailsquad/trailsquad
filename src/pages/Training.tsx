@@ -194,13 +194,13 @@ Så vil vores trail træningssessions være noget for dig!</p>
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 1 */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #1<br />[november]</h3>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Søndag d. 23. november 2025
@@ -212,7 +212,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                     Vi mødes ved Den Røde Port ved Klampenborg Station.
                     <br />
                     Efter et par kms opvarmning står den på bakketræning, tekniksnak og højt humør (og puls)!
@@ -224,13 +224,13 @@ Så vil vores trail træningssessions være noget for dig!</p>
               </div>
 
               {/* Session 2 */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #2<br />[december]</h3>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Tirsdag d. 16. december 2025
@@ -242,7 +242,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                     Det er blevet mørkt, og vi skal have pandelamperne på. Bakkerne skal vi nok finde i skumringen. Mødested er Den Røde Port ved Klampenborg Station.
                   </p>
                   <button onClick={() => handleSessionRegistration("Træningssession #2", "Tirsdag d. 16. december 2025", "18:00 - 19:30'ish", "Dyrehaven, Klampenborg")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
