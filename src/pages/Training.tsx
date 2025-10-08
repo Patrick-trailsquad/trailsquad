@@ -108,7 +108,7 @@ const Training = () => {
                 />
                 <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Squad</h3>
                 <p className="text-white leading-relaxed">
-                  Trail Squad er fællesskabet af løbere der træner sammen mod fælles mål. Vi tager sammen til internationale trail-løb og skaber uforglemmelige oplevelser.
+                  Trail Squad er et niche rejsebureau med fokus på trailløb i udlandet. Vi skaber et fællesskab gennem fælles træning og oplevelser.
                 </p>
               </div>
               <div className="md:w-1/2">
