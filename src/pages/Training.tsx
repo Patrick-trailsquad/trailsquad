@@ -25,11 +25,15 @@ const Training = () => {
     title: "",
     date: "",
     time: "",
-    location: "",
+    location: ""
   });
-
   const handleSessionRegistration = (title: string, date: string, time: string, location: string) => {
-    setSelectedSession({ title, date, time, location });
+    setSelectedSession({
+      title,
+      date,
+      time,
+      location
+    });
     setModalOpen(true);
   };
   useEffect(() => {
@@ -207,18 +211,8 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <button 
-                    onClick={() => handleSessionRegistration(
-                      "Træningssession #1",
-                      "Søndag d. 23. november 2025",
-                      "09:00 - 10:30'ish",
-                      "Dyrehaven, Klampenborg"
-                    )}
-                    className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
-                  >
+                  <p className="text-gray-600 mb-6 leading-relaxed">Vi mødes ved Den Røde Port ved Klam</p>
+                  <button onClick={() => handleSessionRegistration("Træningssession #1", "Søndag d. 23. november 2025", "09:00 - 10:30'ish", "Dyrehaven, Klampenborg")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
@@ -242,18 +236,10 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
-                  <button 
-                    onClick={() => handleSessionRegistration(
-                      "Træningssession #2",
-                      "Tirsdag d. 16. december 2025",
-                      "18:00 - 19:30'ish",
-                      "Dyrehaven, Klampenborg"
-                    )}
-                    className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
-                  >
+                  <button onClick={() => handleSessionRegistration("Træningssession #2", "Tirsdag d. 16. december 2025", "18:00 - 19:30'ish", "Dyrehaven, Klampenborg")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
@@ -265,14 +251,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
 
       {/* Current Training Trips */}
       
-      <TrainingRegistrationModal
-        open={modalOpen}
-        onOpenChange={setModalOpen}
-        sessionTitle={selectedSession.title}
-        sessionDate={selectedSession.date}
-        sessionTime={selectedSession.time}
-        sessionLocation={selectedSession.location}
-      />
+      <TrainingRegistrationModal open={modalOpen} onOpenChange={setModalOpen} sessionTitle={selectedSession.title} sessionDate={selectedSession.date} sessionTime={selectedSession.time} sessionLocation={selectedSession.location} />
 
       <Footer />
     </div>;
