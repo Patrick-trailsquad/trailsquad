@@ -76,7 +76,7 @@ const Training = () => {
         </div>
         
         <div className="container mx-auto max-w-4xl text-center z-10 px-6">
-          <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">Trail Fox og Trail Squad præsenterer:</h1>
+          <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">Trail Fox og Trail Squad trail-træning 2025/2026</h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
             Kom i form sammen med os. Vores træningsture er designet til at forberede dig på de store løb.
           </p>
