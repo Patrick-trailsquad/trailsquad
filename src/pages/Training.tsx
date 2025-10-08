@@ -260,14 +260,11 @@ Så vil vores trail træningssessions være noget for dig!</p>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Text Section - 60% */}
-            <div className="lg:col-span-6 flex flex-col justify-center">
-              <div className="space-y-6">
-                <h2 className="font-cabinet text-4xl md:text-5xl xl:text-6xl font-black text-charcoal leading-tight tracking-tight">
+            <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
+              <div className="space-y-2">
+                <h1 className="font-cabinet text-5xl md:text-5xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
                   Bliv en del af fællesskabet
-                </h2>
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                  Uanset om du er nybegynder eller erfaren løber, er vores træningssessions designet til at forberede dig til både nationale og internationale trail-løb. Vi træner sammen, deler erfaringer og bygger et stærkt community omkring vores passion for trail-running.
-                </p>
+                </h1>
               </div>
             </div>
             
