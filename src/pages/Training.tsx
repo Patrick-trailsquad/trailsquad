@@ -84,79 +84,54 @@ const Training = () => {
       </section>
 
       {/* Trail Fox & Trail Squad Info */}
-      <section className="py-16 px-6 bg-stone">
-        <div className="container mx-auto max-w-7xl">
-          <div className="bg-charcoal p-8 md:p-12 rounded-xl">
-            {/* Trail Fox */}
-            <div className="flex flex-col gap-6">
-              {/* Logo - always on top on mobile */}
-              <img 
-                src={trailFoxLogo} 
-                alt="Trail Fox Logo" 
-                className="h-12 w-auto object-contain md:hidden"
-              />
-              
-              <div className="flex flex-col md:flex-row gap-6">
-                {/* Image */}
-                <div className="w-full md:w-1/2">
-                  <img 
-                    src="/lovable-uploads/trail-runners-forest.jpg" 
-                    alt="Trail Fox" 
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </div>
-                
-                {/* Text content */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center">
-                  {/* Logo - hidden on mobile, shown on desktop */}
-                  <img 
-                    src={trailFoxLogo} 
-                    alt="Trail Fox Logo" 
-                    className="h-12 w-auto mb-4 object-contain hidden md:block"
-                  />
-                  <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Fox</h3>
-                  <p className="text-white leading-relaxed">
-                    Trail Fox står bag en række af Danmarks fedeste trailløb. Flere tusinde løbere deltager årligt på tværs af de 4 races.
-                  </p>
-                </div>
+      <section className="bg-stone">
+        {/* Trail Fox - Full Width */}
+        <div className="bg-charcoal py-16 md:py-24">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <img 
+                  src={trailFoxLogo} 
+                  alt="Trail Fox Logo" 
+                  className="h-16 w-auto mb-6 object-contain"
+                />
+                <h3 className="font-cabinet font-bold text-3xl md:text-4xl text-white mb-6">Trail Fox</h3>
+                <p className="text-lg text-white/90 leading-relaxed">
+                  Trail Fox står bag en række af Danmarks fedeste trailløb. Flere tusinde løbere deltager årligt på tværs af de 4 races.
+                </p>
+              </div>
+              <div className="order-1 md:order-2">
+                <img 
+                  src="/lovable-uploads/trail-runners-forest.jpg" 
+                  alt="Trail Fox" 
+                  className="w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-2xl"
+                />
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Separator */}
-            <Separator className="my-12 bg-white/20" />
-
-            {/* Trail Squad */}
-            <div className="flex flex-col gap-6">
-              {/* Logo - always on top on mobile */}
-              <img 
-                src={trailSquadLogo} 
-                alt="Trail Squad Logo" 
-                className="h-12 w-auto object-contain md:hidden"
-              />
-              
-              <div className="flex flex-col md:flex-row gap-6">
-                {/* Text content - shown first on desktop */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center md:order-first order-last">
-                  {/* Logo - hidden on mobile, shown on desktop */}
-                  <img 
-                    src={trailSquadLogo} 
-                    alt="Trail Squad Logo" 
-                    className="h-12 w-auto mb-4 object-contain hidden md:block"
-                  />
-                  <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Squad</h3>
-                  <p className="text-white leading-relaxed">
-                    Trail Squad er et niche rejsebureau med fokus på trailløb i udlandet. Vi skaber et fællesskab gennem fælles træning og oplevelser.
-                  </p>
-                </div>
-                
-                {/* Image - shown first on mobile, second on desktop */}
-                <div className="w-full md:w-1/2">
-                  <img 
-                    src="/lovable-uploads/trail-squad-runners.jpg" 
-                    alt="Trail Squad" 
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </div>
+        {/* Trail Squad - Full Width */}
+        <div className="bg-white py-16 md:py-24">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="order-1">
+                <img 
+                  src="/lovable-uploads/trail-squad-runners.jpg" 
+                  alt="Trail Squad" 
+                  className="w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-2xl"
+                />
+              </div>
+              <div className="order-2">
+                <img 
+                  src={trailSquadLogo} 
+                  alt="Trail Squad Logo" 
+                  className="h-16 w-auto mb-6 object-contain"
+                />
+                <h3 className="font-cabinet font-bold text-3xl md:text-4xl text-charcoal mb-6">Trail Squad</h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Trail Squad er et niche rejsebureau med fokus på trailløb i udlandet. Vi skaber et fællesskab gennem fælles træning og oplevelser.
+                </p>
               </div>
             </div>
           </div>
