@@ -198,7 +198,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <button className="w-full bg-charcoal hover:bg-charcoal/90 text-white font-cabinet font-semibold py-3 px-6 rounded-lg transition-colors">
+                  <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Submit
                   </button>
                 </div>
@@ -226,7 +226,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <button className="w-full bg-charcoal hover:bg-charcoal/90 text-white font-cabinet font-semibold py-3 px-6 rounded-lg transition-colors">
+                  <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Submit
                   </button>
                 </div>
