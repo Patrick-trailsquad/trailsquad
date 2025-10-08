@@ -258,20 +258,33 @@ Så vil vores trail træningssessions være noget for dig!</p>
       {/* Landscape Images Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Image 1 */}
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-64 md:h-80 object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
+            {/* Text Section - 60% */}
+            <div className="lg:col-span-6 flex flex-col justify-center">
+              <div className="space-y-6">
+                <h2 className="font-cabinet text-4xl md:text-5xl xl:text-6xl font-black text-charcoal leading-tight tracking-tight">
+                  Bliv en del af fællesskabet
+                </h2>
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                  Uanset om du er nybegynder eller erfaren løber, er vores træningssessions designet til at forberede dig til både nationale og internationale trail-løb. Vi træner sammen, deler erfaringer og bygger et stærkt community omkring vores passion for trail-running.
+                </p>
               </div>
             </div>
             
-            {/* Image 2 */}
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-64 md:h-80 object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            {/* Images Section - 40% */}
+            <div className="lg:col-span-4 flex gap-8 justify-center items-end mt-0 lg:mt-0">
+              <div className="relative mt-8">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-80 h-52 md:w-96 md:h-60 object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+              </div>
+              
+              <div className="relative mb-8">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-80 h-52 md:w-96 md:h-60 object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
               </div>
             </div>
           </div>
