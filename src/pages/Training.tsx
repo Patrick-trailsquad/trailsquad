@@ -1,16 +1,76 @@
+import { useEffect, useRef } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
+
+declare global {
+  interface Window {
+    YT: any;
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
+
 const Training = () => {
   usePageTitle('Training');
+  const playerRef = useRef<HTMLDivElement>(null);
+  const ytPlayerRef = useRef<any>(null);
+
+  useEffect(() => {
+    // Load YouTube IFrame API
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
+
+    // YouTube API ready callback
+    window.onYouTubeIframeAPIReady = () => {
+      if (playerRef.current) {
+        const videoId = 'viCyanUDC3s';
+        ytPlayerRef.current = new window.YT.Player(playerRef.current, {
+          videoId: videoId,
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            loop: 1,
+            playlist: videoId,
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            iv_load_policy: 3,
+            modestbranding: 1,
+            playsinline: 1,
+            start: 3
+          }
+        });
+      }
+    };
+
+    return () => {
+      if (ytPlayerRef.current) {
+        ytPlayerRef.current.destroy();
+      }
+    };
+  }, []);
+
   return <div className="min-h-screen bg-stone">
       <Menu />
       
-      {/* Hero Section */}
+      {/* Hero Section with YouTube Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/lovable-uploads/6ff90756-d658-4625-8641-a8d712215b93.png" alt="Trail runner training on mountain peak" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/50 to-orange-500/50" />
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{
+              transform: 'scale(1.5)',
+              transformOrigin: 'center center'
+            }}
+          >
+            <div 
+              ref={playerRef} 
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         <div className="container mx-auto max-w-4xl text-center z-10 px-6">
