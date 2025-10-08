@@ -197,7 +197,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-white/30" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-white/10" />
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-0 absolute bottom-4 left-4 z-10">Træningssession #1 [november]</h3>
                 </div>
                 <div className="p-6">
@@ -227,7 +227,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-white/30" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-white/10" />
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-0 absolute bottom-4 left-4 z-10">Træningssession #2 [december]</h3>
                 </div>
                 <div className="p-6">
