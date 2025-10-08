@@ -195,11 +195,12 @@ Så vil vores trail træningssessions være noget for dig!</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 1 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
-                <div className="aspect-video bg-charcoal/20">
+                <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-white/30" />
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-0 absolute bottom-4 left-4 z-10">Træningssession #1 [november]</h3>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #1 [november]</h3>
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Søndag d. 23. november 2025
@@ -224,11 +225,12 @@ Så vil vores trail træningssessions være noget for dig!</p>
 
               {/* Session 2 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
-                <div className="aspect-video bg-charcoal/20">
+                <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-white/30" />
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-0 absolute bottom-4 left-4 z-10">Træningssession #2 [december]</h3>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #2 [december]</h3>
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Tirsdag d. 16. december 2025
