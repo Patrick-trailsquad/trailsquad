@@ -83,6 +83,47 @@ const Training = () => {
         </div>
       </section>
 
+      {/* Meet the Team Banner */}
+      <section className="w-full bg-gradient-to-br from-[#FFDC00] to-[#FFE642] py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
+            {/* Text Section - 60% */}
+            <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
+              <div className="space-y-2">
+                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
+                  Trail Fox og Trail Squad trail-træning
+                </h1>
+              </div>
+            </div>
+            
+            {/* Images Section - 40% */}
+            <div className="lg:col-span-4 flex gap-8 justify-center items-end">
+              <div className="relative group transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 mt-8">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500">
+                  <img
+                    src="/lovable-uploads/trail-runners-forest.jpg"
+                    alt="Trail Fox"
+                    className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+                </div>
+              </div>
+              
+              <div className="relative group transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 mb-8">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500">
+                  <img
+                    src="/lovable-uploads/trail-squad-runners.jpg"
+                    alt="Trail Squad"
+                    className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trail Fox & Trail Squad Info */}
       <section className="bg-stone">
         {/* Trail Fox - Full Width */}
