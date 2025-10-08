@@ -103,7 +103,7 @@ const Training = () => {
             </div>
             
             {/* Images Section - 40% */}
-            <div className="lg:col-span-4 flex gap-8 justify-center items-end">
+            <div className="lg:col-span-4 flex gap-8 justify-center items-end mt-16 lg:mt-0">
               <div className="relative group transform transition-all duration-500 hover:-translate-y-2 mt-8">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500">
                   <img src="/lovable-uploads/trail-runners-forest.jpg" alt="Trail Fox" className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700" />
