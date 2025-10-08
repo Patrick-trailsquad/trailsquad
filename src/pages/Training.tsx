@@ -6,20 +6,17 @@ import Footer from "../components/Footer";
 import { Separator } from "@/components/ui/separator";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
 import trailSquadLogo from "@/assets/trail-squad-logo-black.png";
-
 declare global {
   interface Window {
     YT: any;
     onYouTubeIframeAPIReady: () => void;
   }
 }
-
 const Training = () => {
   usePageTitle('Training');
   const isMobile = useIsMobile();
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
-
   useEffect(() => {
     // Load YouTube IFrame API
     const tag = document.createElement('script');
@@ -49,25 +46,22 @@ const Training = () => {
         });
       }
     };
-
     return () => {
       if (ytPlayerRef.current) {
         ytPlayerRef.current.destroy();
       }
     };
   }, []);
-
-  return (
-    <div className="min-h-screen bg-stone">
+  return <div className="min-h-screen bg-stone">
       <Menu />
       
       {/* Hero Section with YouTube Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 w-full h-full" style={{
-            transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
-            transformOrigin: 'center center'
-          }}>
+          transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
+          transformOrigin: 'center center'
+        }}>
             <div ref={playerRef} className="absolute inset-0 w-full h-full" />
           </div>
           <div className="absolute inset-0 bg-black/40" />
@@ -100,38 +94,22 @@ const Training = () => {
             <div className="lg:col-span-4 flex gap-8 justify-center items-end">
               <div className="relative group transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 mt-8">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500">
-                  <img
-                    src="/lovable-uploads/trail-runners-forest.jpg"
-                    alt="Trail Fox"
-                    className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
-                  />
+                  <img src="/lovable-uploads/trail-runners-forest.jpg" alt="Trail Fox" className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                   {/* Trail Fox Logo at bottom */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
-                    <img
-                      src={trailFoxLogo}
-                      alt="Trail Fox Logo"
-                      className="h-12 md:h-16 w-auto object-contain"
-                    />
+                    <img src={trailFoxLogo} alt="Trail Fox Logo" className="h-12 md:h-16 w-auto object-contain" />
                   </div>
                 </div>
               </div>
               
               <div className="relative group transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 mb-8">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500">
-                  <img
-                    src="/lovable-uploads/trail-squad-runners.jpg"
-                    alt="Trail Squad"
-                    className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
-                  />
+                  <img src="/lovable-uploads/trail-squad-runners.jpg" alt="Trail Squad" className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                   {/* Trail Squad Logo at top */}
                   <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
-                    <img
-                      src={trailSquadLogo}
-                      alt="Trail Squad Logo"
-                      className="h-12 md:h-16 w-auto object-contain"
-                    />
+                    <img src={trailSquadLogo} alt="Trail Squad Logo" className="h-12 md:h-16 w-auto object-contain" />
                   </div>
                 </div>
               </div>
@@ -146,26 +124,17 @@ const Training = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {/* Trail Fox Side */}
             <div className="flex flex-col items-center text-center space-y-4">
-              <img
-                src={trailFoxLogo}
-                alt="Trail Fox Logo"
-                className="h-20 md:h-24 w-auto object-contain"
-              />
+              <img src={trailFoxLogo} alt="Trail Fox Logo" className="h-20 md:h-24 w-auto object-contain" />
               <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-white">
                 Trail Fox
               </h1>
-              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">
-                Elite Trail Running Adventures
-              </h3>
+              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">Trail Fox serien er en række af Danmarks fedeste trail-løb. 
+Med mange års erfaring inden for eventafvikling, og med tusindvis af loyale racedeltagere, er Trail Fox et fyrtårn i det danske trail-miljø. </h3>
             </div>
 
             {/* Trail Squad Side */}
             <div className="flex flex-col items-center text-center space-y-4">
-              <img
-                src={trailSquadLogo}
-                alt="Trail Squad Logo"
-                className="h-20 md:h-24 w-auto object-contain"
-              />
+              <img src={trailSquadLogo} alt="Trail Squad Logo" className="h-20 md:h-24 w-auto object-contain" />
               <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-white">
                 Trail Squad
               </h1>
@@ -218,8 +187,6 @@ const Training = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Training;
