@@ -269,17 +269,17 @@ Så vil vores trail træningssessions være noget for dig!</p>
             </div>
             
             {/* Images Section - 40% */}
-            <div className="lg:col-span-4 flex gap-8 justify-center items-end mt-0 lg:mt-0">
-              <div className="relative mt-8">
+            <div className="lg:col-span-4 flex flex-col gap-6 justify-center mt-0 lg:mt-0">
+              <div className="relative">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-80 h-52 md:w-96 md:h-60 object-cover" />
+                  <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
               </div>
               
-              <div className="relative mb-8">
+              <div className="relative">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-80 h-52 md:w-96 md:h-60 object-cover" />
+                  <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
               </div>
