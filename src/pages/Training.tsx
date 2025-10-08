@@ -160,16 +160,17 @@ Med mange års erfaring inden for eventafvikling, og med tusindvis af loyale rac
       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-left mb-12">
-            <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">
-              Hvad er træningsture?
-            </h2>
+            <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">Månedlige træningssessions!
+Skal du med?</h2>
             <div className="space-y-4">
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Vores træningsture er perfekte til dig, der gerne vil forberede dig til et kommende trail-løb, eller bare gerne vil blive bedre til at løbe i terrænet.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Vi tilbyder guidede træningsture i smukke områder, hvor du kan træne sammen med ligesindede og få professionel vejledning.
-              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">Er trailløb nyt for dig, og noget som du gerne vil blive klogere på?
+
+
+Eller er du erfaren løber, der vil være en del af et løbe-community, som løber både trail-races i Danmark og udlandet?
+
+
+Så vil vores trail træningssessions være noget for dig!</p>
+              <p className="text-lg text-gray-600 leading-relaxed">Har du fået interesse for trail, og overvejer du dit første trail-race inden for en overskuelig fremtid? Eller er du</p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Træningsturene er typisk kortere end vores eventture og fokuserer på teknik, kondition og fællesskab.
               </p>
