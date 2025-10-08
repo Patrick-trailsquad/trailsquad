@@ -190,7 +190,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {/* Session 1 */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <div className="aspect-video bg-charcoal/20">
                   <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
                 </div>
@@ -222,7 +222,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               </div>
 
               {/* Session 2 */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <div className="aspect-video bg-charcoal/20">
                   <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
                 </div>
