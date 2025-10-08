@@ -84,13 +84,13 @@ const Training = () => {
       </section>
 
       {/* Meet the Team Banner */}
-      <section className="w-full bg-charcoal py-16 md:py-20">
+      <section className="w-full bg-yellow py-16 md:py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Text Section - 60% */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
-                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-white leading-none tracking-tight">
+                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
                   Trail Fox og Trail Squad trail-træning
                 </h1>
               </div>
