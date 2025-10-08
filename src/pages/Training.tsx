@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useIsMobile } from "../hooks/use-mobile";
+import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { Separator } from "@/components/ui/separator";
@@ -16,6 +17,7 @@ declare global {
 const Training = () => {
   usePageTitle('Training');
   const isMobile = useIsMobile();
+  const navigateAndScroll = useNavigateAndScroll();
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
   const player2Ref = useRef<HTMLDivElement>(null);
@@ -283,7 +285,13 @@ Så vil vores trail træningssessions være noget for dig!</p>
               </div>
               
               <div className="relative" style={{ transform: 'translateX(-15px)' }}>
-                <a href="https://www.trailsquad.dk/" target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <div 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigateAndScroll('/', 'upcoming-trips');
+                  }}
+                  className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
+                >
                   <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
@@ -291,7 +299,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       Se Trail Squad Rejser
                     </span>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
