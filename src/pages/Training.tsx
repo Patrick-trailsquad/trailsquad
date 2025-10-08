@@ -173,6 +173,59 @@ Så vil vores trail træningssessions være noget for dig!</p>
               <p className="text-lg text-gray-600 leading-relaxed">Har du fået interesse for trail, og overvejer du dit første trail-race inden for en overskuelig fremtid? Eller er du</p>
               
             </div>
+
+            {/* Training Sessions */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              {/* Session 1 */}
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
+                <div className="aspect-video bg-charcoal/20">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop" 
+                    alt="Training Session 1" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #1</h3>
+                  <div className="space-y-2 text-gray-600">
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Dato:</span> Lørdag d. 15. marts 2025
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Tid:</span> 10:00 - 12:00
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Session 2 */}
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg">
+                <div className="aspect-video bg-charcoal/20">
+                  <img 
+                    src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&h=400&fit=crop" 
+                    alt="Training Session 2" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #2</h3>
+                  <div className="space-y-2 text-gray-600">
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Dato:</span> Søndag d. 6. april 2025
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Tid:</span> 09:00 - 11:30
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Sted:</span> Tisvilde Hegn
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
