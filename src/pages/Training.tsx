@@ -91,7 +91,7 @@ const Training = () => {
           <div className="absolute inset-0 bg-black/50" />
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10 pt-24 md:pt-0">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Text Section - 60% */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
