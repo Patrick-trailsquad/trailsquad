@@ -278,7 +278,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
                     <span className="bg-[#FFDC00] text-black px-6 py-2 rounded-full font-cabinet font-medium border-2 border-black hover:bg-[#FFDC00]/90 transition-colors duration-300">
-                      Se Trail Fox Races
+                      Races
                     </span>
                   </div>
                 </a>
