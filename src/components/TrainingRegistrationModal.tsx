@@ -35,7 +35,7 @@ export const TrainingRegistrationModal = ({
     fullName: "",
     email: "",
     experience: 3,
-    optOutMarketing: false,
+    optOutMarketing: true,
   });
   const [loading, setLoading] = useState(false);
 
@@ -61,7 +61,7 @@ export const TrainingRegistrationModal = ({
         fullName: "",
         email: "",
         experience: 3,
-        optOutMarketing: false,
+        optOutMarketing: true,
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
