@@ -93,7 +93,7 @@ const Training = () => {
                 />
                 <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Fox</h3>
                 <p className="text-white leading-relaxed">
-                  Trail Fox er vores serie af træningsløb i Danmark. Vi tilbyder guidede træningsture hvor du kan forberede dig til kommende løb sammen med andre trail-entusiaster.
+                  Trail Fox står bag en række af Danmarks fedeste trailløb. Flere tusinde løbere deltager årligt på tværs af de 4 races.
                 </p>
               </div>
             </div>
