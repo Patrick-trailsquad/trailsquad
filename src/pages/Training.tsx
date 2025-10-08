@@ -200,7 +200,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 </div>
                 <div className="p-6">
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #1</h3>
-                  <div className="space-y-2 text-gray-600 mb-6">
+                  <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Søndag d. 23. november 2025
                     </p>
