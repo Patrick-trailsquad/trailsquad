@@ -3,6 +3,7 @@ import { usePageTitle } from "../hooks/usePageTitle";
 import { useIsMobile } from "../hooks/use-mobile";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
+import { Separator } from "@/components/ui/separator";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 
@@ -85,9 +86,9 @@ const Training = () => {
       {/* Trail Fox & Trail Squad Info */}
       <section className="py-16 px-6 bg-stone">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Trail Fox - Mobile: logo, image, text / Desktop: image + text side by side */}
-            <div className="md:col-span-2 flex flex-col gap-6 bg-charcoal p-6 rounded-xl">
+          <div className="bg-charcoal p-8 md:p-12 rounded-xl">
+            {/* Trail Fox */}
+            <div className="flex flex-col gap-6">
               {/* Logo - always on top on mobile */}
               <img 
                 src={trailFoxLogo} 
@@ -121,8 +122,11 @@ const Training = () => {
               </div>
             </div>
 
-            {/* Trail Squad - Mobile: logo, image, text / Desktop: text + image side by side */}
-            <div className="md:col-span-2 flex flex-col gap-6 bg-charcoal p-6 rounded-xl">
+            {/* Separator */}
+            <Separator className="my-12 bg-white/20" />
+
+            {/* Trail Squad */}
+            <div className="flex flex-col gap-6">
               {/* Logo - always on top on mobile */}
               <img 
                 src={trailSquadLogo} 
