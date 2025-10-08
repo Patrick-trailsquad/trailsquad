@@ -80,7 +80,7 @@ const Training = () => {
             <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-charcoal p-6 rounded-xl">
               <div className="md:w-1/2">
                 <img 
-                  src="/lovable-uploads/trailfox-hero-logo.png" 
+                  src="/lovable-uploads/trail-runners-forest.jpg" 
                   alt="Trail Fox" 
                   className="w-full h-full object-cover rounded-lg"
                 />
