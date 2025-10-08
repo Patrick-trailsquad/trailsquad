@@ -106,6 +106,14 @@ const Training = () => {
                     className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+                  {/* Trail Fox Logo at bottom */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
+                    <img
+                      src={trailFoxLogo}
+                      alt="Trail Fox Logo"
+                      className="h-8 md:h-10 w-auto object-contain"
+                    />
+                  </div>
                 </div>
               </div>
               
@@ -117,6 +125,14 @@ const Training = () => {
                     className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+                  {/* Trail Squad Logo at top */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
+                    <img
+                      src={trailSquadLogo}
+                      alt="Trail Squad Logo"
+                      className="h-8 md:h-10 w-auto object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
