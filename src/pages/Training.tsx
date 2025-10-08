@@ -120,8 +120,8 @@ const Training = () => {
                   <img src="/lovable-uploads/trail-squad-runners.jpg" alt="Trail Squad" className="w-52 h-80 md:w-60 md:h-96 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   {/* Trail Squad Logo at top */}
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
-                    <img src={trailSquadLogo} alt="Trail Squad Logo" className="w-32 h-auto md:w-40 object-contain" />
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10 p-2">
+                    <img src={trailSquadLogo} alt="Trail Squad Logo" className="w-40 h-auto md:w-48 object-contain" />
                   </div>
                 </div>
               </div>
