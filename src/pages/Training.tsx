@@ -138,9 +138,7 @@ Med mange års erfaring inden for eventafvikling, og med tusindvis af loyale rac
               <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-white">
                 Trail Squad
               </h1>
-              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">
-                Your Trail Running Community
-              </h3>
+              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">Trail Squad er et niche rejsebureau med fokus på trail-løb i udlandet. Trail Squad håndplukker de fedeste løb, står for det lavpraktiske, </h3>
             </div>
           </div>
         </div>
