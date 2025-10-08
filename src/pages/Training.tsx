@@ -255,6 +255,29 @@ Så vil vores trail træningssessions være noget for dig!</p>
         </div>
       </section>
 
+      {/* Landscape Images Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Image 1 */}
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-64 md:h-80 object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              </div>
+            </div>
+            
+            {/* Image 2 */}
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-64 md:h-80 object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Current Training Trips */}
       
       <TrainingRegistrationModal open={modalOpen} onOpenChange={setModalOpen} sessionTitle={selectedSession.title} sessionDate={selectedSession.date} sessionTime={selectedSession.time} sessionLocation={selectedSession.location} />
