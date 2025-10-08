@@ -124,7 +124,8 @@ export const TrainingRegistrationModal = ({
             ...formData,
             optOutMarketing: checked as boolean
           })} />
-            <Label htmlFor="optOutMarketing" className="text-sm font-normal leading-relaxed cursor-pointer">Lad mig endelig høre om kommende træninger, løb fra Trail Fox og Trail Squad ture. Intet spam, bare god energi 😇 🥳</Label>
+            <Label htmlFor="optOutMarketing" className="text-sm font-normal leading-relaxed cursor-pointer">Lad mig endelig høre om kommende træninger, løb fra Trail Fox og Trail Squad ture. Intet spam, bare god energi  🥳
+(Max én mail pr. måned) 😇</Label>
           </div>
 
           <div className="flex gap-3 pt-4">
