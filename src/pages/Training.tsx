@@ -198,7 +198,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center">Træningssession #1<br />[november]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #1<br />[november]</h3>
                 </div>
                 <div className="p-6">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
@@ -228,7 +228,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="aspect-video bg-charcoal/20 relative">
                   <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center">Træningssession #2<br />[december]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #2<br />[december]</h3>
                 </div>
                 <div className="p-6">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
