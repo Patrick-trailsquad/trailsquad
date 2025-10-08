@@ -214,7 +214,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                   <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #2</h3>
                   <div className="space-y-2 text-gray-600">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> Søndag d. 6. april 2025
+                      <span className="font-semibold">Dato:</span> Tirsdag d. 16. december 2025
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Tid:</span> 09:00 - 11:30
