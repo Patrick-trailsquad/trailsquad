@@ -277,21 +277,18 @@ Så vil vores trail træningssessions være noget for dig!</p>
                   <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
-                    <span className="bg-[#FFDC00] text-black px-6 py-2 rounded-full font-cabinet font-medium border-2 border-black hover:bg-[#FFDC00]/90 transition-colors duration-300">
-                      Races
-                    </span>
+                    <span className="bg-[#FFDC00] text-black px-6 py-2 rounded-full font-cabinet font-medium border-2 border-black hover:bg-[#FFDC00]/90 transition-colors duration-300">Se kommende Trail Fox løb</span>
                   </div>
                 </a>
               </div>
               
-              <div className="relative" style={{ transform: 'translateX(-15px)' }}>
-                <div 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateAndScroll('/', 'upcoming-trips');
-                  }}
-                  className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
-                >
+              <div className="relative" style={{
+              transform: 'translateX(-15px)'
+            }}>
+                <div onClick={e => {
+                e.preventDefault();
+                navigateAndScroll('/', 'upcoming-trips');
+              }} className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
