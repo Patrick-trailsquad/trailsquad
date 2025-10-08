@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useIsMobile } from "../hooks/use-mobile";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { Separator } from "@/components/ui/separator";
+import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 declare global {
@@ -19,6 +20,18 @@ const Training = () => {
   const ytPlayerRef = useRef<any>(null);
   const player2Ref = useRef<HTMLDivElement>(null);
   const ytPlayer2Ref = useRef<any>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedSession, setSelectedSession] = useState({
+    title: "",
+    date: "",
+    time: "",
+    location: "",
+  });
+
+  const handleSessionRegistration = (title: string, date: string, time: string, location: string) => {
+    setSelectedSession({ title, date, time, location });
+    setModalOpen(true);
+  };
   useEffect(() => {
     // Load YouTube IFrame API
     const tag = document.createElement('script');
@@ -194,7 +207,15 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button 
+                    onClick={() => handleSessionRegistration(
+                      "Træningssession #1",
+                      "Søndag d. 23. november 2025",
+                      "09:00 - 10:30'ish",
+                      "Dyrehaven, Klampenborg"
+                    )}
+                    className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
+                  >
                     Tilmeld
                   </button>
                 </div>
@@ -218,7 +239,15 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button 
+                    onClick={() => handleSessionRegistration(
+                      "Træningssession #2",
+                      "Tirsdag d. 16. december 2025",
+                      "18:00 - 19:30'ish",
+                      "Dyrehaven, Klampenborg"
+                    )}
+                    className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
+                  >
                     Tilmeld
                   </button>
                 </div>
@@ -230,6 +259,14 @@ Så vil vores trail træningssessions være noget for dig!</p>
 
       {/* Current Training Trips */}
       
+      <TrainingRegistrationModal
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+        sessionTitle={selectedSession.title}
+        sessionDate={selectedSession.date}
+        sessionTime={selectedSession.time}
+        sessionLocation={selectedSession.location}
+      />
 
       <Footer />
     </div>;
