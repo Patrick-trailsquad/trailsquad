@@ -263,7 +263,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
                 <h1 className="font-cabinet text-5xl md:text-5xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
-                  Bliv en del af fællesskabet
+                  På jagt efter dit næste race?
                 </h1>
               </div>
             </div>
