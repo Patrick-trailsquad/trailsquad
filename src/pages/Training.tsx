@@ -3,6 +3,8 @@ import { usePageTitle } from "../hooks/usePageTitle";
 import { useIsMobile } from "../hooks/use-mobile";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
+import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
+import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 declare global {
   interface Window {
     YT: any;
@@ -84,6 +86,11 @@ const Training = () => {
                 />
               </div>
               <div className="md:w-1/2 flex flex-col justify-center">
+                <img 
+                  src={trailFoxLogo} 
+                  alt="Trail Fox Logo" 
+                  className="h-12 w-auto mb-4 object-contain"
+                />
                 <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Fox</h3>
                 <p className="text-white leading-relaxed">
                   Trail Fox er vores serie af træningsløb i Danmark. Vi tilbyder guidede træningsture hvor du kan forberede dig til kommende løb sammen med andre trail-entusiaster.
@@ -94,6 +101,11 @@ const Training = () => {
             {/* Trail Squad - Text + Image */}
             <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-charcoal p-6 rounded-xl">
               <div className="md:w-1/2 flex flex-col justify-center">
+                <img 
+                  src={trailSquadLogo} 
+                  alt="Trail Squad Logo" 
+                  className="h-12 w-auto mb-4 object-contain"
+                />
                 <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Squad</h3>
                 <p className="text-white leading-relaxed">
                   Trail Squad er fællesskabet af løbere der træner sammen mod fælles mål. Vi tager sammen til internationale trail-løb og skaber uforglemmelige oplevelser.
