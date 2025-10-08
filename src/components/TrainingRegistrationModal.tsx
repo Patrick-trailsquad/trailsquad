@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { z } from "zod";
+
 interface TrainingRegistrationModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -14,12 +15,14 @@ interface TrainingRegistrationModalProps {
   sessionTime: string;
   sessionLocation: string;
 }
+
 const registrationSchema = z.object({
   fullName: z.string().trim().min(2, "Navn skal være mindst 2 tegn").max(100),
   email: z.string().trim().email("Ugyldig email-adresse").max(255),
   experience: z.number().min(1).max(5),
   optOutMarketing: z.boolean()
 });
+
 export const TrainingRegistrationModal = ({
   open,
   onOpenChange,
@@ -34,9 +37,12 @@ export const TrainingRegistrationModal = ({
     experience: 3,
     optOutMarketing: true
   });
+
   const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     try {
       const validated = registrationSchema.parse(formData);
       setLoading(true);
@@ -51,9 +57,11 @@ export const TrainingRegistrationModal = ({
           sessionLocation
         }
       });
+
       toast.success("Tilmelding gennemført!", {
         description: "Vi ser frem til at se dig til træningen."
       });
+
       onOpenChange(false);
       setFormData({
         fullName: "",
@@ -75,7 +83,9 @@ export const TrainingRegistrationModal = ({
       setLoading(false);
     }
   };
-  return <Dialog open={open} onOpenChange={onOpenChange}>
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle className="font-cabinet text-2xl">Tilmeld træningssession</DialogTitle>
@@ -90,28 +100,55 @@ export const TrainingRegistrationModal = ({
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">
             <Label htmlFor="fullName">Fulde navn *</Label>
-            <Input id="fullName" value={formData.fullName} onChange={e => setFormData({
-            ...formData,
-            fullName: e.target.value
-          })} required placeholder="Dit fulde navn" />
+            <Input
+              id="fullName"
+              value={formData.fullName}
+              onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+              required
+              placeholder="Dit fulde navn"
+            />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="email">Email *</Label>
-            <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
-            ...formData,
-            email: e.target.value
-          })} required placeholder="din@email.dk" />
+            <Input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              required
+              placeholder="din@email.dk"
+            />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="experience">Erfaring med trail-løb (1-5) *</Label>
             <div className="flex items-center gap-4">
-              <input id="experience" type="range" min="1" max="5" value={formData.experience} onChange={e => setFormData({
-              ...formData,
-              experience: parseInt(e.target.value)
-            })} className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FFDC00] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-black [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#FFDC00] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-black" />
-              <span className="font-cabinet text-xl font-bold w-8 text-center">{formData.experience}</span>
+              <input
+                id="experience"
+                type="range"
+                min="1"
+                max="5"
+                value={formData.experience}
+                onChange={(e) => setFormData({ ...formData, experience: parseInt(e.target.value) })}
+                className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer
+                  [&::-webkit-slider-thumb]:appearance-none
+                  [&::-webkit-slider-thumb]:w-4
+                  [&::-webkit-slider-thumb]:h-4
+                  [&::-webkit-slider-thumb]:rounded-full
+                  [&::-webkit-slider-thumb]:bg-[#FFDC00]
+                  [&::-webkit-slider-thumb]:border-2
+                  [&::-webkit-slider-thumb]:border-black
+                  [&::-moz-range-thumb]:w-4
+                  [&::-moz-range-thumb]:h-4
+                  [&::-moz-range-thumb]:rounded-full
+                  [&::-moz-range-thumb]:bg-[#FFDC00]
+                  [&::-moz-range-thumb]:border-2
+                  [&::-moz-range-thumb]:border-black"
+              />
+              <span className="font-cabinet text-xl font-bold w-8 text-center">
+                {formData.experience}
+              </span>
             </div>
             <div className="flex justify-between text-xs text-muted-foreground">
               <span>Nybegynder</span>
@@ -120,23 +157,37 @@ export const TrainingRegistrationModal = ({
           </div>
 
           <div className="flex items-start space-x-2 pt-2">
-            <Checkbox id="optOutMarketing" checked={formData.optOutMarketing} onCheckedChange={checked => setFormData({
-            ...formData,
-            optOutMarketing: checked as boolean
-          })} />
-            <Label htmlFor="optOutMarketing" className="text-sm font-normal leading-relaxed cursor-pointer">Lad mig endelig høre om kommende træninger, løb fra Trail Fox og Trail Squad ture. Intet spam, bare god energi  🥳
-(Max én mail pr. måned) 😇</Label>
+            <Checkbox
+              id="optOutMarketing"
+              checked={formData.optOutMarketing}
+              onCheckedChange={(checked) => setFormData({ ...formData, optOutMarketing: checked as boolean })}
+            />
+            <Label htmlFor="optOutMarketing" className="text-sm font-normal leading-relaxed cursor-pointer">
+              Lad mig endelig høre om kommende træninger, løb fra Trail Fox og Trail Squad ture. Intet spam, bare god energi 🥳<br />
+              (Max én mail pr. måned) 😇
+            </Label>
           </div>
 
           <div className="flex gap-3 pt-4">
-            <Button type="button" variant="outline" onClick={() => onOpenChange(false)} className="flex-1" disabled={loading}>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => onOpenChange(false)}
+              className="flex-1"
+              disabled={loading}
+            >
               Annuller
             </Button>
-            <Button type="submit" className="flex-1 bg-[#FFDC00] text-black border-2 border-black rounded-full hover:bg-[#FFDC00]/90 font-cabinet font-medium" disabled={loading}>
+            <Button
+              type="submit"
+              className="flex-1 bg-[#FFDC00] text-black border-2 border-black rounded-full hover:bg-[#FFDC00]/90 font-cabinet font-medium"
+              disabled={loading}
+            >
               {loading ? "Sender..." : "Tilmeld"}
             </Button>
           </div>
         </form>
       </DialogContent>
-    </Dialog>;
+    </Dialog>
+  );
 };
