@@ -104,10 +104,10 @@ const Training = () => {
             
             {/* Images Section - 40% */}
             <div className="lg:col-span-4 flex gap-8 justify-center items-end mt-0 lg:mt-0">
-              <div className="relative group transform transition-all duration-500 hover:-translate-y-2 mt-8">
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500">
-                  <img src="/lovable-uploads/trail-runners-forest.jpg" alt="Trail Fox" className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+              <div className="relative mt-8">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img src="/lovable-uploads/trail-runners-forest.jpg" alt="Trail Fox" className="w-52 h-80 md:w-60 md:h-96 object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   {/* Trail Fox Logo at bottom */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
                     <img src={trailFoxLogo} alt="Trail Fox Logo" className="h-12 md:h-16 w-auto object-contain" />
@@ -115,10 +115,10 @@ const Training = () => {
                 </div>
               </div>
               
-              <div className="relative group transform transition-all duration-500 hover:-translate-y-2 mb-8">
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500">
-                  <img src="/lovable-uploads/trail-squad-runners.jpg" alt="Trail Squad" className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+              <div className="relative mb-8">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <img src="/lovable-uploads/trail-squad-runners.jpg" alt="Trail Squad" className="w-52 h-80 md:w-60 md:h-96 object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   {/* Trail Squad Logo at top */}
                   <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10">
                     <img src={trailSquadLogo} alt="Trail Squad Logo" className="h-12 md:h-16 w-auto object-contain" />
