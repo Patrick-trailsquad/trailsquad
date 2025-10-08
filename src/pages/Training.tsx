@@ -207,7 +207,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                   <button 
@@ -242,7 +242,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                   <button 
