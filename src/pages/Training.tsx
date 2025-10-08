@@ -80,7 +80,7 @@ const Training = () => {
       <Menu />
       
       {/* Meet the Team Banner with Video Background */}
-      <section className="relative w-full py-16 md:py-20 overflow-hidden">
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 w-full h-full" style={{
             transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
