@@ -220,7 +220,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Tid:</span> 18:00 - 19:30'ish
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Tisvilde Hegn
+                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
                 </div>
