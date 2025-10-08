@@ -111,7 +111,7 @@ const Training = () => {
                     <img
                       src={trailFoxLogo}
                       alt="Trail Fox Logo"
-                      className="h-8 md:h-10 w-auto object-contain"
+                      className="h-12 md:h-16 w-auto object-contain"
                     />
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const Training = () => {
                     <img
                       src={trailSquadLogo}
                       alt="Trail Squad Logo"
-                      className="h-8 md:h-10 w-auto object-contain"
+                      className="h-12 md:h-16 w-auto object-contain"
                     />
                   </div>
                 </div>
