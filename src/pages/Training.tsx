@@ -5,7 +5,7 @@ import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { Separator } from "@/components/ui/separator";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
-import trailSquadLogo from "@/assets/trail-squad-logo-black.png";
+import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 declare global {
   interface Window {
     YT: any;
@@ -17,6 +17,8 @@ const Training = () => {
   const isMobile = useIsMobile();
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
+  const player2Ref = useRef<HTMLDivElement>(null);
+  const ytPlayer2Ref = useRef<any>(null);
   useEffect(() => {
     // Load YouTube IFrame API
     const tag = document.createElement('script');
@@ -45,10 +47,32 @@ const Training = () => {
           }
         });
       }
+      if (player2Ref.current) {
+        const videoId = 'viCyanUDC3s';
+        ytPlayer2Ref.current = new window.YT.Player(player2Ref.current, {
+          videoId: videoId,
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            loop: 1,
+            playlist: videoId,
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            iv_load_policy: 3,
+            modestbranding: 1,
+            playsinline: 1,
+            start: 3
+          }
+        });
+      }
     };
     return () => {
       if (ytPlayerRef.current) {
         ytPlayerRef.current.destroy();
+      }
+      if (ytPlayer2Ref.current) {
+        ytPlayer2Ref.current.destroy();
       }
     };
   }, []);
@@ -77,14 +101,24 @@ const Training = () => {
         </div>
       </section>
 
-      {/* Meet the Team Banner */}
-      <section className="w-full bg-yellow py-16 md:py-20">
-        <div className="container mx-auto px-6">
+      {/* Meet the Team Banner with Video Background */}
+      <section className="relative w-full py-16 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 w-full h-full" style={{
+            transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
+            transformOrigin: 'center center'
+          }}>
+            <div ref={player2Ref} className="absolute inset-0 w-full h-full" />
+          </div>
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Text Section - 60% */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
-                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
+                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-white leading-none tracking-tight drop-shadow-lg">
                   Trail Fox og Trail Squad trail-træning
                 </h1>
               </div>
