@@ -5,17 +5,20 @@ import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
+
 declare global {
   interface Window {
     YT: any;
     onYouTubeIframeAPIReady: () => void;
   }
 }
+
 const Training = () => {
   usePageTitle('Training');
   const isMobile = useIsMobile();
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
+
   useEffect(() => {
     // Load YouTube IFrame API
     const tag = document.createElement('script');
@@ -45,30 +48,37 @@ const Training = () => {
         });
       }
     };
+
     return () => {
       if (ytPlayerRef.current) {
         ytPlayerRef.current.destroy();
       }
     };
   }, []);
-  return <div className="min-h-screen bg-stone">
+
+  return (
+    <div className="min-h-screen bg-stone">
       <Menu />
       
       {/* Hero Section with YouTube Video */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 w-full h-full" style={{
-          transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
-          transformOrigin: 'center center'
-        }}>
+            transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
+            transformOrigin: 'center center'
+          }}>
             <div ref={playerRef} className="absolute inset-0 w-full h-full" />
           </div>
           <div className="absolute inset-0 bg-black/40" />
         </div>
         
         <div className="container mx-auto max-w-4xl text-center z-10 px-6">
-          <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">Trail Fox og Trail Squad trail-træning 2025/2026</h1>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">Løbetræning er en holdsport - både for de nye og for de erfarne</p>
+          <h1 className="font-cabinet font-bold text-4xl md:text-6xl text-white mb-6 drop-shadow-lg">
+            Trail Fox og Trail Squad trail-træning 2025/2026
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+            Løbetræning er en holdsport - både for de nye og for de erfarne
+          </p>
         </div>
       </section>
 
@@ -76,47 +86,73 @@ const Training = () => {
       <section className="py-16 px-6 bg-stone">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Trail Fox - Image + Text */}
-            <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-charcoal p-6 rounded-xl">
-              <div className="md:w-1/2">
-                <img 
-                  src="/lovable-uploads/trail-runners-forest.jpg" 
-                  alt="Trail Fox" 
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-              <div className="md:w-1/2 flex flex-col justify-center">
-                <img 
-                  src={trailFoxLogo} 
-                  alt="Trail Fox Logo" 
-                  className="h-12 w-auto mb-4 object-contain"
-                />
-                <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Fox</h3>
-                <p className="text-white leading-relaxed">
-                  Trail Fox står bag en række af Danmarks fedeste trailløb. Flere tusinde løbere deltager årligt på tværs af de 4 races.
-                </p>
+            {/* Trail Fox - Mobile: logo, image, text / Desktop: image + text side by side */}
+            <div className="md:col-span-2 flex flex-col gap-6 bg-charcoal p-6 rounded-xl">
+              {/* Logo - always on top on mobile */}
+              <img 
+                src={trailFoxLogo} 
+                alt="Trail Fox Logo" 
+                className="h-12 w-auto object-contain md:hidden"
+              />
+              
+              <div className="flex flex-col md:flex-row gap-6">
+                {/* Image */}
+                <div className="w-full md:w-1/2">
+                  <img 
+                    src="/lovable-uploads/trail-runners-forest.jpg" 
+                    alt="Trail Fox" 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                
+                {/* Text content */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center">
+                  {/* Logo - hidden on mobile, shown on desktop */}
+                  <img 
+                    src={trailFoxLogo} 
+                    alt="Trail Fox Logo" 
+                    className="h-12 w-auto mb-4 object-contain hidden md:block"
+                  />
+                  <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Fox</h3>
+                  <p className="text-white leading-relaxed">
+                    Trail Fox står bag en række af Danmarks fedeste trailløb. Flere tusinde løbere deltager årligt på tværs af de 4 races.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Trail Squad - Text + Image */}
-            <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-charcoal p-6 rounded-xl">
-              <div className="md:w-1/2 flex flex-col justify-center">
-                <img 
-                  src={trailSquadLogo} 
-                  alt="Trail Squad Logo" 
-                  className="h-12 w-auto mb-4 object-contain"
-                />
-                <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Squad</h3>
-                <p className="text-white leading-relaxed">
-                  Trail Squad er et niche rejsebureau med fokus på trailløb i udlandet. Vi skaber et fællesskab gennem fælles træning og oplevelser.
-                </p>
-              </div>
-              <div className="md:w-1/2">
-                <img 
-                  src="/lovable-uploads/trail-squad-runners.jpg" 
-                  alt="Trail Squad" 
-                  className="w-full h-full object-cover rounded-lg"
-                />
+            {/* Trail Squad - Mobile: logo, image, text / Desktop: text + image side by side */}
+            <div className="md:col-span-2 flex flex-col gap-6 bg-charcoal p-6 rounded-xl">
+              {/* Logo - always on top on mobile */}
+              <img 
+                src={trailSquadLogo} 
+                alt="Trail Squad Logo" 
+                className="h-12 w-auto object-contain md:hidden"
+              />
+              
+              <div className="flex flex-col md:flex-row gap-6">
+                {/* Text content - shown first on desktop */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center md:order-first order-last">
+                  {/* Logo - hidden on mobile, shown on desktop */}
+                  <img 
+                    src={trailSquadLogo} 
+                    alt="Trail Squad Logo" 
+                    className="h-12 w-auto mb-4 object-contain hidden md:block"
+                  />
+                  <h3 className="font-cabinet font-bold text-2xl text-white mb-4">Trail Squad</h3>
+                  <p className="text-white leading-relaxed">
+                    Trail Squad er et niche rejsebureau med fokus på trailløb i udlandet. Vi skaber et fællesskab gennem fælles træning og oplevelser.
+                  </p>
+                </div>
+                
+                {/* Image - shown first on mobile, second on desktop */}
+                <div className="w-full md:w-1/2">
+                  <img 
+                    src="/lovable-uploads/trail-squad-runners.jpg" 
+                    alt="Trail Squad" 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -164,6 +200,8 @@ const Training = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Training;
