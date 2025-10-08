@@ -211,7 +211,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">Vi mødes ved Den Røde Port ved Klam</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">Vi mødes ved Den Røde Port ved Klampenborg St. Efter et par kms opvarmning står den på bakketræning, tekniksnak og højt humør (og puls)! Vamos!</p>
                   <button onClick={() => handleSessionRegistration("Træningssession #1", "Søndag d. 23. november 2025", "09:00 - 10:30'ish", "Dyrehaven, Klampenborg")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
