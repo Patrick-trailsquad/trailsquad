@@ -142,32 +142,6 @@ const Training = () => {
 
       {/* Trail Fox & Trail Squad Info */}
       <section className="bg-stone">
-        {/* Trail Fox - Full Width */}
-        <div className="bg-charcoal py-16 md:py-24">
-          <div className="container mx-auto px-6 max-w-7xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="order-2 md:order-1">
-                <img 
-                  src={trailFoxLogo} 
-                  alt="Trail Fox Logo" 
-                  className="h-16 w-auto mb-6 object-contain"
-                />
-                <h3 className="font-cabinet font-bold text-3xl md:text-4xl text-white mb-6">Trail Fox</h3>
-                <p className="text-lg text-white/90 leading-relaxed">
-                  Trail Fox står bag en række af Danmarks fedeste trailløb. Flere tusinde løbere deltager årligt på tværs af de 4 races.
-                </p>
-              </div>
-              <div className="order-1 md:order-2">
-                <img 
-                  src="/lovable-uploads/trail-runners-forest.jpg" 
-                  alt="Trail Fox" 
-                  className="w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-2xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Trail Squad - Full Width */}
         <div className="bg-white py-16 md:py-24">
           <div className="container mx-auto px-6 max-w-7xl">
