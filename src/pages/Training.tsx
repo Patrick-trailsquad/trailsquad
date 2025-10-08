@@ -277,7 +277,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 </div>
               </div>
               
-              <div className="relative">
+              <div className="relative -ml-4">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
