@@ -96,7 +96,7 @@ const Training = () => {
             {/* Text Section - 60% */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
-                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-white leading-none tracking-tight drop-shadow-lg">
+                <h1 className="font-cabinet text-3xl md:text-7xl xl:text-8xl font-black text-white leading-none tracking-tight drop-shadow-lg">
                   Trail Fox og Trail Squad trail-træning
                 </h1>
               </div>
