@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
+import { useIsMobile } from "../hooks/use-mobile";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 
@@ -12,6 +13,7 @@ declare global {
 
 const Training = () => {
   usePageTitle('Training');
+  const isMobile = useIsMobile();
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
 
@@ -61,7 +63,7 @@ const Training = () => {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              transform: 'scale(1.5)',
+              transform: isMobile ? 'scale(2.5)' : 'scale(1.5)',
               transformOrigin: 'center center'
             }}
           >
