@@ -120,6 +120,9 @@ const Footer = () => {
                 <a href="/flash" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                   Flash
                 </a>
+                <a href="/training" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                  Training
+                </a>
                 <a href="/trailfox" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                   TrailFox
                 </a>

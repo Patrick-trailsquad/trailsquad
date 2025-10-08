@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import ForOrganizers from "./pages/ForOrganizers";
 import Flash from "./pages/Flash";
+import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/for-organizers" element={<ForOrganizers />} />
             <Route path="/flash" element={<Flash />} />
+            <Route path="/training" element={<Training />} />
             
             {/* Admin routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
