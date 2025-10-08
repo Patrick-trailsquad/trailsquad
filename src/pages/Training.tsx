@@ -63,7 +63,7 @@ const Training = () => {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{
-              transform: isMobile ? 'scale(2.5)' : 'scale(1.5)',
+              transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
               transformOrigin: 'center center'
             }}
           >
