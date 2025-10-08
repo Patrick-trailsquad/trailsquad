@@ -162,7 +162,7 @@ export const TrainingRegistrationModal = ({
               checked={formData.optOutMarketing}
               onCheckedChange={(checked) => setFormData({ ...formData, optOutMarketing: checked as boolean })}
             />
-            <Label htmlFor="optOutMarketing" className="text-sm font-normal leading-relaxed cursor-pointer">
+            <Label htmlFor="optOutMarketing" className="text-xs font-normal leading-relaxed cursor-pointer">
               Lad mig endelig høre om kommende træninger, løb fra Trail Fox og Trail Squad ture. Intet spam, bare god energi 🥳<br />
               (Max én mail pr. måned) 😇<br />
               Vi er forøvrigt nogle dovne skribenter, så vi skriver kun hvis det er VIRKELIG vigtig 😄
