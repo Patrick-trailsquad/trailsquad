@@ -113,7 +113,7 @@ const Training = () => {
               </div>
               <div className="md:w-1/2">
                 <img 
-                  src="/lovable-uploads/trail-runners-grass.png" 
+                  src="/lovable-uploads/trail-squad-runners.jpg" 
                   alt="Trail Squad" 
                   className="w-full h-full object-cover rounded-lg"
                 />
