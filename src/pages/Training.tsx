@@ -199,7 +199,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                   <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #1</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #1 [november]</h3>
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Søndag d. 23. november 2025
@@ -228,7 +228,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                   <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #2</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-4">Træningssession #2 [december]</h3>
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Dato:</span> Tirsdag d. 16. december 2025
