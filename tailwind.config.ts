@@ -33,6 +33,7 @@ export default {
           light: '#F0937D'
         },
         charcoal: '#2C3539',
+        yellow: '#FFD700',
         orange: {
           DEFAULT: 'hsl(var(--orange))',
           foreground: 'hsl(var(--orange-foreground))'
