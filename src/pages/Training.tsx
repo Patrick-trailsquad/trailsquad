@@ -171,9 +171,7 @@ Eller er du erfaren løber, der vil være en del af et løbe-community, som løb
 
 Så vil vores trail træningssessions være noget for dig!</p>
               <p className="text-lg text-gray-600 leading-relaxed">Har du fået interesse for trail, og overvejer du dit første trail-race inden for en overskuelig fremtid? Eller er du</p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Træningsturene er typisk kortere end vores eventture og fokuserer på teknik, kondition og fællesskab.
-              </p>
+              
             </div>
           </div>
         </div>
