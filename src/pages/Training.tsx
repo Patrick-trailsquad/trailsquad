@@ -170,7 +170,7 @@ Med mange års erfaring inden for eventafvikling, og med tusindvis af loyale rac
       </section>
 
       {/* Concept Explanation */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-0 md:px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-left mb-12">
             <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">Månedlige træningssessions!
@@ -188,7 +188,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             </div>
 
             {/* Training Sessions */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12 px-4 md:px-0">
               {/* Session 1 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <div className="aspect-video bg-charcoal/20">
