@@ -118,14 +118,14 @@ export const TrainingRegistrationModal = ({
           <div className="space-y-2">
             <Label htmlFor="experience">Erfaring med trail-løb (1-5) *</Label>
             <div className="flex items-center gap-4">
-              <Input
+              <input
                 id="experience"
                 type="range"
                 min="1"
                 max="5"
                 value={formData.experience}
                 onChange={(e) => setFormData({ ...formData, experience: parseInt(e.target.value) })}
-                className="flex-1"
+                className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FFDC00] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-black [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#FFDC00] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-black"
               />
               <span className="font-cabinet text-xl font-bold w-8 text-center">{formData.experience}</span>
             </div>
