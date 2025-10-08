@@ -188,7 +188,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             </div>
 
             {/* Training Sessions */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12 px-4 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12 px-6 md:px-0">
               {/* Session 1 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                 <div className="aspect-video bg-charcoal/20">
