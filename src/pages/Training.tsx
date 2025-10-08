@@ -70,6 +70,47 @@ const Training = () => {
         </div>
       </section>
 
+      {/* Trail Fox & Trail Squad Info */}
+      <section className="py-16 px-6 bg-stone">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Trail Fox - Image + Text */}
+            <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-white p-6 rounded-xl">
+              <div className="md:w-1/2">
+                <img 
+                  src="/lovable-uploads/trailfox-hero-logo.png" 
+                  alt="Trail Fox" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div className="md:w-1/2 flex flex-col justify-center">
+                <h3 className="font-cabinet font-bold text-2xl text-charcoal mb-4">Trail Fox</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Trail Fox er vores serie af træningsløb i Danmark. Vi tilbyder guidede træningsture hvor du kan forberede dig til kommende løb sammen med andre trail-entusiaster.
+                </p>
+              </div>
+            </div>
+
+            {/* Trail Squad - Text + Image */}
+            <div className="md:col-span-2 flex flex-col md:flex-row gap-6 bg-white p-6 rounded-xl">
+              <div className="md:w-1/2 flex flex-col justify-center">
+                <h3 className="font-cabinet font-bold text-2xl text-charcoal mb-4">Trail Squad</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Trail Squad er fællesskabet af løbere der træner sammen mod fælles mål. Vi tager sammen til internationale trail-løb og skaber uforglemmelige oplevelser.
+                </p>
+              </div>
+              <div className="md:w-1/2">
+                <img 
+                  src="/lovable-uploads/trail-runners-grass.png" 
+                  alt="Trail Squad" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Concept Explanation */}
       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
