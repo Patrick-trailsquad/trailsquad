@@ -8,6 +8,8 @@ import DestinationLinks from "./footer/DestinationLinks";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useToast } from "./ui/use-toast";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
+import { ChevronDown } from "lucide-react";
 const Footer = () => {
   const [selectedPolicy, setSelectedPolicy] = useState<{
     title: string;
@@ -15,6 +17,7 @@ const Footer = () => {
   } | null>(null);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isQuicklinksOpen, setIsQuicklinksOpen] = useState(false);
   const navigateAndScroll = useNavigateAndScroll();
   const isMobile = useIsMobile();
   const { toast } = useToast();
@@ -112,20 +115,46 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="pt-8 border-t border-gray-100">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500 text-center md:text-left">
+              <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500 text-center md:text-left w-full md:w-auto">
                 <div>© {new Date().getFullYear()} Trail Squad ApS. All rights reserved.</div>
-                <a href="/admin/login" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                  Admin
-                </a>
-                <a href="/flash" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                  Flash
-                </a>
-                <a href="/training" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                  Training
-                </a>
-                <a href="/trailfox" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                  TrailFox
-                </a>
+                
+                {isMobile ? (
+                  <Collapsible open={isQuicklinksOpen} onOpenChange={setIsQuicklinksOpen} className="w-full">
+                    <CollapsibleTrigger className="flex items-center gap-2 text-xs text-gray-400 hover:text-gray-600 transition-colors mx-auto">
+                      Quicklinks
+                      <ChevronDown className={`h-3 w-3 transition-transform ${isQuicklinksOpen ? 'rotate-180' : ''}`} />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="flex flex-col items-center gap-3 mt-3">
+                      <a href="/admin/login" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                        Admin
+                      </a>
+                      <a href="/flash" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                        Flash
+                      </a>
+                      <a href="/training" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                        Training
+                      </a>
+                      <a href="/trailfox" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                        TrailFox
+                      </a>
+                    </CollapsibleContent>
+                  </Collapsible>
+                ) : (
+                  <>
+                    <a href="/admin/login" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                      Admin
+                    </a>
+                    <a href="/flash" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                      Flash
+                    </a>
+                    <a href="/training" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                      Training
+                    </a>
+                    <a href="/trailfox" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                      TrailFox
+                    </a>
+                  </>
+                )}
               </div>
               {rejsegarantiLogo}
             </div>
