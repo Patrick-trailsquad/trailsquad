@@ -210,7 +210,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Dato:</span> Søndag d. 23. november 2025
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Tid:</span> 09:00 - 10:30'ish
+                      <span className="font-semibold">Mødetid:</span> 09:00 - 10:30'ish
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
@@ -243,7 +243,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Dato:</span> Tirsdag d. 16. december 2025
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Tid:</span> 18:00 - 19:30'ish
+                      <span className="font-semibold">Mødetid:</span> 18:00 - 19:30'ish
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
