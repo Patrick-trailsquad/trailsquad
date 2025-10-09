@@ -3,7 +3,13 @@ import { FC } from 'react';
 
 const AboutHero: FC = () => {
   return (
-    <div className="relative h-[60vh] bg-[#FFDC00] flex items-center justify-center overflow-hidden">
+    <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <img 
+        src="/lovable-uploads/trail-runner-mountain-peak.jpg" 
+        alt="Trail runner on mountain peak" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-white/60" />
       <div className="text-center text-[#000000e6] px-6 md:px-4 flex flex-col relative z-10">
         <h1 className="text-5xl font-cabinet font-bold">Om Trail Squad</h1>
         <p className="text-xl max-w-2xl mx-auto mt-2">Trail Squad er et rejseselskab fokuseret på at løbe episke trailløb over hele kloden.</p>
