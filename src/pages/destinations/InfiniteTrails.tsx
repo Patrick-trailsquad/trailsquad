@@ -71,7 +71,7 @@ const InfiniteTrails = () => {
         <InfiniteTrailsIncludedAmenities className="bg-transparent" />
       </div>
       
-      <TrailSquadSection />
+      <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts), Røsnæs (april) og Møns Klint (august). Vi tager afsted sammen, og får en fest!" />
       
       {/* Decorative Lines Section */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">

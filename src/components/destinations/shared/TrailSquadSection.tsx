@@ -2,7 +2,13 @@ import trailRunnersImage from "@/assets/trail-runners-forest.jpg";
 import trailSquadLogo from "@/assets/trail-squad-logo.png";
 import { Button } from "@/components/ui/button";
 
-const TrailSquadSection = () => {
+interface TrailSquadSectionProps {
+  description?: string;
+}
+
+const TrailSquadSection = ({ description }: TrailSquadSectionProps = {}) => {
+  const defaultDescription = "Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen, og får en fest!";
+  
   return (
     <section className="w-full">
       <div className="container mx-auto px-2 md:px-6">
@@ -26,9 +32,7 @@ const TrailSquadSection = () => {
               Trail Squad & Trail Fox Series
             </h1>
             <h2 className="text-lg text-charcoal/80 mb-6">
-              Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april).
-              <br />
-              Vi tager afsted sammen, og får en fest!
+              {description || defaultDescription}
             </h2>
             <Button 
               asChild
