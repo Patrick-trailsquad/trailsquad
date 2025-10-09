@@ -109,7 +109,7 @@ export const TrainingRegistrationModal = ({
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle className="font-cabinet text-2xl">Tilmeld træningssession</DialogTitle>
-          <DialogDescription className="text-base space-y-1">
+          <DialogDescription className="text-sm space-y-1">
             <div className="font-semibold text-charcoal mt-2">{sessionTitle}</div>
             <div>{sessionDate}</div>
             <div>Mødetid: {sessionMeetingTime}</div>
