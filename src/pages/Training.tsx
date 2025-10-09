@@ -296,7 +296,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             <div className="lg:col-span-4 flex flex-col gap-6 justify-center mt-0 lg:mt-0">
               <div className="relative">
                 <a href="https://trailfoxseries.dk/" target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-default">
-                  <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
+                  <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-32 md:h-40 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                     <span className="bg-[#FFDC00] text-black px-6 py-2 rounded-full font-cabinet font-medium border-2 border-black hover:bg-[#FFDC00]/90 transition-colors duration-300 whitespace-nowrap cursor-pointer">Se kommende Trail Fox løb</span>
@@ -311,7 +311,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 e.preventDefault();
                 navigateAndScroll('/', 'upcoming-trips');
               }} className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-default">
-                  <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
+                  <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-32 md:h-40 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                     <span className="bg-[#FFDC00] text-black px-6 py-2 rounded-full font-cabinet font-medium border-2 border-black hover:bg-[#FFDC00]/90 transition-colors duration-300 whitespace-nowrap cursor-pointer">Se kommende Trail Squad rejser</span>
