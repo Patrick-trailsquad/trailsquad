@@ -213,6 +213,9 @@ Så vil vores trail træningssessions være noget for dig!</p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Mødested:</span> Peter Lieps Vej 4
+                    </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                     Vi mødes ved Den Røde Port ved Klampenborg Station.
