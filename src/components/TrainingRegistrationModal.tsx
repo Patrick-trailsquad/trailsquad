@@ -14,6 +14,7 @@ interface TrainingRegistrationModalProps {
   sessionDate: string;
   sessionTime: string;
   sessionLocation: string;
+  sessionMeetingPlace: string;
 }
 
 const registrationSchema = z.object({
@@ -29,7 +30,8 @@ export const TrainingRegistrationModal = ({
   sessionTitle,
   sessionDate,
   sessionTime,
-  sessionLocation
+  sessionLocation,
+  sessionMeetingPlace
 }: TrainingRegistrationModalProps) => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -57,6 +59,7 @@ export const TrainingRegistrationModal = ({
         sessionDate,
         sessionTime,
         sessionLocation,
+        sessionMeetingPlace,
         timestamp: new Date().toISOString()
       };
 
