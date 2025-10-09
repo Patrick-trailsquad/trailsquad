@@ -47,16 +47,30 @@ export const TrainingRegistrationModal = ({
       const validated = registrationSchema.parse(formData);
       setLoading(true);
 
-      // TODO: Add actual submission logic here (e.g., Supabase insert)
-      console.log("Registration data:", {
-        ...validated,
-        session: {
-          sessionTitle,
-          sessionDate,
-          sessionTime,
-          sessionLocation
-        }
-      });
+      // Send to Zapier webhook
+      const webhookData = {
+        fullName: validated.fullName,
+        email: validated.email,
+        experience: validated.experience,
+        optOutMarketing: validated.optOutMarketing,
+        sessionTitle,
+        sessionDate,
+        sessionTime,
+        sessionLocation,
+        timestamp: new Date().toISOString()
+      };
+
+      try {
+        await fetch('https://hooks.zapier.com/hooks/catch/21931910/u53jr77/', {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          mode: "no-cors",
+          body: JSON.stringify(webhookData),
+        });
+      } catch (webhookError) {
+        console.error("Webhook error:", webhookError);
+        // Continue even if webhook fails
+      }
 
       toast.success("Tilmelding gennemført!", {
         description: "Vi ser frem til at se dig til træningen."
