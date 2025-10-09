@@ -258,8 +258,14 @@ Så vil vores trail træningssessions være noget for dig!</p>
       </section>
 
       {/* Landscape Images Section */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="relative py-16 md:py-20 overflow-hidden">
+        <img 
+          src="/lovable-uploads/trail-runner-mountain-peak.jpg" 
+          alt="Trail runner on mountain peak" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/70" />
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Text Section - 60% */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
