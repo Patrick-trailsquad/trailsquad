@@ -196,7 +196,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 1 */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => handleSessionRegistration("Træningssession #1", "Søndag d. 23. november 2025", "09:00 - 10:30'ish", "Dyrehaven, Klampenborg")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
                   <img src="/lovable-uploads/training-session-1.png" alt="Training Session 1" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
@@ -226,7 +226,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               </div>
 
               {/* Session 2 */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => handleSessionRegistration("Træningssession #2", "Tirsdag d. 16. december 2025", "18:00 - 19:30'ish", "Dyrehaven, Klampenborg")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
                   <img src="/lovable-uploads/training-session-2.png" alt="Training Session 2" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
