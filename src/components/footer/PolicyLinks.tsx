@@ -65,31 +65,52 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
     },
     cookies: {
       title: "Cookie-politik",
-      content: `Cookie Policy
+      content: `Cookie-politik
 
-Effective Date: 1st of March 2025
+Ikrafttrædelsesdato: 1. marts 2025
 
-1. Introduction
-Trail Squad ("we," "our," "us") currently does not use any cookies or similar tracking technologies on our website.
+1. Introduktion
+Trail Squad ("vi," "vores") bruger cookies og lignende sporingsteknologier på vores hjemmeside for at forbedre din brugeroplevelse og til markedsføringsformål.
 
-2. What Are Cookies?
-Cookies are small text files that websites place on your device to store information about your browsing preferences, improve your user experience, and collect anonymous statistical information.
+2. Hvad er cookies?
+Cookies er små tekstfiler, som hjemmesider placerer på din enhed for at gemme information om dine browserpræferencer, forbedre din brugeroplevelse og indsamle anonym statistisk information.
 
-3. Our Current Cookie Usage
-• We currently do not use any cookies on our website
-• We do not collect any automatic tracking information through cookies
-• No third-party cookies are present on our site
+3. Vores brug af cookies
+Vi bruger følgende typer cookies:
 
-4. Future Changes
-• If we decide to implement cookies in the future, we will update this policy
-• You will be informed of any changes and asked for consent where required by law
-• This policy will be updated to detail what cookies are used and their purposes
+Nødvendige cookies
+• Disse cookies er essentielle for, at hjemmesiden kan fungere korrekt
+• De kan ikke deaktiveres i vores systemer
 
-5. Contact Information
-If you have any questions about our cookie practices, please contact us at:
+Marketing- og retargeting-cookies
+• Vi bruger cookies til retargeting og remarketingformål
+• Disse cookies giver os mulighed for at vise relevante annoncer til dig på andre hjemmesider
+• Vi kan spore, hvordan du interagerer med vores indhold, så vi kan målrette vores kommunikation bedre
+• Retargeting-cookies hjælper os med at huske, hvilke sider du har besøgt, så vi kan vise dig relevante tilbud
 
-Trail Squad
-Email: hello@trailsquad.dk`,
+Analytiske cookies
+• Vi bruger cookies til at analysere, hvordan besøgende bruger vores hjemmeside
+• Dette hjælper os med at forbedre vores tjenester og brugeroplevelse
+
+4. Tredjepartscookies
+Vi kan bruge tredjepartstjenester, der placerer cookies på din enhed til markedsførings- og analyseformål. Disse kan omfatte:
+• Facebook Pixel
+• Google Analytics
+• Andre retargeting-platforme
+
+5. Sådan styrer du cookies
+Du kan til enhver tid administrere eller deaktivere cookies gennem dine browserindstillinger. Bemærk venligst, at deaktivering af cookies kan påvirke funktionaliteten af vores hjemmeside.
+
+De fleste browsere accepterer cookies automatisk, men du kan normalt ændre indstillingerne til at afvise cookies, hvis du foretrækker det.
+
+6. Opdateringer af denne politik
+Vi kan opdatere denne cookie-politik fra tid til anden. Eventuelle ændringer vil blive offentliggjort på vores hjemmeside med den opdaterede ikrafttrædelsesdato.
+
+7. Kontaktinformation
+Hvis du har spørgsmål til vores cookiepraksis, er du velkommen til at kontakte os på:
+
+Trail Squad ApS
+E-mail: hello@trailsquad.dk`,
     },
     terms: {
       title: "Handelsbetingelser",
