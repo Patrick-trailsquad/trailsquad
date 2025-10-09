@@ -37,7 +37,7 @@ const DestinationLinks = () => {
               ? "bg-gray-100 text-gray-600"
               : destination.spots === "Billetsalg lukket"
               ? "bg-orange text-orange-foreground"
-              : "bg-[#FFDC00] text-black border border-black"
+              : "bg-[#FFDC00] text-black"
           }`}>
             {destination.spots}
           </span>
