@@ -209,13 +209,13 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> Søndag d. 23. november 2025
+                      <span className="font-semibold">Dato:</span> <time dateTime="2025-11-23">Søndag d. 23. november 2025</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> 09:00
+                      <span className="font-semibold">Mødetid:</span> <time dateTime="2025-11-23T09:00:00+01:00">09:00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> 10:30
+                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2025-11-23T10:30:00+01:00">10:30</time>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
@@ -245,13 +245,13 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> Tirsdag d. 16. december 2025
+                      <span className="font-semibold">Dato:</span> <time dateTime="2025-12-16">Tirsdag d. 16. december 2025</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> 18:00
+                      <span className="font-semibold">Mødetid:</span> <time dateTime="2025-12-16T18:00:00+01:00">18:00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> 19:30
+                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2025-12-16T19:30:00+01:00">19:30</time>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
