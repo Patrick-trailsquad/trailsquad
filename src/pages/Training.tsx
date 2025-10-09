@@ -276,7 +276,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <a href="https://trailfoxseries.dk/" target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                     <span className="bg-transparent text-white px-6 py-2 rounded-full font-cabinet font-medium border-2 border-white hover:bg-white/10 transition-colors duration-300 whitespace-nowrap">Se kommende Trail Fox løb</span>
                   </div>
                 </a>
@@ -291,7 +291,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               }} className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-40 md:h-48 object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                     <span className="bg-transparent text-white px-6 py-2 rounded-full font-cabinet font-medium border-2 border-white hover:bg-white/10 transition-colors duration-300 whitespace-nowrap">Se kommende Trail Squad rejser</span>
                   </div>
                 </div>
