@@ -12,7 +12,8 @@ interface TrainingRegistrationModalProps {
   onOpenChange: (open: boolean) => void;
   sessionTitle: string;
   sessionDate: string;
-  sessionTime: string;
+  sessionMeetingTime: string;
+  sessionEndTime: string;
   sessionLocation: string;
   sessionMeetingPlace: string;
 }
@@ -29,7 +30,8 @@ export const TrainingRegistrationModal = ({
   onOpenChange,
   sessionTitle,
   sessionDate,
-  sessionTime,
+  sessionMeetingTime,
+  sessionEndTime,
   sessionLocation,
   sessionMeetingPlace
 }: TrainingRegistrationModalProps) => {
@@ -57,7 +59,8 @@ export const TrainingRegistrationModal = ({
         optOutMarketing: validated.optOutMarketing,
         sessionTitle,
         sessionDate,
-        sessionTime,
+        sessionMeetingTime,
+        sessionEndTime,
         sessionLocation,
         sessionMeetingPlace,
         timestamp: new Date().toISOString()
@@ -109,7 +112,8 @@ export const TrainingRegistrationModal = ({
           <DialogDescription className="text-base space-y-1">
             <div className="font-semibold text-charcoal mt-2">{sessionTitle}</div>
             <div>{sessionDate}</div>
-            <div>{sessionTime}</div>
+            <div>Mødetid: {sessionMeetingTime}</div>
+            <div>Vi slutter (ca): {sessionEndTime}</div>
             <div>{sessionLocation}</div>
           </DialogDescription>
         </DialogHeader>
