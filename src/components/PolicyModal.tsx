@@ -31,7 +31,9 @@ const PolicyModal = ({ isOpen, onClose, title, content }: PolicyModalProps) => {
               
               // Check for bullet-like content (lines that are list items)
               if (trimmed.startsWith('Afbestilles') || trimmed.startsWith('•') || trimmed.startsWith('-')) {
-                return `<span style="display: block; margin-bottom: 0.75rem;">• ${line}</span>`;
+                // Remove existing bullet if present to avoid double bullets
+                const textWithoutBullet = trimmed.replace(/^[•\-]\s*/, '');
+                return `<span style="display: block; margin-bottom: 0.75rem;">• ${textWithoutBullet}</span>`;
               }
               
               // Check if line is a section title (standalone short lines that are headers)
