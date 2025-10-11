@@ -69,9 +69,9 @@ const destinations = [
 ];
 
 const DestinationsSection = () => {
-  // Filter out Vesuvio and Chianti destinations
+  // Filter out Vesuvio, Chianti, and Istria destinations
   const visibleDestinations = destinations.filter(dest => 
-    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti"
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria"
   );
 
   return (
