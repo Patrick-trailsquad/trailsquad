@@ -13,7 +13,7 @@ export const DESTINATIONS: Destination[] = [
     name: 'MIUT Madeira',
     route: '/destinations/miut',
     status: 'completed' as const,
-    published: true
+    published: false
   },
   {
     id: 'ribeira-sacra',

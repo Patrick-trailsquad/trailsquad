@@ -14,7 +14,7 @@ import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import SwissAlps from "./pages/destinations/SwissAlps";
-import MIUT from "./pages/destinations/MIUT";
+// import MIUT from "./pages/destinations/MIUT";
 import NorwegianFjords from "./pages/destinations/NorwegianFjords";
 import Transylvania100 from "./pages/destinations/Transylvania100";
 import MontBlanc from "./pages/destinations/MontBlanc";
@@ -57,7 +57,7 @@ const App = () => (
             
             {/* Destination routes */}
             <Route path="/destinations/gtc" element={<SwissAlps />} />
-            <Route path="/destinations/miut" element={<MIUT />} />
+            {/* <Route path="/destinations/miut" element={<MIUT />} /> */}
             <Route path="/destinations/vesuvio" element={<Vesuvio />} />
             <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
             <Route path="/destinations/transylvania" element={<Transylvania100 />} />
