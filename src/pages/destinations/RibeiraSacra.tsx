@@ -12,6 +12,7 @@ import RibeiraMediaSection from "../../components/destinations/ribeira-sacra/Rib
 import RibeiraAccommodation from "../../components/destinations/ribeira-sacra/RibeiraAccommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+import RibeiraSacraTestimonials from "../../components/destinations/ribeira-sacra/RibeiraSacraTestimonials";
 
 const RibeiraSacra = () => {
   useScrollToTop();
@@ -54,6 +55,8 @@ const RibeiraSacra = () => {
       </div>
       
       <TrailSquadSection />
+      
+      <RibeiraSacraTestimonials />
       
       {/* Decorative Lines Section */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">

@@ -19,7 +19,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'ribeira-sacra',
     name: 'Ribeira Sacra',
     route: '/destinations/ribeira-sacra',
-    status: 'open' as const,
+    status: 'completed' as const,
     published: true
   },
   {

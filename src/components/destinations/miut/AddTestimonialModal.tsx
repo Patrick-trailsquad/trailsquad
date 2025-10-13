@@ -12,9 +12,10 @@ import { supabase } from "@/integrations/supabase/client";
 interface AddTestimonialModalProps {
   isOpen: boolean;
   onClose: () => void;
+  destination?: string;
 }
 
-const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
+const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTestimonialModalProps) => {
   const [formData, setFormData] = useState({
     name: "",
     location: "",
@@ -144,7 +145,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
           distance: formData.distance,
           rating: formData.rating,
           review: formData.review,
-          destination: 'MIUT',
+          destination: destination,
           photo_url: photoUrl
           // user_id will be null for unauthenticated users
           // status will default to 'approved' for auto-approval
@@ -252,11 +253,19 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
                   <SelectValue placeholder="Vælg din distance" />
                 </SelectTrigger>
                 <SelectContent className="bg-white z-50">
-                  <SelectItem value="MIUT 16km">MIUT 16km</SelectItem>
-                  <SelectItem value="MIUT 42km">MIUT 42km</SelectItem>
-                  <SelectItem value="MIUT 60km">MIUT 60km</SelectItem>
-                  <SelectItem value="MIUT 85km">MIUT 85km</SelectItem>
-                  <SelectItem value="MIUT 115km">MIUT 115km</SelectItem>
+                  {destination === 'MIUT' ? (
+                    <>
+                      <SelectItem value="MIUT 16km">MIUT 16km</SelectItem>
+                      <SelectItem value="MIUT 42km">MIUT 42km</SelectItem>
+                      <SelectItem value="MIUT 60km">MIUT 60km</SelectItem>
+                      <SelectItem value="MIUT 85km">MIUT 85km</SelectItem>
+                      <SelectItem value="MIUT 115km">MIUT 115km</SelectItem>
+                    </>
+                  ) : destination === 'Ribeira Sacra' ? (
+                    <>
+                      <SelectItem value="48km">48km</SelectItem>
+                    </>
+                  ) : null}
                 </SelectContent>
               </Select>
             </div>
@@ -341,7 +350,7 @@ const AddTestimonialModal = ({ isOpen, onClose }: AddTestimonialModalProps) => {
               value={formData.review}
               onChange={(e) => setFormData(prev => ({ ...prev, review: e.target.value }))}
               className="mt-1 min-h-[120px]"
-              placeholder="Fortæl om din oplevelse med MIUT og Trail Squad..."
+              placeholder={`Fortæl om din oplevelse med ${destination} og Trail Squad...`}
               required
             />
           </div>
