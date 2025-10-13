@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import { Star } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import AddTestimonialModal from "../miut/AddTestimonialModal";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 interface Testimonial {
   id?: string;
@@ -11,7 +12,7 @@ interface Testimonial {
   rating: number;
   review: string;
   distance: string;
-  photo_url?: string | null;
+  photo_url?: string | string[] | null;
   created_at?: string;
 }
 const RibeiraSacraTestimonials = () => {
@@ -152,13 +153,27 @@ const RibeiraSacraTestimonials = () => {
   };
 
   const allTestimonials = dbTestimonials.map(t => {
+    let photos: string[] = [];
+    if (t.photo_url) {
+      if (Array.isArray(t.photo_url)) {
+        photos = t.photo_url;
+      } else if (typeof t.photo_url === 'string' && t.photo_url !== 'null') {
+        try {
+          const parsed = JSON.parse(t.photo_url);
+          photos = Array.isArray(parsed) ? parsed : [t.photo_url];
+        } catch {
+          photos = [t.photo_url];
+        }
+      }
+    }
+    
     return {
       name: t.name,
       location: t.location || '',
       rating: t.rating,
       review: t.review,
       race: t.distance,
-      photo_url: t.photo_url,
+      photos: photos.length > 0 ? photos : ["/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png"],
       date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', {
         month: 'long',
         year: 'numeric'
@@ -196,17 +211,27 @@ const RibeiraSacraTestimonials = () => {
             {allTestimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-0 h-full">
-                  <div className="bg-gray-100 h-60 flex items-center justify-center">
-                    {testimonial.photo_url && testimonial.photo_url !== 'null' ? (
-                      <img 
-                        src={testimonial.photo_url} 
-                        alt={`Photo from ${testimonial.name}`}
-                        className="w-full h-full object-cover"
-                      />
+                  <div className="bg-gray-100 h-60 relative overflow-hidden">
+                    {testimonial.photos.length > 1 ? (
+                      <Carousel className="w-full h-full" opts={{ loop: true }}>
+                        <CarouselContent className="h-60">
+                          {testimonial.photos.map((photo, photoIndex) => (
+                            <CarouselItem key={photoIndex} className="h-60">
+                              <img 
+                                src={photo} 
+                                alt={`Photo ${photoIndex + 1} from ${testimonial.name}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-2 bg-white/80 hover:bg-white border-0" />
+                        <CarouselNext className="right-2 bg-white/80 hover:bg-white border-0" />
+                      </Carousel>
                     ) : (
                       <img 
-                        src="/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png" 
-                        alt="Trail runner illustration"
+                        src={testimonial.photos[0]} 
+                        alt={`Photo from ${testimonial.name}`}
                         className="w-full h-full object-cover"
                       />
                     )}
