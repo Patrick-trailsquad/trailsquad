@@ -11,7 +11,6 @@ import RibeiraDescription from "../../components/destinations/ribeira-sacra/Ribe
 import RibeiraMediaSection from "../../components/destinations/ribeira-sacra/RibeiraMediaSection";
 import RibeiraAccommodation from "../../components/destinations/ribeira-sacra/RibeiraAccommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
-import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 import RibeiraSacraTestimonials from "../../components/destinations/ribeira-sacra/RibeiraSacraTestimonials";
 
 const RibeiraSacra = () => {
@@ -53,8 +52,6 @@ const RibeiraSacra = () => {
       <div className="mt-12 mb-20">
         <IncludedAmenities className="bg-transparent" />
       </div>
-      
-      <TrailSquadSection />
       
       <RibeiraSacraTestimonials />
       
