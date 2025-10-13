@@ -22,22 +22,21 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
     distance: "",
     rating: 0,
     review: "",
-    photo: null as File | null
+    photos: [] as File[]
   });
   const [dragActive, setDragActive] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showImageReminder, setShowImageReminder] = useState(false);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const { toast } = useToast();
+  const MAX_IMAGES = 6;
 
-  // Clean up image preview URL when component unmounts or image changes
+  // Clean up image preview URLs when component unmounts or images change
   useEffect(() => {
     return () => {
-      if (imagePreview) {
-        URL.revokeObjectURL(imagePreview);
-      }
+      imagePreviews.forEach(preview => URL.revokeObjectURL(preview));
     };
-  }, [imagePreview]);
+  }, [imagePreviews]);
 
   const handleStarClick = (rating: number) => {
     setFormData(prev => ({ ...prev, rating }));
@@ -58,34 +57,56 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
     e.stopPropagation();
     setDragActive(false);
     
-    const files = e.dataTransfer.files;
-    if (files && files[0]) {
-      const file = files[0];
-      if (file.type.startsWith('image/')) {
-        // Clean up previous preview URL
-        if (imagePreview) {
-          URL.revokeObjectURL(imagePreview);
-        }
-        const previewUrl = URL.createObjectURL(file);
-        setImagePreview(previewUrl);
-        setFormData(prev => ({ ...prev, photo: file }));
-        setShowImageReminder(false); // Hide reminder when image is added via drag and drop
+    const files = Array.from(e.dataTransfer.files);
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    
+    if (imageFiles.length > 0) {
+      const availableSlots = MAX_IMAGES - formData.photos.length;
+      const filesToAdd = imageFiles.slice(0, availableSlots);
+      
+      if (imageFiles.length > availableSlots) {
+        toast({
+          title: "Maksimalt antal billeder nået",
+          description: `Du kan kun uploade ${MAX_IMAGES} billeder i alt.`,
+          variant: "destructive"
+        });
       }
+      
+      const newPreviews = filesToAdd.map(file => URL.createObjectURL(file));
+      setImagePreviews(prev => [...prev, ...newPreviews]);
+      setFormData(prev => ({ ...prev, photos: [...prev.photos, ...filesToAdd] }));
+      setShowImageReminder(false);
     }
   };
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
-    if (files && files[0]) {
-      // Clean up previous preview URL
-      if (imagePreview) {
-        URL.revokeObjectURL(imagePreview);
+    if (files && files.length > 0) {
+      const imageFiles = Array.from(files).filter(file => file.type.startsWith('image/'));
+      const availableSlots = MAX_IMAGES - formData.photos.length;
+      const filesToAdd = imageFiles.slice(0, availableSlots);
+      
+      if (imageFiles.length > availableSlots) {
+        toast({
+          title: "Maksimalt antal billeder nået",
+          description: `Du kan kun uploade ${MAX_IMAGES} billeder i alt.`,
+          variant: "destructive"
+        });
       }
-      const previewUrl = URL.createObjectURL(files[0]);
-      setImagePreview(previewUrl);
-      setFormData(prev => ({ ...prev, photo: files[0] }));
-      setShowImageReminder(false); // Hide reminder when image is added
+      
+      const newPreviews = filesToAdd.map(file => URL.createObjectURL(file));
+      setImagePreviews(prev => [...prev, ...newPreviews]);
+      setFormData(prev => ({ ...prev, photos: [...prev.photos, ...filesToAdd] }));
+      setShowImageReminder(false);
     }
+    // Reset input to allow selecting the same file again
+    e.target.value = '';
+  };
+
+  const removeImage = (index: number) => {
+    URL.revokeObjectURL(imagePreviews[index]);
+    setImagePreviews(prev => prev.filter((_, i) => i !== index));
+    setFormData(prev => ({ ...prev, photos: prev.photos.filter((_, i) => i !== index) }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -100,8 +121,8 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
       return;
     }
 
-    // Check if no photo is provided and reminder hasn't been shown
-    if (!formData.photo && !showImageReminder) {
+    // Check if no photos are provided and reminder hasn't been shown
+    if (formData.photos.length === 0 && !showImageReminder) {
       setShowImageReminder(true);
       return;
     }
@@ -115,25 +136,27 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
     setIsSubmitting(true);
     
     try {
-      let photoUrl = null;
+      let photoUrls: string[] = [];
       
-      // Upload photo if provided
-      if (formData.photo) {
-        const fileExt = formData.photo.name.split('.').pop();
-        const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;
-        
-        const { data: uploadData, error: uploadError } = await supabase.storage
-          .from('testimonial-photos')
-          .upload(fileName, formData.photo);
+      // Upload all photos if provided
+      if (formData.photos.length > 0) {
+        for (const photo of formData.photos) {
+          const fileExt = photo.name.split('.').pop();
+          const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;
           
-        if (uploadError) {
-          console.error('Error uploading photo:', uploadError);
-        } else {
-          // Get public URL
-          const { data: { publicUrl } } = supabase.storage
+          const { data: uploadData, error: uploadError } = await supabase.storage
             .from('testimonial-photos')
-            .getPublicUrl(fileName);
-          photoUrl = publicUrl;
+            .upload(fileName, photo);
+            
+          if (uploadError) {
+            console.error('Error uploading photo:', uploadError);
+          } else {
+            // Get public URL
+            const { data: { publicUrl } } = supabase.storage
+              .from('testimonial-photos')
+              .getPublicUrl(fileName);
+            photoUrls.push(publicUrl);
+          }
         }
       }
 
@@ -146,7 +169,7 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
           rating: formData.rating,
           review: formData.review,
           destination: destination,
-          photo_url: photoUrl
+          photo_url: photoUrls.length > 0 ? photoUrls : null
           // user_id will be null for unauthenticated users
           // status will default to 'approved' for auto-approval
         });
@@ -159,17 +182,15 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
       });
       
       // Reset form and close modal
-      if (imagePreview) {
-        URL.revokeObjectURL(imagePreview);
-      }
-      setImagePreview(null);
+      imagePreviews.forEach(preview => URL.revokeObjectURL(preview));
+      setImagePreviews([]);
       setFormData({
         name: "",
         location: "",
         distance: "",
         rating: 0,
         review: "",
-        photo: null
+        photos: []
       });
       onClose();
     } catch (error) {
@@ -282,10 +303,10 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
 
           <div>
             <Label className="text-charcoal font-cabinet font-medium">
-              Tilføj et fedt billede fra turen!
+              Tilføj billeder fra turen! (Max {MAX_IMAGES})
             </Label>
             <div
-              className={`mt-1 border-2 border-dashed rounded-lg p-4 text-center transition-colors ${
+              className={`mt-1 border-2 border-dashed rounded-lg p-4 transition-colors ${
                 dragActive 
                   ? "border-[#FFDC00] bg-[#FFDC00]/10" 
                   : "border-gray-300 hover:border-[#FFDC00]"
@@ -295,49 +316,57 @@ const AddTestimonialModal = ({ isOpen, onClose, destination = 'MIUT' }: AddTesti
               onDragOver={handleDrag}
               onDrop={handleDrop}
             >
-              {formData.photo && imagePreview ? (
-                <div className="relative max-w-xs">
-                  <img 
-                    src={imagePreview} 
-                    alt="Preview" 
-                    className="w-48 h-28 object-cover rounded-lg"
-                  />
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => {
-                      if (imagePreview) {
-                        URL.revokeObjectURL(imagePreview);
-                      }
-                      setImagePreview(null);
-                      setFormData(prev => ({ ...prev, photo: null }));
-                    }}
-                    className="absolute top-1 right-1 h-6 w-6 p-0 bg-white/80 hover:bg-white shadow-sm"
-                  >
-                    <X className="w-3 h-3" />
-                  </Button>
-                  <div className="mt-1 text-xs text-gray-600 truncate">
-                    {formData.photo.name}
+              {formData.photos.length > 0 ? (
+                <div className="space-y-3">
+                  <div className="grid grid-cols-3 gap-2">
+                    {imagePreviews.map((preview, index) => (
+                      <div key={index} className="relative group">
+                        <img 
+                          src={preview} 
+                          alt={`Preview ${index + 1}`} 
+                          className="w-full h-24 object-cover rounded-lg"
+                        />
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => removeImage(index)}
+                          className="absolute top-1 right-1 h-6 w-6 p-0 bg-white/90 hover:bg-white shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <X className="w-3 h-3" />
+                        </Button>
+                      </div>
+                    ))}
                   </div>
+                  {formData.photos.length < MAX_IMAGES && (
+                    <button
+                      type="button"
+                      onClick={() => document.getElementById('photo-upload')?.click()}
+                      className="w-full py-2 border border-dashed border-gray-300 rounded-lg text-sm text-gray-600 hover:border-[#FFDC00] hover:text-[#FFDC00] transition-colors"
+                    >
+                      + Tilføj flere billeder ({formData.photos.length}/{MAX_IMAGES})
+                    </button>
+                  )}
                 </div>
               ) : (
                 <div className="flex items-center gap-3">
                   <Upload className="w-5 h-5 text-gray-400" />
                   <div className="flex-1 text-left">
                     <p className="text-sm text-gray-600">
-                      Træk og slip eller <button type="button" className="text-[#FFDC00] hover:underline" onClick={() => document.getElementById('photo-upload')?.click()}>vælg billede</button>
+                      Træk og slip eller <button type="button" className="text-[#FFDC00] hover:underline" onClick={() => document.getElementById('photo-upload')?.click()}>vælg billeder</button>
                     </p>
+                    <p className="text-xs text-gray-500 mt-1">Du kan uploade op til {MAX_IMAGES} billeder</p>
                   </div>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleFileSelect}
-                    className="hidden"
-                    id="photo-upload"
-                  />
                 </div>
               )}
+              <input
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handleFileSelect}
+                className="hidden"
+                id="photo-upload"
+              />
             </div>
           </div>
 

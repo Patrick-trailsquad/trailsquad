@@ -94,7 +94,7 @@ export type Database = {
           id: string
           location: string | null
           name: string
-          photo_url: string | null
+          photo_url: string[] | null
           rating: number
           review: string
           status: string
@@ -108,7 +108,7 @@ export type Database = {
           id?: string
           location?: string | null
           name: string
-          photo_url?: string | null
+          photo_url?: string[] | null
           rating: number
           review: string
           status?: string
@@ -122,7 +122,7 @@ export type Database = {
           id?: string
           location?: string | null
           name?: string
-          photo_url?: string | null
+          photo_url?: string[] | null
           rating?: number
           review?: string
           status?: string
