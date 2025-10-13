@@ -272,7 +272,7 @@ const RibeiraSacraTestimonials = () => {
                 Vær den første til at anmelde!
               </h3>
               <p className="text-lg text-charcoal/70 mb-8">
-                Har du deltaget i Ribeira Sacra? Del din oplevelse og hjælp andre løbere med at forberede sig til eventyret.
+                Har du deltaget i Trail Ribeira Sacra? Del din oplevelse og hjælp andre løbere med at forberede sig til eventyret.
               </p>
             </div>
             
