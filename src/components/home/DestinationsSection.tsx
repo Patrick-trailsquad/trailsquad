@@ -1,6 +1,8 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Star } from "lucide-react";
+import { useDestinationRatings } from "@/hooks/useDestinationRatings";
 
 const destinations = [
   {
@@ -8,14 +10,16 @@ const destinations = [
     location: "Madeira Island Ultra Trail, Portugal",
     date: "April 2025",
     spots: "Løb afsluttet 🏁",
-    href: "/destinations/miut"
+    href: "/destinations/miut",
+    testimonialDestination: "MIUT"
   },
   {
     image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2025",
     spots: "Løb afsluttet 🏁",
-    href: "/destinations/ribeira-sacra"
+    href: "/destinations/ribeira-sacra",
+    testimonialDestination: "Ribeira Sacra"
   },
   {
     image: "/lovable-uploads/0388aed3-9930-45a5-adc3-3449136a3d30.png",
@@ -69,6 +73,8 @@ const destinations = [
 ];
 
 const DestinationsSection = () => {
+  const { ratings } = useDestinationRatings();
+  
   // Filter out Vesuvio, Chianti, Istria, and MIUT destinations
   const visibleDestinations = destinations.filter(dest => 
     dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/miut"
@@ -104,6 +110,17 @@ const DestinationsSection = () => {
                   <div className="absolute top-4 right-4 bg-yellow-400 border-2 border-charcoal rounded-full px-3 py-2 flex items-center gap-2">
                     <img src="/lovable-uploads/376bace9-3e41-4047-95a9-1d882af06797.png" alt="Lightning icon" className="w-4 h-4" />
                     <span className="text-charcoal font-cabinet font-bold text-sm">Flash-tur</span>
+                  </div>
+                )}
+                {trip.testimonialDestination && ratings[trip.testimonialDestination] && (
+                  <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 flex items-center gap-1.5 shadow-lg border border-white/20">
+                    <Star className="w-4 h-4 fill-[#FFDC00] text-[#FFDC00]" />
+                    <span className="text-charcoal font-cabinet font-bold text-sm">
+                      {ratings[trip.testimonialDestination].averageRating.toFixed(1)}
+                    </span>
+                    <span className="text-gray-500 font-inter text-xs">
+                      ({ratings[trip.testimonialDestination].count})
+                    </span>
                   </div>
                 )}
                 <div className="absolute bottom-0 left-0 p-8">
