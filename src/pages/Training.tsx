@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 import { useIsMobile } from "../hooks/use-mobile";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
 import Menu from "../components/Menu";
@@ -16,6 +17,7 @@ declare global {
 }
 const Training = () => {
   usePageTitle('Training');
+  useScrollToTop();
   const isMobile = useIsMobile();
   const navigateAndScroll = useNavigateAndScroll();
   const playerRef = useRef<HTMLDivElement>(null);
