@@ -1,29 +1,38 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 import { useIsMobile } from "../hooks/use-mobile";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
+import { useYouTubePlayer } from "../hooks/useYouTubePlayer";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
-import { Separator } from "@/components/ui/separator";
 import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
-declare global {
-  interface Window {
-    YT: any;
-    onYouTubeIframeAPIReady: () => void;
-  }
-}
 const Training = () => {
   usePageTitle('Training');
   useScrollToTop();
   const isMobile = useIsMobile();
   const navigateAndScroll = useNavigateAndScroll();
-  const playerRef = useRef<HTMLDivElement>(null);
-  const ytPlayerRef = useRef<any>(null);
-  const player2Ref = useRef<HTMLDivElement>(null);
-  const ytPlayer2Ref = useRef<any>(null);
+  
+  const videoId = 'viCyanUDC3s';
+  const { playerRef: player2Ref } = useYouTubePlayer(
+    videoId,
+    {
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      playlist: videoId,
+      controls: 0,
+      showinfo: 0,
+      rel: 0,
+      iv_load_policy: 3,
+      modestbranding: 1,
+      playsinline: 1,
+      start: 3
+    }
+  );
+  
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
@@ -44,63 +53,6 @@ const Training = () => {
     });
     setModalOpen(true);
   };
-  useEffect(() => {
-    // Load YouTube IFrame API
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
-
-    // YouTube API ready callback
-    window.onYouTubeIframeAPIReady = () => {
-      if (playerRef.current) {
-        const videoId = 'viCyanUDC3s';
-        ytPlayerRef.current = new window.YT.Player(playerRef.current, {
-          videoId: videoId,
-          playerVars: {
-            autoplay: 1,
-            mute: 1,
-            loop: 1,
-            playlist: videoId,
-            controls: 0,
-            showinfo: 0,
-            rel: 0,
-            iv_load_policy: 3,
-            modestbranding: 1,
-            playsinline: 1,
-            start: 3
-          }
-        });
-      }
-      if (player2Ref.current) {
-        const videoId = 'viCyanUDC3s';
-        ytPlayer2Ref.current = new window.YT.Player(player2Ref.current, {
-          videoId: videoId,
-          playerVars: {
-            autoplay: 1,
-            mute: 1,
-            loop: 1,
-            playlist: videoId,
-            controls: 0,
-            showinfo: 0,
-            rel: 0,
-            iv_load_policy: 3,
-            modestbranding: 1,
-            playsinline: 1,
-            start: 3
-          }
-        });
-      }
-    };
-    return () => {
-      if (ytPlayerRef.current) {
-        ytPlayerRef.current.destroy();
-      }
-      if (ytPlayer2Ref.current) {
-        ytPlayer2Ref.current.destroy();
-      }
-    };
-  }, []);
   return <div className="min-h-screen bg-stone">
       <Menu />
       

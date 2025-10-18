@@ -1,21 +1,34 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '../../hooks/use-mobile';
+import { useYouTubePlayer } from '../../hooks/useYouTubePlayer';
 import { Button } from '../ui/button';
-
-declare global {
-  interface Window {
-    YT: any;
-    onYouTubeIframeAPIReady: () => void;
-  }
-}
 
 const VideoBackgroundSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
-  const playerRef = useRef<HTMLDivElement>(null);
-  const ytPlayerRef = useRef<any>(null);
+  
+  const videoId = isMobile ? 'wgKpri-37EU' : 'XdgosFbv_wk';
+  const { playerRef } = useYouTubePlayer(
+    videoId,
+    {
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      playlist: videoId,
+      controls: 0,
+      showinfo: 0,
+      rel: 0,
+      iv_load_policy: 3,
+      modestbranding: 1,
+      playsinline: 1,
+      start: 4
+    },
+    (event) => {
+      event.target.setPlaybackRate(0.8);
+    }
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,48 +42,6 @@ const VideoBackgroundSection = () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    // Load YouTube IFrame API
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
-
-    // YouTube API ready callback
-    window.onYouTubeIframeAPIReady = () => {
-      if (playerRef.current) {
-        const videoId = isMobile ? 'wgKpri-37EU' : 'XdgosFbv_wk';
-        ytPlayerRef.current = new window.YT.Player(playerRef.current, {
-          videoId: videoId,
-          playerVars: {
-            autoplay: 1,
-            mute: 1,
-            loop: 1,
-            playlist: videoId,
-            controls: 0,
-            showinfo: 0,
-            rel: 0,
-            iv_load_policy: 3,
-            modestbranding: 1,
-            playsinline: 1,
-            start: 4
-          },
-          events: {
-            onReady: (event: any) => {
-              event.target.setPlaybackRate(0.8);
-            }
-          }
-        });
-      }
-    };
-
-    return () => {
-      if (ytPlayerRef.current) {
-        ytPlayerRef.current.destroy();
-      }
-    };
   }, []);
 
   return (
