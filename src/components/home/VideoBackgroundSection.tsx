@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useIsMobile } from '../../hooks/use-mobile';
+import { Button } from '../ui/button';
 
 declare global {
   interface Window {
@@ -97,10 +99,15 @@ const VideoBackgroundSection = () => {
       <div className="relative z-10 flex items-center justify-center h-full px-8">
         <div className="text-center text-white">
           <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Trail Squad fællestræning</h1>
-          <h2 className="text-xl md:text-2xl font-inter font-light">
+          <h2 className="text-xl md:text-2xl font-inter font-light mb-8">
             Løbeteknik, udstyr, energi på løbsdagen...<br />
             Vi har din ryg i forberedelserne op til race day
           </h2>
+          <Link to="/training">
+            <Button variant="yellow" size="xl">
+              Se fællestræning
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
