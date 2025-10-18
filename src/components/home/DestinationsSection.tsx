@@ -113,7 +113,7 @@ const DestinationsSection = () => {
                   </div>
                 )}
                 {trip.testimonialDestination && ratings[trip.testimonialDestination] && (
-                  <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 flex items-center gap-1.5 shadow-lg border border-white/20">
+                  <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-full px-3 py-2 flex items-center gap-1.5 shadow-lg border border-white/20">
                     <Star className="w-4 h-4 fill-[#FFDC00] text-[#FFDC00]" />
                     <span className="text-charcoal font-cabinet font-bold text-sm">
                       {ratings[trip.testimonialDestination].averageRating.toFixed(1)}
