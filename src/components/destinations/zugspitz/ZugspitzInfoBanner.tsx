@@ -24,8 +24,8 @@ const ZugspitzInfoBanner = () => {
             <h2 className="font-cabinet text-lg text-charcoal">19. juni 2026</h2>
           </div>
           <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Rejsevarighed</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">4 dage</h2>
+            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Turens varighed</h1>
+            <h2 className="font-cabinet text-lg text-charcoal">17.-20. juni 2026 (4 dage)</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
