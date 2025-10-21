@@ -8,7 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import { ParticipantsTable } from '@/components/admin/ParticipantsTable';
 import { AddParticipantDialog } from '@/components/admin/AddParticipantDialog';
 import { GanttChart } from '@/components/admin/GanttChart';
-import { LogOut, Plus, Users } from 'lucide-react';
+import { ImageOptimizer } from '@/components/admin/ImageOptimizer';
+import { LogOut, Plus, Users, Image } from 'lucide-react';
 import { DESTINATIONS, type Destination } from '@/config/destinations';
 
 // Fixed Search reference error
@@ -146,6 +147,17 @@ const AdminDashboard = () => {
                   <ParticipantCounter destinationName={destination.name} />
                 </button>
               ))}
+              <button
+                onClick={() => setActiveTab('image-optimizer')}
+                className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-all duration-200 ${
+                  activeTab === 'image-optimizer'
+                    ? 'bg-yellow-400 text-yellow-900 shadow-lg shadow-yellow-400/25 scale-105 font-semibold'
+                    : 'bg-card hover:bg-primary/10 hover:text-primary border border-border hover:border-primary/30 hover:shadow-sm'
+                }`}
+              >
+                <Image className="h-4 w-4" />
+                <span className="font-medium">Image Optimizer</span>
+              </button>
             </div>
           </div>
 
@@ -155,6 +167,11 @@ const AdminDashboard = () => {
               <DestinationContent destination={destination} />
             </TabsContent>
           ))}
+          
+          {/* Image Optimizer Tab */}
+          <TabsContent value="image-optimizer">
+            <ImageOptimizer />
+          </TabsContent>
         </Tabs>
       </main>
     </div>
