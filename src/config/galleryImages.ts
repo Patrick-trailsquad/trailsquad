@@ -6,6 +6,7 @@ export const galleryImages = [
   "/lovable-uploads/runner-mountain-scenic.jpg", // Runner on mountain with scenic valley
   "/lovable-uploads/trail-runners-grass.png", // Three trail runners in grass
   "/lovable-uploads/a260e2c1-80c6-4dc5-9052-b51b8bd48e28.png",
+  "/lovable-uploads/ribeira-group-finish.jpg", // Group photo at Ribeira Sacra finish line
   "/lovable-uploads/54169f4c-6a5e-4a57-8289-fcc347272501.png",
   "/lovable-uploads/runner-portrait-ironman.jpg", // Runner portrait with Ironman headband
   "/lovable-uploads/25d3f586-ac0f-49eb-b707-422bf6f2a1a2.png",
