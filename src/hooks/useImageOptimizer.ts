@@ -16,8 +16,14 @@ export const useImageOptimizer = () => {
 
   const optimizeImage = async (imageUrl: string): Promise<OptimizeResult> => {
     try {
+      // Convert relative URLs to absolute URLs
+      let absoluteUrl = imageUrl;
+      if (imageUrl.startsWith('/')) {
+        absoluteUrl = `${window.location.origin}${imageUrl}`;
+      }
+
       const { data, error } = await supabase.functions.invoke('optimize-image', {
-        body: { imageUrl, quality: 85, maxWidth: 1200 }
+        body: { imageUrl: absoluteUrl, quality: 85, maxWidth: 1200 }
       });
 
       if (error) throw error;
