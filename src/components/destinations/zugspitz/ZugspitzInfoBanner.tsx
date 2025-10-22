@@ -21,7 +21,7 @@ const ZugspitzInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Løbsdag</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">20. juni 2026</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">19./20. juni 2026</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Turens varighed</h1>
