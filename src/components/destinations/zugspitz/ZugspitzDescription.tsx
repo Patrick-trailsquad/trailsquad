@@ -17,9 +17,7 @@ const ZugspitzDescription = () => {
       <div>
         <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Oplevelsen</h2>
         <p className="text-lg">
-          Da løbene afholdes over flere dage, vil det være muligt at deltage på 3 forskellige distancer, 
-          nemlig 16 km, 44 km, og 68 km. Så der er bestemt noget for enhver smag. Hver rute lover 
-          unikke udfordringer og uforglemmelige alpine landskaber.
+          Da løbene afholdes over flere dage, vil det være muligt at deltage på 5 forskellige distancer. De helt lande starter fredag aften (86 km og 106 km) og lørdagens løb spænder over henholdsvis 16 km, 44 km, og 68 km. Så der er bestemt noget for enhver smag. Hver rute lover unikke udfordringer og uforglemmelige alpine landskaber.
         </p>
       </div>
 
