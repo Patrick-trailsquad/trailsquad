@@ -25,12 +25,18 @@ const VideoThumbnailBannerReverse = () => {
   return (
     <>
       <section className="w-full relative py-16 md:py-20 overflow-hidden">
-        {/* YouTube Video Background */}
+        {/* YouTube Video Background - Dual instances for seamless loop */}
         <div className="absolute inset-0 w-full h-full">
           <iframe
-            src="https://www.youtube.com/embed/OzeN9YFuPYA?autoplay=1&mute=1&loop=1&playlist=OzeN9YFuPYA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-            title="Background video"
+            src="https://www.youtube.com/embed/OzeN9YFuPYA?autoplay=1&mute=1&loop=1&playlist=OzeN9YFuPYA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&start=0"
+            title="Background video 1"
             className="absolute top-1/2 left-1/2 w-[177.77777778vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            allow="autoplay; encrypted-media"
+          />
+          <iframe
+            src="https://www.youtube.com/embed/OzeN9YFuPYA?autoplay=1&mute=1&loop=1&playlist=OzeN9YFuPYA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&start=3"
+            title="Background video 2"
+            className="absolute top-1/2 left-1/2 w-[177.77777778vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0"
             allow="autoplay; encrypted-media"
           />
           <div className="absolute inset-0 bg-black/40" />
