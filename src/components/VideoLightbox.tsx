@@ -33,7 +33,7 @@ const VideoLightbox = ({ videoUrl, onClose }: VideoLightboxProps) => {
       />
       
       {/* Video container */}
-      <div className="relative z-10 w-full max-w-md mx-4">
+      <div className="relative z-10 w-full max-w-5xl mx-4">
         <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl">
           {/* Close button */}
           <button
@@ -43,8 +43,8 @@ const VideoLightbox = ({ videoUrl, onClose }: VideoLightboxProps) => {
             <X className="w-6 h-6 text-white" />
           </button>
           
-          {/* Video iframe with 9:16 aspect ratio */}
-          <div className="aspect-[9/16]">
+          {/* Video iframe with 16:9 aspect ratio */}
+          <div className="aspect-video">
             <iframe
               src={videoUrl}
               title="Video"
