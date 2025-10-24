@@ -2,6 +2,7 @@
 import Menu from "../components/Menu";
 import HeroSection from "../components/home/HeroSection";
 import VideoThumbnailBanner from "../components/home/VideoThumbnailBanner";
+import VideoThumbnailBannerReverse from "../components/home/VideoThumbnailBannerReverse";
 import FeaturesSection from "../components/home/FeaturesSection";
 import DestinationsSection from "../components/home/DestinationsSection";
 import VideoBackgroundSection from "../components/home/VideoBackgroundSection";
@@ -17,6 +18,7 @@ const Index = () => {
     <div className="min-h-screen bg-stone">
       <Menu />
       <HeroSection />
+      <VideoThumbnailBannerReverse />
       <VideoThumbnailBanner />
       <FeaturesSection />
       <DestinationsSection />
