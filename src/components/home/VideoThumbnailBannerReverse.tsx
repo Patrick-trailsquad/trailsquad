@@ -9,13 +9,8 @@ const VideoThumbnailBannerReverse = () => {
   const videos = [
     {
       id: 1,
-      thumbnail: "/lovable-uploads/8e46cfd5-2e7d-48e9-900f-ec22af9a9884.png",
-      videoUrl: "https://www.youtube.com/embed/nGv8ppEnOhk?autoplay=1"
-    },
-    {
-      id: 2,
-      thumbnail: "/lovable-uploads/2ecef890-c534-4140-8b55-73551ef9f522.png",
-      videoUrl: "https://www.youtube.com/embed/_zQUIzIeF7s?autoplay=1"
+      thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
     }
   ];
 
@@ -44,20 +39,18 @@ const VideoThumbnailBannerReverse = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Videos Section - 40% */}
-            <div className="lg:col-span-4 flex gap-8 justify-center items-end">
-              {videos.map((video, index) => (
+            <div className="lg:col-span-4 flex justify-center items-center">
+              {videos.map((video) => (
                 <div
                   key={video.id}
-                  className={`relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 ${
-                    index === 0 ? 'mt-8' : 'mb-8'
-                  }`}
+                  className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
                   onClick={() => openVideo(video.videoUrl)}
                 >
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
                     <img
                       src={video.thumbnail}
                       alt="Trail Squad Video"
-                      className="w-52 h-80 md:w-60 md:h-96 object-cover transition-transform duration-700"
+                      className="w-[26rem] md:w-[32rem] h-80 md:h-96 object-cover transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                     
