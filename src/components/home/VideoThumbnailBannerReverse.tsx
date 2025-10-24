@@ -7,6 +7,7 @@ const VideoThumbnailBannerReverse = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [scrollY, setScrollY] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,32 @@ const VideoThumbnailBannerReverse = () => {
     handleScroll(); // Initial call
     
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Ping-pong video loop effect
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    let direction = 1; // 1 for forward, -1 for backward
+
+    const handleTimeUpdate = () => {
+      if (direction === 1 && video.currentTime >= video.duration - 0.1) {
+        // Near the end, reverse
+        direction = -1;
+        video.playbackRate = -1;
+      } else if (direction === -1 && video.currentTime <= 0.1) {
+        // Near the beginning, go forward
+        direction = 1;
+        video.playbackRate = 1;
+      }
+    };
+
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    
+    return () => {
+      video.removeEventListener('timeupdate', handleTimeUpdate);
+    };
   }, []);
 
   const videos = [
@@ -51,8 +78,8 @@ const VideoThumbnailBannerReverse = () => {
         {/* HTML5 Video Background - Seamless Loop with Parallax */}
         <div className="absolute inset-0 w-full h-full">
           <video
+            ref={videoRef}
             autoPlay
-            loop
             muted
             playsInline
             style={{
