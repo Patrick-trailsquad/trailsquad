@@ -29,8 +29,19 @@ const VideoThumbnailBannerReverse = () => {
 
   return (
     <>
-      <section className="w-full bg-gradient-to-br from-[#FFDC00] to-[#FFE642] py-16 md:py-20">
-        <div className="container mx-auto px-6">
+      <section className="w-full relative py-16 md:py-20 overflow-hidden">
+        {/* YouTube Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <iframe
+            src="https://www.youtube.com/embed/OzeN9YFuPYA?autoplay=1&mute=1&loop=1&playlist=OzeN9YFuPYA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            title="Background video"
+            className="absolute top-1/2 left-1/2 w-[177.77777778vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            allow="autoplay; encrypted-media"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Videos Section - 40% */}
             <div className="lg:col-span-4 flex gap-8 justify-center items-end">
@@ -64,7 +75,7 @@ const VideoThumbnailBannerReverse = () => {
             {/* Text Section - 60% */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
-                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
+                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-white leading-none tracking-tight drop-shadow-lg">
                   Mød Trail Squad teamet
                 </h1>
               </div>
