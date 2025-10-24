@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import IncludedAmenities from "../../components/destinations/IncludedAmenities";
 import RibeiraHero from "../../components/destinations/ribeira-sacra/RibeiraHero";
 import RibeiraInfoBanner from "../../components/destinations/ribeira-sacra/RibeiraInfoBanner";
+import RibeiraTripVideoCTA from "../../components/destinations/ribeira-sacra/RibeiraTripVideoCTA";
 import RibeiraDescription from "../../components/destinations/ribeira-sacra/RibeiraDescription";
 import RibeiraMediaSection from "../../components/destinations/ribeira-sacra/RibeiraMediaSection";
 import RibeiraAccommodation from "../../components/destinations/ribeira-sacra/RibeiraAccommodation";
@@ -41,6 +42,7 @@ const RibeiraSacra = () => {
     <div className="min-h-screen bg-stone">
       <RibeiraHero />
       <RibeiraInfoBanner />
+      <RibeiraTripVideoCTA />
 
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
