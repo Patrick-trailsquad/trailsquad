@@ -7,7 +7,9 @@ const VideoThumbnailBannerReverse = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [scrollY, setScrollY] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
+  const [activeVideo, setActiveVideo] = useState<1 | 2>(1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,29 +32,30 @@ const VideoThumbnailBannerReverse = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Ping-pong video loop effect
+  // Crossfade video loop effect
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const video1 = video1Ref.current;
+    const video2 = video2Ref.current;
+    if (!video1 || !video2) return;
 
-    let direction = 1; // 1 for forward, -1 for backward
-
-    const handleTimeUpdate = () => {
-      if (direction === 1 && video.currentTime >= video.duration - 0.1) {
-        // Near the end, reverse
-        direction = -1;
-        video.playbackRate = -1;
-      } else if (direction === -1 && video.currentTime <= 0.1) {
-        // Near the beginning, go forward
-        direction = 1;
-        video.playbackRate = 1;
-      }
+    const handleVideo1End = () => {
+      setActiveVideo(2);
+      video2.currentTime = 0;
+      video2.play();
     };
 
-    video.addEventListener('timeupdate', handleTimeUpdate);
+    const handleVideo2End = () => {
+      setActiveVideo(1);
+      video1.currentTime = 0;
+      video1.play();
+    };
+
+    video1.addEventListener('ended', handleVideo1End);
+    video2.addEventListener('ended', handleVideo2End);
     
     return () => {
-      video.removeEventListener('timeupdate', handleTimeUpdate);
+      video1.removeEventListener('ended', handleVideo1End);
+      video2.removeEventListener('ended', handleVideo2End);
     };
   }, []);
 
@@ -75,16 +78,30 @@ const VideoThumbnailBannerReverse = () => {
   return (
     <>
       <section ref={sectionRef} className="w-full relative py-24 md:py-32 lg:py-40 overflow-hidden">
-        {/* HTML5 Video Background - Seamless Loop with Parallax */}
+        {/* HTML5 Video Background - Crossfade Loop with Parallax */}
         <div className="absolute inset-0 w-full h-full">
           <video
-            ref={videoRef}
+            ref={video1Ref}
             autoPlay
             muted
             playsInline
             style={{
               transform: `translate(-50%, calc(-50% + ${scrollY * 0.15}px))`,
-              transition: 'transform 0.1s ease-out'
+              transition: 'transform 0.1s ease-out, opacity 0.5s ease-in-out',
+              opacity: activeVideo === 1 ? 1 : 0
+            }}
+            className="absolute top-1/2 left-1/2 w-full h-full object-cover scale-125"
+          >
+            <source src="/videos/background-loop.mp4" type="video/mp4" />
+          </video>
+          <video
+            ref={video2Ref}
+            muted
+            playsInline
+            style={{
+              transform: `translate(-50%, calc(-50% + ${scrollY * 0.15}px))`,
+              transition: 'transform 0.1s ease-out, opacity 0.5s ease-in-out',
+              opacity: activeVideo === 2 ? 1 : 0
             }}
             className="absolute top-1/2 left-1/2 w-full h-full object-cover scale-125"
           >
