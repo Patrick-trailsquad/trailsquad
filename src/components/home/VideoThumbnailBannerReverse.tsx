@@ -47,7 +47,7 @@ const VideoThumbnailBannerReverse = () => {
 
   return (
     <>
-      <section ref={sectionRef} className="w-full relative py-16 md:py-20 overflow-hidden">
+      <section ref={sectionRef} className="w-full relative py-24 md:py-32 lg:py-40 overflow-hidden">
         {/* HTML5 Video Background - Seamless Loop with Parallax */}
         <div className="absolute inset-0 w-full h-full">
           <video
@@ -56,10 +56,10 @@ const VideoThumbnailBannerReverse = () => {
             muted
             playsInline
             style={{
-              transform: `translate(-50%, calc(-50% + ${scrollY * 0.3}px))`,
+              transform: `translate(-50%, calc(-50% + ${scrollY * 0.15}px))`,
               transition: 'transform 0.1s ease-out'
             }}
-            className="absolute top-1/2 left-1/2 w-full h-full object-cover scale-110"
+            className="absolute top-1/2 left-1/2 w-full h-full object-cover scale-125"
           >
             <source src="/videos/background-loop.mp4" type="video/mp4" />
           </video>
