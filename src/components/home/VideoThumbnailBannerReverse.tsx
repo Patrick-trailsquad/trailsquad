@@ -1,10 +1,33 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Play } from "lucide-react";
 import VideoLightbox from '../VideoLightbox';
 
 const VideoThumbnailBannerReverse = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionHeight = rect.height;
+        
+        // Calculate parallax offset based on section position
+        if (sectionTop < window.innerHeight && sectionTop + sectionHeight > 0) {
+          const scrollProgress = (window.innerHeight - sectionTop) / (window.innerHeight + sectionHeight);
+          setScrollY(scrollProgress * 100);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const videos = [
     {
@@ -24,15 +47,19 @@ const VideoThumbnailBannerReverse = () => {
 
   return (
     <>
-      <section className="w-full relative py-16 md:py-20 overflow-hidden">
-        {/* HTML5 Video Background - Seamless Loop */}
+      <section ref={sectionRef} className="w-full relative py-16 md:py-20 overflow-hidden">
+        {/* HTML5 Video Background - Seamless Loop with Parallax */}
         <div className="absolute inset-0 w-full h-full">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+            style={{
+              transform: `translate(-50%, calc(-50% + ${scrollY * 0.3}px))`,
+              transition: 'transform 0.1s ease-out'
+            }}
+            className="absolute top-1/2 left-1/2 w-full h-full object-cover scale-110"
           >
             <source src="/videos/background-loop.mp4" type="video/mp4" />
           </video>
