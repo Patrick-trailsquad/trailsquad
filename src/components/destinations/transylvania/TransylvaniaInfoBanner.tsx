@@ -16,7 +16,7 @@ const TransylvaniaInfoBanner = () => {
               className="font-cabinet text-lg text-charcoal hover:text-charcoal/80 transition-colors underline decoration-dotted underline-offset-2 flex items-center gap-1 mx-auto"
             >
               <MapPin className="w-4 h-4" />
-              Karpaterne, Rumænien
+              Bran, Karpaterne, Rumænien
             </button>
           </div>
           <div>
