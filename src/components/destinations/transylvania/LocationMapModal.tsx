@@ -17,8 +17,8 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
   const [error, setError] = useState<string | null>(null);
   const [isMapInitialized, setIsMapInitialized] = useState(false);
 
-  // Carpathian Mountains, Romania coordinates (approximate center)
-  const transylvaniaCoordinates: [number, number] = [25.5889, 45.7594];
+  // Bran, Carpathian Mountains, Romania coordinates
+  const transylvaniaCoordinates: [number, number] = [25.3675, 45.5147];
 
   const initializeMap = async () => {
     if (!mapContainer.current) {
@@ -66,7 +66,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
           .setLngLat(transylvaniaCoordinates)
           .setPopup(
             new mapboxgl.Popup({ offset: 25 })
-              .setHTML('<h3 style="margin: 0; font-weight: bold;">Carpathian Mountains</h3><p style="margin: 4px 0 0 0;">Romania</p>')
+              .setHTML('<h3 style="margin: 0; font-weight: bold;">Bran</h3><p style="margin: 4px 0 0 0;">Carpathian Mountains, Romania</p>')
           )
           .addTo(map.current);
 
@@ -117,7 +117,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary" />
-            Carpathian Mountains, Romania
+            Bran, Carpathian Mountains, Romania
           </DialogTitle>
         </DialogHeader>
         
