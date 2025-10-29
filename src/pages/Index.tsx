@@ -18,8 +18,8 @@ const Index = () => {
     <div className="min-h-screen bg-stone">
       <Menu />
       <HeroSection />
-      <VideoThumbnailBannerReverse />
       <VideoThumbnailBanner />
+      <VideoThumbnailBannerReverse />
       <FeaturesSection />
       <DestinationsSection />
       <VideoBackgroundSection />
