@@ -53,7 +53,7 @@ const destinations = [
     image: "/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png",
     location: "Zugspitz Ultratrail, Tyskland",
     date: "Juni 2026",
-    spots: "15 pladser",
+    spots: "Åbner senere",
     href: "/destinations/zugspitz"
   },
   {

@@ -33,7 +33,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'zugspitz',
     name: 'Zugspitz Ultratrail',
     route: '/destinations/zugspitz',
-    status: 'open' as const,
+    status: 'upcoming' as const,
     published: true
   },
   {

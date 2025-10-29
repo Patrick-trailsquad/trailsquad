@@ -8,7 +8,7 @@ const destinations = [
   { name: "Istria 100 by UTMB", href: "/destinations/istria", spots: "5 pladser" },
   { name: "Vesuvio Ultra Marathon", href: "/destinations/vesuvio", spots: "Åbner senere" },
   { name: "Transylvania 100", href: "/destinations/transylvania", spots: "13 pladser" },
-  { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "15 pladser" },
+  { name: "Zugspitz Ultratrail", href: "/destinations/zugspitz", spots: "Åbner senere" },
   { name: "Gran Trail Courmayeur", href: "/destinations/gtc", spots: "Åbner senere" },
   { name: "Infinite Trails", href: "/destinations/infinite-trails", spots: "13 pladser" },
 ];
