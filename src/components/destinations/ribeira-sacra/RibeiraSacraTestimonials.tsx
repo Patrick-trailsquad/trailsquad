@@ -221,6 +221,8 @@ const RibeiraSacraTestimonials = () => {
                                 src={photo} 
                                 alt={`Photo ${photoIndex + 1} from ${testimonial.name}`}
                                 className="w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
                               />
                             </CarouselItem>
                           ))}
@@ -233,6 +235,8 @@ const RibeiraSacraTestimonials = () => {
                         src={testimonial.photos[0]} 
                         alt={`Photo from ${testimonial.name}`}
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                       />
                     )}
                   </div>
