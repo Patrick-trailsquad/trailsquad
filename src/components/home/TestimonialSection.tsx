@@ -1,5 +1,7 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Carousel,
   CarouselContent,
@@ -7,53 +9,142 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import type { CarouselApi } from "@/components/ui/carousel";
 
-const testimonials = [
-  {
-    quote: "Grand Trail du Lac var mit første trailløb. Fantastisk oplevelse at presse mig selv til grænsen i et velorganiseret løb. Hele turen var stærkt planlagt og super eksekveret.",
-    author: "Simon Meinertz",
-    title: "Grand Trail du Lac 🇫🇷",
-    image: "/lovable-uploads/9600454e-7c7f-4482-8216-a6e55e2a1c6e.png"
-  },
-  {
-    quote: "Jeg løb GTC30 og jeg kommer tilbage næste år! Ruterne var fantastiske, og at bestige bjergtoppene og opleve de vanvittige landskaber var en vild oplevelse!",
-    author: "Mathias Lund",
-    title: "Gran Trail Courmayeur 🇮🇹",
-    image: "/lovable-uploads/7225d714-9535-49a1-810d-8357e51c97ef.png"
-  },
-  {
-    quote: "Jeg troede aldrig, jeg kunne presse mig selv til at løbe de 85 km, men energien blandt de andre løbere og den generelle stemning under den her badboy fik mig gennem løbet! Sikke en dag!",
-    author: "Lasse Stokholm",
-    title: "Bornholm Hammer Trail 🇩🇰",
-    image: "/lovable-uploads/a91cfa89-2256-458c-8ba1-bfd2d0b4a1b1.png"
-  }
-];
+interface Testimonial {
+  id?: string;
+  name: string;
+  location: string | null;
+  rating: number;
+  review: string;
+  distance: string;
+  photo_url?: string | string[] | null;
+  created_at?: string;
+  destination?: string;
+}
 
 const TestimonialSection = () => {
-  const isMobile = useIsMobile();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [api, setApi] = useState<CarouselApi | null>(null);
-  
-  // Set up the event listener for when the carousel slides
+  const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [expandedReviews, setExpandedReviews] = useState<{ [key: number]: boolean }>({});
+
   useEffect(() => {
-    if (!api) return;
+    fetchTestimonials();
+  }, []);
+
+  const fetchTestimonials = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('testimonials')
+        .select('*')
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false })
+        .limit(3);
+
+      if (error) throw error;
+      setDbTestimonials(data || []);
+    } catch (error) {
+      console.error('Error fetching testimonials:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const toggleReviewExpansion = (index: number) => {
+    setExpandedReviews(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const ReviewText = ({ text, index }: { text: string; index: number }) => {
+    const textRef = useRef<HTMLDivElement>(null);
+    const [needsExpansion, setNeedsExpansion] = useState(false);
+    const [fullHeight, setFullHeight] = useState('auto');
+    const isExpanded = expandedReviews[index] || false;
+
+    useEffect(() => {
+      if (textRef.current) {
+        textRef.current.style.maxHeight = 'none';
+        const scrollHeight = textRef.current.scrollHeight;
+        const nineLinesHeight = 216;
+        
+        setFullHeight(`${scrollHeight}px`);
+        setNeedsExpansion(scrollHeight > nineLinesHeight);
+        
+        textRef.current.style.maxHeight = isExpanded ? `${scrollHeight}px` : `${nineLinesHeight}px`;
+      }
+    }, [text, isExpanded]);
+
+    return (
+      <div className="mb-4">
+        <div
+          ref={textRef}
+          className="text-charcoal/80 italic text-sm overflow-hidden transition-all duration-500 ease-in-out whitespace-pre-wrap"
+          style={{ 
+            lineHeight: '1.5rem',
+            maxHeight: isExpanded ? fullHeight : '216px'
+          }}
+        >
+          "{text}"
+        </div>
+        {needsExpansion && (
+          <button
+            onClick={() => toggleReviewExpansion(index)}
+            className="mt-2 text-sm text-[#FFDC00] hover:underline font-medium transition-colors duration-200"
+          >
+            {isExpanded ? 'Læs mindre' : 'Læs mere'}
+          </button>
+        )}
+      </div>
+    );
+  };
+
+  const renderStars = (rating: number) => {
+    return (
+      <div className="flex gap-1">
+        {[1, 2, 3, 4, 5].map(star => (
+          <Star 
+            key={star} 
+            className={`w-4 h-4 ${star <= rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} 
+          />
+        ))}
+      </div>
+    );
+  };
+
+  const allTestimonials = dbTestimonials.map(t => {
+    let photos: string[] = [];
+    if (t.photo_url) {
+      if (Array.isArray(t.photo_url)) {
+        photos = t.photo_url;
+      } else if (typeof t.photo_url === 'string' && t.photo_url !== 'null') {
+        try {
+          const parsed = JSON.parse(t.photo_url);
+          photos = Array.isArray(parsed) ? parsed : [t.photo_url];
+        } catch {
+          photos = [t.photo_url];
+        }
+      }
+    }
     
-    const onChange = () => {
-      setActiveIndex(api.selectedScrollSnap());
+    return {
+      name: t.name,
+      location: t.location || '',
+      rating: t.rating,
+      review: t.review,
+      race: t.distance,
+      destination: t.destination || '',
+      photos: photos.length > 0 ? photos : ["/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png"],
+      date: t.created_at ? new Date(t.created_at).toLocaleDateString('da-DK', {
+        month: 'long',
+        year: 'numeric'
+      }).replace(/^\w/, c => c.toUpperCase()) : ''
     };
-    
-    api.on("select", onChange);
-    
-    // Get initial position
-    onChange();
-    
-    return () => {
-      api.off("select", onChange);
-    };
-  }, [api]);
+  });
+
+  if (isLoading || allTestimonials.length === 0) {
+    return null;
+  }
   
   return (
     <section className="py-24 bg-white">
@@ -62,51 +153,69 @@ const TestimonialSection = () => {
           Glade Trail Squad alumni!
         </h1>
         
-        <div className="relative mx-auto max-w-7xl px-4 md:px-8">
-          <Carousel 
-            className="mx-auto max-w-7xl"
-            setApi={setApi}
-            opts={{ loop: true }}
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="relative w-64 aspect-square rounded-2xl overflow-hidden mb-6">
-                      <img
-                        src={testimonial.image}
-                        alt={`${testimonial.author} testimonial`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {allTestimonials.map((testimonial, index) => (
+            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+              <CardContent className="p-0 h-full">
+                <div className="bg-gray-100 h-60 relative overflow-hidden">
+                  {testimonial.photos.length > 1 ? (
+                    <Carousel className="w-full h-full" opts={{ loop: true }}>
+                      <CarouselContent className="h-60">
+                        {testimonial.photos.map((photo, photoIndex) => (
+                          <CarouselItem key={photoIndex} className="h-60">
+                            <img 
+                              src={photo} 
+                              alt={`Photo ${photoIndex + 1} from ${testimonial.name}`}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-2 bg-white/80 hover:bg-white border-0" />
+                      <CarouselNext className="right-2 bg-white/80 hover:bg-white border-0" />
+                    </Carousel>
+                  ) : (
+                    <img 
+                      src={testimonial.photos[0]} 
+                      alt={`Photo from ${testimonial.name}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="font-cabinet font-bold text-lg text-charcoal">
+                        {testimonial.name}
+                      </h3>
+                      <p className="text-sm text-charcoal/60">{testimonial.location}</p>
                     </div>
-                    <blockquote className="font-cabinet text-base md:text-lg font-bold text-charcoal mb-4 max-w-[16rem]">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="max-w-[16rem]">
-                      <p className="font-cabinet text-base font-bold text-charcoal">{testimonial.author}</p>
-                      <p className="text-sm text-charcoal/60">{testimonial.title}</p>
+                    <div className="text-right">
+                      {renderStars(testimonial.rating)}
+                      <p className="text-sm text-charcoal/60 mt-1">{testimonial.date}</p>
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2" />
-          </Carousel>
-          
-          {isMobile && (
-            <div className="flex justify-center mt-8 gap-2">
-              {testimonials.map((_, index) => (
-                <div
-                  key={index}
-                  className={`h-2 w-2 rounded-full transition-colors ${
-                    activeIndex === index ? "bg-[#FFDC00] border border-[#FFDC00] shadow-sm" : "bg-charcoal/40"
-                  }`}
-                />
-              ))}
-            </div>
-          )}
+                  <ReviewText text={testimonial.review} index={index} />
+                  
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
+                      {testimonial.race}
+                    </span>
+                    {testimonial.destination && (
+                      <span className="text-xs text-charcoal/60">
+                        {testimonial.destination}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
