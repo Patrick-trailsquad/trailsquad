@@ -50,13 +50,6 @@ const destinations = [
     href: "/destinations/transylvania"
   },
   {
-    image: "/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png",
-    location: "Zugspitz Ultratrail, Tyskland",
-    date: "Juni 2026",
-    spots: "Åbner senere",
-    href: "/destinations/zugspitz"
-  },
-  {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
     location: "Gran Trail Courmayeur, Italien",
     date: "Juli 2026",

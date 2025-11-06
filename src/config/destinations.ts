@@ -34,7 +34,7 @@ export const DESTINATIONS: Destination[] = [
     name: 'Zugspitz Ultratrail',
     route: '/destinations/zugspitz',
     status: 'upcoming' as const,
-    published: true
+    published: false
   },
   {
     id: 'gtc',
