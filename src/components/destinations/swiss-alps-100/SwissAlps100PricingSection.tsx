@@ -18,7 +18,7 @@ const SwissAlps100PricingSection = () => {
         <div className="col-span-2 space-y-1">
           <p className="text-sm text-gray-600">Priser fra</p>
           <p className="font-cabinet text-4xl font-bold text-charcoal">
-            14.995 DKK <span className="text-sm text-gray-500">inkl. moms</span>
+            12.500 DKK <span className="text-sm text-gray-500">inkl. moms</span>
           </p>
           <Accordion type="single" collapsible className="w-full mt-2">
             <AccordionItem value="price-details" className="border-none">
