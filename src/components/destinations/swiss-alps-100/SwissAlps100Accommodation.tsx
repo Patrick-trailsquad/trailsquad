@@ -39,7 +39,7 @@ const SwissAlps100Accommodation = () => {
 
         <div className="flex flex-col justify-center">
           <div className="flex items-center mb-2">
-            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Landhaus Goms</h1>
+            <h1 className="font-cabinet text-3xl font-bold text-charcoal mr-2">Hotel Landhaus</h1>
             <div className="flex">
               {[...Array(4)].map((_, index) => (
                 <Star key={index} className="w-5 h-5 text-yellow-500 mr-1" fill="currentColor" />
