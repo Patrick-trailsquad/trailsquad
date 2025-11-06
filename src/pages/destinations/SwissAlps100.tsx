@@ -39,7 +39,7 @@ const SwissAlps100 = () => {
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[80vh]">
-        <img src="/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png" alt="Swiss Alps 100 Trail Running" className="w-full h-full object-cover" />
+        <img src="/lovable-uploads/swiss-alps-100-hero.jpg" alt="Swiss Alps 100 Trail Running" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute top-6 left-6">
           <Link to="/" className="flex items-center gap-2 text-white hover:text-stone transition-colors">

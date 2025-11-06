@@ -64,7 +64,7 @@ const destinations = [
     href: "/destinations/gtc"
   },
   {
-    image: "/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png",
+    image: "/lovable-uploads/swiss-alps-100-hero.jpg",
     location: "Swiss Alps 100, Schweiz",
     date: "August 2026",
     spots: "12 pladser",
