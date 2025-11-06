@@ -18,7 +18,7 @@ const SwissAlps100PricingSection = () => {
         <div className="col-span-2 space-y-1">
           <p className="text-sm text-gray-600">Priser fra</p>
           <p className="font-cabinet text-4xl font-bold text-charcoal">
-            12.500 DKK <span className="text-sm text-gray-500">inkl. moms</span>
+            12.200 DKK <span className="text-sm text-gray-500">inkl. moms</span>
           </p>
           <Accordion type="single" collapsible className="w-full mt-2">
             <AccordionItem value="price-details" className="border-none">
@@ -30,8 +30,9 @@ const SwissAlps100PricingSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  Prisen for et <b>Delt Dobbeltværelse</b> er 12.500 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                  Prisen for et <b>Individuelt Enkeltværelse</b> er 15.000 DKK.<br /><br />
+                  Prisen for et <b>Single Economy værelse</b> er 12.200 DKK per person. Dette er et småt værelse med plads til én person. Vi har kun adgang til to af disse billige enkeltpersons værelser.<br /><br />
+                  Hvis du ønsker at dele et <b>Alpine Double Room</b> er prisen 12.500 DKK. Du vil skulle dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                  Prisen for at bo alene på et <b>Alpine Double Room</b> er 14.600 DKK.<br /><br />
                   Moms er inkluderet i alle priser.
                 </div>
               </AccordionContent>
