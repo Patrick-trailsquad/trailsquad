@@ -29,13 +29,11 @@ const SwissAlps100Description = () => {
         <p className="text-lg">
           Swiss Alps 100 er ikke bare et løb - det er en episk udfordring i nogle af verdens smukkeste omgivelser. Uanset om du vælger Vertical, 50 km, 100 km eller den ultimative 160 km, vil du blive udfordret af alpine stigninger, tekniske passager og højfjeldsforhold.
         </p>
-        <Button 
-          variant="outline" 
-          className="mt-4"
-          onClick={() => window.open('https://www.swissalps100.com/', '_blank')}
-        >
-          Læs mere om Swiss Alps 100
-          <ExternalLink className="ml-2 w-4 h-4" />
+        <Button asChild variant="charcoal" size="md" className="mt-4">
+          <a href="https://www.swissalps100.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+            Besøg officiel løbshjemmeside
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </Button>
       </section>
     </div>
