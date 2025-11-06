@@ -30,9 +30,8 @@ const SwissAlps100PricingSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  Prisen for et <b>Dobbeltværelse</b> er 14.995 DKK per person.<br /><br />
-                  Prisen for et <b>Enkeltværelse</b> er 17.495 DKK (tillæg på 2.500 DKK).<br /><br />
-                  Prisen varierer afhængigt af distance og roomtype.<br /><br />
+                  Prisen for et <b>Delt Dobbeltværelse</b> er 12.500 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                  Prisen for et <b>Individuelt Enkeltværelse</b> er 15.000 DKK.<br /><br />
                   Moms er inkluderet i alle priser.
                 </div>
               </AccordionContent>
