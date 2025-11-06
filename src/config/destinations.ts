@@ -56,6 +56,13 @@ export const DESTINATIONS: Destination[] = [
     route: '/destinations/infinite-trails',
     status: 'open' as const,
     published: true
+  },
+  {
+    id: 'swiss-alps-100',
+    name: 'Swiss Alps 100',
+    route: '/destinations/swiss-alps-100',
+    status: 'open' as const,
+    published: true
   }
 ].filter(destination => destination.published); // Only return published destinations
 

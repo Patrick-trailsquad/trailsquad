@@ -26,6 +26,7 @@ import ChiantiTrail from "./pages/destinations/ChiantiTrail";
 import ZugspitzUltratrail from "./pages/destinations/ZugspitzUltratrail";
 import Istria100 from "./pages/destinations/Istria100";
 import InfiniteTrails from "./pages/destinations/InfiniteTrails";
+import SwissAlps100 from "./pages/destinations/SwissAlps100";
 import TrailFox from "./pages/TrailFox";
 
 const queryClient = new QueryClient();
@@ -69,6 +70,7 @@ const App = () => (
           <Route path="/destinations/zugspitz" element={<ZugspitzUltratrail />} />
           <Route path="/destinations/istria" element={<Istria100 />} />
           <Route path="/destinations/infinite-trails" element={<InfiniteTrails />} />
+          <Route path="/destinations/swiss-alps-100" element={<SwissAlps100 />} />
           <Route path="/trailfox" element={<TrailFox />} />
           <Route path="*" element={<NotFound />} />
           </Routes>
