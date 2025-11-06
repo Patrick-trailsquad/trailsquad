@@ -6,9 +6,12 @@ const SwissAlps100Accommodation = () => {
   const isMobile = useIsMobile();
   
   const images = [
-    "/lovable-uploads/06049df9-20c8-4b6a-9ea9-e0e36cbab0f7.png",
-    "/lovable-uploads/749ebd53-0454-4092-9aec-b2c6d23dcfe3.png",
-    "/lovable-uploads/1c46acfc-b2ec-40ff-9e27-72808cf9bbb8.png",
+    "/lovable-uploads/hotel-landhaus-1.jpeg",
+    "/lovable-uploads/hotel-landhaus-2.jpg",
+    "/lovable-uploads/hotel-landhaus-3.jpg",
+    "/lovable-uploads/hotel-landhaus-4.jpeg",
+    "/lovable-uploads/hotel-landhaus-5.jpg",
+    "/lovable-uploads/hotel-landhaus-6.jpg",
   ];
 
   return (
