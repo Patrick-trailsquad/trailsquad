@@ -1,5 +1,3 @@
-import { Plane, Hotel, Utensils, Trophy, Car, Users, Calendar, Camera } from "lucide-react";
-
 interface SwissAlps100IncludedAmenitiesProps {
   className?: string;
 }
@@ -7,75 +5,70 @@ interface SwissAlps100IncludedAmenitiesProps {
 const SwissAlps100IncludedAmenities = ({ className = "" }: SwissAlps100IncludedAmenitiesProps) => {
   const customAmenities = [
     {
-      icon: Trophy,
+      icon: "/lovable-uploads/a372fe5f-3385-44a7-bb8b-4961448afc3d.png",
       title: "Løbstilmelding",
-      description: "Vi sørger for din tilmelding til Swiss Alps 100"
+      description: "Officiel tilmelding til Swiss Alps 100"
     },
     {
-      icon: Plane,
-      title: "Fly til Zürich",
-      description: "Fly til og fra Zürich fra København inkluderet"
+      icon: "/lovable-uploads/38b791a4-b1f2-46b4-94e9-3a846f425922.png",
+      title: "Flybilletter",
+      description: "Tur/retur fra København"
     },
     {
-      icon: Car,
+      icon: "/lovable-uploads/c84fb355-d0d8-4186-98d2-586a852eff71.png",
       title: "Transport",
-      description: "Al transport mellem lufthavn, hotel og løbet"
+      description: "Lufthavnstransfer til indkvartering"
     },
     {
-      icon: Hotel,
-      title: "4 overnatninger",
-      description: "Indkvartering på det charmerende Landhaus Goms"
+      icon: "/lovable-uploads/ba002ac9-1745-47a1-a01f-ca8bfa53b60d.png",
+      title: "Luksushotel",
+      description: "4-stjernet hotelindkvartering"
     },
     {
-      icon: Utensils,
-      title: "Måltider",
-      description: "Morgenmad alle dage og fælles middag før og efter løbet"
+      icon: "/lovable-uploads/9e398900-45e9-4cd0-b353-b07f3c3bfcfb.png",
+      title: "Lokalt cuisine",
+      description: "Morgenmad inkluderet"
     },
     {
-      icon: Users,
-      title: "Trail Squad fællesskab",
-      description: "Del oplevelsen med andre danske trail runners"
+      icon: "/lovable-uploads/04b6b51f-4515-415d-b591-7608f760c49d.png",
+      title: "Coaching",
+      description: "Strategi og forberedelse inden løb"
     },
     {
-      icon: Calendar,
-      title: "Træningsløb",
-      description: "3 x Trail Fox løb (Tisvilde, Røsnæs, Møns Klint)"
+      icon: "/lovable-uploads/a18f161c-12fd-4a39-819c-2ffac95a8982.png",
+      title: "Socialt",
+      description: "Fællesløb før race og fejring efter"
     },
     {
-      icon: Camera,
-      title: "Foto & video",
-      description: "Professionelle billeder og video fra turen"
+      icon: "/lovable-uploads/f7ffb7d1-9191-46d5-ae2a-7b1a4d9c5350.png",
+      title: "Restitution",
+      description: "Trail Squad fysioterapi tilgængelig"
+    },
+    {
+      icon: "/lovable-uploads/1c4eceb7-97ce-45ca-b50f-0844491ca83a.png",
+      title: "Goodie bag",
+      description: "Førsteklasses Trail Squad merchandise"
+    },
+    {
+      icon: "/lovable-uploads/91b914ac-eb58-43d2-b8b9-c464cad202da.png",
+      title: "Fællesskab",
+      description: "Månedlige træningsløb for deltagere"
     }
   ];
 
   return (
-    <div className={`py-12 ${className}`}>
-      <div className="container mx-auto px-4">
-        <h2 className="font-cabinet text-4xl font-bold text-center mb-12">
-          Hvad er inkluderet i din pakke
-        </h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {customAmenities.map((amenity, index) => {
-            const Icon = amenity.icon;
-            return (
-              <div 
-                key={index}
-                className="bg-stone-dark p-6 rounded-xl hover:bg-stone-dark/80 transition-colors"
-              >
-                <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-cabinet text-xl font-bold mb-2">
-                  {amenity.title}
-                </h3>
-                <p className="text-muted-foreground">
-                  {amenity.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+    <div className={className}>
+      <h2 className="font-cabinet text-2xl font-bold mb-8 text-center">Hvad er inkluderet i din pakke</h2>
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 container mx-auto px-4">
+        {customAmenities.map((amenity, index) => (
+          <div key={index} className="flex flex-col items-center text-center">
+            <div className="mb-3">
+              <img src={amenity.icon} alt={amenity.title} className="w-16 h-16" />
+            </div>
+            <h4 className="font-cabinet text-lg font-bold mb-1">{amenity.title}</h4>
+            <p className="text-sm text-gray-600">{amenity.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
