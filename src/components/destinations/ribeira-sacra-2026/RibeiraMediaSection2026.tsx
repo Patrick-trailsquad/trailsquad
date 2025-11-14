@@ -1,4 +1,5 @@
 import React from 'react';
+import RibeiraPricingSection2026 from './RibeiraPricingSection2026';
 
 const RibeiraMediaSection2026 = () => {
   return (
@@ -14,27 +15,10 @@ const RibeiraMediaSection2026 = () => {
         ></iframe>
       </div>
 
-      <div className="bg-white rounded-xl p-8 shadow-lg">
-        <div className="flex justify-between items-center mb-6">
-          <div>
-            <p className="text-sm text-gray-600 mb-1">Fra</p>
-            <p className="font-cabinet text-4xl font-bold text-charcoal">10.850 DKK</p>
-            <p className="text-sm text-gray-500">inkl. moms</p>
-          </div>
-          <div className="text-right">
-            <p className="text-sm text-gray-600 mb-1">Løbsstatus</p>
-            <p className="font-cabinet text-xl font-bold text-black">ÅBNER SENERE</p>
-          </div>
-        </div>
-        <button
-          disabled
-          className="w-full bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400"
-        >
-          Åbner senere
-        </button>
-      </div>
+      <RibeiraPricingSection2026 />
     </div>
   );
 };
 
 export default RibeiraMediaSection2026;
+
