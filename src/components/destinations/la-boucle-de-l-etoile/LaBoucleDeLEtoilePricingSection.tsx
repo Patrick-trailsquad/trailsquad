@@ -85,7 +85,7 @@ Moms er inkluderet i alle priser. <b>Delt bivuak (4-6 personer)</b> er 17.500 DK
           </div>
         </div>
       </div>
-      <div className="text-center pt-8 pb-0">
+      <div className="text-center py-8">
         <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">Få besked når tilmeldingen åbner</h3>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
           <Input type="email" value={email} onChange={e => setEmail(e.target.value)} required disabled={isSuccess} placeholder="Indtast din email" className="flex-1 h-[56px] px-6 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20" />

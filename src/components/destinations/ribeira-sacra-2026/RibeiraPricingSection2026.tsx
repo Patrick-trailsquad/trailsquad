@@ -89,7 +89,7 @@ const RibeiraPricingSection2026 = () => {
         </div>
       </div>
 
-      <div className="text-center pt-8 pb-0">
+      <div className="text-center py-8">
         <h3 className="font-cabinet text-xl font-bold text-charcoal mb-6">
           Få besked når tilmeldingen åbner
         </h3>
