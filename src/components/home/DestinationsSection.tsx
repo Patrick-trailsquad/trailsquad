@@ -69,6 +69,13 @@ const destinations = [
     date: "September 2026",
     spots: "13 pladser",
     href: "/destinations/infinite-trails"
+  },
+  {
+    image: "/lovable-uploads/la-boucle-hero.jpg",
+    location: "La Boucle de l'Étoile, Østrig",
+    date: "November 2026",
+    spots: "15 pladser",
+    href: "/destinations/la-boucle-de-l-etoile"
   }
 ];
 
