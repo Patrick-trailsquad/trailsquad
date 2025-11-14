@@ -74,7 +74,7 @@ const destinations = [
     image: "/lovable-uploads/la-boucle-hero.jpg",
     location: "La Boucle de l'Étoile, Østrig",
     date: "November 2026",
-    spots: "15 pladser",
+    spots: "Åbner senere",
     href: "/destinations/la-boucle-de-l-etoile"
   }
 ];
