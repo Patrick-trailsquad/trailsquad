@@ -6,7 +6,7 @@ const RibeiraMediaSection2026 = () => {
     <div className="space-y-6">
       <div className="rounded-xl overflow-hidden aspect-video">
         <iframe
-          src="https://www.youtube.com/embed/AEhnSUNgI-c?si=z53vIFltEnBiUBrn"
+          src="https://www.youtube.com/embed/Qg9qUCrMaFo"
           title="Trail Ribeira Sacra"
           className="w-full h-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
