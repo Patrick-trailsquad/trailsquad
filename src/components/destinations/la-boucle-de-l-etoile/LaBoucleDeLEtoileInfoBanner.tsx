@@ -25,10 +25,7 @@ const LaBoucleDeLEtoileInfoBanner = () => {
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
             <h2 className="font-cabinet text-lg text-charcoal">84km, 104km, 126km</h2>
           </div>
-          <div>
-            <h1 className="font-cabinet text-2xl font-bold text-charcoal">Ledige pladser</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">11 pladser</h2>
-          </div>
+          
         </div>
       </div>
       
