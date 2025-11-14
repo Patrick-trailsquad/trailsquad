@@ -71,7 +71,7 @@ const destinations = [
     href: "/destinations/infinite-trails"
   },
   {
-    image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
+    image: "/lovable-uploads/ribeira-sacra-2026-hero.jpg",
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2026",
     spots: "Åbner senere",
