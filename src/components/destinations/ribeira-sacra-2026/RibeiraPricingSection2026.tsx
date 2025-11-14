@@ -118,10 +118,7 @@ const RibeiraPricingSection2026 = () => {
           </div>
         )}
         
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <p className="text-sm text-gray-600 mb-3 text-center">Eller få os til at kontakte dig</p>
-          <CallMeBackCTA />
-        </div>
+        <CallMeBackCTA />
       </div>
     </div>
   );
