@@ -5,14 +5,7 @@ const LaBoucleDeLEtoileAccommodation = () => {
   const isMobile = useIsMobile();
 
   const images = [
-    "/lovable-uploads/comodo-1.png",
-    "/lovable-uploads/comodo-2.png",
-    "/lovable-uploads/comodo-3.png",
-    "/lovable-uploads/comodo-4.png",
-    "/lovable-uploads/comodo-5.png",
-    "/lovable-uploads/comodo-6.png",
-    "/lovable-uploads/comodo-7.png",
-    "/lovable-uploads/comodo-8.png"
+    "/lovable-uploads/la-boucle-bivouac.jpg"
   ];
 
   return (
