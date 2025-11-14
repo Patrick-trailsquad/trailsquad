@@ -37,8 +37,12 @@ const LaBoucleDeLEtoileAccommodation = () => {
                   </div>
                 </CarouselItem>)}
             </CarouselContent>
-            <CarouselPrevious className="left-4" />
-            <CarouselNext className="right-4" />
+            {images.length > 1 && (
+              <>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </>
+            )}
           </Carousel>
         </div>
       </div>
