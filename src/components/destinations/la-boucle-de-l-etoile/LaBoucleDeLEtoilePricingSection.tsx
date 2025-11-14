@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/accordion";
 
 const LaBoucleDeLEtoilePricingSection = () => {
-  const spotsLeft = 4;
   const { toast } = useToast();
 
   return (
@@ -40,14 +39,9 @@ const LaBoucleDeLEtoilePricingSection = () => {
         </div>
         <div className="col-span-2">
           <p className="text-sm text-gray-600 mb-1">Rejsestatus</p>
-          <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} pladser tilbage</p>
+          <p className="font-cabinet text-xl font-bold text-charcoal">Åbner senere</p>
         </div>
       </div>
-      <PriceQuoteForm 
-        destinationName="La Boucle de l'Étoile"
-        availableDistances={["15km", "30km", "45km", "60km"]}
-        maxParticipants={spotsLeft}
-      />
       <div className="mt-4">
         <CallMeBackCTA />
       </div>
