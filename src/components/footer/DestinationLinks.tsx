@@ -10,6 +10,7 @@ const destinations = [
   { name: "Transylvania 100", href: "/destinations/transylvania", spots: "12 pladser" },
   { name: "Swiss Alps 100", href: "/destinations/swiss-alps-100", spots: "12 pladser" },
   { name: "Infinite Trails", href: "/destinations/infinite-trails", spots: "13 pladser" },
+  { name: "La Boucle de l'Étoile", href: "/destinations/la-boucle-de-l-etoile", spots: "15 pladser" },
 ];
 
 const DestinationLinks = () => {
