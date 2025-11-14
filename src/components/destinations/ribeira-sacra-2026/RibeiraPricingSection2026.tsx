@@ -57,7 +57,7 @@ const RibeiraPricingSection2026 = () => {
       <div className="flex justify-between items-center mb-6">
         <div>
           <p className="text-sm text-gray-600 mb-1">Fra</p>
-          <p className="font-cabinet text-4xl font-bold text-charcoal">10.850 DKK</p>
+          <p className="font-cabinet text-4xl font-bold text-charcoal">12.250 DKK</p>
           <p className="text-sm text-gray-500">inkl. moms</p>
           <Accordion type="single" collapsible className="w-full mt-2">
             <AccordionItem value="price-details" className="border-none">
