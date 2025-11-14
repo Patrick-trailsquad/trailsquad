@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { useNavigateAndScroll } from "../../hooks/useNavigateAndScroll";
 
 const destinations = [
   // { name: "Madeira Island Ultra Trail 🇵🇹", href: "/destinations/miut", spots: "Løb afsluttet 🏁" },
@@ -15,18 +15,26 @@ const destinations = [
 ];
 
 const DestinationLinks = () => {
+  const navigateAndScroll = useNavigateAndScroll();
+  
   // Filter out Vesuvio, Chianti, and Istria destinations
   const visibleDestinations = destinations.filter(dest => 
     dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria"
   );
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    navigateAndScroll(href, 'top');
+  };
+
   return (
     <div className="grid grid-cols-1 gap-4">
       {visibleDestinations.map((destination) => (
-        <Link
+        <a
           key={destination.href}
-          to={destination.href}
-          className="group flex items-center gap-3"
+          href={destination.href}
+          onClick={(e) => handleClick(e, destination.href)}
+          className="group flex items-center gap-3 cursor-pointer"
         >
           <div className="text-gray-600 hover:text-terra transition-colors duration-200 text-sm">
             {destination.name}
@@ -42,7 +50,7 @@ const DestinationLinks = () => {
           }`}>
             {destination.spots}
           </span>
-        </Link>
+        </a>
       ))}
     </div>
   );
