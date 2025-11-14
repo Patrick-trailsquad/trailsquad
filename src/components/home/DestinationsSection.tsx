@@ -60,7 +60,7 @@ const destinations = [
     image: "/lovable-uploads/swiss-alps-100-hero-new.jpg",
     location: "Swiss Alps 100, Schweiz",
     date: "August 2026",
-    spots: "12 pladser",
+    spots: "11 pladser",
     href: "/destinations/swiss-alps-100"
   },
   {
@@ -74,7 +74,7 @@ const destinations = [
     image: "/lovable-uploads/la-boucle-hero.jpg",
     location: "La Boucle de l'Étoile, Østrig",
     date: "November 2026",
-    spots: "11 pladser",
+    spots: "Åbner senere",
     href: "/destinations/la-boucle-de-l-etoile"
   }
 ];
