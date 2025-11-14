@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Clock } from "lucide-react";
+import CallMeBackCTA from "../../CallMeBackCTA";
 
 const RibeiraPricingSection2026 = () => {
   const [email, setEmail] = useState('');
@@ -91,6 +92,11 @@ const RibeiraPricingSection2026 = () => {
             {isSuccess ? 'Tilmeldt!' : isSubmitting ? 'Sender...' : 'Tilmeld'}
           </Button>
         </form>
+        
+        <div className="mt-6 pt-6 border-t border-gray-200">
+          <p className="text-sm text-gray-600 mb-3 text-center">Eller få os til at kontakte dig</p>
+          <CallMeBackCTA />
+        </div>
       </div>
     </div>
   );
