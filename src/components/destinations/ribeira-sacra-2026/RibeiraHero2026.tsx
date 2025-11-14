@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 const RibeiraHero2026 = () => {
   return <div className="relative h-[80vh]">
-      <img src="/lovable-uploads/ribeira-sacra-2026-hero.jpg" alt="Trail Ribeira Sacra 2026" className="w-full h-full object-cover" />
+      <img src="/lovable-uploads/ribeira-sacra-2026-hero-2.jpg" alt="Trail Ribeira Sacra 2026" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute top-6 left-6">
         <Link to="/" className="flex items-center gap-2 text-white hover:text-stone transition-colors">
