@@ -117,7 +117,8 @@ const RibeiraPricingSection2026 = () => {
             <span className="text-green-800 font-medium">Tak! Du får besked, så snart tilmeldingen åbner.</span>
           </div>
         )}
-        
+      </div>
+      <div className="mt-4">
         <CallMeBackCTA />
       </div>
     </div>
