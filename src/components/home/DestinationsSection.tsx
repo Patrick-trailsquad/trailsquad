@@ -71,6 +71,13 @@ const destinations = [
     href: "/destinations/infinite-trails"
   },
   {
+    image: "/lovable-uploads/087fe87f-e6e4-4c2e-b840-bea332c370d2.png",
+    location: "Trail Ribeira Sacra, Spanien",
+    date: "Oktober 2026",
+    spots: "Åbner senere",
+    href: "/destinations/ribeira-sacra-2026"
+  },
+  {
     image: "/lovable-uploads/la-boucle-hero.jpg",
     location: "La Boucle de l'Étoile, Marokko",
     date: "November 2026",
