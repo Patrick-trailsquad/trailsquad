@@ -72,7 +72,7 @@ const destinations = [
   },
   {
     image: "/lovable-uploads/la-boucle-hero.jpg",
-    location: "La Boucle de l'Étoile, Østrig",
+    location: "La Boucle de l'Étoile, Marokko",
     date: "November 2026",
     spots: "Åbner senere",
     href: "/destinations/la-boucle-de-l-etoile"
