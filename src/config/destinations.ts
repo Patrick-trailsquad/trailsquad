@@ -68,7 +68,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'la-boucle-de-l-etoile',
     name: 'La Boucle de l\'Étoile',
     route: '/destinations/la-boucle-de-l-etoile',
-    status: 'open' as const,
+    status: 'upcoming' as const,
     published: true
   }
 ].filter(destination => destination.published); // Only return published destinations
