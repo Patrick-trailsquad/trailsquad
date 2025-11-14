@@ -74,8 +74,7 @@ const LaBoucleDeLEtoilePricingSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  Prisen for et <b>Delt Comfy Plus Dobbeltværelse</b> er 15.800 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                  Prisen for et <b>Individuelt Classic Dobbeltværelse</b> er 18.300 DKK.<br /><br />
+                  Prisen for <b>Delt bivuak (4-6 personer)</b> er 15.800 DKK per person. Du vil dele bivuak med andre deltagere.<br /><br />
                   Moms er inkluderet i alle priser.
                 </div>
               </AccordionContent>
