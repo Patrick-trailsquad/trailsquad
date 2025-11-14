@@ -2,8 +2,9 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Clock } from "lucide-react";
+import { Clock, ThumbsUp } from "lucide-react";
 import CallMeBackCTA from "../../CallMeBackCTA";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const RibeiraPricingSection2026 = () => {
   const [email, setEmail] = useState('');
@@ -58,6 +59,24 @@ const RibeiraPricingSection2026 = () => {
           <p className="text-sm text-gray-600 mb-1">Fra</p>
           <p className="font-cabinet text-4xl font-bold text-charcoal">10.850 DKK</p>
           <p className="text-sm text-gray-500">inkl. moms</p>
+          <Accordion type="single" collapsible className="w-full mt-2">
+            <AccordionItem value="price-details" className="border-none">
+              <AccordionTrigger className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none !flex !items-center !justify-start gap-2" style={{
+                background: 'none',
+                boxShadow: 'none'
+              }}>
+                Forklar prisvariationer
+              </AccordionTrigger>
+              <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
+                <div>
+                  Prisen inkluderer transport, overnatning, måltider og guidning under hele rejsen. 
+                  Der kan være variationer afhængigt af værelsesopdeling og ønsker til ekstra services.
+                  <br /><br />
+                  Moms er inkluderet i alle priser.
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
         <div className="text-right">
           <p className="text-sm text-gray-600 mb-1">Registreringsstatus</p>
@@ -92,6 +111,12 @@ const RibeiraPricingSection2026 = () => {
             {isSuccess ? 'Tilmeldt!' : isSubmitting ? 'Sender...' : 'Tilmeld'}
           </Button>
         </form>
+        {isSuccess && (
+          <div className="mt-4 bg-green-50 rounded-lg p-4 flex items-center gap-2 border border-green-200">
+            <ThumbsUp className="h-5 w-5 text-green-600" />
+            <span className="text-green-800 font-medium">Tak! Du får besked, så snart tilmeldingen åbner.</span>
+          </div>
+        )}
         
         <div className="mt-6 pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-600 mb-3 text-center">Eller få os til at kontakte dig</p>
