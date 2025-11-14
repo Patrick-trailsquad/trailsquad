@@ -21,7 +21,7 @@ const LaBoucleDeLEtoileInfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Løbsdagen</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">7. november 2026</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">5-7. november 2026</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Turens varighed</h1>
