@@ -96,7 +96,7 @@ Moms er inkluderet i alle priser. <b>Delt bivuak (4-6 personer)</b> er 17.500 DK
             </Button>}
         </form>
       </div>
-      <div className="mt-0">
+      <div className="-mt-[5px]">
         <CallMeBackCTA />
       </div>
     </div>;
