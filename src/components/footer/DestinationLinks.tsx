@@ -8,7 +8,6 @@ const destinations = [
   { name: "Istria 100 by UTMB", href: "/destinations/istria", spots: "5 pladser" },
   { name: "Vesuvio Ultra Marathon", href: "/destinations/vesuvio", spots: "Åbner senere" },
   { name: "Transylvania 100", href: "/destinations/transylvania", spots: "12 pladser" },
-  { name: "Gran Trail Courmayeur", href: "/destinations/gtc", spots: "Åbner senere" },
   { name: "Swiss Alps 100", href: "/destinations/swiss-alps-100", spots: "12 pladser" },
   { name: "Infinite Trails", href: "/destinations/infinite-trails", spots: "13 pladser" },
 ];

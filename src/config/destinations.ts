@@ -41,7 +41,7 @@ export const DESTINATIONS: Destination[] = [
     name: 'Gran Trail Courmayeur',
     route: '/destinations/gtc',
     status: 'upcoming' as const,
-    published: true
+    published: false
   },
   {
     id: 'istria',

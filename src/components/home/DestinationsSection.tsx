@@ -75,9 +75,9 @@ const destinations = [
 const DestinationsSection = () => {
   const { ratings } = useDestinationRatings();
   
-  // Filter out Vesuvio, Chianti, Istria, and MIUT destinations
+  // Filter out Vesuvio, Chianti, Istria, MIUT, and GTC destinations
   const visibleDestinations = destinations.filter(dest => 
-    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/miut"
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/miut" && dest.href !== "/destinations/gtc"
   );
 
   return (
