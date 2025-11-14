@@ -23,6 +23,13 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
+    id: 'ribeira-sacra-2026',
+    name: 'Ribeira Sacra 2026',
+    route: '/destinations/ribeira-sacra-2026',
+    status: 'upcoming' as const,
+    published: true
+  },
+  {
     id: 'transylvania',
     name: 'Transylvania 100',
     route: '/destinations/transylvania',

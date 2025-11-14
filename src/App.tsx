@@ -21,6 +21,7 @@ import MontBlanc from "./pages/destinations/MontBlanc";
 import BlackForest from "./pages/destinations/BlackForest";
 import Vesuvio from "./pages/destinations/Vesuvio";
 import RibeiraSacra from "./pages/destinations/RibeiraSacra";
+import RibeiraSacra2026 from "./pages/destinations/RibeiraSacra2026";
 import Dolomites from "./pages/destinations/Dolomites";
 import ChiantiTrail from "./pages/destinations/ChiantiTrail";
 import ZugspitzUltratrail from "./pages/destinations/ZugspitzUltratrail";
@@ -66,6 +67,7 @@ const App = () => (
             <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
             <Route path="/destinations/black-forest" element={<BlackForest />} />
             <Route path="/destinations/ribeira-sacra" element={<RibeiraSacra />} />
+            <Route path="/destinations/ribeira-sacra-2026" element={<RibeiraSacra2026 />} />
             <Route path="/destinations/dolomites" element={<Dolomites />} />
             <Route path="/destinations/chianti" element={<ChiantiTrail />} />
           <Route path="/destinations/zugspitz" element={<ZugspitzUltratrail />} />
