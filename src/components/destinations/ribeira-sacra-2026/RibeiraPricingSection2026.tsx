@@ -118,7 +118,7 @@ const RibeiraPricingSection2026 = () => {
           </div>
         )}
       </div>
-      <div className="mt-0">
+      <div className="-mt-[5px]">
         <CallMeBackCTA />
       </div>
     </div>
