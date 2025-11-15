@@ -1,8 +1,6 @@
-
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
 import { ThumbsUp } from "lucide-react";
-
 const CTASection = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -10,7 +8,6 @@ const CTASection = () => {
   const {
     toast
   } = useToast();
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -28,7 +25,6 @@ const CTASection = () => {
         mode: 'no-cors',
         body: JSON.stringify(payload)
       });
-
       setEmail('');
       setIsSuccess(true);
       toast({
@@ -46,26 +42,15 @@ const CTASection = () => {
       setIsSubmitting(false);
     }
   };
-
   return <section className="py-24 bg-[#FFDC00] relative min-h-[600px]">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-black mb-6">
             Klar til at starte dit eventyr?
           </h2>
-          <p className="font-inter text-xl text-black/90 mb-8">Bliv en del af vores fællesskab af trail løbere og vær den første til at høre, når vi planlægger nye løbsdestinationer.
-
-Tilmeld dig vores nyhedsbrev for at blive holdt opdateret. </p>
+          <p className="font-inter text-xl text-black/90 mb-8">Bliv en del af vores fællesskab af trailløbere og vær den første til at høre, når vi planlægger nye løbsdestinationer. Tilmeld dig vores nyhedsbrev for at blive holdt opdateret. </p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              value={email} 
-              onChange={e => setEmail(e.target.value)} 
-              required 
-              disabled={isSuccess}
-              placeholder={isSuccess ? '' : 'Indtast email'} 
-              className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20 disabled:opacity-50" 
-            />
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} required disabled={isSuccess} placeholder={isSuccess ? '' : 'Indtast email'} className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20 disabled:opacity-50" />
             {isSuccess ? <div className="bg-transparent border-2 border-black text-black px-8 py-4 rounded-full flex items-center justify-center">
                 <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
               </div> : <button type="submit" disabled={isSubmitting} className="bg-black text-white px-8 py-4 rounded-full font-cabinet font-medium hover:bg-black/90 transition-colors duration-300 disabled:opacity-50">
@@ -92,6 +77,4 @@ Tilmeld dig vores nyhedsbrev for at blive holdt opdateret. </p>
       </svg>
     </section>;
 };
-
 export default CTASection;
-
