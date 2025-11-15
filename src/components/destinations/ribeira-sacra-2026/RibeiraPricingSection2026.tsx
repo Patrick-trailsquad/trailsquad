@@ -69,9 +69,10 @@ const RibeiraPricingSection2026 = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  Prisen inkluderer transport, overnatning, måltider og guidning under hele rejsen. 
-                  Der kan være variationer afhængigt af værelsesopdeling og ønsker til ekstra services.
-                  <br /><br />
+                  <b>Dobbeltværelse (delt med en anden deltager)</b> er 12.250 DKK per person. Du vil dele værelse med en anden deltager - vi vil for så vidt muligt sørge for, at det er en anden fra Trail Squad. Mix af mænd og kvinder kan forekomme.<br /><br />
+                  
+                  <b>Single værelse</b> er 14.750 DKK per person - du får dit eget værelse.<br /><br />
+                  
                   Moms er inkluderet i alle priser.
                 </div>
               </AccordionContent>
@@ -96,27 +97,28 @@ const RibeiraPricingSection2026 = () => {
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
           <Input
             type="email"
-            placeholder="Din email"
+            placeholder="Indtast din email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             disabled={isSuccess}
-            className="flex-1"
+            className="flex-1 h-[56px] px-6 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20"
           />
-          <Button
-            type="submit"
-            disabled={isSubmitting || isSuccess}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
-          >
-            {isSuccess ? 'Tilmeldt!' : isSubmitting ? 'Sender...' : 'Tilmeld'}
-          </Button>
+          {isSuccess ? (
+            <div className="bg-transparent border-2 border-black text-black h-[56px] px-8 rounded-full flex items-center justify-center">
+              <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
+            </div>
+          ) : (
+            <Button
+              type="submit"
+              variant="black"
+              size="xl"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Indsender...' : 'Giv mig besked'}
+            </Button>
+          )}
         </form>
-        {isSuccess && (
-          <div className="mt-4 bg-green-50 rounded-lg p-4 flex items-center gap-2 border border-green-200">
-            <ThumbsUp className="h-5 w-5 text-green-600" />
-            <span className="text-green-800 font-medium">Tak! Du får besked, så snart tilmeldingen åbner.</span>
-          </div>
-        )}
       </div>
       <div className="-mt-[5px]">
         <CallMeBackCTA />
