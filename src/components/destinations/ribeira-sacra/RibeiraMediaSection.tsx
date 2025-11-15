@@ -22,8 +22,10 @@ const RibeiraMediaSection = () => {
             <p className="text-sm text-gray-500">inkl. moms</p>
           </div>
           <div className="text-right">
-            <p className="text-sm text-gray-600 mb-1">Løbsstatus</p>
-            <p className="font-cabinet text-xl font-bold text-black">LØB AFSLUTTET 🏁</p>
+            <p className="text-sm text-gray-600 mb-2">Løbsstatus</p>
+            <span className="inline-flex items-center gap-2 bg-charcoal text-stone px-4 py-2 rounded-full font-cabinet text-sm font-bold shadow-md">
+              LØB AFSLUTTET 🏁
+            </span>
           </div>
         </div>
         <button 
