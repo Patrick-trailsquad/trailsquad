@@ -99,7 +99,7 @@ const LaBoucleDeLEtoile = () => {
         </svg>
       </div>
 
-      {!isMobile && <LaBoucleDeLEtoileAccommodation />}
+      <LaBoucleDeLEtoileAccommodation />
 
       <BackToDestinationsButton />
 
