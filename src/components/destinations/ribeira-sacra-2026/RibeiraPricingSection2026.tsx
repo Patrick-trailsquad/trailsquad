@@ -62,7 +62,7 @@ const RibeiraPricingSection2026 = () => {
                 Forklar prisvariationer
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
-                <div>Dobbeltværelse (delt med en anden deltager) er 12.250 DKK per person og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene. 
+                <div>Dobbeltværelse (delt med en anden deltager) er 12.250 DKK per person og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.  
 
 Single værelse er 14.750 DKK per person - du får dit eget værelse.
 
