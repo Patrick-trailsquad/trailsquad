@@ -63,12 +63,10 @@ const LaBoucleDeLEtoilePricingSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  Prisen for Delt bivuak (4-6 personer) er 17.500 DKK per person. Du vil dele bivuak med andre deltagere vi vil for så vidt muligt sørge for, at alle i teltet er fra Trail Squad. Mix af mænd og kvinder kan forekomme.   
+                  Prisen for Delt bivuak (4-6 personer) er 17.500 DKK per person. Du vil dele bivuak med andre deltagere vi vil for så vidt muligt sørge for, at alle i teltet er fra Trail Squad. Mix af mænd og kvinder kan forekomme.<br /><br />
 
-
-Prisen for et solo telt vil formentlig være nogle tusind kr dyrere - dette er endnu ikke afklaret. Moms er inkluderet i alle priser. 
-
-Moms er inkluderet i alle priser. <b>Delt bivuak (4-6 personer)</b> er 17.500 DKK per person. Du vil dele bivuak med andre deltagere.<br /><br />
+                  Prisen for et solo telt vil formentlig være nogle tusind kr dyrere - dette er endnu ikke afklaret.<br /><br />
+                  
                   Moms er inkluderet i alle priser.
                 </div>
               </AccordionContent>
