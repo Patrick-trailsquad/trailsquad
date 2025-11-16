@@ -62,11 +62,8 @@ const RibeiraPricingSection2026 = () => {
                 Forklar prisvariationer
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
-                <div>Dobbeltværelse (delt med en anden deltager) er 12.250 DKK per person og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene. 
-
-Single værelse er 14.750 DKK per person - du får dit eget værelse.
-
-Moms er inkluderet i alle priser.<b>Dobbeltværelse (delt med en anden deltager)</b> er 12.250 DKK per person. Du vil dele værelse med en anden deltager - vi vil for så vidt muligt sørge for, at det er en anden fra Trail Squad. Mix af mænd og kvinder kan forekomme.<br /><br />
+                <div>
+                  <b>Dobbeltværelse (delt med en anden deltager)</b> er 12.250 DKK per person og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
                   
                   <b>Single værelse</b> er 14.750 DKK per person - du får dit eget værelse.<br /><br />
                   
