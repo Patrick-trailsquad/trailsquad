@@ -154,7 +154,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 1 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #1", "Søndag d. 23. november 2025", "09:00", "10:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg cursor-default flex flex-col opacity-75">
                 <div className="relative h-80 bg-charcoal/20">
                   <img src="/lovable-uploads/training-session-1-updated.png" alt="Training Session 1" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
@@ -183,8 +183,8 @@ Så vil vores trail træningssessions være noget for dig!</p>
                     <br />
                     Efter et par kms opvarmning står den på bakketræning, tekniksnak og højt humør (og puls)!
                   </p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #1", "Søndag d. 23. november 2025", "09:00", "10:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <button disabled className="w-full bg-gray-400 text-gray-600 px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-500 cursor-not-allowed">
+                    Afsluttet
                   </button>
                 </div>
               </div>
