@@ -10,7 +10,7 @@ const SwissAlps100InfoBanner = () => {
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Lokation</h1>
             <button onClick={() => setIsMapModalOpen(true)} className="font-cabinet text-lg text-charcoal hover:text-charcoal/80 transition-colors underline decoration-dotted underline-offset-2 flex items-center gap-1 mx-auto">
               <MapPin className="w-4 h-4" />
-              Goms, Schweiz
+              Fiesch, Schweiz
             </button>
           </div>
           <div>
