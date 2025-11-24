@@ -17,8 +17,8 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
   const [error, setError] = useState<string | null>(null);
   const [isMapInitialized, setIsMapInitialized] = useState(false);
 
-  // Goms, Switzerland coordinates
-  const gomsCoordinates: [number, number] = [8.2138, 46.3750];
+  // Fiesch, Switzerland coordinates
+  const fieschCoordinates: [number, number] = [8.1358, 46.4010];
 
   const initializeMap = async () => {
     if (!mapContainer.current) {
@@ -46,8 +46,8 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v12',
-        center: gomsCoordinates,
-        zoom: 12,
+        center: fieschCoordinates,
+        zoom: 13,
       });
 
       console.log('Map object created, waiting for load event...');
@@ -58,15 +58,15 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         
         if (!map.current) return;
 
-        // Add marker for Goms
+        // Add marker for Fiesch
         new mapboxgl.Marker({
           color: '#FFDC00',
           scale: 1.2
         })
-          .setLngLat(gomsCoordinates)
+          .setLngLat(fieschCoordinates)
           .setPopup(
             new mapboxgl.Popup({ offset: 25 })
-              .setHTML('<h3 style="margin: 0; font-weight: bold;">Goms</h3><p style="margin: 4px 0 0 0;">Schweiz</p>')
+              .setHTML('<h3 style="margin: 0; font-weight: bold;">Fiesch</h3><p style="margin: 4px 0 0 0;">Schweiz</p>')
           )
           .addTo(map.current);
 
@@ -117,7 +117,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary" />
-            Goms, Schweiz
+            Fiesch, Schweiz
           </DialogTitle>
         </DialogHeader>
         
