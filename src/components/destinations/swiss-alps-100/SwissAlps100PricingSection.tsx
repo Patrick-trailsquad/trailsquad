@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 
 const SwissAlps100PricingSection = () => {
-  const spotsLeft = 11;
+  const spotsLeft = 10;
   const { toast } = useToast();
 
   return (
