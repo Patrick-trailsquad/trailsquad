@@ -70,7 +70,7 @@ export default {
       animation: {
         'fade-up': 'fade-up 0.5s ease-out',
         'fade-in': 'fade-in 0.3s ease-out',
-        'scroll': 'scroll 20s linear infinite'
+        'scroll': 'scroll 12s linear infinite'
       },
       borderColor: {
         border: 'hsl(var(--border))',
