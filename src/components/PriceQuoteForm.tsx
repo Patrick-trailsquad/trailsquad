@@ -10,6 +10,7 @@ interface PriceQuoteFormProps {
   destinationName: string;
   availableDistances: string[];
   maxParticipants?: number;
+  depositPercentage?: number;
 }
 interface FormValues {
   fullName: string;
@@ -23,7 +24,8 @@ const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/2qey8b
 const PriceQuoteForm = ({
   destinationName,
   availableDistances,
-  maxParticipants = 100
+  maxParticipants = 100,
+  depositPercentage = 75
 }: PriceQuoteFormProps) => {
   const {
     toast
@@ -118,7 +120,7 @@ const PriceQuoteForm = ({
                 <div>
                   <p className="text-sm text-gray-600 mb-2">Udfyld denne formular, og vi vender tilbage til dig med et personligt tilbud på dit eventyr. Vi svarer typisk inden for 48 timer på hverdage.</p>
                   <p className="text-sm text-gray-600 mb-2">
-                    Tilbuddet vil indeholde et Stripe-link til at betale 75% af prisen for at bekræfte. Vi vender tilbage 60 dage før afrejse for at indsamle de resterende 25% af prisen.
+                    Tilbuddet vil indeholde et Stripe-link til at betale {depositPercentage}% af prisen for at bekræfte. Vi vender tilbage 60 dage før afrejse for at indsamle de resterende {100 - depositPercentage}% af prisen.
                   </p>
                 </div>
               </div>
