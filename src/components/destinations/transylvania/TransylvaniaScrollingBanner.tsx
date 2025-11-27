@@ -1,21 +1,16 @@
 import React from 'react';
 
 const TransylvaniaScrollingBanner = () => {
+  const text = "Husk at sikre dig din billet - vi lukker for billetsalget i løbet af december";
+  
   return (
     <div className="w-full bg-charcoal py-3 overflow-hidden">
-      <div className="animate-scroll whitespace-nowrap">
-        <span className="inline-block px-8 text-white font-cabinet text-lg">
-          Husk at sikre dig din billet - vi lukker for billetsalget i løbet af december
-        </span>
-        <span className="inline-block px-8 text-white font-cabinet text-lg">
-          Husk at sikre dig din billet - vi lukker for billetsalget i løbet af december
-        </span>
-        <span className="inline-block px-8 text-white font-cabinet text-lg">
-          Husk at sikre dig din billet - vi lukker for billetsalget i løbet af december
-        </span>
-        <span className="inline-block px-8 text-white font-cabinet text-lg">
-          Husk at sikre dig din billet - vi lukker for billetsalget i løbet af december
-        </span>
+      <div className="animate-scroll whitespace-nowrap inline-block">
+        {Array(20).fill(text).map((item, index) => (
+          <span key={index} className="inline-block px-8 text-white font-cabinet text-lg">
+            {item}
+          </span>
+        ))}
       </div>
     </div>
   );
