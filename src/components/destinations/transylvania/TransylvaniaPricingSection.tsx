@@ -49,6 +49,7 @@ const TransylvaniaPricingSection = () => {
         destinationName="Transylvania 100"
         availableDistances={["20km", "30km", "50km", "80km", "100km"]}
         maxParticipants={spotsLeft}
+        depositPercentage={50}
       />
       <div className="mt-4">
         <CallMeBackCTA />
