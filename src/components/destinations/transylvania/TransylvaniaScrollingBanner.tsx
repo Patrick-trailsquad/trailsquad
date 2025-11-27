@@ -5,7 +5,7 @@ const TransylvaniaScrollingBanner = () => {
   
   return (
     <div className="w-full bg-charcoal py-3 overflow-hidden">
-      <div className="animate-scroll md:animate-scroll-desktop hover:animate-scroll-slow md:hover:animate-scroll-desktop-slow whitespace-nowrap inline-block transition-all">
+      <div className="animate-scroll md:animate-scroll-desktop whitespace-nowrap inline-block hover:[animation-play-state:paused]">
         {Array(20).fill(text).map((item, index) => (
           <span key={index} className="inline-block px-8 text-white font-cabinet text-lg">
             {item}
