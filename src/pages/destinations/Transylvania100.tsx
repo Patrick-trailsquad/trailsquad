@@ -13,6 +13,7 @@ import TransylvaniaIncludedAmenities from "../../components/destinations/transyl
 import TransylvaniaDecorativeLines from "../../components/destinations/transylvania/TransylvaniaDecorativeLines";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+import TransylvaniaScrollingBanner from "../../components/destinations/transylvania/TransylvaniaScrollingBanner";
 
 const Transylvania100 = () => {
   const isMobile = useIsMobile();
@@ -24,6 +25,7 @@ const Transylvania100 = () => {
       <Menu />
       <TransylvaniaHero />
       <TransylvaniaInfoBanner />
+      <TransylvaniaScrollingBanner />
       
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
