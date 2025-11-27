@@ -71,7 +71,9 @@ export default {
         'fade-up': 'fade-up 0.5s ease-out',
         'fade-in': 'fade-in 0.3s ease-out',
         'scroll': 'scroll 40s linear infinite',
-        'scroll-desktop': 'scroll 50s linear infinite'
+        'scroll-desktop': 'scroll 50s linear infinite',
+        'scroll-slow': 'scroll 80s linear infinite',
+        'scroll-desktop-slow': 'scroll 100s linear infinite'
       },
       borderColor: {
         border: 'hsl(var(--border))',
