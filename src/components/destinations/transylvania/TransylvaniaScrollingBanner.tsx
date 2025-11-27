@@ -30,7 +30,7 @@ const TransylvaniaScrollingBanner = () => {
         return;
       }
 
-      const baseDuration = window.innerWidth < 768 ? 40000 : 50000; // ms for half track
+      const baseDuration = window.innerWidth < 768 ? 60000 : 40000; // ms for half track
       const baseSpeed = trackWidth / 2 / baseDuration; // px per ms
       const speedFactor = isHoveredRef.current ? 0.5 : 1; // 50% speed on hover
       const currentSpeed = baseSpeed * speedFactor;
