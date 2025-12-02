@@ -43,13 +43,7 @@ const VoucherCTA: FC = () => {
             <Button onClick={handleVoucherClick} size="lg" className="bg-black text-white hover:bg-black/90 px-10 py-6 text-lg font-cabinet font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               Gavekort 1000 kr (50% rabat)
             </Button>
-            <Button 
-              onClick={() => window.location.href = 'mailto:info@trailsquad.dk?subject=Spørgsmål om gavekort'}
-              size="lg" 
-              className="bg-black text-white hover:bg-black/90 px-10 py-6 text-lg font-cabinet font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-            >
-              Kontakt os
-            </Button>
+            
           </div>
 
           {/* Small text below */}
