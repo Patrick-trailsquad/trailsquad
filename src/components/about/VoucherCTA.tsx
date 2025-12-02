@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Gift } from 'lucide-react';
 import { Button } from '../ui/button';
 const VoucherCTA: FC = () => {
   const handleVoucherClick = () => {
@@ -28,7 +27,7 @@ const VoucherCTA: FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Icon */}
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black/10 mb-6">
-            <Gift className="w-10 h-10 text-black" />
+            <img src="/lovable-uploads/voucher-icon.png" alt="Voucher" className="w-12 h-12" />
           </div>
 
           {/* Headline */}
