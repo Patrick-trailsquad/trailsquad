@@ -96,7 +96,7 @@ const VoucherCTA: FC = () => {
               For kun 500! 😱
             </DialogTitle>
             <DialogDescription>
-              Udfyld dine oplysninger for at fortsætte til betaling
+              Udfyld dine oplysninger for at fortsætte til betaling. Vi sender kvittering og gavekort til din email efterfølgende.
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 py-4">
