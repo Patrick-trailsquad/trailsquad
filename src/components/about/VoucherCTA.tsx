@@ -35,7 +35,7 @@ const VoucherCTA: FC = () => {
       return;
     }
 
-    window.location.href = 'https://buy.stripe.com/4gM00ia3ff938cvcXa7kc0b';
+    window.open('https://buy.stripe.com/4gM00ia3ff938cvcXa7kc0b', '_blank');
   };
   return <section className="py-24 relative overflow-hidden">
       {/* Background Image */}
