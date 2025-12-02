@@ -97,6 +97,8 @@ const VoucherCTA: FC = () => {
             </DialogTitle>
             <DialogDescription>
               Udfyld dine oplysninger for at fortsætte til betaling. Vi sender kvittering og gavekort til din email efterfølgende.
+              <br /><br />
+              Gavekort kan bruges hele 2026 (eller senere hvis I er sløve).
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4 py-4">
