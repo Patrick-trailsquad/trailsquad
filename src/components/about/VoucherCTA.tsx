@@ -29,9 +29,7 @@ const VoucherCTA: FC = () => {
           <img src="/lovable-uploads/voucher-icon.png" alt="Voucher" className="w-40 h-40 mb-6 mx-auto" />
 
           {/* Headline */}
-          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-black mb-6">
-            Giv en uforglemmelig oplevelse
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-black mb-6">Årets julegaveidé</h2>
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-black/90 mb-4 font-medium">🎄 50% rabat resten af december 🎅</p>
