@@ -26,9 +26,7 @@ const VoucherCTA: FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Icon */}
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-black/10 mb-6">
-            <img src="/lovable-uploads/voucher-icon.png" alt="Voucher" className="w-12 h-12" />
-          </div>
+          <img src="/lovable-uploads/voucher-icon.png" alt="Voucher" className="w-20 h-20 mb-6 mx-auto" />
 
           {/* Headline */}
           <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-black mb-6">
