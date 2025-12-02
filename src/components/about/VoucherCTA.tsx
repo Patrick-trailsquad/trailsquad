@@ -121,7 +121,8 @@ const VoucherCTA: FC = () => {
             </div>
             <Button 
               onClick={handleConfirm}
-              className="w-full bg-black text-white hover:bg-black/90"
+              disabled={!name.trim() || !email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)}
+              className="w-full bg-black text-white hover:bg-black/90 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Fortsæt til betaling
             </Button>
