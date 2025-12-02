@@ -15,9 +15,7 @@ const VoucherCTA: FC = () => {
       
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
-        <svg className="absolute top-10 left-10 w-32 h-32" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="5,5" />
-        </svg>
+        
         <svg className="absolute bottom-20 right-20 w-40 h-40" viewBox="0 0 100 100">
           <path d="M20 50 L80 50 M50 20 L50 80" stroke="currentColor" strokeWidth="2" strokeDasharray="8,4" />
         </svg>
