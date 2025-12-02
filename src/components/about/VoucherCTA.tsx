@@ -46,8 +46,7 @@ const VoucherCTA: FC = () => {
             <Button 
               onClick={() => window.location.href = 'mailto:info@trailsquad.dk?subject=Spørgsmål om gavekort'}
               size="lg" 
-              variant="outline"
-              className="bg-white/90 text-black border-2 border-black hover:bg-white px-10 py-6 text-lg font-cabinet font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-black text-white hover:bg-black/90 px-10 py-6 text-lg font-cabinet font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               Kontakt os
             </Button>
