@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Button } from '../ui/button';
 const VoucherCTA: FC = () => {
   const handleVoucherClick = () => {
-    window.location.href = 'https://buy.stripe.com/4gM00ia3ff938cvcXa7kc0b';
+    window.location.href = 'mailto:info@trailsquad.dk?subject=Gavekort til Trail Squad tur';
   };
   return <section className="py-24 relative overflow-hidden">
       {/* Background Image */}
