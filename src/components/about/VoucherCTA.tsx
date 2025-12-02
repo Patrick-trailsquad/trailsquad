@@ -8,7 +8,16 @@ const VoucherCTA: FC = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-yellow via-yellow/95 to-orange relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(/lovable-uploads/voucher-background.jpg)' }}
+      />
+      
+      {/* Gradient Overlay with 50% opacity */}
+      <div className="absolute inset-0 bg-gradient-to-br from-yellow via-yellow/95 to-orange opacity-50" />
+      
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <svg className="absolute top-10 left-10 w-32 h-32" viewBox="0 0 100 100">
