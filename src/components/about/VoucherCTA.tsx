@@ -38,10 +38,20 @@ const VoucherCTA: FC = () => {
             Det perfekte gavekort til dem, der elsker eventyr, natur og løb. Et gavekort til Trail Squad er mere end bare en gave – det er en invitation til at opleve verdens smukkeste trail-destinationer sammen med ligesindede.
           </p>
 
-          {/* CTA Button */}
-          <Button onClick={handleVoucherClick} size="lg" className="bg-black text-white hover:bg-black/90 px-10 py-6 text-lg font-cabinet font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            Køb gavekort nu
-          </Button>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button onClick={handleVoucherClick} size="lg" className="bg-black text-white hover:bg-black/90 px-10 py-6 text-lg font-cabinet font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              Køb gavekort nu
+            </Button>
+            <Button 
+              onClick={() => window.location.href = 'mailto:info@trailsquad.dk?subject=Spørgsmål om gavekort'}
+              size="lg" 
+              variant="outline"
+              className="bg-white/90 text-black border-2 border-black hover:bg-white px-10 py-6 text-lg font-cabinet font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            >
+              Kontakt os
+            </Button>
+          </div>
 
           {/* Small text below */}
           
