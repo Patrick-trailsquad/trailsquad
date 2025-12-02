@@ -37,7 +37,7 @@ const VoucherCTA: FC = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-black/90 mb-4 font-medium">🎄 50% rabat resten af december 🎅🎄</p>
+          <p className="text-xl md:text-2xl text-black/90 mb-4 font-medium">🎄 50% rabat resten af december 🎅</p>
           
           <p className="text-lg text-black/80 mb-10 max-w-2xl mx-auto">
             Det perfekte gavekort til dem, der elsker eventyr, natur og løb. Et gavekort til Trail Squad er mere end bare en gave – det er en invitation til at opleve verdens smukkeste trail-destinationer sammen med ligesindede.
