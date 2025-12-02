@@ -44,9 +44,7 @@ const VoucherCTA: FC = () => {
           </Button>
 
           {/* Small text below */}
-          <p className="text-sm text-black/70 mt-6">
-            Kontakt os for at høre mere om muligheder og priser
-          </p>
+          
         </div>
       </div>
 
