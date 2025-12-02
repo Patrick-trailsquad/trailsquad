@@ -91,7 +91,10 @@ const VoucherCTA: FC = () => {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-cabinet font-bold">Køb et gavekort på 1.000 kr - for kun 500!</DialogTitle>
+            <DialogTitle className="text-2xl font-cabinet font-bold">
+              Køb et gavekort til 1.000 kr<br />
+              For kun 500! 😱
+            </DialogTitle>
             <DialogDescription>
               Udfyld dine oplysninger for at fortsætte til betaling
             </DialogDescription>
