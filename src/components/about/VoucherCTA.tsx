@@ -1,8 +1,41 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Button } from '../ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../ui/dialog';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+import { useToast } from '@/hooks/use-toast';
+
 const VoucherCTA: FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const { toast } = useToast();
+
   const handleVoucherClick = () => {
-    window.location.href = 'mailto:info@trailsquad.dk?subject=Gavekort til Trail Squad tur';
+    setIsModalOpen(true);
+  };
+
+  const handleConfirm = () => {
+    if (!name.trim() || !email.trim()) {
+      toast({
+        title: "Fejl",
+        description: "Udfyld venligst alle felter",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast({
+        title: "Fejl",
+        description: "Indtast venligst en gyldig email",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    window.location.href = 'https://buy.stripe.com/4gM00ia3ff938cvcXa7kc0b';
   };
   return <section className="py-24 relative overflow-hidden">
       {/* Background Image */}
@@ -53,6 +86,45 @@ const VoucherCTA: FC = () => {
       <svg className="absolute bottom-0 left-0 w-full h-24" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0 60 Q300 20 600 60 T1200 60 L1200 120 L0 120 Z" fill="none" stroke="black" strokeWidth="3" opacity="0.3" />
       </svg>
+
+      {/* Voucher Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-cabinet font-bold">Gavekort 1000 kr</DialogTitle>
+            <DialogDescription>
+              Udfyld dine oplysninger for at fortsætte til betaling
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="name">Dit fulde navn</Label>
+              <Input
+                id="name"
+                placeholder="Indtast dit fulde navn"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Din email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="din@email.dk"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <Button 
+              onClick={handleConfirm}
+              className="w-full bg-black text-white hover:bg-black/90"
+            >
+              Fortsæt til betaling
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>;
 };
 export default VoucherCTA;
