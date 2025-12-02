@@ -15,7 +15,7 @@ const VoucherCTA: FC = () => {
     setIsModalOpen(true);
   };
 
-  const handleConfirm = () => {
+  const handleConfirm = async () => {
     if (!name.trim() || !email.trim()) {
       toast({
         title: "Fejl",
@@ -33,6 +33,24 @@ const VoucherCTA: FC = () => {
         variant: "destructive"
       });
       return;
+    }
+
+    // Send data to Zapier
+    try {
+      await fetch('https://hooks.zapier.com/hooks/catch/21931910/uka1iy0/', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+    } catch (error) {
+      console.error("Error sending to Zapier:", error);
     }
 
     window.open('https://buy.stripe.com/4gM00ia3ff938cvcXa7kc0b', '_blank');
