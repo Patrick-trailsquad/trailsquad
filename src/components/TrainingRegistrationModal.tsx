@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { format } from "date-fns";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -63,7 +64,7 @@ export const TrainingRegistrationModal = ({
         sessionEndTime,
         sessionLocation,
         sessionMeetingPlace,
-        timestamp: new Date().toISOString()
+        timestamp: format(new Date(), "MMMM dd yyyy HH:mm:ss")
       };
 
       try {
