@@ -198,7 +198,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-01-13">Tirsdag d. 13. januar</time>
+                      <span className="font-semibold">Dato:</span> <time dateTime="2026-01-13">Tirsdag d. 13. januar 2026</time>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Mødetid:</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
