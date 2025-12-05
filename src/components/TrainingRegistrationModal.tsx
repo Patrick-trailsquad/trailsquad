@@ -59,8 +59,18 @@ export const TrainingRegistrationModal = ({
         experience: validated.experience,
         optOutMarketing: validated.optOutMarketing,
         sessionTitle,
-        sessionDate: `${sessionDate} ${sessionMeetingTime}:00`.replace(/^(\d+)\s+(\w+)\s+(\d+)/, '$2 $1 $3'),
-        sessionEndTime: `${sessionDate} ${sessionEndTime}:00`.replace(/^(\d+)\s+(\w+)\s+(\d+)/, '$2 $1 $3'),
+        sessionDate: `${sessionDate} ${sessionMeetingTime}`.replace(/^(\d+)\s+\w+\s+(\d+)\s+(\d+:\d+)$/, (_, day, year, time) => {
+          const monthMatch = sessionDate.match(/\s(\w+)\s/);
+          const monthNames: Record<string, string> = { januar: '01', februar: '02', marts: '03', april: '04', maj: '05', juni: '06', juli: '07', august: '08', september: '09', oktober: '10', november: '11', december: '12' };
+          const month = monthNames[monthMatch?.[1]?.toLowerCase() || ''] || '01';
+          return `${year}-${month}-${day.padStart(2, '0')}T${time}:00+01:00`;
+        }),
+        sessionEndTime: `${sessionDate} ${sessionEndTime}`.replace(/^(\d+)\s+\w+\s+(\d+)\s+(\d+:\d+)$/, (_, day, year, time) => {
+          const monthMatch = sessionDate.match(/\s(\w+)\s/);
+          const monthNames: Record<string, string> = { januar: '01', februar: '02', marts: '03', april: '04', maj: '05', juni: '06', juli: '07', august: '08', september: '09', oktober: '10', november: '11', december: '12' };
+          const month = monthNames[monthMatch?.[1]?.toLowerCase() || ''] || '01';
+          return `${year}-${month}-${day.padStart(2, '0')}T${time}:00+01:00`;
+        }),
         sessionLocation,
         sessionMeetingPlace,
         timestamp: format(new Date(), "MMMM dd yyyy HH:mm:ss")
