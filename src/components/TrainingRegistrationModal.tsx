@@ -59,8 +59,8 @@ export const TrainingRegistrationModal = ({
         experience: validated.experience,
         optOutMarketing: validated.optOutMarketing,
         sessionTitle,
-        sessionDate: `${sessionDate} ${sessionMeetingTime}:00`,
-        sessionEndTime: `${sessionDate} ${sessionEndTime}:00`,
+        sessionDate: `${sessionDate} ${sessionMeetingTime}:00`.replace(/^(\d+)\s+(\w+)\s+(\d+)/, '$2 $1 $3'),
+        sessionEndTime: `${sessionDate} ${sessionEndTime}:00`.replace(/^(\d+)\s+(\w+)\s+(\d+)/, '$2 $1 $3'),
         sessionLocation,
         sessionMeetingPlace,
         timestamp: format(new Date(), "MMMM dd yyyy HH:mm:ss")
