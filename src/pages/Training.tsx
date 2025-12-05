@@ -201,7 +201,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">18:00</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-01-13T19:30:00+01:00">19.30</time>
+                      <span className="font-semibold">19:30</span> <time dateTime="2026-01-13T19:30:00+01:00">19.30</time>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
