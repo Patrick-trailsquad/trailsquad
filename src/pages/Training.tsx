@@ -15,25 +15,22 @@ const Training = () => {
   useScrollToTop();
   const isMobile = useIsMobile();
   const navigateAndScroll = useNavigateAndScroll();
-  
   const videoId = 'viCyanUDC3s';
-  const { playerRef: player2Ref } = useYouTubePlayer(
-    videoId,
-    {
-      autoplay: 1,
-      mute: 1,
-      loop: 1,
-      playlist: videoId,
-      controls: 0,
-      showinfo: 0,
-      rel: 0,
-      iv_load_policy: 3,
-      modestbranding: 1,
-      playsinline: 1,
-      start: 3
-    }
-  );
-  
+  const {
+    playerRef: player2Ref
+  } = useYouTubePlayer(videoId, {
+    autoplay: 1,
+    mute: 1,
+    loop: 1,
+    playlist: videoId,
+    controls: 0,
+    showinfo: 0,
+    rel: 0,
+    iv_load_policy: 3,
+    modestbranding: 1,
+    playsinline: 1,
+    start: 3
+  });
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
@@ -213,9 +210,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
-                    Nyt år, nye mål! Vi starter 2026 med en energisk session i Dyrehaven. Mødested er Peter Lieps Vej 5.
-                  </p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Nyt år, nye mål! Vi starter 2026 med en mørk session i Dyrehaven, så husk pandelampen. Vi satser på en hyggelig tur på 10-12 km. Vi mødes Den Røde Port, som vi plejer. </p>
                   <button onClick={() => handleSessionRegistration("Træningssession #3", "Tirsdag d. 13. januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
@@ -228,11 +223,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
 
       {/* Landscape Images Section */}
       <section className="relative py-16 md:py-20 overflow-hidden">
-        <img 
-          src="/lovable-uploads/trail-runner-mountain-peak.jpg" 
-          alt="Trail runner on mountain peak" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src="/lovable-uploads/trail-runner-mountain-peak.jpg" alt="Trail runner on mountain peak" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-white/70" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
