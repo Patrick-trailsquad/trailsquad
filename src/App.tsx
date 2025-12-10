@@ -19,7 +19,7 @@ import NorwegianFjords from "./pages/destinations/NorwegianFjords";
 import Transylvania100 from "./pages/destinations/Transylvania100";
 import MontBlanc from "./pages/destinations/MontBlanc";
 import BlackForest from "./pages/destinations/BlackForest";
-import Vesuvio from "./pages/destinations/Vesuvio";
+
 import RibeiraSacra from "./pages/destinations/RibeiraSacra";
 import RibeiraSacra2026 from "./pages/destinations/RibeiraSacra2026";
 import Dolomites from "./pages/destinations/Dolomites";
@@ -61,7 +61,7 @@ const App = () => (
             {/* Destination routes */}
             <Route path="/destinations/gtc" element={<SwissAlps />} />
             {/* <Route path="/destinations/miut" element={<MIUT />} /> */}
-            <Route path="/destinations/vesuvio" element={<Vesuvio />} />
+            
             <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
             <Route path="/destinations/transylvania" element={<Transylvania100 />} />
             <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
