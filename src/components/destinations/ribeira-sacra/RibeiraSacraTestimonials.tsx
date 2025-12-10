@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
-import AddTestimonialModal from "../miut/AddTestimonialModal";
+import AddTestimonialModal from "../shared/AddTestimonialModal";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 interface Testimonial {
