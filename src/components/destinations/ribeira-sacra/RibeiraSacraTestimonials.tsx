@@ -309,7 +309,7 @@ const RibeiraSacraTestimonials = () => {
         isOpen={isModalOpen} 
         onClose={handleModalClose} 
         destination="Ribeira Sacra" 
-        distances={["21km", "42km", "75km"]}
+        distances={["48km"]}
       />
     </section>
   );
