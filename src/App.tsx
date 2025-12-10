@@ -13,19 +13,9 @@ import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
-import SwissAlps from "./pages/destinations/SwissAlps";
-// import MIUT from "./pages/destinations/MIUT";
-import NorwegianFjords from "./pages/destinations/NorwegianFjords";
-import Transylvania100 from "./pages/destinations/Transylvania100";
-import MontBlanc from "./pages/destinations/MontBlanc";
-import BlackForest from "./pages/destinations/BlackForest";
-
 import RibeiraSacra from "./pages/destinations/RibeiraSacra";
 import RibeiraSacra2026 from "./pages/destinations/RibeiraSacra2026";
-import Dolomites from "./pages/destinations/Dolomites";
-import ChiantiTrail from "./pages/destinations/ChiantiTrail";
-import ZugspitzUltratrail from "./pages/destinations/ZugspitzUltratrail";
-import Istria100 from "./pages/destinations/Istria100";
+import Transylvania100 from "./pages/destinations/Transylvania100";
 import InfiniteTrails from "./pages/destinations/InfiniteTrails";
 import SwissAlps100 from "./pages/destinations/SwissAlps100";
 import LaBoucleDeLEtoile from "./pages/destinations/LaBoucleDeLEtoile";
@@ -59,24 +49,14 @@ const App = () => (
             />
             
             {/* Destination routes */}
-            <Route path="/destinations/gtc" element={<SwissAlps />} />
-            {/* <Route path="/destinations/miut" element={<MIUT />} /> */}
-            
-            <Route path="/destinations/norwegian-fjords" element={<NorwegianFjords />} />
-            <Route path="/destinations/transylvania" element={<Transylvania100 />} />
-            <Route path="/destinations/mont-blanc" element={<MontBlanc />} />
-            <Route path="/destinations/black-forest" element={<BlackForest />} />
             <Route path="/destinations/ribeira-sacra" element={<RibeiraSacra />} />
             <Route path="/destinations/ribeira-sacra-2026" element={<RibeiraSacra2026 />} />
-            <Route path="/destinations/dolomites" element={<Dolomites />} />
-            <Route path="/destinations/chianti" element={<ChiantiTrail />} />
-          <Route path="/destinations/zugspitz" element={<ZugspitzUltratrail />} />
-          <Route path="/destinations/istria" element={<Istria100 />} />
-          <Route path="/destinations/infinite-trails" element={<InfiniteTrails />} />
-          <Route path="/destinations/swiss-alps-100" element={<SwissAlps100 />} />
-          <Route path="/destinations/la-boucle-de-l-etoile" element={<LaBoucleDeLEtoile />} />
-          <Route path="/trailfox" element={<TrailFox />} />
-          <Route path="*" element={<NotFound />} />
+            <Route path="/destinations/transylvania" element={<Transylvania100 />} />
+            <Route path="/destinations/infinite-trails" element={<InfiniteTrails />} />
+            <Route path="/destinations/swiss-alps-100" element={<SwissAlps100 />} />
+            <Route path="/destinations/la-boucle-de-l-etoile" element={<LaBoucleDeLEtoile />} />
+            <Route path="/trailfox" element={<TrailFox />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
       </BrowserRouter>
