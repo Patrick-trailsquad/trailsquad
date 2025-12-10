@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Star, Upload, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -12,9 +13,10 @@ interface AddTestimonialModalProps {
   isOpen: boolean;
   onClose: () => void;
   destination: string;
+  distances: string[];
 }
 
-const AddTestimonialModal = ({ isOpen, onClose, destination }: AddTestimonialModalProps) => {
+const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTestimonialModalProps) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [rating, setRating] = useState(5);
@@ -66,6 +68,15 @@ const AddTestimonialModal = ({ isOpen, onClose, destination }: AddTestimonialMod
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!distance) {
+      toast({
+        title: "Vælg venligst en distance",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -143,13 +154,18 @@ const AddTestimonialModal = ({ isOpen, onClose, destination }: AddTestimonialMod
 
           <div>
             <Label htmlFor="distance">Distance *</Label>
-            <Input
-              id="distance"
-              value={distance}
-              onChange={(e) => setDistance(e.target.value)}
-              required
-              placeholder="F.eks. 42km"
-            />
+            <Select value={distance} onValueChange={setDistance} required>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Vælg distance" />
+              </SelectTrigger>
+              <SelectContent className="bg-background">
+                {distances.map((d) => (
+                  <SelectItem key={d} value={d}>
+                    {d}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           <div>

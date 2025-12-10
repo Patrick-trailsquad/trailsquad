@@ -305,7 +305,12 @@ const RibeiraSacraTestimonials = () => {
         )}
       </div>
 
-      <AddTestimonialModal isOpen={isModalOpen} onClose={handleModalClose} destination="Ribeira Sacra" />
+      <AddTestimonialModal 
+        isOpen={isModalOpen} 
+        onClose={handleModalClose} 
+        destination="Ribeira Sacra" 
+        distances={["21km", "42km", "75km"]}
+      />
     </section>
   );
 };
