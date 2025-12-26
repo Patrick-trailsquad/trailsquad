@@ -1,7 +1,6 @@
 
 import Menu from "../components/Menu";
 import HeroSection from "../components/home/HeroSection";
-import VoucherCTA from "../components/about/VoucherCTA";
 import VideoThumbnailBanner from "../components/home/VideoThumbnailBanner";
 import VideoThumbnailBannerReverse from "../components/home/VideoThumbnailBannerReverse";
 import FeaturesSection from "../components/home/FeaturesSection";
@@ -19,7 +18,6 @@ const Index = () => {
     <div className="min-h-screen bg-stone">
       <Menu />
       <HeroSection />
-      <VoucherCTA />
       <VideoThumbnailBanner />
       <VideoThumbnailBannerReverse />
       <FeaturesSection />
