@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
 const TransylvaniaScrollingBanner = () => {
-  const text =
-    "Husk at sikre dig din billet - vi lukker for billetsalget i løbet af december";
+const text =
+    "Husk at sikre dig din billet - vi lukker for billetsalget i løbet af januar";
   const trackRef = useRef<HTMLDivElement | null>(null);
   const isHoveredRef = useRef(false);
 
