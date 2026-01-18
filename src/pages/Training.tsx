@@ -165,7 +165,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-01-13">13 januar 2026</time>
+                      <span className="font-semibold">17 februar 2026</span> <time dateTime="2026-01-13">13 januar 2026</time>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Mødetid:</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
@@ -180,7 +180,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Nyt år, nye mål! Vi starter 2026 med en mørk session i Dyrehaven, så husk pandelampen. Vi satser på en hyggelig tur på 10-12 km. Vi mødes Den Røde Port, som vi plejer. </p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Update</p>
                   <button onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
@@ -198,22 +198,22 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-01-13">13 januar 2026</time>
+                      <span className="font-semibold">28 februar 2026</span> <time dateTime="2026-01-13">13 januar 2026</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
+                      <span className="font-semibold">kl 9.00</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-01-13T19:30:00+01:00">19.30</time>
+                      <span className="font-semibold">12.00</span> <time dateTime="2026-01-13T19:30:00+01:00">19.30</time>
                     </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
+                    <p className="flex items-center gap-2">Sted:
+Furesøbad, Værløse<span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Nyt år, nye mål! Vi starter 2026 med en mørk session i Dyrehaven, så husk pandelampen. Vi satser på en hyggelig tur på 10-12 km. Vi mødes Den Røde Port, som vi plejer. </p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">update</p>
                   <button onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
