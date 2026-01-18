@@ -180,7 +180,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Nyt år, nye mål! Vi starter 2026 med en mørk session i Dyrehaven, så husk pandelampen. Vi satser på en hyggelig tur på 10-12 km. Vi mødes Den Røde Port, som vi plejer. </p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi gentager succesen med at løbe i mørket. Find din pandelampe frem, og vær med i Dyrehaven, og vi i roligt tempo løber 8-10 km, finder et par bakker at bestige, og ellers bare hygger os i vinterkulden.</p>
                   <button onClick={() => handleSessionRegistration("Træningssession #4", "17 februar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
