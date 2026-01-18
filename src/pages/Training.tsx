@@ -133,7 +133,7 @@ Med mange års erfaring inden for eventafvikling, og med tusindvis af loyale rac
 
       {/* Concept Explanation */}
       <section className="py-16 px-0 md:px-6 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-left mb-12">
             <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">Månedlige træningssessions!
 Skal du med?</h2>
