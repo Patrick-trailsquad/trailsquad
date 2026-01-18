@@ -52,6 +52,24 @@ export const TrainingRegistrationModal = ({
       const validated = registrationSchema.parse(formData);
       setLoading(true);
 
+      // Helper function to determine if a date is in daylight saving time (CEST)
+      // In Denmark, DST starts last Sunday of March and ends last Sunday of October
+      const isDaylightSavingTime = (year: number, month: number, day: number): boolean => {
+        // Create date object for the given date
+        const date = new Date(year, month - 1, day);
+        
+        // Find last Sunday of March
+        const marchLast = new Date(year, 2, 31);
+        while (marchLast.getDay() !== 0) marchLast.setDate(marchLast.getDate() - 1);
+        
+        // Find last Sunday of October
+        const octoberLast = new Date(year, 9, 31);
+        while (octoberLast.getDay() !== 0) octoberLast.setDate(octoberLast.getDate() - 1);
+        
+        // DST is active if date is between last Sunday of March and last Sunday of October
+        return date >= marchLast && date < octoberLast;
+      };
+
       // Send to Zapier webhook
       const webhookData = {
         fullName: validated.fullName,
@@ -63,13 +81,15 @@ export const TrainingRegistrationModal = ({
           const monthMatch = sessionDate.match(/\s(\w+)\s/);
           const monthNames: Record<string, string> = { januar: '01', februar: '02', marts: '03', april: '04', maj: '05', juni: '06', juli: '07', august: '08', september: '09', oktober: '10', november: '11', december: '12' };
           const month = monthNames[monthMatch?.[1]?.toLowerCase() || ''] || '01';
-          return `${year}-${month}-${day.padStart(2, '0')}T${time}:00+01:00`;
+          const offset = isDaylightSavingTime(parseInt(year), parseInt(month), parseInt(day)) ? '+02:00' : '+01:00';
+          return `${year}-${month}-${day.padStart(2, '0')}T${time}:00${offset}`;
         }),
         sessionEndTime: `${sessionDate} ${sessionEndTime}`.replace(/^(\d+)\s+\w+\s+(\d+)\s+(\d+:\d+)$/, (_, day, year, time) => {
           const monthMatch = sessionDate.match(/\s(\w+)\s/);
           const monthNames: Record<string, string> = { januar: '01', februar: '02', marts: '03', april: '04', maj: '05', juni: '06', juli: '07', august: '08', september: '09', oktober: '10', november: '11', december: '12' };
           const month = monthNames[monthMatch?.[1]?.toLowerCase() || ''] || '01';
-          return `${year}-${month}-${day.padStart(2, '0')}T${time}:00+01:00`;
+          const offset = isDaylightSavingTime(parseInt(year), parseInt(month), parseInt(day)) ? '+02:00' : '+01:00';
+          return `${year}-${month}-${day.padStart(2, '0')}T${time}:00${offset}`;
         }),
         sessionLocation,
         sessionMeetingPlace,
