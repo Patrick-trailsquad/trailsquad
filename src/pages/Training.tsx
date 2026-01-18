@@ -155,23 +155,23 @@ Så vil vores trail træningssessions være noget for dig!</p>
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 3 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => handleSessionRegistration("Træningssession #4", "17 februar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={trainingSession4Image} alt="Training Session 4" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #4 [februar]
-                  <br />[januar]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #4
+                  <br />[februar]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-01-13">13 januar 2026</time>
+                      <span className="font-semibold">Dato:</span> <time dateTime="2026-02-17">17 februar 2026</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
+                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-02-17T18:00:00+01:00">kl 18.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-01-13T19:30:00+01:00">19.30</time>
+                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-02-17T19:30:00+01:00">19.30</time>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
@@ -181,73 +181,73 @@ Så vil vores trail træningssessions være noget for dig!</p>
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Nyt år, nye mål! Vi starter 2026 med en mørk session i Dyrehaven, så husk pandelampen. Vi satser på en hyggelig tur på 10-12 km. Vi mødes Den Røde Port, som vi plejer. </p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button onClick={() => handleSessionRegistration("Træningssession #4", "17 februar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
               </div>
 
               {/* Session 3 - Copy 2 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={tourDeFuresoenImage} alt="Tour de Furesøen" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #5 'Tour de Furesøen'
-                  <br />[januar]</h3>
+                  <br />[februar]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-01-13">13 januar 2026</time>
+                      <span className="font-semibold">Dato:</span> <time dateTime="2026-02-28">28 februar 2026</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
+                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-02-28T09:00:00+01:00">kl 9.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-01-13T19:30:00+01:00">19.30</time>
+                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-02-28T12:00:00+01:00">12.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
+                      <span className="font-semibold">Sted:</span> Furesøbad, Værløse
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
+                      <span className="font-semibold">Mødested:</span> Furesøbad
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Nyt år, nye mål! Vi starter 2026 med en mørk session i Dyrehaven, så husk pandelampen. Vi satser på en hyggelig tur på 10-12 km. Vi mødes Den Røde Port, som vi plejer. </p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
               </div>
 
               {/* Session 3 - Copy 3 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => handleSessionRegistration("Træningssession #6", "7 april 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={trainingSession5Image} alt="Training Session 5" className="w-full h-full object-cover" />
+                  <img src={trainingSession5Image} alt="Training Session 6" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #6 [april]
-                  <br />[januar]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #6
+                  <br />[april]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-01-13">13 januar 2026</time>
+                      <span className="font-semibold">Dato:</span> <time dateTime="2026-04-07">7 april 2026</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-01-13T18:00:00+01:00">kl 18.00</time>
+                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-04-07T09:00:00+01:00">kl 9.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-01-13T19:30:00+01:00">19.30</time>
+                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-04-07T12:00:00+01:00">12.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
+                      <span className="font-semibold">Sted:</span> Furesøbad, Værløse
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
+                      <span className="font-semibold">Mødested:</span> Furesøbad
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Nyt år, nye mål! Vi starter 2026 med en mørk session i Dyrehaven, så husk pandelampen. Vi satser på en hyggelig tur på 10-12 km. Vi mødes Den Røde Port, som vi plejer. </p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button onClick={() => handleSessionRegistration("Træningssession #6", "7 april 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
