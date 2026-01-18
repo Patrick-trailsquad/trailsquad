@@ -46,7 +46,7 @@ const destinations = [
     image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
     location: "Transylvania 100, Rumænien",
     date: "Maj 2026",
-    spots: "7 pladser",
+    spots: "5 pladser",
     href: "/destinations/transylvania"
   },
   {
