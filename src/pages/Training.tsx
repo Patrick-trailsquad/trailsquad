@@ -192,8 +192,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={tourDeFuresoenImage} alt="Tour de Furesøen" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Tour de Furesøen
-[februar]<br />[januar]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #5 'Tour de Furesøen'<br />[januar]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
