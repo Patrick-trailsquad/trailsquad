@@ -2,7 +2,7 @@ const LaBoucleDeLEtoileMediaSection = () => {
   return (
     <div className="rounded-xl overflow-hidden aspect-video">
       <iframe
-        src="https://www.youtube.com/embed/YQhY1hbkPoY"
+        src="https://www.youtube.com/embed/7HWXDI4TWB0"
         title="La Boucle de l'Étoile"
         className="w-full h-full"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
