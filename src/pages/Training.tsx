@@ -12,6 +12,7 @@ import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
 import trainingSession4Image from "@/assets/training-session-4.jpg";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
+import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
 const Training = () => {
   usePageTitle('Training');
   useScrollToTop();
@@ -189,7 +190,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               {/* Session 3 - Copy 2 */}
               <div onClick={() => handleSessionRegistration("Træningssession #3", "13 januar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={trainingSession3Image} alt="Training Session 3" className="w-full h-full object-cover" />
+                  <img src={tourDeFuresoenImage} alt="Tour de Furesøen" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Tour de Furesøen
 [februar]<br />[januar]</h3>
