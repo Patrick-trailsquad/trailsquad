@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/accordion";
 
 const TransylvaniaPricingSection = () => {
-  const spotsLeft = 7;
+  const spotsLeft = 5;
   const { toast } = useToast();
 
   return (
