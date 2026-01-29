@@ -116,7 +116,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
                     }
                     
                     return (
-                      <div className="w-20 h-6 bg-muted rounded-full overflow-hidden relative">
+                      <div className="w-20 h-6 bg-gray-200 rounded-full overflow-hidden relative">
                         <div 
                           className={`h-full transition-all ${bgColor}`}
                           style={{ width: `${progress}%` }}
