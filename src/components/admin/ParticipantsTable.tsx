@@ -104,7 +104,6 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
                   {(() => {
                     const progress = getProgressPercentage(participant);
                     let bgColor = 'bg-red-500';
-                    let textColor = 'text-white';
                     
                     if (progress === 100) {
                       bgColor = 'bg-green-500';
@@ -112,7 +111,6 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
                       bgColor = 'bg-green-400';
                     } else if (progress >= 50) {
                       bgColor = 'bg-yellow-500';
-                      textColor = 'text-black';
                     } else if (progress >= 25) {
                       bgColor = 'bg-orange-500';
                     }
@@ -123,7 +121,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
                           className={`h-full transition-all ${bgColor}`}
                           style={{ width: `${progress}%` }}
                         />
-                        <div className={`absolute inset-0 flex items-center justify-center text-xs font-medium ${textColor}`}>
+                        <div className="absolute inset-0 flex items-center justify-center text-xs font-medium text-foreground">
                           {progress}%
                         </div>
                       </div>
