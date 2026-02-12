@@ -211,7 +211,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Mødested:</span> Furesøbad
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi skal have nogle kilometer i benene og Furesøens bakker er den perfekte lokation til dette. Der er kun 22 km rundt, men da vi skal op på minimum 25 km finder vi de stejleste steder og løber dem mere end én gang. Du skal være komfortabel med at løbe i pace 5:30-6:00, hvis du vil med på denne tur. Der vil være aid station efter 15 km samt pickup fra KBH (LøberLab på Hillerødgade).</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow"><p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi skal have nogle kilometer i benene og Furesøens bakker er den perfekte lokation til dette. Der er kun 22 km rundt, men da vi skal op på minimum 25 km finder vi de stejleste steder og løber dem mere end én gang. Du skal være komfortabel med at løbe i pace 5:30-6:00, hvis du vil med på denne tur.<br /><br />Der vil være aid station efter 15 km samt pickup fra KBH (LøberLab på Hillerødgade).</p></p>
                   <button onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
