@@ -25,7 +25,7 @@ const Transylvania100 = () => {
       <Menu />
       <TransylvaniaHero />
       <TransylvaniaInfoBanner />
-      <TransylvaniaScrollingBanner />
+      
       
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
