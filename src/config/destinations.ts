@@ -26,7 +26,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'transylvania',
     name: 'Transylvania 100',
     route: '/destinations/transylvania',
-    status: 'open' as const,
+    status: 'tickets-closed' as const,
     published: true
   },
   {
