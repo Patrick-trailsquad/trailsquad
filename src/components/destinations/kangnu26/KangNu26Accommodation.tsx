@@ -9,9 +9,17 @@ const somaImages = [
   { src: "/lovable-uploads/hotel-soma-4.jpg", alt: "Hotel SØMA - morgenmad" },
 ];
 
+const hheImages = [
+  { src: "/lovable-uploads/hhe-express-1.jpg", alt: "HHE Express - eksteriør om aftenen" },
+  { src: "/lovable-uploads/hhe-express-2.jpg", alt: "HHE Express - værelse" },
+  { src: "/lovable-uploads/hhe-express-3.jpg", alt: "HHE Express - morgenmadsbuffet" },
+  { src: "/lovable-uploads/hhe-express-4.png", alt: "HHE Express - lobby" },
+];
+
 const KangNu26Accommodation = () => {
   const isMobile = useIsMobile();
   const [somaIndex, setSomaIndex] = useState(0);
+  const [hheIndex, setHheIndex] = useState(0);
 
   return (
     <div className="space-y-16">
@@ -77,12 +85,29 @@ const KangNu26Accommodation = () => {
 
         {/* HHE Express */}
         <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-          <div className="h-[300px] overflow-hidden">
+          <div className="h-[300px] overflow-hidden relative group">
             <img 
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" 
-              alt="HHE Express Nuuk" 
-              className="w-full h-full object-cover" 
+              src={hheImages[hheIndex].src} 
+              alt={hheImages[hheIndex].alt} 
+              className="w-full h-full object-cover transition-opacity duration-300" 
             />
+            <button 
+              onClick={() => setHheIndex((prev) => (prev - 1 + hheImages.length) % hheImages.length)}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button 
+              onClick={() => setHheIndex((prev) => (prev + 1) % hheImages.length)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+              {hheImages.map((_, i) => (
+                <button key={i} onClick={() => setHheIndex(i)} className={`w-2 h-2 rounded-full transition-colors ${i === hheIndex ? 'bg-white' : 'bg-white/50'}`} />
+              ))}
+            </div>
           </div>
           <div className="p-6">
             <div className="flex items-center mb-2">
