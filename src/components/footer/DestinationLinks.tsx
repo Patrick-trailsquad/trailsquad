@@ -12,6 +12,7 @@ const destinations = [
   { name: "Infinite Trails 🇦🇹", href: "/destinations/infinite-trails", spots: "13 pladser" },
   { name: "Trail Ribeira Sacra 🇪🇸", href: "/destinations/ribeira-sacra-2026", spots: "Åbner senere" },
   { name: "La Boucle de l'Étoile 🇲🇦", href: "/destinations/la-boucle-de-l-etoile", spots: "Åbner senere" },
+  { name: "KangNu Running Race 🇬🇱", href: "/destinations/kangnu26", spots: "Åbner senere" },
 ];
 
 const DestinationLinks = () => {
