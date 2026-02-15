@@ -49,6 +49,13 @@ export const DESTINATIONS: Destination[] = [
     route: '/destinations/la-boucle-de-l-etoile',
     status: 'upcoming' as const,
     published: true
+  },
+  {
+    id: 'kangnu26',
+    name: 'KangNu Running Race',
+    route: '/destinations/kangnu26',
+    status: 'upcoming' as const,
+    published: true
   }
 ];
 

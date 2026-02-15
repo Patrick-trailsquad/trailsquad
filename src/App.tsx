@@ -19,6 +19,7 @@ import Transylvania100 from "./pages/destinations/Transylvania100";
 import InfiniteTrails from "./pages/destinations/InfiniteTrails";
 import SwissAlps100 from "./pages/destinations/SwissAlps100";
 import LaBoucleDeLEtoile from "./pages/destinations/LaBoucleDeLEtoile";
+import KangNu26 from "./pages/destinations/KangNu26";
 import TrailFox from "./pages/TrailFox";
 
 const queryClient = new QueryClient();
@@ -55,6 +56,7 @@ const App = () => (
             <Route path="/destinations/infinite-trails" element={<InfiniteTrails />} />
             <Route path="/destinations/swiss-alps-100" element={<SwissAlps100 />} />
             <Route path="/destinations/la-boucle-de-l-etoile" element={<LaBoucleDeLEtoile />} />
+            <Route path="/destinations/kangnu26" element={<KangNu26 />} />
             <Route path="/trailfox" element={<TrailFox />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
