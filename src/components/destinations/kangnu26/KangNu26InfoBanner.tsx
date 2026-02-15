@@ -19,7 +19,7 @@ const KangNu26InfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Turens varighed</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">20.-24. august 2026 (5 dage)</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">20.-23. august 2026 (4 dage)</h2>
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
@@ -27,8 +27,8 @@ const KangNu26InfoBanner = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default KangNu26InfoBanner;
