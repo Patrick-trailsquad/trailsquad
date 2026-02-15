@@ -1,9 +1,17 @@
-import React from 'react';
-import { Star, ExternalLink } from "lucide-react";
+import React, { useState } from 'react';
+import { Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { useIsMobile } from "../../../hooks/use-mobile";
+
+const somaImages = [
+  { src: "/lovable-uploads/hotel-soma-1.jpg", alt: "Hotel SØMA - eksteriør om vinteren" },
+  { src: "/lovable-uploads/hotel-soma-2.png", alt: "Hotel SØMA - restaurant" },
+  { src: "/lovable-uploads/hotel-soma-3.jpg", alt: "Hotel SØMA - værelse" },
+  { src: "/lovable-uploads/hotel-soma-4.jpg", alt: "Hotel SØMA - morgenmad" },
+];
 
 const KangNu26Accommodation = () => {
   const isMobile = useIsMobile();
+  const [somaIndex, setSomaIndex] = useState(0);
 
   return (
     <div className="space-y-16">
@@ -12,12 +20,29 @@ const KangNu26Accommodation = () => {
       <div className={`grid ${isMobile ? "grid-cols-1" : "md:grid-cols-2"} gap-8`}>
         {/* Hotel SØMA */}
         <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-          <div className="h-[300px] overflow-hidden">
+          <div className="h-[300px] overflow-hidden relative group">
             <img 
-              src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" 
-              alt="Hotel SØMA Nuuk" 
-              className="w-full h-full object-cover" 
+              src={somaImages[somaIndex].src} 
+              alt={somaImages[somaIndex].alt} 
+              className="w-full h-full object-cover transition-opacity duration-300" 
             />
+            <button 
+              onClick={() => setSomaIndex((prev) => (prev - 1 + somaImages.length) % somaImages.length)}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button 
+              onClick={() => setSomaIndex((prev) => (prev + 1) % somaImages.length)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+              {somaImages.map((_, i) => (
+                <button key={i} onClick={() => setSomaIndex(i)} className={`w-2 h-2 rounded-full transition-colors ${i === somaIndex ? 'bg-white' : 'bg-white/50'}`} />
+              ))}
+            </div>
           </div>
           <div className="p-6">
             <div className="flex items-center mb-2">
