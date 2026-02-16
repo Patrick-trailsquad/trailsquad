@@ -86,7 +86,7 @@ const KangNu26 = () => {
                 Hvalsafari i Nuuk
               </h1>
               <h2 className="text-lg text-charcoal/80 mb-6">
-                Oplev en fascinerende hvalsafari i farvandene omkring Nuuk. Tag med på vores spændende udflugt, hvor du har chancen for at spotte hvaler i deres naturlige habitat. Varighed: 3 timer.
+                Forestil dig at stå på dækket, mens en pukkelhval bryder vandoverfladen kun få meter fra dig. På vores 3-timers hvalsafari sejler vi ud i de dramatiske fjorde omkring Nuuk — et af verdens bedste steder at opleve hvaler tæt på. En uforglemmelig oplevelse, der er inkluderet i din rejse.
               </h2>
             </div>
           </div>
