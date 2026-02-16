@@ -68,18 +68,14 @@ const KangNu26Accommodation = () => {
               museumsområdet og kolonihavnen. Perfekt til dem der ønsker lidt ekstra komfort og luksus.
             </p>
             <div className="bg-stone rounded-lg p-4 mb-4">
-              <div className="flex items-center justify-between mb-1">
-                <p className="font-cabinet font-bold text-charcoal">Single Standard Værelse</p>
-                <p className="font-cabinet font-bold text-terra">12.900 kr.</p>
-              </div>
+              <p className="font-cabinet font-bold text-charcoal mb-1">Single Standard Værelse</p>
+              <p className="font-cabinet text-2xl font-bold text-charcoal mb-2">27.450 kr. <span className="text-sm font-normal text-gray-500">inkl. moms</span></p>
               <p className="text-sm text-gray-600">Et Standard Plus-værelse er ideelt til én gæst og tilbyder en blanding af komfort og praktisk. </p>
               <p className="text-xs font-cabinet font-semibold text-terra mt-2">8 værelser tilbage</p>
             </div>
             <div className="bg-stone rounded-lg p-4 mb-4">
-              <div className="flex items-center justify-between mb-1">
-                <p className="font-cabinet font-bold text-charcoal">Single Superior Værelse</p>
-                <p className="font-cabinet font-bold text-terra">14.500 kr.</p>
-              </div>
+              <p className="font-cabinet font-bold text-charcoal mb-1">Single Superior Værelse</p>
+              <p className="font-cabinet text-2xl font-bold text-charcoal mb-2">31.200 kr. <span className="text-sm font-normal text-gray-500">inkl. moms</span></p>
               <p className="text-sm text-gray-600">Oplev komfort med et strejf af elegance i vores Superior-værelser. Disse værelser er velegnede til par eller solorejsende, der leder efter lidt mere plads. </p>
               <p className="text-xs font-cabinet font-semibold text-terra mt-2">5 værelser tilbage</p>
             </div>
@@ -129,10 +125,8 @@ const KangNu26Accommodation = () => {
               Perfekt til dem der prioriterer beliggenhed og værdi for pengene.
             </p>
             <div className="bg-stone rounded-lg p-4 mb-4">
-              <div className="flex items-center justify-between mb-1">
-                <p className="font-cabinet font-bold text-charcoal">Economy Double Værelse</p>
-                <p className="font-cabinet font-bold text-terra">9.800 kr.</p>
-              </div>
+              <p className="font-cabinet font-bold text-charcoal mb-1">Economy Double Værelse</p>
+              <p className="font-cabinet text-2xl font-bold text-charcoal mb-2">22.800 kr. <span className="text-sm font-normal text-gray-500">inkl. moms</span></p>
               <p className="text-sm text-gray-600">Komfortabelt værelse med grand lit (trekvart-seng), skrivebord, lænestol, fladskærms-TV.</p>
               <p className="text-xs font-cabinet font-semibold text-terra mt-2">12 værelser tilbage</p>
             </div>
