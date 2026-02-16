@@ -121,8 +121,8 @@ const KangNu26Accommodation = () => {
               Perfekt til dem der prioriterer beliggenhed og værdi for pengene.
             </p>
             <div className="bg-stone rounded-lg p-4 mb-4">
-              <p className="font-cabinet font-bold text-charcoal mb-1">Enkeltværelse</p>
-              <p className="text-sm text-gray-600">Pris inkluderet i pakken — se prisoverslag</p>
+              <p className="font-cabinet font-bold text-charcoal mb-1">Economy Double Værelse</p>
+              <p className="text-sm text-gray-600">Komfortabelt værelse med grand lit (trekvart-seng), skrivebord, lænestol, fladskærms-TV.</p>
             </div>
           </div>
         </div>
