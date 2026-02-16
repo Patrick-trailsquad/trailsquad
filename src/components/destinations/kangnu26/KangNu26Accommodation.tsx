@@ -71,15 +71,6 @@ const KangNu26Accommodation = () => {
               <p className="font-cabinet font-bold text-charcoal mb-1">Enkeltværelse</p>
               <p className="text-sm text-gray-600">Pris inkluderet i pakken — se prisoverslag</p>
             </div>
-            <a 
-              href="https://hotelsoma.com/da/nuuk/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center gap-1 text-sm text-terra hover:text-terra/80 transition-colors underline"
-            >
-              Besøg hotellets hjemmeside
-              <ExternalLink className="w-3 h-3" />
-            </a>
           </div>
         </div>
 
@@ -129,15 +120,6 @@ const KangNu26Accommodation = () => {
               <p className="font-cabinet font-bold text-charcoal mb-1">Enkeltværelse</p>
               <p className="text-sm text-gray-600">Pris inkluderet i pakken — se prisoverslag</p>
             </div>
-            <a 
-              href="https://hheexpress.gl/?lang=en" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center gap-1 text-sm text-terra hover:text-terra/80 transition-colors underline"
-            >
-              Besøg hotellets hjemmeside
-              <ExternalLink className="w-3 h-3" />
-            </a>
           </div>
         </div>
       </div>
