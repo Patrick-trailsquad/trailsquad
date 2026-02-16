@@ -70,14 +70,14 @@ const KangNu26Accommodation = () => {
             <div className="bg-stone rounded-lg p-4 mb-4">
               <div className="flex items-center justify-between mb-1">
                 <p className="font-cabinet font-bold text-charcoal">Single Standard Værelse</p>
-                <p className="font-cabinet font-bold text-terra">+ 2.400 kr.</p>
+                <p className="font-cabinet font-bold text-terra">12.900 kr.</p>
               </div>
               <p className="text-sm text-gray-600">Et Standard Plus-værelse er ideelt til én gæst og tilbyder en blanding af komfort og praktisk. </p>
             </div>
             <div className="bg-stone rounded-lg p-4 mb-4">
               <div className="flex items-center justify-between mb-1">
                 <p className="font-cabinet font-bold text-charcoal">Single Superior Værelse</p>
-                <p className="font-cabinet font-bold text-terra">+ 3.800 kr.</p>
+                <p className="font-cabinet font-bold text-terra">14.500 kr.</p>
               </div>
               <p className="text-sm text-gray-600">Oplev komfort med et strejf af elegance i vores Superior-værelser. Disse værelser er velegnede til par eller solorejsende, der leder efter lidt mere plads. </p>
             </div>
@@ -129,7 +129,7 @@ const KangNu26Accommodation = () => {
             <div className="bg-stone rounded-lg p-4 mb-4">
               <div className="flex items-center justify-between mb-1">
                 <p className="font-cabinet font-bold text-charcoal">Economy Double Værelse</p>
-                <p className="font-cabinet font-bold text-terra">+ 1.200 kr.</p>
+                <p className="font-cabinet font-bold text-terra">9.800 kr.</p>
               </div>
               <p className="text-sm text-gray-600">Komfortabelt værelse med grand lit (trekvart-seng), skrivebord, lænestol, fladskærms-TV.</p>
             </div>
