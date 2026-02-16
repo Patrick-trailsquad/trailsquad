@@ -69,7 +69,7 @@ const KangNu26Accommodation = () => {
             </p>
             <div className="bg-stone rounded-lg p-4 mb-4">
               <p className="font-cabinet font-bold text-charcoal mb-1">Single Standard Værelse</p>
-              <p className="text-sm text-gray-600">Pris inkluderet i pakken — se prisoverslag</p>
+              <p className="text-sm text-gray-600">Vores Standard Plus-værelse er ideelt til en eller to gæster og tilbyder en blanding af komfort og praktisk. Dette værelse er et godt valg for dem, der er i byen til både forretning eller fritid, hvilket giver et behageligt og mindeværdigt ophold.</p>
             </div>
             <div className="bg-stone rounded-lg p-4 mb-4">
               <p className="font-cabinet font-bold text-charcoal mb-1">Single Superior Værelse</p>
