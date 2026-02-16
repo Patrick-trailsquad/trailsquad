@@ -40,9 +40,9 @@ const KangNu26IncludedAmenities = ({ className }: KangNu26IncludedAmenitiesProps
       description: "Fællesløb før race og fejring efter"
     },
     {
-      icon: "/lovable-uploads/f7ffb7d1-9191-46d5-ae2a-7b1a4d9c5350.png",
-      title: "Restitution",
-      description: "Trail Squad fysioterapi tilgængelig"
+      icon: "/lovable-uploads/whale-icon.png",
+      title: "Hvalsafari",
+      description: "3-timers hvalsafari i Nuuk fjorden"
     },
     {
       icon: "/lovable-uploads/1c4eceb7-97ce-45ca-b50f-0844491ca83a.png",
