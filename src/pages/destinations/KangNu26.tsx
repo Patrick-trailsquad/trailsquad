@@ -76,9 +76,9 @@ const KangNu26 = () => {
           <div className="flex flex-col md:flex-row-reverse">
             <div className="w-full md:w-1/2 relative">
               <img 
-                src="/lovable-uploads/trail-squad-runners.jpg" 
-                alt="Trail Squad runners" 
-                className="w-full h-full object-cover rounded-xl aspect-square md:aspect-auto"
+                src="/lovable-uploads/hval.webp" 
+                alt="Hval i Grønland" 
+                className="w-full h-full object-cover rounded-xl aspect-square"
               />
             </div>
             <div className="w-full md:w-1/2 bg-stone p-12 flex flex-col justify-center">
