@@ -70,6 +70,29 @@ const KangNu26 = () => {
         <KangNu26IncludedAmenities className="bg-transparent" />
       </div>
       
+      {/* Mirrored Trail Squad Section */}
+      <section className="w-full">
+        <div className="container mx-auto px-2 md:px-6">
+          <div className="flex flex-col md:flex-row-reverse">
+            <div className="w-full md:w-1/2 relative">
+              <img 
+                src="/lovable-uploads/trail-squad-runners.jpg" 
+                alt="Trail Squad runners" 
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
+            <div className="w-full md:w-1/2 bg-stone p-12 flex flex-col justify-center">
+              <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-4">
+                Træning & Forberedelse
+              </h1>
+              <h2 className="text-lg text-charcoal/80 mb-6">
+                Vi hjælper dig med at forberede dig til løbet i Grønland. Du får adgang til træningsprogrammer og fælles træningsløb, så du er klar til den store dag.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
       
       {/* Decorative Lines Section */}
