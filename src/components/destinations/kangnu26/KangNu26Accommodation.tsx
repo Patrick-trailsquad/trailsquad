@@ -126,7 +126,7 @@ const KangNu26Accommodation = () => {
             </p>
             <div className="bg-stone rounded-lg p-4 mb-4">
               <p className="font-cabinet font-bold text-charcoal mb-1">Economy Double Værelse</p>
-              <p className="font-cabinet text-2xl font-bold text-charcoal mb-2">22.800 kr. <span className="text-sm font-normal text-gray-500">inkl. moms</span></p>
+              <p className="font-cabinet text-2xl font-bold text-charcoal mb-2">26.450 kr. <span className="text-sm font-normal text-gray-500">inkl. moms</span></p>
               <p className="text-sm text-gray-600">Komfortabelt værelse med grand lit (trekvart-seng), skrivebord, lænestol, fladskærms-TV.</p>
               <p className="text-xs font-cabinet font-semibold text-terra mt-2">12 værelser tilbage</p>
             </div>
