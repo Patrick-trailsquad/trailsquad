@@ -93,7 +93,7 @@ const KangNu26 = () => {
         </div>
       </section>
 
-      <div className="py-8 md:py-16" />
+      <div className="py-4 md:py-8" />
 
       <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
       
