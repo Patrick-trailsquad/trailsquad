@@ -72,7 +72,7 @@ const KangNu26Accommodation = () => {
               <p className="text-sm text-gray-600">Pris inkluderet i pakken — se prisoverslag</p>
             </div>
             <div className="bg-stone rounded-lg p-4 mb-4">
-              <p className="font-cabinet font-bold text-charcoal mb-1">Single Standard Værelse</p>
+              <p className="font-cabinet font-bold text-charcoal mb-1">Single Superior Værelse</p>
               <p className="text-sm text-gray-600">Pris inkluderet i pakken — se prisoverslag</p>
             </div>
           </div>
