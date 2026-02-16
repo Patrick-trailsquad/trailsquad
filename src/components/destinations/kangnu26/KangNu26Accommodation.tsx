@@ -73,7 +73,7 @@ const KangNu26Accommodation = () => {
             </div>
             <div className="bg-stone rounded-lg p-4 mb-4">
               <p className="font-cabinet font-bold text-charcoal mb-1">Single Superior Værelse</p>
-              <p className="text-sm text-gray-600">Pris inkluderet i pakken — se prisoverslag</p>
+              <p className="text-sm text-gray-600">Oplev komfort med et strejf af elegance i vores Superior-værelser. Disse værelser er velegnede til par eller solorejsende, der leder efter lidt mere plads. Dets enkle og stilfulde design tilbyder et behageligt ophold til både afslapning eller forretning.</p>
             </div>
           </div>
         </div>
