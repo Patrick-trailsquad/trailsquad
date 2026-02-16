@@ -63,7 +63,7 @@ const KangNu26IncludedAmenities = ({ className }: KangNu26IncludedAmenitiesProps
         {customAmenities.map((amenity, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             <div className="mb-3">
-              <img src={amenity.icon} alt={amenity.title} className="w-16 h-16" />
+              <img src={amenity.icon} alt={amenity.title} className={amenity.icon.includes('whale-icon') ? "w-[76px] h-[76px]" : "w-16 h-16"} />
             </div>
             <h4 className="font-cabinet text-lg font-bold mb-1">{amenity.title}</h4>
             <p className="text-sm text-gray-600">{amenity.description}</p>
