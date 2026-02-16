@@ -52,7 +52,7 @@ const KangNu26PricingSection = () => {
       <div className="flex justify-between items-center mb-6">
         <div>
           <p className="text-sm text-gray-600 mb-1">Fra</p>
-          <p className="font-cabinet text-4xl font-bold text-charcoal">26.450 DKK</p>
+          <p className="font-cabinet text-4xl font-bold text-charcoal">26.000 DKK</p>
           <p className="text-sm text-gray-500">inkl. moms</p>
         </div>
         <div className="text-right">
