@@ -102,8 +102,15 @@ const KangNu26 = () => {
         </div>
       </section>
       
+      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
+        <div className={isMobile ? "mb-12" : ""}>
+          <KangNu26Accommodation />
+        </div>
+        <BackToDestinationsButton />
+      </div>
+
       {/* Decorative Lines Section */}
-      <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
+      <div ref={linesRef} className="relative py-12">
         <svg className="absolute top-0 left-0 w-full h-32 md:h-64 z-0" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path d="M0 180 C100 120 150 100 300 80 C350 70 380 120 400 140 C450 100 480 70 500 60 C550 90 580 140 600 160 C650 120 750 60 800 40 C900 70 950 100 1000 120 C1100 90 1150 85 1200 80" fill="none" stroke="#FFDC00" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" style={{
             strokeDasharray: '1200',
@@ -118,13 +125,6 @@ const KangNu26 = () => {
             transition: 'stroke-dashoffset 2.5s ease-out 0.3s'
           }} />
         </svg>
-      </div>
-      
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
-        <div className={isMobile ? "mb-12" : ""}>
-          <KangNu26Accommodation />
-        </div>
-        <BackToDestinationsButton />
       </div>
 
       <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
