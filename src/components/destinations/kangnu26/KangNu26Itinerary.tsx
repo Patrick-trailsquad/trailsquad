@@ -54,7 +54,7 @@ const KangNu26Itinerary = () => {
           4 dage i Grønland
         </h2>
         <p className="text-center text-charcoal/70 text-lg mb-12 max-w-2xl mx-auto">
-          Fra København til Nuuk — en rejse du aldrig glemmer
+          Fra København til Nuuk — et episk trail-eventyr
         </p>
 
         {/* Timeline */}
