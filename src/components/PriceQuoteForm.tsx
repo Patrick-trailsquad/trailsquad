@@ -6,11 +6,17 @@ import { useState } from "react";
 import { Progress } from "./ui/progress";
 import PriceQuotePersonalInfoStep from "./PriceQuotePersonalInfoStep";
 import PriceQuoteTripDetailsStep from "./PriceQuoteTripDetailsStep";
+interface AccommodationOption {
+  value: string;
+  label: string;
+}
+
 interface PriceQuoteFormProps {
   destinationName: string;
   availableDistances: string[];
   maxParticipants?: number;
   depositPercentage?: number;
+  accommodationOptions?: AccommodationOption[];
 }
 interface FormValues {
   fullName: string;
@@ -25,7 +31,8 @@ const PriceQuoteForm = ({
   destinationName,
   availableDistances,
   maxParticipants = 100,
-  depositPercentage = 75
+  depositPercentage = 75,
+  accommodationOptions
 }: PriceQuoteFormProps) => {
   const {
     toast
@@ -126,7 +133,7 @@ const PriceQuoteForm = ({
               </div>
 
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} />}
+                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} accommodationOptions={accommodationOptions} />}
               </form>
             </>}
         </div>
