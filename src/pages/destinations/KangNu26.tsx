@@ -96,8 +96,6 @@ const KangNu26 = () => {
 
       <div className="py-4 md:py-8" />
 
-      <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
-
       <KangNu26Itinerary />
       
       {/* Decorative Lines Section */}
@@ -124,6 +122,9 @@ const KangNu26 = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+
+      <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
+
       <Footer />
     </div>
   );
