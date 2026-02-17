@@ -58,7 +58,7 @@ const KangNu26Itinerary = () => {
         </p>
 
         {/* Timeline */}
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-2xl mx-auto">
           {/* Vertical line */}
           <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-[#FFDC00]" />
 
