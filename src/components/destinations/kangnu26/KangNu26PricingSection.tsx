@@ -1,19 +1,43 @@
-import { useToast } from "@/hooks/use-toast";
 import PriceQuoteForm from "../../PriceQuoteForm";
 import CallMeBackCTA from "../../CallMeBackCTA";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 const KangNu26PricingSection = () => {
   const spotsLeft = 16;
 
   return (
     <div className="bg-white rounded-xl p-8 shadow-lg">
-      <div className="flex justify-between items-center mb-6">
-        <div>
-          <p className="text-sm text-gray-600 mb-1">Fra</p>
-          <p className="font-cabinet text-4xl font-bold text-charcoal">26.000 DKK</p>
-          <p className="text-sm text-gray-500">inkl. moms</p>
+      <div className="grid grid-cols-2 gap-6 mb-6">
+        <div className="col-span-2 space-y-1">
+          <p className="text-sm text-gray-600">Priser fra</p>
+          <p className="font-cabinet text-4xl font-bold text-charcoal">
+            26.000 DKK <span className="text-sm text-gray-500">inkl. moms</span>
+          </p>
+          <Accordion type="single" collapsible className="w-full mt-2">
+            <AccordionItem value="price-details" className="border-none">
+              <AccordionTrigger
+                className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none !flex !items-center !justify-start gap-2"
+                style={{ background: 'none', boxShadow: 'none' }}
+              >
+                Forklar prisvariationer
+              </AccordionTrigger>
+              <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
+                <div>
+                  Prisen for et <b>Economy Double Værelse på HHE Express</b> (3★) er 26.000 DKK per person.<br /><br />
+                  Prisen for et <b>Single Standard Værelse på Hotel SØMA</b> (4★) er 26.550 DKK per person.<br /><br />
+                  Prisen for et <b>Single Superior Værelse på Hotel SØMA</b> (4★) er 27.800 DKK per person.<br /><br />
+                  Moms er inkluderet i alle priser. Scroll ned for at se detaljerne for hvert hotel.
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
-        <div className="text-right">
+        <div className="col-span-2">
           <p className="text-sm text-gray-600 mb-1">Rejsestatus</p>
           <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} pladser tilbage</p>
         </div>
