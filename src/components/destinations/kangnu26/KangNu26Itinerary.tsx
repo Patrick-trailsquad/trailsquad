@@ -21,7 +21,7 @@ const days = [
       { icon: Binoculars, text: "3-timers hvalsafari i Nuuk-fjorden" },
       { icon: Users, text: "Coaching og løbsstrategi med holdet" },
       { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
-      { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd)" },
+      { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
     ],
   },
   {
