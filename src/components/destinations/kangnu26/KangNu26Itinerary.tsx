@@ -64,7 +64,7 @@ const KangNu26Itinerary = () => {
 
           <div className="space-y-10">
             {days.map((day) => (
-              <div key={day.day} className="relative pl-16 md:pl-20 flex items-stretch">
+              <div key={day.day} className="relative pl-16 md:pl-20">
                 {/* Day badge on the line */}
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-12 md:w-16 h-12 md:h-16 rounded-full bg-[#FFDC00] flex flex-col items-center justify-center z-10 shadow-md">
                   <span className="font-cabinet text-[10px] md:text-xs font-bold text-charcoal leading-none">DAG</span>
