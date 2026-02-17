@@ -1,4 +1,4 @@
-import { Plane, Ship, Mountain, UtensilsCrossed, Binoculars, Users, Trophy, MapPin, Coffee } from "lucide-react";
+import { Plane, Ship, Mountain, UtensilsCrossed, Binoculars, Users, Trophy, MapPin, Coffee, ClipboardList } from "lucide-react";
 
 const days = [
   {
@@ -20,7 +20,7 @@ const days = [
       { icon: Binoculars, text: "3-timers hvalsafari i Nuuk-fjorden" },
       { icon: Users, text: "Coaching og løbsstrategi med holdet" },
       { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
-      { icon: UtensilsCrossed, text: "Pre-race briefing" },
+      { icon: ClipboardList, text: "Pre-race briefing" },
     ],
   },
   {
