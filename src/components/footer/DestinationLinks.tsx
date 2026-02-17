@@ -9,7 +9,7 @@ const destinations = [
   { name: "Vesuvio Ultra Marathon 🇮🇹", href: "/destinations/vesuvio", spots: "Åbner senere" },
   { name: "Transylvania 100 🇷🇴", href: "/destinations/transylvania", spots: "Billetsalg lukket" },
   { name: "Swiss Alps 100 🇨🇭", href: "/destinations/swiss-alps-100", spots: "9 pladser" },
-  { name: "KangNu Running Race 🇬🇱", href: "/destinations/kangnu26", spots: "Åbner senere" },
+  { name: "KangNu Running Race 🇬🇱", href: "/destinations/kangnu26", spots: "16 pladser" },
   { name: "Infinite Trails 🇦🇹", href: "/destinations/infinite-trails", spots: "13 pladser" },
   { name: "Trail Ribeira Sacra 🇪🇸", href: "/destinations/ribeira-sacra-2026", spots: "Åbner senere" },
   { name: "La Boucle de l'Étoile 🇲🇦", href: "/destinations/la-boucle-de-l-etoile", spots: "Åbner senere" },
