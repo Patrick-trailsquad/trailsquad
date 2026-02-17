@@ -48,7 +48,7 @@ const PriceQuoteForm = ({
   const form = useForm<FormValues>({
     defaultValues: {
       preferredDistance: availableDistances[0],
-      accommodationPreference: 'single'
+      accommodationPreference: accommodationOptions?.[0]?.value ?? 'single'
     }
   });
   const [isLoading, setIsLoading] = useState(false);
