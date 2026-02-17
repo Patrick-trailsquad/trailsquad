@@ -1,5 +1,7 @@
-import PriceQuoteForm from "../../PriceQuoteForm";
+import PriceQuoteForm, { type FormValues } from "../../PriceQuoteForm";
 import CallMeBackCTA from "../../CallMeBackCTA";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/components/ui/use-toast";
 import {
   Accordion,
   AccordionItem,
@@ -8,7 +10,32 @@ import {
 } from "@/components/ui/accordion";
 
 const KangNu26PricingSection = () => {
+  const { toast } = useToast();
   const spotsLeft = 16;
+
+  const handleStripeCheckout = async (data: FormValues) => {
+    const { data: result, error } = await supabase.functions.invoke('create-kangnu-checkout', {
+      body: {
+        accommodationPreference: data.accommodationPreference,
+        fullName: data.fullName,
+        email: data.email,
+        phone: data.phone,
+        preferredDistance: data.preferredDistance,
+        participants: data.participants,
+      },
+    });
+
+    if (error || !result?.url) {
+      toast({
+        title: "Fejl",
+        description: "Kunne ikke oprette betaling. Prøv venligst igen.",
+        variant: "destructive",
+      });
+      throw new Error("Checkout failed");
+    }
+
+    window.location.href = result.url;
+  };
 
   return (
     <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -46,7 +73,9 @@ const KangNu26PricingSection = () => {
         destinationName="KangNu Running Race"
         availableDistances={["20km", "35km", "56km"]}
         maxParticipants={spotsLeft}
-        customInfoText="Udfyld denne formular, betalt depositum på DKK 10.000, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
+        customInfoText="Udfyld denne formular, betal depositum på DKK 10.000, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
+        onSubmitOverride={handleStripeCheckout}
+        submitButtonLabel="Betal depositum — DKK 10.000"
         accommodationOptions={[
           { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)" },
           { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)" },

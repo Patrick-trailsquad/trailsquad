@@ -18,8 +18,10 @@ interface PriceQuoteFormProps {
   depositPercentage?: number;
   accommodationOptions?: AccommodationOption[];
   customInfoText?: string;
+  onSubmitOverride?: (data: FormValues) => Promise<void>;
+  submitButtonLabel?: string;
 }
-interface FormValues {
+export interface FormValues {
   fullName: string;
   email: string;
   phone: string;
@@ -34,7 +36,9 @@ const PriceQuoteForm = ({
   maxParticipants = 100,
   depositPercentage = 75,
   accommodationOptions,
-  customInfoText
+  customInfoText,
+  onSubmitOverride,
+  submitButtonLabel
 }: PriceQuoteFormProps) => {
   const {
     toast
@@ -47,8 +51,14 @@ const PriceQuoteForm = ({
       accommodationPreference: 'single'
     }
   });
+  const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (data: FormValues) => {
+    setIsLoading(true);
     try {
+      if (onSubmitOverride) {
+        await onSubmitOverride(data);
+        return;
+      }
       const formData = {
         destination_name: destinationName,
         submitted_at: new Date().toISOString(),
@@ -78,6 +88,8 @@ const PriceQuoteForm = ({
         description: "Kunne ikke sende din anmodning. Prøv venligst igen.",
         variant: "destructive"
       });
+    } finally {
+      setIsLoading(false);
     }
   };
   const advanceStep = async () => {
@@ -141,7 +153,7 @@ const PriceQuoteForm = ({
               </div>
 
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} accommodationOptions={accommodationOptions} />}
+                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} accommodationOptions={accommodationOptions} submitButtonLabel={submitButtonLabel} isLoading={isLoading} />}
               </form>
             </>}
         </div>
