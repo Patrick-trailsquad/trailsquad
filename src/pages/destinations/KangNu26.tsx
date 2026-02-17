@@ -13,6 +13,7 @@ import KangNu26IncludedAmenities from "../../components/destinations/kangnu26/Ka
 import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu26Accommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+import KangNu26Itinerary from "../../components/destinations/kangnu26/KangNu26Itinerary";
 
 const KangNu26 = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
@@ -96,6 +97,8 @@ const KangNu26 = () => {
       <div className="py-4 md:py-8" />
 
       <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
+
+      <KangNu26Itinerary />
       
       {/* Decorative Lines Section */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
