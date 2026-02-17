@@ -46,6 +46,7 @@ const KangNu26PricingSection = () => {
         destinationName="KangNu Running Race"
         availableDistances={["20km", "35km", "56km"]}
         maxParticipants={spotsLeft}
+        customInfoText="Udfyld denne formular, betalt depositum på DKK 10.000, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
         accommodationOptions={[
           { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)" },
           { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)" },
