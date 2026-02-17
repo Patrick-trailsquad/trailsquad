@@ -71,32 +71,36 @@ const KangNu26 = () => {
         <KangNu26IncludedAmenities className="bg-transparent" />
       </div>
       
-      {/* Mirrored Trail Squad Section */}
-      <section className="w-full">
-        <div className="container mx-auto px-2 md:px-6">
-          <div className="flex flex-col md:flex-row-reverse">
-            <div className="w-full md:w-1/2 relative">
-              <img 
-                src="/lovable-uploads/hval.webp" 
-                alt="Hval i Grønland" 
-                className="w-full h-full object-cover rounded-xl aspect-square"
-              />
-            </div>
-            <div className="w-full md:w-1/2 bg-stone p-12 flex flex-col justify-center">
-              <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-4">
-                Hvalsafari i Nuuk
-              </h1>
-              <h2 className="text-lg text-charcoal/80 mb-6">
-                Forestil dig at stå på dækket, mens en pukkelhval bryder vandoverfladen kun få meter fra dig. På vores 3-timers hvalsafari sejler vi ud i de dramatiske fjorde omkring Nuuk — et af verdens bedste steder at opleve hvaler tæt på. En uforglemmelig oplevelse, der er inkluderet i din rejse.
-              </h2>
-            </div>
+      {/* Whale Safari + Itinerary with parallax background */}
+      <section className="w-full relative overflow-hidden">
+        {/* Parallax whale background */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{ 
+            backgroundImage: 'url(/lovable-uploads/hval.webp)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
+          {/* Whale safari text - left aligned */}
+          <div className="max-w-xl mb-16 md:mb-24">
+            <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-white mb-4">
+              Hvalsafari i Nuuk
+            </h2>
+            <p className="text-lg text-white/85 leading-relaxed">
+              Forestil dig at stå på dækket, mens en pukkelhval bryder vandoverfladen kun få meter fra dig. På vores 3-timers hvalsafari sejler vi ud i de dramatiske fjorde omkring Nuuk — et af verdens bedste steder at opleve hvaler tæt på. En uforglemmelig oplevelse, der er inkluderet i din rejse.
+            </p>
           </div>
+
+          {/* Itinerary inline */}
+          <KangNu26Itinerary variant="overlay" />
         </div>
       </section>
-
-      <div className="py-4 md:py-8" />
-
-      <KangNu26Itinerary />
       
       {/* Decorative Lines Section */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">

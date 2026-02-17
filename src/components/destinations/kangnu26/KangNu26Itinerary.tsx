@@ -47,14 +47,22 @@ const days = [
   },
 ];
 
-const KangNu26Itinerary = () => {
+interface KangNu26ItineraryProps {
+  variant?: "default" | "overlay";
+}
+
+const KangNu26Itinerary = ({ variant = "default" }: KangNu26ItineraryProps) => {
+  const isOverlay = variant === "overlay";
+  
+  const Wrapper = isOverlay ? "div" : "section";
+  
   return (
-    <section className="w-full py-12 md:py-20">
-      <div className="container mx-auto px-4 md:px-6">
-        <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">
+    <Wrapper className={isOverlay ? "w-full" : "w-full py-12 md:py-20"}>
+      <div className={isOverlay ? "" : "container mx-auto px-4 md:px-6"}>
+        <h2 className={`font-cabinet text-3xl md:text-4xl font-bold text-center mb-4 ${isOverlay ? "text-white" : "text-charcoal"}`}>
           4 dage i Grønland
         </h2>
-        <p className="text-center text-charcoal/70 text-lg mb-12 max-w-2xl mx-auto">
+        <p className={`text-center text-lg mb-12 max-w-2xl mx-auto ${isOverlay ? "text-white/70" : "text-charcoal/70"}`}>
           Fra København til Nuuk — et episk trail-eventyr
         </p>
 
@@ -73,20 +81,20 @@ const KangNu26Itinerary = () => {
                 </div>
 
                 {/* Card */}
-                <div className="bg-white rounded-xl shadow-sm border border-stone-dark/10 p-5 md:p-6">
+                <div className={`rounded-xl shadow-sm border p-5 md:p-6 ${isOverlay ? "bg-white/10 backdrop-blur-md border-white/20" : "bg-white border-stone-dark/10"}`}>
                   <div className="flex items-baseline justify-between mb-3">
-                    <h3 className="font-cabinet text-xl md:text-2xl font-bold text-charcoal">
+                    <h3 className={`font-cabinet text-xl md:text-2xl font-bold ${isOverlay ? "text-white" : "text-charcoal"}`}>
                       {day.title}
                     </h3>
-                    <span className="text-sm text-charcoal/50 font-medium whitespace-nowrap ml-3">
+                    <span className={`text-sm font-medium whitespace-nowrap ml-3 ${isOverlay ? "text-white/50" : "text-charcoal/50"}`}>
                       {day.date}
                     </span>
                   </div>
                   <ul className="space-y-2.5">
                     {day.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <item.icon className="w-4 h-4 text-charcoal/40 flex-shrink-0" />
-                        <span className="text-charcoal/80">{item.text}</span>
+                        <item.icon className={`w-4 h-4 flex-shrink-0 ${isOverlay ? "text-white/50" : "text-charcoal/40"}`} />
+                        <span className={isOverlay ? "text-white/85" : "text-charcoal/80"}>{item.text}</span>
                       </li>
                     ))}
                   </ul>
@@ -96,7 +104,7 @@ const KangNu26Itinerary = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Wrapper>
   );
 };
 
