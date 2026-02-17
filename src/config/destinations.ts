@@ -54,7 +54,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'kangnu26',
     name: 'KangNu Running Race',
     route: '/destinations/kangnu26',
-    status: 'upcoming' as const,
+    status: 'open' as const,
     published: true
   }
 ];
