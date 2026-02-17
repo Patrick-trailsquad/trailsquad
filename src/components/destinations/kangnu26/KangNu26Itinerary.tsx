@@ -19,7 +19,7 @@ const days = [
     items: [
       { icon: Footprints, text: "Shakeout run" },
       { icon: Binoculars, text: "3-timers hvalsafari i Nuuk-fjorden" },
-      { icon: Users, text: "Coaching og løbsstrategi med holdet" },
+      { icon: Users, text: "Løbsstrategi med holdet og afhentning af startnumre" },
       { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
     ],
