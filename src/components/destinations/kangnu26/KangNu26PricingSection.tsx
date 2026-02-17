@@ -46,6 +46,11 @@ const KangNu26PricingSection = () => {
         destinationName="KangNu Running Race"
         availableDistances={["20km", "35km", "56km"]}
         maxParticipants={spotsLeft}
+        accommodationOptions={[
+          { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)" },
+          { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)" },
+          { value: "soma-superior", label: "Hotel SØMA — Single Superior (27.800 kr.)" },
+        ]}
       />
       <div className="mt-4">
         <CallMeBackCTA />

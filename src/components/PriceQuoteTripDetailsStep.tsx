@@ -5,18 +5,31 @@ import { Button } from "./ui/button";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { UseFormReturn } from "react-hook-form";
 
+interface AccommodationOption {
+  value: string;
+  label: string;
+}
+
 interface PriceQuoteTripDetailsStepProps {
   form: UseFormReturn<any>;
   availableDistances: string[];
   onBack: () => void;
   maxParticipants: number;
+  accommodationOptions?: AccommodationOption[];
 }
+
+const defaultAccommodationOptions: AccommodationOption[] = [
+  { value: "single", label: "Enkeltværelser" },
+  { value: "double", label: "Delte dobbeltværelser" },
+  { value: "both", label: "Begge er i orden" },
+];
 
 const PriceQuoteTripDetailsStep = ({
   form,
   availableDistances,
   onBack,
-  maxParticipants
+  maxParticipants,
+  accommodationOptions = defaultAccommodationOptions
 }: PriceQuoteTripDetailsStepProps) => {
   const { register, setValue, watch, formState: { errors } } = form;
 
@@ -92,37 +105,19 @@ const PriceQuoteTripDetailsStep = ({
       <div className="space-y-3">
         <Label>Præference for indkvartering</Label>
         <RadioGroup 
-          defaultValue="single"
+          defaultValue={accommodationOptions[0]?.value}
           value={accommodationPreference}
           onValueChange={(value) => {
             setValue('accommodationPreference', value);
           }}
           className="gap-3"
         >
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="single" id="single-room" />
-            <Label htmlFor="single-room">Enkeltværelser</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem 
-              value="double"
-              id="double-room"
-              disabled={participants === 1}
-            />
-            <Label htmlFor="double-room" className={participants === 1 ? "opacity-50" : ""}>
-              Delte dobbeltværelser
-            </Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem 
-              value="both"
-              id="both-room"
-              disabled={participants === 1}
-            />
-            <Label htmlFor="both-room" className={participants === 1 ? "opacity-50" : ""}>
-              Begge er i orden
-            </Label>
-          </div>
+          {accommodationOptions.map((option) => (
+            <div key={option.value} className="flex items-center space-x-2">
+              <RadioGroupItem value={option.value} id={`room-${option.value}`} />
+              <Label htmlFor={`room-${option.value}`}>{option.label}</Label>
+            </div>
+          ))}
         </RadioGroup>
         {errors.accommodationPreference && (
           <p className="text-red-500 text-sm">Venligst vælg en indkvarteringspræference</p>
