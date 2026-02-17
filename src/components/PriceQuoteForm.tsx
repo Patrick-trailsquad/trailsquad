@@ -125,10 +125,10 @@ const PriceQuoteForm = ({
               <div className="bg-stone/50 rounded-lg p-4 flex items-start gap-3 mb-6">
                 <Info className="w-5 h-5 mt-0.5 text-gray-600 shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-600 mb-2">Udfyld denne formular, og vi vender tilbage til dig med et personligt tilbud på dit eventyr. Vi svarer typisk inden for 48 timer på hverdage.</p>
-                  
-
-
+                  <p className="text-sm text-gray-600 mb-2">Udfyld denne formular, betal depositum på DKK 10.000, og vi vender personligt tilbage til dig inden for 48 timer på hverdage.</p>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Tilbuddet vil indeholde et Stripe-link til at betale {depositPercentage}% af prisen for at bekræfte. Vi vender tilbage 60 dage før afrejse for at indsamle de resterende {100 - depositPercentage}% af prisen.
+                  </p>
                 </div>
               </div>
 
