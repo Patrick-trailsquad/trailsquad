@@ -88,7 +88,7 @@ const KangNu26 = () => {
 
         <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
           {/* Whale safari text - left aligned */}
-          <div className="max-w-xl mb-16 md:mb-24">
+          <div className="max-w-xl mx-auto text-center mb-16 md:mb-24">
             <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-white mb-4">
               Hvalsafari i Nuuk
             </h2>
