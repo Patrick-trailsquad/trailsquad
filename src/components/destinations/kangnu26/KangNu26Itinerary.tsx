@@ -1,4 +1,4 @@
-import { Plane, Ship, Mountain, UtensilsCrossed, Binoculars, Users, Trophy, MapPin, Coffee, ClipboardList } from "lucide-react";
+import { Plane, Ship, Mountain, UtensilsCrossed, Binoculars, Users, Trophy, MapPin, Coffee, ClipboardList, Footprints } from "lucide-react";
 
 const days = [
   {
@@ -17,6 +17,7 @@ const days = [
     date: "21. august",
     title: "Hvalsafari & forberedelse",
     items: [
+      { icon: Footprints, text: "Shakeout run" },
       { icon: Binoculars, text: "3-timers hvalsafari i Nuuk-fjorden" },
       { icon: Users, text: "Coaching og løbsstrategi med holdet" },
       { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
