@@ -19,10 +19,10 @@ const KangNu26 = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
-  
+
   usePageTitle('KangNu Running Race');
   useScrollToTop();
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !isLinesVisible) {
@@ -36,7 +36,7 @@ const KangNu26 = () => {
     }
     return () => observer.disconnect();
   }, [isLinesVisible]);
-  
+
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[80vh]">
@@ -74,16 +74,16 @@ const KangNu26 = () => {
       {/* Whale Safari + Itinerary with parallax background */}
       <section className="w-full relative overflow-hidden">
         {/* Parallax whale background */}
-        <div 
+        <div
           className="absolute inset-0 w-full h-full"
-          style={{ 
+          style={{
             backgroundImage: 'url(/lovable-uploads/hval.webp)',
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
-          }}
-        />
+          }} />
+
         <div className="absolute inset-0 bg-black/50" />
 
         <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
@@ -92,8 +92,8 @@ const KangNu26 = () => {
             <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-white mb-4">
               Hvalsafari i Nuuk
             </h2>
-            <p className="text-lg text-white/85 leading-relaxed">
-              Forestil dig at stå på dækket, mens en pukkelhval bryder vandoverfladen kun få meter fra dig. På vores 3-timers hvalsafari sejler vi ud i de dramatiske fjorde omkring Nuuk — et af verdens bedste steder at opleve hvaler tæt på. En uforglemmelig oplevelse, der er inkluderet i din rejse.
+            <p className="text-lg text-white/85 leading-relaxed">Forestil dig at stå på dækket, mens en pukkelhval bryder vandoverfladen kun få meter fra dig. På vores 3-timers hvalsafari sejler vi ud i de dramatiske fjorde omkring Nuuk — et af verdens bedste steder at opleve hvaler tæt på. 
+Arrangeret af et lokalt adventurebureau - og ja, det er selvfølgelig med i prisen 🫰
             </p>
           </div>
 
@@ -131,8 +131,8 @@ const KangNu26 = () => {
       <div className="pb-16 md:pb-24" />
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default KangNu26;
