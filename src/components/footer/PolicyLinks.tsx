@@ -114,69 +114,151 @@ E-mail: hello@trailsquad.dk`,
     },
     terms: {
       title: "Handelsbetingelser",
-      content: `Når du rejser med Trail Squad, gælder nedenstående betingelser. Vi anbefaler, at du læser dem grundigt igennem, inden du bestiller rejsen.
+      content: `Trail Squad – Handelsbetingelser (Version 2)
 
+Når du rejser med Trail Squad, gælder nedenstående betingelser. Vi anbefaler, at du læser dem grundigt igennem, inden du bestiller.
 
-Bestilling og betaling
-Rejsen kan bestilles via formularen på vores hjemmeside. Efter bestilling modtager du en bekræftelsesmail, som indeholder et betalingslink og/eller betalingsinformation ifm bankoverførsel. Dette er så depositummet kan betales. Det er først når depositummet er betalt, at rejsen er endeligt bekræftet. Det er dit ansvar at kontrollere, at oplysninger om rejsen og prisen stemmer overens med din bestilling. 
+1. Bestilling og betaling
 
+Rejsen bestilles via formularen på vores hjemmeside. Efter bestilling modtager du en bekræftelsesmail med betalingslink eller betalingsoplysninger.
 
-Depositum og restbetaling
-Ved bestilling betales et depositum svarende til 75 % af rejsens pris. Depositum skal indbetales senest 48 timer efter modtagelse af faktura og reservationsmail. Indbetaling af depositum er bindende og bekræfter, at deltagerne har læst og accepteret rejsens vilkår.
-Restbeløbet skal være Trail Squad i hænde senest 60 dage inden afrejse. Hvis betalingen udebliver, kan Trail Squad annullere rejsen, og depositummet refunderes ikke. Ved bestilling senere end 60 dage før afrejse skal hele rejsens pris betales straks.
+Rejsen er først endeligt bekræftet, når depositum er betalt.
 
+Det er kundens ansvar at kontrollere, at rejsens oplysninger og pris stemmer overens med bestillingen.
 
-Ændringer i bestillingen
-Det er som udgangspunkt ikke muligt at ændre i flybilletterne, da disse bestilles samlet for hele gruppen. Hvis en senere hjemrejsedato ønskes, står deltageren selv for hjemrejsen. 
-Hvad angår ændring af distance for det respektive løb, så afhænger det af hvad der er muligt hos den relevante løbsorganisator og forudsat at der er ledige pladser på den ønskede distance. For ændringer opkræves et ekspeditionsgebyr på 250 kr. pr. ændring, samt evt meromkostninger for et evt dyrere løb.  
-Trail Squad kan regulere prisen på rejsen, hvis der sker ændringer i valutakurser, skatter, afgifter eller oliepriser. Prisændringer kan dog ikke foretages senere end 20 dage før afrejse.
+2. Depositum og restbetaling
 
+Ved bestilling betales et depositum på 75 % af rejsens pris.
 
-Afbestilling fra kundens side
-Afbestilling skal ske skriftligt pr. e-mail til hello@trailsquad.dk, og skal være modtaget inden rejsen begynder. Følgende regler gælder:
-Afbestilles rejsen mere end 60 dage før afrejse, mistes depositum
-Afbestilles mindre end 60 dage før afrejse, mistes hele rejsens pris. 
-Manglende fremmøde ved afrejse berettiger ikke til kompensation.
-Bemærk: Ved køb af rejser og pakkerejser gennem Trail Squad gælder der ikke fortrydelsesret i henhold til Forbrugeraftalelovens § 18, stk. 2, nr. 12. Vi anbefaler, at du tegner en rejse- og afbestillingsforsikring.
+Depositum skal være Trail Squad i hænde senest 48 timer efter modtagelse af faktura. Indbetaling er bindende og bekræfter accept af handelsbetingelserne.
 
+Restbeløbet skal være betalt senest 60 dage før afrejse.
 
-Arrangørens ret til aflysning
-Trail Squad kan aflyse en rejse, hvis deltagerantallet 30 dage før afrejse er under 75 % af kapaciteten. Deltagerne vil i så fald blive informeret hurtigst muligt. 
+Ved bestilling senere end 60 dage før afrejse betales hele rejsens pris straks.
 
+Hvis betaling ikke modtages rettidigt, forbeholder Trail Squad sig retten til at annullere rejsen uden refusion af allerede indbetalte beløb.
 
-Ansvarsbegrænsning
-Trail Squad kan ikke gøres ansvarlig for uudnyttede ferieaktiviteter herunder forudbestilt løbsbilletter, udgifter til transport fra lufthavn etc., som skyldes forsinkelser grundet force majeure, vejrlig eller andre omstændigheder, som ligger uden for arrangørens kontrol. 
-Alt ophold og aktiviteter sker på eget ansvar. Trail Squad kan ikke drages til ansvar for personskade eller tingskade påført rejsedeltageren selv eller tredjemand.
+3. Prisændringer
 
+Trail Squad kan regulere prisen ved ændringer i:
+• valutakurser
+• transportpriser (herunder brændstof)
+• skatter eller afgifter
 
-Bagage
-Trail Squad bærer intet ansvar for tabt eller beskadiget bagage. Eventuelle krav rettes til eget forsikringsselskab. Rejsedeltagere bør sikre sig, at de har tilstrækkelig forsikringsdækning.
+Prisændringer kan ikke foretages senere end 20 dage før afrejse.
 
+4. Ændringer i bestillingen
 
-Erstatningspligt
-Trail Squads ansvar følger branchens almindelige regler og normer. Vi dækker ikke, hvis løbsområder lukker pga. sneforhold, laviner, blæst eller myndighedsregler. Ændringer i aktiviteter eller program, som pålægges af lokale myndigheder, giver ikke ret til kompensation.
+Flybilletter bestilles samlet for gruppen og kan som udgangspunkt ikke ændres.
 
+Ønskes ændret hjemrejse eller alternative fly, skal dette arrangeres og betales af deltageren selv.
 
-Særlige ønsker
-Vi bestræber os på at imødekomme særlige ønsker, fx specifik beliggenhed af værelser, men kan ikke garantere dette og påtager os intet ansvar, hvis ønsket ikke kan opfyldes. Kun skriftlige aftaler er bindende.
+Ændring af distance til løbet afhænger af løbsarrangørens muligheder og ledige pladser. Der opkræves et administrationsgebyr på 250 kr. pr. ændring samt eventuelle meromkostninger.
 
+5. Afbestilling fra kundens side
 
-Deltagerens ansvar
-Rejsedeltageren skal følge de anvisninger, der gives af Trail Squad, vores repræsentanter og transportører. Overtrædelse af ordensregler kan medføre bortvisning fra rejsearrangementet, uden kompensation.
-Den rejsende er erstatningsansvarlig efter alm. erstatningsregler for skader forvoldt mod Trail Squad, dennes repræsentanter og andre, som Trail Squad samarbejder med. Alle beboere i en lejlighed/hotelværelse hæfter solidarisk for enhver skade på indkvarteringen. 
-Den rejsende er selv ansvarlig for at have gyldigt pas og evt. visum, og det påhviler den rejsende selv at afholde alle eventuelle udgifter, som skyldes mangler i disse formaliteter. 
-Det er også deltagerens pligt at holde sig orienteret om hjemrejsetidspunkt.
+Afbestilling skal ske skriftligt til hello@trailsquad.dk.
+• Mere end 60 dage før afrejse: depositum refunderes ikke
+• Mindre end 60 dage før afrejse: hele rejsens pris mistes
 
+Manglende fremmøde giver ikke ret til refusion.
 
-Reklamation
-Fejl eller mangler skal straks meddeles til rejselederen eller Trail Squads repræsentant, så problemet kan afhjælpes. Hvis sagen ikke kan løses på stedet, skal skriftlig klage sendes til Trail Squad senest 3 uger efter hjemkomst.
+Der er ikke fortrydelsesret ved køb af rejser jf. Forbrugeraftaleloven § 18, stk. 2, nr. 12.
 
+Vi anbefaler, at du tegner afbestillingsforsikring.
 
-Forsikring
-Vi anbefaler, at du tegner sygeafbestillingsforsikring, så du er dækket ved sygdom hos dig selv eller nærmeste pårørende frem til afrejse.
+6. Arrangørens ret til aflysning
 
+Trail Squad kan aflyse rejsen, hvis deltagerantallet 30 dage før afrejse er under 75 % af kapaciteten.
 
-Rejsegarantifonden
+I dette tilfælde refunderes det fulde indbetalte beløb. Der ydes ikke yderligere kompensation for eventuelle egne udgifter, som deltageren måtte have afholdt.
+
+7. Force majeure og uforudsete hændelser
+
+Trail Squad kan ikke holdes ansvarlig for ændringer, forsinkelser eller aflysninger som følge af forhold uden for vores kontrol (force majeure), herunder:
+• Ekstreme vejrforhold
+• Naturkatastrofer
+• Epidemier eller pandemier
+• Strejker eller arbejdsnedlæggelser
+• Myndighedsrestriktioner
+• Lukning af lufthavne eller luftrum
+• Sikkerhedsmæssige forhold
+• Tekniske eller operationelle problemer hos transportører eller leverandører
+
+Hvis en rejse ikke kan gennemføres som planlagt på grund af force majeure, vil Trail Squad bestræbe sig på at tilbyde alternative løsninger.
+
+Eventuel refusion er begrænset til de beløb, som Trail Squad selv modtager refunderet fra leverandører. Der ydes ikke yderligere kompensation.
+
+8. Transport og fly
+
+Transport udføres af eksterne transportører.
+
+Ved flyforsinkelser, aflysninger eller boardingafvisning skal eventuelle krav rettes direkte til flyselskabet i henhold til gældende regler, herunder EU-forordning 261/2004.
+
+Trail Squad kan ikke holdes ansvarlig for tab, merudgifter eller ændringer som følge af forhold hos transportøren.
+
+9. Løb og aktiviteter
+
+Trail Squad fungerer som formidler af startnumre og aktiviteter.
+
+Hvis et løb:
+• aflyses
+• forkortes
+• ændres
+• flyttes
+• gennemføres under ændrede forhold
+
+ydes der kun refusion, hvis og i det omfang løbsarrangøren refunderer Trail Squad.
+
+Ændringer på grund af vejr, sneforhold, laviner, myndighedskrav eller sikkerhedsmæssige hensyn giver ikke ret til kompensation.
+
+10. Underleverandører
+
+Trail Squad anvender eksterne leverandører såsom flyselskaber, hoteller og løbsarrangører.
+
+Trail Squad kan ikke gøres ansvarlig for fejl, mangler, ændringer eller forsinkelser, der skyldes disse leverandørers forhold.
+
+11. Ansvarsbegrænsning
+
+Deltagelse i rejse og aktiviteter sker på eget ansvar.
+
+Trail Squad kan ikke holdes ansvarlig for personskade, sygdom, tyveri eller tingskade.
+
+Trail Squads samlede ansvar er under alle omstændigheder begrænset til rejsens pris.
+
+Trail Squad er ikke ansvarlig for indirekte tab, herunder tabt arbejdsfortjeneste, mistet ferieudbytte eller andre følgeskader.
+
+12. Bagage og forsikring
+
+Trail Squad bærer intet ansvar for tabt eller beskadiget bagage.
+
+Rejsedeltagere er selv ansvarlige for at have gyldig rejseforsikring samt eventuel afbestillingsforsikring.
+
+13. Deltagerens ansvar
+
+Deltageren skal følge anvisninger fra Trail Squad, repræsentanter og samarbejdspartnere.
+
+Overtrædelse af ordensregler kan medføre bortvisning uden refusion.
+
+Deltageren er erstatningsansvarlig for skader forvoldt på indkvartering eller udstyr.
+
+Deltageren er selv ansvarlig for:
+• gyldigt pas og eventuelt visum
+• at overholde tidsplaner
+• at møde rettidigt til transport og aktiviteter
+
+14. Særlige ønsker
+
+Særlige ønsker forsøges imødekommet, men kan ikke garanteres. Kun skriftlige aftaler er bindende.
+
+15. Reklamation
+
+Eventuelle fejl eller mangler skal straks meddeles til Trail Squad eller rejselederen.
+
+Hvis problemet ikke løses på stedet, skal skriftlig klage sendes senest 3 uger efter hjemkomst.
+
+16. Rejsegarantifonden
+
 Trail Squad er registreret i Rejsegarantifonden (medlemsnr. 3723) og er omfattet af den lovpligtige sikkerhedsordning.`,
     },
   };
