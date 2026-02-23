@@ -41,16 +41,18 @@ const Training = () => {
     meetingTime: "",
     endTime: "",
     location: "",
-    meetingPlace: ""
+    meetingPlace: "",
+    pickupOptions: undefined as { value: string; label: string }[] | undefined
   });
-  const handleSessionRegistration = (title: string, date: string, meetingTime: string, endTime: string, location: string, meetingPlace: string) => {
+  const handleSessionRegistration = (title: string, date: string, meetingTime: string, endTime: string, location: string, meetingPlace: string, pickupOptions?: { value: string; label: string }[]) => {
     setSelectedSession({
       title,
       date,
       meetingTime,
       endTime,
       location,
-      meetingPlace
+      meetingPlace,
+      pickupOptions
     });
     setModalOpen(true);
   };
@@ -187,7 +189,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               </div>
 
               {/* Session 3 - Copy 2 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad", [{ value: "pickup-loberlab", label: "Pickup fra LøberLab (kl. 8:15)" }, { value: "selv-furesoebad", label: "Kommer selv til Furesøbad (kl. 9:00)" }])} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={tourDeFuresoenImage} alt="Tour de Furesøen" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
@@ -212,7 +214,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow"><p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi skal have nogle kilometer i benene og Furesøens bakker er den perfekte lokation til dette. Der er kun 22 km rundt, men da vi skal op på minimum 25 km finder vi de stejleste steder og løber dem mere end én gang. Du skal være komfortabel med at løbe i pace 5:30-6:00, hvis du vil med på denne tur.<br /><br />Der vil være aid station efter 15 km samt pickup fra KBH (LøberLab på Hillerødgade).</p></p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad", [{ value: "pickup-loberlab", label: "Pickup fra LøberLab (kl. 8:15)" }, { value: "selv-furesoebad", label: "Kommer selv til Furesøbad (kl. 9:00)" }])} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
@@ -302,7 +304,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
 
       {/* Current Training Trips */}
       
-      <TrainingRegistrationModal open={modalOpen} onOpenChange={setModalOpen} sessionTitle={selectedSession.title} sessionDate={selectedSession.date} sessionMeetingTime={selectedSession.meetingTime} sessionEndTime={selectedSession.endTime} sessionLocation={selectedSession.location} sessionMeetingPlace={selectedSession.meetingPlace} />
+      <TrainingRegistrationModal open={modalOpen} onOpenChange={setModalOpen} sessionTitle={selectedSession.title} sessionDate={selectedSession.date} sessionMeetingTime={selectedSession.meetingTime} sessionEndTime={selectedSession.endTime} sessionLocation={selectedSession.location} sessionMeetingPlace={selectedSession.meetingPlace} pickupOptions={selectedSession.pickupOptions} />
 
       <Footer />
     </div>;
