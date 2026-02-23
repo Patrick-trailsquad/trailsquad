@@ -170,11 +170,36 @@ export type Database = {
         }
         Relationships: []
       }
+      training_spots: {
+        Row: {
+          created_at: string
+          id: string
+          session_key: string
+          spots_remaining: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          session_key: string
+          spots_remaining?: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          session_key?: string
+          spots_remaining?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
+      decrement_training_spots: {
+        Args: { p_session_key: string }
+        Returns: number
+      }
       is_admin: { Args: never; Returns: boolean }
     }
     Enums: {
