@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { format } from "date-fns";
+import { supabase } from "@/integrations/supabase/client";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +12,7 @@ import { z } from "zod";
 interface PickupOption {
   value: string;
   label: string;
+  spotsKey?: string;
 }
 
 interface TrainingRegistrationModalProps {
@@ -53,6 +55,27 @@ export const TrainingRegistrationModal = ({
   });
 
   const [loading, setLoading] = useState(false);
+  const [spotsRemaining, setSpotsRemaining] = useState<Record<string, number>>({});
+
+  // Fetch remaining spots for pickup options that have spotsKey
+  useEffect(() => {
+    if (!pickupOptions) return;
+    const keys = pickupOptions.filter(o => o.spotsKey).map(o => o.spotsKey!);
+    if (keys.length === 0) return;
+
+    const fetchSpots = async () => {
+      const { data } = await supabase
+        .from('training_spots')
+        .select('session_key, spots_remaining')
+        .in('session_key', keys);
+      if (data) {
+        const map: Record<string, number> = {};
+        data.forEach(row => { map[row.session_key] = row.spots_remaining; });
+        setSpotsRemaining(map);
+      }
+    };
+    fetchSpots();
+  }, [pickupOptions, open]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -115,7 +138,19 @@ export const TrainingRegistrationModal = ({
         });
       } catch (webhookError) {
         console.error("Webhook error:", webhookError);
-        // Continue even if webhook fails
+      }
+
+      // Decrement spots if a pickup option with spotsKey was selected
+      if (validated.pickup && pickupOptions) {
+        const selectedOption = pickupOptions.find(o => o.value === validated.pickup);
+        if (selectedOption?.spotsKey) {
+          const { data } = await supabase.rpc('decrement_training_spots', {
+            p_session_key: selectedOption.spotsKey
+          });
+          if (typeof data === 'number' && data >= 0) {
+            setSpotsRemaining(prev => ({ ...prev, [selectedOption.spotsKey!]: data }));
+          }
+        }
       }
 
       toast.success("Tilmelding gennemført!", {
@@ -222,26 +257,44 @@ export const TrainingRegistrationModal = ({
             <div className="space-y-2">
               <Label>Transport *</Label>
               <div className="space-y-2">
-                {pickupOptions.map((option) => (
-                  <label
-                    key={option.value}
-                    className={`flex items-center gap-3 p-3 rounded-lg border-2 cursor-pointer transition-colors ${
-                      formData.pickup === option.value
-                        ? "border-[#FFDC00] bg-[#FFDC00]/10"
-                        : "border-gray-200 hover:border-gray-300"
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="pickup"
-                      value={option.value}
-                      checked={formData.pickup === option.value}
-                      onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
-                      className="accent-[#FFDC00] w-4 h-4"
-                    />
-                    <span className="text-sm">{option.label}</span>
-                  </label>
-                ))}
+                {pickupOptions.map((option) => {
+                  const spots = option.spotsKey ? spotsRemaining[option.spotsKey] : undefined;
+                  const isFull = spots !== undefined && spots <= 0;
+                  return (
+                    <label
+                      key={option.value}
+                      className={`flex items-center gap-3 p-3 rounded-lg border-2 transition-colors ${
+                        isFull
+                          ? "border-gray-200 bg-gray-100 opacity-60 cursor-not-allowed"
+                          : formData.pickup === option.value
+                            ? "border-[#FFDC00] bg-[#FFDC00]/10 cursor-pointer"
+                            : "border-gray-200 hover:border-gray-300 cursor-pointer"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="pickup"
+                        value={option.value}
+                        checked={formData.pickup === option.value}
+                        onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
+                        disabled={isFull}
+                        className="accent-[#FFDC00] w-4 h-4"
+                      />
+                      <span className="text-sm flex-1">{option.label}</span>
+                      {spots !== undefined && (
+                        <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                          isFull
+                            ? "bg-red-100 text-red-600"
+                            : spots <= 3
+                              ? "bg-amber-100 text-amber-700"
+                              : "bg-green-100 text-green-700"
+                        }`}>
+                          {isFull ? "Fuldt" : `${spots} pladser`}
+                        </span>
+                      )}
+                    </label>
+                  );
+                })}
               </div>
             </div>
           )}
