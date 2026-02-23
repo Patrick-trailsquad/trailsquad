@@ -8,6 +8,11 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { z } from "zod";
 
+interface PickupOption {
+  value: string;
+  label: string;
+}
+
 interface TrainingRegistrationModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -17,12 +22,14 @@ interface TrainingRegistrationModalProps {
   sessionEndTime: string;
   sessionLocation: string;
   sessionMeetingPlace: string;
+  pickupOptions?: PickupOption[];
 }
 
 const registrationSchema = z.object({
   fullName: z.string().trim().min(2, "Navn skal være mindst 2 tegn").max(100),
   email: z.string().trim().email("Ugyldig email-adresse").max(255),
   experience: z.number().min(1).max(5),
+  pickup: z.string().optional(),
   optOutMarketing: z.boolean()
 });
 
@@ -34,12 +41,14 @@ export const TrainingRegistrationModal = ({
   sessionMeetingTime,
   sessionEndTime,
   sessionLocation,
-  sessionMeetingPlace
+  sessionMeetingPlace,
+  pickupOptions
 }: TrainingRegistrationModalProps) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     experience: 3,
+    pickup: "",
     optOutMarketing: true
   });
 
@@ -75,6 +84,7 @@ export const TrainingRegistrationModal = ({
         fullName: validated.fullName,
         email: validated.email,
         experience: validated.experience,
+        pickup: validated.pickup || undefined,
         optOutMarketing: validated.optOutMarketing,
         sessionTitle,
         sessionDate: `${sessionDate} ${sessionMeetingTime}`.replace(/^(\d+)\s+\w+\s+(\d+)\s+(\d+:\d+)$/, (_, day, year, time) => {
@@ -117,6 +127,7 @@ export const TrainingRegistrationModal = ({
         fullName: "",
         email: "",
         experience: 3,
+        pickup: "",
         optOutMarketing: true
       });
     } catch (error) {
@@ -206,6 +217,34 @@ export const TrainingRegistrationModal = ({
               <span>Erfaren</span>
             </div>
           </div>
+
+          {pickupOptions && pickupOptions.length > 0 && (
+            <div className="space-y-2">
+              <Label>Transport *</Label>
+              <div className="space-y-2">
+                {pickupOptions.map((option) => (
+                  <label
+                    key={option.value}
+                    className={`flex items-center gap-3 p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+                      formData.pickup === option.value
+                        ? "border-[#FFDC00] bg-[#FFDC00]/10"
+                        : "border-gray-200 hover:border-gray-300"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="pickup"
+                      value={option.value}
+                      checked={formData.pickup === option.value}
+                      onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
+                      className="accent-[#FFDC00] w-4 h-4"
+                    />
+                    <span className="text-sm">{option.label}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="flex items-start space-x-2 pt-2">
             <Checkbox
