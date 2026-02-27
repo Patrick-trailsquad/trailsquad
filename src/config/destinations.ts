@@ -19,7 +19,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'ribeira-sacra-2026',
     name: 'Ribeira Sacra 2026',
     route: '/destinations/ribeira-sacra-2026',
-    status: 'upcoming' as const,
+    status: 'open' as const,
     published: true
   },
   {
