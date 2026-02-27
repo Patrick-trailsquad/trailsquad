@@ -11,6 +11,7 @@ import RibeiraTripVideoCTA from "../../components/destinations/ribeira-sacra/Rib
 import RibeiraDescription from "../../components/destinations/ribeira-sacra/RibeiraDescription";
 import RibeiraMediaSection2026 from "../../components/destinations/ribeira-sacra-2026/RibeiraMediaSection2026";
 import RibeiraAccommodation from "../../components/destinations/ribeira-sacra/RibeiraAccommodation";
+import RibeiraPricingSection2026 from "../../components/destinations/ribeira-sacra-2026/RibeiraPricingSection2026";
 import { useIsMobile } from "../../hooks/use-mobile";
 
 const RibeiraSacra2026 = () => {
@@ -46,7 +47,10 @@ const RibeiraSacra2026 = () => {
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className="grid md:grid-cols-2 gap-12">
           <RibeiraDescription />
-          <RibeiraMediaSection2026 />
+          <div className="space-y-8">
+            <RibeiraPricingSection2026 />
+            <RibeiraMediaSection2026 />
+          </div>
         </div>
       </div>
       
