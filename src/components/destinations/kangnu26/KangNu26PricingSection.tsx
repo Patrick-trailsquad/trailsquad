@@ -73,7 +73,7 @@ const KangNu26PricingSection = () => {
         destinationName="KangNu Running Race"
         availableDistances={["20km", "35km", "56km"]}
         maxParticipants={spotsLeft}
-        customInfoText="Udfyld denne formular, betal depositum på DKK 10.000, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
+        customInfoText="Udfyld denne formular, betal depositum på DKK 10.000 pr. billet, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
         onSubmitOverride={handleStripeCheckout}
         getSubmitButtonLabel={(participants) => `Betal depositum — DKK ${(10000 * (participants || 1)).toLocaleString('da-DK')}`}
         accommodationOptions={[
