@@ -33,11 +33,16 @@ const VideoThumbnailBanner = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Text Section - 60% */}
-            <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
-              <div className="space-y-2">
-                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">Shakeout... what?</h1>
-                <p className="italic text-charcoal/80 text-base md:text-lg mt-4 max-w-md">
-                  Et shakeout run er en let joggetur på 10–30 minutter, som man løber dagen før eller om morgenen på racedagen for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
+            <div className="lg:col-span-6 flex flex-col items-start justify-center text-left">
+              <div className="space-y-3">
+                <p className="font-inter text-xs md:text-sm tracking-[0.3em] uppercase text-charcoal/50 font-medium">substantiv · løb</p>
+                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">Shakeout Run</h1>
+                <p className="text-lg md:text-xl text-charcoal/55 tracking-wide italic" style={{ fontFamily: 'Georgia, serif' }}>
+                  /ˈʃeɪk.aʊt rʌn/
+                </p>
+                <div className="w-12 h-[2px] bg-charcoal/20" />
+                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">
+                  En let joggetur på 10–30 minutter, som man løber dagen før eller om morgenen på racedagen for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
                 </p>
               </div>
             </div>
