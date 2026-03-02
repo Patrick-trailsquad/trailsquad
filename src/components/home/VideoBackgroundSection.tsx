@@ -71,16 +71,11 @@ const VideoBackgroundSection = () => {
       <div className="relative z-10 flex items-center justify-center h-full px-8">
         <div className="text-center text-white">
           <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Fællestræning op mod race</h1>
-          <h2 className="text-xl md:text-2xl font-inter font-light mb-8">Løbeteknik, udstyr, energi på løbsdagen...  
-Vi har din ryg i forberedelserne op til race day.  
-
-
-Der er fællestræning hver 2-3 uge, og tempoet er således, at alle kan være med. 
-
-
-Vi plejer at løbe i Dyrehaven, Frederiksberg Have, ved Furesøen eller lignende.
-            <br />
-            Vi har din ryg i forberedelserne op til race day
+          <h2 className="text-xl md:text-2xl font-inter font-light mb-8 max-w-2xl mx-auto">
+            Løbeteknik, udstyr, energi på løbsdagen...<br />
+            Vi har din ryg i forberedelserne op til race day.<br /><br />
+            Der er fællestræning hver 2-3 uge, og tempoet er således, at alle kan være med.<br />
+            Vi plejer at løbe i Dyrehaven, Frederiksberg Have, ved Furesøen eller lignende.
           </h2>
         </div>
       </div>
