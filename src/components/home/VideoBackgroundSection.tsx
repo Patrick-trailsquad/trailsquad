@@ -58,6 +58,7 @@ const VideoBackgroundSection = () => {
         }}>
         
         <div
+          key={videoId}
           ref={playerRef}
           className="absolute inset-0 w-full h-full" />
         
