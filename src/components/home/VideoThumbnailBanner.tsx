@@ -35,9 +35,10 @@ const VideoThumbnailBanner = () => {
             {/* Text Section - 60% */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
-                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">Shakeout... what?
-
-                </h1>
+                <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">Shakeout... what?</h1>
+                <p className="italic text-charcoal/80 text-base md:text-lg mt-4 max-w-md">
+                  Et shakeout run er en let joggetur på 10–30 minutter, som man løber dagen før eller om morgenen på racedagen for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
+                </p>
               </div>
             </div>
             
