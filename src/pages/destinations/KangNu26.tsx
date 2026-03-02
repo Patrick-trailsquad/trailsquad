@@ -65,7 +65,14 @@ const KangNu26 = () => {
             <KangNu26MediaSection />
             <KangNu26PricingSection />
         </div>
-        <div className="mt-12">
+        <div className="col-span-full mt-12">
+          <img 
+            src="/lovable-uploads/kangnu-race-map.webp" 
+            alt="KangNu Running Race - rutekort med poster og distancer" 
+            className="w-full rounded-2xl shadow-lg"
+          />
+        </div>
+        <div className="col-span-full mt-8">
           <KangNu26InlineMap />
         </div>
       </div>
