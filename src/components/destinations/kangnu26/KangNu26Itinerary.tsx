@@ -18,7 +18,7 @@ const days = [
     date: "21. august",
     title: "Hvalsafari & forberedelse",
     items: [
-      { icon: Footprints, text: "Shakeout run (Øhh, hvad er et Shakeout Run...? 👇)" },
+      { icon: Footprints, text: "Shakeout run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Binoculars, text: "3-timers hvalsafari i Nuuk-fjorden" },
       { icon: Users, text: "Løbsstrategi med holdet og afhentning af startnumre" },
       { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
@@ -95,7 +95,25 @@ const KangNu26Itinerary = ({ variant = "default" }: KangNu26ItineraryProps) => {
                     {day.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-3">
                         <item.icon className={`w-4 h-4 flex-shrink-0 ${isOverlay ? "text-white/50" : "text-charcoal/40"}`} />
-                        <span className={isOverlay ? "text-white/85" : "text-charcoal/80"}>{item.text}</span>
+                        <span className={isOverlay ? "text-white/85" : "text-charcoal/80"}>
+                          {item.text}
+                          {"linkText" in item && item.linkText && (
+                            <>
+                              {" "}
+                              <a
+                                href={`#${"linkTarget" in item ? item.linkTarget : ""}`}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  const el = document.getElementById("linkTarget" in item ? (item.linkTarget as string) : "");
+                                  el?.scrollIntoView({ behavior: "smooth" });
+                                }}
+                                className={`underline underline-offset-2 cursor-pointer hover:opacity-70 transition-opacity ${isOverlay ? "text-[#FFDC00]" : "text-charcoal/60"}`}
+                              >
+                                {item.linkText as string}
+                              </a>
+                            </>
+                          )}
+                        </span>
                       </li>
                     ))}
                   </ul>
