@@ -9,12 +9,12 @@ const VideoThumbnailBanner = () => {
   const videos = [
     {
       id: 1,
-      thumbnail: "https://img.youtube.com/vi/nGv8ppEnOhk/maxresdefault.jpg",
+      thumbnail: "/lovable-uploads/emil-thumbnail.png",
       videoUrl: "https://www.youtube.com/embed/nGv8ppEnOhk?autoplay=1"
     },
     {
       id: 2,
-      thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/maxresdefault.jpg",
+      thumbnail: "/lovable-uploads/patrick-thumbnail.png",
       videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
     }
   ];
