@@ -67,7 +67,7 @@ const KangNu26 = () => {
         </div>
         <div className="col-span-full mt-12">
           <img 
-            src="/lovable-uploads/kangnu-race-map.webp" 
+            src="/lovable-uploads/kangnu-race-map-detailed.png" 
             alt="KangNu Running Race - rutekort med poster og distancer" 
             className="w-full rounded-2xl shadow-lg"
           />
