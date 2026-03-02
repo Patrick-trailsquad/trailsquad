@@ -1,34 +1,80 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '../../hooks/use-mobile';
-import { useYouTubePlayer } from '../../hooks/useYouTubePlayer';
 import { Button } from '../ui/button';
+
+// Global state to track if API is loaded
+let isAPILoaded = false;
+let isAPILoading = false;
 
 const VideoBackgroundSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
+  const ytPlayerRef = useRef<any>(null);
 
   const videoId = isMobile ? 'wgKpri-37EU' : 'XdgosFbv_wk';
-  const { playerRef } = useYouTubePlayer(
-    videoId,
-    {
-      autoplay: 1,
-      mute: 1,
-      loop: 1,
-      playlist: videoId,
-      controls: 0,
-      showinfo: 0,
-      rel: 0,
-      iv_load_policy: 3,
-      modestbranding: 1,
-      playsinline: 1,
-      start: 4
-    },
-    (event) => {
-      event.target.setPlaybackRate(0.8);
+
+  useEffect(() => {
+    if (!window.YTReadyCallbacks) {
+      window.YTReadyCallbacks = [];
     }
-  );
+
+    const containerId = 'yt-player-' + videoId;
+
+    const initPlayer = () => {
+      const el = document.getElementById(containerId);
+      if (el && window.YT && window.YT.Player) {
+        ytPlayerRef.current = new window.YT.Player(el, {
+          videoId,
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            loop: 1,
+            playlist: videoId,
+            controls: 0,
+            showinfo: 0,
+            rel: 0,
+            iv_load_policy: 3,
+            modestbranding: 1,
+            playsinline: 1,
+            start: 4
+          },
+          events: {
+            onReady: (event: any) => {
+              event.target.setPlaybackRate(0.8);
+            }
+          }
+        });
+      }
+    };
+
+    if (isAPILoaded && window.YT && window.YT.Player) {
+      initPlayer();
+    } else if (!isAPILoading) {
+      isAPILoading = true;
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
+      window.onYouTubeIframeAPIReady = () => {
+        isAPILoaded = true;
+        isAPILoading = false;
+        window.YTReadyCallbacks.forEach((cb: () => void) => cb());
+        window.YTReadyCallbacks = [];
+      };
+      window.YTReadyCallbacks.push(initPlayer);
+    } else {
+      window.YTReadyCallbacks.push(initPlayer);
+    }
+
+    return () => {
+      if (ytPlayerRef.current?.destroy) {
+        try { ytPlayerRef.current.destroy(); } catch (e) {}
+        ytPlayerRef.current = null;
+      }
+    };
+  }, [videoId]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,8 +105,9 @@ const VideoBackgroundSection = () => {
         
         <div
           key={videoId}
-          ref={playerRef}
-          className="absolute inset-0 w-full h-full" />
+          className="absolute inset-0 w-full h-full"
+          dangerouslySetInnerHTML={{ __html: '<div id="yt-player-' + videoId + '" style="width:100%;height:100%"></div>' }}
+        />
         
       </div>
       
