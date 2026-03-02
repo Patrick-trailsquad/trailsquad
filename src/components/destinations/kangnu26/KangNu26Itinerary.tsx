@@ -18,7 +18,7 @@ const days = [
     date: "21. august",
     title: "Hvalsafari & forberedelse",
     items: [
-      { icon: Footprints, text: "Shakeout run" },
+      { icon: Footprints, text: "Shakeout run (Øhh, hvad er et Shakeout Run...? 👇)" },
       { icon: Binoculars, text: "3-timers hvalsafari i Nuuk-fjorden" },
       { icon: Users, text: "Løbsstrategi med holdet og afhentning af startnumre" },
       { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
