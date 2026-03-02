@@ -64,13 +64,6 @@ const destinations = [
     href: "/destinations/swiss-alps-100"
   },
   {
-    image: "/lovable-uploads/kangnu26-hero.jpg",
-    location: "KangNu Running Race, Grønland",
-    date: "August 2026",
-    spots: "16 pladser",
-    href: "/destinations/kangnu26"
-  },
-  {
     image: "/lovable-uploads/infinite-trails.jpg",
     location: "Infinite Trails, Østrig",
     date: "September 2026",
