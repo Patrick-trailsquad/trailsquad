@@ -45,7 +45,7 @@ const VideoBackgroundSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full h-screen md:h-[95vh] overflow-hidden">
+    <section ref={sectionRef} className="relative w-full h-[80vh] md:h-[85vh] overflow-hidden">
       {/* YouTube video background */}
       <div 
         className="absolute inset-0 w-full h-full"
