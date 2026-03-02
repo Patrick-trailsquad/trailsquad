@@ -15,7 +15,7 @@ const VideoThumbnailBanner = () => {
     {
       id: 2,
       thumbnail: "/lovable-uploads/patrick-thumbnail.png",
-      videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
+      videoUrl: "https://www.youtube.com/embed/_zQUIzIeF7s?autoplay=1"
     }
   ];
 
