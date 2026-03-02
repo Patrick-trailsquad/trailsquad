@@ -1,4 +1,3 @@
-
 import Menu from "../components/Menu";
 import HeroSection from "../components/home/HeroSection";
 import VideoThumbnailBanner from "../components/home/VideoThumbnailBanner";
