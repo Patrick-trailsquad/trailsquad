@@ -72,9 +72,7 @@ const KangNu26 = () => {
             className="w-full rounded-2xl shadow-lg"
           />
         </div>
-        <div className="col-span-full mt-8">
-          <KangNu26InlineMap />
-        </div>
+      
       </div>
       </div>
       
