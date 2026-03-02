@@ -32,7 +32,7 @@ const KangNu26Description = () => {
           </p>
           <ul className="text-lg mt-2 space-y-1 list-disc list-inside">
             <li>56 km ultra-løb (med næsten 2.000 højdemeter), officielt certificeret af ITRA</li>
-            <li>35 km trailløb</li>
+            <li>35 km trailløb (med ca 1.200 højdemeter)</li>
             <li>20 km rute som kan løbes eller vandres</li>
           </ul>
         </div>
