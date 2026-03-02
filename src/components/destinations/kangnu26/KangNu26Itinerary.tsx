@@ -107,7 +107,7 @@ const KangNu26Itinerary = ({ variant = "default" }: KangNu26ItineraryProps) => {
                                   const el = document.getElementById("linkTarget" in item ? (item.linkTarget as string) : "");
                                   el?.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className={`cursor-pointer hover:opacity-70 transition-opacity ${isOverlay ? "text-[#FFDC00]" : "text-charcoal/60"}`}
+                                className={`cursor-pointer hover:opacity-70 transition-opacity ${isOverlay ? "text-[#FFE97F]" : "text-charcoal/60"}`}
                               >
                                 {item.linkText as string}
                               </a>
