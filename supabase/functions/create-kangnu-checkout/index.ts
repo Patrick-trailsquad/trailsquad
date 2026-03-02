@@ -33,6 +33,7 @@ serve(async (req) => {
     });
 
     const priceId = PRICE_MAP[accommodationPreference];
+    const qty = Math.max(1, Math.min(Number(participants) || 1, 16));
 
     // Check for existing Stripe customer
     const customers = await stripe.customers.list({ email, limit: 1 });
@@ -44,7 +45,7 @@ serve(async (req) => {
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : email,
-      line_items: [{ price: priceId, quantity: 1 }],
+      line_items: [{ price: priceId, quantity: qty }],
       mode: "payment",
       metadata: {
         destination: "KangNu Running Race",

@@ -20,6 +20,7 @@ interface PriceQuoteFormProps {
   customInfoText?: string;
   onSubmitOverride?: (data: FormValues) => Promise<void>;
   submitButtonLabel?: string;
+  getSubmitButtonLabel?: (participants: number) => string;
 }
 export interface FormValues {
   fullName: string;
@@ -38,7 +39,8 @@ const PriceQuoteForm = ({
   accommodationOptions,
   customInfoText,
   onSubmitOverride,
-  submitButtonLabel
+  submitButtonLabel,
+  getSubmitButtonLabel
 }: PriceQuoteFormProps) => {
   const {
     toast
@@ -153,7 +155,7 @@ const PriceQuoteForm = ({
               </div>
 
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} accommodationOptions={accommodationOptions} submitButtonLabel={submitButtonLabel} isLoading={isLoading} />}
+                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} accommodationOptions={accommodationOptions} submitButtonLabel={submitButtonLabel} getSubmitButtonLabel={getSubmitButtonLabel} isLoading={isLoading} />}
               </form>
             </>}
         </div>
