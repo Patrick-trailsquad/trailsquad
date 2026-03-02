@@ -8,7 +8,7 @@ const VideoBackgroundSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   const videoId = isMobile ? 'wgKpri-37EU' : 'XdgosFbv_wk';
   const { playerRef } = useYouTubePlayer(
     videoId,
@@ -47,7 +47,7 @@ const VideoBackgroundSection = () => {
   return (
     <section ref={sectionRef} className="relative w-full h-[80vh] md:h-[85vh] overflow-hidden">
       {/* YouTube video background */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full"
         style={isMobile ? {
           transform: 'scale(3.5)',
@@ -55,12 +55,12 @@ const VideoBackgroundSection = () => {
         } : {
           transform: `translateY(${scrollY * -0.5}px) scale(1.25)`,
           transformOrigin: 'center center'
-        }}
-      >
-        <div 
-          ref={playerRef} 
-          className="absolute inset-0 w-full h-full"
-        />
+        }}>
+        
+        <div
+          ref={playerRef}
+          className="absolute inset-0 w-full h-full" />
+        
       </div>
       
       {/* Dark overlay for better content visibility */}
@@ -69,9 +69,9 @@ const VideoBackgroundSection = () => {
       {/* Content overlay */}
       <div className="relative z-10 flex items-center justify-center h-full px-8">
         <div className="text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Trail Squad fællestræning</h1>
-          <h2 className="text-xl md:text-2xl font-inter font-light mb-8">
-            Løbeteknik, udstyr, energi på løbsdagen...<br />
+          <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Fællestræning op mod race</h1>
+          <h2 className="text-xl md:text-2xl font-inter font-light mb-8">Løbeteknik, udstyr, energi på løbsdagen...
+Vi har din ryg i forberedelserne op til race day. Vi plejer at løbe i Dyrehaven Frederiksberg Have, CopenHill eller lignende.<br />
             Vi har din ryg i forberedelserne op til race day
           </h2>
           <Link to="/training">
@@ -81,8 +81,8 @@ const VideoBackgroundSection = () => {
           </Link>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default VideoBackgroundSection;
