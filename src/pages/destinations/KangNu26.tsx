@@ -14,6 +14,7 @@ import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 import KangNu26Itinerary from "../../components/destinations/kangnu26/KangNu26Itinerary";
+import KangNu26InlineMap from "../../components/destinations/kangnu26/KangNu26InlineMap";
 
 const KangNu26 = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
@@ -63,8 +64,11 @@ const KangNu26 = () => {
           <div className="space-y-6">
             <KangNu26MediaSection />
             <KangNu26PricingSection />
-          </div>
         </div>
+        <div className="mt-12">
+          <KangNu26InlineMap />
+        </div>
+      </div>
       </div>
       
       <div className="mt-12 mb-20">
