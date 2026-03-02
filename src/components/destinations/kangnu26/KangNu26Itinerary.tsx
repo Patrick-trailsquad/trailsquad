@@ -9,6 +9,7 @@ const days = [
       { icon: Plane, text: "Fly fra København til Nuuk" },
       { icon: MapPin, text: "Transfer fra lufthavn til hotel" },
       { icon: Coffee, text: "Check-in og tid til at udforske Nuuk" },
+      { icon: Binoculars, text: "Valget mellem en 3-timers fisketur i Nuuks fjord ELLER en guidet tour til øen Qoornoq" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd)" },
     ],
   },
