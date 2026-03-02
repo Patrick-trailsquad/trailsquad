@@ -17,6 +17,7 @@ interface PriceQuoteTripDetailsStepProps {
   maxParticipants: number;
   accommodationOptions?: AccommodationOption[];
   submitButtonLabel?: string;
+  getSubmitButtonLabel?: (participants: number) => string;
   isLoading?: boolean;
 }
 
@@ -33,6 +34,7 @@ const PriceQuoteTripDetailsStep = ({
   maxParticipants,
   accommodationOptions = defaultAccommodationOptions,
   submitButtonLabel = "Send Anmodning",
+  getSubmitButtonLabel,
   isLoading = false
 }: PriceQuoteTripDetailsStepProps) => {
   const { register, setValue, watch, formState: { errors } } = form;
@@ -143,7 +145,7 @@ const PriceQuoteTripDetailsStep = ({
           className="flex-1 bg-black text-white hover:bg-black/90"
           disabled={isLoading}
         >
-          {isLoading ? "Vent venligst..." : submitButtonLabel}
+          {isLoading ? "Vent venligst..." : (getSubmitButtonLabel ? getSubmitButtonLabel(participants || 1) : submitButtonLabel)}
         </Button>
       </div>
     </div>
