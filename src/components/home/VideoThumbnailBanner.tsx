@@ -29,7 +29,7 @@ const VideoThumbnailBanner = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Section */}
             <div className="flex flex-col items-start justify-center">
-              <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-[0.95] tracking-tight italic">
+              <h1 className="font-cabinet text-5xl md:text-7xl xl:text-8xl font-black text-charcoal leading-[0.95] tracking-tight">
                 Mød Trail Squad teamet
               </h1>
             </div>
