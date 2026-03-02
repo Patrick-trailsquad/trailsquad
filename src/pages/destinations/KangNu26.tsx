@@ -13,6 +13,7 @@ import KangNu26IncludedAmenities from "../../components/destinations/kangnu26/Ka
 import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu26Accommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 import KangNu26Itinerary from "../../components/destinations/kangnu26/KangNu26Itinerary";
 import KangNu26InlineMap from "../../components/destinations/kangnu26/KangNu26InlineMap";
 
@@ -137,6 +138,7 @@ Arrangeret af et lokalt adventurebureau - og ja, det er selvfølgelig med i pris
       </div>
 
       <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
+      <VideoBackgroundSection />
       <div className="pb-16 md:pb-24" />
 
       <Footer />
