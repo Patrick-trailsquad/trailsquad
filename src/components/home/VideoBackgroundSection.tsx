@@ -75,11 +75,6 @@ const VideoBackgroundSection = () => {
             <br />
             Vi har din ryg i forberedelserne op til race day
           </h2>
-          <Link to="/training">
-            <Button variant="yellow" size="xl">
-              Se fællestræning
-            </Button>
-          </Link>
         </div>
       </div>
     </section>);
