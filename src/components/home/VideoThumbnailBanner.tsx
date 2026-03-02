@@ -25,17 +25,17 @@ const VideoThumbnailBanner = () => {
                   /ˈʃeɪk.aʊt rʌn/
                 </p>
                 <div className="w-12 h-[2px] bg-charcoal/20" />
-                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">
-                  En let joggetur på 10–30 minutter, som man løber dagen før eller om morgenen på racedagen for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
+                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">En let joggetur på 10–30 minutter, som man løber dagen før eller om morgenen på racedagen for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
+
+
+Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯
                 </p>
               </div>
             </div>
             
             {/* Single Video - 40% */}
             <div className="lg:col-span-4 flex justify-center">
-              <div
-                className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
-                onClick={openVideo}>
+              <div className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105" onClick={openVideo}>
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
                   <img
                     src="/placeholder.svg"
