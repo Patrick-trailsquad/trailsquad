@@ -6,7 +6,7 @@ import VideoLightbox from '../VideoLightbox';
 const ShakeoutRunBanner = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
-  const videoUrl = "https://www.youtube.com/embed/nGv8ppEnOhk?autoplay=1";
+  const videoUrl = "https://www.youtube.com/embed/KyPCMpL_5d0?autoplay=1";
 
   const openVideo = () => setSelectedVideo(videoUrl);
   const closeVideo = () => setSelectedVideo(null);
