@@ -31,9 +31,9 @@ const KangNu26Description = () => {
             Alle er velkomne! Der er tre løbsdistancer at vælge imellem:
           </p>
           <ul className="text-lg mt-2 space-y-1 list-disc list-inside">
-            <li>56 km ultra-løb (med næsten 2.000 højdemeter), officielt certificeret af ITRA</li>
-            <li>35 km trailløb (med ca 1.200 højdemeter)</li>
-            <li>20 km rute som kan løbes eller vandres</li>
+            <li>51 km ultra-løb (med næsten 2.000 højdemeter), officielt certificeret af ITRA</li>
+            <li>32 km trailløb (med ca 1.200 højdemeter)</li>
+            <li>15 km rute som kan løbes eller vandres</li>
           </ul>
         </div>
       </div>

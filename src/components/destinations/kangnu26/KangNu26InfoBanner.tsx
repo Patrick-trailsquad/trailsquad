@@ -29,7 +29,7 @@ const KangNu26InfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">20km, 35km, 56km</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">15km, 32km, 51km</h2>
           </div>
         </div>
       </div>
