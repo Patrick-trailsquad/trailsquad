@@ -157,7 +157,8 @@ Så vil vores trail træningssessions være noget for dig!</p>
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 3 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #4", "17 februar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
+                <div className="absolute top-4 right-4 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">Overstået</div>
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={trainingSession4Image} alt="Training Session 4" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
@@ -182,14 +183,15 @@ Så vil vores trail træningssessions være noget for dig!</p>
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi gentager succesen med løb efter solen er gået ned, så find din pandelampe frem, og vær med til hyggetræning i mørket. Vi løber 8-10 km i roligt tempo - det er max hygge og max mørke! Vi mødes ved Den Røde Port ved Klampenborg St.</p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #4", "17 februar 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <button disabled className="w-full bg-gray-400 text-white px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-500 cursor-not-allowed">
+                    Overstået
                   </button>
                 </div>
               </div>
 
               {/* Session 3 - Copy 2 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad", [{ value: "pickup-loberlab", label: "Pickup fra LøberLab (kl. 8:15)", spotsKey: "furesoeen-loberlab-pickup" }, { value: "selv-furesoebad", label: "Kommer selv til Furesøbad (kl. 9:00)" }])} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
+                <div className="absolute top-4 right-4 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">Overstået</div>
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={tourDeFuresoenImage} alt="Tour de Furesøen" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
@@ -213,9 +215,9 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Mødested:</span> Furesøbad
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow"><p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi skal have nogle kilometer i benene og Furesøens bakker er den perfekte lokation til dette. Der er kun 22 km rundt, men da vi skal op på minimum 25 km finder vi de stejleste steder og løber dem mere end én gang. Du skal være komfortabel med at løbe i pace 5:30-6:00, hvis du vil med på denne tur.<br /><br />Der vil være aid station efter 15 km samt pickup fra KBH (LøberLab på Hillerødgade).</p></p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #5 'Tour de Furesøen'", "28 februar 2026", "09:00", "12:00", "Furesøbad, Værløse", "Furesøbad", [{ value: "pickup-loberlab", label: "Pickup fra LøberLab (kl. 8:15)", spotsKey: "furesoeen-loberlab-pickup" }, { value: "selv-furesoebad", label: "Kommer selv til Furesøbad (kl. 9:00)" }])} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi skal have nogle kilometer i benene og Furesøens bakker er den perfekte lokation til dette. Der er kun 22 km rundt, men da vi skal op på minimum 25 km finder vi de stejleste steder og løber dem mere end én gang. Du skal være komfortabel med at løbe i pace 5:30-6:00, hvis du vil med på denne tur.<br /><br />Der vil være aid station efter 15 km samt pickup fra KBH (LøberLab på Hillerødgade).</p>
+                  <button disabled className="w-full bg-gray-400 text-white px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-500 cursor-not-allowed">
+                    Overstået
                   </button>
                 </div>
               </div>
