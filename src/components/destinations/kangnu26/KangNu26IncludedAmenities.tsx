@@ -47,7 +47,7 @@ const KangNu26IncludedAmenities = ({ className }: KangNu26IncludedAmenitiesProps
     {
       icon: "/lovable-uploads/1c4eceb7-97ce-45ca-b50f-0844491ca83a.png",
       title: "Goodie bag",
-      description: "Førsteklasses Trail Squad merchandise"
+      description: "Førsteklasses trail-merchandise"
     },
     {
       icon: "/lovable-uploads/91b914ac-eb58-43d2-b8b9-c464cad202da.png",
