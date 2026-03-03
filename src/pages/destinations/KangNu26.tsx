@@ -1,9 +1,9 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, MousePointerClick } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Footer from "../../components/Footer";
 import KangNu26InfoBanner from "../../components/destinations/kangnu26/KangNu26InfoBanner";
 import KangNu26Description from "../../components/destinations/kangnu26/KangNu26Description";
@@ -20,8 +20,11 @@ import KangNu26InlineMap from "../../components/destinations/kangnu26/KangNu26In
 
 const KangNu26 = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
+  const [isMapActive, setIsMapActive] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+
+  const deactivateMap = useCallback(() => setIsMapActive(false), []);
 
   usePageTitle('KangNu Running Race');
   useScrollToTop();
@@ -68,14 +71,26 @@ const KangNu26 = () => {
             <KangNu26PricingSection />
         </div>
         <div className="col-span-full mt-12">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="rounded-2xl overflow-hidden shadow-lg relative">
+            {!isMapActive && (
+              <div
+                className="absolute inset-0 z-10 cursor-pointer flex items-center justify-center"
+                onClick={() => setIsMapActive(true)}
+              >
+                <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium backdrop-blur-sm">
+                  <MousePointerClick className="w-4 h-4" />
+                  Klik for at interagere med kortet
+                </div>
+              </div>
+            )}
             <iframe
               src="https://app.racedaymap.com/kangnu"
               title="KangNu Running Race - interaktivt rutekort"
-              className="w-full border-0"
+              className={`w-full border-0 ${!isMapActive ? 'pointer-events-none' : ''}`}
               style={{ height: isMobile ? '400px' : '600px' }}
               allowFullScreen
               loading="lazy"
+              onMouseLeave={deactivateMap}
             />
           </div>
         </div>
