@@ -13,20 +13,58 @@ const PRICE_MAP: Record<string, string> = {
   "soma-superior": "price_1T1ndyA7DrFBs7AaOU21nmPs",
 };
 
+// Simple in-memory rate limiting
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 5; // max requests
+const RATE_WINDOW = 60_000; // per minute
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT;
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { accommodationPreference, fullName, email, phone, preferredDistance, participants } = await req.json();
+    // Basic rate limiting by IP
+    const clientIp = req.headers.get("x-forwarded-for") || req.headers.get("cf-connecting-ip") || "unknown";
+    if (isRateLimited(clientIp)) {
+      return new Response(JSON.stringify({ error: "Too many requests. Please try again later." }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 429,
+      });
+    }
 
-    if (!accommodationPreference || !PRICE_MAP[accommodationPreference]) {
+    const body = await req.json();
+    const { accommodationPreference, fullName, email, phone, preferredDistance, participants } = body;
+
+    // Validate accommodation preference
+    if (!accommodationPreference || typeof accommodationPreference !== 'string' || !PRICE_MAP[accommodationPreference]) {
       throw new Error("Invalid accommodation preference");
     }
-    if (!email || !fullName) {
-      throw new Error("Name and email are required");
+
+    // Validate email
+    if (!email || typeof email !== 'string' || email.length > 255 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      throw new Error("Valid email is required");
     }
+
+    // Validate name
+    if (!fullName || typeof fullName !== 'string' || fullName.length > 200 || fullName.trim().length === 0) {
+      throw new Error("Valid name is required");
+    }
+
+    // Sanitize optional fields
+    const sanitizedPhone = typeof phone === 'string' ? phone.slice(0, 30) : "";
+    const sanitizedDistance = typeof preferredDistance === 'string' ? preferredDistance.slice(0, 50) : "";
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2025-08-27.basil",
@@ -35,11 +73,16 @@ serve(async (req) => {
     const priceId = PRICE_MAP[accommodationPreference];
     const qty = Math.max(1, Math.min(Number(participants) || 1, 16));
 
-    // Check for existing Stripe customer
     const customers = await stripe.customers.list({ email, limit: 1 });
     let customerId: string | undefined;
     if (customers.data.length > 0) {
       customerId = customers.data[0].id;
+    }
+
+    // Validate origin header
+    const origin = req.headers.get("origin");
+    if (!origin) {
+      throw new Error("Missing origin header");
     }
 
     const session = await stripe.checkout.sessions.create({
@@ -49,14 +92,14 @@ serve(async (req) => {
       mode: "payment",
       metadata: {
         destination: "KangNu Running Race",
-        full_name: fullName,
-        phone: phone || "",
-        preferred_distance: preferredDistance || "",
-        participants: String(participants || 1),
+        full_name: fullName.trim().slice(0, 200),
+        phone: sanitizedPhone,
+        preferred_distance: sanitizedDistance,
+        participants: String(qty),
         accommodation: accommodationPreference,
       },
-      success_url: `${req.headers.get("origin")}/destinations/kangnu26?payment=success`,
-      cancel_url: `${req.headers.get("origin")}/destinations/kangnu26?payment=cancelled`,
+      success_url: `${origin}/destinations/kangnu26?payment=success`,
+      cancel_url: `${origin}/destinations/kangnu26?payment=cancelled`,
     });
 
     return new Response(JSON.stringify({ url: session.url }), {
@@ -66,7 +109,7 @@ serve(async (req) => {
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
     console.error("Error creating checkout session:", message);
-    return new Response(JSON.stringify({ error: message }), {
+    return new Response(JSON.stringify({ error: "Failed to create checkout session" }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     });
