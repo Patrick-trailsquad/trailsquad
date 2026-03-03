@@ -68,11 +68,16 @@ const KangNu26 = () => {
             <KangNu26PricingSection />
         </div>
         <div className="col-span-full mt-12">
-          <img 
-            src="/lovable-uploads/kangnu-race-map-detailed.png" 
-            alt="KangNu Running Race - rutekort med poster og distancer" 
-            className="w-full rounded-2xl shadow-lg"
-          />
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://app.racedaymap.com/kangnu"
+              title="KangNu Running Race - interaktivt rutekort"
+              className="w-full border-0"
+              style={{ height: isMobile ? '400px' : '600px' }}
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
         </div>
       
       </div>
