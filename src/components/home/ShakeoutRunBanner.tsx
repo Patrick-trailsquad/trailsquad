@@ -25,8 +25,9 @@ const ShakeoutRunBanner = () => {
                   /ˈʃeɪk.aʊt rʌn/
                 </p>
                 <div className="w-12 h-[2px] bg-charcoal/20" />
-                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">En let joggetur på 20–30 minutter, som man løber dagen før eller om morgenen på racedagen for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
-                  <br /><br />
+                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">En let joggetur på 20–30 minutter, som man løber dagen før race day for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
+
+Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯<br /><br />
 Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯
                 </p>
               </div>
@@ -36,10 +37,9 @@ Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯
             <div className="lg:col-span-4 flex justify-center">
               <div className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105" onClick={openVideo}>
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
-                    <img
-                    src="/lovable-uploads/shakeout-run-thumbnail.png"
-                    alt="Trail Squad Shakeout Run"
-                    className="w-[26rem] h-80 md:h-96 object-cover transition-transform duration-700" />
+                    <img src="/lovable-uploads/shakeout-run-thumbnail.png"
+                  alt="Trail Squad Shakeout Run"
+                  className="w-[26rem] h-80 md:h-96 object-cover transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
