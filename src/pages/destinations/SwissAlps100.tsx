@@ -1,9 +1,9 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, MousePointerClick } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Footer from "../../components/Footer";
 import SwissAlps100IncludedAmenities from "../../components/destinations/swiss-alps-100/SwissAlps100IncludedAmenities";
 import SwissAlps100InfoBanner from "../../components/destinations/swiss-alps-100/SwissAlps100InfoBanner";
@@ -16,8 +16,11 @@ import TrailSquadSection from "../../components/destinations/shared/TrailSquadSe
 
 const SwissAlps100 = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
+  const [isMapActive, setIsMapActive] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+
+  const deactivateMap = useCallback(() => setIsMapActive(false), []);
   
   usePageTitle('Swiss Alps 100');
   useScrollToTop();
@@ -62,6 +65,30 @@ const SwissAlps100 = () => {
           <div className="space-y-6">
             <SwissAlps100MediaSection />
             <SwissAlps100PricingSection />
+          </div>
+          <div className="col-span-full mt-12">
+            <div className="rounded-2xl overflow-hidden shadow-lg relative">
+              {!isMapActive && (
+                <div
+                  className="absolute inset-0 z-10 cursor-pointer flex items-center justify-center"
+                  onClick={() => setIsMapActive(true)}
+                >
+                  <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium backdrop-blur-sm">
+                    <MousePointerClick className="w-4 h-4" />
+                    Klik for at interagere med kortet
+                  </div>
+                </div>
+              )}
+              <iframe
+                src="https://app.racedaymap.com/swiss-alps-100"
+                title="Swiss Alps 100 - interaktivt rutekort"
+                className={`w-full border-0 ${!isMapActive ? 'pointer-events-none' : ''}`}
+                style={{ height: isMobile ? '400px' : '600px' }}
+                allowFullScreen
+                loading="lazy"
+                onMouseLeave={deactivateMap}
+              />
+            </div>
           </div>
         </div>
       </div>
