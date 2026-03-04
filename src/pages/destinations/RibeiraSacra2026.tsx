@@ -1,5 +1,6 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { MousePointerClick } from 'lucide-react';
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -19,7 +20,9 @@ const RibeiraSacra2026 = () => {
   usePageTitle('Trail Ribeira Sacra 2026');
   const isMobile = useIsMobile();
   const [isLinesVisible, setIsLinesVisible] = useState(false);
+  const [isMapActive, setIsMapActive] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
+  const deactivateMap = useCallback(() => setIsMapActive(false), []);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,6 +53,30 @@ const RibeiraSacra2026 = () => {
           <div className="space-y-8">
             <RibeiraPricingSection2026 />
             <RibeiraMediaSection2026 />
+          </div>
+          <div className="col-span-full mt-12">
+            <div className="rounded-2xl overflow-hidden shadow-lg relative">
+              {!isMapActive && (
+                <div
+                  className="absolute inset-0 z-10 cursor-pointer flex items-center justify-center"
+                  onClick={() => setIsMapActive(true)}
+                >
+                  <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium backdrop-blur-sm">
+                    <MousePointerClick className="w-4 h-4" />
+                    Klik for at interagere med kortet
+                  </div>
+                </div>
+              )}
+              <iframe
+                src="https://app.racedaymap.com/trail-ribeira-sacra"
+                title="Trail Ribeira Sacra - interaktivt rutekort"
+                className={`w-full border-0 ${!isMapActive ? 'pointer-events-none' : ''}`}
+                style={{ height: isMobile ? '400px' : '600px' }}
+                allowFullScreen
+                loading="lazy"
+                onMouseLeave={deactivateMap}
+              />
+            </div>
           </div>
         </div>
       </div>
