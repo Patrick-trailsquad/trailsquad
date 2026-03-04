@@ -105,7 +105,21 @@ const KangNu26Itinerary = ({ variant = "default" }: KangNu26ItineraryProps) => {
                                 onClick={(e) => {
                                   e.preventDefault();
                                   const el = document.getElementById("linkTarget" in item ? (item.linkTarget as string) : "");
-                                  el?.scrollIntoView({ behavior: "smooth" });
+                                  if (!el) return;
+                                  const targetY = el.getBoundingClientRect().top + window.scrollY;
+                                  const startY = window.scrollY;
+                                  const distance = targetY - startY;
+                                  const isMobileView = window.innerWidth < 768;
+                                  const duration = isMobileView ? 1800 : 1000;
+                                  let start: number | null = null;
+                                  const step = (timestamp: number) => {
+                                    if (!start) start = timestamp;
+                                    const progress = Math.min((timestamp - start) / duration, 1);
+                                    const ease = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+                                    window.scrollTo(0, startY + distance * ease);
+                                    if (progress < 1) requestAnimationFrame(step);
+                                  };
+                                  requestAnimationFrame(step);
                                 }}
                                 className={`cursor-pointer hover:opacity-70 transition-opacity ${isOverlay ? "text-[#FFE97F]" : "text-charcoal/60"}`}
                               >
