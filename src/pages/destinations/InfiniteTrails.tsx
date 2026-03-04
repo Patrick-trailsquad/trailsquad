@@ -1,10 +1,10 @@
-import { ArrowLeft, ExternalLink, Clock, ThumbsUp } from "lucide-react";
+import { ArrowLeft, ExternalLink, Clock, ThumbsUp, MousePointerClick } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Footer from "../../components/Footer";
 import InfiniteTrailsIncludedAmenities from "../../components/destinations/infinite-trails/InfiniteTrailsIncludedAmenities";
 import InfiniteTrailsInfoBanner from "../../components/destinations/infinite-trails/InfiniteTrailsInfoBanner";
@@ -17,8 +17,10 @@ import TrailSquadSection from "../../components/destinations/shared/TrailSquadSe
 
 const InfiniteTrails = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
+  const [isMapActive, setIsMapActive] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+  const deactivateMap = useCallback(() => setIsMapActive(false), []);
   
   usePageTitle('Infinite Trails');
   useScrollToTop();
@@ -63,6 +65,30 @@ const InfiniteTrails = () => {
           <div className="space-y-6">
             <InfiniteTrailsMediaSection />
             <InfiniteTrailsPricingSection />
+          </div>
+          <div className="col-span-full mt-12">
+            <div className="rounded-2xl overflow-hidden shadow-lg relative">
+              {!isMapActive && (
+                <div
+                  className="absolute inset-0 z-10 cursor-pointer flex items-center justify-center"
+                  onClick={() => setIsMapActive(true)}
+                >
+                  <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium backdrop-blur-sm">
+                    <MousePointerClick className="w-4 h-4" />
+                    Klik for at interagere med kortet
+                  </div>
+                </div>
+              )}
+              <iframe
+                src="https://app.racedaymap.com/infinite-trails"
+                title="Infinite Trails - interaktivt rutekort"
+                className={`w-full border-0 ${!isMapActive ? 'pointer-events-none' : ''}`}
+                style={{ height: isMobile ? '400px' : '600px' }}
+                allowFullScreen
+                loading="lazy"
+                onMouseLeave={deactivateMap}
+              />
+            </div>
           </div>
         </div>
       </div>
