@@ -5,6 +5,8 @@ import Footer from "../../components/Footer";
 import Menu from "../../components/Menu";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useIsMobile } from "../../hooks/use-mobile";
+import { useState, useCallback } from "react";
+import { MousePointerClick } from "lucide-react";
 import TransylvaniaHero from "../../components/destinations/transylvania/TransylvaniaHero";
 import TransylvaniaInfoBanner from "../../components/destinations/transylvania/TransylvaniaInfoBanner";
 import TransylvaniaMainContent from "../../components/destinations/transylvania/TransylvaniaMainContent";
@@ -17,6 +19,8 @@ import TransylvaniaScrollingBanner from "../../components/destinations/transylva
 
 const Transylvania100 = () => {
   const isMobile = useIsMobile();
+  const [isMapActive, setIsMapActive] = useState(false);
+  const deactivateMap = useCallback(() => setIsMapActive(false), []);
   useScrollToTop();
   usePageTitle("Transylvania 100");
 
@@ -42,6 +46,30 @@ const Transylvania100 = () => {
               ></iframe>
             </div>
             <TransylvaniaPricingSection />
+          </div>
+          <div className="col-span-full mt-12">
+            <div className="rounded-2xl overflow-hidden shadow-lg relative">
+              {!isMapActive && (
+                <div
+                  className="absolute inset-0 z-10 cursor-pointer flex items-center justify-center"
+                  onClick={() => setIsMapActive(true)}
+                >
+                  <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium backdrop-blur-sm">
+                    <MousePointerClick className="w-4 h-4" />
+                    Klik for at interagere med kortet
+                  </div>
+                </div>
+              )}
+              <iframe
+                src="https://app.racedaymap.com/transylvania100"
+                title="Transylvania 100 - interaktivt rutekort"
+                className={`w-full border-0 ${!isMapActive ? 'pointer-events-none' : ''}`}
+                style={{ height: isMobile ? '400px' : '600px' }}
+                allowFullScreen
+                loading="lazy"
+                onMouseLeave={deactivateMap}
+              />
+            </div>
           </div>
         </div>
       </div>
