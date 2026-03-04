@@ -31,7 +31,7 @@ const days = [
     title: "Løbsdag — KangNu Race",
     items: [
       { icon: Ship, text: "Bådtransport til startområdet i Kobberfjorden" },
-      { icon: Trophy, text: "KangNu Running Race (20 / 35 / 56 km)" },
+      { icon: Trophy, text: "KangNu Running Race (15 / 32 / 51 km)" },
       { icon: Users, text: "Fejring ved målstregen i Nuuk" },
       { icon: UtensilsCrossed, text: "Fælles afslutningsmiddag" },
     ],
