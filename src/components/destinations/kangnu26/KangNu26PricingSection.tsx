@@ -71,7 +71,7 @@ const KangNu26PricingSection = () => {
       </div>
       <PriceQuoteForm 
         destinationName="KangNu Running Race"
-        availableDistances={["20km", "35km", "56km"]}
+        availableDistances={["15 km", "32 km", "51 km"]}
         maxParticipants={spotsLeft}
         customInfoText="Udfyld denne formular, betal depositum på DKK 10.000 pr. billet, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
         onSubmitOverride={handleStripeCheckout}
