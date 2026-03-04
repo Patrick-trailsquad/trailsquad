@@ -25,7 +25,7 @@ const ShakeoutRunBanner = () => {
                   /ˈʃeɪk.aʊt rʌn/
                 </p>
                 <div className="w-12 h-[2px] bg-charcoal/20" />
-                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">En let joggetur på 20–30 minutter, som man løber dagen før race day for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.
+                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">En let joggetur på 20–30 minutter, som man løber dagen før race day for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne. 
 
 Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯<br /><br />
 Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯
