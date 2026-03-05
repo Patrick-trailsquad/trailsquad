@@ -174,13 +174,15 @@ const TestimonialSection = () => {
                     <Carousel className="w-full h-full" opts={{ loop: true }}>
                       <CarouselContent className="h-60">
                         {testimonial.photos.map((photo, photoIndex) => (
-                          <CarouselItem key={photoIndex} className="h-60">
+                           <CarouselItem key={photoIndex} className="h-60">
                             <img 
-                              src={photo} 
+                              src={getOptimizedImageUrl(photo)} 
                               alt={`Photo ${photoIndex + 1} from ${testimonial.name}`}
                               className="w-full h-full object-cover"
                               loading="lazy"
                               decoding="async"
+                              width={400}
+                              height={240}
                             />
                           </CarouselItem>
                         ))}
@@ -190,11 +192,13 @@ const TestimonialSection = () => {
                     </Carousel>
                   ) : (
                     <img 
-                      src={testimonial.photos[0]} 
+                      src={getOptimizedImageUrl(testimonial.photos[0])} 
                       alt={`Photo from ${testimonial.name}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
+                      width={400}
+                      height={240}
                     />
                   )}
                 </div>
