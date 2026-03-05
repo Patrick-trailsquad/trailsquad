@@ -22,6 +22,18 @@ interface Testimonial {
   destination?: string;
 }
 
+// Transform Supabase storage URLs to use image resizing
+const getOptimizedImageUrl = (url: string, width: number = 600) => {
+  // Only transform Supabase storage URLs
+  if (url.includes('supabase.co/storage/v1/object/public/')) {
+    return url.replace(
+      '/storage/v1/object/public/',
+      '/storage/v1/render/image/public/'
+    ) + `?width=${width}&resize=contain&quality=75`;
+  }
+  return url;
+};
+
 const TestimonialSection = () => {
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
