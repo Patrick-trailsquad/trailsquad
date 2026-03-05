@@ -124,6 +124,11 @@ const VideoBackgroundSection = () => {
             Der er fællestræning hver 2-3 uge, og tempoet er således, at alle kan være med.<br />
             Vi plejer at løbe i Dyrehaven, Frederiksberg Have, ved Furesøen eller lignende.
           </h2>
+          <Link to="/training">
+            <Button variant="yellow" size="xl" className="text-lg">
+              Tilmeld fællestræning
+            </Button>
+          </Link>
         </div>
       </div>
     </section>);};export default VideoBackgroundSection;
