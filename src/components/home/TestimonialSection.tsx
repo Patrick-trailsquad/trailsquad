@@ -22,6 +22,18 @@ interface Testimonial {
   destination?: string;
 }
 
+// Transform Supabase storage URLs to use image resizing
+const getOptimizedImageUrl = (url: string, width: number = 600) => {
+  // Only transform Supabase storage URLs
+  if (url.includes('supabase.co/storage/v1/object/public/')) {
+    return url.replace(
+      '/storage/v1/object/public/',
+      '/storage/v1/render/image/public/'
+    ) + `?width=${width}&resize=contain&quality=75`;
+  }
+  return url;
+};
+
 const TestimonialSection = () => {
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -162,13 +174,15 @@ const TestimonialSection = () => {
                     <Carousel className="w-full h-full" opts={{ loop: true }}>
                       <CarouselContent className="h-60">
                         {testimonial.photos.map((photo, photoIndex) => (
-                          <CarouselItem key={photoIndex} className="h-60">
+                           <CarouselItem key={photoIndex} className="h-60">
                             <img 
-                              src={photo} 
+                              src={getOptimizedImageUrl(photo)} 
                               alt={`Photo ${photoIndex + 1} from ${testimonial.name}`}
                               className="w-full h-full object-cover"
                               loading="lazy"
                               decoding="async"
+                              width={400}
+                              height={240}
                             />
                           </CarouselItem>
                         ))}
@@ -178,11 +192,13 @@ const TestimonialSection = () => {
                     </Carousel>
                   ) : (
                     <img 
-                      src={testimonial.photos[0]} 
+                      src={getOptimizedImageUrl(testimonial.photos[0])} 
                       alt={`Photo from ${testimonial.name}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
+                      width={400}
+                      height={240}
                     />
                   )}
                 </div>
