@@ -70,7 +70,7 @@ const VideoBackgroundSection = () => {
 
     return () => {
       if (ytPlayerRef.current?.destroy) {
-        try { ytPlayerRef.current.destroy(); } catch (e) {}
+        try {ytPlayerRef.current.destroy();} catch (e) {}
         ytPlayerRef.current = null;
       }
     };
@@ -106,8 +106,8 @@ const VideoBackgroundSection = () => {
         <div
           key={videoId}
           className="absolute inset-0 w-full h-full"
-          dangerouslySetInnerHTML={{ __html: '<div id="yt-player-' + videoId + '" style="width:100%;height:100%"></div>' }}
-        />
+          dangerouslySetInnerHTML={{ __html: '<div id="yt-player-' + videoId + '" style="width:100%;height:100%"></div>' }} />
+        
         
       </div>
       
@@ -118,8 +118,10 @@ const VideoBackgroundSection = () => {
       <div className="relative z-10 flex items-center justify-center h-full px-8">
         <div className="text-center text-white">
           <h1 className="text-4xl md:text-6xl font-cabinet font-bold mb-4">Fællestræning op mod race</h1>
-          <h2 className="text-xl md:text-2xl font-inter font-light mb-8 max-w-2xl mx-auto">
-            Løbeteknik, udstyr, energi på løbsdagen...<br />
+          <h2 className="text-xl md:text-2xl font-inter font-light mb-8 max-w-2xl mx-auto">Løbeteknik, udstyr, energi på løbsdagen...
+Vi har din ryg i forberedelserne op til race day.
+
+Der er månedlig fællestræning og det er gratis at deltage.<br />
             Vi har din ryg i forberedelserne op til race day.<br /><br />
             Der er fællestræning hver 2-3 uge, og tempoet er således, at alle kan være med.<br />
             Vi plejer at løbe i Dyrehaven, Frederiksberg Have, ved Furesøen eller lignende.
