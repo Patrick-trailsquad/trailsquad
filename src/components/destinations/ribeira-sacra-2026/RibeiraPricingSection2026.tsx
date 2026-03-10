@@ -47,6 +47,7 @@ const RibeiraPricingSection2026 = () => {
         destinationName="Ribeira Sacra 2026"
         availableDistances={["48km"]}
         maxParticipants={spotsLeft}
+        depositPercentage={50}
       />
       <div className="mt-4">
         <CallMeBackCTA />

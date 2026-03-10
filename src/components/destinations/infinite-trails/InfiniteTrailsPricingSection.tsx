@@ -47,6 +47,7 @@ const InfiniteTrailsPricingSection = () => {
         destinationName="Infinite Trails"
         availableDistances={["15km", "30km", "45km", "60km"]}
         maxParticipants={spotsLeft}
+        depositPercentage={50}
       />
       <div className="mt-4">
         <CallMeBackCTA />
