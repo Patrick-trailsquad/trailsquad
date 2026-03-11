@@ -10,7 +10,7 @@ const SwissAlps100Description = () => {
           Swiss Alps 100 er en af verdens mest spektakulære ultraløb, der fører dig gennem UNESCO-verdensarvsområdet Aletsch-gletsjeren i det schweiziske Goms-område. Løbet tilbyder distancer fra Vertical til imponerende 160 km, og er en officiel kvalifikationsløb for Western States 100, Hardrock 100 og Badwater 135.
         </p>
         <p className="text-lg">
-          Med start kl. 7:30 den 7. august 2026 giver løbet dig mulighed for at udfordre dig selv på alpine stier, over svævende hængebroer og forbi imponerende alpine dæmninger. Dette er trail running på højeste niveau i hjertet af Alperne.
+          100 km-løbet starter allerede den 7. august kl. 17:00, hvor du løber gennem den alpine nat med pandelampe og stjernehimmel – en helt unik oplevelse. De øvrige distancer starter den 8. august. Løbet giver dig mulighed for at udfordre dig selv på alpine stier, over svævende hængebroer og forbi imponerende alpine dæmninger. Dette er trail running på højeste niveau i hjertet af Alperne.
         </p>
       </section>
 
