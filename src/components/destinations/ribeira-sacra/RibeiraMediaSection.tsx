@@ -15,13 +15,8 @@ const RibeiraMediaSection = () => {
       </div>
 
       <div className="bg-white rounded-xl p-8 shadow-lg">
-        <div className="flex justify-between items-center mb-6">
-          <div>
-            <p className="text-sm text-gray-600 mb-1">Fra</p>
-            <p className="font-cabinet text-4xl font-bold text-charcoal">10.850 DKK</p>
-            <p className="text-sm text-gray-500">inkl. moms</p>
-          </div>
-          <div className="text-right">
+        <div className="flex justify-center items-center mb-6">
+          <div className="text-center">
             <p className="text-sm text-gray-600 mb-2">Løbsstatus</p>
             <span className="inline-flex items-center gap-2 bg-charcoal text-stone px-4 py-2 rounded-full font-cabinet text-sm font-bold shadow-md">
               LØB AFSLUTTET 🏁
