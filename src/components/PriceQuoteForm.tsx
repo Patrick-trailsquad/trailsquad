@@ -72,6 +72,18 @@ const PriceQuoteForm = ({
         number_of_participants: data.participants,
         accommodation_preference: data.accommodationPreference
       };
+      // Save to Supabase as backup
+      await supabase.from('quote_requests').insert({
+        destination: destinationName,
+        full_name: data.fullName,
+        email: data.email,
+        phone: data.phone,
+        preferred_distance: data.preferredDistance,
+        participants: data.participants,
+        accommodation_preference: data.accommodationPreference,
+        source: 'form',
+      });
+
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
         headers: {
