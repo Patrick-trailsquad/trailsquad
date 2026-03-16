@@ -79,11 +79,10 @@ serve(async (req) => {
       customerId = customers.data[0].id;
     }
 
-    // Validate origin header
-    const origin = req.headers.get("origin");
-    if (!origin) {
-      throw new Error("Missing origin header");
-    }
+    // Get origin for redirect URLs - use referer as fallback
+    const origin = req.headers.get("origin") 
+      || req.headers.get("referer")?.replace(/\/+$/, '') 
+      || "https://trailsquad.lovable.app";
 
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
