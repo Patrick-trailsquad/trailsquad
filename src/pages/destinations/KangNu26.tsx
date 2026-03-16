@@ -37,7 +37,7 @@ const KangNu26 = () => {
       const storedData = sessionStorage.getItem('kangnu_booking_data');
       if (storedData) {
         const bookingData = JSON.parse(storedData);
-        fetch('https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/', {
+        fetch('https://hooks.zapier.com/hooks/catch/21931910/2qey8br/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           mode: 'no-cors',
