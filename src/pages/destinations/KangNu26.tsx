@@ -37,6 +37,20 @@ const KangNu26 = () => {
       const storedData = sessionStorage.getItem('kangnu_booking_data');
       if (storedData) {
         const bookingData = JSON.parse(storedData);
+        
+        // Save to Supabase as backup
+        supabase.from('quote_requests').insert({
+          destination: 'KangNu Running Race',
+          full_name: bookingData.fullName,
+          email: bookingData.email,
+          phone: bookingData.phone,
+          preferred_distance: bookingData.preferredDistance,
+          participants: bookingData.participants,
+          accommodation_preference: bookingData.accommodationPreference,
+          source: 'kangnu26_stripe_deposit',
+          payment_status: 'success',
+        }).then(() => {});
+
         fetch('https://hooks.zapier.com/hooks/catch/21931910/2qey8br/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
