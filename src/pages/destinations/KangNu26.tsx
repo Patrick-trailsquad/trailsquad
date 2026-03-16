@@ -1,5 +1,5 @@
-import { ArrowLeft, MousePointerClick } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft, MousePointerClick, CheckCircle2, X } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
@@ -23,6 +23,9 @@ const KangNu26 = () => {
   const [isMapActive, setIsMapActive] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const paymentStatus = searchParams.get("payment");
+  const [showPaymentBanner, setShowPaymentBanner] = useState(paymentStatus === "success");
 
   const deactivateMap = useCallback(() => setIsMapActive(false), []);
 
@@ -60,6 +63,29 @@ const KangNu26 = () => {
           </h1>
         </div>
       </div>
+
+      {showPaymentBanner && (
+        <div className="bg-green-600 text-white py-4 px-6">
+          <div className="container mx-auto flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <CheckCircle2 className="w-6 h-6 shrink-0" />
+              <div>
+                <p className="font-cabinet font-bold text-lg">Depositum betalt! 🎉</p>
+                <p className="text-white/90 text-sm">Tak for din tilmelding til KangNu Running Race. Vi vender personligt tilbage til dig inden for 48 timer på hverdage med en bekræftelse.</p>
+              </div>
+            </div>
+            <button
+              onClick={() => {
+                setShowPaymentBanner(false);
+                setSearchParams({});
+              }}
+              className="shrink-0 hover:bg-white/20 rounded-full p-1 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
 
       <KangNu26InfoBanner />
 
