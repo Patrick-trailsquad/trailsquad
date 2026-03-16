@@ -28,6 +28,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
   
   const { items, loading, addItem, updateItem, deleteItem, toggleCompletion } = useTimelineItems(destinationName);
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [highlightedItemId, setHighlightedItemId] = useState<string | null>(null);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<TimelineItem | null>(null);
   const [newItem, setNewItem] = useState({
