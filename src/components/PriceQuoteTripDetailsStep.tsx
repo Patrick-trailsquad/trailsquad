@@ -45,14 +45,12 @@ const PriceQuoteTripDetailsStep = ({
   const participants = watch("participants");
   const accommodationPreference = watch("accommodationPreference");
 
-  // If participants is 1 and current accommodation uses default "single/double/both",
-  // switch to "single". Skip if custom accommodation options are provided.
-  const isDefaultAccommodation = accommodationOptions === defaultAccommodationOptions;
+  // Only auto-switch to "single" for default accommodation options (not custom ones like KangNu)
   useEffect(() => {
-    if (isDefaultAccommodation && participants === 1 && accommodationPreference !== "single") {
+    if (!isCustomAccommodation && participants === 1 && accommodationPreference !== "single") {
       setValue("accommodationPreference", "single");
     }
-  }, [participants, accommodationPreference, setValue, isDefaultAccommodation]);
+  }, [participants, accommodationPreference, setValue, isCustomAccommodation]);
 
   // If participants exceeds max, clamp it down to max
   useEffect(() => {
