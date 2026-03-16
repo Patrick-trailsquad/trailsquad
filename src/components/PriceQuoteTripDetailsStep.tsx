@@ -32,11 +32,13 @@ const PriceQuoteTripDetailsStep = ({
   availableDistances,
   onBack,
   maxParticipants,
-  accommodationOptions = defaultAccommodationOptions,
+  accommodationOptions: accommodationOptionsProp,
   submitButtonLabel = "Send Anmodning",
   getSubmitButtonLabel,
   isLoading = false
 }: PriceQuoteTripDetailsStepProps) => {
+  const accommodationOptions = accommodationOptionsProp ?? defaultAccommodationOptions;
+  const isCustomAccommodation = !!accommodationOptionsProp;
   const { register, setValue, watch, formState: { errors } } = form;
 
   // Watch the values we care about
