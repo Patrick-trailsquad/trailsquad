@@ -86,6 +86,48 @@ export type Database = {
         }
         Relationships: []
       }
+      quote_requests: {
+        Row: {
+          accommodation_preference: string | null
+          created_at: string
+          destination: string
+          email: string
+          full_name: string
+          id: string
+          participants: number | null
+          payment_status: string | null
+          phone: string | null
+          preferred_distance: string | null
+          source: string | null
+        }
+        Insert: {
+          accommodation_preference?: string | null
+          created_at?: string
+          destination: string
+          email: string
+          full_name: string
+          id?: string
+          participants?: number | null
+          payment_status?: string | null
+          phone?: string | null
+          preferred_distance?: string | null
+          source?: string | null
+        }
+        Update: {
+          accommodation_preference?: string | null
+          created_at?: string
+          destination?: string
+          email?: string
+          full_name?: string
+          id?: string
+          participants?: number | null
+          payment_status?: string | null
+          phone?: string | null
+          preferred_distance?: string | null
+          source?: string | null
+        }
+        Relationships: []
+      }
       testimonials: {
         Row: {
           created_at: string
