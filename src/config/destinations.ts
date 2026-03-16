@@ -16,24 +16,10 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'ribeira-sacra-2026',
-    name: 'Ribeira Sacra 2026',
-    route: '/destinations/ribeira-sacra-2026',
-    status: 'open' as const,
-    published: true
-  },
-  {
     id: 'transylvania',
     name: 'Transylvania 100',
     route: '/destinations/transylvania',
     status: 'tickets-closed' as const,
-    published: true
-  },
-  {
-    id: 'infinite-trails',
-    name: 'Infinite Trails',
-    route: '/destinations/infinite-trails',
-    status: 'open' as const,
     published: true
   },
   {
@@ -44,17 +30,31 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'la-boucle-de-l-etoile',
-    name: 'La Boucle de l\'Étoile',
-    route: '/destinations/la-boucle-de-l-etoile',
-    status: 'upcoming' as const,
-    published: true
-  },
-  {
     id: 'kangnu26',
     name: 'KangNu Running Race',
     route: '/destinations/kangnu26',
     status: 'open' as const,
+    published: true
+  },
+  {
+    id: 'infinite-trails',
+    name: 'Infinite Trails',
+    route: '/destinations/infinite-trails',
+    status: 'open' as const,
+    published: true
+  },
+  {
+    id: 'ribeira-sacra-2026',
+    name: 'Ribeira Sacra 2026',
+    route: '/destinations/ribeira-sacra-2026',
+    status: 'open' as const,
+    published: true
+  },
+  {
+    id: 'la-boucle-de-l-etoile',
+    name: 'La Boucle de l\'Étoile',
+    route: '/destinations/la-boucle-de-l-etoile',
+    status: 'upcoming' as const,
     published: true
   }
 ];
