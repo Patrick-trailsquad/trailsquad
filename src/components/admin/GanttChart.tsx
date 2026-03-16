@@ -308,23 +308,16 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                               item.completed ? 'line-through opacity-60' : ''
                             }`}>
                               {item.description && (
-                                <Tooltip>
-                                  <TooltipTrigger asChild>
-                                    <div 
-                                      className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-pointer hover:underline"
-                                      onClick={() => {
-                                        setCurrentMonth(startOfMonth(item.date));
-                                        setHighlightedItemId(item.id);
-                                        setTimeout(() => setHighlightedItemId(null), 2000);
-                                      }}
-                                    >
-                                      <span className="font-medium">{item.date.toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })}</span> — {item.description}
-                                    </div>
-                                  </TooltipTrigger>
-                                  <TooltipContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg z-50">
-                                    <p className="max-w-xs text-sm whitespace-pre-wrap">{item.description}</p>
-                                  </TooltipContent>
-                                </Tooltip>
+                                <div 
+                                  className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-pointer hover:underline"
+                                  onClick={() => {
+                                    setCurrentMonth(startOfMonth(item.date));
+                                    setHighlightedItemId(item.id);
+                                    setTimeout(() => setHighlightedItemId(null), 2000);
+                                  }}
+                                >
+                                  <span className="font-medium">{item.date.toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })}</span> — {item.description}
+                                </div>
                               )}
                             </div>
                           </div>
