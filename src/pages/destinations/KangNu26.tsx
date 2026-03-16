@@ -1,4 +1,5 @@
 import { ArrowLeft, MousePointerClick, CheckCircle2, X } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import { Link, useSearchParams } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
