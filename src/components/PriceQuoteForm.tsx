@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Progress } from "./ui/progress";
 import PriceQuotePersonalInfoStep from "./PriceQuotePersonalInfoStep";
 import PriceQuoteTripDetailsStep from "./PriceQuoteTripDetailsStep";
+import { supabase } from "@/integrations/supabase/client";
 interface AccommodationOption {
   value: string;
   label: string;
