@@ -23,6 +23,9 @@ const KangNu26 = () => {
   const [isMapActive, setIsMapActive] = useState(false);
   const linesRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const paymentStatus = searchParams.get("payment");
+  const [showPaymentBanner, setShowPaymentBanner] = useState(paymentStatus === "success");
 
   const deactivateMap = useCallback(() => setIsMapActive(false), []);
 
