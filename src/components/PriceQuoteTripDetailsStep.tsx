@@ -43,12 +43,14 @@ const PriceQuoteTripDetailsStep = ({
   const participants = watch("participants");
   const accommodationPreference = watch("accommodationPreference");
 
-  // If participants is 1 but a non-single option is selected, switch to "single"
+  // If participants is 1 and current accommodation uses default "single/double/both",
+  // switch to "single". Skip if custom accommodation options are provided.
+  const isDefaultAccommodation = accommodationOptions === defaultAccommodationOptions;
   useEffect(() => {
-    if (participants === 1 && accommodationPreference !== "single") {
+    if (isDefaultAccommodation && participants === 1 && accommodationPreference !== "single") {
       setValue("accommodationPreference", "single");
     }
-  }, [participants, accommodationPreference, setValue]);
+  }, [participants, accommodationPreference, setValue, isDefaultAccommodation]);
 
   // If participants exceeds max, clamp it down to max
   useEffect(() => {
