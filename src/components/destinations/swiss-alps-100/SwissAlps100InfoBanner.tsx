@@ -23,7 +23,7 @@ const SwissAlps100InfoBanner = () => {
           </div>
           <div>
             <h1 className="font-cabinet text-2xl font-bold text-charcoal">Distancer</h1>
-            <h2 className="font-cabinet text-lg text-charcoal">Vertical, 50km, 100km, 160km</h2>
+            <h2 className="font-cabinet text-lg text-charcoal">50km, 100km, 160km</h2>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const SwissAlps100Description = () => {
       <section>
         <h2 className="font-cabinet text-3xl font-bold mb-4">Løbet</h2>
         <p className="text-lg mb-4">
-          Swiss Alps 100 er en af verdens mest spektakulære ultraløb, der fører dig gennem UNESCO-verdensarvsområdet Aletsch-gletsjeren i det schweiziske Goms-område. Løbet tilbyder distancer fra Vertical til imponerende 160 km, og er en officiel kvalifikationsløb for Western States 100, Hardrock 100 og Badwater 135.
+          Swiss Alps 100 er en af verdens mest spektakulære ultraløb, der fører dig gennem UNESCO-verdensarvsområdet Aletsch-gletsjeren i det schweiziske Goms-område. Løbet tilbyder distancer fra 50 km til imponerende 160 km, og er en officiel kvalifikationsløb for Western States 100, Hardrock 100 og Badwater 135.
         </p>
         <p className="text-lg">
           100 km-løbet starter allerede den 7. august kl. 17:00, hvor du løber gennem den alpine nat med pandelampe og stjernehimmel – en helt unik oplevelse. De øvrige distancer starter den 8. august. Løbet giver dig mulighed for at udfordre dig selv på alpine stier, over svævende hængebroer og forbi imponerende alpine dæmninger. Dette er trail running på højeste niveau i hjertet af Alperne.
@@ -27,7 +27,7 @@ const SwissAlps100Description = () => {
       <section>
         <h2 className="font-cabinet text-3xl font-bold mb-4">Udfordringen</h2>
         <p className="text-lg">
-          Swiss Alps 100 er ikke bare et løb - det er en episk udfordring i nogle af verdens smukkeste omgivelser. Uanset om du vælger Vertical, 50 km, 100 km eller den ultimative 160 km, vil du blive udfordret af alpine stigninger, tekniske passager og højfjeldsforhold.
+          Swiss Alps 100 er ikke bare et løb - det er en episk udfordring i nogle af verdens smukkeste omgivelser. Uanset om du vælger 50 km, 100 km eller den ultimative 160 km, vil du blive udfordret af alpine stigninger, tekniske passager og højfjeldsforhold.
         </p>
         <Button asChild variant="charcoal" size="md" className="mt-4">
           <a href="https://www.swissalps100.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
