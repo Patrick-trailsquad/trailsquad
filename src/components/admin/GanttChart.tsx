@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -28,6 +28,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
   
   const { items, loading, addItem, updateItem, deleteItem, toggleCompletion } = useTimelineItems(destinationName);
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [highlightedItemId, setHighlightedItemId] = useState<string | null>(null);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<TimelineItem | null>(null);
   const [newItem, setNewItem] = useState({
@@ -309,7 +310,14 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                               {item.description && (
                                 <Tooltip>
                                   <TooltipTrigger asChild>
-                                    <div className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-help">
+                                    <div 
+                                      className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-pointer hover:underline"
+                                      onClick={() => {
+                                        setCurrentMonth(startOfMonth(item.date));
+                                        setHighlightedItemId(item.id);
+                                        setTimeout(() => setHighlightedItemId(null), 2000);
+                                      }}
+                                    >
                                       <span className="font-medium">{item.date.toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })}</span> — {item.description}
                                     </div>
                                   </TooltipTrigger>
@@ -374,7 +382,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                         key={item.id}
                         className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1 transition-all duration-300 cursor-pointer hover:scale-105 ${
                           item.completed ? 'opacity-50 line-through' : ''
-                        }`}
+                        } ${highlightedItemId === item.id ? 'ring-4 ring-yellow-400 scale-110 z-20' : ''}`}
                         style={{
                           left: `${Math.max(0, Math.min(position, 85))}%`,
                           width: '80px',
