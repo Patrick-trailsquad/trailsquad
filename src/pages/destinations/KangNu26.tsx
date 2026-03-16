@@ -1,5 +1,5 @@
-import { ArrowLeft, MousePointerClick } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft, MousePointerClick, CheckCircle2, X } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
