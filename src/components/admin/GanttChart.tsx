@@ -310,7 +310,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                                 <Tooltip>
                                   <TooltipTrigger asChild>
                                     <div className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-help">
-                                      {item.description}
+                                      <span className="font-medium">{item.date.toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })}</span> — {item.description}
                                     </div>
                                   </TooltipTrigger>
                                   <TooltipContent className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-lg z-50">
