@@ -310,7 +310,14 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                               {item.description && (
                                 <Tooltip>
                                   <TooltipTrigger asChild>
-                                    <div className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-help">
+                                    <div 
+                                      className="text-xs opacity-75 group-hover:opacity-100 transition-opacity cursor-pointer hover:underline"
+                                      onClick={() => {
+                                        setCurrentMonth(startOfMonth(item.date));
+                                        setHighlightedItemId(item.id);
+                                        setTimeout(() => setHighlightedItemId(null), 2000);
+                                      }}
+                                    >
                                       <span className="font-medium">{item.date.toLocaleDateString('da-DK', { day: 'numeric', month: 'short' })}</span> — {item.description}
                                     </div>
                                   </TooltipTrigger>
