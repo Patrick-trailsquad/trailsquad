@@ -34,6 +34,16 @@ const KangNu26PricingSection = () => {
       throw new Error("Checkout failed");
     }
 
+    // Store form data for post-payment webhook
+    sessionStorage.setItem('kangnu_booking_data', JSON.stringify({
+      fullName: data.fullName,
+      email: data.email,
+      phone: data.phone,
+      preferredDistance: data.preferredDistance,
+      participants: data.participants,
+      accommodationPreference: data.accommodationPreference,
+    }));
+
     window.location.href = result.url;
   };
 

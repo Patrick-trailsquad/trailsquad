@@ -26,8 +26,33 @@ const KangNu26 = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const paymentStatus = searchParams.get("payment");
   const [showPaymentBanner, setShowPaymentBanner] = useState(paymentStatus === "success");
+  const webhookSentRef = useRef(false);
 
   const deactivateMap = useCallback(() => setIsMapActive(false), []);
+
+  // Send Zapier webhook after successful Stripe payment
+  useEffect(() => {
+    if (paymentStatus === "success" && !webhookSentRef.current) {
+      webhookSentRef.current = true;
+      const storedData = sessionStorage.getItem('kangnu_booking_data');
+      if (storedData) {
+        const bookingData = JSON.parse(storedData);
+        fetch('https://hooks.zapier.com/hooks/catch/21931910/2qxzofy/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'no-cors',
+          body: JSON.stringify({
+            ...bookingData,
+            source: 'kangnu26_stripe_deposit',
+            payment_status: 'success',
+            submitted_at: new Date().toISOString(),
+            triggered_from: window.location.origin,
+          }),
+        }).catch((err) => console.error('Zapier webhook error:', err));
+        sessionStorage.removeItem('kangnu_booking_data');
+      }
+    }
+  }, [paymentStatus]);
 
   usePageTitle('KangNu Running Race');
   useScrollToTop();
