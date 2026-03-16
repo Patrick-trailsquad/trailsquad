@@ -45,7 +45,7 @@ const SwissAlps100PricingSection = () => {
       </div>
       <PriceQuoteForm 
         destinationName="Swiss Alps 100"
-        availableDistances={["Vertical", "50km", "100km", "160km"]}
+        availableDistances={["50km", "100km", "160km"]}
         maxParticipants={spotsLeft}
       />
       <div className="mt-4">

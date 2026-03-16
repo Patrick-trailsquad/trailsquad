@@ -27,7 +27,7 @@ const SwissAlps100Description = () => {
       <section>
         <h2 className="font-cabinet text-3xl font-bold mb-4">Udfordringen</h2>
         <p className="text-lg">
-          Swiss Alps 100 er ikke bare et løb - det er en episk udfordring i nogle af verdens smukkeste omgivelser. Uanset om du vælger Vertical, 50 km, 100 km eller den ultimative 160 km, vil du blive udfordret af alpine stigninger, tekniske passager og højfjeldsforhold.
+          Swiss Alps 100 er ikke bare et løb - det er en episk udfordring i nogle af verdens smukkeste omgivelser. Uanset om du vælger 50 km, 100 km eller den ultimative 160 km, vil du blive udfordret af alpine stigninger, tekniske passager og højfjeldsforhold.
         </p>
         <Button asChild variant="charcoal" size="md" className="mt-4">
           <a href="https://www.swissalps100.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
