@@ -382,7 +382,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                         key={item.id}
                         className={`absolute h-8 ${typeConfig.color} rounded-full flex items-center justify-center text-white text-xs font-medium shadow-sm mb-1 transition-all duration-300 cursor-pointer hover:scale-105 ${
                           item.completed ? 'opacity-50 line-through' : ''
-                        }`}
+                        } ${highlightedItemId === item.id ? 'ring-4 ring-yellow-400 scale-110 z-20' : ''}`}
                         style={{
                           left: `${Math.max(0, Math.min(position, 85))}%`,
                           width: '80px',
