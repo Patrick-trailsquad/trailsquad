@@ -32,23 +32,25 @@ const PriceQuoteTripDetailsStep = ({
   availableDistances,
   onBack,
   maxParticipants,
-  accommodationOptions = defaultAccommodationOptions,
+  accommodationOptions: accommodationOptionsProp,
   submitButtonLabel = "Send Anmodning",
   getSubmitButtonLabel,
   isLoading = false
 }: PriceQuoteTripDetailsStepProps) => {
+  const accommodationOptions = accommodationOptionsProp ?? defaultAccommodationOptions;
+  const isCustomAccommodation = !!accommodationOptionsProp;
   const { register, setValue, watch, formState: { errors } } = form;
 
   // Watch the values we care about
   const participants = watch("participants");
   const accommodationPreference = watch("accommodationPreference");
 
-  // If participants is 1 but a non-single option is selected, switch to "single"
+  // Only auto-switch to "single" for default accommodation options (not custom ones like KangNu)
   useEffect(() => {
-    if (participants === 1 && accommodationPreference !== "single") {
+    if (!isCustomAccommodation && participants === 1 && accommodationPreference !== "single") {
       setValue("accommodationPreference", "single");
     }
-  }, [participants, accommodationPreference, setValue]);
+  }, [participants, accommodationPreference, setValue, isCustomAccommodation]);
 
   // If participants exceeds max, clamp it down to max
   useEffect(() => {
