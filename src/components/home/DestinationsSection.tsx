@@ -47,7 +47,7 @@ const destinations = [
     location: "Transylvania 100, Rumænien",
     date: "Maj 2026",
     spots: "Billetsalg lukket",
-    href: "/destinations/transylvania"
+    href: "/destinations/transylvania",
   },
   {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
