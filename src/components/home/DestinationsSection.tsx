@@ -69,7 +69,8 @@ const destinations = [
     location: "KangNu Running Race, Grønland",
     date: "August 2026",
     spots: "15 pladser",
-    href: "/destinations/kangnu26"
+    spotsOriginal: "20",
+    href: "/destinations/kangnu26",
   },
   {
     image: "/lovable-uploads/infinite-trails.jpg",
