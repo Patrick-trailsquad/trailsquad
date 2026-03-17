@@ -76,7 +76,7 @@ const KangNu26PricingSection = () => {
         </div>
         <div className="col-span-2">
           <p className="text-sm text-gray-600 mb-1">Rejsestatus</p>
-          <p className="font-cabinet text-xl font-bold text-charcoal">{spotsLeft} pladser tilbage</p>
+          <p className="font-cabinet text-xl font-bold text-charcoal"><span className="line-through text-muted-foreground">20</span> {spotsLeft} pladser tilbage</p>
         </div>
       </div>
       <PriceQuoteForm 
