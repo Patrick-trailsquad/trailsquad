@@ -61,7 +61,7 @@ const destinations = [
     location: "Swiss Alps 100, Schweiz",
     date: "August 2026",
     spots: "9 pladser",
-    spotsOriginal: "20",
+    spotsOriginal: "14",
     href: "/destinations/swiss-alps-100",
   },
   {
