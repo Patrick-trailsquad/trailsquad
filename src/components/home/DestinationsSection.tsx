@@ -158,6 +158,7 @@ const DestinationsSection = () => {
                       ? "bg-orange text-orange-foreground"
                       : "bg-[#FFDC00] text-black"
                    }`}>
+                    {trip.spotsOriginal && <span className="line-through opacity-60 mr-1">{trip.spotsOriginal}</span>}
                     {trip.spots}
                   </span>
                 </div>
