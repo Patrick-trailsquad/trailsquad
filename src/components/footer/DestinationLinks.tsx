@@ -49,6 +49,7 @@ const DestinationLinks = () => {
               ? "bg-orange text-orange-foreground"
               : "bg-[#FFDC00] text-black"
           }`}>
+            {destination.spotsOriginal && <span className="line-through opacity-60 mr-1">{destination.spotsOriginal}</span>}
             {destination.spots}
           </span>
         </a>
