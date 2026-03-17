@@ -77,7 +77,7 @@ const destinations = [
     location: "Infinite Trails, Østrig",
     date: "September 2026",
     spots: "13 pladser",
-    spotsOriginal: "14",
+    spotsOriginal: "16",
     href: "/destinations/infinite-trails",
   },
   {
