@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 
 const RibeiraPricingSection2026 = () => {
-  const spotsLeft = 14;
+  const spotsLeft = 12;
 
   return (
     <div className="bg-white rounded-xl p-8 shadow-lg">
