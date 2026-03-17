@@ -85,7 +85,8 @@ const destinations = [
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2026",
     spots: "14 pladser",
-    href: "/destinations/ribeira-sacra-2026"
+    spotsOriginal: "20",
+    href: "/destinations/ribeira-sacra-2026",
   },
   {
     image: "/lovable-uploads/la-boucle-hero.jpg",
