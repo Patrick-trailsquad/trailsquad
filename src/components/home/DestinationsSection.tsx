@@ -77,7 +77,8 @@ const destinations = [
     location: "Infinite Trails, Østrig",
     date: "September 2026",
     spots: "13 pladser",
-    href: "/destinations/infinite-trails"
+    spotsOriginal: "20",
+    href: "/destinations/infinite-trails",
   },
   {
     image: "/lovable-uploads/ribeira-sacra-2026-hero-2.jpg?v=3",
