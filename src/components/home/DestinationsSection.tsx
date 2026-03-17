@@ -47,7 +47,7 @@ const destinations = [
     location: "Transylvania 100, Rumænien",
     date: "Maj 2026",
     spots: "Billetsalg lukket",
-    href: "/destinations/transylvania"
+    href: "/destinations/transylvania",
   },
   {
     image: "/lovable-uploads/77fe9c87-3287-4f7a-ba65-68b0b68d853a.png",
@@ -61,28 +61,32 @@ const destinations = [
     location: "Swiss Alps 100, Schweiz",
     date: "August 2026",
     spots: "9 pladser",
-    href: "/destinations/swiss-alps-100"
+    spotsOriginal: "20",
+    href: "/destinations/swiss-alps-100",
   },
   {
     image: "/lovable-uploads/kangnu26-hero.jpg",
     location: "KangNu Running Race, Grønland",
     date: "August 2026",
     spots: "15 pladser",
-    href: "/destinations/kangnu26"
+    spotsOriginal: "20",
+    href: "/destinations/kangnu26",
   },
   {
     image: "/lovable-uploads/infinite-trails.jpg",
     location: "Infinite Trails, Østrig",
     date: "September 2026",
     spots: "13 pladser",
-    href: "/destinations/infinite-trails"
+    spotsOriginal: "20",
+    href: "/destinations/infinite-trails",
   },
   {
     image: "/lovable-uploads/ribeira-sacra-2026-hero-2.jpg?v=3",
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2026",
     spots: "14 pladser",
-    href: "/destinations/ribeira-sacra-2026"
+    spotsOriginal: "20",
+    href: "/destinations/ribeira-sacra-2026",
   },
   {
     image: "/lovable-uploads/la-boucle-hero.jpg",
@@ -158,6 +162,7 @@ const DestinationsSection = () => {
                       ? "bg-orange text-orange-foreground"
                       : "bg-[#FFDC00] text-black"
                    }`}>
+                    {trip.spotsOriginal && <span className="line-through opacity-60 mr-1">{trip.spotsOriginal}</span>}
                     {trip.spots}
                   </span>
                 </div>
