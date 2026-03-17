@@ -85,7 +85,7 @@ const destinations = [
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2026",
     spots: "14 pladser",
-    spotsOriginal: "20",
+    spotsOriginal: "14",
     href: "/destinations/ribeira-sacra-2026",
   },
   {
