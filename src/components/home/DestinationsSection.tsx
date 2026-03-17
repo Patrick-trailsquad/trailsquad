@@ -61,7 +61,8 @@ const destinations = [
     location: "Swiss Alps 100, Schweiz",
     date: "August 2026",
     spots: "9 pladser",
-    href: "/destinations/swiss-alps-100"
+    spotsOriginal: "20",
+    href: "/destinations/swiss-alps-100",
   },
   {
     image: "/lovable-uploads/kangnu26-hero.jpg",
