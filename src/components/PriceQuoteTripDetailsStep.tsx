@@ -74,23 +74,23 @@ const PriceQuoteTripDetailsStep = ({
           id="participants"
           type="number"
           min="1"
-          max={maxParticipants}
+          max={effectiveMax}
           {...register("participants", { 
             required: true,
             min: 1,
             max: {
-              value: maxParticipants,
-              message: `Der er kun ${maxParticipants} pladser tilbage`,
+              value: effectiveMax,
+              message: `Der er kun ${effectiveMax} pladser tilbage for dette hotel`,
             },
             valueAsNumber: true 
           })}
           className="mt-1.5"
-          placeholder={`Indtast antal deltagere (maks ${maxParticipants})`}
+          placeholder={`Indtast antal deltagere (maks ${effectiveMax})`}
         />
         {errors.participants && (
-          <p className="text-red-500 text-sm mt-1">
+          <p className="text-destructive text-sm mt-1">
             {errors.participants.type === "max"
-              ? `Kan ikke overstige ${maxParticipants} deltagere (pladser tilbage).`
+              ? `Kan ikke overstige ${effectiveMax} deltagere (pladser tilbage for dette hotel).`
               : "Venligst indtast et gyldigt antal deltagere"}
           </p>
         )}
