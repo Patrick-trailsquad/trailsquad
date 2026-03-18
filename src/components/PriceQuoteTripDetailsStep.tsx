@@ -46,6 +46,12 @@ const PriceQuoteTripDetailsStep = ({
   const participants = watch("participants");
   const accommodationPreference = watch("accommodationPreference");
 
+  // Calculate effective max based on selected accommodation's remaining spots
+  const selectedOption = accommodationOptions.find(o => o.value === accommodationPreference);
+  const effectiveMax = selectedOption?.spotsRemaining !== undefined
+    ? Math.min(maxParticipants, selectedOption.spotsRemaining)
+    : maxParticipants;
+
   // Only auto-switch to "single" for default accommodation options (not custom ones like KangNu)
   useEffect(() => {
     if (!isCustomAccommodation && participants === 1 && accommodationPreference !== "single") {
@@ -53,12 +59,12 @@ const PriceQuoteTripDetailsStep = ({
     }
   }, [participants, accommodationPreference, setValue, isCustomAccommodation]);
 
-  // If participants exceeds max, clamp it down to max
+  // If participants exceeds effective max, clamp it down
   useEffect(() => {
-    if (participants > maxParticipants) {
-      setValue("participants", maxParticipants);
+    if (participants > effectiveMax) {
+      setValue("participants", effectiveMax);
     }
-  }, [participants, maxParticipants, setValue]);
+  }, [participants, effectiveMax, setValue]);
 
   return (
     <div className="space-y-4">
