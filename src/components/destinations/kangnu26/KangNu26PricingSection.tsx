@@ -11,7 +11,7 @@ import {
 
 const KangNu26PricingSection = () => {
   const { toast } = useToast();
-  const spotsLeft = 15;
+  const spotsLeft = 14;
 
   const handleStripeCheckout = async (data: FormValues) => {
     const { data: result, error } = await supabase.functions.invoke('create-kangnu-checkout', {
