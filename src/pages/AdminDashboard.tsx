@@ -43,63 +43,6 @@ const AdminDashboard = () => {
     }
   };
 
-  const ParticipantCounter = ({ destinationName }: { destinationName: string }) => {
-    const { participants } = useParticipants(destinationName);
-    return (
-      <Badge variant="secondary" className="ml-2">
-        <Users className="h-3 w-3 mr-1" />
-        {participants.length}
-      </Badge>
-    );
-  };
-
-  const EmptyState = ({ destinationName }: { destinationName: string }) => (
-    <div className="text-center py-12">
-      <div className="mx-auto w-24 h-24 bg-muted rounded-full flex items-center justify-center mb-4">
-        <Plus className="h-8 w-8 text-muted-foreground" />
-      </div>
-      <h3 className="text-lg font-semibold mb-2">No participants yet</h3>
-      <p className="text-muted-foreground mb-4">
-        Get started by adding your first participant to {destinationName}.
-      </p>
-      <Button onClick={() => setIsAddDialogOpen(true)}>
-        <Plus className="h-4 w-4 mr-2" />
-        Add First Participant
-      </Button>
-    </div>
-  );
-
-  const DestinationContent = ({ destination }: { destination: Destination }) => {
-    const { participants: destinationParticipants, loading: destinationLoading, addParticipant: addDestinationParticipant, updateParticipant: updateDestinationParticipant, deleteParticipant: deleteDestinationParticipant } = useParticipants(destination.name);
-
-    return (
-      <div className="space-y-6">
-        {/* Content */}
-        {destinationParticipants.length === 0 && !destinationLoading ? (
-          <EmptyState destinationName={destination.name} />
-        ) : (
-          <ParticipantsTable
-            participants={destinationParticipants}
-            loading={destinationLoading}
-            onUpdate={updateDestinationParticipant}
-            onDelete={deleteDestinationParticipant}
-          />
-        )}
-
-        {/* Gantt Chart */}
-        <GanttChart destinationName={destination.name} />
-
-        {/* Add Participant Dialog for this destination */}
-        <AddParticipantDialog
-          open={isAddDialogOpen && activeTab === destination.id}
-          onOpenChange={setIsAddDialogOpen}
-          onAdd={addDestinationParticipant}
-          trail={destination.name}
-        />
-      </div>
-    );
-  };
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -164,7 +107,11 @@ const AdminDashboard = () => {
           {/* Tab Content */}
           {DESTINATIONS.map((destination) => (
             <TabsContent key={destination.id} value={destination.id}>
-              <DestinationContent destination={destination} />
+              <DestinationContent 
+                destination={destination} 
+                isAddDialogOpen={isAddDialogOpen && activeTab === destination.id}
+                setIsAddDialogOpen={setIsAddDialogOpen}
+              />
             </TabsContent>
           ))}
           
@@ -174,6 +121,65 @@ const AdminDashboard = () => {
           </TabsContent>
         </Tabs>
       </main>
+
+      {/* Global Add Participant Dialog as fallback */}
+      <AddParticipantDialog
+        open={isAddDialogOpen && !DESTINATIONS.some(d => d.id === activeTab) && activeTab !== 'image-optimizer'}
+        onOpenChange={setIsAddDialogOpen}
+        onAdd={addParticipant}
+        trail={activeDestination?.name || ''}
+      />
+    </div>
+  );
+};
+
+// Extracted outside to prevent remount on parent re-render
+const ParticipantCounter = ({ destinationName }: { destinationName: string }) => {
+  const { participants } = useParticipants(destinationName);
+  return (
+    <Badge variant="secondary" className="ml-2">
+      <Users className="h-3 w-3 mr-1" />
+      {participants.length}
+    </Badge>
+  );
+};
+
+const DestinationContent = ({ destination, isAddDialogOpen, setIsAddDialogOpen }: { destination: Destination; isAddDialogOpen: boolean; setIsAddDialogOpen: (open: boolean) => void }) => {
+  const { participants, loading, addParticipant, updateParticipant, deleteParticipant } = useParticipants(destination.name);
+
+  return (
+    <div className="space-y-6">
+      {participants.length === 0 && !loading ? (
+        <div className="text-center py-12">
+          <div className="mx-auto w-24 h-24 bg-muted rounded-full flex items-center justify-center mb-4">
+            <Plus className="h-8 w-8 text-muted-foreground" />
+          </div>
+          <h3 className="text-lg font-semibold mb-2">No participants yet</h3>
+          <p className="text-muted-foreground mb-4">
+            Get started by adding your first participant to {destination.name}.
+          </p>
+          <Button onClick={() => setIsAddDialogOpen(true)}>
+            <Plus className="h-4 w-4 mr-2" />
+            Add First Participant
+          </Button>
+        </div>
+      ) : (
+        <ParticipantsTable
+          participants={participants}
+          loading={loading}
+          onUpdate={updateParticipant}
+          onDelete={deleteParticipant}
+        />
+      )}
+
+      <GanttChart destinationName={destination.name} />
+
+      <AddParticipantDialog
+        open={isAddDialogOpen}
+        onOpenChange={setIsAddDialogOpen}
+        onAdd={addParticipant}
+        trail={destination.name}
+      />
     </div>
   );
 };
