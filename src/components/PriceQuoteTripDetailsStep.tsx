@@ -8,6 +8,7 @@ import { UseFormReturn } from "react-hook-form";
 interface AccommodationOption {
   value: string;
   label: string;
+  spotsRemaining?: number;
 }
 
 interface PriceQuoteTripDetailsStepProps {
