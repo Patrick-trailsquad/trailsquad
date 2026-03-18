@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 interface AccommodationOption {
   value: string;
   label: string;
+  spotsRemaining?: number;
 }
 
 interface PriceQuoteFormProps {

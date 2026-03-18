@@ -8,6 +8,7 @@ import { UseFormReturn } from "react-hook-form";
 interface AccommodationOption {
   value: string;
   label: string;
+  spotsRemaining?: number;
 }
 
 interface PriceQuoteTripDetailsStepProps {
@@ -45,6 +46,12 @@ const PriceQuoteTripDetailsStep = ({
   const participants = watch("participants");
   const accommodationPreference = watch("accommodationPreference");
 
+  // Calculate effective max based on selected accommodation's remaining spots
+  const selectedOption = accommodationOptions.find(o => o.value === accommodationPreference);
+  const effectiveMax = selectedOption?.spotsRemaining !== undefined
+    ? Math.min(maxParticipants, selectedOption.spotsRemaining)
+    : maxParticipants;
+
   // Only auto-switch to "single" for default accommodation options (not custom ones like KangNu)
   useEffect(() => {
     if (!isCustomAccommodation && participants === 1 && accommodationPreference !== "single") {
@@ -52,12 +59,12 @@ const PriceQuoteTripDetailsStep = ({
     }
   }, [participants, accommodationPreference, setValue, isCustomAccommodation]);
 
-  // If participants exceeds max, clamp it down to max
+  // If participants exceeds effective max, clamp it down
   useEffect(() => {
-    if (participants > maxParticipants) {
-      setValue("participants", maxParticipants);
+    if (participants > effectiveMax) {
+      setValue("participants", effectiveMax);
     }
-  }, [participants, maxParticipants, setValue]);
+  }, [participants, effectiveMax, setValue]);
 
   return (
     <div className="space-y-4">
@@ -67,23 +74,23 @@ const PriceQuoteTripDetailsStep = ({
           id="participants"
           type="number"
           min="1"
-          max={maxParticipants}
+          max={effectiveMax}
           {...register("participants", { 
             required: true,
             min: 1,
             max: {
-              value: maxParticipants,
-              message: `Der er kun ${maxParticipants} pladser tilbage`,
+              value: effectiveMax,
+              message: `Der er kun ${effectiveMax} pladser tilbage for dette hotel`,
             },
             valueAsNumber: true 
           })}
           className="mt-1.5"
-          placeholder={`Indtast antal deltagere (maks ${maxParticipants})`}
+          placeholder={`Indtast antal deltagere (maks ${effectiveMax})`}
         />
         {errors.participants && (
-          <p className="text-red-500 text-sm mt-1">
+          <p className="text-destructive text-sm mt-1">
             {errors.participants.type === "max"
-              ? `Kan ikke overstige ${maxParticipants} deltagere (pladser tilbage).`
+              ? `Kan ikke overstige ${effectiveMax} deltagere (pladser tilbage for dette hotel).`
               : "Venligst indtast et gyldigt antal deltagere"}
           </p>
         )}
@@ -120,15 +127,26 @@ const PriceQuoteTripDetailsStep = ({
           }}
           className="gap-3"
         >
-          {accommodationOptions.map((option) => (
-            <div key={option.value} className="flex items-center space-x-2">
-              <RadioGroupItem value={option.value} id={`room-${option.value}`} />
-              <Label htmlFor={`room-${option.value}`}>{option.label}</Label>
-            </div>
-          ))}
+          {accommodationOptions.map((option) => {
+            const isSoldOut = option.spotsRemaining !== undefined && option.spotsRemaining <= 0;
+            const hasSpotInfo = option.spotsRemaining !== undefined;
+            return (
+              <div key={option.value} className={`flex items-center space-x-2 ${isSoldOut ? 'opacity-50' : ''}`}>
+                <RadioGroupItem value={option.value} id={`room-${option.value}`} disabled={isSoldOut} />
+                <Label htmlFor={`room-${option.value}`} className={isSoldOut ? 'line-through' : ''}>
+                  {option.label}
+                  {hasSpotInfo && (
+                    <span className={`ml-2 text-xs font-semibold ${isSoldOut ? 'text-destructive' : 'text-terra'}`}>
+                      {isSoldOut ? '— Udsolgt' : `— ${option.spotsRemaining} tilbage`}
+                    </span>
+                  )}
+                </Label>
+              </div>
+            );
+          })}
         </RadioGroup>
         {errors.accommodationPreference && (
-          <p className="text-red-500 text-sm">Venligst vælg en indkvarteringspræference</p>
+          <p className="text-destructive text-sm">Venligst vælg en indkvarteringspræference</p>
         )}
       </div>
 
