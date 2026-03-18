@@ -121,15 +121,26 @@ const PriceQuoteTripDetailsStep = ({
           }}
           className="gap-3"
         >
-          {accommodationOptions.map((option) => (
-            <div key={option.value} className="flex items-center space-x-2">
-              <RadioGroupItem value={option.value} id={`room-${option.value}`} />
-              <Label htmlFor={`room-${option.value}`}>{option.label}</Label>
-            </div>
-          ))}
+          {accommodationOptions.map((option) => {
+            const isSoldOut = option.spotsRemaining !== undefined && option.spotsRemaining <= 0;
+            const hasSpotInfo = option.spotsRemaining !== undefined;
+            return (
+              <div key={option.value} className={`flex items-center space-x-2 ${isSoldOut ? 'opacity-50' : ''}`}>
+                <RadioGroupItem value={option.value} id={`room-${option.value}`} disabled={isSoldOut} />
+                <Label htmlFor={`room-${option.value}`} className={isSoldOut ? 'line-through' : ''}>
+                  {option.label}
+                  {hasSpotInfo && (
+                    <span className={`ml-2 text-xs font-semibold ${isSoldOut ? 'text-destructive' : 'text-terra'}`}>
+                      {isSoldOut ? '— Udsolgt' : `— ${option.spotsRemaining} tilbage`}
+                    </span>
+                  )}
+                </Label>
+              </div>
+            );
+          })}
         </RadioGroup>
         {errors.accommodationPreference && (
-          <p className="text-red-500 text-sm">Venligst vælg en indkvarteringspræference</p>
+          <p className="text-destructive text-sm">Venligst vælg en indkvarteringspræference</p>
         )}
       </div>
 
