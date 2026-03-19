@@ -17,7 +17,7 @@ const days = [
     date: "7. august",
     title: "Forberedelse & shakeout",
     items: [
-      { icon: Footprints, text: "Shakeout Run i de schweiziske alper" },
+      { icon: Footprints, text: "Shakeout Run i de schweiziske alper", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Users, text: "Afhentning af startnumre" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
