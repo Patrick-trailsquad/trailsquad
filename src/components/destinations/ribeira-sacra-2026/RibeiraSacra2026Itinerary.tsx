@@ -18,7 +18,7 @@ const days = [
     date: "21. august",
     title: "Hvalsafari & forberedelse",
     items: [
-      { icon: Footprints, text: "Shakeout Run" },
+      { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Binoculars, text: "3-timers hvalsafari i Nuuk-fjorden" },
       { icon: Users, text: "Løbsstrategi med holdet og afhentning af startnumre" },
       { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
@@ -96,6 +96,36 @@ const RibeiraSacra2026Itinerary = ({ variant = "default" }: RibeiraSacra2026Itin
                         <item.icon className={`w-4 h-4 flex-shrink-0 ${isOverlay ? "text-white/50" : "text-charcoal/40"}`} />
                         <span className={isOverlay ? "text-white/85" : "text-charcoal/80"}>
                           {item.text}
+                          {"linkText" in item && item.linkText && (
+                            <>
+                              {" "}
+                              <a
+                                href={`#${"linkTarget" in item ? item.linkTarget : ""}`}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  const el = document.getElementById("linkTarget" in item ? (item.linkTarget as string) : "");
+                                  if (!el) return;
+                                  const targetY = el.getBoundingClientRect().top + window.scrollY;
+                                  const startY = window.scrollY;
+                                  const distance = targetY - startY;
+                                  const isMobileView = window.innerWidth < 768;
+                                  const duration = isMobileView ? 1800 : 1000;
+                                  let start: number | null = null;
+                                  const step = (timestamp: number) => {
+                                    if (!start) start = timestamp;
+                                    const progress = Math.min((timestamp - start) / duration, 1);
+                                    const ease = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+                                    window.scrollTo(0, startY + distance * ease);
+                                    if (progress < 1) requestAnimationFrame(step);
+                                  };
+                                  requestAnimationFrame(step);
+                                }}
+                                className={`cursor-pointer hover:opacity-70 transition-opacity ${isOverlay ? "text-[#FFE97F]" : "text-charcoal/60"}`}
+                              >
+                                {item.linkText as string}
+                              </a>
+                            </>
+                          )}
                         </span>
                       </li>
                     ))}
