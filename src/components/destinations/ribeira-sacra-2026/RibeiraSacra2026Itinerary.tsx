@@ -40,7 +40,7 @@ const days = [
     date: "12. oktober",
     title: "Hjemrejse",
     items: [
-      { icon: Coffee, text: "Morgenmad og farvel" },
+      { icon: Coffee, text: "Tidligt op og morgenmaden medtages i bussen picnic-style" },
       { icon: MapPin, text: "Transfer til lufthavn" },
       { icon: Plane, text: "Fly hjem til København" },
     ],
