@@ -18,9 +18,9 @@ const days = [
     title: "Forberedelse & shakeout",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
-      { icon: Trophy, text: "Race day for løbere af 100 km!" },
       { icon: Users, text: "Afhentning af startnumre" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
+      { icon: Trophy, text: "Race day for løbere af 100 km!" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
     ],
   },
