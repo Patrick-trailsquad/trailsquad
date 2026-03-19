@@ -27,7 +27,7 @@ const days = [
   },
   {
     day: 3,
-    date: "22. august",
+    date: "11. oktober",
     title: "Løbsdag",
     items: [
       { icon: Trophy, text: "Race day!" },
