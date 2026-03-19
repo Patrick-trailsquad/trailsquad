@@ -21,7 +21,7 @@ const days = [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Binoculars, text: "Færgetur på Ribeira Sacra floden" },
       { icon: Users, text: "Løbsstrategi med holdet og afhentning af startnumre" },
-      { icon: Mountain, text: "Udforsk Nuuk på egen hånd" },
+      { icon: Mountain, text: "Løbsstrategi med gruppen" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
     ],
   },
