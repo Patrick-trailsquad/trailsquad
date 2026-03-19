@@ -1,4 +1,5 @@
 import { ArrowLeft, MousePointerClick } from "lucide-react";
+import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
 import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
@@ -95,6 +96,23 @@ const SwissAlps100 = () => {
         </div>
       </div>
       
+      {/* Dagplan with parallax background */}
+      <section className="w-full relative overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/swiss-alps-100-hero-new.jpg)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }} />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
+          <SwissAlps100Itinerary variant="overlay" />
+        </div>
+      </section>
+
       <div className="mt-12 mb-20">
         <SwissAlps100IncludedAmenities className="bg-transparent" />
       </div>
