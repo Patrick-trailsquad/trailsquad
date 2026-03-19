@@ -7,7 +7,7 @@ const days = [
     title: "Ankomst til Schweiz",
     items: [
       { icon: Plane, text: "Fly fra København til Zürich 🇨🇭" },
-      { icon: Train, text: "Togtransfer til Fiesch i Valais-regionen" },
+      { icon: Train, text: "Privat shuttlebus til Fiesch i Valais-regionen" },
       { icon: Coffee, text: "Check-in på hotel og tid til at udforske området" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd)" },
     ],
