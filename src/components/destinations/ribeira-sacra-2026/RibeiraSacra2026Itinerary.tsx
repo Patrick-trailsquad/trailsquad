@@ -8,7 +8,7 @@ const days = [
     items: [
       { icon: Plane, text: "Fly fra København til Porto 🇵🇹" },
       { icon: MapPin, text: "Transfer fra lufthavn til hotel i Luintra, Galicia 🇪🇸" },
-      { icon: Coffee, text: "Check-in og tid til at udforske Nuuk" },
+      
       
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd)" },
     ],
