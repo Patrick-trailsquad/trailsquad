@@ -40,7 +40,7 @@ const days = [
     title: "Hjemrejse",
     items: [
       { icon: Coffee, text: "Morgenmad på hotellet" },
-      { icon: Train, text: "Togtransfer til Zürich lufthavn" },
+      { icon: Train, text: "Shuttlebus tilbage til Zürich lufthavn" },
       { icon: Plane, text: "Fly hjem til København" },
     ],
   },
