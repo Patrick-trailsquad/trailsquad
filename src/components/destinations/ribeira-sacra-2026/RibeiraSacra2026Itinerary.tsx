@@ -3,7 +3,7 @@ import { Plane, Mountain, UtensilsCrossed, Binoculars, Users, Trophy, MapPin, Co
 const days = [
   {
     day: 1,
-    date: "20. august",
+    date: "9. oktober",
     title: "Ankomst til Nuuk",
     items: [
       { icon: Plane, text: "Fly fra København til Nuuk" },
