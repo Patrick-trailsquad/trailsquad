@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Play } from "lucide-react";
 import VideoLightbox from '../VideoLightbox';
 
-const ShakeoutRunBanner = () => {
+const ShakeoutRunBanner = ({ showLocalClub = false }: { showLocalClub?: boolean }) => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const videoUrl = "https://www.youtube.com/embed/KyPCMpL_5d0?autoplay=1";
