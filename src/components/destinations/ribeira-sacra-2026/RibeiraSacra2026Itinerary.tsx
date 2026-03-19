@@ -4,10 +4,10 @@ const days = [
   {
     day: 1,
     date: "9. oktober",
-    title: "Ankomst til Nuuk",
+    title: "Ankomst til Galicia",
     items: [
-      { icon: Plane, text: "Fly fra København til Nuuk" },
-      { icon: MapPin, text: "Transfer fra lufthavn til hotel" },
+      { icon: Plane, text: "Fly fra København til Porto 🇵🇹" },
+      { icon: MapPin, text: "Transfer fra lufthavn til hotel i Luintra, Galicia 🇪🇸" },
       { icon: Coffee, text: "Check-in og tid til at udforske Nuuk" },
       { icon: Binoculars, text: "Valget mellem en 3-timers fisketur i Nuuks fjord ELLER et smut forbi det lokale vildmarksbad med tilhørende sauna." },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd)" },
