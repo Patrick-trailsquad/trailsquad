@@ -30,8 +30,8 @@ const InfiniteTrailsPricingSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
                 <div>
-                  Prisen for et <b>Delt Comfy Plus Dobbeltværelse</b> er 11.600 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                  Prisen for et <b>Individuelt Classic Dobbeltværelse</b> er 13.200 DKK.<br /><br />
+                  Prisen for et <b>Delt Comfy Plus Dobbeltværelse</b> er 12.600 DKK per person, og du vil dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                  Prisen for et <b>Individuelt Classic Dobbeltværelse</b> er 14.200 DKK.<br /><br />
                   Moms er inkluderet i alle priser.
                 </div>
               </AccordionContent>
