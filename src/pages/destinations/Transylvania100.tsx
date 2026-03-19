@@ -17,6 +17,7 @@ import TransylvaniaAccommodation from "../../components/destinations/transylvani
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 import TransylvaniaScrollingBanner from "../../components/destinations/transylvania/TransylvaniaScrollingBanner";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
+import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
 const Transylvania100 = () => {
   const isMobile = useIsMobile();
