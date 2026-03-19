@@ -3,7 +3,7 @@ import { Plane, Mountain, UtensilsCrossed, Binoculars, Users, Trophy, MapPin, Co
 const days = [
   {
     day: 1,
-    date: "20. august",
+    date: "9. oktober",
     title: "Ankomst til Nuuk",
     items: [
       { icon: Plane, text: "Fly fra København til Nuuk" },
@@ -15,7 +15,7 @@ const days = [
   },
   {
     day: 2,
-    date: "21. august",
+    date: "10. oktober",
     title: "Hvalsafari & forberedelse",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
@@ -27,7 +27,7 @@ const days = [
   },
   {
     day: 3,
-    date: "22. august",
+    date: "11. oktober",
     title: "Løbsdag",
     items: [
       { icon: Trophy, text: "Race day!" },
@@ -37,7 +37,7 @@ const days = [
   },
   {
     day: 4,
-    date: "23. august",
+    date: "12. oktober",
     title: "Hjemrejse",
     items: [
       { icon: Coffee, text: "Morgenmad og farvel" },
