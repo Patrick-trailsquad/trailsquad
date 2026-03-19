@@ -15,7 +15,7 @@ const days = [
   {
     day: 2,
     date: "7. august",
-    title: "Forberedelse & shakeout",
+    title: "Forberedelse og/eller 100 km race!",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Users, text: "Afhentning af startnumre" },
