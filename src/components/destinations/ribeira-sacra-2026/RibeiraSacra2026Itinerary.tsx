@@ -16,10 +16,10 @@ const days = [
   {
     day: 2,
     date: "10. oktober",
-    title: "Hvalsafari & forberedelse",
+    title: "Færgetur & forberedelse",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
-      { icon: Binoculars, text: "Færgetur på Ribeira Sacra floden" },
+      { icon: Binoculars, text: "Bådtur på Ribeira Sacra floden" },
       { icon: Users, text: "Afhentning af startnumre i Luintra, hvor vi både starter og slutter løbet" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
