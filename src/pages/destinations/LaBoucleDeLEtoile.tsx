@@ -14,6 +14,7 @@ import LaBoucleDeLEtoileAccommodation from "../../components/destinations/la-bou
 import LaBoucleDeLEtoilePricingSection from "../../components/destinations/la-boucle-de-l-etoile/LaBoucleDeLEtoilePricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 
 const LaBoucleDeLEtoile = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
