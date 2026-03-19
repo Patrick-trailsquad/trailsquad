@@ -13,6 +13,7 @@ import RibeiraMediaSection from "../../components/destinations/ribeira-sacra/Rib
 import RibeiraAccommodation from "../../components/destinations/ribeira-sacra/RibeiraAccommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
+import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 import RibeiraSacraTestimonials from "../../components/destinations/ribeira-sacra/RibeiraSacraTestimonials";
 
 const RibeiraSacra = () => {
