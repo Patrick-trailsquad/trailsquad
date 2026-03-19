@@ -101,7 +101,7 @@ const SwissAlps100 = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: 'url(/lovable-uploads/swiss-alps-100-hero-new.jpg)',
+            backgroundImage: 'url(/lovable-uploads/ribeira-sacra-dagplan-bg.jpg)',
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
