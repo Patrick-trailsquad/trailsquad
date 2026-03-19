@@ -15,7 +15,7 @@ const days = [
   },
   {
     day: 2,
-    date: "21. august",
+    date: "10. oktober",
     title: "Hvalsafari & forberedelse",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
