@@ -15,6 +15,7 @@ import LaBoucleDeLEtoilePricingSection from "../../components/destinations/la-bo
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
+import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
 const LaBoucleDeLEtoile = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
@@ -105,6 +106,7 @@ const LaBoucleDeLEtoile = () => {
       <BackToDestinationsButton />
 
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );

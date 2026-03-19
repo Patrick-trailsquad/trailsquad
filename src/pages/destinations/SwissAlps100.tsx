@@ -14,6 +14,7 @@ import SwissAlps100PricingSection from "../../components/destinations/swiss-alps
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
+import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
 const SwissAlps100 = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
@@ -137,6 +138,7 @@ const SwissAlps100 = () => {
         <BackToDestinationsButton />
       </div>
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );

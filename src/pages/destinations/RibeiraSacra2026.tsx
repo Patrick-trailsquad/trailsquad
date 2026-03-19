@@ -15,6 +15,7 @@ import RibeiraAccommodation from "../../components/destinations/ribeira-sacra/Ri
 import RibeiraPricingSection2026 from "../../components/destinations/ribeira-sacra-2026/RibeiraPricingSection2026";
 import { useIsMobile } from "../../hooks/use-mobile";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
+import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
 const RibeiraSacra2026 = () => {
   useScrollToTop();
@@ -160,6 +161,7 @@ const RibeiraSacra2026 = () => {
         <BackToDestinationsButton />
       </div>
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );

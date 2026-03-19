@@ -15,6 +15,7 @@ import InfiniteTrailsPricingSection from "../../components/destinations/infinite
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
+import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
 const InfiniteTrails = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
@@ -137,6 +138,7 @@ const InfiniteTrails = () => {
         <BackToDestinationsButton />
       </div>
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );
