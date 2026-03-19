@@ -4,10 +4,10 @@ const days = [
   {
     day: 1,
     date: "9. oktober",
-    title: "Ankomst til Nuuk",
+    title: "Ankomst til Galicia",
     items: [
-      { icon: Plane, text: "Fly fra København til Nuuk" },
-      { icon: MapPin, text: "Transfer fra lufthavn til hotel" },
+      { icon: Plane, text: "Fly fra København til Porto 🇵🇹" },
+      { icon: MapPin, text: "Transfer fra lufthavn til hotel i Luintra, Galicia 🇪🇸" },
       { icon: Coffee, text: "Check-in og tid til at udforske Nuuk" },
       { icon: Binoculars, text: "Valget mellem en 3-timers fisketur i Nuuks fjord ELLER et smut forbi det lokale vildmarksbad med tilhørende sauna." },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd)" },
@@ -16,10 +16,10 @@ const days = [
   {
     day: 2,
     date: "10. oktober",
-    title: "Hvalsafari & forberedelse",
+    title: "Færgetur & forberedelse",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
-      { icon: Binoculars, text: "Færgetur på Ribeira Sacra floden" },
+      { icon: Binoculars, text: "Bådtur på Ribeira Sacra floden" },
       { icon: Users, text: "Afhentning af startnumre i Luintra, hvor vi både starter og slutter løbet" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
