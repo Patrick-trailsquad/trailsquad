@@ -93,7 +93,7 @@ const RibeiraSacra2026 = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: 'url(/lovable-uploads/ribeira-sacra-2026-hero-2.jpg)',
+            backgroundImage: 'url(/lovable-uploads/ribeira-sacra-dagplan-bg.jpg)',
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
