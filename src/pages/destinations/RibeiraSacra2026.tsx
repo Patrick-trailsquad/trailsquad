@@ -161,6 +161,7 @@ const RibeiraSacra2026 = () => {
         <BackToDestinationsButton />
       </div>
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );

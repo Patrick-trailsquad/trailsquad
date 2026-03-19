@@ -133,6 +133,7 @@ const RibeiraSacra = () => {
         <BackToDestinationsButton />
       </div>
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );

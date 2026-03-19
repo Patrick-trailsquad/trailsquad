@@ -106,6 +106,7 @@ const LaBoucleDeLEtoile = () => {
       <BackToDestinationsButton />
 
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );

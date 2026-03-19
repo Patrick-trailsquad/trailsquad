@@ -91,6 +91,7 @@ const Transylvania100 = () => {
         <BackToDestinationsButton />
       </div>
       <ShakeoutRunBanner />
+      <VideoBackgroundSection />
       <Footer />
     </div>
   );
