@@ -136,6 +136,7 @@ const InfiniteTrails = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <ShakeoutRunBanner />
       <Footer />
     </div>
   );

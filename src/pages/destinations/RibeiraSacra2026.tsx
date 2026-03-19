@@ -159,6 +159,7 @@ const RibeiraSacra2026 = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <ShakeoutRunBanner />
       <Footer />
     </div>
   );

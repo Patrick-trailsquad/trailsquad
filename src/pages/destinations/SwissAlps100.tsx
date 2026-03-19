@@ -136,6 +136,7 @@ const SwissAlps100 = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <ShakeoutRunBanner />
       <Footer />
     </div>
   );

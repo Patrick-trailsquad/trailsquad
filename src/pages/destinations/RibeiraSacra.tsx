@@ -131,6 +131,7 @@ const RibeiraSacra = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <ShakeoutRunBanner />
       <Footer />
     </div>
   );
