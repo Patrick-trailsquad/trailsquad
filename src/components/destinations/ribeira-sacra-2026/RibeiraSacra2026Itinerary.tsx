@@ -37,7 +37,7 @@ const days = [
   },
   {
     day: 4,
-    date: "23. august",
+    date: "12. oktober",
     title: "Hjemrejse",
     items: [
       { icon: Coffee, text: "Morgenmad og farvel" },
