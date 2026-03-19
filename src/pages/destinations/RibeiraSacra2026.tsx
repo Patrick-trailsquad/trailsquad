@@ -16,6 +16,7 @@ import RibeiraPricingSection2026 from "../../components/destinations/ribeira-sac
 import { useIsMobile } from "../../hooks/use-mobile";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
+import RibeiraSacra2026Itinerary from "../../components/destinations/ribeira-sacra-2026/RibeiraSacra2026Itinerary";
 
 const RibeiraSacra2026 = () => {
   useScrollToTop();
@@ -87,6 +88,23 @@ const RibeiraSacra2026 = () => {
         <IncludedAmenities className="bg-transparent" />
       </div>
       
+      {/* Dagplan with parallax background */}
+      <section className="w-full relative overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/ribeira-sacra-2026-hero-2.jpg)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }} />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
+          <RibeiraSacra2026Itinerary variant="overlay" />
+        </div>
+      </section>
+
       {/* Decorative Lines Section */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
         <svg 
