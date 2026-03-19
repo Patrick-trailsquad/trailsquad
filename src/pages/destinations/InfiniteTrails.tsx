@@ -14,6 +14,7 @@ import InfiniteTrailsAccommodation from "../../components/destinations/infinite-
 import InfiniteTrailsPricingSection from "../../components/destinations/infinite-trails/InfiniteTrailsPricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 
 const InfiniteTrails = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
