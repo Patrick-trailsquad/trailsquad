@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Play } from "lucide-react";
 import VideoLightbox from '../VideoLightbox';
 
-const ShakeoutRunBanner = () => {
+const ShakeoutRunBanner = ({ showLocalClub = false }: { showLocalClub?: boolean }) => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const videoUrl = "https://www.youtube.com/embed/KyPCMpL_5d0?autoplay=1";
@@ -25,8 +25,8 @@ const ShakeoutRunBanner = () => {
                   /ˈʃeɪk.aʊt rʌn/
                 </p>
                 <div className="w-12 h-[2px] bg-charcoal/20" />
-                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">En let joggetur på 20–30 minutter, som man løber dagen før race day for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.<br />
-Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯
+                <p className="text-charcoal/75 text-base md:text-lg max-w-lg leading-relaxed">En let joggetur på 20–30 minutter, som man løber dagen før race day for at øge blodgennemstrømningen, mindske muskelstivhed og dulme nerverne.{showLocalClub && (<><br />
+Vi løber sammen med den lokale løbeklub, som viser os de fede spots 🎯</>)}
                 </p>
               </div>
             </div>
