@@ -13,6 +13,7 @@ import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-
 import SwissAlps100PricingSection from "../../components/destinations/swiss-alps-100/SwissAlps100PricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
 import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 
 const SwissAlps100 = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
