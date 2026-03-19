@@ -21,6 +21,7 @@ const days = [
       { icon: Users, text: "Afhentning af startnumre" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
+      { icon: Trophy, text: "Race day for løbere af 100 km!" },
     ],
   },
   {
