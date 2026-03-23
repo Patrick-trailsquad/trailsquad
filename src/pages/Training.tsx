@@ -7,7 +7,7 @@ import { useYouTubePlayer } from "../hooks/useYouTubePlayer";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
-import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
+import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
 import copenhillImage from "@/assets/copenhill-training.avif";
