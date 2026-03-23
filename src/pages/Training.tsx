@@ -10,6 +10,7 @@ import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModa
 import trailFoxLogo from "@/assets/trail-fox-logo-white.png";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
+import copenhillImage from "@/assets/copenhill-training.avif";
 import trainingSession4Image from "@/assets/training-session-4.jpg";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
 import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
