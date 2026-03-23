@@ -244,7 +244,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Sted:</span> Copenhill, København
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> Copenhill
+                      <span className="font-semibold">Mødested:</span> August Bournonvilles Passage 8, 1055 København K
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi starter på Kongens Nytorv (foran Det Kongelige teater), så transport med metro er en leg. Dernæst lunter vi et par km ud til Copenhill, og Coach Emil vil gøre intens bakketræning til dagens sjoveste tjans!</p>
