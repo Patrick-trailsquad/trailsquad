@@ -247,7 +247,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Mødested:</span> Copenhill
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Mere info kommer snart!</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi starter på Kongens Nytorv (foran Det Kongelige teater), så transport med metro er en leg. Dernæst lunter vi et par km ud til Copenhill, og Coach Emil vil gøre intens bakketræning til dagens sjoveste tjans!</p>
                   <button onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "Copenhill")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
