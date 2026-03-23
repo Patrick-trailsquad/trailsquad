@@ -12,6 +12,7 @@ import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
 import copenhillImage from "@/assets/copenhill-training.avif";
 import trainingSession4Image from "@/assets/training-session-4.jpg";
+import dyrehaven7Image from "@/assets/dyrehaven-training-7.png";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
 import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
 const Training = () => {
