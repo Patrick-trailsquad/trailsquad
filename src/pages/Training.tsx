@@ -223,7 +223,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               </div>
 
               {/* Session 8 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "Copenhill")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={copenhillImage} alt="Training Session 8 - Copenhill" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
