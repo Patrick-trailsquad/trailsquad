@@ -224,7 +224,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               {/* Session 8 */}
               <div onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "Copenhill")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={trainingSession3Image} alt="Training Session 8" className="w-full h-full object-cover" />
+                  <img src={copenhillImage} alt="Training Session 8 - Copenhill" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #8<br />[juni]</h3>
                 </div>
