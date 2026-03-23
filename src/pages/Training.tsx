@@ -193,7 +193,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
               {/* Session 7 */}
               <div onClick={() => handleSessionRegistration("Træningssession #7", "19 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={trainingSession5Image} alt="Training Session 7" className="w-full h-full object-cover" />
+                  <img src={dyrehaven7Image} alt="Training Session 7 - Dyrehaven" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #7<br />[maj]</h3>
                 </div>
