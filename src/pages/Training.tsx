@@ -247,7 +247,10 @@ Så vil vores trail træningssessions være noget for dig!</p>
                       <span className="font-semibold">Mødested:</span> August Bournonvilles Passage 8, 1055 København K
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi starter på Kongens Nytorv (foran Det Kongelige teater), så transport med metro er en leg. Dernæst lunter vi et par km ud til Copenhill, og Coach Emil vil gøre intens bakketræning til dagens sjoveste tjans!</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi starter på Kongens Nytorv (foran Det Kongelige teater), så transport med metro er en leg. Dernæst lunter vi et par km ud til Copenhill, og Coach Emil vil gøre intens bakketræning til dagens sjoveste tjans!
+
+Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
+                </p>
                   <button onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
@@ -285,11 +288,8 @@ Så vil vores trail træningssessions være noget for dig!</p>
                 </a>
               </div>
               
-              <div className="relative" style={{
-              transform: 'translateX(-15px)'
-            }}>
-                <div onClick={(e) => {
-                e.preventDefault();
+              <div className="relative" style={{ transform: 'translateX(-15px)' }}>
+                <div onClick={(e) => {e.preventDefault();
                 navigateAndScroll('/', 'upcoming-trips');
               }} className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-default">
                   <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-32 md:h-40 object-cover" />
