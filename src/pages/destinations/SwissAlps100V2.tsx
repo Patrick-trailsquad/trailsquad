@@ -176,7 +176,7 @@ const SwissAlps100V2 = () => {
                           <p className="text-sm text-white/60 mt-1">{date}</p>
                         </div>
                       </div>
-                      <p className="text-charcoal/80 italic text-sm leading-relaxed mb-4 line-clamp-6">
+                      <p className="text-white/80 italic text-sm leading-relaxed mb-4 line-clamp-6">
                         "{t.review}"
                       </p>
                       <div className="flex items-center justify-between gap-2">
