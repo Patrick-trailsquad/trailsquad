@@ -146,7 +146,7 @@ const SwissAlps100V2 = () => {
                 onClick={scrollToCTA}
                 className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
               >
-                Ansøg om en plads
+                Ansøg om en plads nu
               </button>
               <button
                 onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
