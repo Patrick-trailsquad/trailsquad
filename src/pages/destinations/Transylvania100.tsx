@@ -14,7 +14,7 @@ import TransylvaniaPricingSection from "../../components/destinations/transylvan
 import TransylvaniaIncludedAmenities from "../../components/destinations/transylvania/TransylvaniaIncludedAmenities";
 import TransylvaniaDecorativeLines from "../../components/destinations/transylvania/TransylvaniaDecorativeLines";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
-import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+
 import TransylvaniaScrollingBanner from "../../components/destinations/transylvania/TransylvaniaScrollingBanner";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
