@@ -153,13 +153,38 @@ const SwissAlps100V2 = () => {
               return (
                 <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full bg-white/10 backdrop-blur-sm">
                   <CardContent className="p-0 h-full">
-                    <div className="bg-gray-100 h-60 relative overflow-hidden">
+                    <div className="bg-gray-100 h-60 relative overflow-hidden group">
                       <img
-                        src={photos[0]}
+                        src={photos[activePhotos[index] || 0]}
                         alt={`Billede fra ${t.name}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-opacity duration-300"
                         loading="lazy"
                       />
+                      {photos.length > 1 && (
+                        <>
+                          <button
+                            onClick={() => setActivePhotos(prev => ({ ...prev, [index]: ((prev[index] || 0) - 1 + photos.length) % photos.length }))}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            <ChevronLeft className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => setActivePhotos(prev => ({ ...prev, [index]: ((prev[index] || 0) + 1) % photos.length }))}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            <ChevronRight className="w-4 h-4" />
+                          </button>
+                          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                            {photos.map((_, pi) => (
+                              <button
+                                key={pi}
+                                onClick={() => setActivePhotos(prev => ({ ...prev, [index]: pi }))}
+                                className={`w-2 h-2 rounded-full transition-colors ${(activePhotos[index] || 0) === pi ? "bg-white" : "bg-white/40"}`}
+                              />
+                            ))}
+                          </div>
+                        </>
+                      )}
                     </div>
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
