@@ -551,8 +551,8 @@ const KangNu26V2 = () => {
                 a: "Det er ikke et konkurrencehold. Vi løber i vores eget tempo, og du har fuld støtte undervejs — både fra træneren og gruppen.",
               },
               {
-                q: "Hvad hvis jeg bliver skadet under turen?",
-                a: "Sikkerhed er vigtigt for os, men deltagelse sker på eget ansvar. Vi anbefaler, at du tegner en rejseforsikring, der dækker sportsskader og eventuel hjemtransport.",
+                q: "Hvad med udstyr og race-taktik?",
+                a: "Vi hjælper dig hele vejen. Du får en komplet udstyrsguide tilpasset forholdene i Grønland, og Coach Emil gennemgår race-taktik, så du føler dig tryg og godt forberedt på startlinjen.",
               },
               {
                 q: "Er det dyrt?",
