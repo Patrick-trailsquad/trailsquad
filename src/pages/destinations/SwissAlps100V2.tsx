@@ -555,12 +555,14 @@ const SwissAlps100V2 = () => {
       <section className="bg-charcoal py-10 md:py-14">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-            <img
-              src={madsPhoto}
-              alt={`Billede fra ${mads.name}`}
-              className="w-[7.5rem] h-[7.5rem] md:w-36 md:h-36 rounded-full object-cover border-2 border-[#FFDC00]/30 shrink-0 scale-150"
-              loading="lazy"
-            />
+            <div className="w-[7.5rem] h-[7.5rem] md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-[#FFDC00]/30 shrink-0">
+              <img
+                src={madsPhoto}
+                alt={`Billede fra ${mads.name}`}
+                className="w-full h-full object-cover scale-150"
+                loading="lazy"
+              />
+            </div>
             <div className="flex-1 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-1 mb-2">
                 {[1, 2, 3, 4, 5].map(s => (
