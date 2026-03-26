@@ -226,12 +226,14 @@ const SwissAlps100V2 = () => {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
             {/* Photo */}
-            <img
-              src={marinaPhoto}
-              alt={`Billede fra ${marina.name}`}
-              className="w-[7.5rem] h-[7.5rem] md:w-36 md:h-36 rounded-full object-cover border-2 border-[#FFDC00]/30 shrink-0 scale-150"
-              loading="lazy"
-            />
+            <div className="w-[7.5rem] h-[7.5rem] md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-[#FFDC00]/30 shrink-0">
+              <img
+                src={marinaPhoto}
+                alt={`Billede fra ${marina.name}`}
+                className="w-full h-full object-cover scale-150"
+                loading="lazy"
+              />
+            </div>
 
             {/* Quote */}
             <div className="flex-1 text-center md:text-left">
