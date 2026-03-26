@@ -13,7 +13,7 @@ import KangNu26PricingSection from "../../components/destinations/kangnu26/KangN
 import KangNu26IncludedAmenities from "../../components/destinations/kangnu26/KangNu26IncludedAmenities";
 import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu26Accommodation";
 import { useIsMobile } from "../../hooks/use-mobile";
-import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import KangNu26Itinerary from "../../components/destinations/kangnu26/KangNu26Itinerary";
