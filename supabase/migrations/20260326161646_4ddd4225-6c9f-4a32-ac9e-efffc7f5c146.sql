@@ -1,0 +1,1 @@
+DELETE FROM public.testimonials WHERE id = 'e1a5a53b-12f2-42fa-a3bf-41fe8bf3d1f3';
