@@ -146,7 +146,13 @@ const SwissAlps100V2 = () => {
       <section className="bg-[#FFDC00] py-4 md:py-5">
         <div className="container mx-auto px-6 max-w-4xl flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-center md:text-left">
           <div className="flex items-center gap-2">
-            <Calendar className="w-5 h-5 text-charcoal shrink-0" />
+            <motion.div
+              animate={{ rotate: [0, 180, 180, 360] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
+              className="shrink-0"
+            >
+              <Hourglass className="w-5 h-5 text-charcoal" />
+            </motion.div>
             <p className="font-cabinet font-bold text-charcoal text-base md:text-lg">
               Tilmeld dig inden udgangen af april
             </p>
