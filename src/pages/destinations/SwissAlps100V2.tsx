@@ -53,7 +53,7 @@ const SwissAlps100V2 = () => {
   return (
     <div className="min-h-screen bg-stone">
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
           src="/lovable-uploads/swiss-alps-100-hero-new.jpg"
           alt="Løbere i de schweiziske alper med udsigt over Aletsch-gletsjeren"
@@ -68,7 +68,7 @@ const SwissAlps100V2 = () => {
           </Link>
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center mt-24 md:mt-0">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -135,31 +135,51 @@ const SwissAlps100V2 = () => {
             <span className="text-white/60 text-sm font-cabinet whitespace-nowrap">— Frederik</span>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center"
-          >
-            <button
-              onClick={scrollToCTA}
-              className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+          {!isMobile && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center"
             >
-              Ansøg om en plads
-            </button>
-            <button
-              onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
-            >
-              Se hvad du får
-            </button>
-          </motion.div>
+              <button
+                onClick={scrollToCTA}
+                className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+              >
+                Ansøg om en plads
+              </button>
+              <button
+                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+                className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+              >
+                Se hvad du får
+              </button>
+            </motion.div>
+          )}
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
           <ChevronDown className="w-6 h-6 text-white/50" />
         </div>
       </section>
+
+      {/* Mobile CTA buttons below hero fold */}
+      {isMobile && (
+        <div className="bg-charcoal px-6 py-6 flex flex-col gap-3">
+          <button
+            onClick={scrollToCTA}
+            className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+          >
+            Ansøg om en plads
+          </button>
+          <button
+            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+            className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+          >
+            Se hvad du får
+          </button>
+        </div>
+      )}
 
       <section className="bg-charcoal py-6 md:py-8 border-b border-white/10">
         <div className="container mx-auto px-6 max-w-3xl text-center">
