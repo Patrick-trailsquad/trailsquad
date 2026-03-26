@@ -224,7 +224,7 @@ Arrangeret af et lokalt adventurebureau - og ja, det er selvfølgelig med i pris
         </svg>
       </div>
 
-      <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til de fede Trail Fox løb i Tisvilde (marts) og Røsnæs (april). Vi tager afsted sammen og får en fest!" />
+      
       <div className="pb-16 md:pb-32" />
       <ShakeoutRunBanner showLocalClub />
       <VideoBackgroundSection />
