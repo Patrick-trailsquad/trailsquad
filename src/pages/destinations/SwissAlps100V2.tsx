@@ -568,9 +568,12 @@ const SwissAlps100V2 = () => {
               <blockquote className="text-white/90 italic text-sm md:text-base leading-relaxed mb-2 max-w-[90%]">
                 "{mads.review}"
               </blockquote>
-              <div className="flex items-center justify-center md:justify-start gap-3">
-                <span className="font-cabinet font-bold text-white text-sm">{mads.name}</span>
-                {mads.location && <span className="text-white/50 text-sm">{mads.location}</span>}
+              <div className="flex flex-col items-center md:items-start gap-0.5">
+                <div className="flex items-center gap-3">
+                  <span className="font-cabinet font-bold text-white text-sm">{mads.name}</span>
+                  {mads.location && <span className="text-white/50 text-sm">{mads.location}</span>}
+                </div>
+                <span className="text-white/40 text-xs">Deltager på tur til Trail Ribeira Sacra, Spanien</span>
               </div>
             </div>
           </div>
