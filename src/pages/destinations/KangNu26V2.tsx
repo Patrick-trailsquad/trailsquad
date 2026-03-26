@@ -298,7 +298,7 @@ const KangNu26V2 = () => {
 
           <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
             {[
-              "Du har gennemført en marathon eller lignende",
+              "Du har gennemført et halvt eller helt marathon eller lignende",
               "Du drømmer om at opleve Grønlands vilde natur",
               "Du vil have struktur, trænervejledning og en plan",
               "Du foretrækker fællesskab frem for at gøre det alene",
