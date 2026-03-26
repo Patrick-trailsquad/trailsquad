@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Calendar, Plane, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
@@ -146,7 +146,13 @@ const SwissAlps100V2 = () => {
       <section className="bg-[#FFDC00] py-4 md:py-5">
         <div className="container mx-auto px-6 max-w-4xl flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-center md:text-left">
           <div className="flex items-center gap-2">
-            <Calendar className="w-5 h-5 text-charcoal shrink-0" />
+            <motion.div
+              animate={{ rotate: [0, 180, 180, 360] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
+              className="shrink-0"
+            >
+              <Hourglass className="w-5 h-5 text-charcoal" />
+            </motion.div>
             <p className="font-cabinet font-bold text-charcoal text-base md:text-lg">
               Tilmeld dig inden udgangen af april
             </p>
@@ -539,7 +545,7 @@ const SwissAlps100V2 = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Calendar className="w-4 h-4" />
+            <Hourglass className="w-4 h-4" />
             Kun 9 pladser tilbage
           </div>
 
