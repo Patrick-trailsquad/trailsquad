@@ -127,7 +127,7 @@ const SwissAlps100V2 = () => {
               Ansøg om en plads
             </button>
             <button
-              onClick={scrollToCTA}
+              onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
               className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
             >
               Se hvad du får
