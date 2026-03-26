@@ -143,6 +143,30 @@ const SwissAlps100V2 = () => {
         </div>
       </section>
 
+      {/* ─── FEATURED TESTIMONIAL ─── */}
+      <section className="bg-charcoal border-b border-white/5">
+        <div className="container mx-auto px-6 py-5 md:py-6 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="flex flex-col md:flex-row items-center gap-4 md:gap-6"
+          >
+            <div className="flex gap-0.5 shrink-0">
+              {[1,2,3,4,5].map(s => (
+                <Star key={s} className="w-4 h-4 fill-[#FFDC00] text-[#FFDC00]" />
+              ))}
+            </div>
+            <blockquote className="text-white/90 text-base md:text-lg italic text-center md:text-left leading-relaxed">
+              "Helt fantastisk, både løbet og Trail Squad! Det var mit første ultra løb og det kunne ikke havde været bedre."
+            </blockquote>
+            <cite className="text-white/50 text-sm font-cabinet not-italic whitespace-nowrap shrink-0">
+              — Frederik
+            </cite>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ─── URGENCY CTA ─── */}
       <section className="bg-charcoal py-6 md:py-8 border-b border-white/10">
         <div className="container mx-auto px-6 max-w-3xl text-center">
