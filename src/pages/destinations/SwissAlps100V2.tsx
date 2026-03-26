@@ -471,7 +471,7 @@ const SwissAlps100V2 = () => {
               </span>
             </div>
             <iframe
-              src="https://racedaymap.com/swiss-alps-100"
+              src="https://app.racedaymap.com/swiss-alps-100"
               className="w-full h-[350px] md:h-[500px] border-0"
               style={{ pointerEvents: 'none' }}
               loading="lazy"
