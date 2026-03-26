@@ -221,9 +221,6 @@ const SwissAlps100V2 = () => {
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <span className="font-cabinet font-bold text-white text-sm">{marina.name}</span>
                 {marina.location && <span className="text-white/50 text-sm">{marina.location}</span>}
-                <span className="inline-block bg-[#FFDC00] text-charcoal px-2.5 py-0.5 rounded-full text-xs font-cabinet font-medium">
-                  {marina.distance}
-                </span>
               </div>
             </div>
           </div>
