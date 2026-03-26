@@ -140,83 +140,57 @@ const SwissAlps100V2 = () => {
       {/* ─── SOCIAL PROOF ─── */}
       {testimonials.length > 0 && (
       <section className="bg-charcoal py-16 md:py-20">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="container mx-auto px-6 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-cabinet font-bold text-center text-white mb-12">
             Hvad siger vores løbere?
           </h2>
 
-          <div className="relative">
-            {/* Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              {testimonials[activeTestimonial]?.photo_url && testimonials[activeTestimonial].photo_url!.length > 0 && (
-                <div className="h-52 md:h-64 overflow-hidden">
-                  <img
-                    src={testimonials[activeTestimonial].photo_url![0]}
-                    alt={`Billede fra ${testimonials[activeTestimonial].name}`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              )}
-              <div className="p-6 md:p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="font-cabinet font-bold text-lg text-charcoal">
-                      {testimonials[activeTestimonial].name}
-                    </h3>
-                    <p className="text-sm text-charcoal/60">{testimonials[activeTestimonial].location}</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="flex gap-1">
-                      {[1, 2, 3, 4, 5].map(s => (
-                        <Star key={s} className={`w-4 h-4 ${s <= testimonials[activeTestimonial].rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
-                      ))}
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.slice(0, 3).map((t, index) => {
+              const photos = Array.isArray(t.photo_url) && t.photo_url.length > 0 ? t.photo_url : ["/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png"];
+              const date = new Date(t.created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' }).replace(/^\w/, c => c.toUpperCase());
+              return (
+                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                  <CardContent className="p-0 h-full">
+                    <div className="bg-gray-100 h-60 relative overflow-hidden">
+                      <img
+                        src={photos[0]}
+                        alt={`Billede fra ${t.name}`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
                     </div>
-                    <p className="text-sm text-charcoal/60 mt-1">
-                      {new Date(testimonials[activeTestimonial].created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' })}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-charcoal/80 italic text-sm leading-relaxed mb-4">
-                  "{testimonials[activeTestimonial].review}"
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
-                    {testimonials[activeTestimonial].distance}
-                  </span>
-                  {testimonials[activeTestimonial].destination && (
-                    <span className="text-xs text-charcoal/60">{testimonials[activeTestimonial].destination}</span>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation */}
-            {testimonials.length > 1 && (
-              <div className="flex items-center justify-center gap-4 mt-6">
-                <button
-                  onClick={() => setActiveTestimonial(prev => prev === 0 ? testimonials.length - 1 : prev - 1)}
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                >
-                  <ChevronLeft className="w-5 h-5 text-white" />
-                </button>
-                <div className="flex gap-2">
-                  {testimonials.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setActiveTestimonial(i)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all ${i === activeTestimonial ? "bg-[#FFDC00] scale-125" : "bg-white/30 hover:bg-white/50"}`}
-                    />
-                  ))}
-                </div>
-                <button
-                  onClick={() => setActiveTestimonial(prev => prev === testimonials.length - 1 ? 0 : prev + 1)}
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                >
-                  <ChevronRight className="w-5 h-5 text-white" />
-                </button>
-              </div>
-            )}
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h3 className="font-cabinet font-bold text-lg text-charcoal">{t.name}</h3>
+                          <p className="text-sm text-charcoal/60">{t.location}</p>
+                        </div>
+                        <div className="text-right">
+                          <div className="flex gap-1">
+                            {[1, 2, 3, 4, 5].map(s => (
+                              <Star key={s} className={`w-4 h-4 ${s <= t.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
+                            ))}
+                          </div>
+                          <p className="text-sm text-charcoal/60 mt-1">{date}</p>
+                        </div>
+                      </div>
+                      <p className="text-charcoal/80 italic text-sm leading-relaxed mb-4 line-clamp-6">
+                        "{t.review}"
+                      </p>
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
+                          {t.distance}
+                        </span>
+                        {t.destination && (
+                          <span className="text-xs text-charcoal/60">{t.destination}</span>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           {/* Stats row */}
