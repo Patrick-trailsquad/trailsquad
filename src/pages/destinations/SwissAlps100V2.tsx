@@ -135,11 +135,36 @@ const SwissAlps100V2 = () => {
             <span className="text-white/60 text-sm font-cabinet whitespace-nowrap">— Frederik</span>
           </motion.div>
 
+          {!isMobile && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center"
+            >
+              <button
+                onClick={scrollToCTA}
+                className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+              >
+                Ansøg om en plads
+              </button>
+              <button
+                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+                className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+              >
+                Se hvad du får
+              </button>
+            </motion.div>
+          )}
+        </div>
+
+        {/* Mobile CTA buttons below fold */}
+        {isMobile && (
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center"
+            className="absolute bottom-[-80px] left-0 right-0 z-20 flex flex-col gap-3 px-6"
           >
             <button
               onClick={scrollToCTA}
@@ -149,12 +174,12 @@ const SwissAlps100V2 = () => {
             </button>
             <button
               onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all bg-charcoal/60 backdrop-blur-sm"
             >
               Se hvad du får
             </button>
           </motion.div>
-        </div>
+        )}
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-6 h-6 text-white/50" />
