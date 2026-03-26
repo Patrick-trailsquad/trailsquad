@@ -510,6 +510,9 @@ const SwissAlps100V2 = () => {
         </div>
       </section>
 
+      {/* ─── SHAKEOUT RUN ─── */}
+      <ShakeoutRunBanner />
+
       {/* ─── URGENCY + FINAL CTA ─── */}
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
