@@ -1,9 +1,9 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
-import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight, Ship, Binoculars } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight, Ship, Binoculars, CheckCircle2, X } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
+import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import KangNu26Itinerary from "../../components/destinations/kangnu26/KangNu26Itinerary";
 import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu26Accommodation";
@@ -11,7 +11,8 @@ import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useToast } from "../../components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -28,10 +29,53 @@ const KangNu26V2 = () => {
   usePageTitle("KangNu Running Race – Trail Squad");
   useScrollToTop();
   const isMobile = useIsMobile();
+  const { toast } = useToast();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const paymentStatus = searchParams.get("payment");
+  const [showPaymentBanner, setShowPaymentBanner] = useState(paymentStatus === "success");
+  const webhookSentRef = useRef(false);
 
   const [testimonials, setTestimonials] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string; destination: string; photo_url: string[] | null; created_at: string }[]>([]);
   const [activePhotos, setActivePhotos] = useState<Record<number, number>>({});
   const [expandedReviews, setExpandedReviews] = useState<Record<number, boolean>>({});
+
+  // Send Zapier webhook after successful Stripe payment
+  useEffect(() => {
+    if (paymentStatus === "success" && !webhookSentRef.current) {
+      webhookSentRef.current = true;
+      const storedData = sessionStorage.getItem('kangnu_booking_data');
+      if (storedData) {
+        const bookingData = JSON.parse(storedData);
+        
+        supabase.from('quote_requests').insert({
+          destination: 'KangNu Running Race',
+          full_name: bookingData.fullName,
+          email: bookingData.email,
+          phone: bookingData.phone,
+          preferred_distance: bookingData.preferredDistance,
+          participants: bookingData.participants,
+          accommodation_preference: bookingData.accommodationPreference,
+          source: 'kangnu26v2_stripe_deposit',
+          payment_status: 'success',
+        }).then(() => {});
+
+        fetch('https://hooks.zapier.com/hooks/catch/21931910/2qey8br/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'no-cors',
+          body: JSON.stringify({
+            ...bookingData,
+            source: 'kangnu26v2_stripe_deposit',
+            payment_status: 'success',
+            submitted_at: new Date().toISOString(),
+            triggered_from: window.location.origin,
+          }),
+        }).catch((err) => console.error('Zapier webhook error:', err));
+        sessionStorage.removeItem('kangnu_booking_data');
+      }
+    }
+  }, [paymentStatus]);
 
   useEffect(() => {
     const fetchTestimonials = async () => {
@@ -46,12 +90,69 @@ const KangNu26V2 = () => {
     fetchTestimonials();
   }, []);
 
+  const handleStripeCheckout = async (data: FormValues) => {
+    const { data: result, error } = await supabase.functions.invoke('create-kangnu-checkout', {
+      body: {
+        accommodationPreference: data.accommodationPreference,
+        fullName: data.fullName,
+        email: data.email,
+        phone: data.phone,
+        preferredDistance: data.preferredDistance,
+        participants: data.participants,
+        returnPath: '/kangnu_2',
+      },
+    });
+
+    if (error || !result?.url) {
+      toast({
+        title: "Fejl",
+        description: "Kunne ikke oprette betaling. Prøv venligst igen.",
+        variant: "destructive",
+      });
+      throw new Error("Checkout failed");
+    }
+
+    sessionStorage.setItem('kangnu_booking_data', JSON.stringify({
+      fullName: data.fullName,
+      email: data.email,
+      phone: data.phone,
+      preferredDistance: data.preferredDistance,
+      participants: data.participants,
+      accommodationPreference: data.accommodationPreference,
+    }));
+
+    window.location.href = result.url;
+  };
+
   const scrollToCTA = () => {
     document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen bg-stone">
+      {showPaymentBanner && (
+        <div className="bg-green-600 text-white py-4 px-6 relative z-50">
+          <div className="container mx-auto flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <CheckCircle2 className="w-6 h-6 shrink-0" />
+              <div>
+                <p className="font-cabinet font-bold text-lg">Depositum betalt! 🎉</p>
+                <p className="text-white/90 text-sm">Tak for din tilmelding til KangNu Running Race. Vi vender personligt tilbage til dig inden for 48 timer på hverdage med en bekræftelse.</p>
+              </div>
+            </div>
+            <button
+              onClick={() => {
+                setShowPaymentBanner(false);
+                setSearchParams({});
+              }}
+              className="shrink-0 hover:bg-white/20 rounded-full p-1 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ─── HERO ─── */}
       <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
         <img
@@ -599,6 +700,9 @@ const KangNu26V2 = () => {
               destinationName="KangNu Running Race"
               availableDistances={["15 km", "32 km", "51 km"]}
               maxParticipants={14}
+              customInfoText="Udfyld denne formular, betal depositum på DKK 10.000 pr. billet, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
+              onSubmitOverride={handleStripeCheckout}
+              getSubmitButtonLabel={(participants) => `Betal depositum — DKK ${(10000 * (participants || 1)).toLocaleString('da-DK')}`}
               accommodationOptions={[
                 { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)", spotsRemaining: 6 },
                 { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)", spotsRemaining: 3 },

@@ -45,7 +45,7 @@ serve(async (req) => {
     }
 
     const body = await req.json();
-    const { accommodationPreference, fullName, email, phone, preferredDistance, participants } = body;
+    const { accommodationPreference, fullName, email, phone, preferredDistance, participants, returnPath } = body;
 
     // Validate accommodation preference
     if (!accommodationPreference || typeof accommodationPreference !== 'string' || !PRICE_MAP[accommodationPreference]) {
@@ -84,6 +84,11 @@ serve(async (req) => {
       || req.headers.get("referer")?.replace(/\/+$/, '') 
       || "https://trailsquad.lovable.app";
 
+    // Use returnPath if provided, otherwise default to original route
+    const redirectBase = typeof returnPath === 'string' && returnPath.startsWith('/') 
+      ? returnPath 
+      : '/destinations/kangnu26';
+
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : email,
@@ -97,8 +102,8 @@ serve(async (req) => {
         participants: String(qty),
         accommodation: accommodationPreference,
       },
-      success_url: `${origin}/destinations/kangnu26?payment=success`,
-      cancel_url: `${origin}/destinations/kangnu26?payment=cancelled`,
+      success_url: `${origin}${redirectBase}?payment=success`,
+      cancel_url: `${origin}${redirectBase}?payment=cancelled`,
     });
 
     return new Response(JSON.stringify({ url: session.url }), {
