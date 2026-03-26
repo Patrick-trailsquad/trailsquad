@@ -193,93 +193,41 @@ const SwissAlps100V2 = () => {
       </section>
 
       {/* ─── SOCIAL PROOF ─── */}
-      {testimonials.length > 0 && (
-      <section className="bg-charcoal py-16 md:py-20">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-cabinet font-bold text-center text-white mb-12">
-            Hvad siger vores løbere?
-          </h2>
+      {testimonials.length > 0 && (() => {
+        const marina = testimonials.find(t => t.name === 'Marina') || testimonials[0];
+        const marinaPhoto = Array.isArray(marina.photo_url) && marina.photo_url.length > 0 ? marina.photo_url[0] : "/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png";
+        return (
+      <section className="bg-charcoal py-10 md:py-14">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            {/* Photo */}
+            <img
+              src={marinaPhoto}
+              alt={`Billede fra ${marina.name}`}
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-[#FFDC00]/30 shrink-0"
+              loading="lazy"
+            />
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.slice(0, 3).map((t, index) => {
-              const photos = Array.isArray(t.photo_url) && t.photo_url.length > 0 ? t.photo_url : ["/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png"];
-              const date = new Date(t.created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' }).replace(/^\w/, c => c.toUpperCase());
-              return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full bg-white/10 backdrop-blur-sm">
-                  <CardContent className="p-0 h-full">
-                    <div className="bg-gray-100 h-60 relative overflow-hidden group">
-                      <img
-                        src={photos[activePhotos[index] || 0]}
-                        alt={`Billede fra ${t.name}`}
-                        className="w-full h-full object-cover transition-opacity duration-300"
-                        loading="lazy"
-                      />
-                      {photos.length > 1 && (
-                        <>
-                          <button
-                            onClick={() => setActivePhotos(prev => ({ ...prev, [index]: ((prev[index] || 0) - 1 + photos.length) % photos.length }))}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                          >
-                            <ChevronLeft className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={() => setActivePhotos(prev => ({ ...prev, [index]: ((prev[index] || 0) + 1) % photos.length }))}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                          >
-                            <ChevronRight className="w-4 h-4" />
-                          </button>
-                          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-                            {photos.map((_, pi) => (
-                              <button
-                                key={pi}
-                                onClick={() => setActivePhotos(prev => ({ ...prev, [index]: pi }))}
-                                className={`w-2 h-2 rounded-full transition-colors ${(activePhotos[index] || 0) === pi ? "bg-white" : "bg-white/40"}`}
-                              />
-                            ))}
-                          </div>
-                        </>
-                      )}
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <h3 className="font-cabinet font-bold text-lg text-white">{t.name}</h3>
-                          <p className="text-sm text-white/60">{t.location}</p>
-                        </div>
-                        <div className="text-right">
-                          <div className="flex gap-1">
-                            {[1, 2, 3, 4, 5].map(s => (
-                              <Star key={s} className={`w-4 h-4 ${s <= t.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
-                            ))}
-                          </div>
-                          <p className="text-sm text-white/60 mt-1">{date}</p>
-                        </div>
-                      </div>
-                      <p className={`text-white/80 italic text-sm leading-relaxed mb-2 ${expandedReviews[index] ? '' : 'line-clamp-6'}`}>
-                        "{t.review}"
-                      </p>
-                      {t.review.length > 200 && (
-                        <button
-                          onClick={() => setExpandedReviews(prev => ({ ...prev, [index]: !prev[index] }))}
-                          className="text-sm text-[#FFDC00] hover:underline font-medium mb-4"
-                        >
-                          {expandedReviews[index] ? 'Læs mindre' : 'Læs mere'}
-                        </button>
-                      )}
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
-                          {t.distance}
-                        </span>
-                        {t.destination && (
-                          <span className="text-xs text-white/60">{t.destination}</span>
-                        )}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {/* Quote */}
+            <div className="flex-1 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-1 mb-2">
+                {[1, 2, 3, 4, 5].map(s => (
+                  <Star key={s} className={`w-4 h-4 ${s <= marina.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
+                ))}
+              </div>
+              <blockquote className="text-white/90 italic text-sm md:text-base leading-relaxed mb-2">
+                "{marina.review}"
+              </blockquote>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <span className="font-cabinet font-bold text-white text-sm">{marina.name}</span>
+                {marina.location && <span className="text-white/50 text-sm">{marina.location}</span>}
+                <span className="inline-block bg-[#FFDC00] text-charcoal px-2.5 py-0.5 rounded-full text-xs font-cabinet font-medium">
+                  {marina.distance}
+                </span>
+              </div>
+            </div>
           </div>
+        </div>
 
           {/* Stats row */}
           <div className="grid grid-cols-3 gap-6 mt-12 text-center">
@@ -294,9 +242,9 @@ const SwissAlps100V2 = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
-      )}
+        );
+      })()}
 
       {/* ─── IS THIS FOR YOU? ─── */}
       <section className="py-16 md:py-24 bg-stone">
