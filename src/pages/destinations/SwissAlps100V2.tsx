@@ -141,25 +141,27 @@ const SwissAlps100V2 = () => {
       <section className="bg-charcoal py-16 md:py-20">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            {testimonial ? (
             <div>
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#FFDC00] text-[#FFDC00]" />
+                  <Star key={i} className={`w-5 h-5 ${i < testimonial.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-white/30"}`} />
                 ))}
               </div>
               <blockquote className="text-white text-lg md:text-xl leading-relaxed italic mb-6">
-                "Jeg var nervøs for at tage af sted alene til mit første ultraløb. Trail Squad gjorde det til den bedste oplevelse i mit liv. Fællesskabet, vejledningen og hele planlægningen — jeg skulle bare møde op og løbe."
+                "{testimonial.review}"
               </blockquote>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#FFDC00]/20 flex items-center justify-center text-[#FFDC00] font-bold">
-                  M
+                  {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="text-white font-medium">Mette, 34</p>
-                  <p className="text-white/50 text-sm">Første ultraløb med Trail Squad</p>
+                  <p className="text-white font-medium">{testimonial.name}{testimonial.location ? `, ${testimonial.location}` : ''}</p>
+                  <p className="text-white/50 text-sm">{testimonial.distance}</p>
                 </div>
               </div>
             </div>
+            ) : null}
 
             <div className="space-y-6">
               {[
