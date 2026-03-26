@@ -20,6 +20,7 @@ import InfiniteTrails from "./pages/destinations/InfiniteTrails";
 import SwissAlps100 from "./pages/destinations/SwissAlps100";
 import LaBoucleDeLEtoile from "./pages/destinations/LaBoucleDeLEtoile";
 import KangNu26 from "./pages/destinations/KangNu26";
+import SwissAlps100V2 from "./pages/destinations/SwissAlps100V2";
 import TrailFox from "./pages/TrailFox";
 
 const queryClient = new QueryClient();
