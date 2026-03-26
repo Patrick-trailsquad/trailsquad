@@ -211,7 +211,7 @@ const SwissAlps100V2 = () => {
               Ansøg om en plads →
             </button>
             <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#FFDC00] text-charcoal text-xs font-bold">
-              <span className="line-through opacity-60">14</span> 9 pladser
+              Kun 9 pladser tilbage
             </span>
           </div>
         </div>
