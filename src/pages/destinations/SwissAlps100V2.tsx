@@ -151,7 +151,7 @@ const SwissAlps100V2 = () => {
               const photos = Array.isArray(t.photo_url) && t.photo_url.length > 0 ? t.photo_url : ["/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png"];
               const date = new Date(t.created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' }).replace(/^\w/, c => c.toUpperCase());
               return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full bg-white/10 backdrop-blur-sm">
                   <CardContent className="p-0 h-full">
                     <div className="bg-gray-100 h-60 relative overflow-hidden">
                       <img
