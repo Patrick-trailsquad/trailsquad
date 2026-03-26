@@ -203,12 +203,17 @@ const SwissAlps100V2 = () => {
           <p className="text-white/60 text-sm md:text-base mb-5 max-w-lg mx-auto">
             Vi sammensætter den endelige gruppe i slutningen af april — book din plads før din nabo!
           </p>
-          <button
-            onClick={scrollToCTA}
-            className="bg-[#FFDC00] text-charcoal px-7 py-3 rounded-full font-cabinet font-bold text-sm hover:bg-[#FFDC00]/90 transition-colors"
-          >
-            Ansøg om en plads →
-          </button>
+          <div className="flex items-center justify-center gap-3">
+            <button
+              onClick={scrollToCTA}
+              className="bg-[#FFDC00] text-charcoal px-7 py-3 rounded-full font-cabinet font-bold text-sm hover:bg-[#FFDC00]/90 transition-colors"
+            >
+              Ansøg om en plads →
+            </button>
+            <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#FFDC00] text-charcoal text-xs font-bold">
+              <span className="line-through opacity-60">14</span> 9 pladser
+            </span>
+          </div>
         </div>
       </section>
 
