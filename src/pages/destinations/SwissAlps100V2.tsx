@@ -40,7 +40,7 @@ const SwissAlps100V2 = () => {
         .select('name, location, rating, review, distance, destination, photo_url, created_at')
         .eq('status', 'approved')
         .order('created_at', { ascending: false })
-        .limit(6);
+        .limit(10);
       if (data) setTestimonials(data);
     };
     fetchTestimonials();
