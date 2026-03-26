@@ -542,6 +542,40 @@ const SwissAlps100V2 = () => {
       {/* ─── SHAKEOUT RUN ─── */}
       <ShakeoutRunBanner />
 
+      {/* ─── MADS TESTIMONIAL ─── */}
+      {testimonials.length > 0 && (() => {
+        const mads = testimonials.find(t => t.name === 'Mads') || testimonials[0];
+        const madsPhoto = Array.isArray(mads.photo_url) && mads.photo_url.length > 0 ? mads.photo_url[0] : "/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png";
+        return (
+      <section className="bg-charcoal py-10 md:py-14">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <img
+              src={madsPhoto}
+              alt={`Billede fra ${mads.name}`}
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-[#FFDC00]/30 shrink-0"
+              loading="lazy"
+            />
+            <div className="flex-1 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-1 mb-2">
+                {[1, 2, 3, 4, 5].map(s => (
+                  <Star key={s} className={`w-4 h-4 ${s <= mads.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
+                ))}
+              </div>
+              <blockquote className="text-white/90 italic text-sm md:text-base leading-relaxed mb-2 max-w-[90%]">
+                "{mads.review}"
+              </blockquote>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <span className="font-cabinet font-bold text-white text-sm">{mads.name}</span>
+                {mads.location && <span className="text-white/50 text-sm">{mads.location}</span>}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        );
+      })()}
+
       {/* ─── URGENCY + FINAL CTA ─── */}
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
