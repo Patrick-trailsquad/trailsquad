@@ -289,7 +289,7 @@ const SwissAlps100V2 = () => {
       </section>
 
       {/* ─── WHAT YOU GET ─── */}
-      <section className="py-16 md:py-24 bg-white">
+      <section id="what-you-get" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
