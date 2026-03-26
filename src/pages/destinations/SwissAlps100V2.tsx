@@ -483,6 +483,21 @@ const SwissAlps100V2 = () => {
         </div>
       </section>
 
+
+      {/* ─── 4-DAGS PLAN ─── */}
+      <section className="py-16 md:py-24 bg-stone">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <SwissAlps100Itinerary />
+        </div>
+      </section>
+
+      {/* ─── HOTEL ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SwissAlps100Accommodation />
+        </div>
+      </section>
+
       {/* ─── URGENCY + FINAL CTA ─── */}
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
