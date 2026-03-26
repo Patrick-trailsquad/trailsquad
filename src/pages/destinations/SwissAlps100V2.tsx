@@ -238,9 +238,17 @@ const SwissAlps100V2 = () => {
                           <p className="text-sm text-white/60 mt-1">{date}</p>
                         </div>
                       </div>
-                      <p className="text-white/80 italic text-sm leading-relaxed mb-4 line-clamp-6">
+                      <p className={`text-white/80 italic text-sm leading-relaxed mb-2 ${expandedReviews[index] ? '' : 'line-clamp-6'}`}>
                         "{t.review}"
                       </p>
+                      {t.review.length > 200 && (
+                        <button
+                          onClick={() => setExpandedReviews(prev => ({ ...prev, [index]: !prev[index] }))}
+                          className="text-sm text-[#FFDC00] hover:underline font-medium mb-4"
+                        >
+                          {expandedReviews[index] ? 'Læs mindre' : 'Læs mere'}
+                        </button>
+                      )}
                       <div className="flex items-center justify-between gap-2">
                         <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
                           {t.distance}
