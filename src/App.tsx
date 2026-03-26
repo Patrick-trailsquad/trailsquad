@@ -60,6 +60,7 @@ const App = () => (
             <Route path="/destinations/la-boucle-de-l-etoile" element={<LaBoucleDeLEtoile />} />
             <Route path="/destinations/kangnu26" element={<KangNu26 />} />
             <Route path="/swiss-alps-100_2" element={<SwissAlps100V2 />} />
+            <Route path="/kangnu_2" element={<KangNu26V2 />} />
             <Route path="/trailfox" element={<TrailFox />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
