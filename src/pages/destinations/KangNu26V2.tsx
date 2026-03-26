@@ -154,7 +154,7 @@ const KangNu26V2 = () => {
       )}
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
           src="/lovable-uploads/kangnu26-hero.jpg"
           alt="KangNu Running Race — løb i Grønlands vilde natur nær Nuuk"
@@ -169,7 +169,7 @@ const KangNu26V2 = () => {
           </Link>
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center mt-24 md:mt-0">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -218,31 +218,69 @@ const KangNu26V2 = () => {
             ))}
           </motion.div>
 
+          {/* ─── FEATURED TESTIMONIAL ─── */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center"
+            transition={{ delay: 0.75, duration: 0.6 }}
+            className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 mb-8 bg-black/40 backdrop-blur-sm rounded-2xl md:rounded-full px-6 py-4 md:py-3 mx-auto w-fit max-w-sm md:max-w-none"
           >
-            <button
-              onClick={scrollToCTA}
-              className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
-            >
-              Ansøg om en plads
-            </button>
-            <button
-              onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
-            >
-              Se hvad du får
-            </button>
+            <div className="flex gap-0.5 shrink-0">
+              {[1,2,3,4,5].map(s => (
+                <Star key={s} className="w-3.5 h-3.5 fill-[#FFDC00] text-[#FFDC00]" />
+              ))}
+            </div>
+            <p className="text-white/90 text-sm md:text-base italic text-center">
+              "Helt fantastisk, både løbet og Trail Squad! Jeg var i tvivl om jeg overhovedet kunne gennemføre et ultraløb - men det lykkedes og det var mega fedt!"
+            </p>
+            <span className="text-white/60 text-sm font-cabinet whitespace-nowrap">— Frederik</span>
           </motion.div>
+
+          {!isMobile && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center"
+            >
+              <button
+                onClick={scrollToCTA}
+                className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+              >
+                Ansøg om en plads nu
+              </button>
+              <button
+                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+                className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+              >
+                Se hvad du får
+              </button>
+            </motion.div>
+          )}
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
           <ChevronDown className="w-6 h-6 text-white/50" />
         </div>
       </section>
+
+      {/* Mobile CTA buttons below hero fold */}
+      {isMobile && (
+        <div className="bg-charcoal px-6 py-6 flex flex-col gap-3">
+          <button
+            onClick={scrollToCTA}
+            className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+          >
+            Ansøg om en plads nu
+          </button>
+          <button
+            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+            className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+          >
+            Se hvad du får
+          </button>
+        </div>
+      )}
 
       {/* ─── URGENCY CTA ─── */}
       <section className="bg-charcoal py-6 md:py-8 border-b border-white/10">
