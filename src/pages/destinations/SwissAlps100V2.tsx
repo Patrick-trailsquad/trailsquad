@@ -164,8 +164,8 @@ const SwissAlps100V2 = () => {
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="font-cabinet font-bold text-lg text-charcoal">{t.name}</h3>
-                          <p className="text-sm text-charcoal/60">{t.location}</p>
+                          <h3 className="font-cabinet font-bold text-lg text-white">{t.name}</h3>
+                          <p className="text-sm text-white/60">{t.location}</p>
                         </div>
                         <div className="text-right">
                           <div className="flex gap-1">
