@@ -13,7 +13,7 @@ import SwissAlps100MediaSection from "../../components/destinations/swiss-alps-1
 import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
 import SwissAlps100PricingSection from "../../components/destinations/swiss-alps-100/SwissAlps100PricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
-import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
