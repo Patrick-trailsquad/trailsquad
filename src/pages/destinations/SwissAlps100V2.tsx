@@ -215,7 +215,7 @@ const SwissAlps100V2 = () => {
                   <Star key={s} className={`w-4 h-4 ${s <= marina.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
                 ))}
               </div>
-              <blockquote className="text-white/90 italic text-sm md:text-base leading-relaxed mb-2">
+              <blockquote className="text-white/90 italic text-sm md:text-base leading-relaxed mb-2 max-w-[90%]">
                 "{marina.review}"
               </blockquote>
               <div className="flex items-center justify-center md:justify-start gap-3">
