@@ -26,7 +26,7 @@ const SwissAlps100V2 = () => {
   const isMobile = useIsMobile();
 
   const [testimonials, setTestimonials] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string; destination: string; photo_url: string[] | null; created_at: string }[]>([]);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [activePhotos, setActivePhotos] = useState<Record<number, number>>({});
 
   useEffect(() => {
     const fetchTestimonials = async () => {
