@@ -24,8 +24,10 @@ export type Database = {
           email_remaining_payment: boolean
           id: string
           name: string
+          notes: string | null
           paid_deposit: boolean
           paid_remaining_balance: boolean
+          phone: string | null
           race_ticket: boolean
           received_quote: boolean
           requested_quote: boolean
@@ -41,8 +43,10 @@ export type Database = {
           email_remaining_payment?: boolean
           id?: string
           name: string
+          notes?: string | null
           paid_deposit?: boolean
           paid_remaining_balance?: boolean
+          phone?: string | null
           race_ticket?: boolean
           received_quote?: boolean
           requested_quote?: boolean
@@ -58,8 +62,10 @@ export type Database = {
           email_remaining_payment?: boolean
           id?: string
           name?: string
+          notes?: string | null
           paid_deposit?: boolean
           paid_remaining_balance?: boolean
+          phone?: string | null
           race_ticket?: boolean
           received_quote?: boolean
           requested_quote?: boolean
