@@ -216,7 +216,11 @@ const SwissAlps100V2 = () => {
                 ))}
               </div>
               <blockquote className="text-white/90 italic text-sm md:text-base leading-relaxed mb-2">
-                "{marina.review}"
+                "Jeg havde en rigtig god oplevelse med Trail Squad. Jeg valgte at booke gennem Trail Squad for at sætte mig et mål om at løbe et længere trail race og dele dette med andre.
+                <br /><br />
+                Vi kunne dele spørgsmål og erfaringer med træning, udstyr og taktik til at gennemføre løbet - hvilket var en stor støtte for mig.
+                <br /><br />
+                Vil helt sikkert rejse med Trail Squad igen 🙌"
               </blockquote>
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <span className="font-cabinet font-bold text-white text-sm">{marina.name}</span>
