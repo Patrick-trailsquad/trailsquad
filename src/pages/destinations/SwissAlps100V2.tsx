@@ -24,20 +24,20 @@ const SwissAlps100V2 = () => {
   useScrollToTop();
   const isMobile = useIsMobile();
 
-  const [testimonial, setTestimonial] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string } | null>(null);
+  const [testimonials, setTestimonials] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string; destination: string; photo_url: string[] | null; created_at: string }[]>([]);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   useEffect(() => {
-    const fetchTestimonial = async () => {
+    const fetchTestimonials = async () => {
       const { data } = await supabase
         .from('testimonials')
-        .select('name, location, rating, review, distance')
+        .select('name, location, rating, review, distance, destination, photo_url, created_at')
         .eq('status', 'approved')
         .order('created_at', { ascending: false })
-        .limit(1)
-        .single();
-      if (data) setTestimonial(data);
+        .limit(6);
+      if (data) setTestimonials(data);
     };
-    fetchTestimonial();
+    fetchTestimonials();
   }, []);
 
   const scrollToCTA = () => {
