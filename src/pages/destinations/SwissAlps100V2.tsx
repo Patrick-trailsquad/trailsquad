@@ -163,7 +163,7 @@ const SwissAlps100V2 = () => {
             </motion.div>
           </div>
           <p className="text-white/60 text-sm md:text-base mb-5 max-w-lg mx-auto">
-            Vi sammensætter den endelige gruppe i slutningen af april — sikr din plads, før den bliver givet videre.
+            Vi sammensætter den endelige gruppe i slutningen af april — book din plads før din nabo!
           </p>
           <button
             onClick={scrollToCTA}
