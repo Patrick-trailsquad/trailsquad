@@ -130,7 +130,7 @@ const SwissAlps100V2 = () => {
               ))}
             </div>
             <p className="text-white/90 text-sm md:text-base italic text-center">
-              "Helt fantastisk, både løbet og Trail Squad! Det var mit første ultra løb og det kunne ikke havde været bedre."
+              "Helt fantastisk, både løbet og Trail Squad! Det var mit første ultra løb, og jeg var i tvivl om jeg kunne klare det - men det lykkedes og det var mega fedt!"
             </p>
             <span className="text-white/60 text-sm font-cabinet whitespace-nowrap">— Frederik</span>
           </motion.div>
