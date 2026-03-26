@@ -544,7 +544,7 @@ const SwissAlps100V2 = () => {
 
       {/* ─── MADS TESTIMONIAL ─── */}
       {testimonials.length > 0 && (() => {
-        const mads = testimonials.find(t => t.name.trim() === 'Mads-short') || testimonials.find(t => t.name.trim() === 'Mads') || testimonials[0];
+        const mads = testimonials.find(t => t.name.trim() === 'Mads D') || testimonials.find(t => t.name.trim() === 'Mads') || testimonials[0];
         const madsPhoto = Array.isArray(mads.photo_url) && mads.photo_url.length > 0 ? mads.photo_url[0] : "/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png";
         return (
       <section className="bg-charcoal py-10 md:py-14">
