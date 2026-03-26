@@ -13,7 +13,7 @@ import LaBoucleDeLEtoileMediaSection from "../../components/destinations/la-bouc
 import LaBoucleDeLEtoileAccommodation from "../../components/destinations/la-boucle-de-l-etoile/LaBoucleDeLEtoileAccommodation";
 import LaBoucleDeLEtoilePricingSection from "../../components/destinations/la-boucle-de-l-etoile/LaBoucleDeLEtoilePricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
-import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
