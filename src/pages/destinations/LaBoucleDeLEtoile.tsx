@@ -13,7 +13,7 @@ import LaBoucleDeLEtoileMediaSection from "../../components/destinations/la-bouc
 import LaBoucleDeLEtoileAccommodation from "../../components/destinations/la-boucle-de-l-etoile/LaBoucleDeLEtoileAccommodation";
 import LaBoucleDeLEtoilePricingSection from "../../components/destinations/la-boucle-de-l-etoile/LaBoucleDeLEtoilePricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
-import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
@@ -72,8 +72,6 @@ const LaBoucleDeLEtoile = () => {
       <div className="mt-12 mb-20">
         <LaBoucleDeLEtoileIncludedAmenities className="bg-transparent" />
       </div>
-      
-      <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til det fede Trail Fox løb på Røsnæs (april). Vi tager afsted sammen, og får en fest!" />
       
       {/* Decorative Lines Section */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">

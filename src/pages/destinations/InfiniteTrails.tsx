@@ -13,7 +13,7 @@ import InfiniteTrailsMediaSection from "../../components/destinations/infinite-t
 import InfiniteTrailsAccommodation from "../../components/destinations/infinite-trails/InfiniteTrailsAccommodation";
 import InfiniteTrailsPricingSection from "../../components/destinations/infinite-trails/InfiniteTrailsPricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
-import TrailSquadSection from "../../components/destinations/shared/TrailSquadSection";
+
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
@@ -98,8 +98,6 @@ const InfiniteTrails = () => {
       <div className="mt-12 mb-20">
         <InfiniteTrailsIncludedAmenities className="bg-transparent" />
       </div>
-      
-      <TrailSquadSection description="Træningsløb er vigtige! Vi inkluderer billetter til det fede Trail Fox løb på Røsnæs (april). Vi tager afsted sammen, og får en fest!" />
       
       {/* Decorative Lines Section */}
       <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
