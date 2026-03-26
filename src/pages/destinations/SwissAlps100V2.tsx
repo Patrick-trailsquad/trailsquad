@@ -184,7 +184,7 @@ const SwissAlps100V2 = () => {
                           {t.distance}
                         </span>
                         {t.destination && (
-                          <span className="text-xs text-charcoal/60">{t.destination}</span>
+                          <span className="text-xs text-white/60">{t.destination}</span>
                         )}
                       </div>
                     </div>
