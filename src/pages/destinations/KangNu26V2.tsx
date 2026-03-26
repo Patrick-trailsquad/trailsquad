@@ -29,6 +29,12 @@ const KangNu26V2 = () => {
   usePageTitle("KangNu Running Race – Trail Squad");
   useScrollToTop();
   const isMobile = useIsMobile();
+  const { toast } = useToast();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const paymentStatus = searchParams.get("payment");
+  const [showPaymentBanner, setShowPaymentBanner] = useState(paymentStatus === "success");
+  const webhookSentRef = useRef(false);
 
   const [testimonials, setTestimonials] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string; destination: string; photo_url: string[] | null; created_at: string }[]>([]);
   const [activePhotos, setActivePhotos] = useState<Record<number, number>>({});
