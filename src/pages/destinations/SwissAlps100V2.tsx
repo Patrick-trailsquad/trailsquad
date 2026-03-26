@@ -122,14 +122,14 @@ const SwissAlps100V2 = () => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.75, duration: 0.6 }}
-            className="flex items-center justify-center gap-3 mb-8 bg-black/40 backdrop-blur-sm rounded-full px-6 py-3 mx-auto w-fit"
+            className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 mb-8 bg-black/40 backdrop-blur-sm rounded-2xl md:rounded-full px-6 py-4 md:py-3 mx-auto w-fit max-w-sm md:max-w-none"
           >
             <div className="flex gap-0.5 shrink-0">
               {[1,2,3,4,5].map(s => (
                 <Star key={s} className="w-3.5 h-3.5 fill-[#FFDC00] text-[#FFDC00]" />
               ))}
             </div>
-            <p className="text-white/90 text-sm md:text-base italic">
+            <p className="text-white/90 text-sm md:text-base italic text-center">
               "Helt fantastisk, både løbet og Trail Squad! Det var mit første ultra løb og det kunne ikke havde været bedre."
             </p>
             <span className="text-white/60 text-sm font-cabinet whitespace-nowrap">— Frederik</span>
