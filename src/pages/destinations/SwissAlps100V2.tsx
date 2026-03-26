@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Calendar, Plane } from "lucide-react";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Calendar, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
@@ -24,20 +24,20 @@ const SwissAlps100V2 = () => {
   useScrollToTop();
   const isMobile = useIsMobile();
 
-  const [testimonial, setTestimonial] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string } | null>(null);
+  const [testimonials, setTestimonials] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string; destination: string; photo_url: string[] | null; created_at: string }[]>([]);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   useEffect(() => {
-    const fetchTestimonial = async () => {
+    const fetchTestimonials = async () => {
       const { data } = await supabase
         .from('testimonials')
-        .select('name, location, rating, review, distance')
+        .select('name, location, rating, review, distance, destination, photo_url, created_at')
         .eq('status', 'approved')
         .order('created_at', { ascending: false })
-        .limit(1)
-        .single();
-      if (data) setTestimonial(data);
+        .limit(6);
+      if (data) setTestimonials(data);
     };
-    fetchTestimonial();
+    fetchTestimonials();
   }, []);
 
   const scrollToCTA = () => {
@@ -138,49 +138,103 @@ const SwissAlps100V2 = () => {
       </section>
 
       {/* ─── SOCIAL PROOF ─── */}
+      {testimonials.length > 0 && (
       <section className="bg-charcoal py-16 md:py-20">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {testimonial ? (
-            <div>
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className={`w-5 h-5 ${i < testimonial.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-white/30"}`} />
-                ))}
-              </div>
-              <blockquote className="text-white text-lg md:text-xl leading-relaxed italic mb-6">
-                "{testimonial.review}"
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#FFDC00]/20 flex items-center justify-center text-[#FFDC00] font-bold">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="text-white font-medium">{testimonial.name}{testimonial.location ? `, ${testimonial.location}` : ''}</p>
-                  <p className="text-white/50 text-sm">{testimonial.distance}</p>
-                </div>
-              </div>
-            </div>
-            ) : null}
+        <div className="container mx-auto px-6 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-cabinet font-bold text-center text-white mb-12">
+            Hvad siger vores løbere?
+          </h2>
 
-            <div className="space-y-6">
-              {[
-                { number: "10–12", label: "løbere per tur" },
-                { number: "100%", label: "håndteret for dig" },
-                { number: "1", label: "dedikeret træner" },
-              ].map((stat, i) => (
-                <div key={i} className="flex items-baseline gap-4">
-                  <span className="font-cabinet text-3xl md:text-4xl font-bold text-[#FFDC00]">{stat.number}</span>
-                  <span className="text-white/70 text-lg">{stat.label}</span>
+          <div className="relative">
+            {/* Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              {testimonials[activeTestimonial]?.photo_url && testimonials[activeTestimonial].photo_url!.length > 0 && (
+                <div className="h-52 md:h-64 overflow-hidden">
+                  <img
+                    src={testimonials[activeTestimonial].photo_url![0]}
+                    alt={`Billede fra ${testimonials[activeTestimonial].name}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-              ))}
-              <p className="text-white/50 text-sm pt-2">
-                Du er ikke alene — du er en del af et hold.
-              </p>
+              )}
+              <div className="p-6 md:p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-cabinet font-bold text-lg text-charcoal">
+                      {testimonials[activeTestimonial].name}
+                    </h3>
+                    <p className="text-sm text-charcoal/60">{testimonials[activeTestimonial].location}</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="flex gap-1">
+                      {[1, 2, 3, 4, 5].map(s => (
+                        <Star key={s} className={`w-4 h-4 ${s <= testimonials[activeTestimonial].rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
+                      ))}
+                    </div>
+                    <p className="text-sm text-charcoal/60 mt-1">
+                      {new Date(testimonials[activeTestimonial].created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' })}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-charcoal/80 italic text-sm leading-relaxed mb-4">
+                  "{testimonials[activeTestimonial].review}"
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-sm font-cabinet font-medium">
+                    {testimonials[activeTestimonial].distance}
+                  </span>
+                  {testimonials[activeTestimonial].destination && (
+                    <span className="text-xs text-charcoal/60">{testimonials[activeTestimonial].destination}</span>
+                  )}
+                </div>
+              </div>
             </div>
+
+            {/* Navigation */}
+            {testimonials.length > 1 && (
+              <div className="flex items-center justify-center gap-4 mt-6">
+                <button
+                  onClick={() => setActiveTestimonial(prev => prev === 0 ? testimonials.length - 1 : prev - 1)}
+                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5 text-white" />
+                </button>
+                <div className="flex gap-2">
+                  {testimonials.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setActiveTestimonial(i)}
+                      className={`w-2.5 h-2.5 rounded-full transition-all ${i === activeTestimonial ? "bg-[#FFDC00] scale-125" : "bg-white/30 hover:bg-white/50"}`}
+                    />
+                  ))}
+                </div>
+                <button
+                  onClick={() => setActiveTestimonial(prev => prev === testimonials.length - 1 ? 0 : prev + 1)}
+                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                >
+                  <ChevronRight className="w-5 h-5 text-white" />
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-3 gap-6 mt-12 text-center">
+            {[
+              { number: "10–12", label: "løbere per tur" },
+              { number: "100%", label: "håndteret for dig" },
+              { number: "1", label: "dedikeret træner" },
+            ].map((stat, i) => (
+              <div key={i}>
+                <span className="font-cabinet text-2xl md:text-3xl font-bold text-[#FFDC00]">{stat.number}</span>
+                <p className="text-white/60 text-sm mt-1">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+      )}
 
       {/* ─── IS THIS FOR YOU? ─── */}
       <section className="py-16 md:py-24 bg-stone">
