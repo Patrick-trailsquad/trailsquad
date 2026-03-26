@@ -535,6 +535,23 @@ const SwissAlps100V2 = () => {
               <p className="font-cabinet text-3xl font-bold text-charcoal">
                 12.500 DKK <span className="text-sm text-charcoal/50 font-normal">inkl. moms</span>
               </p>
+              <Accordion type="single" collapsible className="w-full mt-2">
+                <AccordionItem value="price-details" className="border-none">
+                  <AccordionTrigger
+                    className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none !flex !items-center !justify-start gap-2"
+                    style={{ background: 'none', boxShadow: 'none' }}
+                  >
+                    Forklar prisvariationer
+                  </AccordionTrigger>
+                  <AccordionContent className="px-0 pt-2 text-charcoal/70 text-sm">
+                    <div>
+                      Hvis du ønsker at dele et <b>Alpine Double Room</b> er prisen 12.500 DKK. Du vil skulle dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                      Prisen for at bo alene på et <b>Alpine Double Room</b> er 14.600 DKK.<br /><br />
+                      Moms er inkluderet i alle priser.
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
 
             <PriceQuoteForm
