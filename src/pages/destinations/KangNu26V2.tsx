@@ -40,6 +40,43 @@ const KangNu26V2 = () => {
   const [activePhotos, setActivePhotos] = useState<Record<number, number>>({});
   const [expandedReviews, setExpandedReviews] = useState<Record<number, boolean>>({});
 
+  // Send Zapier webhook after successful Stripe payment
+  useEffect(() => {
+    if (paymentStatus === "success" && !webhookSentRef.current) {
+      webhookSentRef.current = true;
+      const storedData = sessionStorage.getItem('kangnu_booking_data');
+      if (storedData) {
+        const bookingData = JSON.parse(storedData);
+        
+        supabase.from('quote_requests').insert({
+          destination: 'KangNu Running Race',
+          full_name: bookingData.fullName,
+          email: bookingData.email,
+          phone: bookingData.phone,
+          preferred_distance: bookingData.preferredDistance,
+          participants: bookingData.participants,
+          accommodation_preference: bookingData.accommodationPreference,
+          source: 'kangnu26v2_stripe_deposit',
+          payment_status: 'success',
+        }).then(() => {});
+
+        fetch('https://hooks.zapier.com/hooks/catch/21931910/2qey8br/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'no-cors',
+          body: JSON.stringify({
+            ...bookingData,
+            source: 'kangnu26v2_stripe_deposit',
+            payment_status: 'success',
+            submitted_at: new Date().toISOString(),
+            triggered_from: window.location.origin,
+          }),
+        }).catch((err) => console.error('Zapier webhook error:', err));
+        sessionStorage.removeItem('kangnu_booking_data');
+      }
+    }
+  }, [paymentStatus]);
+
   useEffect(() => {
     const fetchTestimonials = async () => {
       const { data } = await supabase
@@ -52,6 +89,40 @@ const KangNu26V2 = () => {
     };
     fetchTestimonials();
   }, []);
+
+  const handleStripeCheckout = async (data: FormValues) => {
+    const { data: result, error } = await supabase.functions.invoke('create-kangnu-checkout', {
+      body: {
+        accommodationPreference: data.accommodationPreference,
+        fullName: data.fullName,
+        email: data.email,
+        phone: data.phone,
+        preferredDistance: data.preferredDistance,
+        participants: data.participants,
+        returnPath: '/kangnu_2',
+      },
+    });
+
+    if (error || !result?.url) {
+      toast({
+        title: "Fejl",
+        description: "Kunne ikke oprette betaling. Prøv venligst igen.",
+        variant: "destructive",
+      });
+      throw new Error("Checkout failed");
+    }
+
+    sessionStorage.setItem('kangnu_booking_data', JSON.stringify({
+      fullName: data.fullName,
+      email: data.email,
+      phone: data.phone,
+      preferredDistance: data.preferredDistance,
+      participants: data.participants,
+      accommodationPreference: data.accommodationPreference,
+    }));
+
+    window.location.href = result.url;
+  };
 
   const scrollToCTA = () => {
     document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" });
