@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Calendar, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
+import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
+import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { motion } from "framer-motion";
