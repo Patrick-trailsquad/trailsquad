@@ -242,9 +242,9 @@ const SwissAlps100V2 = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
-      )}
+        );
+      })()}
 
       {/* ─── IS THIS FOR YOU? ─── */}
       <section className="py-16 md:py-24 bg-stone">
