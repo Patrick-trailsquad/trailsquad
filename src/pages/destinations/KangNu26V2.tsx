@@ -208,7 +208,7 @@ const KangNu26V2 = () => {
             {[
               { icon: Shield, text: "Trænervejledning fra coach Emil" },
               { icon: Plane, text: "Fly & logistik er håndteret" },
-              { icon: Users, text: "Lille dansk gruppe (10–14)" },
+              { icon: Users, text: "Lille dansk gruppe (12–16)" },
               { icon: Binoculars, text: "Hvalsafari & arktisk natur" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-3 py-4">
@@ -313,7 +313,7 @@ const KangNu26V2 = () => {
               Ansøg om en plads →
             </button>
             <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#FFDC00] text-charcoal text-xs font-bold">
-              Kun 14 pladser tilbage
+              Kun 16 pladser tilbage
             </span>
           </div>
         </div>
@@ -361,7 +361,7 @@ const KangNu26V2 = () => {
           {/* Stats row */}
           <div className="grid grid-cols-3 gap-6 mt-12 text-center">
             {[
-              { number: "10–14", label: "løbere per tur" },
+              { number: "12–16", label: "løbere per tur" },
               { number: "100%", label: "håndteret for dig" },
               { number: "1", label: "dedikeret træner" },
             ].map((stat, i) => (
@@ -690,7 +690,7 @@ const KangNu26V2 = () => {
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Hourglass className="w-4 h-4" />
-            Kun 14 pladser tilbage
+            Kun 16 pladser tilbage
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
@@ -729,7 +729,7 @@ const KangNu26V2 = () => {
             <PriceQuoteForm
               destinationName="KangNu Running Race"
               availableDistances={["15 km", "32 km", "51 km"]}
-              maxParticipants={14}
+              maxParticipants={16}
               customInfoText="Udfyld denne formular, betal depositum på DKK 10.000 pr. billet, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
               onSubmitOverride={handleStripeCheckout}
               getSubmitButtonLabel={(participants) => `Betal depositum — DKK ${(10000 * (participants || 1)).toLocaleString('da-DK')}`}
