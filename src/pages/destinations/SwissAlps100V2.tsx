@@ -173,7 +173,7 @@ const SwissAlps100V2 = () => {
                               <Star key={s} className={`w-4 h-4 ${s <= t.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
                             ))}
                           </div>
-                          <p className="text-sm text-charcoal/60 mt-1">{date}</p>
+                          <p className="text-sm text-white/60 mt-1">{date}</p>
                         </div>
                       </div>
                       <p className="text-charcoal/80 italic text-sm leading-relaxed mb-4 line-clamp-6">
