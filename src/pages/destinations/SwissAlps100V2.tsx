@@ -24,6 +24,22 @@ const SwissAlps100V2 = () => {
   useScrollToTop();
   const isMobile = useIsMobile();
 
+  const [testimonial, setTestimonial] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string } | null>(null);
+
+  useEffect(() => {
+    const fetchTestimonial = async () => {
+      const { data } = await supabase
+        .from('testimonials')
+        .select('name, location, rating, review, distance')
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false })
+        .limit(1)
+        .single();
+      if (data) setTestimonial(data);
+    };
+    fetchTestimonial();
+  }, []);
+
   const scrollToCTA = () => {
     document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" });
   };
