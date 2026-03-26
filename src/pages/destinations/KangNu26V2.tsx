@@ -551,8 +551,8 @@ const KangNu26V2 = () => {
                 a: "Det er ikke et konkurrencehold. Vi løber i vores eget tempo, og du har fuld støtte undervejs — både fra træneren og gruppen.",
               },
               {
-                q: "Hvad hvis jeg bliver skadet inden?",
-                a: "Vi har fleksible vilkår og hjælper dig med at justere din plan. Din sundhed kommer altid først.",
+                q: "Hvad hvis jeg bliver skadet under turen?",
+                a: "Sikkerhed er vigtigt for os, men deltagelse sker på eget ansvar. Vi anbefaler, at du tegner en rejseforsikring, der dækker sportsskader og eventuel hjemtransport.",
               },
               {
                 q: "Er det dyrt?",
