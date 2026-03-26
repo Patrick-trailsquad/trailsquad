@@ -45,7 +45,7 @@ serve(async (req) => {
     }
 
     const body = await req.json();
-    const { accommodationPreference, fullName, email, phone, preferredDistance, participants } = body;
+    const { accommodationPreference, fullName, email, phone, preferredDistance, participants, returnPath } = body;
 
     // Validate accommodation preference
     if (!accommodationPreference || typeof accommodationPreference !== 'string' || !PRICE_MAP[accommodationPreference]) {
