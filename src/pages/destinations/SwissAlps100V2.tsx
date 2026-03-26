@@ -442,15 +442,15 @@ const SwissAlps100V2 = () => {
             {[
               {
                 q: "Jeg har aldrig løbet ultra før",
-                a: "Perfekt — de fleste i gruppen er i samme båd. Coach Emil tilpasser træningen til dit niveau, og du får en plan der bygger dig op gradvist.",
+                a: "Perfekt — det er netop det, der gør det til et unikt eventyr. Coach Emil tilpasser træningen til dit niveau, og du får input til hvordan du gradvist træner op til race.",
               },
               {
                 q: "Jeg er bange for ikke at kunne følge med",
                 a: "Det er ikke et konkurrencehold. Vi løber i vores eget tempo, og du har fuld støtte undervejs — både fra træneren og gruppen.",
               },
               {
-                q: "Hvad hvis jeg bliver skadet inden?",
-                a: "Vi har fleksible vilkår og hjælper dig med at justere din plan. Din sundhed kommer altid først.",
+                q: "Hvad med udstyr og race-taktik?",
+                a: "Vi hjælper dig hele vejen. Du får en komplet udstyrsguide tilpasset forholdene i Schweiz, og Coach Emil gennemgår race-taktik, så du føler dig tryg og godt forberedt på startlinjen.",
               },
               {
                 q: "Er det dyrt?",
