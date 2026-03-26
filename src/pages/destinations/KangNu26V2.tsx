@@ -130,6 +130,29 @@ const KangNu26V2 = () => {
 
   return (
     <div className="min-h-screen bg-stone">
+      {showPaymentBanner && (
+        <div className="bg-green-600 text-white py-4 px-6 relative z-50">
+          <div className="container mx-auto flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <CheckCircle2 className="w-6 h-6 shrink-0" />
+              <div>
+                <p className="font-cabinet font-bold text-lg">Depositum betalt! 🎉</p>
+                <p className="text-white/90 text-sm">Tak for din tilmelding til KangNu Running Race. Vi vender personligt tilbage til dig inden for 48 timer på hverdage med en bekræftelse.</p>
+              </div>
+            </div>
+            <button
+              onClick={() => {
+                setShowPaymentBanner(false);
+                setSearchParams({});
+              }}
+              className="shrink-0 hover:bg-white/20 rounded-full p-1 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ─── HERO ─── */}
       <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
         <img
