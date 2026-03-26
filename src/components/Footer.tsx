@@ -137,6 +137,9 @@ const Footer = () => {
                       <a href="/trailfox" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                         TrailFox
                       </a>
+                      <a href="/swiss-alps-100_2" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                        SA100 v2
+                      </a>
                     </CollapsibleContent>
                   </Collapsible>
                 ) : (
