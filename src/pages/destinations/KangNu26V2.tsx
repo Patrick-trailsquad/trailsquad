@@ -544,7 +544,7 @@ const KangNu26V2 = () => {
             {[
               {
                 q: "Jeg har aldrig løbet trail i arktisk natur",
-                a: "Perfekt — det er netop det, der gør det til et unikt eventyr. Coach Emil tilpasser træningen til dit niveau, og du får en plan der bygger dig op gradvist.",
+                a: "Perfekt — det er netop det, der gør det til et unikt eventyr. Coach Emil tilpasser træningen til dit niveau, og du får input til hvordan du gradvist træner op til race.",
               },
               {
                 q: "Jeg er bange for ikke at kunne følge med",
