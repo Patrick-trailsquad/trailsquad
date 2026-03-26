@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Calendar, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import PriceQuoteForm from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
+import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
+import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { motion } from "framer-motion";
@@ -478,6 +480,21 @@ const SwissAlps100V2 = () => {
               title="Swiss Alps 100 rutekort"
             />
           </div>
+        </div>
+      </section>
+
+
+      {/* ─── 4-DAGS PLAN ─── */}
+      <section className="py-16 md:py-24 bg-stone">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <SwissAlps100Itinerary />
+        </div>
+      </section>
+
+      {/* ─── HOTEL ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <SwissAlps100Accommodation />
         </div>
       </section>
 
