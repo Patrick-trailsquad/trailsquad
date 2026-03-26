@@ -7,6 +7,8 @@ import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
