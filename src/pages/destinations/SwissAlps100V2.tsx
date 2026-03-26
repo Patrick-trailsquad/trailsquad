@@ -9,6 +9,7 @@ import { useIsMobile } from "../../hooks/use-mobile";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { Card, CardContent } from "@/components/ui/card";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
