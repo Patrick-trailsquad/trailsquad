@@ -3,8 +3,8 @@ import { Plane, Mountain, UtensilsCrossed, Users, Trophy, MapPin, Coffee, Footpr
 const days = [
   {
     day: 1,
-    date: "6. august",
-    title: "Ankomst til Schweiz",
+    date: "torsdag 6. august",
+    title: "✈️ Udrejse",
     items: [
       { icon: Plane, text: "Fly fra København til Zürich 🇨🇭" },
       { icon: Train, text: "Privat shuttlebus til Fiesch i Valais-regionen" },
@@ -14,30 +14,30 @@ const days = [
   },
   {
     day: 2,
-    date: "7. august",
-    title: "Forberedelse og/eller 100 km race!",
+    date: "fredag 7. august",
+    title: "Forberedelse & 100 km-start 🏃",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Users, text: "Afhentning af startnumre" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
-      { icon: Trophy, text: "Race day for løbere af 100 km!" },
+      { icon: Trophy, text: "100 km-løbet starter kl. 17:00" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
     ],
   },
   {
     day: 3,
-    date: "8. august",
-    title: "Løbsdag",
+    date: "lørdag 8. august",
+    title: "🏁 Løbsdag — 50 km & 160 km",
     items: [
-      { icon: Trophy, text: "Race day for løbere af 50 km!" },
+      { icon: Trophy, text: "Race day for løbere af 50 km og 160 km!" },
       { icon: Users, text: "Fejring ved målstregen" },
       { icon: UtensilsCrossed, text: "Fælles afslutningsmiddag" },
     ],
   },
   {
     day: 4,
-    date: "9. august",
-    title: "Hjemrejse",
+    date: "søndag 9. august",
+    title: "✈️ Hjemrejse",
     items: [
       { icon: Coffee, text: "Morgenmad på hotellet" },
       { icon: Train, text: "Shuttlebus tilbage til Zürich lufthavn" },
