@@ -485,9 +485,20 @@ const SwissAlps100V2 = () => {
 
 
       {/* ─── 4-DAGS PLAN ─── */}
-      <section className="py-16 md:py-24 bg-stone">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <SwissAlps100Itinerary />
+      <section className="w-full relative overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/ribeira-sacra-dagplan-bg.jpg)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
+          <SwissAlps100Itinerary variant="overlay" />
         </div>
       </section>
 
