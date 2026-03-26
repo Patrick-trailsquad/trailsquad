@@ -127,7 +127,7 @@ const SwissAlps100V2 = () => {
               Ansøg om en plads
             </button>
             <button
-              onClick={scrollToCTA}
+              onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
               className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
             >
               Se hvad du får
@@ -289,7 +289,7 @@ const SwissAlps100V2 = () => {
       </section>
 
       {/* ─── WHAT YOU GET ─── */}
-      <section className="py-16 md:py-24 bg-white">
+      <section id="what-you-get" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
