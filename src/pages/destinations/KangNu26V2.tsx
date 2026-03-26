@@ -361,7 +361,7 @@ const KangNu26V2 = () => {
           {/* Stats row */}
           <div className="grid grid-cols-3 gap-6 mt-12 text-center">
             {[
-              { number: "10–14", label: "løbere per tur" },
+              { number: "12–16", label: "løbere per tur" },
               { number: "100%", label: "håndteret for dig" },
               { number: "1", label: "dedikeret træner" },
             ].map((stat, i) => (
