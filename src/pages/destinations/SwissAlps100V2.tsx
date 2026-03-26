@@ -556,7 +556,7 @@ const SwissAlps100V2 = () => {
             <img
               src={madsPhoto}
               alt={`Billede fra ${mads.name}`}
-              className="w-[7.5rem] h-[7.5rem] md:w-36 md:h-36 rounded-full object-cover border-2 border-[#FFDC00]/30 shrink-0"
+              className="w-[7.5rem] h-[7.5rem] md:w-36 md:h-36 rounded-full object-cover border-2 border-[#FFDC00]/30 shrink-0 scale-150"
               loading="lazy"
             />
             <div className="flex-1 text-center md:text-left">
