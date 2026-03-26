@@ -1,161 +1,407 @@
-import { ArrowLeft, MousePointerClick } from "lucide-react";
-
-import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
-import { Link } from "react-router-dom";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
-import BackToDestinationsButton from "../../components/destinations/BackToDestinationsButton";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Calendar, Plane } from "lucide-react";
+import PriceQuoteForm from "../../components/PriceQuoteForm";
+import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
-import SwissAlps100IncludedAmenities from "../../components/destinations/swiss-alps-100/SwissAlps100IncludedAmenities";
-import SwissAlps100InfoBanner from "../../components/destinations/swiss-alps-100/SwissAlps100InfoBanner";
-import SwissAlps100Description from "../../components/destinations/swiss-alps-100/SwissAlps100Description";
-import SwissAlps100MediaSection from "../../components/destinations/swiss-alps-100/SwissAlps100MediaSection";
-import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
-import SwissAlps100PricingSection from "../../components/destinations/swiss-alps-100/SwissAlps100PricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
+import { motion } from "framer-motion";
 
-import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
-import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" },
+  }),
+};
 
 const SwissAlps100V2 = () => {
-  const [isLinesVisible, setIsLinesVisible] = useState(false);
-  const [isMapActive, setIsMapActive] = useState(false);
-  const linesRef = useRef<HTMLDivElement>(null);
+  usePageTitle("Swiss Alps 100 – Trail Squad");
+  useScrollToTop();
   const isMobile = useIsMobile();
 
-  const deactivateMap = useCallback(() => setIsMapActive(false), []);
-  
-  usePageTitle('Swiss Alps 100');
-  useScrollToTop();
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !isLinesVisible) {
-        setIsLinesVisible(true);
-      }
-    }, {
-      threshold: 0.3
-    });
-    if (linesRef.current) {
-      observer.observe(linesRef.current);
-    }
-    return () => observer.disconnect();
-  }, [isLinesVisible]);
-  
+  const scrollToCTA = () => {
+    document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-stone">
-      <div className="relative h-[80vh]">
-        <img src="/lovable-uploads/swiss-alps-100-hero-new.jpg" alt="Swiss Alps 100 Trail Running" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute top-6 left-6">
-          <Link to="/" className="flex items-center gap-2 text-white hover:text-stone transition-colors">
-            <ArrowLeft className="w-5 h-5" />
-            Tilbage til forsiden
+      {/* ─── HERO ─── */}
+      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+        <img
+          src="/lovable-uploads/swiss-alps-100-hero-new.jpg"
+          alt="Løbere i de schweiziske alper med udsigt over Aletsch-gletsjeren"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
+        <div className="absolute top-6 left-6 z-20">
+          <Link to="/" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm">
+            <ArrowLeft className="w-4 h-4" />
+            Trail Squad
           </Link>
         </div>
-        <div className="absolute bottom-6 left-0 right-0 text-center">
-          <h1 className="font-cabinet text-4xl md:text-6xl font-bold text-white px-4 drop-shadow-md mb-8">
-            Swiss Alps 100, Schweiz
-          </h1>
-        </div>
-      </div>
 
-      <SwissAlps100InfoBanner />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4"
+          >
+            6.–9. august 2026 · Fiesch, Schweiz
+          </motion.p>
 
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
-        <div className="grid md:grid-cols-2 gap-12">
-          <SwissAlps100Description />
-          <div className="space-y-6">
-            <SwissAlps100MediaSection />
-            <SwissAlps100PricingSection />
-          </div>
-          <div className="col-span-full mt-12">
-            <div className="rounded-2xl overflow-hidden shadow-lg relative">
-              {!isMapActive && (
-                <div
-                  className="absolute inset-0 z-10 cursor-pointer flex items-center justify-center"
-                  onClick={() => setIsMapActive(true)}
-                >
-                  <div className="bg-black/50 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium backdrop-blur-sm">
-                    <MousePointerClick className="w-4 h-4" />
-                    Klik for at interagere med kortet
-                  </div>
-                </div>
-              )}
-              <iframe
-                src="https://app.racedaymap.com/swiss-alps-100"
-                title="Swiss Alps 100 - interaktivt rutekort"
-                className={`w-full border-0 ${!isMapActive ? 'pointer-events-none' : ''}`}
-                style={{ height: isMobile ? '400px' : '600px' }}
-                allowFullScreen
-                loading="lazy"
-                onMouseLeave={deactivateMap}
-              />
-            </div>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+            className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6"
+          >
+            Løb Swiss Alps 100
+            <br />
+            <span className="text-[#FFDC00]">med os ved din side</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="text-white/80 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed"
+          >
+            Træning, rejse og fællesskab — vi tager os af alt, så du kan fokusere på oplevelsen.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.65 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 text-white/90 text-sm mb-10 max-w-2xl mx-auto"
+          >
+            {[
+              { icon: Shield, text: "Trænervejledning fra coach Emil" },
+              { icon: Plane, text: "Rejse & logistik er håndteret" },
+              { icon: Users, text: "Lille dansk gruppe (10–12)" },
+              { icon: Mountain, text: "Aletsch-gletsjeren & alpestier" },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-3 py-4">
+                <item.icon className="w-5 h-5 text-[#FFDC00]" />
+                <span className="text-center leading-snug">{item.text}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-3 justify-center"
+          >
+            <button
+              onClick={scrollToCTA}
+              className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+            >
+              Ansøg om en plads
+            </button>
+            <button
+              onClick={scrollToCTA}
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+            >
+              Se hvad du får
+            </button>
+          </motion.div>
         </div>
-      </div>
-      
-      {/* Dagplan with parallax background */}
-      <section className="w-full relative overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: 'url(/lovable-uploads/ribeira-sacra-dagplan-bg.jpg)',
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }} />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
-          <SwissAlps100Itinerary variant="overlay" />
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-6 h-6 text-white/50" />
         </div>
       </section>
 
-      <div className="mt-12 mb-20">
-        <SwissAlps100IncludedAmenities className="bg-transparent" />
-      </div>
-      
-      {/* Decorative Lines Section */}
-      <div ref={linesRef} className="relative py-12 mb-16 md:mb-24">
-        <svg className="absolute top-0 left-0 w-full h-32 md:h-64 z-0" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0 180 C100 120 150 100 300 80 C350 70 380 120 400 140 C450 100 480 70 500 60 C550 90 580 140 600 160 C650 120 750 60 800 40 C900 70 950 100 1000 120 C1100 90 1150 85 1200 80" fill="none" stroke="#FFDC00" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" style={{
-            strokeDasharray: '1200',
-            strokeDashoffset: isLinesVisible ? '0' : '1200',
-            opacity: 0.8,
-            transition: 'stroke-dashoffset 2s ease-out'
-          }} />
-          <path d="M0 200 C200 150 300 120 400 100 C500 140 550 160 600 180 C700 120 800 80 900 60 C1000 100 1050 120 1100 140 C1150 120 1180 110 1200 100" fill="none" stroke="black" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" style={{
-            strokeDasharray: '1400',
-            strokeDashoffset: isLinesVisible ? '0' : '1400',
-            opacity: 0.6,
-            transition: 'stroke-dashoffset 2.5s ease-out 0.3s'
-          }} />
-          <path d="M50 200 C150 170 250 140 350 120 C450 160 550 180 650 190 C750 140 850 100 950 80" fill="none" stroke="#FFDC00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{
-            strokeDasharray: '1000',
-            strokeDashoffset: isLinesVisible ? '0' : '1000',
-            opacity: 0.4,
-            transition: 'stroke-dashoffset 2.2s ease-out 0.6s'
-          }} />
-          <path d="M0 200 C100 160 200 130 300 110 C400 150 500 170 600 185 C700 130 800 90 900 70" fill="none" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{
-            strokeDasharray: '900',
-            strokeDashoffset: isLinesVisible ? '0' : '900',
-            opacity: 0.3,
-            transition: 'stroke-dashoffset 1.8s ease-out 0.9s'
-          }} />
-        </svg>
-      </div>
-      
-      <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
-        <div className={isMobile ? "mb-12" : ""}>
-          <SwissAlps100Accommodation />
+      {/* ─── SOCIAL PROOF ─── */}
+      <section className="bg-charcoal py-16 md:py-20">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-[#FFDC00] text-[#FFDC00]" />
+                ))}
+              </div>
+              <blockquote className="text-white text-lg md:text-xl leading-relaxed italic mb-6">
+                "Jeg var nervøs for at tage af sted alene til mit første ultraløb. Trail Squad gjorde det til den bedste oplevelse i mit liv. Fællesskabet, vejledningen og hele planlægningen — jeg skulle bare møde op og løbe."
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#FFDC00]/20 flex items-center justify-center text-[#FFDC00] font-bold">
+                  M
+                </div>
+                <div>
+                  <p className="text-white font-medium">Mette, 34</p>
+                  <p className="text-white/50 text-sm">Første ultraløb med Trail Squad</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                { number: "10–12", label: "løbere per tur" },
+                { number: "100%", label: "håndteret for dig" },
+                { number: "1", label: "dedikeret træner" },
+              ].map((stat, i) => (
+                <div key={i} className="flex items-baseline gap-4">
+                  <span className="font-cabinet text-3xl md:text-4xl font-bold text-[#FFDC00]">{stat.number}</span>
+                  <span className="text-white/70 text-lg">{stat.label}</span>
+                </div>
+              ))}
+              <p className="text-white/50 text-sm pt-2">
+                Du er ikke alene — du er en del af et hold.
+              </p>
+            </div>
+          </div>
         </div>
-        <BackToDestinationsButton />
-      </div>
-      <ShakeoutRunBanner />
-      <VideoBackgroundSection />
+      </section>
+
+      {/* ─── IS THIS FOR YOU? ─── */}
+      <section className="py-16 md:py-24 bg-stone">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0}
+            className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4"
+          >
+            Er det noget for dig?
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={1}
+            className="text-charcoal/60 text-lg mb-12"
+          >
+            Du behøver ikke være ultraløber. Du skal bare have lysten.
+          </motion.p>
+
+          <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+            {[
+              "Du har gennemført en marathon eller lignende",
+              "Du er nysgerrig på trail- eller ultraløb",
+              "Du vil have struktur, trænervejledning og en plan",
+              "Du foretrækker fællesskab frem for at gøre det alene",
+              "Du drømmer om en oplevelse, der giver dig gåsehud",
+              "Du vil udfordre dig selv i et af verdens smukkeste landskaber",
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i * 0.5}
+                className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm"
+              >
+                <CheckCircle className="w-5 h-5 text-sage mt-0.5 flex-shrink-0" />
+                <span className="text-charcoal">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── WHAT YOU GET ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
+              Hvad du får med Trail Squad
+            </h2>
+            <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
+              Alt er inkluderet. Du skal bare fokusere på at løbe.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Shield,
+                title: "Træning & forberedelse",
+                items: [
+                  "Personlig trænervejledning fra coach Emil",
+                  "Tilpasset træningsplan til dit niveau",
+                  "Sparring og motivation i gruppen",
+                  "Løbsstrategi og race-briefing",
+                ],
+              },
+              {
+                icon: Plane,
+                title: "Rejse & logistik",
+                items: [
+                  "Fly København → Zürich",
+                  "Privat shuttlebus til Fiesch",
+                  "3 overnatninger på alpehotel",
+                  "Afhentning af startnumre & race-forberedelse",
+                ],
+              },
+              {
+                icon: Heart,
+                title: "Oplevelse & fællesskab",
+                items: [
+                  "Lille, tæt dansk løbegruppe",
+                  "Shakeout run og fælles middage",
+                  "Fejring ved målstregen",
+                  "Minder for livet",
+                ],
+              },
+            ].map((card, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+                className="bg-stone rounded-2xl p-8"
+              >
+                <div className="w-12 h-12 rounded-full bg-[#FFDC00]/20 flex items-center justify-center mb-6">
+                  <card.icon className="w-6 h-6 text-charcoal" />
+                </div>
+                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-4">{card.title}</h3>
+                <ul className="space-y-3">
+                  {card.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2 text-charcoal/70">
+                      <CheckCircle className="w-4 h-4 text-sage mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── THE EXPERIENCE ─── */}
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <img
+          src="/lovable-uploads/swiss-alps-100-hero-new.jpg"
+          alt="Alpine stier i Schweiz"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+
+        <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
+            En oplevelse du aldrig glemmer
+          </h2>
+          <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
+            Swiss Alps 100 fører dig gennem UNESCO-verdensarvsområdet ved Aletsch-gletsjeren — Europas største gletsjer. Alpine stier, svævende hængebroer og udsigter der tager pusten fra dig.
+          </p>
+          <div className="grid grid-cols-3 gap-6 max-w-md mx-auto">
+            {[
+              { label: "Distancer", value: "50 / 100 / 160 km" },
+              { label: "Højdepunkt", value: "Aletsch-gletsjeren" },
+              { label: "Terræn", value: "Alpint højfjeld" },
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <p className="text-[#FFDC00] font-cabinet font-bold text-sm mb-1">{item.label}</p>
+                <p className="text-white text-sm">{item.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── REMOVE FEAR ─── */}
+      <section className="py-16 md:py-24 bg-stone">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <div className="text-center mb-12">
+            <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
+              Bekymret for om du er klar?
+            </h2>
+            <p className="text-charcoal/60 text-lg">
+              Det er de fleste. Og det er helt okay.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "Jeg har aldrig løbet ultra før",
+                a: "Perfekt — de fleste i gruppen er i samme båd. Coach Emil tilpasser træningen til dit niveau, og du får en plan der bygger dig op gradvist.",
+              },
+              {
+                q: "Jeg er bange for ikke at kunne følge med",
+                a: "Det er ikke et konkurrencehold. Vi løber i vores eget tempo, og du har fuld støtte undervejs — både fra træneren og gruppen.",
+              },
+              {
+                q: "Hvad hvis jeg bliver skadet inden?",
+                a: "Vi har fleksible vilkår og hjælper dig med at justere din plan. Din sundhed kommer altid først.",
+              },
+              {
+                q: "Er det dyrt?",
+                a: "Priser fra 12.500 DKK inkl. moms. Det dækker fly, hotel, transport, trænervejledning og hele oplevelsen. Du betaler 75% som depositum.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+                className="bg-white rounded-2xl p-6 shadow-sm"
+              >
+                <h3 className="font-cabinet text-lg font-bold text-charcoal mb-2">"{item.q}"</h3>
+                <p className="text-charcoal/70 leading-relaxed">{item.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── URGENCY + FINAL CTA ─── */}
+      <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
+        <div className="container mx-auto px-6 max-w-xl text-center">
+          <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Calendar className="w-4 h-4" />
+            Kun 9 pladser tilbage
+          </div>
+
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
+            Tag det første skridt
+          </h2>
+          <p className="text-white/60 text-lg mb-10">
+            Lad være med bare at følge med fra sidelinjen — vær en del af det.
+          </p>
+
+          <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
+            <div className="mb-6">
+              <p className="text-sm text-charcoal/60 mb-1">Pris fra</p>
+              <p className="font-cabinet text-3xl font-bold text-charcoal">
+                12.500 DKK <span className="text-sm text-charcoal/50 font-normal">inkl. moms</span>
+              </p>
+            </div>
+
+            <PriceQuoteForm
+              destinationName="Swiss Alps 100"
+              availableDistances={["50km", "100km", "160km"]}
+              maxParticipants={9}
+            />
+            <div className="mt-4">
+              <CallMeBackCTA />
+            </div>
+
+            <p className="text-charcoal/40 text-xs text-center mt-6">
+              Vi vender tilbage inden for 48 timer med et personligt tilbud.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
