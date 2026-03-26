@@ -151,7 +151,7 @@ const SwissAlps100V2 = () => {
               const photos = Array.isArray(t.photo_url) && t.photo_url.length > 0 ? t.photo_url : ["/lovable-uploads/69dcec0a-0f68-4392-b8d8-b61b254c67b7.png"];
               const date = new Date(t.created_at).toLocaleDateString('da-DK', { month: 'long', year: 'numeric' }).replace(/^\w/, c => c.toUpperCase());
               return (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
+                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full bg-white/10 backdrop-blur-sm">
                   <CardContent className="p-0 h-full">
                     <div className="bg-gray-100 h-60 relative overflow-hidden">
                       <img
@@ -164,8 +164,8 @@ const SwissAlps100V2 = () => {
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="font-cabinet font-bold text-lg text-charcoal">{t.name}</h3>
-                          <p className="text-sm text-charcoal/60">{t.location}</p>
+                          <h3 className="font-cabinet font-bold text-lg text-white">{t.name}</h3>
+                          <p className="text-sm text-white/60">{t.location}</p>
                         </div>
                         <div className="text-right">
                           <div className="flex gap-1">
@@ -173,10 +173,10 @@ const SwissAlps100V2 = () => {
                               <Star key={s} className={`w-4 h-4 ${s <= t.rating ? "fill-[#FFDC00] text-[#FFDC00]" : "text-gray-300"}`} />
                             ))}
                           </div>
-                          <p className="text-sm text-charcoal/60 mt-1">{date}</p>
+                          <p className="text-sm text-white/60 mt-1">{date}</p>
                         </div>
                       </div>
-                      <p className="text-charcoal/80 italic text-sm leading-relaxed mb-4 line-clamp-6">
+                      <p className="text-white/80 italic text-sm leading-relaxed mb-4 line-clamp-6">
                         "{t.review}"
                       </p>
                       <div className="flex items-center justify-between gap-2">
@@ -184,7 +184,7 @@ const SwissAlps100V2 = () => {
                           {t.distance}
                         </span>
                         {t.destination && (
-                          <span className="text-xs text-charcoal/60">{t.destination}</span>
+                          <span className="text-xs text-white/60">{t.destination}</span>
                         )}
                       </div>
                     </div>
