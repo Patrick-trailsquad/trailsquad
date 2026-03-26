@@ -153,7 +153,7 @@ const KangNu26V2 = () => {
               <Hourglass className="w-5 h-5 text-[#FFDC00]" />
             </motion.div>
             <p className="font-cabinet font-bold text-white text-lg md:text-xl tracking-tight">
-              Kun 14 pladser — og de forsvinder hurtigt
+              De første 5 pladser er allerede booket!
             </p>
             <motion.div
               animate={{ rotate: [0, 180, 180, 360] }}
