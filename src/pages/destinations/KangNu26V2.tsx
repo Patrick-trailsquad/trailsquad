@@ -3,7 +3,7 @@ import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight, Ship, Binoculars, CheckCircle2, X } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
+import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import KangNu26Itinerary from "../../components/destinations/kangnu26/KangNu26Itinerary";
 import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu26Accommodation";
