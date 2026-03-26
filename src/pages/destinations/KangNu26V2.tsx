@@ -31,6 +31,7 @@ const KangNu26V2 = () => {
 
   const [testimonials, setTestimonials] = useState<{ name: string; location: string | null; rating: number; review: string; distance: string; destination: string; photo_url: string[] | null; created_at: string }[]>([]);
   const [activePhotos, setActivePhotos] = useState<Record<number, number>>({});
+  const [expandedReviews, setExpandedReviews] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
     const fetchTestimonials = async () => {
