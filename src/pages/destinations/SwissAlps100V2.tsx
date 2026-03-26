@@ -68,7 +68,7 @@ const SwissAlps100V2 = () => {
           </Link>
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center mt-24 md:mt-0">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
