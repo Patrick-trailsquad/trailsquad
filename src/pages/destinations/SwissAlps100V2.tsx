@@ -142,6 +142,27 @@ const SwissAlps100V2 = () => {
         </div>
       </section>
 
+      {/* ─── URGENCY CTA ─── */}
+      <section className="bg-[#FFDC00] py-4 md:py-5">
+        <div className="container mx-auto px-6 max-w-4xl flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-center md:text-left">
+          <div className="flex items-center gap-2">
+            <Calendar className="w-5 h-5 text-charcoal shrink-0" />
+            <p className="font-cabinet font-bold text-charcoal text-base md:text-lg">
+              Tilmeld dig inden udgangen af april
+            </p>
+          </div>
+          <p className="text-charcoal/80 text-sm md:text-base max-w-md">
+            Vi sammensætter gruppen i slutningen af april — sikr din plads, før den bliver givet videre.
+          </p>
+          <button
+            onClick={scrollToCTA}
+            className="bg-charcoal text-white px-6 py-2.5 rounded-full font-cabinet font-medium text-sm hover:bg-charcoal/90 transition-colors whitespace-nowrap shrink-0"
+          >
+            Ansøg nu
+          </button>
+        </div>
+      </section>
+
       {/* ─── SOCIAL PROOF ─── */}
       {testimonials.length > 0 && (
       <section className="bg-charcoal py-16 md:py-20">
