@@ -511,7 +511,7 @@ const KangNu26V2 = () => {
             En oplevelse du aldrig glemmer
           </h2>
           <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
-            KangNu Running Race starter med en bådtur til Kobberfjorden og fører dig gennem Grønlands dramatiske arktiske landskab — et af verdens mest uberørte og betagende steder.
+            KangNu Running Race starter med en bådtur til Kobberfjorden og fører dig gennem Grønlands dramatiske arktiske landskab — et af verdens mest uberørte og betagende steder. Du kan vandre den smukke 15 km rute, eller løbe 32 eller 51 km trailløb.
           </p>
           <div className="grid grid-cols-3 gap-6 max-w-md mx-auto">
             {[
