@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight, Ship, Binoculars, CheckCircle2, X } from "lucide-react";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight, Ship, Binoculars, CheckCircle2, X, Footprints } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
@@ -206,7 +206,7 @@ const KangNu26V2 = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 text-white/90 text-sm mb-10 max-w-2xl mx-auto"
           >
             {[
-              { icon: Shield, text: "Trænervejledning fra coach Emil" },
+              { icon: Footprints, text: "Både vandretur og trailløb" },
               { icon: Plane, text: "Fly & logistik er håndteret" },
               { icon: Users, text: "Lille dansk gruppe (12–16)" },
               { icon: Binoculars, text: "Hvalsafari & arktisk natur" },
