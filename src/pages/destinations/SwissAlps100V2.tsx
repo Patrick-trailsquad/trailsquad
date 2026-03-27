@@ -454,7 +454,7 @@ const SwissAlps100V2 = () => {
               },
               {
                 q: "Er det dyrt?",
-                a: "Priser fra 12.500 DKK inkl. moms. Det dækker fly, hotel, transport, trænervejledning og hele oplevelsen. Du betaler 75% som depositum.",
+                a: "Priser fra 12.500 DKK inkl. moms. Det dækker fly, hotel, transport, trænervejledning og hele oplevelsen. Du betaler 50% som depositum.",
               },
             ].map((item, i) => (
               <motion.div
