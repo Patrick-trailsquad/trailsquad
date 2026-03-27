@@ -27,9 +27,9 @@ const days = [
   {
     day: 3,
     date: "lørdag 8. august",
-    title: "🏁 Løbsdag — 50 km & 160 km",
+    title: "🏁 Løbsdag — 50 km",
     items: [
-      { icon: Trophy, text: "Race day for løbere af 50 km og 160 km!" },
+      { icon: Trophy, text: "Race day for løbere af 50 km!" },
       { icon: Users, text: "Fejring ved målstregen" },
       { icon: UtensilsCrossed, text: "Fælles afslutningsmiddag" },
     ],
