@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight, Ship, Binoculars, CheckCircle2, X } from "lucide-react";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight, Ship, Binoculars, CheckCircle2, X, Footprints } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
