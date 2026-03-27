@@ -313,7 +313,7 @@ const KangNu26V2 = () => {
               Ansøg om en plads →
             </button>
             <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#FFDC00] text-charcoal text-xs font-bold">
-              Kun 16 pladser tilbage
+              Kun 14 pladser tilbage
             </span>
           </div>
         </div>
@@ -690,7 +690,7 @@ const KangNu26V2 = () => {
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Hourglass className="w-4 h-4" />
-            Kun 16 pladser tilbage
+            Kun 14 pladser tilbage
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
