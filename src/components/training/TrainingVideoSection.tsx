@@ -39,10 +39,10 @@ const TrainingVideoSection = () => {
             src={trainingBg}
             alt="Tour de Furesøen"
             style={{
-              transform: `translate(-50%, calc(-50% + ${scrollY * 0.15}px))`,
-              transition: 'transform 0.1s ease-out',
+              transform: `translate(-50%, calc(-50% + ${scrollY * 0.4}px))`,
+              transition: 'transform 0.05s linear',
             }}
-            className="absolute top-1/2 left-1/2 w-full h-full object-cover scale-125"
+            className="absolute top-1/2 left-1/2 w-full h-[130%] object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
