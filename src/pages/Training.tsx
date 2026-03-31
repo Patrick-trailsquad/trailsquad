@@ -263,6 +263,9 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
         </div>
       </section>
 
+      {/* Tour de Furesøen Video Section */}
+      <TrainingVideoSection />
+
       {/* Landscape Images Section */}
       <section className="relative py-16 md:py-20 overflow-hidden">
         <img src="/lovable-uploads/trail-runner-mountain-peak.jpg" alt="Trail runner on mountain peak" className="absolute inset-0 w-full h-full object-cover" />
