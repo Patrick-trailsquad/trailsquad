@@ -59,7 +59,7 @@ const TrainingVideoSection = () => {
                   <img
                     src={video.thumbnail}
                     alt="Tour de Furesøen Video"
-                    className="w-[26rem] md:w-[32rem] h-80 md:h-96 object-cover transition-transform duration-700"
+                    className="w-[26rem] md:w-[32rem] aspect-video object-cover transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                   <div className="absolute inset-0 items-center justify-center flex flex-row">
