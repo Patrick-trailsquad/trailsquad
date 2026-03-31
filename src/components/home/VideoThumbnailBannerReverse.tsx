@@ -129,7 +129,7 @@ const VideoThumbnailBannerReverse = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                     
                     {/* Play Button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute inset-0 items-center justify-center flex flex-row">
                       <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
                         <Play className="w-9 h-9 text-[#FFDC00] ml-1" fill="currentColor" />
                       </div>
