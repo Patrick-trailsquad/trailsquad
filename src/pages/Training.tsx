@@ -7,6 +7,7 @@ import { useYouTubePlayer } from "../hooks/useYouTubePlayer";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
+import TrainingVideoSection from "@/components/training/TrainingVideoSection";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
@@ -261,6 +262,9 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
           </div>
         </div>
       </section>
+
+      {/* Tour de Furesøen Video Section */}
+      <TrainingVideoSection />
 
       {/* Landscape Images Section */}
       <section className="relative py-16 md:py-20 overflow-hidden">
