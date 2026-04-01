@@ -99,7 +99,7 @@ const KangNu26V2 = () => {
         phone: data.phone,
         preferredDistance: data.preferredDistance,
         participants: data.participants,
-        returnPath: '/kangnu_2',
+        returnPath: '/destinations/kangnu26',
       },
     });
 
