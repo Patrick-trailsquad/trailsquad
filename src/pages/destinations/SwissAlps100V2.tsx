@@ -53,7 +53,7 @@ const SwissAlps100V2 = () => {
   return (
     <div className="min-h-screen bg-stone">
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[95vh] flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
+      <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
           src="/lovable-uploads/swiss-alps-100-hero-new.jpg"
           alt="Løbere i de schweiziske alper med udsigt over Aletsch-gletsjeren"
