@@ -154,7 +154,7 @@ const KangNu26V2 = () => {
       )}
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[95vh] flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
+      <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
           src="/lovable-uploads/kangnu26-hero.jpg"
           alt="KangNu Running Race — løb i Grønlands vilde natur nær Nuuk"
