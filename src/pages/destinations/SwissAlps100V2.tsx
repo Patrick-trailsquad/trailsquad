@@ -217,6 +217,15 @@ const SwissAlps100V2 = () => {
         </div>
       </section>
 
+      {/* ─── REFERRAL USP BAR ─── */}
+      <div className="bg-[#FFDC00] py-3 md:py-4">
+        <div className="container mx-auto px-6 text-center">
+          <p className="font-cabinet font-bold text-charcoal text-sm md:text-base tracking-tight">
+            Tag en ven med, og få 1000 kr rabat! Eller 500 kr hver 😉
+          </p>
+        </div>
+      </div>
+
       {/* ─── SOCIAL PROOF ─── */}
       {testimonials.length > 0 && (() => {
         const marina = testimonials.find(t => t.name === 'Marina') || testimonials[0];
