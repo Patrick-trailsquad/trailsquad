@@ -60,7 +60,7 @@ const destinations = [
     image: "/lovable-uploads/swiss-alps-100-hero-new.jpg",
     location: "Swiss Alps 100, Schweiz",
     date: "August 2026",
-    spots: "9 pladser",
+    spots: "8 pladser",
     spotsOriginal: "14",
     href: "/destinations/swiss-alps-100",
   },
