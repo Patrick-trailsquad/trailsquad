@@ -45,7 +45,7 @@ const InfiniteTrailsPricingSection = () => {
       </div>
       <PriceQuoteForm 
         destinationName="Infinite Trails"
-        availableDistances={["30km", "45km", "60km"]}
+        availableDistances={["15km", "30km", "45km", "60km"]}
         maxParticipants={spotsLeft}
         depositPercentage={50}
       />
