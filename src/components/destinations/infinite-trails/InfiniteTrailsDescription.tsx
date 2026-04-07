@@ -10,8 +10,9 @@ const InfiniteTrailsDescription = () => {
           <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Løbet</h2>
           <p className="text-lg">
             Infinite Trails kombinerer det bedste fra alpin trailløb med den unikke charme af Bad Gastein i østrigske alper. 
-            Dette spektakulære event tilbyder fire forskellige distancer (15km, 30km, 45km og 60km), alle gennem det 
-            betagende bjerglandskab omkring Gasteinertal-dalen med panoramiske udsigter til Hohe Tauern-bjergkæden.
+            Dette spektakulære event tilbyder tre distancer (30km, 45km og 60km), alle gennem det 
+            betagende bjerglandskab omkring Gasteinertal-dalen med panoramiske udsigter til Hohe Tauern-bjergkæden. 
+            Vi fokuserer på de tre længste distancer, som for alvor giver dig mulighed for at opleve de alpine stier og bjerglandskabet.
           </p>
         </div>
 
