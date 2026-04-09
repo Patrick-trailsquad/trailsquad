@@ -208,7 +208,7 @@ const KangNu26V2 = () => {
             {[
               { icon: Footprints, text: "Både vandretur og trailløb" },
               { icon: Plane, text: "Fly & logistik er håndteret" },
-              { icon: Users, text: "Lille dansk gruppe (max 15 løbere)" },
+              { icon: Users, text: "Lille dansk gruppe (12–16)" },
               { icon: Binoculars, text: "Hvalsafari & arktisk natur" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-3 py-4">
