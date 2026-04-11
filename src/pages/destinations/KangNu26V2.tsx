@@ -580,7 +580,6 @@ const KangNu26V2 = () => {
               </motion.div>
             ))}
           </div>
-          </div>
         </div>
       </section>
 
