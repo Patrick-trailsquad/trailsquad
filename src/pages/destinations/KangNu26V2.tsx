@@ -529,7 +529,7 @@ const KangNu26V2 = () => {
       </section>
 
       {/* ─── CULTURAL EXPERIENCES ─── */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-[#FFDC00]">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-12">
             <p className="text-terra font-cabinet font-bold text-sm uppercase tracking-widest mb-3">Mere end et løb</p>
