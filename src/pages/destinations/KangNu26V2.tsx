@@ -13,6 +13,9 @@ import { useIsMobile } from "../../hooks/use-mobile";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useToast } from "../../components/ui/use-toast";
+import whaleSafariImg from "../../assets/kangnu-whale-safari.jpg";
+import fishingImg from "../../assets/kangnu-fishing.jpg";
+import wildernessBathImg from "../../assets/kangnu-wilderness-bath.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -544,17 +547,17 @@ const KangNu26V2 = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                emoji: "🐋",
+                image: whaleSafariImg,
                 title: "3-timers hvalsafari",
                 description: "Sejl ud på Nuuk-fjorden og oplev pukkelhvaler i deres naturlige habitat. En uforglemmelig oplevelse i arktisk farvand.",
               },
               {
-                emoji: "🎣",
+                image: fishingImg,
                 title: "Fisketur",
                 description: "Prøv kræfter med det grønlandske fiskeri — fang din egen fisk omgivet af dramatiske fjelde og krystalklart vand.",
               },
               {
-                emoji: "♨️",
+                image: wildernessBathImg,
                 title: "Vildmarksbad & sauna",
                 description: "Slap af i varmt vand under åben himmel med udsigt over den arktiske natur. Den perfekte restitution efter løbet.",
               },
@@ -565,11 +568,15 @@ const KangNu26V2 = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
-                className="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+                className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <span className="text-5xl mb-4 block">{item.emoji}</span>
-                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">{item.title}</h3>
-                <p className="text-charcoal/70 leading-relaxed">{item.description}</p>
+                <div className="h-48 overflow-hidden">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">{item.title}</h3>
+                  <p className="text-charcoal/70 leading-relaxed">{item.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
