@@ -573,9 +573,9 @@ const KangNu26V2 = () => {
                 <div className="h-48 relative overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <h3 className="absolute bottom-3 left-4 right-4 font-cabinet text-lg font-bold text-white drop-shadow-lg">{item.title}</h3>
+                  <h3 className="absolute bottom-3 left-4 right-4 font-cabinet text-lg font-bold text-white drop-shadow-lg text-center">{item.title}</h3>
                 </div>
-                <div className="p-5">
+                <div className="p-5 text-center">
                   <p className="text-charcoal/70 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </motion.div>
