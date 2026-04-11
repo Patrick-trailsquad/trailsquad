@@ -570,12 +570,13 @@ const KangNu26V2 = () => {
                 transition={{ delay: i * 0.15, duration: 0.5 }}
                 className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-48 relative overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <h3 className="absolute bottom-3 left-4 right-4 font-cabinet text-lg font-bold text-white drop-shadow-lg">{item.title}</h3>
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">{item.title}</h3>
-                  <p className="text-charcoal/70 leading-relaxed">{item.description}</p>
+                <div className="p-5">
+                  <p className="text-charcoal/70 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </motion.div>
             ))}
