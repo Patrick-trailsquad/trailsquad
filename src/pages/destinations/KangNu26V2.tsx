@@ -528,6 +528,54 @@ const KangNu26V2 = () => {
         </div>
       </section>
 
+      {/* ─── CULTURAL EXPERIENCES ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="text-center mb-12">
+            <p className="text-terra font-cabinet font-bold text-sm uppercase tracking-widest mb-3">Mere end et løb</p>
+            <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
+              Oplev Grønlands kultur & natur
+            </h2>
+            <p className="text-charcoal/60 text-lg max-w-2xl mx-auto">
+              Rejsen byder på unikke oplevelser, der gør turen til langt mere end bare et trailløb.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                emoji: "🐋",
+                title: "3-timers hvalsafari",
+                description: "Sejl ud på Nuuk-fjorden og oplev pukkelhvaler i deres naturlige habitat. En uforglemmelig oplevelse i arktisk farvand.",
+              },
+              {
+                emoji: "🎣",
+                title: "Fisketur",
+                description: "Prøv kræfter med det grønlandske fiskeri — fang din egen fisk omgivet af dramatiske fjelde og krystalklart vand.",
+              },
+              {
+                emoji: "♨️",
+                title: "Vildmarksbad & sauna",
+                description: "Slap af i varmt vand under åben himmel med udsigt over den arktiske natur. Den perfekte restitution efter løbet.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.5 }}
+                className="bg-stone rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+              >
+                <span className="text-5xl mb-4 block">{item.emoji}</span>
+                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">{item.title}</h3>
+                <p className="text-charcoal/70 leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── REMOVE FEAR ─── */}
       <section className="py-16 md:py-24 bg-stone">
         <div className="container mx-auto px-6 max-w-3xl">
