@@ -559,7 +559,7 @@ const KangNu26V2 = () => {
               {
                 image: wildernessBathImg,
                 title: "Vildmarksbad & sauna",
-                description: "Slap af i varmt vand under åben himmel med udsigt over den arktiske natur. Den perfekte restitution efter løbet.",
+                description: "Slap af i varmt vand under åben himmel med udsigt over den arktiske natur. Den perfekte måde at aklimatisere.",
               },
             ].map((item, i) => (
               <motion.div
