@@ -565,7 +565,7 @@ const KangNu26V2 = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
-                className="bg-stone rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
+                className="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
               >
                 <span className="text-5xl mb-4 block">{item.emoji}</span>
                 <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">{item.title}</h3>
