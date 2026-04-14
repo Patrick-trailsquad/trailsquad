@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -30,9 +29,7 @@ interface TrainingRegistrationModalProps {
 const registrationSchema = z.object({
   fullName: z.string().trim().min(2, "Navn skal være mindst 2 tegn").max(100),
   email: z.string().trim().email("Ugyldig email-adresse").max(255),
-  experience: z.number().min(1).max(5),
-  pickup: z.string().optional(),
-  optOutMarketing: z.boolean()
+  pickup: z.string().optional()
 });
 
 export const TrainingRegistrationModal = ({
@@ -49,9 +46,7 @@ export const TrainingRegistrationModal = ({
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    experience: 3,
-    pickup: "",
-    optOutMarketing: true
+    pickup: ""
   });
 
   const [loading, setLoading] = useState(false);
@@ -106,9 +101,7 @@ export const TrainingRegistrationModal = ({
       const webhookData = {
         fullName: validated.fullName,
         email: validated.email,
-        experience: validated.experience,
         pickup: validated.pickup || undefined,
-        optOutMarketing: validated.optOutMarketing,
         sessionTitle,
         sessionDate: `${sessionDate} ${sessionMeetingTime}`.replace(/^(\d+)\s+\w+\s+(\d+)\s+(\d+:\d+)$/, (_, day, year, time) => {
           const monthMatch = sessionDate.match(/\s(\w+)\s/);
@@ -161,9 +154,7 @@ export const TrainingRegistrationModal = ({
       setFormData({
         fullName: "",
         email: "",
-        experience: 3,
-        pickup: "",
-        optOutMarketing: true
+        pickup: ""
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -218,41 +209,6 @@ export const TrainingRegistrationModal = ({
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="experience">Erfaring med trail-løb (1-5) *</Label>
-            <div className="flex items-center gap-4">
-              <input
-                id="experience"
-                type="range"
-                min="1"
-                max="5"
-                value={formData.experience}
-                onChange={(e) => setFormData({ ...formData, experience: parseInt(e.target.value) })}
-                className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer
-                  [&::-webkit-slider-thumb]:appearance-none
-                  [&::-webkit-slider-thumb]:w-4
-                  [&::-webkit-slider-thumb]:h-4
-                  [&::-webkit-slider-thumb]:rounded-full
-                  [&::-webkit-slider-thumb]:bg-[#FFDC00]
-                  [&::-webkit-slider-thumb]:border-2
-                  [&::-webkit-slider-thumb]:border-black
-                  [&::-moz-range-thumb]:w-4
-                  [&::-moz-range-thumb]:h-4
-                  [&::-moz-range-thumb]:rounded-full
-                  [&::-moz-range-thumb]:bg-[#FFDC00]
-                  [&::-moz-range-thumb]:border-2
-                  [&::-moz-range-thumb]:border-black"
-              />
-              <span className="font-cabinet text-xl font-bold w-8 text-center">
-                {formData.experience}
-              </span>
-            </div>
-            <div className="flex justify-between text-xs text-muted-foreground">
-              <span>Nybegynder</span>
-              <span>Erfaren</span>
-            </div>
-          </div>
-
           {pickupOptions && pickupOptions.length > 0 && (
             <div className="space-y-2">
               <Label>Transport *</Label>
@@ -298,19 +254,6 @@ export const TrainingRegistrationModal = ({
               </div>
             </div>
           )}
-
-          <div className="flex items-start space-x-2 pt-2">
-            <Checkbox
-              id="optOutMarketing"
-              checked={formData.optOutMarketing}
-              onCheckedChange={(checked) => setFormData({ ...formData, optOutMarketing: checked as boolean })}
-            />
-            <Label htmlFor="optOutMarketing" className="text-xs font-normal leading-relaxed cursor-pointer">
-              Lad mig endelig høre om kommende træninger, løb fra Trail Fox og Trail Squad ture. Intet spam, bare god energi 🥳<br />
-              (Max én mail pr. måned) 😇<br />
-              Vi er forøvrigt nogle dovne skribenter, så vi skriver kun hvis det er VIRKELIG vigtigt 😄
-            </Label>
-          </div>
 
           <div className="flex gap-3 pt-4">
             <Button
