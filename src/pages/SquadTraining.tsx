@@ -212,8 +212,6 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞
         </div>
       </section>
 
-      {/* Tour de Furesøen Video Section */}
-      <TrainingVideoSection />
 
       {/* Current Training Trips */}
       
