@@ -47,12 +47,7 @@ const SquadTraining = () => {
       {/* Meet the Team Banner with Video Background */}
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 w-full h-full" style={{
-          transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
-          transformOrigin: 'center center'
-        }}>
-            <div className="absolute inset-0 w-full h-full" dangerouslySetInnerHTML={{ __html: `<div id="yt-player-${videoId}"></div>` }} />
-          </div>
+          <img src={squadTrainingHero} alt="Trail Squad træning" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         
