@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
