@@ -94,23 +94,23 @@ const SquadTraining = () => {
 
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-12 px-2 md:px-0">
-              {/* Session 6 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #6", "7 april 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              {/* Session 11 */}
+              <div onClick={() => handleSessionRegistration("Squad-træning #11", "5 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={trainingSession5Image} alt="Training Session 6" className="w-full h-full object-cover" />
+                  <img src={trainingSession5Image} alt="Squad-træning #11" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #6<br />[april]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #11<br />[maj]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-04-07">7 april 2026</time>
+                      <span className="font-semibold">Dato:</span> <time dateTime="2026-05-05">5 maj 2026</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-04-07T18:00:00+02:00">kl 18.00</time>
+                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-05-05T18:00:00+02:00">kl 18.00</time>
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-04-07T19:30:00+02:00">19.30</time>
+                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-05-05T19:30:00+02:00">19.30</time>
                     </p>
                     <p className="flex items-center gap-2">
                       <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
@@ -119,77 +119,79 @@ const SquadTraining = () => {
                       <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi løber 10-12 km i roligt tempo, så dem der skal løbe Røsnæs Trail i weekenden ikke ødelægger formen. Vi finder de kringlede stier, nogle stigninger at bestige, og ellers bare nyder, at det er ved at være sommer ☀️</p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #6", "7 april 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi løber 10-12 km i roligt tempo. Vi finder de kringlede stier, nogle stigninger at bestige, og ellers bare nyder, at det er ved at være sommer ☀️</p>
+                  <button onClick={(e) => { e.stopPropagation(); handleSessionRegistration("Squad-træning #11", "5 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5"); }} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
               </div>
 
-              {/* Session 7 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #7", "19 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              {/* Session 12 - TBA */}
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
+                <div className="absolute top-3 right-3 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">
+                  TBA
+                </div>
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={dyrehaven7Image} alt="Training Session 7 - Dyrehaven" className="w-full h-full object-cover" />
+                  <img src={dyrehaven7Image} alt="Squad-træning #12" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #7<br />[maj]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #12</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-05-19">19 maj 2026</time>
+                      <span className="font-semibold">Dato:</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-05-19T18:00:00+02:00">kl 18.00</time>
+                      <span className="font-semibold">Mødetid:</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-05-19T19:30:00+02:00">19.30</time>
+                      <span className="font-semibold">Vi slutter (ca):</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
+                      <span className="font-semibold">Sted:</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
+                      <span className="font-semibold">Mødested:</span> TBA
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi er vilde med Dyrehaven, og vi løber 10-12 km i fornuftigt tempo, så alle kan være med. Vi satser på hygge, højt humør og højdemeter.
-Vi finder en ny og spændende rute, og inkluderer bl.a. et loop, så de hurtige kan give den fuld gas.</p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #7", "19 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Detaljer følger snart.</p>
+                  <button disabled className="w-full bg-gray-400 text-white px-8 py-4 rounded-full font-cabinet font-medium cursor-not-allowed border-2 border-gray-400">
+                    TBA
                   </button>
                 </div>
               </div>
 
-              {/* Session 8 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              {/* Session 13 - TBA */}
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
+                <div className="absolute top-3 right-3 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">
+                  TBA
+                </div>
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={copenhillImage} alt="Training Session 8 - Copenhill" className="w-full h-full object-cover" />
+                  <img src={copenhillImage} alt="Squad-træning #13" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #8<br />[juni]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #13</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-06-02">2 juni 2026</time>
+                      <span className="font-semibold">Dato:</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-06-02T18:00:00+02:00">kl 18.00</time>
+                      <span className="font-semibold">Mødetid:</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-06-02T19:30:00+02:00">19.30</time>
+                      <span className="font-semibold">Vi slutter (ca):</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Copenhill, København
+                      <span className="font-semibold">Sted:</span> TBA
                     </p>
                     <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> August Bournonvilles Passage 8, 1055 København K
+                      <span className="font-semibold">Mødested:</span> TBA
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi starter på Kongens Nytorv (foran Det Kongelige teater), så transport med metro er en leg. Dernæst lunter vi et par km ud til Copenhill, og Coach Emil vil gøre intens bakketræning til dagens sjoveste tjans!
-
-Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
-                </p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Detaljer følger snart.</p>
+                  <button disabled className="w-full bg-gray-400 text-white px-8 py-4 rounded-full font-cabinet font-medium cursor-not-allowed border-2 border-gray-400">
+                    TBA
                   </button>
                 </div>
               </div>
