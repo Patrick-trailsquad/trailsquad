@@ -89,7 +89,7 @@ const SquadTraining = () => {
             <h2 className="font-cabinet font-bold text-4xl md:text-5xl text-charcoal mb-6">Træning for dig, der skal med på tur</h2>
             <div className="space-y-4">
               <p className="text-lg text-gray-600 leading-relaxed">Er du tilmeldt en af Trail Squads rejser? Så kom med til vores månedlige træningssessions, hvor vi løber sammen, snakker om de konkrete races og lærer hinanden at kende op til afgang.</p>
-              <p className="text-lg text-gray-600 leading-relaxed">Det er gratis, uforpligtende og en god måde at føle sig klar på – uanset niveau.</p>
+              <p className="text-lg text-gray-600 leading-relaxed">Det er 'en del af pakken', uforpligtende og en god måde at føle sig klar på – uanset niveau.</p>
             </div>
 
             {/* Training Sessions */}
