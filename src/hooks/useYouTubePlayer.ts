@@ -15,21 +15,22 @@ let isAPILoading = false;
 export const useYouTubePlayer = (
   videoId: string,
   playerVars?: any,
-  onReady?: (event: any) => void
+  onReady?: (event: any) => void,
+  elementId?: string
 ) => {
   const playerRef = useRef<HTMLDivElement>(null);
   const ytPlayerRef = useRef<any>(null);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // Initialize callbacks array if it doesn't exist
     if (!window.YTReadyCallbacks) {
       window.YTReadyCallbacks = [];
     }
 
     const initPlayer = () => {
-      if (playerRef.current && window.YT && window.YT.Player) {
-        ytPlayerRef.current = new window.YT.Player(playerRef.current, {
+      const target = elementId ? document.getElementById(elementId) : playerRef.current;
+      if (target && window.YT && window.YT.Player) {
+        ytPlayerRef.current = new window.YT.Player(target, {
           videoId: videoId,
           playerVars: playerVars || {},
           events: {
@@ -44,10 +45,8 @@ export const useYouTubePlayer = (
 
     const loadAPI = () => {
       if (isAPILoaded && window.YT && window.YT.Player) {
-        // API already loaded, initialize immediately
         initPlayer();
       } else if (!isAPILoading) {
-        // API not loaded yet, load it
         isAPILoading = true;
         
         const tag = document.createElement('script');
@@ -55,20 +54,15 @@ export const useYouTubePlayer = (
         const firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
 
-        // Set up the global callback
         window.onYouTubeIframeAPIReady = () => {
           isAPILoaded = true;
           isAPILoading = false;
-          
-          // Initialize all waiting players
           window.YTReadyCallbacks.forEach(callback => callback());
           window.YTReadyCallbacks = [];
         };
 
-        // Add this player to the queue
         window.YTReadyCallbacks.push(initPlayer);
       } else {
-        // API is loading, add to queue
         window.YTReadyCallbacks.push(initPlayer);
       }
     };
@@ -84,7 +78,7 @@ export const useYouTubePlayer = (
         }
       }
     };
-  }, [videoId, playerVars, onReady]);
+  }, [videoId]);
 
   return { playerRef, ytPlayerRef, isReady };
 };
