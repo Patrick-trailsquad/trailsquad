@@ -87,31 +87,6 @@ const SquadTraining = () => {
         </div>
       </section>
 
-      {/* Dark Grey Banner with Logos */}
-      <section className="w-full bg-charcoal py-16 md:py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-            {/* Trail Fox Side */}
-            <div className="flex flex-col items-center text-center space-y-4">
-              <img src={trailFoxLogo} alt="Trail Fox Logo" className="h-20 md:h-24 w-auto object-contain" />
-              <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-white">
-                Trail Fox
-              </h1>
-              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">Trail Fox serien er en række af Danmarks fedeste trail-løb. 
-Med mange års erfaring inden for eventafvikling, og med tusindvis af loyale racedeltagere, er Trail Fox et fyrtårn i det danske trail-miljø. </h3>
-            </div>
-
-            {/* Trail Squad Side */}
-            <div className="flex flex-col items-center text-center space-y-4">
-              <img src={trailSquadLogo} alt="Trail Squad Logo" className="h-20 md:h-24 w-auto object-contain" />
-              <h1 className="font-cabinet text-4xl md:text-5xl font-bold text-white">
-                Trail Squad
-              </h1>
-              <h3 className="font-cabinet text-xl md:text-2xl text-white/80">Trail Squad er et niche rejsebureau med fokus på trail-løb i udlandet. Trail Squad håndplukker de fedeste løb, står for det lavpraktiske, og sørger for, at alle bliver klar, via træningssessions op til race! </h3>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Concept Explanation */}
       <section className="py-16 px-0 md:px-6 bg-white">
