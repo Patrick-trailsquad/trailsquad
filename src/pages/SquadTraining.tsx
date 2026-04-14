@@ -19,6 +19,20 @@ const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
   const navigateAndScroll = useNavigateAndScroll();
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!heroRef.current) return;
+      const scrollY = window.scrollY;
+      const img = heroRef.current.querySelector('[data-parallax]') as HTMLElement;
+      if (img) {
+        img.style.transform = `translateY(${scrollY * 0.4}px)`;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
