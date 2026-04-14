@@ -78,7 +78,7 @@ const SquadTraining = () => {
           <div className="flex items-center justify-center">
             <div className="flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
-                <h1 className="font-cabinet text-5xl md:text-5xl xl:text-8xl font-black text-white leading-tight tracking-tight drop-shadow-lg">
+                <h1 className="font-cabinet text-5xl md:text-5xl xl:text-8xl font-black text-white leading-relaxed tracking-tight drop-shadow-lg">
                   Dedikerede træningssessions<br />
                   for deltagere på<br />
                   Trail Squads ture<br />
