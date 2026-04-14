@@ -59,9 +59,9 @@ const SquadTraining = () => {
       <Menu />
       
       {/* Meet the Team Banner with Video Background */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={squadTrainingHero} alt="Trail Squad træning" className="absolute inset-0 w-full h-full object-cover" style={{ transform: 'translateZ(0)' }} data-parallax />
+          <img src={squadTrainingHero} alt="Trail Squad træning" className="absolute inset-0 w-full h-[130%] object-cover will-change-transform" data-parallax />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         
