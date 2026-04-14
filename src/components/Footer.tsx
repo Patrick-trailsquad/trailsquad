@@ -140,7 +140,6 @@ const Footer = () => {
                       <a href="/squadtraining" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                         Squad Training
                       </a>
-                      </a>
                       <a href="/swiss-alps-100_2" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                         SA100 v2
                       </a>
