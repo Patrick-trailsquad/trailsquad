@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useScrollToTop } from "../hooks/useScrollToTop";
-import { useIsMobile } from "../hooks/use-mobile";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
-import { useYouTubePlayer } from "../hooks/useYouTubePlayer";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
