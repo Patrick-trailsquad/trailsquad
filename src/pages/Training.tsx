@@ -266,6 +266,46 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
       {/* Tour de Furesøen Video Section */}
       <TrainingVideoSection />
 
+      {/* Landscape Images Section */}
+      <section className="relative py-16 md:py-20 overflow-hidden">
+        <img src="/lovable-uploads/trail-runner-mountain-peak.jpg" alt="Trail runner on mountain peak" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-white/70" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
+            {/* Text Section - 60% */}
+            <div className="lg:col-span-6 flex flex-col items-center justify-center text-center">
+              <div className="space-y-2">
+                <h1 className="font-cabinet text-5xl md:text-5xl xl:text-8xl font-black text-charcoal leading-none tracking-tight">
+                  På jagt efter dit næste race?
+                </h1>
+              </div>
+            </div>
+            
+            {/* Images Section - 40% */}
+            <div className="lg:col-span-4 flex flex-col gap-6 justify-center mt-0 lg:mt-0">
+              <div className="relative">
+                <a href="https://trailfoxseries.dk/" target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-default">
+                  <img src="/lovable-uploads/training-landscape-1.jpg" alt="Trail Training" className="w-full h-32 md:h-40 object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                    <span className="bg-[#FFDC00] text-black px-6 py-2 rounded-full font-cabinet font-medium border-2 border-black hover:bg-[#FFDC00]/90 transition-colors duration-300 whitespace-nowrap cursor-pointer">Se kommende Trail Fox løb</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div className="relative" style={{ transform: 'translateX(-15px)' }}>
+                <div onClick={(e) => {e.preventDefault();navigateAndScroll('/', 'upcoming-trips');}} className="block relative overflow-hidden rounded-2xl shadow-2xl drop-shadow-lg transition-transform duration-300 hover:scale-105 cursor-default">
+                  <img src="/lovable-uploads/training-landscape-2.jpg" alt="Trail Training" className="w-full h-32 md:h-40 object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                    <span className="bg-[#FFDC00] text-black px-6 py-2 rounded-full font-cabinet font-medium border-2 border-black hover:bg-[#FFDC00]/90 transition-colors duration-300 whitespace-nowrap cursor-pointer">Se kommende Trail Squad rejser</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Current Training Trips */}
       
