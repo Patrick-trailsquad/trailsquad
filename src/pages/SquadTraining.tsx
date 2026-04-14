@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
@@ -19,6 +19,20 @@ const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
   const navigateAndScroll = useNavigateAndScroll();
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!heroRef.current) return;
+      const scrollY = window.scrollY;
+      const img = heroRef.current.querySelector('[data-parallax]') as HTMLElement;
+      if (img) {
+        img.style.transform = `translateY(${scrollY * 0.4}px)`;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
@@ -45,9 +59,9 @@ const SquadTraining = () => {
       <Menu />
       
       {/* Meet the Team Banner with Video Background */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={squadTrainingHero} alt="Trail Squad træning" className="absolute inset-0 w-full h-full object-cover" />
+          <img src={squadTrainingHero} alt="Trail Squad træning" className="absolute inset-0 w-full h-[130%] object-cover will-change-transform" data-parallax />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         
