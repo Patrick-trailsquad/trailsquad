@@ -22,9 +22,7 @@ const SquadTraining = () => {
   const isMobile = useIsMobile();
   const navigateAndScroll = useNavigateAndScroll();
   const videoId = 'viCyanUDC3s';
-  const {
-    playerRef: player2Ref
-  } = useYouTubePlayer(videoId, {
+  useYouTubePlayer(videoId, {
     autoplay: 1,
     mute: 1,
     loop: 1,
@@ -36,7 +34,7 @@ const SquadTraining = () => {
     modestbranding: 1,
     playsinline: 1,
     start: 3
-  });
+  }, undefined, `yt-player-${videoId}`);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
