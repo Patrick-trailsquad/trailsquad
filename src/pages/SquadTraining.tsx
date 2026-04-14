@@ -22,9 +22,7 @@ const SquadTraining = () => {
   const isMobile = useIsMobile();
   const navigateAndScroll = useNavigateAndScroll();
   const videoId = 'viCyanUDC3s';
-  const {
-    playerRef: player2Ref
-  } = useYouTubePlayer(videoId, {
+  useYouTubePlayer(videoId, {
     autoplay: 1,
     mute: 1,
     loop: 1,
@@ -36,7 +34,7 @@ const SquadTraining = () => {
     modestbranding: 1,
     playsinline: 1,
     start: 3
-  });
+  }, undefined, `yt-player-${videoId}`);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
@@ -69,7 +67,7 @@ const SquadTraining = () => {
           transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
           transformOrigin: 'center center'
         }}>
-            <div ref={player2Ref} className="absolute inset-0 w-full h-full" />
+            <div className="absolute inset-0 w-full h-full" dangerouslySetInnerHTML={{ __html: `<div id="yt-player-${videoId}"></div>` }} />
           </div>
           <div className="absolute inset-0 bg-black/50" />
         </div>
