@@ -69,7 +69,7 @@ const SquadTraining = () => {
           transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
           transformOrigin: 'center center'
         }}>
-            <div ref={player2Ref} className="absolute inset-0 w-full h-full" />
+            <div className="absolute inset-0 w-full h-full" dangerouslySetInnerHTML={{ __html: `<div id="yt-player-${videoId}"></div>` }} />
           </div>
           <div className="absolute inset-0 bg-black/50" />
         </div>
