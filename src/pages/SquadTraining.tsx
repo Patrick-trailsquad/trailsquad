@@ -18,22 +18,7 @@ import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
 const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
-  const isMobile = useIsMobile();
   const navigateAndScroll = useNavigateAndScroll();
-  const videoId = 'viCyanUDC3s';
-  useYouTubePlayer(videoId, {
-    autoplay: 1,
-    mute: 1,
-    loop: 1,
-    playlist: videoId,
-    controls: 0,
-    showinfo: 0,
-    rel: 0,
-    iv_load_policy: 3,
-    modestbranding: 1,
-    playsinline: 1,
-    start: 3
-  }, undefined, `yt-player-${videoId}`);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
