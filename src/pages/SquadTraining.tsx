@@ -79,7 +79,7 @@ const SquadTraining = () => {
             <div className="flex flex-col items-center justify-center text-center">
               <div className="space-y-2">
                 <h1 className="font-cabinet text-5xl md:text-5xl xl:text-8xl font-black text-white leading-none tracking-tight drop-shadow-lg">
-                  Dedikeret træningssessions<br />for deltagere på<br />Trail Squads ture 👇
+                  Dedikeret træningssessions<br />for deltagere på<br />Trail Squads ture<br />👇
                 </h1>
               </div>
             </div>
