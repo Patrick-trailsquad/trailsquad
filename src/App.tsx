@@ -23,6 +23,7 @@ import KangNu26 from "./pages/destinations/KangNu26";
 import SwissAlps100V2 from "./pages/destinations/SwissAlps100V2";
 import KangNu26V2 from "./pages/destinations/KangNu26V2";
 import TrailFox from "./pages/TrailFox";
+import SquadTraining from "./pages/SquadTraining";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +63,7 @@ const App = () => (
             <Route path="/swiss-alps-100_2" element={<SwissAlps100 />} />
             <Route path="/kangnu_2" element={<KangNu26 />} />
             <Route path="/trailfox" element={<TrailFox />} />
+            <Route path="/squadtraining" element={<SquadTraining />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
