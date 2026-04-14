@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useScrollToTop } from "../hooks/useScrollToTop";
-import { useIsMobile } from "../hooks/use-mobile";
 import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
-import { useYouTubePlayer } from "../hooks/useYouTubePlayer";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
 import TrainingVideoSection from "@/components/training/TrainingVideoSection";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
+import squadTrainingHero from "@/assets/squad-training-hero.webp";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
 import copenhillImage from "@/assets/copenhill-training.avif";
 import trainingSession4Image from "@/assets/training-session-4.jpg";
@@ -19,22 +18,7 @@ import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
 const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
-  const isMobile = useIsMobile();
   const navigateAndScroll = useNavigateAndScroll();
-  const videoId = 'viCyanUDC3s';
-  useYouTubePlayer(videoId, {
-    autoplay: 1,
-    mute: 1,
-    loop: 1,
-    playlist: videoId,
-    controls: 0,
-    showinfo: 0,
-    rel: 0,
-    iv_load_policy: 3,
-    modestbranding: 1,
-    playsinline: 1,
-    start: 3
-  }, undefined, `yt-player-${videoId}`);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSession, setSelectedSession] = useState({
     title: "",
@@ -63,12 +47,7 @@ const SquadTraining = () => {
       {/* Meet the Team Banner with Video Background */}
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 w-full h-full" style={{
-          transform: isMobile ? 'scale(3.5)' : 'scale(1.5)',
-          transformOrigin: 'center center'
-        }}>
-            <div className="absolute inset-0 w-full h-full" dangerouslySetInnerHTML={{ __html: `<div id="yt-player-${videoId}"></div>` }} />
-          </div>
+          <img src={squadTrainingHero} alt="Trail Squad træning" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         
