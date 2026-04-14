@@ -119,7 +119,7 @@ const SquadTraining = () => {
                       <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
                     </p>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">En god times løb, hvor fokus er på zone-2, så vi kan hyggesnakke undervejs. Det er sidste fællestræning inden afgang mod Transylvanien, og vi gennemgår de sidste spørgsmål, udstyr mv.</p>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">En god times løb, hvor fokus er på zone-2, så vi kan hyggesnakke undervejs. Det er sidste fællestræning inden afgang mod Transylvanien, og vi gennemgår de sidste spørgsmål, udstyr mv.<br />Man er dog mere end velkommen, uanset hvilket race man skal løbe 🏃</p>
                   <button onClick={(e) => { e.stopPropagation(); handleSessionRegistration("Squad-træning #11", "5 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5"); }} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
