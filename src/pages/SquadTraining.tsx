@@ -88,6 +88,11 @@ const trainingSessions: TrainingSession[] = [
   },
 ];
 
+const isPendingSession = (session: TrainingSession) => {
+  const values = [session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace];
+  return values.some((value) => value === "TBD" || value === "TBA");
+};
+
 const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
@@ -167,11 +172,14 @@ const SquadTraining = () => {
 
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
-              {trainingSessions.map((session) => (
+              {trainingSessions.map((session) => {
+                const isActiveSession = session.isActive && !isPendingSession(session);
+
+                return (
                 <div
                   key={session.title}
-                  onClick={session.isActive ? () => handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace, session.pickupOptions) : undefined}
-                  className={`bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col ${session.isActive ? "transition-transform duration-300 hover:scale-105 cursor-pointer" : "opacity-50 grayscale pointer-events-none relative"}`}
+                  onClick={isActiveSession ? () => handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace, session.pickupOptions) : undefined}
+                  className={`bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col ${isActiveSession ? "transition-transform duration-300 hover:scale-105 cursor-pointer" : "opacity-50 grayscale pointer-events-none relative"}`}
                 >
                   <div className="relative h-80 bg-charcoal/20">
                     <img src={session.image} alt={session.title} className="w-full h-full object-cover" />
@@ -206,13 +214,15 @@ const SquadTraining = () => {
                         e.stopPropagation();
                         handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace, session.pickupOptions);
                       }}
+                      disabled={!isActiveSession}
                       className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
                     >
-                      Tilmeld
+                      {isActiveSession ? "Tilmeld" : "TBD"}
                     </button>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
