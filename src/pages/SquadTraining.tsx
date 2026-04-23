@@ -12,6 +12,7 @@ import trainingSession4Image from "@/assets/training-session-4.jpg";
 import dyrehaven7Image from "@/assets/dyrehaven-training-7.png";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
 import squadTraining13Image from "@/assets/squad-training-13.png";
+import squadTraining14Image from "@/assets/squad-training-14.png";
 type PickupOption = {
   value: string;
   label: string;
@@ -82,7 +83,7 @@ const trainingSessions: TrainingSession[] = [
     meetingPlace: "TBD",
     description:
       "En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.",
-    image: trainingSession3Image,
+    image: squadTraining14Image,
     isActive: true,
   },
 ];
