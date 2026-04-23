@@ -5,16 +5,87 @@ import { useNavigateAndScroll } from "../hooks/useNavigateAndScroll";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
-import TrainingVideoSection from "@/components/training/TrainingVideoSection";
-import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
-import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import squadTrainingHero from "@/assets/squad-training-hero.webp";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
 import copenhillImage from "@/assets/copenhill-training.avif";
 import trainingSession4Image from "@/assets/training-session-4.jpg";
 import dyrehaven7Image from "@/assets/dyrehaven-training-7.png";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
-import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
+type PickupOption = {
+  value: string;
+  label: string;
+  spotsKey?: string;
+};
+
+type TrainingSession = {
+  title: string;
+  monthLabel: string;
+  date: string;
+  meetingTime: string;
+  endTime: string;
+  location: string;
+  meetingPlace: string;
+  description: string;
+  image: string;
+  isActive: boolean;
+  pickupOptions?: PickupOption[];
+};
+
+const trainingSessions: TrainingSession[] = [
+  {
+    title: "Squad-træning #11",
+    monthLabel: "[maj]",
+    date: "5 maj 2026",
+    meetingTime: "18:00",
+    endTime: "19:30",
+    location: "Dyrehaven, Klampenborg",
+    meetingPlace: "Peter Lieps Vej 5",
+    description:
+      "En god times løb, hvor fokus er på zone-2, så vi kan hyggesnakke undervejs. Det er sidste fællestræning inden afgang mod Transylvanien, og vi gennemgår de sidste spørgsmål, udstyr mv.\nMan er dog mere end velkommen, uanset hvilket race man skal løbe 🏃",
+    image: trainingSession5Image,
+    isActive: true,
+  },
+  {
+    title: "Squad-træning #12",
+    monthLabel: "[juni]",
+    date: "16 juni 2026",
+    meetingTime: "18:00",
+    endTime: "19:30",
+    location: "TBD",
+    meetingPlace: "TBD",
+    description:
+      "En fællestræning med fokus på bakkesprint og bakketeknik, så vi kan arbejde med power, rytme og kontrol på stigningerne. Mere info om rute og setup følger.",
+    image: copenhillImage,
+    isActive: true,
+  },
+  {
+    title: "Squad-træning #13",
+    monthLabel: "[juli]",
+    date: "7 juli 2026",
+    meetingTime: "18:00",
+    endTime: "19:30",
+    location: "TBD",
+    meetingPlace: "TBD",
+    description:
+      "En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.",
+    image: trainingSession4Image,
+    isActive: true,
+  },
+  {
+    title: "Squad-træning #14",
+    monthLabel: "[august]",
+    date: "18 august 2026",
+    meetingTime: "18:00",
+    endTime: "19:30",
+    location: "TBD",
+    meetingPlace: "TBD",
+    description:
+      "En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.",
+    image: trainingSession3Image,
+    isActive: true,
+  },
+];
+
 const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
@@ -41,9 +112,9 @@ const SquadTraining = () => {
     endTime: "",
     location: "",
     meetingPlace: "",
-    pickupOptions: undefined as {value: string;label: string;spotsKey?: string;}[] | undefined
+      pickupOptions: undefined as PickupOption[] | undefined
   });
-  const handleSessionRegistration = (title: string, date: string, meetingTime: string, endTime: string, location: string, meetingPlace: string, pickupOptions?: {value: string;label: string;spotsKey?: string;}[]) => {
+  const handleSessionRegistration = (title: string, date: string, meetingTime: string, endTime: string, location: string, meetingPlace: string, pickupOptions?: PickupOption[]) => {
     setSelectedSession({
       title,
       date,
@@ -93,108 +164,53 @@ const SquadTraining = () => {
             </div>
 
             {/* Training Sessions */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-12 px-2 md:px-0">
-              {/* Session 11 */}
-              <div onClick={() => handleSessionRegistration("Squad-træning #11", "5 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
-                <div className="relative h-80 bg-charcoal/20">
-                  <img src={trainingSession5Image} alt="Squad-træning #11" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #11<br />[maj]</h3>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="space-y-2 text-gray-600 text-sm mb-6">
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-05-05">5 maj 2026</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-05-05T18:00:00+02:00">kl 18.00</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-05-05T19:30:00+02:00">19.30</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
+              {trainingSessions.map((session) => (
+                <div
+                  key={session.title}
+                  onClick={session.isActive ? () => handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace, session.pickupOptions) : undefined}
+                  className={`bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col ${session.isActive ? "transition-transform duration-300 hover:scale-105 cursor-pointer" : "opacity-50 grayscale pointer-events-none relative"}`}
+                >
+                  <div className="relative h-80 bg-charcoal/20">
+                    <img src={session.image} alt={session.title} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                    <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">
+                      {session.title}
+                      <br />
+                      {session.monthLabel}
+                    </h3>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">En god times løb, hvor fokus er på zone-2, så vi kan hyggesnakke undervejs. Det er sidste fællestræning inden afgang mod Transylvanien, og vi gennemgår de sidste spørgsmål, udstyr mv.<br />Man er dog mere end velkommen, uanset hvilket race man skal løbe 🏃</p>
-                  <button onClick={(e) => { e.stopPropagation(); handleSessionRegistration("Squad-træning #11", "5 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5"); }} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
-                  </button>
-                </div>
-              </div>
-
-              {/* Session 12 - TBA */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
-                <div className="absolute top-3 right-3 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">
-                  TBA
-                </div>
-                <div className="relative h-80 bg-charcoal/20">
-                  <img src={dyrehaven7Image} alt="Squad-træning #12" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #12</h3>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="space-y-2 text-gray-600 text-sm mb-6">
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> TBA
-                    </p>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="space-y-2 text-gray-600 text-sm mb-6">
+                      <p className="flex items-center gap-2">
+                        <span className="font-semibold">Dato:</span> <time>{session.date}</time>
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <span className="font-semibold">Mødetid:</span> <time>kl {session.meetingTime.replace(":", ".")}</time>
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <span className="font-semibold">Vi slutter (ca):</span> <time>{session.endTime.replace(":", ".")}</time>
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <span className="font-semibold">Sted:</span> {session.location}
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <span className="font-semibold">Mødested:</span> {session.meetingPlace}
+                      </p>
+                    </div>
+                    <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow whitespace-pre-line">{session.description}</p>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace, session.pickupOptions);
+                      }}
+                      className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
+                    >
+                      Tilmeld
+                    </button>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Detaljer følger snart.</p>
-                  <button disabled className="w-full bg-gray-400 text-white px-8 py-4 rounded-full font-cabinet font-medium cursor-not-allowed border-2 border-gray-400">
-                    TBA
-                  </button>
                 </div>
-              </div>
-
-              {/* Session 13 - TBA */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
-                <div className="absolute top-3 right-3 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">
-                  TBA
-                </div>
-                <div className="relative h-80 bg-charcoal/20">
-                  <img src={copenhillImage} alt="Squad-træning #13" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #13</h3>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="space-y-2 text-gray-600 text-sm mb-6">
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> TBA
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> TBA
-                    </p>
-                  </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Detaljer følger snart.</p>
-                  <button disabled className="w-full bg-gray-400 text-white px-8 py-4 rounded-full font-cabinet font-medium cursor-not-allowed border-2 border-gray-400">
-                    TBA
-                  </button>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
