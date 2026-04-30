@@ -66,8 +66,8 @@ const trainingSessions: TrainingSession[] = [
     date: "7 juli 2026",
     meetingTime: "18:00",
     endTime: "19:30",
-    location: "TBD",
-    meetingPlace: "TBD",
+    location: "Dyrehaven",
+    meetingPlace: "Skodsborg Kurhotel",
     description:
       "En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.",
     image: squadTraining13Image,
