@@ -43,7 +43,7 @@ const trainingSessions: TrainingSession[] = [
     location: "Dyrehaven, Klampenborg",
     meetingPlace: "Peter Lieps Vej 5",
     description:
-      "En god times løb, hvor fokus er på zone-2, så vi kan hyggesnakke undervejs. Det er sidste fællestræning inden afgang mod Transylvanien, og vi gennemgår de sidste spørgsmål, udstyr mv.\nMan er dog mere end velkommen, uanset hvilket race man skal løbe 🏃",
+      "En fællestræning med fokus på bakkesprint og bakketeknik, så vi kan arbejde med power, rytme og kontrol på stigningerne. Det er sidste fællestræning inden afgang mod Transylvanien, og vi gennemgår de sidste spørgsmål, udstyr mv.\nMan er dog mere end velkommen, uanset hvilket race man skal løbe 🏃",
     image: trainingSession5Image,
     isActive: true,
   },
@@ -69,7 +69,7 @@ const trainingSessions: TrainingSession[] = [
     location: "Dyrehaven",
     meetingPlace: "Skodsborg Kurhotel",
     description:
-      "En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.",
+      "En fællestræning med fokus på bakkesprint og bakketeknik, så vi kan arbejde med power, rytme og kontrol på stigningerne. Mere info om rute og setup følger.",
     image: squadTraining13Image,
     isActive: true,
   },
