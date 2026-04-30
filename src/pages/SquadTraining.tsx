@@ -69,7 +69,7 @@ const trainingSessions: TrainingSession[] = [
     location: "Dyrehaven",
     meetingPlace: "Skodsborg Kurhotel",
     description:
-      "En fællestræning med fokus på bakkesprint og bakketeknik, så vi kan arbejde med power, rytme og kontrol på stigningerne. Mere info om rute og setup følger.",
+      "Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Vi krydrer med et par intervalløb, så pulsen kommer op. \nVi får en tår at drikke til sidst på hotellet.",
     image: squadTraining13Image,
     isActive: true,
   },
