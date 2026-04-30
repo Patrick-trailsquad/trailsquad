@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModal";
 import squadTrainingHero from "@/assets/squad-training-hero.webp";
 import trainingSession3Image from "@/assets/training-session-3.jpg";
-import copenhillImage from "@/assets/copenhill-training.avif";
+import squadTraining12Image from "@/assets/squad-training-12.png";
 import trainingSession4Image from "@/assets/training-session-4.jpg";
 import dyrehaven7Image from "@/assets/dyrehaven-training-7.png";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
@@ -53,11 +53,11 @@ const trainingSessions: TrainingSession[] = [
     date: "16 juni 2026",
     meetingTime: "18:00",
     endTime: "19:30",
-    location: "TBD",
-    meetingPlace: "TBD",
+    location: "Frederiksberg Have",
+    meetingPlace: "Frederiksberg Runddel",
     description:
       "En fællestræning med fokus på bakkesprint og bakketeknik, så vi kan arbejde med power, rytme og kontrol på stigningerne. Mere info om rute og setup følger.",
-    image: copenhillImage,
+    image: squadTraining12Image,
     isActive: true,
   },
   {
