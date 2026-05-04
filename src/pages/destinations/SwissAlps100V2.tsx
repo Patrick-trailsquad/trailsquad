@@ -201,7 +201,7 @@ const SwissAlps100V2 = () => {
             </motion.div>
           </div>
           <p className="text-white/60 text-sm md:text-base mb-5 max-w-lg mx-auto">
-            Vi sammensætter den endelige gruppe i slutningen af april — book din plads før din nabo!
+            Vi sammensætter den endelige gruppe i midten af maj — book din plads før din nabo!
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-3">
             <button
