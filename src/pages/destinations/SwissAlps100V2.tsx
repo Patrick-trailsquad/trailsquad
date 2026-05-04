@@ -191,7 +191,7 @@ const SwissAlps100V2 = () => {
               <Hourglass className="w-5 h-5 text-[#FFDC00]" />
             </motion.div>
             <p className="font-cabinet font-bold text-white text-lg md:text-xl tracking-tight">
-              Vi lukker holdet 30. april!
+              Vi lukker holdet midt maj!
             </p>
             <motion.div
               animate={{ rotate: [0, 180, 180, 360] }}
@@ -201,7 +201,7 @@ const SwissAlps100V2 = () => {
             </motion.div>
           </div>
           <p className="text-white/60 text-sm md:text-base mb-5 max-w-lg mx-auto">
-            Vi sammensætter den endelige gruppe i slutningen af april — book din plads før din nabo!
+            Vi sammensætter den endelige gruppe i midten af maj — book din plads før din nabo!
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-3">
             <button
