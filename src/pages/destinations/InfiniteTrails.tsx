@@ -133,6 +133,15 @@ const InfiniteTrails = () => {
         <div className={isMobile ? "mb-12" : ""}>
           <InfiniteTrailsAccommodation />
         </div>
+        <div className="max-w-md mx-auto mt-12 bg-white rounded-xl p-6 shadow-lg">
+          <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-2 text-center">
+            Har du spørgsmål?
+          </h3>
+          <p className="text-gray-600 text-center mb-4">
+            Indtast dit telefonnummer, så ringer vi dig op for en uforpligtende snak om turen.
+          </p>
+          <CallMeBackCTA />
+        </div>
         <BackToDestinationsButton />
       </div>
       <ShakeoutRunBanner />
