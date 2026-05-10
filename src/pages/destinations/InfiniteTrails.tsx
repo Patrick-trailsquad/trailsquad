@@ -13,6 +13,7 @@ import InfiniteTrailsMediaSection from "../../components/destinations/infinite-t
 import InfiniteTrailsAccommodation from "../../components/destinations/infinite-trails/InfiniteTrailsAccommodation";
 import InfiniteTrailsPricingSection from "../../components/destinations/infinite-trails/InfiniteTrailsPricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
+import CallMeBackCTA from "../../components/CallMeBackCTA";
 
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
@@ -132,6 +133,15 @@ const InfiniteTrails = () => {
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
         <div className={isMobile ? "mb-12" : ""}>
           <InfiniteTrailsAccommodation />
+        </div>
+        <div className="max-w-md mx-auto mt-12 bg-white rounded-xl p-6 shadow-lg">
+          <h3 className="font-cabinet text-2xl font-bold text-charcoal mb-2 text-center">
+            Har du spørgsmål?
+          </h3>
+          <p className="text-gray-600 text-center mb-4">
+            Indtast dit telefonnummer, så ringer vi dig op for en uforpligtende snak om turen.
+          </p>
+          <CallMeBackCTA />
         </div>
         <BackToDestinationsButton />
       </div>
