@@ -93,6 +93,22 @@ const isPendingSession = (session: TrainingSession) => {
   return values.some((value) => value === "TBD" || value === "TBA");
 };
 
+const danishMonths: Record<string, number> = {
+  januar: 0, februar: 1, marts: 2, april: 3, maj: 4, juni: 5,
+  juli: 6, august: 7, september: 8, oktober: 9, november: 10, december: 11,
+};
+
+const isPastSession = (session: TrainingSession) => {
+  const match = session.date.match(/(\d+)\s+(\w+)\s+(\d{4})/);
+  if (!match) return false;
+  const [, day, monthName, year] = match;
+  const month = danishMonths[monthName.toLowerCase()];
+  if (month === undefined) return false;
+  const [endHour, endMin] = session.endTime.split(":").map(Number);
+  const sessionEnd = new Date(Number(year), month, Number(day), endHour || 23, endMin || 59);
+  return sessionEnd.getTime() < Date.now();
+};
+
 const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
@@ -173,7 +189,8 @@ const SquadTraining = () => {
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {trainingSessions.map((session) => {
-                const isActiveSession = session.isActive && !isPendingSession(session);
+                const isPast = isPastSession(session);
+                const isActiveSession = session.isActive && !isPendingSession(session) && !isPast;
 
                 return (
                 <div
@@ -184,6 +201,11 @@ const SquadTraining = () => {
                   <div className="relative h-80 bg-charcoal/20">
                     <img src={session.image} alt={session.title} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                    {isPast && (
+                      <span className="absolute top-3 right-3 z-10 bg-charcoal text-white text-xs font-cabinet font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
+                        Overstået
+                      </span>
+                    )}
                     <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">
                       {session.title}
                       <br />
@@ -217,7 +239,7 @@ const SquadTraining = () => {
                       disabled={!isActiveSession}
                       className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
                     >
-                      {isActiveSession ? "Tilmeld" : "TBD"}
+                      {isActiveSession ? "Tilmeld" : isPast ? "Overstået" : "TBD"}
                     </button>
                   </div>
                 </div>
