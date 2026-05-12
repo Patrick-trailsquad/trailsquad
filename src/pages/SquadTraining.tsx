@@ -201,6 +201,11 @@ const SquadTraining = () => {
                   <div className="relative h-80 bg-charcoal/20">
                     <img src={session.image} alt={session.title} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                    {isPast && (
+                      <span className="absolute top-3 right-3 z-10 bg-charcoal text-white text-xs font-cabinet font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
+                        Overstået
+                      </span>
+                    )}
                     <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">
                       {session.title}
                       <br />
