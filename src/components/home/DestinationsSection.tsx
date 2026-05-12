@@ -68,7 +68,7 @@ const destinations = [
     image: "/lovable-uploads/kangnu26-hero.jpg",
     location: "KangNu Running Race, Grønland",
     date: "August 2026",
-    spots: "11 pladser",
+    spots: "10 pladser",
     spotsOriginal: "20",
     href: "/destinations/kangnu26",
   },

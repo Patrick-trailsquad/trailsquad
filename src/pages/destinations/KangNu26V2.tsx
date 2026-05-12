@@ -316,7 +316,7 @@ const KangNu26V2 = () => {
               Ansøg om en plads →
             </button>
             <span className="inline-flex items-center gap-1 text-[#FFDC00] text-xs font-bold whitespace-nowrap">
-              Kun 11 pladser tilbage
+              Kun 10 pladser tilbage
             </span>
           </div>
         </div>
@@ -746,7 +746,7 @@ const KangNu26V2 = () => {
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Hourglass className="w-4 h-4" />
-            Kun 11 pladser tilbage
+            Kun 10 pladser tilbage
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
@@ -792,7 +792,7 @@ const KangNu26V2 = () => {
               accommodationOptions={[
                 { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)", spotsRemaining: 4 },
                 { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)", spotsRemaining: 3 },
-                { value: "soma-superior", label: "Hotel SØMA — Single Superior (27.800 kr.)", spotsRemaining: 5 },
+                { value: "soma-superior", label: "Hotel SØMA — Single Superior (27.800 kr.)", spotsRemaining: 4 },
               ]}
             />
             <div className="mt-4">

@@ -11,7 +11,7 @@ import {
 
 const KangNu26PricingSection = () => {
   const { toast } = useToast();
-  const spotsLeft = 11;
+  const spotsLeft = 10;
 
   const handleStripeCheckout = async (data: FormValues) => {
     const { data: result, error } = await supabase.functions.invoke('create-kangnu-checkout', {
@@ -89,7 +89,7 @@ const KangNu26PricingSection = () => {
         accommodationOptions={[
           { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)", spotsRemaining: 4 },
           { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)", spotsRemaining: 2 },
-          { value: "soma-superior", label: "Hotel SØMA — Single Superior (27.800 kr.)", spotsRemaining: 5 },
+          { value: "soma-superior", label: "Hotel SØMA — Single Superior (27.800 kr.)", spotsRemaining: 4 },
         ]}
       />
       <div className="mt-4">
