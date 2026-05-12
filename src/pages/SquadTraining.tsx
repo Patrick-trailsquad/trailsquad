@@ -93,6 +93,22 @@ const isPendingSession = (session: TrainingSession) => {
   return values.some((value) => value === "TBD" || value === "TBA");
 };
 
+const danishMonths: Record<string, number> = {
+  januar: 0, februar: 1, marts: 2, april: 3, maj: 4, juni: 5,
+  juli: 6, august: 7, september: 8, oktober: 9, november: 10, december: 11,
+};
+
+const isPastSession = (session: TrainingSession) => {
+  const match = session.date.match(/(\d+)\s+(\w+)\s+(\d{4})/);
+  if (!match) return false;
+  const [, day, monthName, year] = match;
+  const month = danishMonths[monthName.toLowerCase()];
+  if (month === undefined) return false;
+  const [endHour, endMin] = session.endTime.split(":").map(Number);
+  const sessionEnd = new Date(Number(year), month, Number(day), endHour || 23, endMin || 59);
+  return sessionEnd.getTime() < Date.now();
+};
+
 const SquadTraining = () => {
   usePageTitle('Squad Training');
   useScrollToTop();
