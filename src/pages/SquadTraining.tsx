@@ -189,7 +189,8 @@ const SquadTraining = () => {
             {/* Training Sessions */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {trainingSessions.map((session) => {
-                const isActiveSession = session.isActive && !isPendingSession(session);
+                const isPast = isPastSession(session);
+                const isActiveSession = session.isActive && !isPendingSession(session) && !isPast;
 
                 return (
                 <div
