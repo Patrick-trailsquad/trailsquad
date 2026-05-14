@@ -164,16 +164,16 @@ const SwissAlps100V2 = () => {
       {isMobile && (
         <div className="bg-charcoal px-6 py-6 flex flex-col gap-3">
           <button
-            onClick={scrollToCTA}
+            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
           >
-            Ansøg om en plads
+            Se hvad du får
           </button>
           <button
-            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
             className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
           >
-            Se hvad du får
+            Holdet er lukket
           </button>
         </div>
       )}
