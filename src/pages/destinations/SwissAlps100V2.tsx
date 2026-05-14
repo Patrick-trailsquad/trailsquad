@@ -580,16 +580,15 @@ const SwissAlps100V2 = () => {
       {/* ─── URGENCY + FINAL CTA ─── */}
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
-          <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Hourglass className="w-4 h-4" />
-            Kun 5 pladser tilbage
+          <div className="inline-flex items-center gap-2 bg-orange/20 text-orange-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
+            BILLETSALG LUKKET 🎟️
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
-            Tag det første skridt
+            Holdet er lukket
           </h2>
           <p className="text-white/60 text-lg mb-10">
-            Lad være med bare at følge med fra sidelinjen — vær en del af det.
+            Billetsalget er lukket for denne tur. Tak for interessen!
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
@@ -598,36 +597,20 @@ const SwissAlps100V2 = () => {
               <p className="font-cabinet text-3xl font-bold text-charcoal">
                 12.500 DKK <span className="text-sm text-charcoal/50 font-normal">inkl. moms</span>
               </p>
-              <Accordion type="single" collapsible className="w-full mt-2">
-                <AccordionItem value="price-details" className="border-none">
-                  <AccordionTrigger
-                    className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none !flex !items-center !justify-start gap-2"
-                    style={{ background: 'none', boxShadow: 'none' }}
-                  >
-                    Forklar prisvariationer
-                  </AccordionTrigger>
-                  <AccordionContent className="px-0 pt-2 text-charcoal/70 text-sm">
-                    <div>
-                      Hvis du ønsker at dele et <b>Alpine Double Room</b> er prisen 12.500 DKK. Du vil skulle dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                      Prisen for at bo alene på et <b>Alpine Double Room</b> er 14.600 DKK.<br /><br />
-                      Moms er inkluderet i alle priser.
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
             </div>
 
-            <PriceQuoteForm
-              destinationName="Swiss Alps 100"
-              availableDistances={["50km", "100km", "160km"]}
-              maxParticipants={5}
-            />
+            <button 
+              disabled
+              className="w-full bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400"
+            >
+              Ikke tilgængelig for booking i øjeblikket
+            </button>
             <div className="mt-4">
               <CallMeBackCTA />
             </div>
 
             <p className="text-charcoal/40 text-xs text-center mt-6">
-              Vi vender tilbage inden for 48 timer med et personligt tilbud.
+              Kontakt os hvis du har spørgsmål om turen.
             </p>
           </div>
         </div>
