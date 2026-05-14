@@ -184,34 +184,16 @@ const SwissAlps100V2 = () => {
       <section className="bg-charcoal py-6 md:py-8 border-b border-white/10">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <motion.div
-              animate={{ rotate: [0, 180, 180, 360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
-            >
-              <Hourglass className="w-5 h-5 text-[#FFDC00]" />
-            </motion.div>
             <p className="font-cabinet font-bold text-white text-lg md:text-xl tracking-tight">
-              Vi lukker holdet midt maj!
+              Holdet er lukket!
             </p>
-            <motion.div
-              animate={{ rotate: [0, 180, 180, 360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
-            >
-              <Hourglass className="w-5 h-5 text-[#FFDC00]" />
-            </motion.div>
           </div>
           <p className="text-white/60 text-sm md:text-base mb-5 max-w-lg mx-auto">
-            Vi sammensætter den endelige gruppe i midten af maj — book din plads før din nabo!
+            Billetsalget er lukket for denne tur. Tak for interessen!
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-3">
-            <button
-              onClick={scrollToCTA}
-              className="bg-[#FFDC00] text-charcoal px-7 py-3 rounded-full font-cabinet font-bold text-sm hover:bg-[#FFDC00]/90 transition-colors whitespace-nowrap"
-            >
-              Ansøg om en plads →
-            </button>
-            <span className="inline-flex items-center gap-1 text-[#FFDC00] text-xs font-bold whitespace-nowrap">
-              Kun 5 pladser tilbage
+            <span className="inline-flex items-center gap-2 bg-orange text-orange-foreground px-4 py-2 rounded-full font-cabinet text-sm font-bold shadow-md">
+              BILLETSALG LUKKET 🎟️
             </span>
           </div>
         </div>
