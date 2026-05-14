@@ -43,9 +43,6 @@ const SwissAlps100V2 = () => {
     fetchTestimonials();
   }, []);
 
-  const scrollToCTA = () => {
-    document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="min-h-screen bg-stone">
