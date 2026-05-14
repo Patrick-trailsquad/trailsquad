@@ -1,19 +1,16 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight } from "lucide-react";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
-import CallMeBackCTA from "../../components/CallMeBackCTA";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
 import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
+import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent } from "@/components/ui/card";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -46,9 +43,6 @@ const SwissAlps100V2 = () => {
     fetchTestimonials();
   }, []);
 
-  const scrollToCTA = () => {
-    document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="min-h-screen bg-stone">
@@ -142,18 +136,18 @@ const SwissAlps100V2 = () => {
               transition={{ delay: 0.9 }}
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
-              <button
-                onClick={scrollToCTA}
-                className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
-              >
-                Ansøg om en plads nu
-              </button>
-              <button
-                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
-              >
-                Se hvad du får
-              </button>
+            <button
+              onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+              className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+            >
+              Se hvad du får
+            </button>
+            <button
+              onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+            >
+              Holdet er lukket
+            </button>
             </motion.div>
           )}
         </div>
@@ -167,16 +161,16 @@ const SwissAlps100V2 = () => {
       {isMobile && (
         <div className="bg-charcoal px-6 py-6 flex flex-col gap-3">
           <button
-            onClick={scrollToCTA}
+            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
           >
-            Ansøg om en plads
+            Se hvad du får
           </button>
           <button
-            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
             className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
           >
-            Se hvad du får
+            Holdet er lukket
           </button>
         </div>
       )}
@@ -184,34 +178,16 @@ const SwissAlps100V2 = () => {
       <section className="bg-charcoal py-6 md:py-8 border-b border-white/10">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <motion.div
-              animate={{ rotate: [0, 180, 180, 360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
-            >
-              <Hourglass className="w-5 h-5 text-[#FFDC00]" />
-            </motion.div>
             <p className="font-cabinet font-bold text-white text-lg md:text-xl tracking-tight">
-              Vi lukker holdet midt maj!
+              Holdet er lukket!
             </p>
-            <motion.div
-              animate={{ rotate: [0, 180, 180, 360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
-            >
-              <Hourglass className="w-5 h-5 text-[#FFDC00]" />
-            </motion.div>
           </div>
           <p className="text-white/60 text-sm md:text-base mb-5 max-w-lg mx-auto">
-            Vi sammensætter den endelige gruppe i midten af maj — book din plads før din nabo!
+            Billetsalget er lukket for denne tur. Tak for interessen!
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-3">
-            <button
-              onClick={scrollToCTA}
-              className="bg-[#FFDC00] text-charcoal px-7 py-3 rounded-full font-cabinet font-bold text-sm hover:bg-[#FFDC00]/90 transition-colors whitespace-nowrap"
-            >
-              Ansøg om en plads →
-            </button>
-            <span className="inline-flex items-center gap-1 text-[#FFDC00] text-xs font-bold whitespace-nowrap">
-              Kun 5 pladser tilbage
+            <span className="inline-flex items-center gap-2 bg-orange text-orange-foreground px-4 py-2 rounded-full font-cabinet text-sm font-bold shadow-md">
+              BILLETSALG LUKKET 🎟️
             </span>
           </div>
         </div>
@@ -598,16 +574,15 @@ const SwissAlps100V2 = () => {
       {/* ─── URGENCY + FINAL CTA ─── */}
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
-          <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Hourglass className="w-4 h-4" />
-            Kun 5 pladser tilbage
+          <div className="inline-flex items-center gap-2 bg-orange/20 text-orange-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
+            BILLETSALG LUKKET 🎟️
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
-            Tag det første skridt
+            Holdet er lukket
           </h2>
           <p className="text-white/60 text-lg mb-10">
-            Lad være med bare at følge med fra sidelinjen — vær en del af det.
+            Billetsalget er lukket for denne tur. Tak for interessen!
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
@@ -616,36 +591,20 @@ const SwissAlps100V2 = () => {
               <p className="font-cabinet text-3xl font-bold text-charcoal">
                 12.500 DKK <span className="text-sm text-charcoal/50 font-normal">inkl. moms</span>
               </p>
-              <Accordion type="single" collapsible className="w-full mt-2">
-                <AccordionItem value="price-details" className="border-none">
-                  <AccordionTrigger
-                    className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none !flex !items-center !justify-start gap-2"
-                    style={{ background: 'none', boxShadow: 'none' }}
-                  >
-                    Forklar prisvariationer
-                  </AccordionTrigger>
-                  <AccordionContent className="px-0 pt-2 text-charcoal/70 text-sm">
-                    <div>
-                      Hvis du ønsker at dele et <b>Alpine Double Room</b> er prisen 12.500 DKK. Du vil skulle dele værelset med en fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                      Prisen for at bo alene på et <b>Alpine Double Room</b> er 14.600 DKK.<br /><br />
-                      Moms er inkluderet i alle priser.
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
             </div>
 
-            <PriceQuoteForm
-              destinationName="Swiss Alps 100"
-              availableDistances={["50km", "100km", "160km"]}
-              maxParticipants={5}
-            />
+            <button 
+              disabled
+              className="w-full bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400"
+            >
+              Ikke tilgængelig for booking i øjeblikket
+            </button>
             <div className="mt-4">
               <CallMeBackCTA />
             </div>
 
             <p className="text-charcoal/40 text-xs text-center mt-6">
-              Vi vender tilbage inden for 48 timer med et personligt tilbud.
+              Kontakt os hvis du har spørgsmål om turen.
             </p>
           </div>
         </div>

@@ -26,7 +26,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'swiss-alps-100',
     name: 'Swiss Alps 100',
     route: '/destinations/swiss-alps-100',
-    status: 'open' as const,
+    status: 'tickets-closed' as const,
     published: true
   },
   {
