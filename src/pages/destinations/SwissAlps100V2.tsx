@@ -1,12 +1,10 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Hourglass, Plane, ChevronLeft, ChevronRight } from "lucide-react";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import PriceQuoteForm from "../../components/PriceQuoteForm";
-import CallMeBackCTA from "../../components/CallMeBackCTA";
+import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
 import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
+import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
