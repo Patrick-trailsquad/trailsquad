@@ -139,18 +139,18 @@ const SwissAlps100V2 = () => {
               transition={{ delay: 0.9 }}
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
-              <button
-                onClick={scrollToCTA}
-                className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
-              >
-                Ansøg om en plads nu
-              </button>
-              <button
-                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
-              >
-                Se hvad du får
-              </button>
+            <button
+              onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+              className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+            >
+              Se hvad du får
+            </button>
+            <button
+              onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
+            >
+              Holdet er lukket
+            </button>
             </motion.div>
           )}
         </div>
