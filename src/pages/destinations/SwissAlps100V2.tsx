@@ -7,11 +7,6 @@ import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
-import { useIsMobile } from "../../hooks/use-mobile";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent } from "@/components/ui/card";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
