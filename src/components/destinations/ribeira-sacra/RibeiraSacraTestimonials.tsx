@@ -21,6 +21,8 @@ const RibeiraSacraTestimonials = () => {
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [expandedReviews, setExpandedReviews] = useState<{ [key: number]: boolean }>({});
+  const isMobile = useIsMobile();
+  const limit = isMobile ? 3 : 6;
 
   useEffect(() => {
     fetchTestimonials();
@@ -35,7 +37,8 @@ const RibeiraSacraTestimonials = () => {
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setDbTestimonials(data || []);
+      const shuffled = [...(data || [])].sort(() => Math.random() - 0.5);
+      setDbTestimonials(shuffled);
     } catch (error) {
       console.error('Error fetching testimonials:', error);
     } finally {
