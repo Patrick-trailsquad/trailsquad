@@ -81,6 +81,10 @@ const Transylvania100 = () => {
       <div className="mt-12 mb-20">
         <TransylvaniaIncludedAmenities className="bg-transparent" />
       </div>
+
+      <TransylvaniaTestimonials />
+
+
       
       <TransylvaniaDecorativeLines />
       
