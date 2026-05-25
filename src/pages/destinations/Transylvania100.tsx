@@ -14,6 +14,8 @@ import TransylvaniaPricingSection from "../../components/destinations/transylvan
 import TransylvaniaIncludedAmenities from "../../components/destinations/transylvania/TransylvaniaIncludedAmenities";
 import TransylvaniaDecorativeLines from "../../components/destinations/transylvania/TransylvaniaDecorativeLines";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
+import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
+
 
 import TransylvaniaScrollingBanner from "../../components/destinations/transylvania/TransylvaniaScrollingBanner";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
@@ -79,6 +81,10 @@ const Transylvania100 = () => {
       <div className="mt-12 mb-20">
         <TransylvaniaIncludedAmenities className="bg-transparent" />
       </div>
+
+      <TransylvaniaTestimonials />
+
+
       
       <TransylvaniaDecorativeLines />
       
