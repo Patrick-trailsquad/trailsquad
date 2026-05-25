@@ -1,4 +1,6 @@
 import React from 'react';
+import CallMeBackCTA from "../../CallMeBackCTA";
+
 
 const RibeiraMediaSection = () => {
   return (
@@ -23,12 +25,15 @@ const RibeiraMediaSection = () => {
             </span>
           </div>
         </div>
-        <button 
+        <button
           disabled
           className="w-full bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400"
         >
           Ikke tilgængelig for booking i øjeblikket
         </button>
+        <div className="mt-4">
+          <CallMeBackCTA />
+        </div>
       </div>
     </div>
   );
