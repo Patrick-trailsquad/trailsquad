@@ -100,7 +100,7 @@ const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTes
 
       toast({
         title: "Tak for din anmeldelse!",
-        description: "Din anmeldelse er blevet indsendt og vil blive gennemgået.",
+        description: "Din anmeldelse er nu online.",
       });
 
       // Reset form
