@@ -93,14 +93,14 @@ const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTes
         distance,
         destination,
         photo_url: photoUrls,
-        status: 'pending'
+        status: 'approved'
       });
 
       if (error) throw error;
 
       toast({
         title: "Tak for din anmeldelse!",
-        description: "Din anmeldelse er blevet indsendt og vil blive gennemgået.",
+        description: "Din anmeldelse er nu online.",
       });
 
       // Reset form
