@@ -211,16 +211,16 @@ const RibeiraSacraTestimonials = () => {
             {allTestimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-0 h-full">
-                  <div className="bg-gray-100 h-60 relative overflow-hidden">
+                  <div className="bg-gray-100 aspect-square relative overflow-hidden">
                     {testimonial.photos.length > 1 ? (
                       <Carousel className="w-full h-full" opts={{ loop: true }}>
-                        <CarouselContent className="h-60">
+                        <CarouselContent className="aspect-square">
                           {testimonial.photos.map((photo, photoIndex) => (
-                            <CarouselItem key={photoIndex} className="h-60">
+                            <CarouselItem key={photoIndex} className="aspect-square">
                               <img 
                                 src={photo} 
                                 alt={`Photo ${photoIndex + 1} from ${testimonial.name}`}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-center"
                                 loading="lazy"
                                 decoding="async"
                               />
@@ -234,7 +234,7 @@ const RibeiraSacraTestimonials = () => {
                       <img 
                         src={testimonial.photos[0]} 
                         alt={`Photo from ${testimonial.name}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                         loading="lazy"
                         decoding="async"
                       />
