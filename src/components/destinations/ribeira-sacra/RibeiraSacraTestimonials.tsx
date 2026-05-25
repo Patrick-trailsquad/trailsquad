@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import AddTestimonialModal from "../shared/AddTestimonialModal";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Testimonial {
   id?: string;
@@ -20,6 +21,8 @@ const RibeiraSacraTestimonials = () => {
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [expandedReviews, setExpandedReviews] = useState<{ [key: number]: boolean }>({});
+  const isMobile = useIsMobile();
+  const limit = isMobile ? 3 : 6;
 
   useEffect(() => {
     fetchTestimonials();
@@ -34,7 +37,8 @@ const RibeiraSacraTestimonials = () => {
         .order('created_at', { ascending: false });
 
       if (error) throw error;
-      setDbTestimonials(data || []);
+      const shuffled = [...(data || [])].sort(() => Math.random() - 0.5);
+      setDbTestimonials(shuffled);
     } catch (error) {
       console.error('Error fetching testimonials:', error);
     } finally {
@@ -208,7 +212,7 @@ const RibeiraSacraTestimonials = () => {
 
         {allTestimonials.length > 0 ? (
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {allTestimonials.map((testimonial, index) => (
+            {allTestimonials.slice(0, limit).map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
                 <CardContent className="p-0 h-full">
                   <div className="bg-gray-100 aspect-square relative overflow-hidden">
