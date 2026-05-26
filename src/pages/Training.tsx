@@ -193,7 +193,8 @@ Så vil vores trail træningssessions være noget for dig!</p>
               </div>
 
               {/* Session 7 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #7", "19 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
+                <div className="absolute top-3 right-3 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">Overstået</div>
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={dyrehaven7Image} alt="Training Session 7 - Dyrehaven" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
@@ -219,8 +220,8 @@ Så vil vores trail træningssessions være noget for dig!</p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi er vilde med Dyrehaven, og vi løber 10-12 km i fornuftigt tempo, så alle kan være med. Vi satser på hygge, højt humør og højdemeter.
 Vi finder en ny og spændende rute, og inkluderer bl.a. et loop, så de hurtige kan give den fuld gas.</p>
-                  <button onClick={() => handleSessionRegistration("Træningssession #7", "19 maj 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <button disabled className="w-full bg-gray-400 text-white px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-500 cursor-not-allowed">
+                    Overstået
                   </button>
                 </div>
               </div>
