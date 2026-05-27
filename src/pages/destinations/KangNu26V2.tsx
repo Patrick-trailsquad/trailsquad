@@ -318,9 +318,6 @@ const KangNu26V2 = () => {
             >
               Ansøg om en plads →
             </button>
-            <span className="inline-flex items-center gap-1 text-[#FFDC00] text-xs font-bold whitespace-nowrap">
-              Kun 10 pladser tilbage
-            </span>
           </div>
         </div>
       </section>
