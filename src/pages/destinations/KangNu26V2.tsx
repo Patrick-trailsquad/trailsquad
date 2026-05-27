@@ -309,7 +309,7 @@ const KangNu26V2 = () => {
             Grønland er en once-in-a-lifetime oplevelse — book din plads før din nabo!
           </p>
           <p className="text-[#FFDC00] font-cabinet font-bold text-sm md:text-base mb-5 max-w-lg mx-auto">
-            Tilmeldingsdeadline: torsdag d. 4. juni
+            Tilmelding senest d. 4. juni
           </p>
           <div className="flex items-center justify-center gap-3">
             <button
@@ -746,7 +746,7 @@ const KangNu26V2 = () => {
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Hourglass className="w-4 h-4" />
-            Kun 10 pladser tilbage
+            Tilmelding senest d. 4. juni
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
