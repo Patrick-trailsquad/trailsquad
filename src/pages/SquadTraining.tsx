@@ -56,7 +56,7 @@ const trainingSessions: TrainingSession[] = [
     location: "Frederiksberg Have",
     meetingPlace: "Frederiksberg Runddel",
     description:
-      "En fællestræning med fokus på bakkesprint og bakketeknik, så vi kan arbejde med power, rytme og kontrol på stigningerne. Mere info om rute og setup følger.\n\n\nTema: Bakkeintervaller ⛰️",
+      "En fællestræning med fokus på bakkesprint og bakketeknik, så vi kan arbejde med power, rytme og kontrol på stigningerne. Mere info om rute og setup følger.\n\nTema: Bakkeintervaller ⛰️",
     image: squadTraining12Image,
     isActive: true,
   },
