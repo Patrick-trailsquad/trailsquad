@@ -69,7 +69,7 @@ const trainingSessions: TrainingSession[] = [
     location: "Dyrehaven",
     meetingPlace: "Skodsborg Kurhotel",
     description:
-      "Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Vi krydrer med et par intervalløb, så pulsen kommer op. \nVi får en tår at drikke til sidst på hotellet.",
+      "Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Vi krydrer med et par intervalløb, så pulsen kommer op.\nVi får en tår at drikke til sidst på hotellet.\n\n\nTema: Energi-indtag når man løber trail (med SUPPLME)",
     image: squadTraining13Image,
     isActive: true,
   },
