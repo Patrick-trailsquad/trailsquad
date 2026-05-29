@@ -70,7 +70,7 @@ const destinations = [
     location: "KangNu Running Race, Grønland",
     date: "August 2026",
     spots: "8 pladser",
-    spotsOriginal: "20",
+    spotsOriginal: "16",
     href: "/destinations/kangnu26",
   },
   {
