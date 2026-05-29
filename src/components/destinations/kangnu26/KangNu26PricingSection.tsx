@@ -87,7 +87,7 @@ const KangNu26PricingSection = () => {
         onSubmitOverride={handleStripeCheckout}
         getSubmitButtonLabel={(participants) => `Betal depositum — DKK ${(10000 * (participants || 1)).toLocaleString('da-DK')}`}
         accommodationOptions={[
-          { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)", spotsRemaining: 4 },
+          { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)", spotsRemaining: 2 },
           { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)", spotsRemaining: 2 },
           { value: "soma-superior", label: "Hotel SØMA — Single Superior (27.800 kr.)", spotsRemaining: 4 },
         ]}
