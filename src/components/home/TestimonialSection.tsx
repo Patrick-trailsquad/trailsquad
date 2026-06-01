@@ -41,7 +41,6 @@ const TestimonialSection = () => {
   const [expandedReviews, setExpandedReviews] = useState<{ [key: number]: boolean }>({});
 
   const isMobile = useIsMobile();
-  const limit = isMobile ? 3 : 6;
 
   useEffect(() => {
     fetchTestimonials();
@@ -171,7 +170,7 @@ const TestimonialSection = () => {
         </h1>
         
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {allTestimonials.slice(0, limit).map((testimonial, index) => (
+          {(isMobile ? allTestimonials : allTestimonials.slice(0, 6)).map((testimonial, index) => (
             <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
               <CardContent className="p-0 h-full">
                 <div className="bg-gray-100 aspect-square relative overflow-hidden">
