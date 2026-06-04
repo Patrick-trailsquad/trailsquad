@@ -744,16 +744,15 @@ const KangNu26V2 = () => {
       })()}
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
-          <div className="inline-flex items-center gap-2 bg-[#FFDC00]/20 text-[#FFDC00] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Hourglass className="w-4 h-4" />
-            Tilmelding senest d. 4. juni
+          <div className="inline-flex items-center gap-2 bg-orange text-orange-foreground px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
+            BILLETSALG LUKKET 🎟️
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
-            Tag det første skridt
+            Turen er fuldt booket
           </h2>
           <p className="text-white/60 text-lg mb-10">
-            Grønland venter — vær en del af det.
+            Skriv dig op til ventelisten — vi ringer hvis der bliver en plads ledig.
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
@@ -762,49 +761,24 @@ const KangNu26V2 = () => {
               <p className="font-cabinet text-3xl font-bold text-charcoal">
                 26.000 DKK <span className="text-sm text-charcoal/50 font-normal">inkl. moms</span>
               </p>
-              <Accordion type="single" collapsible className="w-full mt-2">
-                <AccordionItem value="price-details" className="border-none">
-                  <AccordionTrigger
-                    className="px-0 py-0 text-left text-sm underline text-primary hover:text-primary/80 shadow-none bg-transparent font-normal font-sans decoration-[1.5px] focus:ring-0 focus:outline-none !flex !items-center !justify-start gap-2"
-                    style={{ background: 'none', boxShadow: 'none' }}
-                  >
-                    Forklar prisvariationer
-                  </AccordionTrigger>
-                  <AccordionContent className="px-0 pt-2 text-charcoal/70 text-sm">
-                    <div>
-                      Prisen for et <b>Economy Double Værelse på HHE Express</b> (3★) er 26.000 DKK per person.<br /><br />
-                      Prisen for et <b>Single Standard Værelse på Hotel SØMA</b> (4★) er 26.550 DKK per person.<br /><br />
-                      Prisen for et <b>Single Superior Værelse på Hotel SØMA</b> (4★) er 27.800 DKK per person.<br /><br />
-                      Moms er inkluderet i alle priser.
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
             </div>
 
-            <PriceQuoteForm
-              destinationName="KangNu Running Race"
-              availableDistances={["15 km", "32 km", "51 km"]}
-              maxParticipants={16}
-              customInfoText="Udfyld denne formular, betal depositum på DKK 10.000 pr. billet, og vi vender personligt tilbage til dig inden for 48 timer på hverdage."
-              onSubmitOverride={handleStripeCheckout}
-              getSubmitButtonLabel={(participants) => `Betal depositum — DKK ${(10000 * (participants || 1)).toLocaleString('da-DK')}`}
-              accommodationOptions={[
-                { value: "hhe-economy", label: "HHE Express — Economy Double (26.000 kr.)", spotsRemaining: 2 },
-                { value: "soma-standard", label: "Hotel SØMA — Single Standard (26.550 kr.)", spotsRemaining: 2 },
-                { value: "soma-superior", label: "Hotel SØMA — Single Superior (27.800 kr.)", spotsRemaining: 4 },
-              ]}
-            />
-            <div className="mt-4">
-              <CallMeBackCTA />
-            </div>
+            <button
+              disabled
+              className="w-full bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400 mb-4"
+            >
+              Ikke tilgængelig for booking i øjeblikket
+            </button>
+
+            <CallMeBackCTA />
 
             <p className="text-charcoal/40 text-xs text-center mt-6">
-              Vi vender tilbage inden for 48 timer med et personligt tilbud.
+              Vi vender tilbage inden for 48 timer.
             </p>
           </div>
         </div>
       </section>
+
 
       <Footer />
     </div>
