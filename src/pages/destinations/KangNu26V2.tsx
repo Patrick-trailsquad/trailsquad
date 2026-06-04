@@ -285,42 +285,6 @@ const KangNu26V2 = () => {
         </div>
       )}
 
-      {/* ─── URGENCY CTA ─── */}
-      <section className="bg-charcoal py-6 md:py-8 border-b border-white/10">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <motion.div
-              animate={{ rotate: [0, 180, 180, 360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
-            >
-              <Hourglass className="w-5 h-5 text-[#FFDC00]" />
-            </motion.div>
-            <p className="font-cabinet font-bold text-white text-lg md:text-xl tracking-tight">
-              De første pladser er allerede booket!
-            </p>
-            <motion.div
-              animate={{ rotate: [0, 180, 180, 360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", times: [0, 0.3, 0.7, 1] }}
-            >
-              <Hourglass className="w-5 h-5 text-[#FFDC00]" />
-            </motion.div>
-          </div>
-          <p className="text-white/60 text-sm md:text-base mb-2 max-w-lg mx-auto">
-            Grønland er en once-in-a-lifetime oplevelse — book din plads før din nabo!
-          </p>
-          <p className="text-[#FFDC00] font-cabinet font-bold text-sm md:text-base mb-5 max-w-lg mx-auto">
-            Tilmelding senest d. 4. juni
-          </p>
-          <div className="flex items-center justify-center gap-3">
-            <button
-              onClick={scrollToCTA}
-              className="bg-[#FFDC00] text-charcoal px-7 py-3 rounded-full font-cabinet font-bold text-sm hover:bg-[#FFDC00]/90 transition-colors"
-            >
-              Ansøg om en plads →
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* ─── SOCIAL PROOF ─── */}
       {testimonials.length > 0 && (() => {
