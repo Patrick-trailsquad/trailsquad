@@ -16,6 +16,7 @@ import trainingSession4Image from "@/assets/training-session-4.jpg";
 import dyrehaven7Image from "@/assets/dyrehaven-training-7.png";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
 import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
+import squadTraining13Image from "@/assets/squad-training-13.png";
 const Training = () => {
   usePageTitle('Training');
   useScrollToTop();
@@ -158,7 +159,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             </div>
 
             {/* Training Sessions */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-12 px-2 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 6 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
                 <div className="absolute top-3 right-3 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">Overstået</div>
@@ -258,8 +259,46 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
                   <button onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
+              </div>
+
+              {/* Session 9 - Squad-træning #13 (fælles med Trail Fox) */}
+              <div onClick={() => handleSessionRegistration("Squad-træning #13", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+                <div className="relative h-80 bg-charcoal/20">
+                  <img src={squadTraining13Image} alt="Squad-træning #13 - Dyrehaven" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #13<br />[juli]</h3>
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="space-y-2 text-gray-600 text-sm mb-6">
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Dato:</span> <time dateTime="2026-07-07">7 juli 2026</time>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-07-07T18:00:00+02:00">kl 18.00</time>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-07-07T19:30:00+02:00">19.30</time>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Sted:</span> Dyrehaven
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="font-semibold">Mødested:</span> Skodsborg Kurhotel
+                    </p>
+                  </div>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow whitespace-pre-line">Fællestræning mellem Trail Fox og Trail Squad 🦊
+
+Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Vi krydrer med et par intervalløb, så pulsen kommer op.
+Vi får en tår at drikke til sidst på hotellet.
+
+
+Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
+                  <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Squad-træning #13", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                    Tilmeld
+                  </button>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
