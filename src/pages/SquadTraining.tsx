@@ -61,19 +61,6 @@ const trainingSessions: TrainingSession[] = [
     isActive: true,
   },
   {
-    title: "Squad-træning #13",
-    monthLabel: "[juli]",
-    date: "7 juli 2026",
-    meetingTime: "18:00",
-    endTime: "19:30",
-    location: "Dyrehaven",
-    meetingPlace: "Skodsborg Kurhotel",
-    description:
-      "Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Vi krydrer med et par intervalløb, så pulsen kommer op.\nVi får en tår at drikke til sidst på hotellet.\n\n\nTema: Energi-indtag når man løber trail (med SUPPLME)",
-    image: squadTraining13Image,
-    isActive: true,
-  },
-  {
     title: "Squad-træning #14",
     monthLabel: "[august]",
     date: "18 august 2026",
