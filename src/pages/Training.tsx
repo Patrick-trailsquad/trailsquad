@@ -159,7 +159,7 @@ Så vil vores trail træningssessions være noget for dig!</p>
             </div>
 
             {/* Training Sessions */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-12 px-2 md:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
               {/* Session 6 */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col opacity-50 grayscale pointer-events-none relative">
                 <div className="absolute top-3 right-3 z-20 bg-charcoal text-white text-xs font-cabinet font-bold px-3 py-1 rounded-full">Overstået</div>
