@@ -194,12 +194,12 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
                   </button>
               </div>
 
-              {/* Session 9 - Squad-træning #13 (fælles med Trail Fox) */}
-              <div onClick={() => handleSessionRegistration("Squad-træning #13", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              {/* Session 9 - Træningssession #9 (fælles med Trail Fox) */}
+              <div onClick={() => handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={squadTraining13Image} alt="Squad-træning #13 - Dyrehaven" className="w-full h-full object-cover" />
+                  <img src={squadTraining13Image} alt="Træningssession #9 - Dyrehaven" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Squad-træning #13<br />[juli]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #9<br />[juli]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
@@ -226,7 +226,7 @@ Vi får en tår at drikke til sidst på hotellet.
 
 
 Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
-                  <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Squad-træning #13", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
