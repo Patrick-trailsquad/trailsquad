@@ -192,6 +192,7 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
                   <button onClick={() => handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K")} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
+                </div>
               </div>
 
               {/* Session 9 - Træningssession #9 (fælles med Trail Fox) */}
@@ -231,7 +232,6 @@ Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
                   </button>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
