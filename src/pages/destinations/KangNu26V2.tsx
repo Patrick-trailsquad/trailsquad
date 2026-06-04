@@ -247,10 +247,10 @@ const KangNu26V2 = () => {
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
               <button
-                onClick={scrollToCTA}
-                className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
+                disabled
+                className="bg-gray-300 text-gray-600 cursor-not-allowed px-8 py-4 rounded-full font-cabinet font-bold text-lg border-2 border-gray-400"
               >
-                Ansøg om en plads nu
+                Billetsalg lukket 🎟️
               </button>
               <button
                 onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
