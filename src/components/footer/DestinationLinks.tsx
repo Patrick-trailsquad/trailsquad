@@ -20,7 +20,7 @@ const DestinationLinks = () => {
   
   // Filter out Vesuvio, Chianti, and Istria destinations
   const visibleDestinations = destinations.filter(dest => 
-    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria"
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/la-boucle-de-l-etoile"
   );
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
