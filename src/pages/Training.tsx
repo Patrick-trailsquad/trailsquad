@@ -158,8 +158,12 @@ Så vil vores trail træningssessions være noget for dig!</p>
               
             </div>
 
-            {/* Training Sessions */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
+            {/* Training Sessions - dynamic width: 1-3 or 5+ => 3 cols, 4 => 4 cols */}
+            {(() => {
+              const sessionCount: number = 2;
+              const xlColsClass = sessionCount === 4 ? 'xl:grid-cols-4' : 'xl:grid-cols-3';
+              return (
+            <div className={`grid grid-cols-1 md:grid-cols-2 ${xlColsClass} gap-4 md:gap-8 mt-12 px-2 md:px-0`}>
               {/* Session 8 - Overstået */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg opacity-50 grayscale pointer-events-none flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
@@ -234,6 +238,8 @@ Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
                 </div>
               </div>
             </div>
+              );
+            })()}
           </div>
         </div>
       </section>
