@@ -159,7 +159,8 @@ Så vil vores trail træningssessions være noget for dig!</p>
             </div>
 
             {/* Training Sessions */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
+            {(() => { const sessionCount = 2; const xlCols = sessionCount === 4 ? 'xl:grid-cols-4' : 'xl:grid-cols-3'; return null; })()}
+            <div className={`grid grid-cols-1 md:grid-cols-2 ${2 === 4 ? 'xl:grid-cols-4' : 'xl:grid-cols-3'} gap-4 md:gap-8 mt-12 px-2 md:px-0`}>
               {/* Session 8 - Overstået */}
               <div className="bg-stone rounded-lg overflow-hidden shadow-lg opacity-50 grayscale pointer-events-none flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
