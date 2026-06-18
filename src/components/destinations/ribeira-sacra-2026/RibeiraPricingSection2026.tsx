@@ -1,5 +1,7 @@
-import PriceQuoteForm from "../../PriceQuoteForm";
+import { useToast } from "@/hooks/use-toast";
+import PriceQuoteForm, { type FormValues } from "../../PriceQuoteForm";
 import CallMeBackCTA from "../../CallMeBackCTA";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Accordion,
   AccordionItem,
@@ -9,6 +11,43 @@ import {
 
 const RibeiraPricingSection2026 = () => {
   const spotsLeft = 12;
+  const { toast } = useToast();
+
+  const handleStripeCheckout = async (data: FormValues) => {
+    const { data: result, error } = await supabase.functions.invoke('create-deposit-checkout', {
+      body: {
+        destinationName: 'Ribeira Sacra 2026',
+        fullName: data.fullName,
+        email: data.email,
+        phone: data.phone,
+        preferredDistance: data.preferredDistance,
+        participants: data.participants,
+        accommodationPreference: data.accommodationPreference,
+        returnPath: '/destinations/ribeira-sacra-2026',
+      },
+    });
+
+    if (error || !result?.url) {
+      toast({
+        title: "Fejl",
+        description: "Kunne ikke oprette betaling. Prøv venligst igen.",
+        variant: "destructive",
+      });
+      throw new Error("Checkout failed");
+    }
+
+    sessionStorage.setItem('deposit_booking_data', JSON.stringify({
+      destination: 'Ribeira Sacra 2026',
+      fullName: data.fullName,
+      email: data.email,
+      phone: data.phone,
+      preferredDistance: data.preferredDistance,
+      participants: data.participants,
+      accommodationPreference: data.accommodationPreference,
+    }));
+
+    window.location.href = result.url;
+  };
 
   return (
     <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -48,6 +87,9 @@ const RibeiraPricingSection2026 = () => {
         availableDistances={["48km"]}
         maxParticipants={spotsLeft}
         depositPercentage={50}
+        onSubmitOverride={handleStripeCheckout}
+        customInfoText="Reservér din plads ved at betale 5.000 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse."
+        getSubmitButtonLabel={(p) => `Betal ${(5000 * p).toLocaleString('da-DK')} DKK i depositum`}
       />
       <div className="mt-4">
         <CallMeBackCTA />
