@@ -14,6 +14,7 @@ import InfiniteTrailsAccommodation from "../../components/destinations/infinite-
 import InfiniteTrailsPricingSection from "../../components/destinations/infinite-trails/InfiniteTrailsPricingSection";
 import { useIsMobile } from "../../hooks/use-mobile";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
+import DepositPaymentBanner from "../../components/destinations/shared/DepositPaymentBanner";
 
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
@@ -44,6 +45,7 @@ const InfiniteTrails = () => {
   
   return (
     <div className="min-h-screen bg-stone">
+      <DepositPaymentBanner />
       <div className="relative h-[80vh]">
         <img src="/lovable-uploads/infinite-trails.jpg" alt="Infinite Trails Bad Gastein" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
