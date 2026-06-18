@@ -7,7 +7,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const DEPOSIT_AMOUNT_DKK = 5000;
+const DEPOSIT_PRICE_ID = "price_1TjciOA7DrFBs7Aa0t4eEqkR";
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
@@ -115,14 +115,7 @@ serve(async (req) => {
       customer_email: customerId ? undefined : email,
       line_items: [
         {
-          price_data: {
-            currency: "dkk",
-            product_data: {
-              name: "Trail Squad depositum",
-              description: `Depositum for ${destinationName}`,
-            },
-            unit_amount: DEPOSIT_AMOUNT_DKK * 100,
-          },
+          price: DEPOSIT_PRICE_ID,
           quantity: qty,
         },
       ],
