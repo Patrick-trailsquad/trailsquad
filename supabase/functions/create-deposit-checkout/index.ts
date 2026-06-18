@@ -127,7 +127,7 @@ serve(async (req) => {
         preferred_distance: sanitizedDistance,
         participants: String(qty),
         accommodation: sanitizedAccommodation,
-        deposit_per_ticket_dkk: String(DEPOSIT_AMOUNT_DKK),
+        deposit_per_ticket_dkk: "5000",
       },
       success_url: `${origin}${redirectBase}?payment=success`,
       cancel_url: `${origin}${redirectBase}?payment=cancelled`,
