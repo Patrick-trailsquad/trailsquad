@@ -239,12 +239,12 @@ Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
                 </div>
               </div>
 
-              {/* Session 14 - Træningssession #14 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #14", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              {/* Session 14 - Træningssession #10 */}
+              <div onClick={() => handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
                 <div className="relative h-80 bg-charcoal/20">
-                  <img src={squadTraining14Image} alt="Træningssession #14 - Dyrehaven" className="w-full h-full object-cover" />
+                  <img src={squadTraining14Image} alt="Træningssession #10 - Dyrehaven" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #14<br />[august]</h3>
+                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #10<br />[august]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="space-y-2 text-gray-600 text-sm mb-6">
@@ -265,7 +265,7 @@ Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow whitespace-pre-line">En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.</p>
-                  <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Træningssession #14", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+                  <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
                 </div>
