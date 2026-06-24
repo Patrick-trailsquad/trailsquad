@@ -236,6 +236,7 @@ Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
                   <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
                     Tilmeld
                   </button>
+                </div>
               </div>
 
               {/* Session 14 - Træningssession #14 */}
