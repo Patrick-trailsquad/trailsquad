@@ -60,19 +60,6 @@ const trainingSessions: TrainingSession[] = [
     image: squadTraining12Image,
     isActive: true,
   },
-  {
-    title: "Squad-træning #14",
-    monthLabel: "[august]",
-    date: "18 august 2026",
-    meetingTime: "18:00",
-    endTime: "19:30",
-    location: "Dyrehaven, Klampenborg",
-    meetingPlace: "Peter Lieps Vej 5",
-    description:
-      "En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.",
-    image: squadTraining14Image,
-    isActive: true,
-  },
 ];
 
 const isPendingSession = (session: TrainingSession) => {
