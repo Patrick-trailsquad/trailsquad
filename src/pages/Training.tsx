@@ -271,7 +271,6 @@ Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
                 </div>
               </div>
             </div>
-            </div>
               );
             })()}
           </div>
