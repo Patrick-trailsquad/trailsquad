@@ -17,6 +17,7 @@ import dyrehaven7Image from "@/assets/dyrehaven-training-7.png";
 import trainingSession5Image from "@/assets/training-session-5.jpg";
 import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
 import squadTraining13Image from "@/assets/squad-training-13.png";
+import squadTraining14Image from "@/assets/squad-training-14.png";
 const Training = () => {
   usePageTitle('Training');
   useScrollToTop();
