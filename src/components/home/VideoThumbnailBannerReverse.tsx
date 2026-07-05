@@ -1,7 +1,20 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Play } from "lucide-react";
+import { cn } from "@/lib/utils";
 import VideoLightbox from '../VideoLightbox';
+
+const videos = [
+  {
+    id: 1,
+    thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
+  },
+  {
+    id: 2,
+    thumbnail: "https://img.youtube.com/vi/z4vPtbUnqlw/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/z4vPtbUnqlw?autoplay=1"
+  }
+];
 
 const VideoThumbnailBannerReverse = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -10,6 +23,8 @@ const VideoThumbnailBannerReverse = () => {
   const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
   const [activeVideo, setActiveVideo] = useState<1 | 2>(1);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,13 +74,16 @@ const VideoThumbnailBannerReverse = () => {
     };
   }, []);
 
-  const videos = [
-    {
-      id: 1,
-      thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/maxresdefault.jpg",
-      videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
-    }
-  ];
+  // Auto-loop carousel between the two video slides
+  useEffect(() => {
+    if (isHovering || selectedVideo) return;
+
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % videos.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isHovering, selectedVideo]);
 
   const openVideo = (videoUrl: string) => {
     setSelectedVideo(videoUrl);
@@ -114,29 +132,66 @@ const VideoThumbnailBannerReverse = () => {
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Videos Section - 40% */}
             <div className="lg:col-span-4 flex justify-center items-center">
-              {videos.map((video) => (
-                <div
-                  key={video.id}
-                  className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
-                  onClick={() => openVideo(video.videoUrl)}
-                >
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
-                    <img
-                      src={video.thumbnail}
-                      alt="Trail Squad Video"
-                      className="w-[26rem] md:w-[32rem] h-80 md:h-96 object-cover transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
-                    
-                    {/* Play Button */}
-                    <div className="absolute inset-0 items-center justify-center flex flex-row">
-                      <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
-                        <Play className="w-9 h-9 text-[#FFDC00] ml-1" fill="currentColor" />
+              <div
+                className="relative w-[26rem] md:w-[32rem] h-80 md:h-96"
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                role="region"
+                aria-roledescription="carousel"
+                aria-label="Videoer fra seneste tur"
+              >
+                {videos.map((video, index) => (
+                  <div
+                    key={video.id}
+                    className={cn(
+                      "absolute inset-0 flex items-center justify-center transition-opacity duration-700",
+                      index === activeSlide
+                        ? "opacity-100 z-10 pointer-events-auto"
+                        : "opacity-0 z-0 pointer-events-none"
+                    )}
+                  >
+                    <div
+                      className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
+                      onClick={() => openVideo(video.videoUrl)}
+                    >
+                      <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
+                        <img
+                          src={video.thumbnail}
+                          alt="Trail Squad video thumbnail"
+                          className="w-[26rem] md:w-[32rem] h-80 md:h-96 object-cover transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+                        
+                        {/* Play Button */}
+                        <div className="absolute inset-0 items-center justify-center flex flex-row">
+                          <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
+                            <Play className="w-9 h-9 text-[#FFDC00] ml-1" fill="currentColor" />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                ))}
+
+                {/* Carousel dots */}
+                <div className="absolute -bottom-8 left-0 right-0 flex justify-center gap-2 z-20">
+                  {videos.map((video, index) => (
+                    <button
+                      key={video.id}
+                      type="button"
+                      aria-label={`Gå til video ${index + 1}`}
+                      aria-current={index === activeSlide ? "true" : undefined}
+                      onClick={() => setActiveSlide(index)}
+                      className={cn(
+                        "w-2.5 h-2.5 rounded-full transition-colors duration-300",
+                        index === activeSlide
+                          ? "bg-white"
+                          : "bg-white/40 hover:bg-white/70"
+                      )}
+                    />
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
             
             {/* Text Section - 60% */}
