@@ -85,20 +85,6 @@ const VideoThumbnailBannerReverse = () => {
     return () => clearInterval(interval);
   }, [isHovering, selectedVideo]);
 
-  const videos = [
-    {
-      id: 1,
-      thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/maxresdefault.jpg",
-      videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
-    },
-    {
-      id: 2,
-      thumbnail: "https://img.youtube.com/vi/z4vPtbUnqlw/maxresdefault.jpg",
-      videoUrl: "https://www.youtube.com/embed/z4vPtbUnqlw?autoplay=1"
-    }
-  ];
-
-  const openVideo = (videoUrl: string) => {
     setSelectedVideo(videoUrl);
   };
 
