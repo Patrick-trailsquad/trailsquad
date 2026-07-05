@@ -6,12 +6,12 @@ import VideoLightbox from '../VideoLightbox';
 const videos = [
   {
     id: 1,
-    thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
   },
   {
     id: 2,
-    thumbnail: "https://img.youtube.com/vi/z4vPtbUnqlw/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/z4vPtbUnqlw/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/z4vPtbUnqlw?autoplay=1"
   }
 ];
@@ -133,7 +133,7 @@ const VideoThumbnailBannerReverse = () => {
             {/* Videos Section - 40% */}
             <div className="lg:col-span-4 flex justify-center items-center">
               <div
-                className="relative w-[26rem] md:w-[32rem] h-80 md:h-96"
+                className="relative w-full max-w-[480px] aspect-[4/3]"
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
                 role="region"
@@ -151,14 +151,14 @@ const VideoThumbnailBannerReverse = () => {
                     )}
                   >
                     <div
-                      className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105"
+                      className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 w-full h-full"
                       onClick={() => openVideo(video.videoUrl)}
                     >
-                      <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
+                      <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
                         <img
                           src={video.thumbnail}
                           alt="Trail Squad video thumbnail"
-                          className="w-[26rem] md:w-[32rem] h-80 md:h-96 object-cover transition-transform duration-700"
+                          className="w-full h-full object-contain transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
                         
