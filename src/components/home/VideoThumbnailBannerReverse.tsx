@@ -133,7 +133,13 @@ const VideoThumbnailBannerReverse = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 items-center">
             {/* Videos Section - 40% */}
-            <div className="lg:col-span-4 flex justify-center items-center">
+            <div className="lg:col-span-4 flex flex-col justify-center items-center">
+              <h3
+                key={videos[activeSlide].id}
+                className="font-cabinet text-xl md:text-2xl font-bold text-white text-center mb-4 drop-shadow-md transition-opacity duration-500 animate-fade-in"
+              >
+                {videos[activeSlide].title}
+              </h3>
               <div
                 className="relative w-full max-w-[480px] aspect-[4/3]"
                 onMouseEnter={() => setIsHovering(true)}
