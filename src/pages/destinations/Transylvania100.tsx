@@ -15,6 +15,7 @@ import TransylvaniaIncludedAmenities from "../../components/destinations/transyl
 import TransylvaniaDecorativeLines from "../../components/destinations/transylvania/TransylvaniaDecorativeLines";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
+import TransylvaniaTripVideoCTA from "../../components/destinations/transylvania/TransylvaniaTripVideoCTA";
 
 
 import TransylvaniaScrollingBanner from "../../components/destinations/transylvania/TransylvaniaScrollingBanner";
@@ -33,6 +34,7 @@ const Transylvania100 = () => {
       <Menu />
       <TransylvaniaHero />
       <TransylvaniaInfoBanner />
+      <TransylvaniaTripVideoCTA />
       
       
       <div className="container mx-auto px-2 md:px-6 py-4 md:py-20">
