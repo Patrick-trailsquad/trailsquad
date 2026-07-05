@@ -15,6 +15,7 @@ import TransylvaniaIncludedAmenities from "../../components/destinations/transyl
 import TransylvaniaDecorativeLines from "../../components/destinations/transylvania/TransylvaniaDecorativeLines";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
+import TransylvaniaTripVideoCTA from "../../components/destinations/transylvania/TransylvaniaTripVideoCTA";
 
 
 import TransylvaniaScrollingBanner from "../../components/destinations/transylvania/TransylvaniaScrollingBanner";
