@@ -85,6 +85,7 @@ const VideoThumbnailBannerReverse = () => {
     return () => clearInterval(interval);
   }, [isHovering, selectedVideo]);
 
+  const openVideo = (videoUrl: string) => {
     setSelectedVideo(videoUrl);
   };
 
