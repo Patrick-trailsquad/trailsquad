@@ -6,11 +6,13 @@ import VideoLightbox from '../VideoLightbox';
 const videos = [
   {
     id: 1,
+    title: "Trail Ribeira Sacra (2025)",
     thumbnail: "https://img.youtube.com/vi/aP96sAb9B1g/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/aP96sAb9B1g?autoplay=1"
   },
   {
     id: 2,
+    title: "Transylvania100 (2026)",
     thumbnail: "https://img.youtube.com/vi/z4vPtbUnqlw/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/z4vPtbUnqlw?autoplay=1"
   }
