@@ -228,7 +228,7 @@ Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow whitespace-pre-line">Fællestræning mellem Trail Fox og Trail Squad 🦊
 
-Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Vi krydrer med et par intervalløb, så pulsen kommer op.
+Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Målet er omkring 10 km i et tempo, hvor alle kan være med.
 Vi får en tår at drikke til sidst på hotellet.
 
 
