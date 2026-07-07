@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 
 const RibeiraPricingSection2026 = () => {
-  const spotsLeft = 12;
+  const spotsLeft = 8;
   const { toast } = useToast();
 
   const handleStripeCheckout = async (data: FormValues) => {
