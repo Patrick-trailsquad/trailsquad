@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 
 const InfiniteTrailsPricingSection = () => {
-  const spotsLeft = 10;
+  const spotsLeft = 5;
   const { toast } = useToast();
 
   const handleStripeCheckout = async (data: FormValues) => {
