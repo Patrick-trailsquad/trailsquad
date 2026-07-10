@@ -40,6 +40,9 @@ const journeySteps = [{
 }, {
   key: 'race_ticket',
   label: 'Race ticket'
+}, {
+  key: 'plane_ticket_sent',
+  label: 'Plane ticket sent'
 }];
 export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
   participants,
