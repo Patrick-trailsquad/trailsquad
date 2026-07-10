@@ -91,7 +91,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
           <TableBody>
             {participants.map(participant => <TableRow key={participant.id}>
                 <TableCell className="font-medium">{participant.name}</TableCell>
-                <TableCell>{participant.email}</TableCell>
+                <TableCell className="text-xs">{participant.email}</TableCell>
                 <TableCell>
                   {(() => {
                     const progress = getProgressPercentage(participant);
