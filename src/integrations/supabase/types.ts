@@ -28,6 +28,7 @@ export type Database = {
           paid_deposit: boolean
           paid_remaining_balance: boolean
           phone: string | null
+          plane_ticket_sent: boolean | null
           race_ticket: boolean
           received_quote: boolean
           requested_quote: boolean
@@ -47,6 +48,7 @@ export type Database = {
           paid_deposit?: boolean
           paid_remaining_balance?: boolean
           phone?: string | null
+          plane_ticket_sent?: boolean | null
           race_ticket?: boolean
           received_quote?: boolean
           requested_quote?: boolean
@@ -66,6 +68,7 @@ export type Database = {
           paid_deposit?: boolean
           paid_remaining_balance?: boolean
           phone?: string | null
+          plane_ticket_sent?: boolean | null
           race_ticket?: boolean
           received_quote?: boolean
           requested_quote?: boolean

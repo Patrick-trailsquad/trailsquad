@@ -1,0 +1,1 @@
+ALTER TABLE public.participants ADD COLUMN IF NOT EXISTS plane_ticket_sent BOOLEAN DEFAULT false;
