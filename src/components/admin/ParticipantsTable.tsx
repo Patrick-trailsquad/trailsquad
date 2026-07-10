@@ -14,12 +14,6 @@ interface ParticipantsTableProps {
   onDelete: (id: string) => Promise<void>;
 }
 const journeySteps = [{
-  key: 'requested_quote',
-  label: 'Quote Requested'
-}, {
-  key: 'received_quote',
-  label: 'Quote Received'
-}, {
   key: 'paid_deposit',
   label: 'Deposit Paid'
 }, {
