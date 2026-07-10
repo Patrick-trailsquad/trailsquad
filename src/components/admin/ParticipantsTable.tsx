@@ -20,9 +20,6 @@ const journeySteps = [{
   key: 'email_1_sent',
   label: 'Email 1'
 }, {
-  key: 'email_2_sent',
-  label: 'Email 2'
-}, {
   key: 'email_3_sent',
   label: 'Email 3'
 }, {
