@@ -14,12 +14,6 @@ interface ParticipantsTableProps {
   onDelete: (id: string) => Promise<void>;
 }
 const journeySteps = [{
-  key: 'requested_quote',
-  label: 'Quote Requested'
-}, {
-  key: 'received_quote',
-  label: 'Quote Received'
-}, {
   key: 'paid_deposit',
   label: 'Deposit Paid'
 }, {
@@ -86,8 +80,6 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead className="text-xs">Name</TableHead>
               <TableHead className="text-xs">Email</TableHead>
               <TableHead className="text-xs">Progress</TableHead>
-              <TableHead className="text-xs">Quote Requested</TableHead>
-              <TableHead className="text-xs">Quote Received</TableHead>
               <TableHead className="text-xs">Deposit paid</TableHead>
               <TableHead className="text-xs">Mail (deposit received)</TableHead>
               <TableHead className="text-xs">Info mail (flights, survey, insurance)</TableHead>
