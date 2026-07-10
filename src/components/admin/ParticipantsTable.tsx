@@ -95,6 +95,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead className="text-xs">Mail (remaining pay req.)</TableHead>
               <TableHead className="text-xs">Fully Paid</TableHead>
               <TableHead className="text-xs">Race ticket</TableHead>
+              <TableHead className="text-xs">Plane ticket sent</TableHead>
               <TableHead className="text-xs">Quick Actions</TableHead>
               <TableHead className="text-xs">Actions</TableHead>
             </TableRow>
