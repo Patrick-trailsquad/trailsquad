@@ -14,6 +14,8 @@ export interface Participant {
   email_2_sent: boolean;
   email_3_sent: boolean;
   paid_remaining_balance: boolean;
+  race_ticket: boolean;
+  plane_ticket_sent: boolean;
   created_at: string;
 }
 
