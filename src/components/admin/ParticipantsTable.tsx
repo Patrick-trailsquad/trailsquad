@@ -108,9 +108,9 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
                     if (progress === 100) {
                       bgColor = 'bg-green-500';
                     } else if (progress >= 75) {
-                      bgColor = 'bg-green-400';
+                      bgColor = 'bg-lime-500';
                     } else if (progress >= 50) {
-                      bgColor = 'bg-yellow-500';
+                      bgColor = 'bg-[#eab308]';
                     } else if (progress >= 25) {
                       bgColor = 'bg-orange';
                     }
