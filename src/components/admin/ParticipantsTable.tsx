@@ -30,7 +30,7 @@ const journeySteps = [{
   label: 'Mail (remaining pay req.)'
 }, {
   key: 'paid_remaining_balance',
-  label: 'Fully Paid'
+  label: 'Fully Paid + mail'
 }, {
   key: 'race_ticket',
   label: 'Race ticket'
@@ -85,7 +85,7 @@ export const ParticipantsTable: React.FC<ParticipantsTableProps> = ({
               <TableHead className="text-xs">Info mail (flights, survey, insurance)</TableHead>
               <TableHead className="text-xs">Info mail (training)</TableHead>
               <TableHead className="text-xs">Mail (remaining pay req.)</TableHead>
-              <TableHead className="text-xs">Fully Paid</TableHead>
+              <TableHead className="text-xs">Fully Paid + mail</TableHead>
               <TableHead className="text-xs">Race ticket</TableHead>
               <TableHead className="text-xs">Plane ticket sent</TableHead>
               <TableHead className="text-xs">Quick Actions</TableHead>
