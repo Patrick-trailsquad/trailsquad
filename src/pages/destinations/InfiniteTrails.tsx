@@ -15,6 +15,7 @@ import InfiniteTrailsPricingSection from "../../components/destinations/infinite
 import { useIsMobile } from "../../hooks/use-mobile";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import DepositPaymentBanner from "../../components/destinations/shared/DepositPaymentBanner";
+import CallMeBackPopup from "../../components/CallMeBackPopup";
 
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
@@ -46,6 +47,7 @@ const InfiniteTrails = () => {
   return (
     <div className="min-h-screen bg-stone">
       <DepositPaymentBanner />
+      <CallMeBackPopup destinationName="Infinite Trails" />
       <div className="relative h-[80vh]">
         <img src="/lovable-uploads/infinite-trails.jpg" alt="Infinite Trails Bad Gastein" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
