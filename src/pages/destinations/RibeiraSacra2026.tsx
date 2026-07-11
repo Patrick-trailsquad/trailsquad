@@ -18,6 +18,7 @@ import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 import RibeiraSacra2026Itinerary from "../../components/destinations/ribeira-sacra-2026/RibeiraSacra2026Itinerary";
 import DepositPaymentBanner from "../../components/destinations/shared/DepositPaymentBanner";
+import CallMeBackPopup from "../../components/CallMeBackPopup";
 
 const RibeiraSacra2026 = () => {
   useScrollToTop();
