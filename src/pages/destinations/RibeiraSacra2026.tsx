@@ -49,6 +49,7 @@ const RibeiraSacra2026 = () => {
   return (
     <div className="min-h-screen bg-stone">
       <DepositPaymentBanner />
+      <CallMeBackPopup destinationName="Ribeira Sacra 2026" />
       <RibeiraHero2026 />
       <RibeiraInfoBanner2026 />
       <RibeiraTripVideoCTA />
