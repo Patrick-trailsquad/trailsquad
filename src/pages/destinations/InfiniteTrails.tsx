@@ -15,6 +15,7 @@ import InfiniteTrailsPricingSection from "../../components/destinations/infinite
 import { useIsMobile } from "../../hooks/use-mobile";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import DepositPaymentBanner from "../../components/destinations/shared/DepositPaymentBanner";
+import CallMeBackPopup from "../../components/CallMeBackPopup";
 
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
