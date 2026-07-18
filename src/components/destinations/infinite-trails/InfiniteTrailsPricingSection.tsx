@@ -11,7 +11,7 @@ const InfiniteTrailsPricingSection = () => {
         </div>
         <div className="text-right">
           <p className="text-sm text-gray-600 mb-2">Rejsestatus</p>
-          <span className="inline-flex items-center gap-2 bg-orange text-orange-foreground px-4 py-2 rounded-full font-cabinet text-sm font-bold shadow-md">
+          <span className="inline-flex items-center justify-center text-center gap-2 bg-orange text-orange-foreground px-4 py-2 rounded-full font-cabinet text-sm font-bold shadow-md">
             BILLETSALG LUKKET 🎟️
           </span>
         </div>
