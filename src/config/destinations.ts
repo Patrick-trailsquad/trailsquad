@@ -41,7 +41,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'infinite-trails',
     name: 'Infinite Trails',
     route: '/destinations/infinite-trails',
-    status: 'open' as const,
+    status: 'tickets-closed' as const,
     published: true
   },
   {
