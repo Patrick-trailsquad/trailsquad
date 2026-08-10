@@ -96,7 +96,9 @@ const InfiniteTrails = () => {
           </div>
         </div>
       </div>
-      
+
+      <SwissAlps100Itinerary />
+
       <div className="mt-12 mb-20">
         <InfiniteTrailsIncludedAmenities className="bg-transparent" />
       </div>
