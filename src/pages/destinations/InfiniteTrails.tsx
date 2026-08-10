@@ -16,6 +16,7 @@ import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/
 import { useIsMobile } from "../../hooks/use-mobile";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 
+import infiniteTrailsDagplanBg from "../../assets/infinite-trails-dagplan-bg.jpg.asset.json";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
