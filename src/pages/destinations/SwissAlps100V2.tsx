@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, ChevronDown, Star, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
 import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
+import SwissAlps100Testimonials from "../../components/destinations/swiss-alps-100/SwissAlps100Testimonials";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
