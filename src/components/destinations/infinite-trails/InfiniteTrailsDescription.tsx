@@ -9,7 +9,7 @@ const InfiniteTrailsDescription = () => {
         <div>
           <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Løbet</h2>
           <p className="text-lg">
-            Infinite Trails kombinerer det bedste fra alpin trailløb med den unikke charme af Bad Gastein i østrigske alper. 
+            Infinite Trails kombinerer det bedste fra alpin trailløb med den unikke charme af Bad Hofgastein i østrigske alper. 
             Dette spektakulære event tilbyder fire forskellige distancer (15km, 30km, 45km og 60km), alle gennem det 
             betagende bjerglandskab omkring Gasteinertal-dalen med panoramiske udsigter til Hohe Tauern-bjergkæden.
           </p>
@@ -18,7 +18,7 @@ const InfiniteTrailsDescription = () => {
         <div>
           <h2 className="font-cabinet text-2xl font-bold mb-3 text-charcoal">Oplevelsen</h2>
           <p className="text-lg">
-            Bad Gastein er kendt for sin Belle Époque arkitektur, naturlige termalbade og dramatiske vandfald der 
+            Bad Hofgastein er kendt for sin Belle Époque arkitektur, naturlige termalbade og dramatiske vandfald der 
             løber gennem byen. Efter løbet kan du slappe af i de helbredende termalbade, der har tiltrukket besøgende 
             siden romertiden, og nyde den særlige atmosfære i denne historiske kurby.
           </p>

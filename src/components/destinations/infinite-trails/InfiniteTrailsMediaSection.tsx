@@ -3,7 +3,7 @@ const InfiniteTrailsMediaSection = () => {
     <div className="rounded-xl overflow-hidden aspect-video">
       <iframe
         src="https://www.youtube.com/embed/Cu6Tg-eQ-cQ"
-        title="Infinite Trails Bad Gastein"
+        title="Infinite Trails Bad Hofgastein"
         className="w-full h-full"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

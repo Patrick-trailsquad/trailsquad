@@ -45,7 +45,7 @@ const InfiniteTrails = () => {
   return (
     <div className="min-h-screen bg-stone">
       <div className="relative h-[80vh]">
-        <img src="/lovable-uploads/infinite-trails.jpg" alt="Infinite Trails Bad Gastein" className="w-full h-full object-cover" />
+        <img src="/lovable-uploads/infinite-trails.jpg" alt="Infinite Trails Bad Hofgastein" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute top-6 left-6">
           <Link to="/" className="flex items-center gap-2 text-white hover:text-stone transition-colors">
