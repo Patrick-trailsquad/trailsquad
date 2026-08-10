@@ -17,7 +17,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
   const [error, setError] = useState<string | null>(null);
   const [isMapInitialized, setIsMapInitialized] = useState(false);
 
-  // Bad Gastein, Austria coordinates
+  // Bad Hofgastein, Austria coordinates
   const badGasteinCoordinates: [number, number] = [13.1346, 47.1156];
 
   const initializeMap = async () => {
@@ -58,7 +58,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         
         if (!map.current) return;
 
-        // Add marker for Bad Gastein
+        // Add marker for Bad Hofgastein
         new mapboxgl.Marker({
           color: '#FFDC00',
           scale: 1.2
@@ -66,7 +66,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
           .setLngLat(badGasteinCoordinates)
           .setPopup(
             new mapboxgl.Popup({ offset: 25 })
-              .setHTML('<h3 style="margin: 0; font-weight: bold;">Bad Gastein</h3><p style="margin: 4px 0 0 0;">Austria</p>')
+              .setHTML('<h3 style="margin: 0; font-weight: bold;">Bad Hofgastein</h3><p style="margin: 4px 0 0 0;">Austria</p>')
           )
           .addTo(map.current);
 
@@ -117,7 +117,7 @@ const LocationMapModal = ({ open, onOpenChange }: LocationMapModalProps) => {
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary" />
-            Bad Gastein, Austria
+            Bad Hofgastein, Austria
           </DialogTitle>
         </DialogHeader>
         

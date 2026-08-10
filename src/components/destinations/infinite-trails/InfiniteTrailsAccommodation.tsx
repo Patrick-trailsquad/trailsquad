@@ -28,7 +28,7 @@ const InfiniteTrailsAccommodation = () => {
                 <div className="h-[450px] rounded-xl overflow-hidden">
                   <img 
                     src={src}
-                    alt={`The Comodo Bad Gastein ${index + 1}`} 
+                    alt={`The Comodo Bad Hofgastein ${index + 1}`} 
                     className="w-full h-full object-cover" 
                   />
                 </div>
@@ -48,9 +48,9 @@ const InfiniteTrailsAccommodation = () => {
             ))}
           </div>
         </div>
-        <h2 className="font-cabinet text-xl text-terra mb-4">Boutique Design Hotel • Bad Gastein, Østrig</h2>
+        <h2 className="font-cabinet text-xl text-terra mb-4">Boutique Design Hotel • Bad Hofgastein, Østrig</h2>
         <p className="text-lg">
-          <b>The Comodo</b> er et designerhotel i Bad Gastein, der kombinerer moderne luksus med 
+          <b>The Comodo</b> er et designerhotel i Bad Hofgastein, der kombinerer moderne luksus med 
           alpecharm. Hotellet ligger i det historiske centrum og tilbyder den perfekte base 
           for dit Infinite Trails eventyr med spektakulære bjergudssigter og førsteklasses faciliteter.
         </p>
@@ -62,7 +62,7 @@ const InfiniteTrailsAccommodation = () => {
         <p className="text-lg mt-4">
           The Comodo tilbyder også gourmet-dining med fokus på lokal østrigsk cuisine og 
           sunde, energigivende måltider perfekt til at tanke op før og efter løb. Hotellets 
-          beliggenhed giver nem adgang til trailruter og Bad Gasteins berømte termalbade.
+          beliggenhed giver nem adgang til trailruter og Bad Hofgasteins berømte termalbade.
         </p>
       </div>
     </div>
