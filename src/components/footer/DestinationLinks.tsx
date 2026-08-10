@@ -8,7 +8,7 @@ const destinations = [
   { name: "Istria 100 by UTMB 🇭🇷", href: "/destinations/istria", spots: "5 pladser", spotsOriginal: "16" },
   { name: "Vesuvio Ultra Marathon 🇮🇹", href: "/destinations/vesuvio", spots: "Åbner senere" },
   { name: "Transylvania 100 🇷🇴", href: "/destinations/transylvania", spots: "Løb afsluttet 🏁" },
-  { name: "Swiss Alps 100 🇨🇭", href: "/destinations/swiss-alps-100", spots: "Billetsalg lukket" },
+  { name: "Swiss Alps 100 🇨🇭", href: "/destinations/swiss-alps-100", spots: "Løb afsluttet 🏁" },
   { name: "KangNu Running Race 🇬🇱", href: "/destinations/kangnu26", spots: "Billetsalg lukket" },
   { name: "Infinite Trails 🇦🇹", href: "/destinations/infinite-trails", spots: "Billetsalg lukket" },
   { name: "Trail Ribeira Sacra 🇪🇸", href: "/destinations/ribeira-sacra-2026", spots: "8 pladser", spotsOriginal: "14" },

@@ -62,8 +62,9 @@ const destinations = [
     image: "/lovable-uploads/swiss-alps-100-hero-new.jpg",
     location: "Swiss Alps 100, Schweiz",
     date: "August 2026",
-    spots: "Billetsalg lukket",
+    spots: "Løb afsluttet 🏁",
     href: "/destinations/swiss-alps-100",
+    testimonialDestination: "Swiss Alps 100",
   },
   {
     image: "/lovable-uploads/kangnu26-hero.jpg",
