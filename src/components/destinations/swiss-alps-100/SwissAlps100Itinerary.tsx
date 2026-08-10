@@ -3,44 +3,44 @@ import { Plane, Mountain, UtensilsCrossed, Users, Trophy, MapPin, Coffee, Footpr
 const days = [
   {
     day: 1,
-    date: "torsdag 6. august",
+    date: "torsdag 3. september",
     title: "✈️ Udrejse",
     items: [
-      { icon: Plane, text: "Fly fra København til Zürich 🇨🇭" },
-      { icon: Train, text: "Privat shuttlebus til Fiesch i Valais-regionen" },
+      { icon: Plane, text: "Fly fra København til München lufthavn " },
+      { icon: Train, text: "Privat shuttlebus til Bad Gastein" },
       { icon: Coffee, text: "Check-in på hotel og afslapning" },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd)" },
     ],
   },
   {
     day: 2,
-    date: "fredag 7. august",
-    title: "🏃 Forberedelse & 100 km-start",
+    date: "fredag 4. september",
+    title: "🏃 Forberedelse ",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Users, text: "Afhentning af startnumre" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
-      { icon: Trophy, text: "100 km-løbet starter kl. 17:00" },
+      { icon: Trophy, text: " " },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
     ],
   },
   {
     day: 3,
-    date: "lørdag 8. august",
-    title: "🏁 Løbsdag — 50 km",
+    date: "lørdag 5. september",
+    title: "🏁 Løbsdag — alle distancer",
     items: [
-      { icon: Trophy, text: "Race day for løbere af 50 km!" },
+      { icon: Trophy, text: "Race day for alle løbere!" },
       { icon: Users, text: "Fejring ved målstregen" },
       { icon: UtensilsCrossed, text: "Fælles afslutningsmiddag" },
     ],
   },
   {
     day: 4,
-    date: "søndag 9. august",
+    date: "søndag 6. september",
     title: "✈️ Hjemrejse",
     items: [
       { icon: Coffee, text: "Morgenmad på hotellet" },
-      { icon: Train, text: "Shuttlebus tilbage til Zürich lufthavn" },
+      { icon: Train, text: "Shuttlebus tilbage til München lufthavn" },
       { icon: Plane, text: "Fly hjem til København" },
     ],
   },
@@ -59,10 +59,10 @@ const SwissAlps100Itinerary = ({ variant = "default" }: SwissAlps100ItineraryPro
     <Wrapper className={isOverlay ? "w-full" : "w-full py-12 md:py-20"}>
       <div className={isOverlay ? "" : "container mx-auto px-4 md:px-6"}>
         <h2 className={`font-cabinet text-3xl md:text-4xl font-bold text-center mb-4 ${isOverlay ? "text-white" : "text-charcoal"}`}>
-          4 dage i Schweiz
+          4 dage i Østrig
         </h2>
         <p className={`text-center text-lg mb-12 max-w-2xl mx-auto ${isOverlay ? "text-white/70" : "text-charcoal/70"}`}>
-          Fra København til de schweiziske alper — et episk trail-eventyr
+          Fra København til de østrigske alper — et episk trail-eventyr
         </p>
 
         {/* Timeline */}
