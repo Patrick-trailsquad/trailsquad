@@ -59,10 +59,10 @@ const SwissAlps100Itinerary = ({ variant = "default" }: SwissAlps100ItineraryPro
     <Wrapper className={isOverlay ? "w-full" : "w-full py-12 md:py-20"}>
       <div className={isOverlay ? "" : "container mx-auto px-4 md:px-6"}>
         <h2 className={`font-cabinet text-3xl md:text-4xl font-bold text-center mb-4 ${isOverlay ? "text-white" : "text-charcoal"}`}>
-          4 dage i Schweiz
+          4 dage i Østrig
         </h2>
         <p className={`text-center text-lg mb-12 max-w-2xl mx-auto ${isOverlay ? "text-white/70" : "text-charcoal/70"}`}>
-          Fra København til de schweiziske alper — et episk trail-eventyr
+          Fra København til de østrigske alper — et episk trail-eventyr
         </p>
 
         {/* Timeline */}
