@@ -12,6 +12,7 @@ import InfiniteTrailsDescription from "../../components/destinations/infinite-tr
 import InfiniteTrailsMediaSection from "../../components/destinations/infinite-trails/InfiniteTrailsMediaSection";
 import InfiniteTrailsAccommodation from "../../components/destinations/infinite-trails/InfiniteTrailsAccommodation";
 import InfiniteTrailsPricingSection from "../../components/destinations/infinite-trails/InfiniteTrailsPricingSection";
+import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
 import { useIsMobile } from "../../hooks/use-mobile";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 
@@ -95,7 +96,9 @@ const InfiniteTrails = () => {
           </div>
         </div>
       </div>
-      
+
+      <SwissAlps100Itinerary />
+
       <div className="mt-12 mb-20">
         <InfiniteTrailsIncludedAmenities className="bg-transparent" />
       </div>
