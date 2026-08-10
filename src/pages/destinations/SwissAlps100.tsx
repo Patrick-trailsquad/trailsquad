@@ -155,6 +155,7 @@ const SwissAlps100 = () => {
         </div>
         <BackToDestinationsButton />
       </div>
+      <SwissAlps100Testimonials />
       <ShakeoutRunBanner />
       <VideoBackgroundSection />
       <Footer />
