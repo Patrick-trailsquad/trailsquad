@@ -176,6 +176,10 @@ const SwissAlps100V2 = () => {
         </div>
       )}
 
+      <SwissAlps100Testimonials />
+
+      {/* Holdet er lukket */}
+
       <section className="bg-charcoal py-6 md:py-8 border-b border-white/10">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <div className="flex items-center justify-center gap-3 mb-3">
@@ -610,8 +614,6 @@ const SwissAlps100V2 = () => {
           </div>
         </div>
       </section>
-
-      <SwissAlps100Testimonials />
 
       <Footer />
     </div>
