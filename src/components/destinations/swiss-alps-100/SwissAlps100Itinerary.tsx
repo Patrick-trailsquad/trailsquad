@@ -20,7 +20,6 @@ const days = [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
       { icon: Users, text: "Afhentning af startnumre" },
       { icon: Mountain, text: "Løbsstrategi med gruppen" },
-      { icon: Trophy, text: " " },
       { icon: UtensilsCrossed, text: "Middag (fælles eller på egen hånd) 👆husk at carb-loade" },
     ],
   },
