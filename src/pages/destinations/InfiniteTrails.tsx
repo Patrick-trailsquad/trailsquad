@@ -16,6 +16,7 @@ import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/
 import { useIsMobile } from "../../hooks/use-mobile";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 
+import infiniteTrailsDagplanBg from "../../assets/infinite-trails-dagplan-bg.jpg.asset.json";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
 
@@ -97,7 +98,22 @@ const InfiniteTrails = () => {
         </div>
       </div>
 
-      <SwissAlps100Itinerary />
+      {/* Dagplan with parallax background */}
+      <section className="w-full relative overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: `url(${infiniteTrailsDagplanBg.url})`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }} />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
+          <SwissAlps100Itinerary variant="overlay" />
+        </div>
+      </section>
 
       <div className="mt-12 mb-20">
         <InfiniteTrailsIncludedAmenities className="bg-transparent" />
