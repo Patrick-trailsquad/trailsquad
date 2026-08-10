@@ -610,6 +610,8 @@ const SwissAlps100V2 = () => {
         </div>
       </section>
 
+      <SwissAlps100Testimonials />
+
       <Footer />
     </div>
   );
