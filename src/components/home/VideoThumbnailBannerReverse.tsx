@@ -15,6 +15,12 @@ const videos = [
     title: "Transylvania100 (2026)",
     thumbnail: "https://img.youtube.com/vi/z4vPtbUnqlw/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/z4vPtbUnqlw?autoplay=1"
+  },
+  {
+    id: 3,
+    title: "Swiss Alps 100 (2026)",
+    thumbnail: "https://img.youtube.com/vi/yWhU1lEaWc0/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/yWhU1lEaWc0?autoplay=1"
   }
 ];
 
