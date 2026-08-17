@@ -14,6 +14,7 @@ import SwissAlps100MediaSection from "../../components/destinations/swiss-alps-1
 import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
 import SwissAlps100PricingSection from "../../components/destinations/swiss-alps-100/SwissAlps100PricingSection";
 import SwissAlps100Testimonials from "../../components/destinations/swiss-alps-100/SwissAlps100Testimonials";
+import SwissAlps100TripVideoCTA from "../../components/destinations/swiss-alps-100/SwissAlps100TripVideoCTA";
 import { useIsMobile } from "../../hooks/use-mobile";
 
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
@@ -61,6 +62,8 @@ const SwissAlps100 = () => {
           </h1>
         </div>
       </div>
+
+      <SwissAlps100TripVideoCTA />
 
       <SwissAlps100InfoBanner />
 
