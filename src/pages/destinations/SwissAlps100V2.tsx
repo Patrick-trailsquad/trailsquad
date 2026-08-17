@@ -176,7 +176,10 @@ const SwissAlps100V2 = () => {
         </div>
       )}
 
+      <SwissAlps100TripVideoCTA />
+
       <SwissAlps100Testimonials />
+
 
 
       {/* ─── SOCIAL PROOF ─── */}
