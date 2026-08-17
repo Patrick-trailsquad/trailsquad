@@ -5,6 +5,7 @@ import { ArrowLeft, CheckCircle, Mountain, Users, MapPin, Heart, Shield, Chevron
 import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
 import SwissAlps100Accommodation from "../../components/destinations/swiss-alps-100/SwissAlps100Accommodation";
 import SwissAlps100Testimonials from "../../components/destinations/swiss-alps-100/SwissAlps100Testimonials";
+import SwissAlps100TripVideoCTA from "../../components/destinations/swiss-alps-100/SwissAlps100TripVideoCTA";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
