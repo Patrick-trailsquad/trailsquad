@@ -161,16 +161,29 @@ Så vil vores trail træningssessions være noget for dig!</p>
 
             {/* Training Sessions - dynamic width: 1-3 or 5+ => 3 cols, 4 => 4 cols */}
             {(() => {
+              // Automatisk inaktivering: en session bliver "Overstået" når sluttidspunktet er passeret
+              const isPast = (endIso: string) => new Date(endIso).getTime() < Date.now();
+              const s8Past = isPast("2026-06-02T19:30:00+02:00");
+              const s9Past = isPast("2026-07-07T19:30:00+02:00");
+              const s10Past = isPast("2026-08-18T19:30:00+02:00");
+              const cardClass = (past: boolean) =>
+                past
+                  ? "bg-stone rounded-lg overflow-hidden shadow-lg opacity-50 grayscale pointer-events-none flex flex-col"
+                  : "bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col";
+              const btnClass = (past: boolean) =>
+                past
+                  ? "w-full bg-gray-300 text-gray-600 px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400 cursor-not-allowed"
+                  : "w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black";
               const sessionCount: number = 3;
               const xlColsClass = sessionCount === 4 ? 'xl:grid-cols-4' : 'xl:grid-cols-3';
               return (
             <div className={`grid grid-cols-1 md:grid-cols-2 ${xlColsClass} gap-4 md:gap-8 mt-12 px-2 md:px-0`}>
-              {/* Session 8 - Overstået */}
-              <div className="bg-stone rounded-lg overflow-hidden shadow-lg opacity-50 grayscale pointer-events-none flex flex-col">
+              {/* Session 8 */}
+              <div className={cardClass(s8Past)}>
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={copenhillImage} alt="Training Session 8 - Copenhill" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  <span className="absolute top-3 right-3 z-10 bg-black text-white text-xs font-cabinet font-bold uppercase px-3 py-1 rounded-full">Overstået</span>
+                  {s8Past && <span className="absolute top-3 right-3 z-10 bg-black text-white text-xs font-cabinet font-bold uppercase px-3 py-1 rounded-full">Overstået</span>}
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #8<br />[juni]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -195,17 +208,22 @@ Så vil vores trail træningssessions være noget for dig!</p>
 
 Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
                 </p>
-                  <button disabled className="w-full bg-gray-300 text-gray-600 px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400 cursor-not-allowed">
-                    Overstået
+                  <button
+                    disabled={s8Past}
+                    onClick={(e) => {e.stopPropagation(); if (!s8Past) handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K");}}
+                    className={btnClass(s8Past)}
+                  >
+                    {s8Past ? "Overstået" : "Tilmeld"}
                   </button>
                 </div>
               </div>
 
               {/* Session 9 - Træningssession #9 (fælles med Trail Fox) */}
-              <div onClick={() => handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => { if (!s9Past) handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel"); }} className={cardClass(s9Past)}>
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={squadTraining13Image} alt="Træningssession #9 - Dyrehaven" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                  {s9Past && <span className="absolute top-3 right-3 z-10 bg-black text-white text-xs font-cabinet font-bold uppercase px-3 py-1 rounded-full">Overstået</span>}
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #9<br />[juli]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -233,17 +251,18 @@ Vi får en tår at drikke til sidst på hotellet.
 
 
 Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
-                  <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <button disabled={s9Past} onClick={(e) => {e.stopPropagation(); if (!s9Past) handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel");}} className={btnClass(s9Past)}>
+                    {s9Past ? "Overstået" : "Tilmeld"}
                   </button>
                 </div>
               </div>
 
               {/* Session 14 - Træningssession #10 */}
-              <div onClick={() => handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5")} className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col">
+              <div onClick={() => { if (!s10Past) handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5"); }} className={cardClass(s10Past)}>
                 <div className="relative h-80 bg-charcoal/20">
                   <img src={squadTraining14Image} alt="Træningssession #10 - Dyrehaven" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                  {s10Past && <span className="absolute top-3 right-3 z-10 bg-black text-white text-xs font-cabinet font-bold uppercase px-3 py-1 rounded-full">Overstået</span>}
                   <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #10<br />[august]</h3>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -265,14 +284,15 @@ Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
                     </p>
                   </div>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow whitespace-pre-line">En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.</p>
-                  <button onClick={(e) => {e.stopPropagation();handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5");}} className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-                    Tilmeld
+                  <button disabled={s10Past} onClick={(e) => {e.stopPropagation(); if (!s10Past) handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5");}} className={btnClass(s10Past)}>
+                    {s10Past ? "Overstået" : "Tilmeld"}
                   </button>
                 </div>
               </div>
             </div>
               );
             })()}
+
           </div>
         </div>
       </section>
