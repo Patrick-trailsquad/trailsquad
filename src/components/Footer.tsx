@@ -140,12 +140,10 @@ const Footer = () => {
                       <a href="/squadtraining" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                         Squad Training
                       </a>
-                      <a href="/swiss-alps-100_2" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                        SA100 v2
+                      <a href="/destinations/fyri26" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                        Fyri Trail
                       </a>
-                      <a href="/kangnu_2" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                        KangNu v2
-                      </a>
+
                     </CollapsibleContent>
                   </Collapsible>
                 ) : (
@@ -165,12 +163,10 @@ const Footer = () => {
                     <a href="/squadtraining" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                       Squad Training
                     </a>
-                    <a href="/swiss-alps-100_2" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                      SA100 v2
+                    <a href="/destinations/fyri26" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                      Fyri Trail
                     </a>
-                    <a href="/kangnu_2" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                      KangNu v2
-                    </a>
+
                   </>
                 )}
               </div>
