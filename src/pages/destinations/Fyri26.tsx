@@ -341,8 +341,9 @@ const Fyri26 = () => {
           alt="Norske fjeldstier ved Hemsedal"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
-          width={1920}
-          height={1088}
+          width={1910}
+          height={1319}
+
         />
         <div className="absolute inset-0 bg-black/60" />
 
