@@ -13,9 +13,12 @@ import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import heroAsset from "@/assets/fyri-hero.avif.asset.json";
+import heroAvifAsset from "@/assets/fyri-hero.avif.asset.json";
+import heroJpgAsset from "@/assets/fyri-hero.jpg.asset.json";
 
-const heroImage = heroAsset.url;
+const heroImage = heroJpgAsset.url;
+const heroImageAvif = heroAvifAsset.url;
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -77,13 +80,17 @@ const Fyri26 = () => {
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
-        <img
-          src={heroImage}
-          alt="Trailløbere på fjeldet i Hemsedal, Norge, i aftensol"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1088}
-        />
+        <picture className="absolute inset-0">
+          <source srcSet={heroImageAvif} type="image/avif" />
+          <img
+            src={heroImage}
+            alt="Trailløbere på fjeldet i Hemsedal, Norge, i aftensol"
+            className="absolute inset-0 w-full h-full object-cover"
+            width={1910}
+            height={1319}
+          />
+        </picture>
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
         <div className="absolute top-6 left-6 z-20">
@@ -334,8 +341,9 @@ const Fyri26 = () => {
           alt="Norske fjeldstier ved Hemsedal"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
-          width={1920}
-          height={1088}
+          width={1910}
+          height={1319}
+
         />
         <div className="absolute inset-0 bg-black/60" />
 
