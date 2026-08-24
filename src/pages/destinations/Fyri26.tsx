@@ -409,7 +409,53 @@ const Fyri26 = () => {
         </div>
       </section>
 
+      {/* ─── INTERACTIVE MAP ─── */}
+      <section className="py-16 md:py-24 bg-charcoal">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
+              Udforsk ruten
+            </h2>
+            <p className="text-white/60 text-lg">
+              Klik på kortet for at interagere
+            </p>
+          </div>
+          <div
+            className="relative rounded-2xl overflow-hidden shadow-lg"
+            onMouseLeave={(e) => {
+              const overlay = e.currentTarget.querySelector('[data-map-overlay]') as HTMLElement;
+              if (overlay) overlay.style.display = 'flex';
+              const iframe = e.currentTarget.querySelector('iframe') as HTMLIFrameElement;
+              if (iframe) iframe.style.pointerEvents = 'none';
+            }}
+          >
+            <div
+              data-map-overlay
+              className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 cursor-pointer"
+              onClick={(e) => {
+                (e.currentTarget as HTMLElement).style.display = 'none';
+                const iframe = (e.currentTarget.parentElement as HTMLElement).querySelector('iframe') as HTMLIFrameElement;
+                if (iframe) iframe.style.pointerEvents = 'auto';
+              }}
+            >
+              <span className="bg-white/90 text-charcoal px-5 py-2.5 rounded-full font-medium text-sm shadow-md">
+                Klik for at interagere
+              </span>
+            </div>
+            <iframe
+              src="https://app.racedaymap.com/fyri-trails"
+              className="w-full h-[350px] md:h-[500px] border-0"
+              style={{ pointerEvents: 'none' }}
+              allow="geolocation"
+              loading="lazy"
+              title="Fýri Trail rutekort"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ─── 4-DAGS PLAN ─── */}
+
       <section className="w-full relative overflow-hidden">
         <div
           className="absolute inset-0 w-full h-full"
