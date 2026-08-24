@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Star, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import Fyri26Itinerary from "../../components/destinations/fyri26/Fyri26Itinerary";
+import Fyri26Accommodation from "../../components/destinations/fyri26/Fyri26Accommodation";
 import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import CallMeBackPopup from "../../components/CallMeBackPopup";
