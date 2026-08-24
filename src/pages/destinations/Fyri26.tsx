@@ -80,13 +80,17 @@ const Fyri26 = () => {
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
-        <img
-          src={heroImage}
-          alt="Trailløbere på fjeldet i Hemsedal, Norge, i aftensol"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1088}
-        />
+        <picture className="absolute inset-0">
+          <source srcSet={heroImageAvif} type="image/avif" />
+          <img
+            src={heroImage}
+            alt="Trailløbere på fjeldet i Hemsedal, Norge, i aftensol"
+            className="absolute inset-0 w-full h-full object-cover"
+            width={1910}
+            height={1319}
+          />
+        </picture>
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
         <div className="absolute top-6 left-6 z-20">
