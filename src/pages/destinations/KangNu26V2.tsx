@@ -7,6 +7,7 @@ import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import KangNu26Itinerary from "../../components/destinations/kangnu26/KangNu26Itinerary";
 import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu26Accommodation";
+import KangNu26Testimonials from "../../components/destinations/kangnu26/KangNu26Testimonials";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
@@ -285,6 +286,7 @@ const KangNu26V2 = () => {
         </div>
       )}
 
+      <KangNu26Testimonials />
 
       {/* ─── SOCIAL PROOF ─── */}
       {testimonials.length > 0 && (() => {
