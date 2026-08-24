@@ -12,7 +12,9 @@ import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import heroImage from "@/assets/fyri-trail-hero.jpg";
+import heroAsset from "@/assets/fyri-hero.avif.asset.json";
+
+const heroImage = heroAsset.url;
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
