@@ -34,7 +34,7 @@ export const DESTINATIONS: Destination[] = [
     id: 'kangnu26',
     name: 'KangNu Running Race',
     route: '/destinations/kangnu26',
-    status: 'tickets-closed' as const,
+    status: 'completed' as const,
     published: true
   },
   {
