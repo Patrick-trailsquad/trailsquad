@@ -426,6 +426,13 @@ const Fyri26 = () => {
         </div>
       </section>
 
+      {/* ─── HOTEL ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <Fyri26Accommodation />
+        </div>
+      </section>
+
       {/* ─── SHAKEOUT RUN ─── */}
       <ShakeoutRunBanner />
 
