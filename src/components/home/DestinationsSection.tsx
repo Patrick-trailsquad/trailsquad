@@ -70,9 +70,11 @@ const destinations = [
     image: "/lovable-uploads/kangnu26-hero.jpg",
     location: "KangNu Running Race, Grønland",
     date: "August 2026",
-    spots: "Billetsalg lukket",
+    spots: "Løb afsluttet 🏁",
     href: "/destinations/kangnu26",
+    testimonialDestination: "KangNu Running Race",
   },
+
   {
     image: "/lovable-uploads/infinite-trails.jpg",
     location: "Infinite Trails, Østrig",
