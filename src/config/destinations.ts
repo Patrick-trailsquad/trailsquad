@@ -57,6 +57,13 @@ export const DESTINATIONS: Destination[] = [
     route: '/destinations/la-boucle-de-l-etoile',
     status: 'upcoming' as const,
     published: true
+  },
+  {
+    id: 'fyri26',
+    name: 'Fyri Trail 2026',
+    route: '/destinations/fyri26',
+    status: 'open' as const,
+    published: true
   }
 ];
 
