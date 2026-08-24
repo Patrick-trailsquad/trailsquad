@@ -321,7 +321,7 @@ const KangNu26V2 = () => {
                   <span className="font-cabinet font-bold text-white text-sm">{marina.name}</span>
                   {marina.location && <span className="text-white/50 text-sm">{marina.location}</span>}
                 </div>
-                <span className="text-white/40 text-xs">Deltager på tur til Trail Ribeira Sacra, Spanien</span>
+                {marina.destination && <span className="text-white/40 text-xs">Deltager på tur til {marina.destination}</span>}
               </div>
             </div>
           </div>
