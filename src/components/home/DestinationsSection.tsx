@@ -102,9 +102,9 @@ const destinations = [
 const DestinationsSection = () => {
   const { ratings } = useDestinationRatings();
   
-  // Filter out Vesuvio, Chianti, Istria, MIUT, and GTC destinations
+  // Filter out Vesuvio, Chianti, Istria, MIUT, GTC, La Boucle and Ribeira Sacra 2026 destinations
   const visibleDestinations = destinations.filter(dest => 
-    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/miut" && dest.href !== "/destinations/gtc" && dest.href !== "/destinations/la-boucle-de-l-etoile"
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/miut" && dest.href !== "/destinations/gtc" && dest.href !== "/destinations/la-boucle-de-l-etoile" && dest.href !== "/destinations/ribeira-sacra-2026"
   );
 
   return (

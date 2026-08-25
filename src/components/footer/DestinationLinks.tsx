@@ -18,9 +18,9 @@ const destinations = [
 const DestinationLinks = () => {
   const navigateAndScroll = useNavigateAndScroll();
   
-  // Filter out Vesuvio, Chianti, and Istria destinations
+  // Filter out Vesuvio, Chianti, Istria, La Boucle and Ribeira Sacra 2026 destinations
   const visibleDestinations = destinations.filter(dest => 
-    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/la-boucle-de-l-etoile"
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/la-boucle-de-l-etoile" && dest.href !== "/destinations/ribeira-sacra-2026"
   );
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
