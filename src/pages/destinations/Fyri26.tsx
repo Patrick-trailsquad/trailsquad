@@ -13,11 +13,8 @@ import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import heroAvifAsset from "@/assets/fyri-hero.avif.asset.json";
-import heroJpgAsset from "@/assets/fyri-hero.jpg.asset.json";
 
-const heroImage = heroJpgAsset.url;
-const heroImageAvif = heroAvifAsset.url;
+const heroImage = "/lovable-uploads/fyri-hero.jpg";
 
 
 const fadeUp = {
@@ -80,16 +77,13 @@ const Fyri26 = () => {
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
-        <picture className="absolute inset-0">
-          <source srcSet={heroImageAvif} type="image/avif" />
-          <img
-            src={heroImage}
-            alt="Trailløbere på fjeldet i Hemsedal, Norge, i aftensol"
-            className="absolute inset-0 w-full h-full object-cover"
-            width={1910}
-            height={1319}
-          />
-        </picture>
+        <img
+          src={heroImage}
+          alt="Trailløbere på fjeldet i Hemsedal, Norge, i aftensol"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1910}
+          height={1319}
+        />
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
