@@ -83,6 +83,13 @@ const destinations = [
     href: "/destinations/infinite-trails",
   },
   {
+    image: "/lovable-uploads/fyri-hero.jpg",
+    location: "Fýri Trail, Norge",
+    date: "September 2026",
+    spots: "Åbner senere",
+    href: "/destinations/fyri26",
+  },
+  {
     image: "/lovable-uploads/ribeira-sacra-2026-hero-2.jpg?v=3",
     location: "Trail Ribeira Sacra, Spanien",
     date: "Oktober 2026",
