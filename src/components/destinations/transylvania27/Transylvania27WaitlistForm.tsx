@@ -123,7 +123,7 @@ const Transylvania27WaitlistForm = () => {
         onChange={(e) => setEmail(e.target.value)}
         className="h-12"
       />
-      <Button type="submit" disabled={isSubmitting} className="w-full h-12 rounded-full font-cabinet">
+      <Button type="submit" disabled={isSubmitting} className="w-full h-12 rounded-full font-cabinet bg-yellow text-charcoal hover:bg-yellow/90 shadow-md">
         {isSubmitting ? "Sender..." : "Hold mig opdateret"}
       </Button>
       <p className="text-charcoal/40 text-xs text-center">
