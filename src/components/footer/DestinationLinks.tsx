@@ -14,6 +14,7 @@ const destinations = [
   { name: "Fýri Trail 🇳🇴", href: "/destinations/fyri26", spots: "Åbner senere" },
   { name: "Trail Ribeira Sacra 🇪🇸", href: "/destinations/ribeira-sacra-2026", spots: "8 pladser", spotsOriginal: "14" },
   { name: "La Boucle de l'Étoile 🇲🇦", href: "/destinations/la-boucle-de-l-etoile", spots: "Åbner senere" },
+  { name: "Transylvania 100 🇷🇴", href: "/destinations/transylvania27", spots: "Åbner senere" },
 ];
 
 const DestinationLinks = () => {

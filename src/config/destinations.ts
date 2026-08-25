@@ -64,6 +64,13 @@ export const DESTINATIONS: Destination[] = [
     route: '/destinations/fyri26',
     status: 'open' as const,
     published: true
+  },
+  {
+    id: 'transylvania27',
+    name: 'Transylvania 100 2027',
+    route: '/destinations/transylvania27',
+    status: 'upcoming' as const,
+    published: true
   }
 ];
 
