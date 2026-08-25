@@ -7,6 +7,7 @@ import Transylvania27Itinerary from "../../components/destinations/transylvania2
 import Transylvania27WaitlistForm from "../../components/destinations/transylvania27/Transylvania27WaitlistForm";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
+import TransylvaniaTripVideoCTA from "../../components/destinations/transylvania/TransylvaniaTripVideoCTA";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
@@ -140,6 +141,14 @@ const Transylvania27 = () => {
           </button>
         </div>
       )}
+
+      {/* ─── DOKUMENTAR VIDEO ─── */}
+      <section className="bg-stone">
+        <TransylvaniaTripVideoCTA
+          title="Se dokumentaren fra vores seneste tur til Transylvania 100"
+          subtitle="Få et indblik i stemningen, trailene i Karpaterne og fællesskabet — filmet på vores forrige tur"
+        />
+      </section>
 
       {/* ─── TESTIMONIALS ─── */}
       <TransylvaniaTestimonials showAddReviewCTA={false} />
