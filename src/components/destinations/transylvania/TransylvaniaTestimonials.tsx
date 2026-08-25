@@ -17,7 +17,11 @@ interface Testimonial {
   created_at?: string;
 }
 
-const TransylvaniaTestimonials = () => {
+interface TransylvaniaTestimonialsProps {
+  showAddReviewCTA?: boolean;
+}
+
+const TransylvaniaTestimonials = ({ showAddReviewCTA = true }: TransylvaniaTestimonialsProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
