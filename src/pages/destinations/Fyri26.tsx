@@ -355,7 +355,7 @@ const Fyri26 = () => {
               },
               {
                 q: "Hvordan booker jeg?",
-                a: "Du reserverer din plads med 5.000 DKK i depositum pr. billet. Vi kontakter dig personligt inden for 48 timer, og resten betales 60 dage før afrejse.",
+                a: "Prisen og tilmeldingen er endnu ikke åben. Skriv dig op med din email nederst på siden, så får du besked først, når turen åbner for booking.",
               },
             ].map((item, i) => (
               <motion.div
