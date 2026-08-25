@@ -17,7 +17,11 @@ interface Testimonial {
   created_at?: string;
 }
 
-const TransylvaniaTestimonials = () => {
+interface TransylvaniaTestimonialsProps {
+  showAddReviewCTA?: boolean;
+}
+
+const TransylvaniaTestimonials = ({ showAddReviewCTA = true }: TransylvaniaTestimonialsProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [dbTestimonials, setDbTestimonials] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -200,14 +204,16 @@ const TransylvaniaTestimonials = () => {
               </p>
             </div>
 
-            <div className="md:hidden text-center mb-8">
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors"
-              >
-                Tilføj din anmeldelse
-              </button>
-            </div>
+            {showAddReviewCTA && (
+              <div className="md:hidden text-center mb-8">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors"
+                >
+                  Tilføj din anmeldelse
+                </button>
+              </div>
+            )}
           </>
         )}
 
@@ -285,20 +291,24 @@ const TransylvaniaTestimonials = () => {
               </p>
             </div>
 
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-12 py-6 rounded-full font-cabinet font-bold text-xl transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform"
-            >
-              ⭐ Skriv den første anmeldelse
-            </button>
+            {showAddReviewCTA && (
+              <>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-12 py-6 rounded-full font-cabinet font-bold text-xl transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform"
+                >
+                  ⭐ Skriv den første anmeldelse
+                </button>
 
-            <p className="text-sm text-charcoal/50 mt-6">
-              Det tager under 90 sekunder og er til stor hjælp for fremtidige løbere
-            </p>
+                <p className="text-sm text-charcoal/50 mt-6">
+                  Det tager under 90 sekunder og er til stor hjælp for fremtidige løbere
+                </p>
+              </>
+            )}
           </div>
         )}
 
-        {allTestimonials.length > 0 && (
+        {allTestimonials.length > 0 && showAddReviewCTA && (
           <div className="text-center mt-12">
             <button
               onClick={() => setIsModalOpen(true)}

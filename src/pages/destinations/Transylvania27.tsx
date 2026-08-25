@@ -142,7 +142,7 @@ const Transylvania27 = () => {
       )}
 
       {/* ─── TESTIMONIALS ─── */}
-      <TransylvaniaTestimonials />
+      <TransylvaniaTestimonials showAddReviewCTA={false} />
 
       {/* ─── IS THIS FOR YOU? ─── */}
       <section className="py-16 md:py-24 bg-stone">
