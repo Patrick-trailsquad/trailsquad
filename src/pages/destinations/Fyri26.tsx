@@ -13,9 +13,8 @@ import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import heroJpgAsset from "@/assets/fyri-hero.jpg.asset.json";
 
-const heroImage = heroJpgAsset.url;
+const heroImage = "/lovable-uploads/fyri-hero.jpg";
 
 
 const fadeUp = {
