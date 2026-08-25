@@ -302,7 +302,7 @@ const TransylvaniaTestimonials = ({ showAddReviewCTA = true }: TransylvaniaTesti
           </div>
         )}
 
-        {allTestimonials.length > 0 && (
+        {allTestimonials.length > 0 && showAddReviewCTA && (
           <div className="text-center mt-12">
             <button
               onClick={() => setIsModalOpen(true)}
