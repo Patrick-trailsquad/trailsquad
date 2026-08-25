@@ -35,41 +35,8 @@ const Fyri26 = () => {
   const isMobile = useIsMobile();
   const { toast } = useToast();
 
-  const handleStripeCheckout = async (data: FormValues) => {
-    const { data: result, error } = await supabase.functions.invoke('create-deposit-checkout', {
-      body: {
-        destinationName: DESTINATION_NAME,
-        fullName: data.fullName,
-        email: data.email,
-        phone: data.phone,
-        preferredDistance: data.preferredDistance,
-        participants: data.participants,
-        accommodationPreference: data.accommodationPreference,
-        returnPath: '/destinations/fyri26',
-      },
-    });
 
-    if (error || !result?.url) {
-      toast({
-        title: "Fejl",
-        description: "Kunne ikke oprette betaling. Prøv venligst igen.",
-        variant: "destructive",
-      });
-      throw new Error("Checkout failed");
-    }
 
-    sessionStorage.setItem('deposit_booking_data', JSON.stringify({
-      destination: DESTINATION_NAME,
-      fullName: data.fullName,
-      email: data.email,
-      phone: data.phone,
-      preferredDistance: data.preferredDistance,
-      participants: data.participants,
-      accommodationPreference: data.accommodationPreference,
-    }));
-
-    window.location.href = result.url;
-  };
 
   return (
     <div className="min-h-screen bg-stone">
