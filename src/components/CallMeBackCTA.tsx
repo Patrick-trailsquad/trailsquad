@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import PhoneInput from './PhoneInput';
 import { Phone, CheckCircle2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/u13r20b/';
 
@@ -21,6 +22,19 @@ const CallMeBackCTA = () => {
     setIsLoading(true);
     
     try {
+      // Fail-safe: log the lead in the database before hitting Zapier
+      try {
+        await supabase.from('quote_requests').insert({
+          destination: typeof window !== 'undefined' ? window.location.pathname : 'unknown',
+          full_name: fullName,
+          email: '',
+          phone: phoneNumber,
+          source: 'call_back_request',
+        });
+      } catch (dbErr) {
+        console.error('Call-back DB backup failed', dbErr);
+      }
+
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
         headers: {

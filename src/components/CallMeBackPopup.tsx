@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { X, CheckCircle2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/u13r20b/';
 const DELAY_MS = 20_000;
@@ -42,6 +43,19 @@ const CallMeBackPopup = ({ destinationName, storageKey }: CallMeBackPopupProps) 
     e.preventDefault();
     setIsLoading(true);
     try {
+      // Fail-safe: log the lead in the database before hitting Zapier
+      try {
+        await supabase.from('quote_requests').insert({
+          destination: destinationName,
+          full_name: fullName,
+          email: '',
+          phone: phone,
+          source: 'call_back_request_popup',
+        });
+      } catch (dbErr) {
+        console.error('Call-back DB backup failed', dbErr);
+      }
+
       await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
