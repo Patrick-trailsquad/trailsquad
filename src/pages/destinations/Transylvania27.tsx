@@ -13,9 +13,7 @@ import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 
-import heroAsset from "../../assets/transylvania27-hero.jpg.asset.json";
-
-const heroImage = heroAsset.url;
+const heroImage = "/lovable-uploads/transylvania27-hero.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
