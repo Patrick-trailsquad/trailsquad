@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 
-const TransylvaniaTripVideoCTA = () => {
+interface TransylvaniaTripVideoCTAProps {
+  title?: string;
+  subtitle?: string;
+}
+
+const TransylvaniaTripVideoCTA = ({ title, subtitle }: TransylvaniaTripVideoCTAProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoUrl = "https://www.youtube.com/embed/z4vPtbUnqlw?autoplay=1";
   const thumbnailUrl = "https://img.youtube.com/vi/z4vPtbUnqlw/maxresdefault.jpg";
@@ -11,10 +16,10 @@ const TransylvaniaTripVideoCTA = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-6">
           <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-2">
-            Se video fra Transylvania 100
+            {title ?? "Se video fra Transylvania 100"}
           </h2>
           <p className="text-lg text-gray-600">
-            Oplev stemningen og naturen fra løbet i Karpaterne
+            {subtitle ?? "Oplev stemningen og naturen fra løbet i Karpaterne"}
           </p>
         </div>
 
