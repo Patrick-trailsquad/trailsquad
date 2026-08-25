@@ -74,7 +74,7 @@ const Fyri26 = () => {
             transition={{ delay: 0.35, duration: 0.6 }}
             className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6"
           >
-            Løb Fýri Trail by Salomon
+            Løb Fýri Trail
             <br />
             <span className="text-[#FFDC00]">med os ved din side</span>
           </motion.h1>
