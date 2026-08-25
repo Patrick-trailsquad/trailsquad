@@ -31,7 +31,7 @@ const Fyri26WaitlistForm = () => {
         body: JSON.stringify({
           email: trimmed,
           source: "fyri26_waitlist",
-          destination: "Fyri Trail by Salomon 2026",
+          destination: "Fyri Trail by Salomon 2027",
           submitted_at: new Date().toISOString(),
         }),
       });
