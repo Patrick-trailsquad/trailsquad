@@ -103,7 +103,7 @@ const destinations = [
     date: "Maj 2027",
     spots: "Åbner senere",
     href: "/destinations/transylvania27"
-  }
+  },
   {
     image: "/lovable-uploads/fyri-hero.jpg",
     location: "Fýri Trail, Norge",
