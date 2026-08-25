@@ -11,8 +11,6 @@ import CallMeBackPopup from "../../components/CallMeBackPopup";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const heroImage = "/lovable-uploads/fyri-hero.jpg";
 
@@ -33,7 +31,6 @@ const Fyri26 = () => {
   usePageTitle("Fýri Trail by Salomon 2026 – Trail Squad");
   useScrollToTop();
   const isMobile = useIsMobile();
-  const { toast } = useToast();
 
 
 
