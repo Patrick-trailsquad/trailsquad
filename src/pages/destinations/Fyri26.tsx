@@ -5,7 +5,7 @@ import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, St
 import { motion } from "framer-motion";
 import Fyri26Itinerary from "../../components/destinations/fyri26/Fyri26Itinerary";
 import Fyri26Accommodation from "../../components/destinations/fyri26/Fyri26Accommodation";
-import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm";
+import Fyri26WaitlistForm from "../../components/destinations/fyri26/Fyri26WaitlistForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import CallMeBackPopup from "../../components/CallMeBackPopup";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
