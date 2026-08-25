@@ -489,33 +489,18 @@ const Fyri26 = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            {SPOTS_LEFT} PLADSER TILBAGE 🎟️
+            TILMELDING ÅBNER SNART 🎟️
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
-            Reservér din plads
+            Vær først i køen
           </h2>
           <p className="text-white/60 text-lg mb-10">
-            Vi er kun 10–12 løbere med på turen. Sikr dig en plads med et depositum.
+            Pris og tilmelding er endnu ikke klar. Skriv dig op, og du får en email, så snart turen åbner.
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
-            <div className="mb-6">
-              <p className="text-sm text-charcoal/60 mb-1">Pris fra</p>
-              <p className="font-cabinet text-3xl font-bold text-charcoal">
-                12.999 DKK <span className="text-sm text-charcoal/50 font-normal">inkl. moms</span>
-              </p>
-            </div>
-
-            <PriceQuoteForm
-              destinationName={DESTINATION_NAME}
-              availableDistances={["18km", "29km", "56km"]}
-              maxParticipants={SPOTS_LEFT}
-              depositPercentage={50}
-              onSubmitOverride={handleStripeCheckout}
-              customInfoText="Reservér din plads ved at betale 5.000 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse."
-              getSubmitButtonLabel={(p) => `Betal ${(5000 * p).toLocaleString('da-DK')} DKK i depositum`}
-            />
+            <Fyri26WaitlistForm />
 
             <div className="mt-4">
               <CallMeBackCTA />
@@ -527,6 +512,7 @@ const Fyri26 = () => {
           </div>
         </div>
       </section>
+
 
       <Footer />
     </div>
