@@ -16,6 +16,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import RibeiraSacra from "./pages/destinations/RibeiraSacra";
 import RibeiraSacra2026 from "./pages/destinations/RibeiraSacra2026";
 import Transylvania100 from "./pages/destinations/Transylvania100";
+import Transylvania27 from "./pages/destinations/Transylvania27";
 import InfiniteTrails from "./pages/destinations/InfiniteTrails";
 import SwissAlps100 from "./pages/destinations/SwissAlps100";
 import LaBoucleDeLEtoile from "./pages/destinations/LaBoucleDeLEtoile";
@@ -57,6 +58,7 @@ const App = () => (
             <Route path="/destinations/ribeira-sacra" element={<RibeiraSacra />} />
             <Route path="/destinations/ribeira-sacra-2026" element={<RibeiraSacra2026 />} />
             <Route path="/destinations/transylvania" element={<Transylvania100 />} />
+            <Route path="/destinations/transylvania27" element={<Transylvania27 />} />
             <Route path="/destinations/infinite-trails" element={<InfiniteTrails />} />
             <Route path="/destinations/swiss-alps-100" element={<SwissAlps100V2 />} />
             <Route path="/destinations/la-boucle-de-l-etoile" element={<LaBoucleDeLEtoile />} />
