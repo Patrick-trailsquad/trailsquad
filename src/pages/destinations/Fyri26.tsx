@@ -5,14 +5,12 @@ import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, St
 import { motion } from "framer-motion";
 import Fyri26Itinerary from "../../components/destinations/fyri26/Fyri26Itinerary";
 import Fyri26Accommodation from "../../components/destinations/fyri26/Fyri26Accommodation";
-import PriceQuoteForm, { type FormValues } from "../../components/PriceQuoteForm";
+import Fyri26WaitlistForm from "../../components/destinations/fyri26/Fyri26WaitlistForm";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import CallMeBackPopup from "../../components/CallMeBackPopup";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
-import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const heroImage = "/lovable-uploads/fyri-hero.jpg";
 
@@ -33,43 +31,9 @@ const Fyri26 = () => {
   usePageTitle("Fýri Trail by Salomon 2026 – Trail Squad");
   useScrollToTop();
   const isMobile = useIsMobile();
-  const { toast } = useToast();
 
-  const handleStripeCheckout = async (data: FormValues) => {
-    const { data: result, error } = await supabase.functions.invoke('create-deposit-checkout', {
-      body: {
-        destinationName: DESTINATION_NAME,
-        fullName: data.fullName,
-        email: data.email,
-        phone: data.phone,
-        preferredDistance: data.preferredDistance,
-        participants: data.participants,
-        accommodationPreference: data.accommodationPreference,
-        returnPath: '/destinations/fyri26',
-      },
-    });
 
-    if (error || !result?.url) {
-      toast({
-        title: "Fejl",
-        description: "Kunne ikke oprette betaling. Prøv venligst igen.",
-        variant: "destructive",
-      });
-      throw new Error("Checkout failed");
-    }
 
-    sessionStorage.setItem('deposit_booking_data', JSON.stringify({
-      destination: DESTINATION_NAME,
-      fullName: data.fullName,
-      email: data.email,
-      phone: data.phone,
-      preferredDistance: data.preferredDistance,
-      participants: data.participants,
-      accommodationPreference: data.accommodationPreference,
-    }));
-
-    window.location.href = result.url;
-  };
 
   return (
     <div className="min-h-screen bg-stone">
@@ -391,7 +355,7 @@ const Fyri26 = () => {
               },
               {
                 q: "Hvordan booker jeg?",
-                a: "Du reserverer din plads med 5.000 DKK i depositum pr. billet. Vi kontakter dig personligt inden for 48 timer, og resten betales 60 dage før afrejse.",
+                a: "Prisen og tilmeldingen er endnu ikke åben. Skriv dig op med din email nederst på siden, så får du besked først, når turen åbner for booking.",
               },
             ].map((item, i) => (
               <motion.div
@@ -489,33 +453,18 @@ const Fyri26 = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            {SPOTS_LEFT} PLADSER TILBAGE 🎟️
+            TILMELDING ÅBNER SNART 🎟️
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">
-            Reservér din plads
+            Vær først i køen
           </h2>
           <p className="text-white/60 text-lg mb-10">
-            Vi er kun 10–12 løbere med på turen. Sikr dig en plads med et depositum.
+            Pris og tilmelding er endnu ikke klar. Skriv dig op, og du får en email, så snart turen åbner.
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
-            <div className="mb-6">
-              <p className="text-sm text-charcoal/60 mb-1">Pris fra</p>
-              <p className="font-cabinet text-3xl font-bold text-charcoal">
-                12.999 DKK <span className="text-sm text-charcoal/50 font-normal">inkl. moms</span>
-              </p>
-            </div>
-
-            <PriceQuoteForm
-              destinationName={DESTINATION_NAME}
-              availableDistances={["18km", "29km", "56km"]}
-              maxParticipants={SPOTS_LEFT}
-              depositPercentage={50}
-              onSubmitOverride={handleStripeCheckout}
-              customInfoText="Reservér din plads ved at betale 5.000 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse."
-              getSubmitButtonLabel={(p) => `Betal ${(5000 * p).toLocaleString('da-DK')} DKK i depositum`}
-            />
+            <Fyri26WaitlistForm />
 
             <div className="mt-4">
               <CallMeBackCTA />
@@ -527,6 +476,7 @@ const Fyri26 = () => {
           </div>
         </div>
       </section>
+
 
       <Footer />
     </div>
