@@ -103,6 +103,13 @@ const destinations = [
     date: "November 2026",
     spots: "Åbner senere",
     href: "/destinations/la-boucle-de-l-etoile"
+  },
+  {
+    image: "/lovable-uploads/a7015d7e-4a4a-418f-b141-b8b7b6ba7528.png",
+    location: "Transylvania 100, Rumænien",
+    date: "Maj 2027",
+    spots: "Åbner senere",
+    href: "/destinations/transylvania27"
   }
 ];
 
