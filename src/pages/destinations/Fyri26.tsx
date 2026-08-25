@@ -24,11 +24,11 @@ const fadeUp = {
   }),
 };
 
-const DESTINATION_NAME = "Fyri Trail 2026";
+const DESTINATION_NAME = "Fyri Trail 2027";
 const SPOTS_LEFT = 12;
 
 const Fyri26 = () => {
-  usePageTitle("Fýri Trail by Salomon 2026 – Trail Squad");
+  usePageTitle("Fýri Trail by Salomon 2027 – Trail Squad");
   useScrollToTop();
   const isMobile = useIsMobile();
 
@@ -65,7 +65,7 @@ const Fyri26 = () => {
             transition={{ delay: 0.2 }}
             className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4"
           >
-            17.–20. september 2026 · Hemsedal, Norge
+            16.–19. september 2027 · Hemsedal, Norge
           </motion.p>
 
           <motion.h1

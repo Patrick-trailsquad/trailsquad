@@ -3,7 +3,7 @@ import { Plane, Mountain, UtensilsCrossed, Users, Trophy, Coffee, Footprints, Tr
 const days = [
   {
     day: 1,
-    date: "torsdag 17. september",
+    date: "torsdag 16. september",
     title: "✈️ Udrejse",
     items: [
       { icon: Plane, text: "Fly fra København til Oslo" },
@@ -14,7 +14,7 @@ const days = [
   },
   {
     day: 2,
-    date: "fredag 18. september",
+    date: "fredag 17. september",
     title: "🏃 Forberedelse",
     items: [
       { icon: Footprints, text: "Shakeout Run", linkText: "(Øhh, hvad er et Shakeout Run...? 👇)", linkTarget: "shakeout-run-section" },
@@ -25,7 +25,7 @@ const days = [
   },
   {
     day: 3,
-    date: "lørdag 19. september",
+    date: "lørdag 18. september",
     title: "🏁 Løbsdag — alle distancer",
     items: [
       { icon: Trophy, text: "Race day: 18 km, 29 km eller 56 km ultra" },
@@ -36,7 +36,7 @@ const days = [
   },
   {
     day: 4,
-    date: "søndag 20. september",
+    date: "søndag 19. september",
     title: "✈️ Hjemrejse",
     items: [
       { icon: Coffee, text: "Morgenmad på hotellet" },
