@@ -2,14 +2,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Star } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-// TODO: udskift med rigtige Fýri Resort-billeder
 const images = [
-  "/lovable-uploads/hotel-landhaus-1.jpeg",
-  "/lovable-uploads/hotel-landhaus-2.jpg",
-  "/lovable-uploads/hotel-landhaus-3.jpg",
-  "/lovable-uploads/hotel-landhaus-4.jpeg",
-  "/lovable-uploads/hotel-landhaus-5.jpg",
-  "/lovable-uploads/hotel-landhaus-6.jpg",
+  "/lovable-uploads/fyri-hotel-1.png",
+  "/lovable-uploads/fyri-hotel-2.png",
+  "/lovable-uploads/fyri-hotel-3.png",
+  "/lovable-uploads/fyri-hotel-4.png",
+  "/lovable-uploads/fyri-hotel-5.png",
 ];
 
 const Fyri26Accommodation = () => {
