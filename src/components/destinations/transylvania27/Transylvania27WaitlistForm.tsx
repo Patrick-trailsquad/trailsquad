@@ -24,8 +24,10 @@ const Transylvania27WaitlistForm = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/20711644/2528rxx/", {
+      await fetch("https://hooks.zapier.com/hooks/catch/20711644/2528rxx/", {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
         body: JSON.stringify({
           email: trimmed,
           source: "transylvania27_waitlist",
@@ -33,7 +35,6 @@ const Transylvania27WaitlistForm = () => {
           submitted_at: new Date().toISOString(),
         }),
       });
-      if (!response.ok) throw new Error("Failed to submit");
       setIsSuccess(true);
       toast({
         title: "Tak!",
