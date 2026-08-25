@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, ThumbsUp } from "lucide-react";
 
+const WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/21931910/2l4yeck/";
+
 const Fyri26WaitlistForm = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -12,8 +16,29 @@ const Fyri26WaitlistForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmed = email.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed) || trimmed.length > 255) {
+    const trimmedEmail = email.trim();
+    const trimmedName = name.trim();
+    const trimmedPhone = phone.trim();
+
+    if (!trimmedName || trimmedName.length > 100) {
+      toast({
+        title: "Ugyldigt navn",
+        description: "Indtast venligst dit navn.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!/^[+\d][\d\s()-]{5,19}$/.test(trimmedPhone)) {
+      toast({
+        title: "Ugyldigt telefonnummer",
+        description: "Indtast venligst et gyldigt telefonnummer.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail) || trimmedEmail.length > 255) {
       toast({
         title: "Ugyldig email",
         description: "Indtast venligst en gyldig emailadresse.",
@@ -24,12 +49,14 @@ const Fyri26WaitlistForm = () => {
 
     setIsSubmitting(true);
     try {
-      await fetch("https://hooks.zapier.com/hooks/catch/20711644/2528rxx/", {
+      await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         mode: "no-cors",
         body: JSON.stringify({
-          email: trimmed,
+          name: trimmedName,
+          phone: trimmedPhone,
+          email: trimmedEmail,
           source: "fyri26_waitlist",
           destination: "Fyri Trail by Salomon 2027",
           submitted_at: new Date().toISOString(),
@@ -69,6 +96,24 @@ const Fyri26WaitlistForm = () => {
         <Mail className="h-4 w-4 shrink-0" />
         <span>Få besked på email, når turen åbner for tilmelding</span>
       </div>
+      <Input
+        type="text"
+        required
+        maxLength={100}
+        placeholder="Dit navn"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="h-12"
+      />
+      <Input
+        type="tel"
+        required
+        maxLength={20}
+        placeholder="Dit telefonnummer"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        className="h-12"
+      />
       <Input
         type="email"
         required
