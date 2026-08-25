@@ -289,16 +289,20 @@ const TransylvaniaTestimonials = ({ showAddReviewCTA = true }: TransylvaniaTesti
               </p>
             </div>
 
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-12 py-6 rounded-full font-cabinet font-bold text-xl transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform"
-            >
-              ⭐ Skriv den første anmeldelse
-            </button>
+            {showAddReviewCTA && (
+              <>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-12 py-6 rounded-full font-cabinet font-bold text-xl transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform"
+                >
+                  ⭐ Skriv den første anmeldelse
+                </button>
 
-            <p className="text-sm text-charcoal/50 mt-6">
-              Det tager under 90 sekunder og er til stor hjælp for fremtidige løbere
-            </p>
+                <p className="text-sm text-charcoal/50 mt-6">
+                  Det tager under 90 sekunder og er til stor hjælp for fremtidige løbere
+                </p>
+              </>
+            )}
           </div>
         )}
 
