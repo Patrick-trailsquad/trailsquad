@@ -204,14 +204,16 @@ const TransylvaniaTestimonials = ({ showAddReviewCTA = true }: TransylvaniaTesti
               </p>
             </div>
 
-            <div className="md:hidden text-center mb-8">
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors"
-              >
-                Tilføj din anmeldelse
-              </button>
-            </div>
+            {showAddReviewCTA && (
+              <div className="md:hidden text-center mb-8">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="bg-[#FFDC00] hover:bg-[#FFDC00]/90 text-charcoal px-6 py-3 rounded-full font-cabinet font-bold transition-colors"
+                >
+                  Tilføj din anmeldelse
+                </button>
+              </div>
+            )}
           </>
         )}
 
