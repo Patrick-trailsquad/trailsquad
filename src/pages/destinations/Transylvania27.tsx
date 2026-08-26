@@ -145,7 +145,7 @@ const Transylvania27 = () => {
       {/* ─── DOKUMENTAR VIDEO ─── */}
       <section className="bg-stone">
         <TransylvaniaTripVideoCTA
-          title="Se dokumentaren fra vores seneste tur til Transylvania 100"
+          title="Se videoen fra vores seneste tur til Transylvanien"
           subtitle="Få et indblik i stemningen, trailene i Karpaterne og fællesskabet — filmet på vores forrige tur"
         />
       </section>
