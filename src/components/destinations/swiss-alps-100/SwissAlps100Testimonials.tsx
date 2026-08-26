@@ -5,6 +5,15 @@ import { supabase } from "@/integrations/supabase/client";
 import AddTestimonialModal from "../shared/AddTestimonialModal";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
+// Transform Supabase storage URLs to use image resizing (avoids loading huge originals)
+const getOptimizedImageUrl = (url: string, width: number = 600) => {
+  if (url && url.includes('supabase.co/storage/v1/object/public/')) {
+    return url.replace('/storage/v1/object/public/', '/storage/v1/render/image/public/') + `?width=${width}&resize=contain&quality=75`;
+  }
+  return url;
+};
+
+
 interface Testimonial {
   id?: string;
   name: string;
@@ -206,7 +215,7 @@ const SwissAlps100Testimonials = () => {
                           {testimonial.photos.map((photo, photoIndex) => (
                             <CarouselItem key={photoIndex} className="aspect-square">
                               <img
-                                src={photo}
+                                src={getOptimizedImageUrl(photo)}
                                 alt={`Foto ${photoIndex + 1} fra ${testimonial.name}`}
                                 className="w-full h-full object-cover object-center"
                                 loading="lazy"
@@ -220,7 +229,7 @@ const SwissAlps100Testimonials = () => {
                       </Carousel>
                     ) : (
                       <img
-                        src={testimonial.photos[0]}
+                        src={getOptimizedImageUrl(testimonial.photos[0])}
                         alt={`Foto fra ${testimonial.name}`}
                         className="w-full h-full object-cover object-center"
                         loading="lazy"
