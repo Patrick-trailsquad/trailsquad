@@ -1,13 +1,13 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import hotelRoom from "@/assets/hengill-hotel-room.png.asset.json";
+import hotelReception from "@/assets/hengill-hotel-reception.png.asset.json";
 
 const images = [
   "/lovable-uploads/greenhouse-5.jpg",
-  "/lovable-uploads/greenhouse-4.jpg",
-  "/lovable-uploads/greenhouse-1.jpg",
-  "/lovable-uploads/greenhouse-2.jpg",
-  "/lovable-uploads/greenhouse-3.jpg",
+  hotelRoom.url,
+  hotelReception.url,
 ];
 
 const Hengill27Accommodation = () => {
