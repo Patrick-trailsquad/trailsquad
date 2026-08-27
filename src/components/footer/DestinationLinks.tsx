@@ -14,6 +14,7 @@ const destinations = [
   { name: "Trail Ribeira Sacra 🇪🇸", href: "/destinations/ribeira-sacra-2026", spots: "8 pladser", spotsOriginal: "14", year: "2026" },
   { name: "La Boucle de l'Étoile 🇲🇦", href: "/destinations/la-boucle-de-l-etoile", spots: "Åbner senere", year: "2026" },
   { name: "Transylvania 100 🇷🇴", href: "/destinations/transylvania27", spots: "Åbner senere", year: "2027" },
+  { name: "Hengill Ultra 🇮🇸", href: "/destinations/hengill27", spots: "Åbner senere", year: "2027" },
   { name: "Fýri Trail 🇳🇴", href: "/destinations/fyri26", spots: "Åbner senere", year: "2027" },
 ];
 

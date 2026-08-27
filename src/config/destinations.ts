@@ -66,6 +66,13 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
+    id: 'hengill27',
+    name: 'Hengill Ultra 2027',
+    route: '/destinations/hengill27',
+    status: 'upcoming' as const,
+    published: true
+  },
+  {
     id: 'transylvania27',
     name: 'Transylvania 100 2027',
     route: '/destinations/transylvania27',
