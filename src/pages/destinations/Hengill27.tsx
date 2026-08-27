@@ -367,6 +367,13 @@ const Hengill27 = () => {
         </div>
       </section>
 
+      {/* ─── INDKVARTERING ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <Hengill27Accommodation />
+        </div>
+      </section>
+
       {/* ─── 4-DAGS PLAN ─── */}
       <section className="w-full relative overflow-hidden">
         <div
