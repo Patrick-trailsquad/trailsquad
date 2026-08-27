@@ -5,6 +5,7 @@ import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Pl
 import { motion } from "framer-motion";
 import Hengill27Itinerary from "../../components/destinations/hengill27/Hengill27Itinerary";
 import Hengill27WaitlistForm from "../../components/destinations/hengill27/Hengill27WaitlistForm";
+import Hengill27Accommodation from "../../components/destinations/hengill27/Hengill27Accommodation";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
