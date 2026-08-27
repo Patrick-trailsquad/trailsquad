@@ -154,38 +154,54 @@ const VideoThumbnailBannerReverse = () => {
                 aria-roledescription="carousel"
                 aria-label="Videoer fra seneste tur"
               >
-                {videos.map((video, index) => (
-                  <div
-                    key={video.id}
-                    className={cn(
-                      "absolute inset-0 flex items-center justify-center transition-opacity duration-700",
-                      index === activeSlide
-                        ? "opacity-100 z-10 pointer-events-auto"
-                        : "opacity-0 z-0 pointer-events-none"
-                    )}
-                  >
+                {videos.map((video, index) => {
+                  // Position relative to the front card: 0 = front, 1 = one behind, etc.
+                  const offset = (index - activeSlide + videos.length) % videos.length;
+                  const isFront = offset === 0;
+
+                  return (
                     <div
-                      className="relative group cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 w-full h-full"
-                      onClick={() => openVideo(video.videoUrl)}
+                      key={video.id}
+                      className="absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out"
+                      style={{
+                        zIndex: videos.length - offset,
+                        transform: `translateX(${offset * 10}%) translateY(${offset * 4}%) rotate(${offset * 5}deg) scale(${1 - offset * 0.06})`,
+                        opacity: offset > 2 ? 0 : 1,
+                        filter: isFront ? 'none' : 'brightness(0.75)',
+                      }}
                     >
-                      <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:shadow-terra/20">
-                        <img
-                          src={video.thumbnail}
-                          alt="Trail Squad video thumbnail"
-                          className="w-full h-full object-contain transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
-                        
-                        {/* Play Button */}
-                        <div className="absolute inset-0 items-center justify-center flex flex-row">
-                          <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
-                            <Play className="w-9 h-9 text-[#FFDC00] ml-1" fill="currentColor" />
-                          </div>
+                      <div
+                        className={cn(
+                          "relative group cursor-pointer w-full h-full transition-transform duration-500",
+                          isFront && "hover:-translate-y-2 hover:scale-105"
+                        )}
+                        onClick={() =>
+                          isFront ? openVideo(video.videoUrl) : setActiveSlide(index)
+                        }
+                        role={!isFront ? "button" : undefined}
+                        aria-label={!isFront ? `Vis video: ${video.title}` : undefined}
+                      >
+                        <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:shadow-terra/20">
+                          <img
+                            src={video.thumbnail}
+                            alt="Trail Squad video thumbnail"
+                            className="w-full h-full object-contain transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40 transition-all duration-300" />
+
+                          {/* Play Button - only on front card */}
+                          {isFront && (
+                            <div className="absolute inset-0 items-center justify-center flex flex-row">
+                              <div className="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center group-hover:bg-white/60 transition-all duration-300 shadow-xl">
+                                <Play className="w-9 h-9 text-[#FFDC00] ml-1" fill="currentColor" />
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
 
                 {/* Carousel dots */}
                 <div className="absolute -bottom-8 left-0 right-0 flex justify-center gap-2 z-20">
