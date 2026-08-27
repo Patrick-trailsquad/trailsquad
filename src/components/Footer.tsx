@@ -98,7 +98,7 @@ const Footer = () => {
             {/* Destinations */}
             <div>
               <h3 className="font-cabinet font-semibold text-charcoal text-lg mb-6">
-                Kommende destinationer
+                Destinationer
               </h3>
               <DestinationLinks />
             </div>

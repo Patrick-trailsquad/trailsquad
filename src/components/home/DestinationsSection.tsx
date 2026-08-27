@@ -126,7 +126,7 @@ const DestinationsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-cabinet text-4xl md:text-5xl font-bold text-charcoal mb-6">
-            Squad'ens kommende destinationer
+            Squad'ens destinationer
           </h2>
         </div>
 
