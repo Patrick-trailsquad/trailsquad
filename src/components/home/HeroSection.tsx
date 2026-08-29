@@ -21,10 +21,15 @@ const HeroSection = () => {
       rel: 0,
       iv_load_policy: 3,
       modestbranding: 1,
-      playsinline: 1
+      playsinline: 1,
+      disablekb: 1,
+      fs: 0,
+      cc_load_policy: 0,
+      autohide: 1
     },
     (event: any) => {
       event.target.mute();
+      event.target.seekTo(0.5, true);
       event.target.playVideo();
       setTimeout(() => setIsVideoVisible(true), 400);
     },
@@ -32,14 +37,15 @@ const HeroSection = () => {
   );
 
   // Seamless loop: restart shortly before the end to avoid the black frame
+  // Seek to 0.5s to skip the initial control overlay frame
   useEffect(() => {
     const interval = setInterval(() => {
       const player = ytPlayerRef.current;
       if (!player?.getCurrentTime || !player?.getDuration) return;
       const duration = player.getDuration();
       const current = player.getCurrentTime();
-      if (duration > 1 && current >= duration - 0.4) {
-        player.seekTo(0, true);
+      if (duration > 1 && current >= duration - 0.6) {
+        player.seekTo(0.5, true);
         player.playVideo();
       }
     }, 100);
@@ -72,6 +78,8 @@ const HeroSection = () => {
           <div dangerouslySetInnerHTML={{ __html: '<div id="yt-hero-player" style="width:100%;height:100%"></div>' }} className="w-full h-full" />
         </div>
         <div className="absolute inset-0 bg-black/40" />
+        {/* Vignette overlay to suppress YouTube player controls that flash in the center */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.45)_0%,_transparent_65%)] pointer-events-none" />
       </div>
       
       <div className="container mx-auto px-4 z-10">
