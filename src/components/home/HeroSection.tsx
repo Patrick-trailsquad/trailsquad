@@ -67,8 +67,8 @@ const HeroSection = () => {
     navigateAndScroll('/', 'upcoming-trips');
   };
   return <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ transform: isMobile ? 'scale(3.5)' : 'scale(1.5)', transformOrigin: 'center center' }}>
+      <div className="absolute inset-0 z-0 overflow-hidden bg-charcoal">
+        <div className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-1000 ${isVideoVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transform: isMobile ? 'scale(3.5)' : 'scale(1.5)', transformOrigin: 'center center' }}>
           <div dangerouslySetInnerHTML={{ __html: '<div id="yt-hero-player" style="width:100%;height:100%"></div>' }} className="w-full h-full" />
         </div>
         <div className="absolute inset-0 bg-black/40" />
