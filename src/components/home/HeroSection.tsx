@@ -37,14 +37,15 @@ const HeroSection = () => {
   );
 
   // Seamless loop: restart shortly before the end to avoid the black frame
+  // Seek to 0.5s to skip the initial control overlay frame
   useEffect(() => {
     const interval = setInterval(() => {
       const player = ytPlayerRef.current;
       if (!player?.getCurrentTime || !player?.getDuration) return;
       const duration = player.getDuration();
       const current = player.getCurrentTime();
-      if (duration > 1 && current >= duration - 0.4) {
-        player.seekTo(0, true);
+      if (duration > 1 && current >= duration - 0.6) {
+        player.seekTo(0.5, true);
         player.playVideo();
       }
     }, 100);
