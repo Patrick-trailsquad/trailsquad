@@ -9,48 +9,71 @@ const HeroSection = () => {
   const navigateAndScroll = useNavigateAndScroll();
   const isMobile = useIsMobile();
   const [isVideoVisible, setIsVideoVisible] = useState(false);
-  const { ytPlayerRef } = useYouTubePlayer(
+  const [activePlayer, setActivePlayer] = useState<0 | 1>(0);
+  const isTransitioningRef = useRef(false);
+  const playerVars = {
+    autoplay: 1,
+    mute: 1,
+    controls: 0,
+    showinfo: 0,
+    rel: 0,
+    iv_load_policy: 3,
+    modestbranding: 1,
+    playsinline: 1,
+    disablekb: 1,
+    fs: 0,
+    cc_load_policy: 0,
+    autohide: 1
+  };
+  const preparePlayer = (event: any) => {
+    event.target.mute();
+    event.target.seekTo(1, true);
+    event.target.playVideo();
+    setTimeout(() => setIsVideoVisible(true), 400);
+  };
+  const { ytPlayerRef: firstPlayerRef } = useYouTubePlayer(
     HERO_VIDEO_ID,
-    {
-      autoplay: 1,
-      mute: 1,
-      loop: 1,
-      playlist: HERO_VIDEO_ID,
-      controls: 0,
-      showinfo: 0,
-      rel: 0,
-      iv_load_policy: 3,
-      modestbranding: 1,
-      playsinline: 1,
-      disablekb: 1,
-      fs: 0,
-      cc_load_policy: 0,
-      autohide: 1
-    },
-    (event: any) => {
-      event.target.mute();
-      event.target.seekTo(0.5, true);
-      event.target.playVideo();
-      setTimeout(() => setIsVideoVisible(true), 400);
-    },
-    "yt-hero-player"
+    playerVars,
+    preparePlayer,
+    "yt-hero-player-0"
+  );
+  const { ytPlayerRef: secondPlayerRef } = useYouTubePlayer(
+    HERO_VIDEO_ID,
+    playerVars,
+    preparePlayer,
+    "yt-hero-player-1"
   );
 
-  // Seamless loop: restart shortly before the end to avoid the black frame
-  // Seek to 0.5s to skip the initial control overlay frame
+  // Restart the hidden player first, then crossfade to it. Any YouTube controls
+  // caused by seeking remain invisible behind the currently active player.
   useEffect(() => {
     const interval = setInterval(() => {
-      const player = ytPlayerRef.current;
+      const players = [firstPlayerRef.current, secondPlayerRef.current];
+      const player = players[activePlayer];
       if (!player?.getCurrentTime || !player?.getDuration) return;
       const duration = player.getDuration();
       const current = player.getCurrentTime();
-      if (duration > 1 && current >= duration - 0.6) {
-        player.seekTo(0.5, true);
-        player.playVideo();
+      if (duration > 2 && current >= duration - 1.5 && !isTransitioningRef.current) {
+        isTransitioningRef.current = true;
+        const nextPlayerIndex: 0 | 1 = activePlayer === 0 ? 1 : 0;
+        const nextPlayer = players[nextPlayerIndex];
+        if (!nextPlayer?.seekTo || !nextPlayer?.playVideo) {
+          isTransitioningRef.current = false;
+          return;
+        }
+        nextPlayer.seekTo(1, true);
+        nextPlayer.playVideo();
+        setTimeout(() => {
+          setActivePlayer(nextPlayerIndex);
+          setTimeout(() => {
+            player.pauseVideo?.();
+            isTransitioningRef.current = false;
+          }, 1000);
+        }, 500);
       }
     }, 100);
     return () => clearInterval(interval);
-  }, [ytPlayerRef]);
+  }, [activePlayer, firstPlayerRef, secondPlayerRef]);
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = "Snør dine løbesko\nog oplev verden!";
@@ -74,12 +97,10 @@ const HeroSection = () => {
   };
   return <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0 overflow-hidden bg-charcoal">
-        <div className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-1000 ${isVideoVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transform: isMobile ? 'scale(3.5)' : 'scale(1.5)', transformOrigin: 'center center' }}>
-          <div dangerouslySetInnerHTML={{ __html: '<div id="yt-hero-player" style="width:100%;height:100%"></div>' }} className="w-full h-full" />
-        </div>
+        {[0, 1].map((playerIndex) => <div key={playerIndex} className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-1000 ${isVideoVisible && activePlayer === playerIndex ? 'opacity-100' : 'opacity-0'}`} style={{ transform: isMobile ? 'scale(3.5)' : 'scale(1.5)', transformOrigin: 'center center' }}>
+            <div dangerouslySetInnerHTML={{ __html: `<div id="yt-hero-player-${playerIndex}" style="width:100%;height:100%"></div>` }} className="w-full h-full" />
+          </div>)}
         <div className="absolute inset-0 bg-black/40" />
-        {/* Vignette overlay to suppress YouTube player controls that flash in the center */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.45)_0%,_transparent_65%)] pointer-events-none" />
       </div>
       
       <div className="container mx-auto px-4 z-10">
