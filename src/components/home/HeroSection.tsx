@@ -78,6 +78,8 @@ const HeroSection = () => {
           <div dangerouslySetInnerHTML={{ __html: '<div id="yt-hero-player" style="width:100%;height:100%"></div>' }} className="w-full h-full" />
         </div>
         <div className="absolute inset-0 bg-black/40" />
+        {/* Vignette overlay to suppress YouTube player controls that flash in the center */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.45)_0%,_transparent_65%)] pointer-events-none" />
       </div>
       
       <div className="container mx-auto px-4 z-10">
