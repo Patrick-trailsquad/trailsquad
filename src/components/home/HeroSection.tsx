@@ -2,8 +2,29 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigateAndScroll } from "../../hooks/useNavigateAndScroll";
+import { useYouTubePlayer } from "../../hooks/useYouTubePlayer";
+import { useIsMobile } from "../../hooks/use-mobile";
+const HERO_VIDEO_ID = "pHQXa6ImpEw";
 const HeroSection = () => {
   const navigateAndScroll = useNavigateAndScroll();
+  const isMobile = useIsMobile();
+  useYouTubePlayer(
+    HERO_VIDEO_ID,
+    {
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      playlist: HERO_VIDEO_ID,
+      controls: 0,
+      showinfo: 0,
+      rel: 0,
+      iv_load_policy: 3,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    undefined,
+    "yt-hero-player"
+  );
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = "Snør dine løbesko\nog oplev verden!";
