@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import { useNavigateAndScroll } from "../../hooks/useNavigateAndScroll";
 import { useYouTubePlayer } from "../../hooks/useYouTubePlayer";
 import { useIsMobile } from "../../hooks/use-mobile";
-const HERO_VIDEO_ID = "pHQXa6ImpEw";
+const HERO_VIDEO_ID = "9K00mO3JpJk";
 const HeroSection = () => {
   const navigateAndScroll = useNavigateAndScroll();
   const isMobile = useIsMobile();
-  useYouTubePlayer(
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+  const { ytPlayerRef } = useYouTubePlayer(
     HERO_VIDEO_ID,
     {
       autoplay: 1,
@@ -22,9 +23,28 @@ const HeroSection = () => {
       modestbranding: 1,
       playsinline: 1
     },
-    undefined,
+    (event: any) => {
+      event.target.mute();
+      event.target.playVideo();
+      setTimeout(() => setIsVideoVisible(true), 400);
+    },
     "yt-hero-player"
   );
+
+  // Seamless loop: restart shortly before the end to avoid the black frame
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const player = ytPlayerRef.current;
+      if (!player?.getCurrentTime || !player?.getDuration) return;
+      const duration = player.getDuration();
+      const current = player.getCurrentTime();
+      if (duration > 1 && current >= duration - 0.4) {
+        player.seekTo(0, true);
+        player.playVideo();
+      }
+    }, 100);
+    return () => clearInterval(interval);
+  }, [ytPlayerRef]);
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = "Snør dine løbesko\nog oplev verden!";
