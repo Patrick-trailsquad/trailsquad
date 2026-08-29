@@ -21,10 +21,15 @@ const HeroSection = () => {
       rel: 0,
       iv_load_policy: 3,
       modestbranding: 1,
-      playsinline: 1
+      playsinline: 1,
+      disablekb: 1,
+      fs: 0,
+      cc_load_policy: 0,
+      autohide: 1
     },
     (event: any) => {
       event.target.mute();
+      event.target.seekTo(0.5, true);
       event.target.playVideo();
       setTimeout(() => setIsVideoVisible(true), 400);
     },
