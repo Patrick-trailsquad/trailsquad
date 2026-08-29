@@ -26,8 +26,10 @@ const HeroSection = () => {
     navigateAndScroll('/', 'upcoming-trips');
   };
   return <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img src="/lovable-uploads/419d5e82-8ab8-4c5f-b1e6-4b77ae8486a8.png" alt="Trail runners in Cappadocia with hot air balloons" className="w-full h-full object-cover md:object-center object-[-450px_center]" loading="lazy" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full" style={{ transform: 'scale(1.6)', transformOrigin: 'center center' }}>
+          <div id="yt-hero-player" className="w-full h-full pointer-events-none" />
+        </div>
         <div className="absolute inset-0 bg-black/40" />
       </div>
       
