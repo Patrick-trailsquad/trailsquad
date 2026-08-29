@@ -2,8 +2,29 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigateAndScroll } from "../../hooks/useNavigateAndScroll";
+import { useYouTubePlayer } from "../../hooks/useYouTubePlayer";
+import { useIsMobile } from "../../hooks/use-mobile";
+const HERO_VIDEO_ID = "pHQXa6ImpEw";
 const HeroSection = () => {
   const navigateAndScroll = useNavigateAndScroll();
+  const isMobile = useIsMobile();
+  useYouTubePlayer(
+    HERO_VIDEO_ID,
+    {
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      playlist: HERO_VIDEO_ID,
+      controls: 0,
+      showinfo: 0,
+      rel: 0,
+      iv_load_policy: 3,
+      modestbranding: 1,
+      playsinline: 1
+    },
+    undefined,
+    "yt-hero-player"
+  );
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = "Snør dine løbesko\nog oplev verden!";
@@ -26,8 +47,10 @@ const HeroSection = () => {
     navigateAndScroll('/', 'upcoming-trips');
   };
   return <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img src="/lovable-uploads/419d5e82-8ab8-4c5f-b1e6-4b77ae8486a8.png" alt="Trail runners in Cappadocia with hot air balloons" className="w-full h-full object-cover md:object-center object-[-450px_center]" loading="lazy" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ transform: isMobile ? 'scale(3.5)' : 'scale(1.5)', transformOrigin: 'center center' }}>
+          <div dangerouslySetInnerHTML={{ __html: '<div id="yt-hero-player" style="width:100%;height:100%"></div>' }} className="w-full h-full" />
+        </div>
         <div className="absolute inset-0 bg-black/40" />
       </div>
       
