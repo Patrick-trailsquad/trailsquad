@@ -9,6 +9,7 @@ const days = [
       { icon: Plane, text: "Direkte fly fra København til Palma" },
       { icon: Bus, text: "Privat transport til Port de Sóller" },
       { icon: Coffee, text: "Check-in på Hotel Es Port" },
+      { icon: Footprints, text: "Første løbetur i de lokale bakker" },
       { icon: UtensilsCrossed, text: "Fælles velkomstmiddag med squaden" },
     ],
   },
