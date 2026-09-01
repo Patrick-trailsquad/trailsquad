@@ -419,7 +419,7 @@ const Transylvania27 = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            TILMELDING ER ÅBEN 🎟️
+            TILMELDING ER ÅBEN
           </div>
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Book din plads</h2>
