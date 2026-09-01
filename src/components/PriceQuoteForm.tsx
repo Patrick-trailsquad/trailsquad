@@ -23,6 +23,7 @@ interface PriceQuoteFormProps {
   onSubmitOverride?: (data: FormValues) => Promise<void>;
   submitButtonLabel?: string;
   getSubmitButtonLabel?: (participants: number) => string;
+  hideDistance?: boolean;
 }
 export interface FormValues {
   fullName: string;
