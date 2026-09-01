@@ -1,7 +1,23 @@
 import { Star, MapPin, Waves } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
+import img2 from "@/assets/mallorca-hotel-2-5.png.asset.json";
+import img3 from "@/assets/mallorca-hotel-3.webp.asset.json";
+import img4 from "@/assets/mallorca-hotel-4-5.png.asset.json";
+import img5 from "@/assets/mallorca-hotel-5.webp.asset.json";
+import img6 from "@/assets/mallorca-hotel-6-2.png.asset.json";
+import img7 from "@/assets/mallorca-hotel-7.webp.asset.json";
+import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
 const images = [
-  "/lovable-uploads/mallorca-hotel-es-port.jpg",
+  img1.url,
+  img2.url,
+  img3.url,
+  img4.url,
+  img5.url,
+  img6.url,
+  img7.url,
+  img8.url,
 ];
 
 const MallorcaTrainingAccommodation = () => {
@@ -11,14 +27,24 @@ const MallorcaTrainingAccommodation = () => {
 
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative">
-          <div className="h-[450px] rounded-xl overflow-hidden">
-            <img
-              src={images[0]}
-              alt="Hotel Es Port i Port de Sóller"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
+          <Carousel className="w-full" opts={{ loop: true }}>
+            <CarouselContent>
+              {images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="h-[450px] rounded-xl overflow-hidden">
+                    <img
+                      src={image}
+                      alt={`Hotel Es Port i Port de Sóller ${index + 1}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
         </div>
 
         <div className="flex flex-col justify-center">
