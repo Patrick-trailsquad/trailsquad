@@ -64,7 +64,7 @@ const MallorcaTraining = () => {
             transition={{ delay: 0.35, duration: 0.6 }}
             className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6"
           >
-            Træningslejr på Mallorca
+            Trailløb på Mallorca
             <br />
             <span className="text-[#FFDC00]">med Trail Squad</span>
           </motion.h1>
@@ -75,7 +75,7 @@ const MallorcaTraining = () => {
             transition={{ delay: 0.5 }}
             className="text-white/80 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed"
           >
-            Bakketræning, social runs, teknik- og styrketræning, samt lækkert hotel og masser af fællesskab i Serra de Tramuntana.
+            4 dage med bjergløb, træning, spansk klima og godt selskab. Hvad venter du på?
           </motion.p>
 
           <motion.div
