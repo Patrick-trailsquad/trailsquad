@@ -105,16 +105,16 @@ const MallorcaTraining = () => {
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
               <button
-                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
                 className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
               >
-                Se hvad du får
+                Book din plads
               </button>
               <button
-                onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
               >
-                Få besked når turen åbner
+                Se hvad du får
               </button>
             </motion.div>
           )}
