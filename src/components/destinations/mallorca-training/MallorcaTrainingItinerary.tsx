@@ -78,11 +78,11 @@ const MallorcaTrainingItinerary = ({ variant = "default" }: MallorcaTrainingItin
                 </div>
 
                 <div className={`rounded-xl shadow-sm border p-5 md:p-6 ${isOverlay ? "bg-white/10 backdrop-blur-md border-white/20" : "bg-white border-stone-dark/10"}`}>
-                  <div className="flex items-baseline justify-between mb-3">
-                    <h3 className={`font-cabinet text-xl md:text-2xl font-bold ${isOverlay ? "text-white" : "text-charcoal"}`}>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-3">
+                    <h3 className={`font-cabinet text-lg md:text-2xl font-bold leading-snug ${isOverlay ? "text-white" : "text-charcoal"}`}>
                       {day.title}
                     </h3>
-                    <span className={`text-sm font-medium whitespace-nowrap ml-3 ${isOverlay ? "text-white/50" : "text-charcoal/50"}`}>
+                    <span className={`text-xs md:text-sm font-medium sm:whitespace-nowrap ${isOverlay ? "text-white/50" : "text-charcoal/50"}`}>
                       {day.date}
                     </span>
                   </div>
