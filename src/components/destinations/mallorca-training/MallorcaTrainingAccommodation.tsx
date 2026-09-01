@@ -1,5 +1,4 @@
 import { Star, MapPin, Waves } from "lucide-react";
-import type { SyntheticEvent } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
 import img2 from "@/assets/mallorca-hotel-2-opt.webp.asset.json";
@@ -10,25 +9,10 @@ import img6 from "@/assets/mallorca-hotel-6-opt.webp.asset.json";
 import img7 from "@/assets/mallorca-hotel-7.webp.asset.json";
 import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
-const images = [
-  img1.url,
-  img2.url,
-  img3.url,
-  img4.url,
-  img5.url,
-  img6.url,
-  img7.url,
-  img8.url,
-];
-
-const retryImageLoad = (event: SyntheticEvent<HTMLImageElement>) => {
-  const image = event.currentTarget;
-  if (image.dataset.retried === "true") return;
-
-  image.dataset.retried = "true";
-  const separator = image.src.includes("?") ? "&" : "?";
-  image.src = `${image.src}${separator}retry=1`;
-};
+const assetOrigin = "https://trailsquad.lovable.app";
+const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(
+  (image) => `${assetOrigin}${image.url}`,
+);
 
 const MallorcaTrainingAccommodation = () => {
   return (
@@ -46,10 +30,9 @@ const MallorcaTrainingAccommodation = () => {
                       src={image}
                       alt={`Hotel Es Port i Port de Sóller ${index + 1}`}
                       className="w-full h-full object-cover"
-                       loading={index === 0 ? "eager" : "lazy"}
-                       fetchPriority={index === 0 ? "high" : "auto"}
-                       decoding="async"
-                       onError={retryImageLoad}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : "auto"}
+                      decoding="async"
                     />
                   </div>
                 </CarouselItem>
