@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Hengill27Itinerary from "../../components/destinations/hengill27/Hengill27Itinerary";
 import Hengill27WaitlistForm from "../../components/destinations/hengill27/Hengill27WaitlistForm";
 import Hengill27Accommodation from "../../components/destinations/hengill27/Hengill27Accommodation";
+import Hengill27RaceVideo from "../../components/destinations/hengill27/Hengill27RaceVideo";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
@@ -325,6 +326,9 @@ const Hengill27 = () => {
           </div>
         </div>
       </section>
+
+      {/* ─── RACE VIDEO ─── */}
+      <Hengill27RaceVideo />
 
       {/* ─── INTERACTIVE MAP ─── */}
       <section className="py-16 md:py-24 bg-charcoal">
