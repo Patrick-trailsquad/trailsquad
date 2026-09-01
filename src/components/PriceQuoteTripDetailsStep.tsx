@@ -20,6 +20,7 @@ interface PriceQuoteTripDetailsStepProps {
   submitButtonLabel?: string;
   getSubmitButtonLabel?: (participants: number) => string;
   isLoading?: boolean;
+  hideDistance?: boolean;
 }
 
 const defaultAccommodationOptions: AccommodationOption[] = [
@@ -36,7 +37,8 @@ const PriceQuoteTripDetailsStep = ({
   accommodationOptions: accommodationOptionsProp,
   submitButtonLabel = "Send Anmodning",
   getSubmitButtonLabel,
-  isLoading = false
+  isLoading = false,
+  hideDistance = false,
 }: PriceQuoteTripDetailsStepProps) => {
   const accommodationOptions = accommodationOptionsProp ?? defaultAccommodationOptions;
   const isCustomAccommodation = !!accommodationOptionsProp;
@@ -96,26 +98,28 @@ const PriceQuoteTripDetailsStep = ({
         )}
       </div>
 
-      <div className="space-y-3">
-        <Label>Foretrukken Distance</Label>
-        <RadioGroup 
-          defaultValue={availableDistances[0]}
-          onValueChange={(value) => {
-            setValue('preferredDistance', value);
-          }}
-          className="gap-3"
-        >
-          {availableDistances.map((distance) => (
-            <div key={distance} className="flex items-center space-x-2">
-              <RadioGroupItem value={distance} id={distance} />
-              <Label htmlFor={distance}>{distance}</Label>
-            </div>
-          ))}
-        </RadioGroup>
-        {errors.preferredDistance && (
-          <p className="text-red-500 text-sm">Venligst vælg en foretrukken distance</p>
-        )}
-      </div>
+      {!hideDistance && (
+        <div className="space-y-3">
+          <Label>Foretrukken Distance</Label>
+          <RadioGroup 
+            defaultValue={availableDistances[0]}
+            onValueChange={(value) => {
+              setValue('preferredDistance', value);
+            }}
+            className="gap-3"
+          >
+            {availableDistances.map((distance) => (
+              <div key={distance} className="flex items-center space-x-2">
+                <RadioGroupItem value={distance} id={distance} />
+                <Label htmlFor={distance}>{distance}</Label>
+              </div>
+            ))}
+          </RadioGroup>
+          {errors.preferredDistance && (
+            <p className="text-red-500 text-sm">Venligst vælg en foretrukken distance</p>
+          )}
+        </div>
+      )}
 
       <div className="space-y-3">
         <Label>Præference for indkvartering</Label>

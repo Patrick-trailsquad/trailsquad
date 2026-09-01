@@ -5,7 +5,7 @@ import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Su
 import { motion } from "framer-motion";
 import MallorcaTrainingItinerary from "../../components/destinations/mallorca-training/MallorcaTrainingItinerary";
 import MallorcaTrainingAccommodation from "../../components/destinations/mallorca-training/MallorcaTrainingAccommodation";
-import MallorcaTrainingWaitlistForm from "../../components/destinations/mallorca-training/MallorcaTrainingWaitlistForm";
+import MallorcaTrainingPricingSection from "../../components/destinations/mallorca-training/MallorcaTrainingPricingSection";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
@@ -105,16 +105,16 @@ const MallorcaTraining = () => {
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
               <button
-                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
                 className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
               >
-                Se hvad du får
+                Book din plads
               </button>
               <button
-                onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
               >
-                Få besked når turen åbner
+                Se hvad du får
               </button>
             </motion.div>
           )}
@@ -129,16 +129,16 @@ const MallorcaTraining = () => {
       {isMobile && (
         <div className="bg-charcoal px-6 py-6 flex flex-col gap-3">
           <button
-            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
           >
-            Se hvad du får
+            Book din plads
           </button>
           <button
-            onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
             className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
           >
-            Få besked når turen åbner
+            Se hvad du får
           </button>
         </div>
       )}
@@ -354,23 +354,17 @@ const MallorcaTraining = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            TILMELDING ÅBNER SNART 🎟️
+            TILMELDING ER ÅBEN
           </div>
 
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Vær først i køen</h2>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Book din plads</h2>
           <p className="text-white/60 text-lg mb-10">
-            Pris og tilmelding er endnu ikke klar. Skriv dig op, og du får en email, så snart turen åbner.
+            9.700 DKK for delt dobbeltværelse og 11.800 DKK for single værelse. Reservér med 5.000 DKK i depositum pr. billet.
           </p>
 
-          <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
-            <MallorcaTrainingWaitlistForm />
+          <MallorcaTrainingPricingSection />
 
-            <div className="mt-4">
-              <CallMeBackCTA />
-            </div>
-
-            <p className="text-charcoal/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
-          </div>
+          <p className="text-white/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
         </div>
       </section>
 
