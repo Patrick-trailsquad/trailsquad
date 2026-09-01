@@ -10,7 +10,6 @@ import CallMeBackPopup from "../../components/CallMeBackPopup";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
 import TransylvaniaTripVideoCTA from "../../components/destinations/transylvania/TransylvaniaTripVideoCTA";
-import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
