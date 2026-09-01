@@ -37,7 +37,8 @@ const PriceQuoteTripDetailsStep = ({
   accommodationOptions: accommodationOptionsProp,
   submitButtonLabel = "Send Anmodning",
   getSubmitButtonLabel,
-  isLoading = false
+  isLoading = false,
+  hideDistance = false,
 }: PriceQuoteTripDetailsStepProps) => {
   const accommodationOptions = accommodationOptionsProp ?? defaultAccommodationOptions;
   const isCustomAccommodation = !!accommodationOptionsProp;
