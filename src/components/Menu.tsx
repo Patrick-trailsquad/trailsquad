@@ -38,12 +38,6 @@ const Menu = () => {
       onClick: handleDestinationsClick 
     },
     { 
-      href: '/destinations/mallorca-training', 
-      label: 'Mallorca Træningslejr', 
-      icon: DestinationsIcon,
-      onClick: () => window.scrollTo(0, 0) 
-    },
-    { 
       href: '/about', 
       label: 'Om os', 
       icon: AboutIcon, 
