@@ -366,10 +366,10 @@ const MallorcaTraining = () => {
                 Coach Emil Albrechtsen
               </h2>
               <p className="text-charcoal/70 text-lg leading-relaxed mb-4">
-                Emil er din coach og løbebuddy på Mallorca. Han har styr på både teknik, bakker og styrketræning — og så sørger han for, at alle føler sig velkomne uanset niveau.
+                Emil er til dagligt løbecoach, fysioterapeut og ultraløber. Han har styr på både teknik, bakker og styrketræning — og så sørger han for, at alle føler sig velkomne uanset niveau.
               </p>
               <p className="text-charcoal/70 text-lg leading-relaxed">
-                Med erfaring fra UTMB Mallorca og utallige timer på stierne i Serra de Tramuntana, guider Emil dig gennem hver træning med fokus på fællesskab, fremgang og gode grin.
+                Med erfaring fra utallige ultraløb, inklusiv UTMB Mallorca 100 miles, guider Emil dig gennem hver træning med fokus på fællesskab, fremgang og gode grin.
               </p>
             </div>
           </div>
