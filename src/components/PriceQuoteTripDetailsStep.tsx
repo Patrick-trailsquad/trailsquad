@@ -20,6 +20,7 @@ interface PriceQuoteTripDetailsStepProps {
   submitButtonLabel?: string;
   getSubmitButtonLabel?: (participants: number) => string;
   isLoading?: boolean;
+  hideDistance?: boolean;
 }
 
 const defaultAccommodationOptions: AccommodationOption[] = [
