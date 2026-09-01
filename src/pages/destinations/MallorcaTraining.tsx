@@ -79,7 +79,7 @@ const MallorcaTraining = () => {
             transition={{ delay: 0.5 }}
             className="text-white/80 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed"
           >
-            4 dages træningslæejr med bjergløb, træning, spansk klima og godt selskab. Hvad venter du på?
+            4 dages træningslejr med bjergløb, træning, spansk klima og godt selskab. Hvad venter du på?
           </motion.p>
 
           <motion.div
