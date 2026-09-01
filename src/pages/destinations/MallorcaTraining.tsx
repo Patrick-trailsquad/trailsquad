@@ -75,7 +75,7 @@ const MallorcaTraining = () => {
             transition={{ delay: 0.5 }}
             className="text-white/80 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed"
           >
-            3 social runs, 3 eftermiddagstræninger, lækkert hotel og masser af fællesskab i Serra de Tramuntana.
+            Bakketræning, social runs, teknik- og styrketræning, samt lækkert hotel og masser af fællesskab i Serra de Tramuntana.
           </motion.p>
 
           <motion.div
