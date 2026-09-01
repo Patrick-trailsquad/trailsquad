@@ -289,7 +289,7 @@ const MallorcaTraining = () => {
             {[
               {
                 q: "Jeg er ikke så hurtig — kan jeg være med?",
-                a: "Helt sikkert. De sociale runs er i moderat tempo, og der er altid en coach med. Du løber aldrig alene. Men det er nok ikke helt skidt, hvis du i hvert fald kan løbe en rask 10'er i pace 5:30.",
+                a: "Helt sikkert. De sociale runs er i moderat tempo, og der er altid en coach med. Du løber aldrig alene. Men det er nok ikke helt skidt, hvis du i hvert fald kan løbe en 10'er i pace 5:30-6:00.",
               },
               {
                 q: "Hvad med eftermiddagstræningen?",

@@ -17,7 +17,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(
 const MallorcaTrainingAccommodation = () => {
   return (
     <div className="mb-20">
-      <h2 className="font-cabinet text-4xl font-bold mb-8 text-center">Din indkvartering</h2>
+      <h2 className="font-cabinet text-4xl font-bold mb-8 text-center">Trætte ben har behov for en god base</h2>
 
       <div className="grid md:grid-cols-2 gap-8">
         <div className="relative">
