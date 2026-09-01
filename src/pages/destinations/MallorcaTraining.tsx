@@ -272,18 +272,6 @@ const MallorcaTraining = () => {
             op ad kalkstensklipper og ned gennem pinjeskov — altid med udsigt over Middelhavet. Her er plads
             til både lette social runs og hårdere eftermiddagstræninger.
           </p>
-          <div className="grid grid-cols-3 gap-6 max-w-md mx-auto">
-            {[
-              { label: "Overnatninger", value: "3" },
-              { label: "Social runs", value: "3" },
-              { label: "Træningspas", value: "3" },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <p className="text-[#FFDC00] font-cabinet font-bold text-sm mb-1">{item.label}</p>
-                <p className="text-white text-sm">{item.value}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
