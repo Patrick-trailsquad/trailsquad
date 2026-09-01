@@ -43,7 +43,8 @@ const PriceQuoteForm = ({
   customInfoText,
   onSubmitOverride,
   submitButtonLabel,
-  getSubmitButtonLabel
+  getSubmitButtonLabel,
+  hideDistance = false,
 }: PriceQuoteFormProps) => {
   const {
     toast
