@@ -3,7 +3,7 @@ import { Plane, Bus, Coffee, UtensilsCrossed, Footprints, Mountain, Dumbbell, Su
 const days = [
   {
     day: 1,
-    date: "Ankomstdag",
+    date: "torsdag 5. februar 2027",
     title: "✈️ Velkommen til Mallorca",
     items: [
       { icon: Plane, text: "Direkte fly fra København til Palma" },
@@ -14,7 +14,7 @@ const days = [
   },
   {
     day: 2,
-    date: "Dag 2",
+    date: "fredag 6. februar 2027",
     title: "🏃 Social run & bakketræning",
     items: [
       { icon: Footprints, text: "Social morgenrun i moderat tempo" },
@@ -25,7 +25,7 @@ const days = [
   },
   {
     day: 3,
-    date: "Dag 3",
+    date: "lørdag 7. februar 2027",
     title: "🏃 Højdemeter & styrke",
     items: [
       { icon: Footprints, text: "Social morgenrun med smukke udsigter" },
@@ -36,7 +36,7 @@ const days = [
   },
   {
     day: 4,
-    date: "Hjemrejsedag",
+    date: "søndag 8. februar 2027",
     title: "✈️ Farvel til Sóller",
     items: [
       { icon: Footprints, text: "Afsluttende let social run" },
