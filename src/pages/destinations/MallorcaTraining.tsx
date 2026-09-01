@@ -147,7 +147,7 @@ const MallorcaTraining = () => {
       <section className="py-16 md:py-24 bg-stone">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
-            Er det noget for dig?
+            For dig der vil på løbeeventyr
           </h2>
           <p className="text-charcoal/60 text-lg mb-12">
             Alle kan være med. Vi skruer op for fællesskabet og ned for presset.
@@ -207,9 +207,9 @@ const MallorcaTraining = () => {
                 icon: Plane,
                 title: "Rejse & logistik",
                 items: [
-                  "Direkte fly fra København",
+                  "Direkte fly; København <=> Palma, Mallorca",
                   "Privat transport til Port de Sóller",
-                  "3 overnatninger på Hotel Es Port (4 ⭐️ hotel)",
+                  "3 overnatninger på Hotel Es Port (4-⭐️ hotel)",
                   "Morgenmad og fælles middage",
                 ],
               },
