@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { X, CheckCircle2, Plane, Bath, Users } from 'lucide-react';
+import { X, CheckCircle2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -131,27 +131,6 @@ const CallMeBackPopup = ({ destinationName, storageKey }: CallMeBackPopupProps) 
                 <p className="text-stone-600 text-sm leading-relaxed">
                   Har du spørgsmål til turen? Indtast dit nummer, så ringer vi til en uforpligtende snak.
                 </p>
-
-                <ul className="mt-4 space-y-2.5">
-                  <li className="flex items-center gap-2.5 text-sm text-stone-700">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange/10 text-orange shrink-0">
-                      <Plane className="w-3.5 h-3.5" />
-                    </span>
-                    Unikke løbeeventyr
-                  </li>
-                  <li className="flex items-center gap-2.5 text-sm text-stone-700">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange/10 text-orange shrink-0">
-                      <Bath className="w-3.5 h-3.5" />
-                    </span>
-                    Spa & wellness
-                  </li>
-                  <li className="flex items-center gap-2.5 text-sm text-stone-700">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange/10 text-orange shrink-0">
-                      <Users className="w-3.5 h-3.5" />
-                    </span>
-                    Squad-stemning & fællesskab
-                  </li>
-                </ul>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
