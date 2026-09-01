@@ -20,7 +20,7 @@ const days = [
       { icon: Footprints, text: "Shakeout Run på de lokale bakker" },
       { icon: Users, text: "Afhentning af startnumre i Bran" },
       { icon: Mountain, text: "Besøg ved Draculas Slot og race brief" },
-      { icon: UtensilsCrossed, text: "Pasta-middag — husk at carb-loade 🍝" },
+      { icon: UtensilsCrossed, text: "Fællesmiddag — husk at carb-loade 🍝" },
     ],
   },
   {
