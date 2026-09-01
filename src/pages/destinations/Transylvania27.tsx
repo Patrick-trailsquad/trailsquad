@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import Transylvania27Itinerary from "../../components/destinations/transylvania27/Transylvania27Itinerary";
-import Transylvania27WaitlistForm from "../../components/destinations/transylvania27/Transylvania27WaitlistForm";
+import Transylvania27PricingSection from "../../components/destinations/transylvania27/Transylvania27PricingSection";
+import DepositPaymentBanner from "../../components/destinations/shared/DepositPaymentBanner";
+import CallMeBackPopup from "../../components/CallMeBackPopup";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
 import TransylvaniaTripVideoCTA from "../../components/destinations/transylvania/TransylvaniaTripVideoCTA";
@@ -31,6 +33,8 @@ const Transylvania27 = () => {
 
   return (
     <div className="min-h-screen bg-stone">
+      <DepositPaymentBanner />
+      <CallMeBackPopup />
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
@@ -113,7 +117,7 @@ const Transylvania27 = () => {
                 onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
               >
-                Få besked når turen åbner
+                Book din plads
               </button>
             </motion.div>
           )}
@@ -137,7 +141,7 @@ const Transylvania27 = () => {
             onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
             className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
           >
-            Få besked når turen åbner
+            Book din plads
           </button>
         </div>
       )}
@@ -319,7 +323,7 @@ const Transylvania27 = () => {
               },
               {
                 q: "Hvad koster turen?",
-                a: "Prisen og tilmeldingen er endnu ikke åben. Skriv dig op med din email nederst på siden, så får du besked først, når turen åbner for booking.",
+                a: "Turen koster 13.000 DKK for delt dobbeltværelse og 15.250 DKK for single værelse - inkl. moms. Du reserverer din plads med 5.000 DKK i depositum pr. billet, og resten betales 60 dage før afrejse.",
               },
             ].map((item, i) => (
               <motion.div
@@ -412,23 +416,17 @@ const Transylvania27 = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            TILMELDING ÅBNER SNART 🎟️
+            TILMELDING ER ÅBEN 🎟️
           </div>
 
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Vær først i køen</h2>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Book din plads</h2>
           <p className="text-white/60 text-lg mb-10">
-            Pris og tilmelding er endnu ikke klar. Skriv dig op, og du får en email, så snart turen åbner.
+            13.000 DKK for delt dobbeltværelse og 15.250 DKK for single værelse. Reservér med 5.000 DKK i depositum pr. billet.
           </p>
 
-          <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
-            <Transylvania27WaitlistForm />
+          <Transylvania27PricingSection />
 
-            <div className="mt-4">
-              <CallMeBackCTA />
-            </div>
-
-            <p className="text-charcoal/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
-          </div>
+          <p className="text-white/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
         </div>
       </section>
 
