@@ -1,5 +1,6 @@
 import { Star, MapPin, Waves } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { assetUrl } from "@/lib/assetUrl";
 import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
 import img2 from "@/assets/mallorca-hotel-2-opt.webp.asset.json";
 import img3 from "@/assets/mallorca-hotel-3.webp.asset.json";
@@ -9,10 +10,7 @@ import img6 from "@/assets/mallorca-hotel-6-opt.webp.asset.json";
 import img7 from "@/assets/mallorca-hotel-7.webp.asset.json";
 import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
-const assetOrigin = "https://trailsquad.lovable.app";
-const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(
-  (image) => `${assetOrigin}${image.url}`,
-);
+const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(assetUrl);
 
 const MallorcaTrainingAccommodation = () => {
   return (
