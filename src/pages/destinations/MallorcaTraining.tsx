@@ -186,7 +186,7 @@ const MallorcaTraining = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: `url(${heroImage})`,
+            backgroundImage: `url(${itineraryBgImage})`,
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
