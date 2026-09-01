@@ -40,6 +40,7 @@ const days = [
     title: "✈️ Hjemrejse",
     items: [
       { icon: Coffee, text: "Morgenmad på hotellet" },
+      { icon: Bath, text: "Wellness og spa på hotellet" },
       { icon: Bus, text: "Transport tilbage til Bukarest" },
       { icon: Plane, text: "Fly hjem til København" },
     ],
