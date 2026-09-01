@@ -9,8 +9,10 @@ import MallorcaTrainingPricingSection from "../../components/destinations/mallor
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
+import itineraryBgAsset from "../../assets/mallorca-itinerary-bg.png.asset.json";
 
 const heroImage = "/lovable-uploads/mallorca-training-hero.jpg";
+const itineraryBgImage = itineraryBgAsset.url;
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -184,7 +186,7 @@ const MallorcaTraining = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: `url(${heroImage})`,
+            backgroundImage: `url(${itineraryBgImage})`,
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
