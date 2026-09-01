@@ -101,7 +101,7 @@ const HeroSection = () => {
             <div dangerouslySetInnerHTML={{ __html: `<div id="yt-hero-player-${playerIndex}" style="width:100%;height:100%"></div>` }} className="w-full h-full" />
           </div>)}
         <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute left-1/2 top-1/2 h-32 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-charcoal/90 blur-2xl pointer-events-none" />
+        <div className="absolute left-1/2 top-1/2 h-52 w-[26rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-charcoal/95 blur-2xl pointer-events-none" />
       </div>
       
       <div className="container mx-auto px-4 z-10">
