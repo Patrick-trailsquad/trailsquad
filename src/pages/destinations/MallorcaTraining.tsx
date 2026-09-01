@@ -9,11 +9,12 @@ import MallorcaTrainingPricingSection from "../../components/destinations/mallor
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
+import { assetUrl } from "@/lib/assetUrl";
 import itineraryBgAsset from "../../assets/mallorca-itinerary-bg.png.asset.json";
 import coachEmilAsset from "../../assets/coach-emil-albrechtsen.png.asset.json";
 
 const heroImage = "/lovable-uploads/mallorca-training-hero.jpg";
-const itineraryBgImage = itineraryBgAsset.url;
+const itineraryBgImage = assetUrl(itineraryBgAsset);
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -352,7 +353,7 @@ const MallorcaTraining = () => {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
               <img
-                src={coachEmilAsset.url}
+                src={assetUrl(coachEmilAsset)}
                 alt="Coach Emil Albrechtsen løber på sti"
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

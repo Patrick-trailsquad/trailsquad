@@ -16,6 +16,7 @@ import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/
 import { useIsMobile } from "../../hooks/use-mobile";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 
+import { assetUrl } from "@/lib/assetUrl";
 import infiniteTrailsDagplanBg from "../../assets/infinite-trails-dagplan-bg.jpg.asset.json";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
@@ -103,7 +104,7 @@ const InfiniteTrails = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: `url(${infiniteTrailsDagplanBg.url})`,
+            backgroundImage: `url(${assetUrl(infiniteTrailsDagplanBg)})`,
             backgroundAttachment: 'fixed',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
