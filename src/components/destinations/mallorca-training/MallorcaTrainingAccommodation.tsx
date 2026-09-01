@@ -1,4 +1,5 @@
 import { Star, MapPin, Waves } from "lucide-react";
+import type { SyntheticEvent } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
 import img2 from "@/assets/mallorca-hotel-2-opt.webp.asset.json";
@@ -20,7 +21,7 @@ const images = [
   img8.url,
 ];
 
-const retryImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+const retryImageLoad = (event: SyntheticEvent<HTMLImageElement>) => {
   const image = event.currentTarget;
   if (image.dataset.retried === "true") return;
 
