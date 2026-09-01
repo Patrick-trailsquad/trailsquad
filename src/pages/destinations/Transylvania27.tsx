@@ -10,6 +10,7 @@ import CallMeBackPopup from "../../components/CallMeBackPopup";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
 import TransylvaniaTripVideoCTA from "../../components/destinations/transylvania/TransylvaniaTripVideoCTA";
+import Transylvania27RaceVideo from "../../components/destinations/transylvania27/Transylvania27RaceVideo";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
@@ -33,7 +34,7 @@ const Transylvania27 = () => {
   return (
     <div className="min-h-screen bg-stone">
       <DepositPaymentBanner />
-      <CallMeBackPopup />
+      <CallMeBackPopup destinationName="Transylvania 100 2027" />
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
@@ -341,6 +342,9 @@ const Transylvania27 = () => {
           </div>
         </div>
       </section>
+
+      {/* ─── RACE ORGANIZER VIDEO ─── */}
+      <Transylvania27RaceVideo />
 
       {/* ─── INTERACTIVE MAP ─── */}
       <section className="py-16 md:py-24 bg-charcoal">
