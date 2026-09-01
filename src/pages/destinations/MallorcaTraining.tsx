@@ -55,7 +55,7 @@ const MallorcaTraining = () => {
             transition={{ delay: 0.2 }}
             className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4"
           >
-            Port de Sóller, Mallorca · 3 overnatninger
+            Port de Sóller, Mallorca · 5–8 februar 2027 · 3 overnatninger
           </motion.p>
 
           <motion.h1
@@ -313,7 +313,7 @@ const MallorcaTraining = () => {
               },
               {
                 q: "Hvornår åbner tilmeldingen?",
-                a: "Pris og datoer er endnu ikke endelige. Skriv dig op, så får du besked først, når turen åbner.",
+                a: "Turen løber af stablen 5–8 februar 2027. Pris og endelig tilmelding åbner snart — skriv dig op, så får du besked først.",
               },
             ].map((item, i) => (
               <motion.div
