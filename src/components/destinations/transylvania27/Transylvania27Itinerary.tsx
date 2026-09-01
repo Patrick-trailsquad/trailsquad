@@ -6,10 +6,10 @@ const days = [
     date: "torsdag 27. maj 2027",
     title: "✈️ Udrejse",
     items: [
-      { icon: Plane, text: "Fly fra København til Bukarest" },
+      { icon: Plane, text: "Aftenfly fra København til Bukarest" },
       { icon: Bus, text: "Privat transport til Poiana Brașov" },
       { icon: Coffee, text: "Check-in på Swissôtel Poiana Brașov" },
-      { icon: UtensilsCrossed, text: "Fælles middag på hotellet" },
+      { icon: UtensilsCrossed, text: "På hovedet i seng" },
     ],
   },
   {
@@ -17,7 +17,7 @@ const days = [
     date: "fredag 28. maj 2027",
     title: "🏃 Forberedelse & Dracula",
     items: [
-      { icon: Footprints, text: "Shakeout Run i Karpaterne" },
+      { icon: Footprints, text: "Shakeout Run på de lokale bakker" },
       { icon: Users, text: "Afhentning af startnumre i Bran" },
       { icon: Mountain, text: "Besøg ved Draculas Slot og race brief" },
       { icon: UtensilsCrossed, text: "Pasta-middag — husk at carb-loade 🍝" },
@@ -31,7 +31,7 @@ const days = [
       { icon: Trophy, text: "Race day: 20, 30, 50, 80 eller 100 km" },
       { icon: Mountain, text: "Start og mål ved Draculas Slot i Bran" },
       { icon: Users, text: "Fejring ved målstregen med squaden" },
-      { icon: UtensilsCrossed, text: "Spa, wellness og finisher-middag" },
+      { icon: UtensilsCrossed, text: "Stor middag for dem som er i mål (80 og 100 km løber stadig)" },
     ],
   },
   {
