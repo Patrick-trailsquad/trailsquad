@@ -354,23 +354,17 @@ const MallorcaTraining = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            TILMELDING ÅBNER SNART 🎟️
+            TILMELDING ER ÅBEN
           </div>
 
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Vær først i køen</h2>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Book din plads</h2>
           <p className="text-white/60 text-lg mb-10">
-            Pris og tilmelding er endnu ikke klar. Skriv dig op, og du får en email, så snart turen åbner.
+            9.700 DKK for delt dobbeltværelse og 11.800 DKK for single værelse. Reservér med 5.000 DKK i depositum pr. billet.
           </p>
 
-          <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
-            <MallorcaTrainingWaitlistForm />
+          <MallorcaTrainingPricingSection />
 
-            <div className="mt-4">
-              <CallMeBackCTA />
-            </div>
-
-            <p className="text-charcoal/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
-          </div>
+          <p className="text-white/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
         </div>
       </section>
 
