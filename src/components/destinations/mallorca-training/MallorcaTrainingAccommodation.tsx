@@ -1,11 +1,11 @@
 import { Star, MapPin, Waves } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
-import img2 from "@/assets/mallorca-hotel-2-5.png.asset.json";
+import img2 from "@/assets/mallorca-hotel-2-opt.webp.asset.json";
 import img3 from "@/assets/mallorca-hotel-3.webp.asset.json";
-import img4 from "@/assets/mallorca-hotel-4-5.png.asset.json";
+import img4 from "@/assets/mallorca-hotel-4-opt.webp.asset.json";
 import img5 from "@/assets/mallorca-hotel-5.webp.asset.json";
-import img6 from "@/assets/mallorca-hotel-6-2.png.asset.json";
+import img6 from "@/assets/mallorca-hotel-6-opt.webp.asset.json";
 import img7 from "@/assets/mallorca-hotel-7.webp.asset.json";
 import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
@@ -31,12 +31,12 @@ const MallorcaTrainingAccommodation = () => {
             <CarouselContent>
               {images.map((image, index) => (
                 <CarouselItem key={index}>
-                  <div className="h-[450px] rounded-xl overflow-hidden">
+                  <div className="h-[300px] md:h-[450px] rounded-xl overflow-hidden bg-muted">
                     <img
                       src={image}
                       alt={`Hotel Es Port i Port de Sóller ${index + 1}`}
                       className="w-full h-full object-cover"
-                      loading="lazy"
+                      loading="lazy" decoding="async"
                     />
                   </div>
                 </CarouselItem>
