@@ -5,7 +5,7 @@ import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Su
 import { motion } from "framer-motion";
 import MallorcaTrainingItinerary from "../../components/destinations/mallorca-training/MallorcaTrainingItinerary";
 import MallorcaTrainingAccommodation from "../../components/destinations/mallorca-training/MallorcaTrainingAccommodation";
-import MallorcaTrainingWaitlistForm from "../../components/destinations/mallorca-training/MallorcaTrainingWaitlistForm";
+import MallorcaTrainingPricingSection from "../../components/destinations/mallorca-training/MallorcaTrainingPricingSection";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
