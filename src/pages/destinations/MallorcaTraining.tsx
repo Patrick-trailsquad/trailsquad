@@ -197,8 +197,8 @@ const MallorcaTraining = () => {
                 icon: Shield,
                 title: "Træning & vejledning",
                 items: [
-                  "3 social runs i moderat tempo",
-                  "3 eftermiddagstræninger for de hurtige",
+                  "Social runs (med stigninger) i moderat tempo",
+                  "Eftermiddagstræninger for de hårde typer",
                   "Bakkesprints, teknik og styrke",
                   "Personlig feedback fra coach Emil",
                 ],
@@ -209,7 +209,7 @@ const MallorcaTraining = () => {
                 items: [
                   "Direkte fly fra København",
                   "Privat transport til Port de Sóller",
-                  "3 overnatninger på Hotel Es Port",
+                  "3 overnatninger på Hotel Es Port (4 ⭐️ hotel)",
                   "Morgenmad og fælles middage",
                 ],
               },
