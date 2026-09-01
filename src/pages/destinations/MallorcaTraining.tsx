@@ -300,6 +300,10 @@ const MallorcaTraining = () => {
                 a: "Nej. Vi vejleder dig i teknik og terræn undervejs, så du føler dig tryg på stierne.",
               },
               {
+                q: "Hvor skal vi løbe?",
+                a: "Coach Emil har løbet UTMB Mallorca, og har styr på ruterne i lokalområdet. Vi finder de bedste segmenter af UTMB løbet og løber dér.",
+              },
+              {
                 q: "Hvornår åbner tilmeldingen?",
                 a: "Turen løber af stablen 5–8 februar 2027. Pris og endelig tilmelding åbner snart — skriv dig op, så får du besked først.",
               },
