@@ -179,6 +179,24 @@ const MallorcaTraining = () => {
         </div>
       </section>
 
+      {/* ─── 4-DAGS PLAN ─── */}
+      <section className="w-full relative overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24">
+          <MallorcaTrainingItinerary variant="overlay" />
+        </div>
+      </section>
+
       {/* ─── WHAT YOU GET ─── */}
       <section id="what-you-get" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
