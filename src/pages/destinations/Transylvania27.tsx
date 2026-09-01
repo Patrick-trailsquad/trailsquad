@@ -343,6 +343,9 @@ const Transylvania27 = () => {
         </div>
       </section>
 
+      {/* ─── RACE ORGANIZER VIDEO ─── */}
+      <Transylvania27RaceVideo />
+
       {/* ─── INTERACTIVE MAP ─── */}
       <section className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-4xl">
