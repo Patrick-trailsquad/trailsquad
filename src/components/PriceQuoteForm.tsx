@@ -171,7 +171,7 @@ const PriceQuoteForm = ({
               </div>
 
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} accommodationOptions={accommodationOptions} submitButtonLabel={submitButtonLabel} getSubmitButtonLabel={getSubmitButtonLabel} isLoading={isLoading} />}
+                {step === 1 ? <PriceQuotePersonalInfoStep form={form} advanceStep={advanceStep} /> : <PriceQuoteTripDetailsStep form={form} availableDistances={availableDistances} onBack={() => setStep(1)} maxParticipants={maxParticipants} accommodationOptions={accommodationOptions} submitButtonLabel={submitButtonLabel} getSubmitButtonLabel={getSubmitButtonLabel} isLoading={isLoading} hideDistance={hideDistance} />}
               </form>
             </>}
         </div>
