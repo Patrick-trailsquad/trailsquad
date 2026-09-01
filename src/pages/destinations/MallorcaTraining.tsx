@@ -10,6 +10,7 @@ import CallMeBackCTA from "../../components/CallMeBackCTA";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import itineraryBgAsset from "../../assets/mallorca-itinerary-bg.png.asset.json";
+import coachEmilAsset from "../../assets/coach-emil-albrechtsen.png.asset.json";
 
 const heroImage = "/lovable-uploads/mallorca-training-hero.jpg";
 const itineraryBgImage = itineraryBgAsset.url;
@@ -341,6 +342,36 @@ const MallorcaTraining = () => {
                 <p className="text-charcoal/70 leading-relaxed">{item.a}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── COACH EMIL ─── */}
+      <section className="py-16 md:py-24 bg-stone">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
+              <img
+                src={coachEmilAsset.url}
+                alt="Coach Emil Albrechtsen løber på sti"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-3">
+                Din coach på turen
+              </p>
+              <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-6">
+                Coach Emil Albrechtsen
+              </h2>
+              <p className="text-charcoal/70 text-lg leading-relaxed mb-4">
+                Emil er din coach og løbebuddy på Mallorca. Han har styr på både teknik, bakker og styrketræning — og så sørger han for, at alle føler sig velkomne uanset niveau.
+              </p>
+              <p className="text-charcoal/70 text-lg leading-relaxed">
+                Med erfaring fra UTMB Mallorca og utallige timer på stierne i Serra de Tramuntana, guider Emil dig gennem hver træning med fokus på fællesskab, fremgang og gode grin.
+              </p>
+            </div>
           </div>
         </div>
       </section>
