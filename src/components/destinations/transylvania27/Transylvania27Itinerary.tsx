@@ -1,4 +1,4 @@
-import { Plane, Mountain, UtensilsCrossed, Users, Trophy, Coffee, Footprints, Bus } from "lucide-react";
+import { Plane, Mountain, UtensilsCrossed, Users, Trophy, Coffee, Footprints, Bus, Bath } from "lucide-react";
 
 const days = [
   {
