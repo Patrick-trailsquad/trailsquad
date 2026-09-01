@@ -1,4 +1,5 @@
 import { Star, MapPin, Waves } from "lucide-react";
+import type { SyntheticEvent } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
 import img2 from "@/assets/mallorca-hotel-2-opt.webp.asset.json";
@@ -20,6 +21,15 @@ const images = [
   img8.url,
 ];
 
+const retryImageLoad = (event: SyntheticEvent<HTMLImageElement>) => {
+  const image = event.currentTarget;
+  if (image.dataset.retried === "true") return;
+
+  image.dataset.retried = "true";
+  const separator = image.src.includes("?") ? "&" : "?";
+  image.src = `${image.src}${separator}retry=1`;
+};
+
 const MallorcaTrainingAccommodation = () => {
   return (
     <div className="mb-20">
@@ -36,7 +46,10 @@ const MallorcaTrainingAccommodation = () => {
                       src={image}
                       alt={`Hotel Es Port i Port de Sóller ${index + 1}`}
                       className="w-full h-full object-cover"
-                      loading="lazy" decoding="async"
+                       loading={index === 0 ? "eager" : "lazy"}
+                       fetchPriority={index === 0 ? "high" : "auto"}
+                       decoding="async"
+                       onError={retryImageLoad}
                     />
                   </div>
                 </CarouselItem>
