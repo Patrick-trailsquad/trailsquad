@@ -24,6 +24,10 @@ interface PriceQuoteFormProps {
   submitButtonLabel?: string;
   getSubmitButtonLabel?: (participants: number) => string;
   hideDistance?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  initialAccommodation?: string;
+  hideTrigger?: boolean;
 }
 export interface FormValues {
   fullName: string;
