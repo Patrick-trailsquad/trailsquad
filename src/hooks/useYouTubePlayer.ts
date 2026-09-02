@@ -27,9 +27,13 @@ export const useYouTubePlayer = (
       window.YTReadyCallbacks = [];
     }
 
+    let cancelled = false;
+
     const initPlayer = () => {
+      if (cancelled) return;
       const target = elementId ? document.getElementById(elementId) : playerRef.current;
-      if (target && window.YT && window.YT.Player) {
+      // Skip if the target was already detached from the document (route change)
+      if (target && target.isConnected && window.YT && window.YT.Player) {
         ytPlayerRef.current = new window.YT.Player(target, {
           videoId: videoId,
           playerVars: playerVars || {},
