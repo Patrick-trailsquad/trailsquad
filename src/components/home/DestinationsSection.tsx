@@ -99,7 +99,7 @@ const destinations = [
   },
   {
     image: "/lovable-uploads/mallorca-training-hero.jpg",
-    location: "Mallorca Træningslejr, Spanien",
+    location: "Træningslejr: Mallorca, Spanien",
     date: "Februar 2027",
     spots: "Åben for tilmelding",
     href: "/destinations/mallorca-training"
