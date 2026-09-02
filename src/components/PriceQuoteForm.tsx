@@ -49,6 +49,10 @@ const PriceQuoteForm = ({
   submitButtonLabel,
   getSubmitButtonLabel,
   hideDistance = false,
+  open,
+  onOpenChange,
+  initialAccommodation,
+  hideTrigger = false,
 }: PriceQuoteFormProps) => {
   const {
     toast
@@ -58,9 +62,14 @@ const PriceQuoteForm = ({
   const form = useForm<FormValues>({
     defaultValues: {
       preferredDistance: availableDistances[0],
-      accommodationPreference: accommodationOptions?.[0]?.value ?? 'single'
+      accommodationPreference: initialAccommodation ?? accommodationOptions?.[0]?.value ?? 'single'
     }
   });
+  useEffect(() => {
+    if (open && initialAccommodation) {
+      form.setValue('accommodationPreference', initialAccommodation);
+    }
+  }, [open, initialAccommodation]);
   const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (data: FormValues) => {
     setIsLoading(true);
