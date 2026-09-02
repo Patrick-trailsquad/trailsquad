@@ -2,6 +2,7 @@ import { useToast } from "@/hooks/use-toast";
 import PriceQuoteForm, { type FormValues } from "../../PriceQuoteForm";
 import CallMeBackCTA from "../../CallMeBackCTA";
 import { supabase } from "@/integrations/supabase/client";
+import { ROOM_AVAILABILITY } from "./mallorcaRoomData";
 import {
   Accordion,
   AccordionItem,
