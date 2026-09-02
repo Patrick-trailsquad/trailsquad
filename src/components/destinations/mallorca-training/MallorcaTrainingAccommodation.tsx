@@ -1,4 +1,4 @@
-import { Star, MapPin, Waves } from "lucide-react";
+import { Star, MapPin, Waves, BedDouble, Maximize2 } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { assetUrl } from "@/lib/assetUrl";
 import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
