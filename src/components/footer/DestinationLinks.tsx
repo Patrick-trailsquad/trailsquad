@@ -13,7 +13,7 @@ const destinations = [
   { name: "Infinite Trails 🇦🇹", href: "/destinations/infinite-trails", spots: "Billetsalg lukket", year: "2026" },
   { name: "Trail Ribeira Sacra 🇪🇸", href: "/destinations/ribeira-sacra-2026", spots: "8 pladser", spotsOriginal: "14", year: "2026" },
   { name: "La Boucle de l'Étoile 🇲🇦", href: "/destinations/la-boucle-de-l-etoile", spots: "Åbner senere", year: "2026" },
-  { name: "Mallorca Træningslejr 🇪🇸", href: "/destinations/mallorca-training", spots: "Åben for tilmelding", year: "2027" },
+  { name: "Træningslejr: Mallorca 🇪🇸", href: "/destinations/mallorca-training", spots: "Åben for tilmelding", year: "2027" },
   { name: "Transylvania 100 🇷🇴", href: "/destinations/transylvania27", spots: "Åben for tilmelding", year: "2027" },
   { name: "Hengill Ultra 🇮🇸", href: "/destinations/hengill27", spots: "Åbner senere", year: "2027" },
   { name: "Fýri Trail 🇳🇴", href: "/destinations/fyri26", spots: "Åbner senere", year: "2027" },
