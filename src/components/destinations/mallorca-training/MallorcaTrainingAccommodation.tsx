@@ -90,8 +90,9 @@ const MallorcaTrainingAccommodation = () => {
           {roomTypes.map((room) => (
             <div
               key={room.name}
-              className={`rounded-xl border p-6 bg-white flex flex-col ${
-                room.highlight ? "border-terra shadow-md" : "border-charcoal/10"
+              onClick={() => setSelectedKey(room.key)}
+              className={`rounded-xl border p-6 bg-white flex flex-col cursor-pointer transition-shadow ${
+                selectedKey === room.key ? "border-terra shadow-md" : "border-charcoal/10 hover:shadow-sm"
               }`}
             >
               <div className="flex items-center justify-between gap-2 mb-1">
