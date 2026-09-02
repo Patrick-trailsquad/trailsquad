@@ -12,6 +12,36 @@ import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(assetUrl);
 
+const roomTypes = [
+  {
+    name: "Deluxe Dobbeltværelse",
+    priceLabel: "Inkluderet i prisen",
+    size: "Ca. 22 m²",
+    beds: "2 enkeltsenge eller dobbeltseng",
+    description:
+      "Vores standardværelse — lyst og komfortabelt med alt hvad du skal bruge efter en dag i bjergene.",
+    highlight: true,
+  },
+  {
+    name: "Superior Dobbeltværelse",
+    priceLabel: "+350 DKK pr. person",
+    size: "Ca. 28 m²",
+    beds: "2 enkeltsenge eller dobbeltseng",
+    description:
+      "Mere plads, bedre udsigt og ekstra komfort — godt hvis I er to der deler værelse.",
+    highlight: false,
+  },
+  {
+    name: "Juniorsuite",
+    priceLabel: "+650 DKK pr. person",
+    size: "Ca. 35 m² med separat siddeområde",
+    beds: "Kun dobbeltseng",
+    description:
+      "Hotellets største værelser med siddeområde og ekstra luft omkring dig. Bemærk: kun dobbeltseng.",
+    highlight: false,
+  },
+];
+
 const MallorcaTrainingAccommodation = () => {
   return (
     <div className="mb-20">
