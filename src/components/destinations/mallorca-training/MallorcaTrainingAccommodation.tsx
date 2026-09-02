@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Star, MapPin, Waves, BedDouble, Maximize2 } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { assetUrl } from "@/lib/assetUrl";
