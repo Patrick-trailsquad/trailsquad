@@ -2,7 +2,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui
 import { Info, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useToast } from "./ui/use-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Progress } from "./ui/progress";
 import PriceQuotePersonalInfoStep from "./PriceQuotePersonalInfoStep";
 import PriceQuoteTripDetailsStep from "./PriceQuoteTripDetailsStep";
@@ -24,6 +24,10 @@ interface PriceQuoteFormProps {
   submitButtonLabel?: string;
   getSubmitButtonLabel?: (participants: number) => string;
   hideDistance?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  initialAccommodation?: string;
+  hideTrigger?: boolean;
 }
 export interface FormValues {
   fullName: string;
@@ -45,6 +49,10 @@ const PriceQuoteForm = ({
   submitButtonLabel,
   getSubmitButtonLabel,
   hideDistance = false,
+  open,
+  onOpenChange,
+  initialAccommodation,
+  hideTrigger = false,
 }: PriceQuoteFormProps) => {
   const {
     toast
@@ -54,9 +62,14 @@ const PriceQuoteForm = ({
   const form = useForm<FormValues>({
     defaultValues: {
       preferredDistance: availableDistances[0],
-      accommodationPreference: accommodationOptions?.[0]?.value ?? 'single'
+      accommodationPreference: initialAccommodation ?? accommodationOptions?.[0]?.value ?? 'single'
     }
   });
+  useEffect(() => {
+    if (open && initialAccommodation) {
+      form.setValue('accommodationPreference', initialAccommodation);
+    }
+  }, [open, initialAccommodation]);
   const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (data: FormValues) => {
     setIsLoading(true);
@@ -116,12 +129,15 @@ const PriceQuoteForm = ({
       setStep(2);
     }
   };
-  return <Sheet>
-      <SheetTrigger asChild>
-        <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
-          Book din billet
-        </button>
-      </SheetTrigger>
+  return <Sheet open={open} onOpenChange={onOpenChange}>
+      {!hideTrigger && (
+        <SheetTrigger asChild>
+          <button className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black">
+            Book din billet
+          </button>
+        </SheetTrigger>
+      )}
+      
       
       <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
         <SheetHeader>

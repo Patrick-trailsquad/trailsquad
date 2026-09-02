@@ -12,7 +12,17 @@ import {
 
 const DESTINATION_NAME = "Mallorca Træningslejr";
 
-const MallorcaTrainingPricingSection = () => {
+interface MallorcaTrainingPricingSectionProps {
+  bookingOpen?: boolean;
+  onBookingOpenChange?: (open: boolean) => void;
+  initialAccommodation?: string;
+}
+
+const MallorcaTrainingPricingSection = ({
+  bookingOpen,
+  onBookingOpenChange,
+  initialAccommodation,
+}: MallorcaTrainingPricingSectionProps) => {
   const { toast } = useToast();
 
   const handleStripeCheckout = async (data: FormValues) => {
@@ -94,6 +104,9 @@ const MallorcaTrainingPricingSection = () => {
         onSubmitOverride={handleStripeCheckout}
         hideDistance={true}
         customInfoText="Reservér din plads ved at betale 5.000 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse."
+        open={bookingOpen}
+        onOpenChange={onBookingOpenChange}
+        initialAccommodation={initialAccommodation}
         getSubmitButtonLabel={(p) => `Betal ${(5000 * p).toLocaleString('da-DK')} DKK i depositum`}
       />
       <div className="mt-4">

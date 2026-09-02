@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Star, MapPin, Waves, BedDouble, Maximize2 } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { assetUrl } from "@/lib/assetUrl";
@@ -13,7 +14,15 @@ import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(assetUrl);
 
-const MallorcaTrainingAccommodation = () => {
+interface MallorcaTrainingAccommodationProps {
+  onBookRoom?: (roomKey: string) => void;
+}
+
+const MallorcaTrainingAccommodation = ({ onBookRoom }: MallorcaTrainingAccommodationProps) => {
+  const [selectedKey, setSelectedKey] = useState<string>(
+    roomTypes.find((r) => r.highlight)?.key ?? roomTypes[0].key
+  );
+
   return (
     <div className="mb-20">
       <h2 className="font-cabinet text-4xl font-bold mb-8 text-center">Trætte ben har behov for en god base</h2>
@@ -90,8 +99,9 @@ const MallorcaTrainingAccommodation = () => {
           {roomTypes.map((room) => (
             <div
               key={room.name}
-              className={`rounded-xl border p-6 bg-white flex flex-col ${
-                room.highlight ? "border-terra shadow-md" : "border-charcoal/10"
+              onClick={() => setSelectedKey(room.key)}
+              className={`rounded-xl border p-6 bg-white flex flex-col cursor-pointer transition-shadow ${
+                selectedKey === room.key ? "border-terra shadow-md" : "border-charcoal/10 hover:shadow-sm"
               }`}
             >
               <div className="flex items-center justify-between gap-2 mb-1">
@@ -120,6 +130,23 @@ const MallorcaTrainingAccommodation = () => {
               </div>
 
               <p className="text-sm text-charcoal/70 mt-4">{room.description}</p>
+
+              <button
+                type="button"
+                disabled={selectedKey !== room.key || room.available <= 0}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedKey(room.key);
+                  onBookRoom?.(room.key);
+                }}
+                className={`mt-6 w-full rounded-full px-6 py-3 font-cabinet font-medium border-2 transition-colors duration-300 ${
+                  selectedKey === room.key && room.available > 0
+                    ? "bg-[#FFDC00] text-black border-black hover:bg-[#FFDC00]/90"
+                    : "bg-transparent text-charcoal/40 border-charcoal/15 cursor-not-allowed"
+                }`}
+              >
+                {room.available > 0 ? "Book værelse" : "Udsolgt"}
+              </button>
             </div>
           ))}
         </div>
