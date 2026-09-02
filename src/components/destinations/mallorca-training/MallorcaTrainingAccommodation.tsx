@@ -130,6 +130,23 @@ const MallorcaTrainingAccommodation = ({ onBookRoom }: MallorcaTrainingAccommoda
               </div>
 
               <p className="text-sm text-charcoal/70 mt-4">{room.description}</p>
+
+              <button
+                type="button"
+                disabled={selectedKey !== room.key || room.available <= 0}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedKey(room.key);
+                  onBookRoom?.(room.key);
+                }}
+                className={`mt-6 w-full rounded-full px-6 py-3 font-cabinet font-medium border-2 transition-colors duration-300 ${
+                  selectedKey === room.key && room.available > 0
+                    ? "bg-[#FFDC00] text-black border-black hover:bg-[#FFDC00]/90"
+                    : "bg-transparent text-charcoal/40 border-charcoal/15 cursor-not-allowed"
+                }`}
+              >
+                {room.available > 0 ? "Book værelse" : "Udsolgt"}
+              </button>
             </div>
           ))}
         </div>
