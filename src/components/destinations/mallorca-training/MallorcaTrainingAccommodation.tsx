@@ -13,7 +13,15 @@ import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(assetUrl);
 
-const MallorcaTrainingAccommodation = () => {
+interface MallorcaTrainingAccommodationProps {
+  onBookRoom?: (roomKey: string) => void;
+}
+
+const MallorcaTrainingAccommodation = ({ onBookRoom }: MallorcaTrainingAccommodationProps) => {
+  const [selectedKey, setSelectedKey] = useState<string>(
+    roomTypes.find((r) => r.highlight)?.key ?? roomTypes[0].key
+  );
+
   return (
     <div className="mb-20">
       <h2 className="font-cabinet text-4xl font-bold mb-8 text-center">Trætte ben har behov for en god base</h2>
