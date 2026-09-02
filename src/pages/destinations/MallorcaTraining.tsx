@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
@@ -31,6 +32,13 @@ const MallorcaTraining = () => {
   usePageTitle("Mallorca Træningslejr – Trail Squad");
   useScrollToTop();
   const isMobile = useIsMobile();
+  const [bookingOpen, setBookingOpen] = useState(false);
+  const [initialAccommodation, setInitialAccommodation] = useState<string | undefined>(undefined);
+
+  const handleBookRoom = (roomKey: string) => {
+    setInitialAccommodation(`single-${roomKey}`);
+    setBookingOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-stone">
@@ -380,7 +388,7 @@ const MallorcaTraining = () => {
       {/* ─── HOTEL ─── */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
-          <MallorcaTrainingAccommodation />
+          <MallorcaTrainingAccommodation onBookRoom={handleBookRoom} />
         </div>
       </section>
 
@@ -396,7 +404,11 @@ const MallorcaTraining = () => {
             9.700 DKK for delt dobbeltværelse og 11.800 DKK for single værelse. Reservér med 5.000 DKK i depositum pr. billet.
           </p>
 
-          <MallorcaTrainingPricingSection />
+          <MallorcaTrainingPricingSection
+            bookingOpen={bookingOpen}
+            onBookingOpenChange={setBookingOpen}
+            initialAccommodation={initialAccommodation}
+          />
 
           <p className="text-white/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
         </div>
