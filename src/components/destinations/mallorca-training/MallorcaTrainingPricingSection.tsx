@@ -67,8 +67,13 @@ const MallorcaTrainingPricingSection = () => {
             </AccordionTrigger>
             <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
               <div>
-                <b>Delt dobbeltværelse</b> er 9.700 DKK per person, og du deler værelset med en anden deltager fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                Prisen afhænger af, om du deler værelse, og hvilken værelsestype du vælger.<br /><br />
+                <b>Delt værelse</b> er 9.700 DKK per person, og du deler værelset med en anden deltager fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
                 <b>Single værelse</b> er 11.800 DKK per person — du får dit eget værelse.<br /><br />
+                <b>Værelsestype (tillæg pr. person):</b><br />
+                Deluxe Dobbeltværelse: inkluderet<br />
+                Superior Dobbeltværelse: +350 DKK<br />
+                Juniorsuite: +650 DKK (kun dobbeltseng)<br /><br />
                 Moms er inkluderet i alle priser.
               </div>
             </AccordionContent>
@@ -79,8 +84,12 @@ const MallorcaTrainingPricingSection = () => {
         destinationName={DESTINATION_NAME}
         availableDistances={["Træningslejr"]}
         accommodationOptions={[
-          { value: "shared", label: "Delt dobbeltværelse — 9.700 DKK" },
-          { value: "single", label: "Single værelse — 11.800 DKK" },
+          { value: "shared-deluxe", label: "Delt · Deluxe Dobbeltværelse — 9.700 DKK" },
+          { value: "shared-superior", label: "Delt · Superior Dobbeltværelse — 10.050 DKK" },
+          { value: "shared-junior-suite", label: "Delt · Juniorsuite (dobbeltseng) — 10.350 DKK" },
+          { value: "single-deluxe", label: "Single · Deluxe Dobbeltværelse — 11.800 DKK" },
+          { value: "single-superior", label: "Single · Superior Dobbeltværelse — 12.150 DKK" },
+          { value: "single-junior-suite", label: "Single · Juniorsuite — 12.450 DKK" },
         ]}
         depositPercentage={50}
         onSubmitOverride={handleStripeCheckout}
