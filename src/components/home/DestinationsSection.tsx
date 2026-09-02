@@ -98,6 +98,13 @@ const destinations = [
     href: "/destinations/la-boucle-de-l-etoile"
   },
   {
+    image: "/lovable-uploads/mallorca-training-hero.jpg",
+    location: "Mallorca Træningslejr, Spanien",
+    date: "Februar 2027",
+    spots: "Åben for tilmelding",
+    href: "/destinations/mallorca-training"
+  },
+  {
     image: "/lovable-uploads/transylvania27-hero.jpg",
     location: "Transylvania 100, Rumænien",
     date: "Maj 2027",
