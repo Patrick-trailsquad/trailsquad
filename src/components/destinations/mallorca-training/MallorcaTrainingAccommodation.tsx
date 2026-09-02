@@ -25,7 +25,7 @@ const roomTypes = [
   {
     name: "Superior Dobbeltværelse",
     priceLabel: "+350 DKK pr. person",
-    size: "Ca. 28 m²",
+    size: "Ca. 26 m²",
     beds: "2 enkeltsenge eller dobbeltseng",
     description:
       "Mere plads, bedre udsigt og ekstra komfort — godt hvis I er to der deler værelse.",
@@ -34,7 +34,7 @@ const roomTypes = [
   {
     name: "Juniorsuite",
     priceLabel: "+650 DKK pr. person",
-    size: "Ca. 35 m² med separat siddeområde",
+    size: "Ca. 33 m² med separat siddeområde",
     beds: "Kun dobbeltseng",
     description:
       "Hotellets største værelser med siddeområde og ekstra luft omkring dig. Bemærk: kun dobbeltseng.",
