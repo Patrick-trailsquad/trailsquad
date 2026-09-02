@@ -74,13 +74,20 @@ export const useYouTubePlayer = (
     loadAPI();
 
     return () => {
-      if (ytPlayerRef.current && ytPlayerRef.current.destroy) {
-        try {
-          ytPlayerRef.current.destroy();
-        } catch (e) {
-          console.error('Error destroying YouTube player:', e);
-        }
+      cancelled = true;
+      if (window.YTReadyCallbacks) {
+        window.YTReadyCallbacks = window.YTReadyCallbacks.filter(cb => cb !== initPlayer);
       }
+      const player = ytPlayerRef.current;
+      ytPlayerRef.current = null;
+      // Defer destroy so React finishes its own DOM removal first
+      setTimeout(() => {
+        try {
+          player?.destroy?.();
+        } catch (e) {
+          // Node already removed by React – safe to ignore
+        }
+      }, 0);
     };
   }, [videoId]);
 
