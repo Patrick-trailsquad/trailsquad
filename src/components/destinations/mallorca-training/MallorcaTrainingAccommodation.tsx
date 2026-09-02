@@ -96,11 +96,22 @@ const MallorcaTrainingAccommodation = () => {
             >
               <div className="flex items-center justify-between gap-2 mb-1">
                 <h4 className="font-cabinet text-xl font-bold text-charcoal">{room.name}</h4>
-                {room.highlight && (
-                  <span className="text-xs font-medium bg-terra/10 text-terra rounded-full px-3 py-1">
-                    Basispris
+                <div className="flex items-center gap-2 shrink-0">
+                  {room.highlight && (
+                    <span className="text-xs font-medium bg-terra/10 text-terra rounded-full px-3 py-1">
+                      Basispris
+                    </span>
+                  )}
+                  <span
+                    className={`text-xs font-medium rounded-full px-3 py-1 ${
+                      room.available > 0
+                        ? "bg-green-100 text-green-800"
+                        : "bg-red-100 text-red-800"
+                    }`}
+                  >
+                    {room.available > 0 ? `${room.available} ledige` : "Udsolgt"}
                   </span>
-                )}
+                </div>
               </div>
               <p className="text-terra font-cabinet font-bold mb-4">{room.priceLabel}</p>
 
