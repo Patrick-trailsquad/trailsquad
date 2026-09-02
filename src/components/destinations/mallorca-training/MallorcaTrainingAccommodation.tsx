@@ -1,6 +1,7 @@
 import { Star, MapPin, Waves, BedDouble, Maximize2 } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { assetUrl } from "@/lib/assetUrl";
+import { roomTypes } from "./mallorcaRoomData";
 import img1 from "@/assets/mallorca-hotel-1.webp.asset.json";
 import img2 from "@/assets/mallorca-hotel-2-opt.webp.asset.json";
 import img3 from "@/assets/mallorca-hotel-3.webp.asset.json";
@@ -11,36 +12,6 @@ import img7 from "@/assets/mallorca-hotel-7.webp.asset.json";
 import img8 from "@/assets/mallorca-hotel-8.webp.asset.json";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8].map(assetUrl);
-
-const roomTypes = [
-  {
-    name: "Deluxe Dobbeltværelse",
-    priceLabel: "Inkluderet i prisen",
-    size: "Ca. 22 m²",
-    beds: "2 enkeltsenge eller dobbeltseng",
-    description:
-      "Vores standardværelse — lyst og komfortabelt med alt hvad du skal bruge efter en dag i bjergene.",
-    highlight: true,
-  },
-  {
-    name: "Superior Dobbeltværelse",
-    priceLabel: "+350 DKK pr. person",
-    size: "Ca. 26 m²",
-    beds: "2 enkeltsenge eller dobbeltseng",
-    description:
-      "Mere plads, bedre udsigt og ekstra komfort — godt hvis I er to der deler værelse.",
-    highlight: false,
-  },
-  {
-    name: "Juniorsuite",
-    priceLabel: "+650 DKK pr. person",
-    size: "Ca. 33 m² med separat siddeområde",
-    beds: "Kun dobbeltseng",
-    description:
-      "Hotellets største værelser med siddeområde og ekstra luft omkring dig. Bemærk: kun dobbeltseng.",
-    highlight: false,
-  },
-];
 
 const MallorcaTrainingAccommodation = () => {
   return (
