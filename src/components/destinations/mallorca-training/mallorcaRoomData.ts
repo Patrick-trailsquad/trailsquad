@@ -24,7 +24,7 @@ export const roomTypes: MallorcaRoomType[] = [
   {
     key: "superior",
     name: "Superior Dobbeltværelse",
-    priceLabel: "+350 DKK pr. person",
+    priceLabel: "+350 DKK pr. værelse (175 DKK pr. person ved delt)",
     size: "Ca. 26 m²",
     beds: "2 enkeltsenge eller dobbeltseng",
     description:
@@ -35,7 +35,7 @@ export const roomTypes: MallorcaRoomType[] = [
   {
     key: "junior-suite",
     name: "Juniorsuite",
-    priceLabel: "+650 DKK pr. person",
+    priceLabel: "+650 DKK pr. værelse (325 DKK pr. person ved delt)",
     size: "Ca. 33 m² med separat siddeområde",
     beds: "Kun dobbeltseng",
     description:

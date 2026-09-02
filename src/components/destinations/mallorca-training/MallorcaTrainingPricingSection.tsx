@@ -71,10 +71,11 @@ const MallorcaTrainingPricingSection = () => {
                 Prisen afhænger af, om du deler værelse, og hvilken værelsestype du vælger.<br /><br />
                 <b>Delt værelse</b> er 9.700 DKK per person, og du deler værelset med en anden deltager fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
                 <b>Single værelse</b> er 11.800 DKK per person — du får dit eget værelse.<br /><br />
-                <b>Værelsestype (tillæg pr. person):</b><br />
+                <b>Værelsestype (tillæg pr. værelse):</b><br />
                 Deluxe Dobbeltværelse: inkluderet — {ROOM_AVAILABILITY["deluxe"]} ledige<br />
                 Superior Dobbeltværelse: +350 DKK — {ROOM_AVAILABILITY["superior"]} ledige<br />
                 Juniorsuite: +650 DKK (kun dobbeltseng) — {ROOM_AVAILABILITY["junior-suite"]} ledige<br /><br />
+                Ved delt værelse deles tillægget mellem de to gæster (dvs. +175 DKK hhv. +325 DKK pr. person).<br /><br />
                 Moms er inkluderet i alle priser.
               </div>
             </AccordionContent>
@@ -86,8 +87,8 @@ const MallorcaTrainingPricingSection = () => {
         availableDistances={["Træningslejr"]}
         accommodationOptions={[
           { value: "shared-deluxe", label: `Delt · Deluxe Dobbeltværelse — 9.700 DKK (${ROOM_AVAILABILITY["deluxe"]} ledige)` },
-          { value: "shared-superior", label: `Delt · Superior Dobbeltværelse — 10.050 DKK (${ROOM_AVAILABILITY["superior"]} ledige)` },
-          { value: "shared-junior-suite", label: `Delt · Juniorsuite (dobbeltseng) — 10.350 DKK (${ROOM_AVAILABILITY["junior-suite"]} ledige)` },
+          { value: "shared-superior", label: `Delt · Superior Dobbeltværelse — 9.875 DKK (${ROOM_AVAILABILITY["superior"]} ledige)` },
+          { value: "shared-junior-suite", label: `Delt · Juniorsuite (dobbeltseng) — 10.025 DKK (${ROOM_AVAILABILITY["junior-suite"]} ledige)` },
           { value: "single-deluxe", label: `Single · Deluxe Dobbeltværelse — 11.800 DKK (${ROOM_AVAILABILITY["deluxe"]} ledige)` },
           { value: "single-superior", label: `Single · Superior Dobbeltværelse — 12.150 DKK (${ROOM_AVAILABILITY["superior"]} ledige)` },
           { value: "single-junior-suite", label: `Single · Juniorsuite — 12.450 DKK (${ROOM_AVAILABILITY["junior-suite"]} ledige)` },
