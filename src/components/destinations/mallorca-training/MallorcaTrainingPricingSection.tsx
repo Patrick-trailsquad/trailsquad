@@ -72,9 +72,9 @@ const MallorcaTrainingPricingSection = () => {
                 <b>Delt værelse</b> er 9.700 DKK per person, og du deler værelset med en anden deltager fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
                 <b>Single værelse</b> er 11.800 DKK per person — du får dit eget værelse.<br /><br />
                 <b>Værelsestype (tillæg pr. person):</b><br />
-                Deluxe Dobbeltværelse: inkluderet<br />
-                Superior Dobbeltværelse: +350 DKK<br />
-                Juniorsuite: +650 DKK (kun dobbeltseng)<br /><br />
+                Deluxe Dobbeltværelse: inkluderet — {ROOM_AVAILABILITY["deluxe"]} ledige<br />
+                Superior Dobbeltværelse: +350 DKK — {ROOM_AVAILABILITY["superior"]} ledige<br />
+                Juniorsuite: +650 DKK (kun dobbeltseng) — {ROOM_AVAILABILITY["junior-suite"]} ledige<br /><br />
                 Moms er inkluderet i alle priser.
               </div>
             </AccordionContent>
