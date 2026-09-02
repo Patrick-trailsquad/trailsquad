@@ -78,6 +78,51 @@ const MallorcaTrainingAccommodation = () => {
           </p>
         </div>
       </div>
+
+      <div className="mt-14">
+        <h3 className="font-cabinet text-2xl md:text-3xl font-bold text-center mb-2">Vælg din værelsestype</h3>
+        <p className="text-center text-charcoal/70 mb-8">
+          Priserne på siden er for Deluxe Dobbeltværelse. Opgradering koster et fast tillæg pr. person.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {roomTypes.map((room) => (
+            <div
+              key={room.name}
+              className={`rounded-xl border p-6 bg-white flex flex-col ${
+                room.highlight ? "border-terra shadow-md" : "border-charcoal/10"
+              }`}
+            >
+              <div className="flex items-center justify-between gap-2 mb-1">
+                <h4 className="font-cabinet text-xl font-bold text-charcoal">{room.name}</h4>
+                {room.highlight && (
+                  <span className="text-xs font-medium bg-terra/10 text-terra rounded-full px-3 py-1">
+                    Basispris
+                  </span>
+                )}
+              </div>
+              <p className="text-terra font-cabinet font-bold mb-4">{room.priceLabel}</p>
+
+              <div className="space-y-2 text-sm text-charcoal/80">
+                <div className="flex items-center gap-2">
+                  <Maximize2 className="w-4 h-4 shrink-0 text-charcoal/50" />
+                  <span>{room.size}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <BedDouble className="w-4 h-4 shrink-0 text-charcoal/50" />
+                  <span>{room.beds}</span>
+                </div>
+              </div>
+
+              <p className="text-sm text-charcoal/70 mt-4">{room.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-xs text-charcoal/50 text-center mt-6">
+          Deler du værelse med en anden deltager, får I to enkeltsenge i Deluxe og Superior. Juniorsuiten har kun dobbeltseng.
+        </p>
+      </div>
     </div>
   );
 };
