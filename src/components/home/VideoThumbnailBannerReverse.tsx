@@ -21,6 +21,12 @@ const videos = [
     title: "Swiss Alps 100 (2026)",
     thumbnail: "https://img.youtube.com/vi/yWhU1lEaWc0/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/yWhU1lEaWc0?autoplay=1"
+  },
+  {
+    id: 4,
+    title: "KangNu26 (2026)",
+    thumbnail: "https://img.youtube.com/vi/t4QHSDlkUqM/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/t4QHSDlkUqM?autoplay=1"
   }
 ];
 
