@@ -287,6 +287,8 @@ const KangNu26V2 = () => {
         </div>
       )}
 
+      <KangNu26TripVideoCTA />
+
       <KangNu26Testimonials />
 
       {/* ─── SOCIAL PROOF ─── */}
