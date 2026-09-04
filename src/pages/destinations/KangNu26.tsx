@@ -105,6 +105,8 @@ const KangNu26 = () => {
         </div>
       </div>
 
+      <KangNu26TripVideoCTA />
+
       {showPaymentBanner && (
         <div className="bg-green-600 text-white py-4 px-6">
           <div className="container mx-auto flex items-center justify-between gap-4">
