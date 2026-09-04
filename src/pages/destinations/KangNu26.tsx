@@ -9,6 +9,7 @@ import Footer from "../../components/Footer";
 import KangNu26InfoBanner from "../../components/destinations/kangnu26/KangNu26InfoBanner";
 import KangNu26Description from "../../components/destinations/kangnu26/KangNu26Description";
 import KangNu26MediaSection from "../../components/destinations/kangnu26/KangNu26MediaSection";
+import KangNu26TripVideoCTA from "../../components/destinations/kangnu26/KangNu26TripVideoCTA";
 import KangNu26PricingSection from "../../components/destinations/kangnu26/KangNu26PricingSection";
 import KangNu26IncludedAmenities from "../../components/destinations/kangnu26/KangNu26IncludedAmenities";
 import KangNu26Accommodation from "../../components/destinations/kangnu26/KangNu26Accommodation";
@@ -103,6 +104,8 @@ const KangNu26 = () => {
           </h1>
         </div>
       </div>
+
+      <KangNu26TripVideoCTA />
 
       {showPaymentBanner && (
         <div className="bg-green-600 text-white py-4 px-6">
