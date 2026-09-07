@@ -305,7 +305,7 @@ const InfiniteTrailsTestimonials = () => {
         isOpen={isModalOpen}
         onClose={handleModalClose}
         destination="Infinite Trails"
-        distances={["30km", "45km", "60km"]}
+        distances={["15km", "30km", "45km", "60km"]}
       />
     </section>
   );
