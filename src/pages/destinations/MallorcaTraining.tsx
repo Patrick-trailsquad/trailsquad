@@ -171,7 +171,7 @@ const MallorcaTraining = () => {
               "Du vil have tips til teknik, bakker og styrke",
               "Du foretrækker fællesskab frem for at træne alene",
               "Du drømmer om en aktiv ferie med sol og bjerge",
-              "Du vil have en uforpligtende smagsprøve på Trail Squad",
+               "Du vil gerne tage en pause fra det danske vintervejr 🌨️",
             ].map((item, i) => (
               <motion.div
                 key={i}
