@@ -10,8 +10,8 @@ import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModa
 import TrainingVideoSection from "@/components/training/TrainingVideoSection";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
-import copenhillImage from "@/assets/copenhill-training.avif";
 import squadTraining12Image from "@/assets/squad-training-12.png";
+import squadTraining11ImageAsset from "@/assets/squad-training-11.png.asset.json";
 import squadTraining13ImageAsset from "@/assets/squad-training-13.png.asset.json";
 import squadTraining14ImageAsset from "@/assets/squad-training-14.png.asset.json";
 
