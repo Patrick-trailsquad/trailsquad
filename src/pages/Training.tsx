@@ -12,8 +12,8 @@ import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import copenhillImage from "@/assets/copenhill-training.avif";
 import squadTraining12Image from "@/assets/squad-training-12.png";
-import squadTraining14Image from "@/assets/squad-training-14.png";
 import squadTraining13ImageAsset from "@/assets/squad-training-13.png.asset.json";
+import squadTraining14ImageAsset from "@/assets/squad-training-14.png.asset.json";
 
 const trainingSessions = [
   {
@@ -62,7 +62,7 @@ const trainingSessions = [
     location: "Hareskoven",
     meetingPlace: "Hareskov Station",
     description: "Vi skal ud i Hareskovens mountainbikespor og løbe kuperet - i mørket! Yay! 🎉\n\nDer er point, hvis man har nissehuen på - det er jo blevet december 🎅",
-    image: squadTraining14Image,
+    image: squadTraining14ImageAsset.url,
   },
 ];
 
