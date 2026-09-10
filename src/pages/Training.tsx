@@ -10,14 +10,62 @@ import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModa
 import TrainingVideoSection from "@/components/training/TrainingVideoSection";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
-import trainingSession3Image from "@/assets/training-session-3.jpg";
 import copenhillImage from "@/assets/copenhill-training.avif";
-import trainingSession4Image from "@/assets/training-session-4.jpg";
-import dyrehaven7Image from "@/assets/dyrehaven-training-7.png";
-import trainingSession5Image from "@/assets/training-session-5.jpg";
-import tourDeFuresoenImage from "@/assets/tour-de-furesoen.jpg";
+import squadTraining12Image from "@/assets/squad-training-12.png";
 import squadTraining13Image from "@/assets/squad-training-13.png";
 import squadTraining14Image from "@/assets/squad-training-14.png";
+
+const trainingSessions = [
+  {
+    title: "Træningssession #11",
+    month: "september",
+    date: "29 september 2026",
+    dateTime: "2026-09-29",
+    meetingTime: "18:00",
+    endTime: "19:00",
+    location: "Copenhill",
+    meetingPlace: "Vindmøllevej 6, 2300 København S",
+    description: "Vi mødes på Copenhill og træner stigninger på byens sjoveste bakke.",
+    image: copenhillImage,
+  },
+  {
+    title: "Træningssession #12",
+    month: "oktober",
+    date: "20 oktober 2026",
+    dateTime: "2026-10-20",
+    meetingTime: "18:00",
+    endTime: "19:00",
+    location: "Frederiksberg Have",
+    meetingPlace: "Frederiksberg Runddel",
+    description: "Bakkeintervaller",
+    image: squadTraining12Image,
+  },
+  {
+    title: "Træningssession #13",
+    month: "november",
+    date: "3 november 2026",
+    dateTime: "2026-11-03",
+    meetingTime: "18:00",
+    endTime: "19:00",
+    location: "Dyrehaven",
+    meetingPlace: "Peter Liebs Vej 5",
+    description: "Pandelampetræning",
+    image: squadTraining13Image,
+  },
+  {
+    title: "Træningssession #14",
+    month: "december",
+    date: "8 december 2026",
+    dateTime: "2026-12-08",
+    meetingTime: "18:00",
+    endTime: "19:00",
+    location: "Hareskoven",
+    meetingPlace: "Hareskov Station",
+    description: "Pandelampetræning og mountainbikespor",
+    image: squadTraining14Image,
+  },
+];
+
 const Training = () => {
   usePageTitle('Training');
   useScrollToTop();
@@ -159,139 +207,42 @@ Så vil vores trail træningssessions være noget for dig!</p>
               
             </div>
 
-            {/* Training Sessions - dynamic width: 1-3 or 5+ => 3 cols, 4 => 4 cols */}
-            {(() => {
-              // Automatisk inaktivering: en session bliver "Overstået" når sluttidspunktet er passeret
-              const isPast = (endIso: string) => new Date(endIso).getTime() < Date.now();
-              const s8Past = isPast("2026-06-02T19:30:00+02:00");
-              const s9Past = isPast("2026-07-07T19:30:00+02:00");
-              const s10Past = isPast("2026-08-18T19:30:00+02:00");
-              const cardClass = (past: boolean) =>
-                past
-                  ? "bg-stone rounded-lg overflow-hidden shadow-lg opacity-50 grayscale pointer-events-none flex flex-col"
-                  : "bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col";
-              const btnClass = (past: boolean) =>
-                past
-                  ? "w-full bg-gray-300 text-gray-600 px-8 py-4 rounded-full font-cabinet font-medium border-2 border-gray-400 cursor-not-allowed"
-                  : "w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black";
-              const sessionCount: number = 3;
-              const xlColsClass = sessionCount === 4 ? 'xl:grid-cols-4' : 'xl:grid-cols-3';
-              return (
-            <div className={`grid grid-cols-1 md:grid-cols-2 ${xlColsClass} gap-4 md:gap-8 mt-12 px-2 md:px-0`}>
-              {/* Session 8 */}
-              <div className={cardClass(s8Past)}>
-                <div className="relative h-80 bg-charcoal/20">
-                  <img src={copenhillImage} alt="Training Session 8 - Copenhill" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  {s8Past && <span className="absolute top-3 right-3 z-10 bg-black text-white text-xs font-cabinet font-bold uppercase px-3 py-1 rounded-full">Overstået</span>}
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #8<br />[juni]</h3>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="space-y-2 text-gray-600 text-sm mb-6">
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-06-02">2 juni 2026</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-06-02T18:00:00+02:00">kl 18.00</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-06-02T19:30:00+02:00">19.30</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Copenhill, København
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> August Bournonvilles Passage 8, 1055 København K
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
+              {trainingSessions.map((session) => (
+                <div
+                  key={session.title}
+                  onClick={() => handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace)}
+                  className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col"
+                >
+                  <div className="relative h-80 bg-charcoal/20">
+                    <img src={session.image} alt={`${session.title} – ${session.location}`} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                    <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">
+                      {session.title}<br />[{session.month}]
+                    </h3>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">Vi starter på Kongens Nytorv (foran Det Kongelige teater), så transport med metro er en leg. Dernæst lunter vi et par km ud til Copenhill, og Coach Emil vil gøre intens bakketræning til dagens sjoveste tjans!
-
-Ps. man kan også møde os ude ved Copenhill, vi er der ca 18.20 🤞 
-                </p>
-                  <button
-                    disabled={s8Past}
-                    onClick={(e) => {e.stopPropagation(); if (!s8Past) handleSessionRegistration("Træningssession #8", "2 juni 2026", "18:00", "19:30", "Copenhill, København", "August Bournonvilles Passage 8, 1055 København K");}}
-                    className={btnClass(s8Past)}
-                  >
-                    {s8Past ? "Overstået" : "Tilmeld"}
-                  </button>
-                </div>
-              </div>
-
-              {/* Session 9 - Træningssession #9 (fælles med Trail Fox) */}
-              <div onClick={() => { if (!s9Past) handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel"); }} className={cardClass(s9Past)}>
-                <div className="relative h-80 bg-charcoal/20">
-                  <img src={squadTraining13Image} alt="Træningssession #9 - Dyrehaven" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  {s9Past && <span className="absolute top-3 right-3 z-10 bg-black text-white text-xs font-cabinet font-bold uppercase px-3 py-1 rounded-full">Overstået</span>}
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #9<br />[juli]</h3>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="space-y-2 text-gray-600 text-sm mb-6">
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-07-07">7 juli 2026</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-07-07T18:00:00+02:00">kl 18.00</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-07-07T19:30:00+02:00">19.30</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Dyrehaven
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> Skodsborg Kurhotel
-                    </p>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="space-y-2 text-gray-600 text-sm mb-6">
+                      <p className="flex items-center gap-2"><span className="font-semibold">Dato:</span> <time dateTime={session.dateTime}>{session.date}</time></p>
+                      <p className="flex items-center gap-2"><span className="font-semibold">Mødetid:</span> <time>kl {session.meetingTime.replace(":", ".")}</time></p>
+                      <p className="flex items-center gap-2"><span className="font-semibold">Vi slutter (ca):</span> <time>{session.endTime.replace(":", ".")}</time></p>
+                      <p className="flex items-center gap-2"><span className="font-semibold">Sted:</span> {session.location}</p>
+                      <p className="flex items-center gap-2"><span className="font-semibold">Mødested:</span> {session.meetingPlace}</p>
+                    </div>
+                    <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">{session.description}</p>
+                    <button
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace);
+                      }}
+                      className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
+                    >
+                      Tilmeld
+                    </button>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow whitespace-pre-line">Fællestræning mellem Trail Fox og Trail Squad 🦊
-
-Vi starter og slutter på Skodsborg Kurhotel, og vi finder de kringlede og kuperede stier i Dyrehaven. Målet er omkring 10 km i et tempo, hvor alle kan være med.
-Vi får en tår at drikke til sidst på hotellet.
-
-
-Tema: Energi-indtag når man løber trail (med SUPPLME)</p>
-                  <button disabled={s9Past} onClick={(e) => {e.stopPropagation(); if (!s9Past) handleSessionRegistration("Træningssession #9", "7 juli 2026", "18:00", "19:30", "Dyrehaven", "Skodsborg Kurhotel");}} className={btnClass(s9Past)}>
-                    {s9Past ? "Overstået" : "Tilmeld"}
-                  </button>
                 </div>
-              </div>
-
-              {/* Session 14 - Træningssession #10 */}
-              <div onClick={() => { if (!s10Past) handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5"); }} className={cardClass(s10Past)}>
-                <div className="relative h-80 bg-charcoal/20">
-                  <img src={squadTraining14Image} alt="Træningssession #10 - Dyrehaven" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-                  {s10Past && <span className="absolute top-3 right-3 z-10 bg-black text-white text-xs font-cabinet font-bold uppercase px-3 py-1 rounded-full">Overstået</span>}
-                  <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">Træningssession #10<br />[august]</h3>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="space-y-2 text-gray-600 text-sm mb-6">
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Dato:</span> <time dateTime="2026-08-18">18 august 2026</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødetid:</span> <time dateTime="2026-08-18T18:00:00+02:00">kl 18.00</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Vi slutter (ca):</span> <time dateTime="2026-08-18T19:30:00+02:00">19.30</time>
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Sted:</span> Dyrehaven, Klampenborg
-                    </p>
-                    <p className="flex items-center gap-2">
-                      <span className="font-semibold">Mødested:</span> Peter Lieps Vej 5
-                    </p>
-                  </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow whitespace-pre-line">En fællestræning i roligt tempo med plads til gode snakke, fælles forberedelse og spørgsmål til de kommende ture. Mere info følger.</p>
-                  <button disabled={s10Past} onClick={(e) => {e.stopPropagation(); if (!s10Past) handleSessionRegistration("Træningssession #10", "18 august 2026", "18:00", "19:30", "Dyrehaven, Klampenborg", "Peter Lieps Vej 5");}} className={btnClass(s10Past)}>
-                    {s10Past ? "Overstået" : "Tilmeld"}
-                  </button>
-                </div>
-              </div>
+              ))}
             </div>
-              );
-            })()}
 
           </div>
         </div>
