@@ -39,36 +39,6 @@ const HeroSection = () => {
     setTimeout(() => setIsVideoVisible(true), 400);
   };
 
-  // Safari blocks autoplay in more cases than Chrome: keep nudging the visible
-  // player and resume it on the first user gesture or tab focus.
-  useEffect(() => {
-    const resume = () => {
-      const players = [firstPlayerRef.current, secondPlayerRef.current];
-      const player = players[activePlayer];
-      if (!player?.getPlayerState) return;
-      // 1 = playing, 3 = buffering
-      const state = player.getPlayerState();
-      if (state !== 1 && state !== 3) {
-        try {
-          player.mute?.();
-          player.playVideo?.();
-        } catch (e) {}
-      }
-    };
-    const handleVisibility = () => {
-      if (!document.hidden) resume();
-    };
-    const interval = setInterval(resume, 2000);
-    document.addEventListener('visibilitychange', handleVisibility);
-    window.addEventListener('touchstart', resume, { passive: true });
-    window.addEventListener('click', resume);
-    return () => {
-      clearInterval(interval);
-      document.removeEventListener('visibilitychange', handleVisibility);
-      window.removeEventListener('touchstart', resume);
-      window.removeEventListener('click', resume);
-    };
-  }, [activePlayer, firstPlayerRef, secondPlayerRef]);
   const { ytPlayerRef: firstPlayerRef } = useYouTubePlayer(
     HERO_VIDEO_ID,
     playerVars,
