@@ -14,6 +14,7 @@ import squadTraining12Image from "@/assets/squad-training-12.png";
 import squadTraining11ImageAsset from "@/assets/squad-training-11.png.asset.json";
 import squadTraining13ImageAsset from "@/assets/squad-training-13.png.asset.json";
 import squadTraining14ImageAsset from "@/assets/squad-training-14.png.asset.json";
+import { assetUrl } from "@/lib/assetUrl";
 
 const trainingSessions = [
   {
@@ -26,7 +27,7 @@ const trainingSessions = [
     location: "Copenhill",
     meetingPlace: "Vindmøllevej 6, 2300 København S",
     description: "Med 75 højdemeter per runde er CopenHill et af de bedste steder, hvis man gerne vil have højdemeter i benene. Det er svært at simulere bestigning af Mont Blanc, men det er så tæt vi kommer det, i cykelafstand fra byen.\n\nVi sørger for kolde kondivand og varme high-5's. ",
-    image: squadTraining11ImageAsset.url,
+    image: assetUrl(squadTraining11ImageAsset),
   },
   {
     title: "Træningssession #12",
@@ -50,7 +51,7 @@ const trainingSessions = [
     location: "Dyrehaven",
     meetingPlace: "Peter Liebs Vej 5",
     description: "Det bliver tidligere mørkt og det er tid til at støve vores pandelamper af 🔦\nVi kender Dyrehaven, som vores egen bukselomme, så vi lover at finde de de små stier og sørge for, at I er helt forsvundet i mørket. For så at lede ekspeditionen tilbage på sporet igen. \nBliver syper sjovt og hyggeligt. ",
-    image: squadTraining13ImageAsset.url,
+    image: assetUrl(squadTraining13ImageAsset),
   },
   {
     title: "Træningssession #14",
@@ -62,7 +63,7 @@ const trainingSessions = [
     location: "Hareskoven",
     meetingPlace: "Hareskov Station",
     description: "Vi skal ud i Hareskovens mountainbikespor og løbe kuperet - i mørket! Yay! 🎉\n\nDer er point, hvis man har nissehuen på - det er jo blevet december 🎅",
-    image: squadTraining14ImageAsset.url,
+    image: assetUrl(squadTraining14ImageAsset),
   },
 ];
 
