@@ -14,6 +14,7 @@ import copenhillImage from "@/assets/copenhill-training.avif";
 import squadTraining12Image from "@/assets/squad-training-12.png";
 import squadTraining13Image from "@/assets/squad-training-13.png";
 import squadTraining14Image from "@/assets/squad-training-14.png";
+import squadTraining13ImageAsset from "@/assets/squad-training-13.png.asset.json";
 
 const trainingSessions = [
   {
