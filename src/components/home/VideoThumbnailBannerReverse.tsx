@@ -37,6 +37,10 @@ const VideoThumbnailBannerReverse = () => {
   const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
   const [activeVideo, setActiveVideo] = useState<1 | 2>(1);
+  const activeVideoRef = useRef<1 | 2>(1);
+  useEffect(() => {
+    activeVideoRef.current = activeVideo;
+  }, [activeVideo]);
   const [activeSlide, setActiveSlide] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 
