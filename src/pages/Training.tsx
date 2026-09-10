@@ -61,7 +61,7 @@ const trainingSessions = [
     endTime: "19:00",
     location: "Hareskoven",
     meetingPlace: "Hareskov Station",
-    description: "Pandelampetræning og mountainbikespor",
+    description: "Vi skal ud i Hareskovens mountainbikespor og løbe kuperet - i mørket! Yay! 🎉\n\nDer er point, hvis man har nissehuen på - det er jo blevet december 🎅",
     image: squadTraining14Image,
   },
 ];
