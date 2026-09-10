@@ -25,7 +25,7 @@ const trainingSessions = [
     endTime: "19:00",
     location: "Copenhill",
     meetingPlace: "Vindmøllevej 6, 2300 København S",
-    description: "Vi mødes på Copenhill og træner stigninger på byens sjoveste bakke.",
+    description: "Med 75 højdemeter per runder er CopenHill et af de bedste steder, hvis man gerne vil have højdemeter i benene. Det er svært at simulere bestigning af Mont Blanc, men det er så tæt vi kommer det, i cykelafstand fra byen.\nVi sørger for kolde kondivand og varme high-5's. ",
     image: copenhillImage,
   },
   {
