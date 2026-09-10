@@ -82,6 +82,37 @@ const HeroSection = () => {
     }, 100);
     return () => clearInterval(interval);
   }, [activePlayer, firstPlayerRef, secondPlayerRef]);
+
+  // Safari blocks autoplay in more cases than Chrome: keep nudging the visible
+  // player and resume it on the first user gesture or tab focus.
+  useEffect(() => {
+    const resume = () => {
+      const players = [firstPlayerRef.current, secondPlayerRef.current];
+      const player = players[activePlayer];
+      if (!player?.getPlayerState) return;
+      const state = player.getPlayerState(); // 1 = playing, 3 = buffering
+      if (state !== 1 && state !== 3) {
+        try {
+          player.mute?.();
+          player.playVideo?.();
+        } catch (e) {}
+      }
+    };
+    const handleVisibility = () => {
+      if (!document.hidden) resume();
+    };
+    const interval = setInterval(resume, 2000);
+    document.addEventListener('visibilitychange', handleVisibility);
+    window.addEventListener('touchstart', resume, { passive: true });
+    window.addEventListener('click', resume);
+    return () => {
+      clearInterval(interval);
+      document.removeEventListener('visibilitychange', handleVisibility);
+      window.removeEventListener('touchstart', resume);
+      window.removeEventListener('click', resume);
+    };
+  }, [activePlayer, firstPlayerRef, secondPlayerRef]);
+
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = "Snør dine løbesko\nog oplev verden!";
