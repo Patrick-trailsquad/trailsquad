@@ -49,7 +49,7 @@ const trainingSessions = [
     endTime: "19:00",
     location: "Dyrehaven",
     meetingPlace: "Peter Liebs Vej 5",
-    description: "Pandelampetræning",
+    description: "Det bliver tidligere mørkt og det er tid til at støve vores pandelamper af 🔦\nVi kender Dyrehaven, som vores egen bukselomme, så vi lover at finde de de små stier og sørge for, at I er helt forsvundet i mørket. For så at lede ekspeditionen tilbage på sporet igen. \nBliver syper sjovt og hyggeligt. ",
     image: squadTraining13Image,
   },
   {
