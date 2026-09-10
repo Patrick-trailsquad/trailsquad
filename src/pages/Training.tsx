@@ -37,7 +37,7 @@ const trainingSessions = [
     endTime: "19:00",
     location: "Frederiksberg Have",
     meetingPlace: "Frederiksberg Runddel",
-    description: "Bakkeintervaller",
+    description: "Hvis man skal løbe Helsingør Trail i den efterfølgende weekend kan man roligt troppe til denne træning. Det bliver et hyggeligt social run, hvor vi løber et par runder i Frederiksberg Have, samt tager en god håndfuld ture op ad bakkerne ved slottet.\nBliver både sjovt og intenst.",
     image: squadTraining12Image,
   },
   {
