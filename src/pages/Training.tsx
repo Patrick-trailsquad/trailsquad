@@ -12,8 +12,8 @@ import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
 import copenhillImage from "@/assets/copenhill-training.avif";
 import squadTraining12Image from "@/assets/squad-training-12.png";
-import squadTraining13Image from "@/assets/squad-training-13.png";
 import squadTraining14Image from "@/assets/squad-training-14.png";
+import squadTraining13ImageAsset from "@/assets/squad-training-13.png.asset.json";
 
 const trainingSessions = [
   {
@@ -50,7 +50,7 @@ const trainingSessions = [
     location: "Dyrehaven",
     meetingPlace: "Peter Liebs Vej 5",
     description: "Det bliver tidligere mørkt og det er tid til at støve vores pandelamper af 🔦\nVi kender Dyrehaven, som vores egen bukselomme, så vi lover at finde de de små stier og sørge for, at I er helt forsvundet i mørket. For så at lede ekspeditionen tilbage på sporet igen. \nBliver syper sjovt og hyggeligt. ",
-    image: squadTraining13Image,
+    image: squadTraining13ImageAsset.url,
   },
   {
     title: "Træningssession #14",
