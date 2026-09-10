@@ -160,6 +160,7 @@ const VideoThumbnailBannerReverse = () => {
             autoPlay
             muted
             playsInline
+            preload="auto"
             style={{
               transform: `translate(-50%, calc(-50% + ${scrollY * 0.15}px))`,
               transition: 'transform 0.1s ease-out, opacity 0.5s ease-in-out',
