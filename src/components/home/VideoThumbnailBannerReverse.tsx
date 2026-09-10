@@ -67,24 +67,63 @@ const VideoThumbnailBannerReverse = () => {
     const video2 = video2Ref.current;
     if (!video1 || !video2) return;
 
+    // Safari requires these to be set on the element itself before play()
+    [video1, video2].forEach((v) => {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.playsInline = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+    });
+
+    const safePlay = (v: HTMLVideoElement) => {
+      const p = v.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => {
+          // Safari may reject autoplay; retry once the media is ready
+          v.addEventListener('canplay', () => v.play().catch(() => {}), { once: true });
+        });
+      }
+    };
+
     const handleVideo1End = () => {
       setActiveVideo(2);
       video2.currentTime = 0;
-      video2.play();
+      safePlay(video2);
     };
 
     const handleVideo2End = () => {
       setActiveVideo(1);
       video1.currentTime = 0;
-      video1.play();
+      safePlay(video1);
     };
 
     video1.addEventListener('ended', handleVideo1End);
     video2.addEventListener('ended', handleVideo2End);
-    
+
+    // Kick off playback (Safari ignores the autoPlay attribute in several cases)
+    safePlay(video1);
+    video2.load();
+
+    const resume = () => {
+      const active = activeVideoRef.current === 1 ? video1 : video2;
+      if (active.paused) safePlay(active);
+    };
+    const handleVisibility = () => {
+      if (!document.hidden) resume();
+    };
+
+    document.addEventListener('visibilitychange', handleVisibility);
+    window.addEventListener('touchstart', resume, { passive: true });
+    window.addEventListener('click', resume);
+
     return () => {
       video1.removeEventListener('ended', handleVideo1End);
       video2.removeEventListener('ended', handleVideo2End);
+      document.removeEventListener('visibilitychange', handleVisibility);
+      window.removeEventListener('touchstart', resume);
+      window.removeEventListener('click', resume);
     };
   }, []);
 
