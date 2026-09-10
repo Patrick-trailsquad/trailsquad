@@ -10,8 +10,8 @@ import { TrainingRegistrationModal } from "@/components/TrainingRegistrationModa
 import TrainingVideoSection from "@/components/training/TrainingVideoSection";
 import trailFoxLogo from "@/assets/trail-fox-logo-white.svg";
 import trailSquadLogo from "@/assets/trail-squad-logo-yellow.png";
-import copenhillImage from "@/assets/copenhill-training.avif";
 import squadTraining12Image from "@/assets/squad-training-12.png";
+import squadTraining11ImageAsset from "@/assets/squad-training-11.png.asset.json";
 import squadTraining13ImageAsset from "@/assets/squad-training-13.png.asset.json";
 import squadTraining14ImageAsset from "@/assets/squad-training-14.png.asset.json";
 
@@ -26,7 +26,7 @@ const trainingSessions = [
     location: "Copenhill",
     meetingPlace: "Vindmøllevej 6, 2300 København S",
     description: "Med 75 højdemeter per runde er CopenHill et af de bedste steder, hvis man gerne vil have højdemeter i benene. Det er svært at simulere bestigning af Mont Blanc, men det er så tæt vi kommer det, i cykelafstand fra byen.\n\nVi sørger for kolde kondivand og varme high-5's. ",
-    image: copenhillImage,
+    image: squadTraining11ImageAsset.url,
   },
   {
     title: "Træningssession #12",
