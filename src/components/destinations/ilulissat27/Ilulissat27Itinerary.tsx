@@ -6,7 +6,7 @@ const days = [
     date: "onsdag 25. august 2027",
     title: "✈️ Ankomst til Ilulissat",
     items: [
-      { icon: Plane, text: "Fly til Ilulissat via Kangerlussuaq eller Nuuk" },
+      { icon: Plane, text: "Direkte fly tur/retur fra København til Ilulissat" },
       { icon: Coffee, text: "Check-in på Hotel Arctic eller Hotel Den Hvide Falk" },
       { icon: Footprints, text: "Første løbetur langs isfjorden" },
       { icon: UtensilsCrossed, text: "Fælles velkomstmiddag med squaden" },
