@@ -32,12 +32,8 @@ const ParallaxBackground = ({ image, overlayClassName = "bg-black/55" }: Paralla
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
-          className="absolute left-0 w-full"
-          // taller than the section so the translate never exposes an edge
-          initial={false}
-        >
-          <div className="w-full h-full" />
-        </motion.div>
+          className="absolute -top-[15%] left-0 w-full h-[130%]"
+        />
       ) : (
         <div
           className="absolute inset-0 w-full h-full"
