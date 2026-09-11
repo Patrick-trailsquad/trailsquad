@@ -12,6 +12,7 @@ import heroImage from "../../assets/ilulissat27-hero.jpg";
 import kayakAsset from "../../assets/ilulissat-kayak.jpg.asset.json";
 import fishingAsset from "../../assets/ilulissat-fishing.jpg.asset.json";
 import day2TourAsset from "../../assets/ilulissat-day2-tour.jpg.asset.json";
+import experienceAsset from "../../assets/ilulissat-experience.jpg.asset.json";
 import { assetUrl } from "../../lib/assetUrl";
 
 const fadeUp = {
@@ -422,8 +423,8 @@ const Ilulissat27 = () => {
       {/* ─── THE EXPERIENCE ─── */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <img
-          src={heroImage}
-          alt="Isbjerge i Ilulissat Isfjord"
+          src={assetUrl(experienceAsset)}
+          alt="Trail Squad løbere nyder udsigten over Ilulissat Isfjord"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
           width={1600}
