@@ -443,31 +443,6 @@ const Ilulissat27 = () => {
           </div>
         </div>
       </section>
-
-      {/* ─── THE EXPERIENCE ─── */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <img
-          src={assetUrl(experienceAsset)}
-          alt="Trail Squad løbere nyder udsigten over Ilulissat Isfjord"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
-          width={1600}
-          height={1067}
-        />
-        <div className="absolute inset-0 bg-black/60" />
-
-        <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
-            Løb langs verdens mest imponerende isfjord
-          </h2>
-          <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
-            Ilulissat Isfjord står på UNESCO's verdensarvsliste, og stierne fører dig hen over klipper,
-            tundra og trædæk med udsigt til isbjerge på størrelse med højhuse. Sidst i august er lyset
-            gyldent til langt ud på natten — og temperaturen perfekt til at løbe i.
-          </p>
-        </div>
-      </section>
-
       {/* ─── FAQ ─── */}
       <section className="py-16 md:py-24 bg-stone">
         <div className="container mx-auto px-6 max-w-3xl">
