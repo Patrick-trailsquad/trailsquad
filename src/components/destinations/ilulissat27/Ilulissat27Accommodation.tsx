@@ -4,7 +4,12 @@ import { assetUrl } from "../../../lib/assetUrl";
 import arctic1 from "../../../assets/arctic1.jpg.asset.json";
 import arctic2 from "../../../assets/arctic2.png.asset.json";
 import falk1 from "../../../assets/falk1.jpg.asset.json";
+import falk1_2 from "../../../assets/falk1-2.jpg.asset.json";
 import falk2 from "../../../assets/falk2.jpg.asset.json";
+import falk2_2 from "../../../assets/falk2-2.jpg.asset.json";
+import icefiord1 from "../../../assets/icefiord1.jpg.asset.json";
+import icefiord2 from "../../../assets/icefiord2.jpg.asset.json";
+import icefiord3 from "../../../assets/icefiord3.jpg.asset.json";
 import ilimanaq1 from "../../../assets/ilimanaq-1.jpg.asset.json";
 import ilimanaq2 from "../../../assets/ilimanaq-2.jpg.asset.json";
 import ilimanaq3 from "../../../assets/ilimanaq-3.jpg.asset.json";
@@ -37,7 +42,7 @@ const nights = [
     night: "Nat 3 · 27. august",
     place: "Hotel Icefiord eller Hotel Den Hvide Falk",
     location: "Ilulissat",
-    images: [heroImage, heroImage, heroImage],
+    images: [assetUrl(icefiord1), assetUrl(icefiord2), assetUrl(icefiord3), assetUrl(falk1_2), assetUrl(falk2_2)],
     text:
       "Tilbage i Ilulissat efter dagens løb. Hotel Icefiord ligger direkte ned til vandet med terrasse mod isfjorden, og Hotel Den Hvide Falk ligger få minutter derfra. Perfekt base inden vi tager kajakkerne ud i midnatslyset.",
   },
