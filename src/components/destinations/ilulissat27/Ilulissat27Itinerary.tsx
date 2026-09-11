@@ -1,4 +1,4 @@
-import { Plane, Coffee, UtensilsCrossed, Footprints, Mountain, Fish, Ship, Waves, Moon, Sun } from "lucide-react";
+import { Plane, Coffee, UtensilsCrossed, Footprints, Mountain, Fish, Ship, Waves, Moon, Sun, MapPin } from "lucide-react";
 
 const days = [
   {
@@ -17,8 +17,9 @@ const days = [
     date: "torsdag 26. august 2027",
     title: "🎣 Løb & fisketur til Ilimanaq",
     items: [
-      { icon: Footprints, text: "Morgenløb på Sermermiut-stien mellem isbjergene" },
       { icon: Ship, text: "Sejltur gennem isfjorden til Ilimanaq" },
+      { icon: Footprints, text: "Løbetur i Ilimanaq" },
+      { icon: MapPin, text: "Rundtur i bygden" },
       { icon: Fish, text: "Fisketur i fjorden — fangsten bliver til aftensmad" },
       { icon: Coffee, text: "Overnatning i hytterne på Ilimanaq Lodge" },
     ],
