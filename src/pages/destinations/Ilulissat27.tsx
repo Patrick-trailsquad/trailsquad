@@ -227,7 +227,7 @@ const Ilulissat27 = () => {
                 icon: Ship,
                 title: "Oplevelser undervejs",
                 items: [
-                  "Fisketur i fjorden på dag 2",
+                  "Fisketur i isfjorden",
                   "Midnatskajak mellem isbjergene",
                   "Bådtur til bygden Ilimanaq",
                   "Grønlandsk mad og lokale råvarer",
