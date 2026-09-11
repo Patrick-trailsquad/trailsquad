@@ -1,6 +1,10 @@
 import { BedDouble, MapPin } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../ui/carousel";
 import { assetUrl } from "../../../lib/assetUrl";
+import arctic1 from "../../../assets/arctic1.jpg.asset.json";
+import arctic2 from "../../../assets/arctic2.png.asset.json";
+import falk1 from "../../../assets/falk1.jpg.asset.json";
+import falk2 from "../../../assets/falk2.jpg.asset.json";
 import ilimanaq1 from "../../../assets/ilimanaq-1.jpg.asset.json";
 import ilimanaq2 from "../../../assets/ilimanaq-2.jpg.asset.json";
 import ilimanaq3 from "../../../assets/ilimanaq-3.jpg.asset.json";
