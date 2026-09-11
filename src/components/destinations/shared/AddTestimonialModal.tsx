@@ -76,6 +76,16 @@ const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTes
       });
       return;
     }
+
+    if (review.trim().length < 25) {
+      toast({
+        title: "Din anmeldelse er for kort",
+        description: "Skriv mindst 25 tegn, så andre løbere kan få noget ud af den.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     
     setIsSubmitting(true);
 
@@ -197,9 +207,15 @@ const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTes
               value={review}
               onChange={(e) => setReview(e.target.value)}
               required
+              minLength={25}
               placeholder="Fortæl om din oplevelse..."
               rows={4}
             />
+            <p className={`mt-1 text-xs ${review.trim().length < 25 ? 'text-destructive' : 'text-muted-foreground'}`}>
+              {review.trim().length < 25
+                ? `Mindst 25 tegn (${review.trim().length}/25)`
+                : `${review.trim().length} tegn`}
+            </p>
           </div>
 
           <div>
