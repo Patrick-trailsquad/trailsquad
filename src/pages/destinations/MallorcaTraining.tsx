@@ -400,7 +400,7 @@ const MallorcaTraining = () => {
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Book din plads</h2>
           <p className="text-white/60 text-lg mb-10">
-            Priser fra 9.700 DKK for delt dobbeltværelse og fra 11.800 DKK for single værelse. Reservér med 5.000 DKK i depositum pr. billet.
+            Priser fra 9.200 DKK for delt dobbeltværelse og fra 12.300 DKK for single værelse. Reservér med 5.000 DKK i depositum pr. billet.
           </p>
 
           <MallorcaTrainingPricingSection

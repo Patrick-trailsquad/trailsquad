@@ -66,7 +66,7 @@ const MallorcaTrainingPricingSection = ({
       <div className="space-y-1 mb-6">
         <p className="text-sm text-gray-600">Priser fra</p>
         <p className="font-cabinet text-4xl font-bold text-charcoal">
-          9.700 DKK <span className="text-sm text-gray-500">inkl. moms</span>
+          9.200 DKK <span className="text-sm text-gray-500">inkl. moms</span>
         </p>
         <Accordion type="single" collapsible className="w-full mt-2">
           <AccordionItem value="price-details" className="border-none">
@@ -79,8 +79,8 @@ const MallorcaTrainingPricingSection = ({
             <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
               <div>
                 Prisen afhænger af, om du deler værelse, og hvilken værelsestype du vælger.<br /><br />
-                <b>Delt værelse</b> starter på 9.700 DKK per person, og du deler værelset med en anden deltager fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                <b>Single værelse</b> starter på 11.800 DKK per person — du får dit eget værelse.<br /><br />
+                <b>Delt værelse</b> starter på 9.200 DKK per person, og du deler værelset med en anden deltager fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
+                <b>Single værelse</b> starter på 12.300 DKK per person — du får dit eget værelse.<br /><br />
                 <br />
                 Der er nogle opgraderede værelser, som koster et mindre tillæg pr. værelse. Se oversigt ovenfor.&nbsp;<br /><br />
                 Moms er inkluderet i alle priser.
@@ -93,12 +93,12 @@ const MallorcaTrainingPricingSection = ({
         destinationName={DESTINATION_NAME}
         availableDistances={["Træningslejr"]}
         accommodationOptions={[
-          { value: "shared-deluxe", label: `Delt · Deluxe Dobbeltværelse — 9.700 DKK (${ROOM_AVAILABILITY["deluxe"]} ledige)` },
-          { value: "shared-superior", label: `Delt · Superior Dobbeltværelse — 9.875 DKK (${ROOM_AVAILABILITY["superior"]} ledige)` },
-          { value: "shared-junior-suite", label: `Delt · Juniorsuite (dobbeltseng) — 10.025 DKK (${ROOM_AVAILABILITY["junior-suite"]} ledige)` },
-          { value: "single-deluxe", label: `Single · Deluxe Dobbeltværelse — 11.800 DKK (${ROOM_AVAILABILITY["deluxe"]} ledige)` },
-          { value: "single-superior", label: `Single · Superior Dobbeltværelse — 12.150 DKK (${ROOM_AVAILABILITY["superior"]} ledige)` },
-          { value: "single-junior-suite", label: `Single · Juniorsuite — 12.450 DKK (${ROOM_AVAILABILITY["junior-suite"]} ledige)` },
+          { value: "shared-deluxe", label: `Delt · Deluxe Dobbeltværelse — 9.200 DKK (${ROOM_AVAILABILITY["deluxe"]} ledige)` },
+          { value: "shared-superior", label: `Delt · Superior Dobbeltværelse — 9.375 DKK (${ROOM_AVAILABILITY["superior"]} ledige)` },
+          { value: "shared-junior-suite", label: `Delt · Juniorsuite (dobbeltseng) — 9.525 DKK (${ROOM_AVAILABILITY["junior-suite"]} ledige)` },
+          { value: "single-deluxe", label: `Single · Deluxe Dobbeltværelse — 12.300 DKK (${ROOM_AVAILABILITY["deluxe"]} ledige)` },
+          { value: "single-superior", label: `Single · Superior Dobbeltværelse — 12.650 DKK (${ROOM_AVAILABILITY["superior"]} ledige)` },
+          { value: "single-junior-suite", label: `Single · Juniorsuite — 12.950 DKK (${ROOM_AVAILABILITY["junior-suite"]} ledige)` },
         ]}
         depositPercentage={50}
         onSubmitOverride={handleStripeCheckout}
