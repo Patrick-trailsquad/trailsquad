@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Ilulissat27Itinerary from "../../components/destinations/ilulissat27/Ilulissat27Itinerary";
 import Ilulissat27Accommodation from "../../components/destinations/ilulissat27/Ilulissat27Accommodation";
 import Ilulissat27WaitlistForm from "../../components/destinations/ilulissat27/Ilulissat27WaitlistForm";
+import ParallaxBackground from "../../components/destinations/ilulissat27/ParallaxBackground";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import heroImage from "../../assets/ilulissat27-hero.jpg";
@@ -297,17 +298,7 @@ const Ilulissat27 = () => {
 
       {/* ─── FISKETUR DAG 2 (parallax) ─── */}
       <section className="relative w-full overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url(${assetUrl(fishingAsset)})`,
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-        <div className="absolute inset-0 bg-black/55" />
+        <ParallaxBackground image={assetUrl(fishingAsset)} />
 
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-40 max-w-3xl text-center">
           <p className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4">
@@ -346,17 +337,7 @@ const Ilulissat27 = () => {
 
       {/* ─── DAG 2: GUIDET TOUR I ILIMANAQ (parallax) ─── */}
       <section className="relative w-full overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url(${assetUrl(day2TourAsset)})`,
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-        <div className="absolute inset-0 bg-black/55" />
+        <ParallaxBackground image={assetUrl(day2TourAsset)} />
 
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-40 max-w-3xl text-center">
           <p className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4">
@@ -396,17 +377,7 @@ const Ilulissat27 = () => {
 
       {/* ─── MIDNATSKAJAK (parallax) ─── */}
       <section className="relative w-full overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url(${assetUrl(kayakAsset)})`,
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-        <div className="absolute inset-0 bg-black/55" />
+        <ParallaxBackground image={assetUrl(kayakAsset)} />
 
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-40 max-w-3xl text-center">
           <p className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4">
