@@ -156,7 +156,6 @@ const Ilulissat27 = () => {
           width={1600}
           height={1067}
         />
-        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
