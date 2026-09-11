@@ -16,7 +16,7 @@ const nights = [
     night: "Nat 1 · 25. august",
     place: "Hotel Arctic eller Hotel Den Hvide Falk",
     location: "Ilulissat",
-    images: [heroImage, heroImage, heroImage],
+    images: [assetUrl(arctic1), assetUrl(arctic2), assetUrl(falk1), assetUrl(falk2)],
     text:
       "Vi bor centralt i Ilulissat med udsigt over Diskobugten. Hotel Arctic ligger højt med panorama over isbjergene, mens Hotel Den Hvide Falk ligger tæt på havnen og byens caféer. Vi fordeler squaden på de to hoteller — begge med kort afstand til startlinjen for dagens løbeture.",
   },
