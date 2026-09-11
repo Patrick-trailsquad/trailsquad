@@ -423,8 +423,8 @@ const Ilulissat27 = () => {
       {/* ─── THE EXPERIENCE ─── */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <img
-          src={heroImage}
-          alt="Isbjerge i Ilulissat Isfjord"
+          src={assetUrl(experienceAsset)}
+          alt="Trail Squad løbere nyder udsigten over Ilulissat Isfjord"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
           width={1600}
