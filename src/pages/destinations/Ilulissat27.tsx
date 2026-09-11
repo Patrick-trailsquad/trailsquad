@@ -13,7 +13,7 @@ import heroImage from "../../assets/ilulissat27-hero.jpg";
 import kayakAsset from "../../assets/ilulissat-kayak.jpg.asset.json";
 import fishingAsset from "../../assets/ilulissat-fishing.jpg.asset.json";
 import day2TourAsset from "../../assets/ilulissat-day2-tour.jpg.asset.json";
-import experienceAsset from "../../assets/ilulissat-experience.jpg.asset.json";
+
 import { assetUrl } from "../../lib/assetUrl";
 
 const fadeUp = {
@@ -146,28 +146,6 @@ const Ilulissat27 = () => {
         </div>
       )}
 
-      {/* ─── THE EXPERIENCE ─── */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <img
-          src={assetUrl(experienceAsset)}
-          alt="Trail Squad løbere nyder udsigten over Ilulissat Isfjord"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
-          width={1600}
-          height={1067}
-        />
-
-        <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
-            Løb langs verdens mest imponerende isfjord
-          </h2>
-          <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
-            Ilulissat Isfjord står på UNESCO's verdensarvsliste, og stierne fører dig hen over klipper,
-            tundra og trædæk med udsigt til isbjerge på størrelse med højhuse. Sidst i august er lyset
-            gyldent til langt ud på natten — og temperaturen perfekt til at løbe i.
-          </p>
-        </div>
-      </section>
 
       {/* ─── IS THIS FOR YOU? ─── */}
       <section className="py-16 md:py-24 bg-stone">
