@@ -224,6 +224,92 @@ const Ilulissat27 = () => {
         </div>
       </section>
 
+      {/* ─── LØBETURE OVERSIGT ─── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
+              De planlagte løbeture
+            </h2>
+            <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
+              Fire dage, fire forskellige ruter. Alle ture løbes i roligt tempo med stop til billeder -
+              og der er altid en kortere variant, hvis benene siger fra.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                day: "Dag 1",
+                title: "Shakeout langs Ilulissat Isfjord",
+                distance: "8 km",
+                elevation: "ca. 150 hm",
+                terrain: "Trædæk og klippesti",
+                note: "Rolig åbningstur ud til UNESCO-udsigten over isfjorden.",
+              },
+              {
+                day: "Dag 2",
+                title: "Bygdeløb i Ilimanaq",
+                distance: "12 km",
+                elevation: "ca. 300 hm",
+                terrain: "Tundra og fåresti",
+                note: "Kuperet tur i terrænet omkring bygden med isbjerge i horisonten.",
+              },
+              {
+                day: "Dag 3",
+                title: "Dagens lange tur",
+                distance: "18 km",
+                elevation: "ca. 500 hm",
+                terrain: "Klipper, mos og grus",
+                note: "Turens højdepunkt - kortere variant på 10 km for dem der vil spare benene.",
+              },
+              {
+                day: "Dag 4",
+                title: "Afsluttende morgenløb",
+                distance: "6 km",
+                elevation: "ca. 80 hm",
+                terrain: "Sti og by",
+                note: "Let ben-udløsning med kaffe og udsigt inden hjemrejsen.",
+              },
+            ].map((run, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+                className="bg-stone rounded-2xl p-6 shadow-sm"
+              >
+                <span className="inline-block bg-[#FFDC00] text-charcoal px-3 py-1 rounded-full text-xs font-cabinet font-bold mb-3">
+                  {run.day}
+                </span>
+                <h3 className="font-cabinet text-xl font-bold text-charcoal mb-3">{run.title}</h3>
+                <div className="flex flex-wrap gap-4 text-sm text-charcoal/70 mb-3">
+                  <span className="flex items-center gap-2">
+                    <Footprints className="w-4 h-4 text-sage" />
+                    {run.distance}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Mountain className="w-4 h-4 text-sage" />
+                    {run.elevation}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-sage" />
+                    {run.terrain}
+                  </span>
+                </div>
+                <p className="text-charcoal/60 text-sm">{run.note}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <p className="text-center text-charcoal/50 text-sm mt-8">
+            Distancer er vejledende og kan justeres efter vejr, is og gruppens ønsker.
+          </p>
+        </div>
+      </section>
+
       {/* ─── WHAT YOU GET ─── */}
       <section id="what-you-get" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
