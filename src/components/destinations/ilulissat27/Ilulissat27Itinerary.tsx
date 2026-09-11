@@ -9,7 +9,7 @@ const days = [
       { icon: Plane, text: "Direkte fly tur/retur fra København til Ilulissat" },
       { icon: Coffee, text: "Check-in på Hotel Arctic eller Hotel Den Hvide Falk" },
       { icon: Footprints, text: "Første løbetur langs isfjorden" },
-      { icon: UtensilsCrossed, text: "Fælles velkomstmiddag med squaden" },
+      { icon: Fish, text: "Fisketur i isfjorden — middag af egen fangst" },
     ],
   },
   {
@@ -20,7 +20,6 @@ const days = [
       { icon: Ship, text: "Sejltur gennem isfjorden til Ilimanaq" },
       { icon: Footprints, text: "Løbetur i Ilimanaq" },
       { icon: MapPin, text: "Rundtur i bygden" },
-      { icon: Fish, text: "Fisketur i fjorden — fangsten bliver til aftensmad" },
       { icon: Coffee, text: "Overnatning i hytterne på Ilimanaq Lodge" },
     ],
   },
