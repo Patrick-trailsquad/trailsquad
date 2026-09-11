@@ -149,7 +149,7 @@ const Ilulissat27 = () => {
       <section className="py-16 md:py-24 bg-stone">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
-            For dig der vil løbe et sted, ingen andre løber
+            For dig som vil opleve det ægte Grønland - med løbesko på
           </h2>
           <p className="text-charcoal/60 text-lg mb-12">
             Alle kan være med. Vi skruer op for oplevelsen og ned for presset.
@@ -157,7 +157,7 @@ const Ilulissat27 = () => {
 
           <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
             {[
-              "Du drømmer om at løbe langs Ilulissat Isfjord",
+              "Du drømmer om at løbe et af verdens mest spektakulære steder",
               "Du kan lide en blanding af social løb og eventyr",
               "Du vil se isbjerge fra kajak ved midnat",
               "Du foretrækker fællesskab frem for at træne alene",
