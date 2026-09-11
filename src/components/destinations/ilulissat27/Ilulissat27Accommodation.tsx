@@ -42,7 +42,7 @@ const nights = [
     night: "Nat 3 · 27. august",
     place: "Hotel Icefiord eller Hotel Den Hvide Falk",
     location: "Ilulissat",
-    images: [heroImage, heroImage, heroImage],
+    images: [assetUrl(icefiord1), assetUrl(icefiord2), assetUrl(icefiord3), assetUrl(falk1_2), assetUrl(falk2_2)],
     text:
       "Tilbage i Ilulissat efter dagens løb. Hotel Icefiord ligger direkte ned til vandet med terrasse mod isfjorden, og Hotel Den Hvide Falk ligger få minutter derfra. Perfekt base inden vi tager kajakkerne ud i midnatslyset.",
   },
