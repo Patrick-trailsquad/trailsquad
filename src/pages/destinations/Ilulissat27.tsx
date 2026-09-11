@@ -234,7 +234,7 @@ const Ilulissat27 = () => {
               },
               {
                 day: "Dag 3",
-                title: "Dagens lange tur",
+                title: "Loop fra Ilulissat",
                 distance: "15 km",
                 elevation: "ca. 300 hm",
                 terrain: "Klipper, mos og grus",
