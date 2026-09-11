@@ -52,7 +52,7 @@ const Ilulissat27Accommodation = () => {
       <div className="grid md:grid-cols-3 gap-6">
         {nights.map((n) => (
           <div key={n.night} className="bg-stone rounded-2xl overflow-hidden flex flex-col">
-            <Carousel className="w-full">
+            <Carousel className="w-full" opts={{ loop: true }}>
               <CarouselContent>
                 {n.images.map((image, index) => (
                   <CarouselItem key={index}>
