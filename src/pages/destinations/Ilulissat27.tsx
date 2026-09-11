@@ -308,7 +308,7 @@ const Ilulissat27 = () => {
               },
               {
                 q: "Hvordan kommer vi til Ilulissat?",
-                a: "Vi flyver fra Danmark til Grønland og videre til Ilulissat. Detaljerne omkring afgange lander sammen med prisen.",
+                a: "Vi flyver direkte tur/retur fra København til Ilulissat. Detaljerne omkring afgange lander sammen med prisen.",
               },
               {
                 q: "Hvad er midnatskajak?",
