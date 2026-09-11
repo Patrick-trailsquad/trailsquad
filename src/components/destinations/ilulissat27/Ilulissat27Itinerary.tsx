@@ -15,11 +15,11 @@ const days = [
   {
     day: 2,
     date: "torsdag 26. august 2027",
-    title: "🎣 Løb & udforksning af Ilimanaq",
+    title: "🚶 Guidet tour i Ilimanaq bygden",
     items: [
       { icon: Ship, text: "Sejltur gennem isfjorden til Ilimanaq" },
-      { icon: Footprints, text: "Løbetur i Ilimanaq" },
-      { icon: MapPin, text: "Rundtur i bygden" },
+      { icon: MapPin, text: "Guidet rundtur i Ilimanaq bygden med lokal" },
+      { icon: Footprints, text: "Løbetur i det kuperede landskab omkring bygden" },
       { icon: Coffee, text: "Overnatning i hytterne på Ilimanaq Lodge" },
     ],
   },
