@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves } from "lucide-react";
+import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves, Fish } from "lucide-react";
 import { motion } from "framer-motion";
 import Ilulissat27Itinerary from "../../components/destinations/ilulissat27/Ilulissat27Itinerary";
 import Ilulissat27Accommodation from "../../components/destinations/ilulissat27/Ilulissat27Accommodation";
