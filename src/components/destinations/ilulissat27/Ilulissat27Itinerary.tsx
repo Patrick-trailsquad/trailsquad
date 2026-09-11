@@ -28,8 +28,8 @@ const days = [
     date: "fredag 27. august 2027",
     title: "🛶 Løb & midnatskajak",
     items: [
-      { icon: Mountain, text: "Løbetur i kuperet terræn omkring Ilimanaq" },
       { icon: Ship, text: "Retur til Ilulissat med båd" },
+      { icon: Mountain, text: "Løbetur i kuperet terræn fra Ilulissat" },
       { icon: Coffee, text: "Check-in på Hotel Icefiord eller Hotel Den Hvide Falk" },
       { icon: Moon, text: "Midnatskajak mellem isbjergene i nattelyset" },
     ],
