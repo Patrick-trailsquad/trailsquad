@@ -18,8 +18,8 @@ const days = [
     title: "🚶 Guidet tour i Ilimanaq bygden",
     items: [
       { icon: Ship, text: "Sejltur gennem isfjorden til Ilimanaq" },
-      { icon: Footprints, text: "Løbetur i det kuperede landskab omkring bygden" },
       { icon: MapPin, text: "Guidet rundtur i Ilimanaq bygden med lokal" },
+      { icon: Footprints, text: "Løbetur i det kuperede landskab omkring bygden" },
       { icon: Coffee, text: "Overnatning i hytterne på Ilimanaq Lodge" },
     ],
   },
