@@ -238,7 +238,7 @@ const Ilulissat27 = () => {
                 distance: "15 km",
                 elevation: "ca. 300 hm",
                 terrain: "Klipper, mos og grus",
-                note: "Turens højdepunkt - kortere variant på 10 km for dem der vil spare benene.",
+                note: "Vi skal ud til et vandfald, og der er naturligvis kun én måde hvorpå vi kommer derhen - med løbeskoene snørret og hurtigbrillerne på. ",
               },
               {
                 day: "Dag 4",
