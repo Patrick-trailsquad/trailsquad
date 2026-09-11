@@ -55,7 +55,7 @@ const Ilulissat27Accommodation = () => {
         Tre nætter, tre helt forskellige oplevelser
       </h2>
       <p className="text-charcoal/60 text-lg text-center mb-12 max-w-2xl mx-auto">
-        Vi bor i Ilulissat og i bygden Ilimanaq — tæt på isfjorden hele vejen.
+        Vi bor i Ilulissat og i bygden Ilimanaq - tæt på isfjorden hele vejen.
       </p>
 
       <div className="grid md:grid-cols-3 gap-6">
