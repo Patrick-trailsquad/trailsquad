@@ -15,7 +15,7 @@ const days = [
   {
     day: 2,
     date: "torsdag 26. august 2027",
-    title: "🎣 Løb & fisketur til Ilimanaq",
+    title: "🎣 Løb & udforksning af Ilimanaq",
     items: [
       { icon: Ship, text: "Sejltur gennem isfjorden til Ilimanaq" },
       { icon: Footprints, text: "Løbetur i Ilimanaq" },
