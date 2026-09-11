@@ -269,6 +269,55 @@ const Ilulissat27 = () => {
         </div>
       </section>
 
+      {/* ─── FISKETUR DAG 2 (parallax) ─── */}
+      <section className="relative w-full overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: `url(${assetUrl(fishingAsset)})`,
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/55" />
+
+        <div className="relative z-10 container mx-auto px-6 py-24 md:py-40 max-w-3xl text-center">
+          <p className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4">
+            Dag 2 · eftermiddag
+          </p>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
+            Fisketur og middag af egen fangst
+          </h2>
+          <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-10">
+            Vi sejler gennem isfjorden til Ilimanaq, kaster stængerne ud og fisker efter dagens måltid. Fangsten tager vi med
+            tilbage, hvor den bliver tilberedt og serveret som aftensmad — helt frisk og helt vores egen.
+          </p>
+
+          <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+            {[
+              { icon: Ship, text: "Sejltur gennem isfjorden" },
+              { icon: Fish, text: "Fang din egen middag" },
+              { icon: Users, text: "Fælles måltid af dagens fangst" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={i}
+                className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-5 text-white/90 text-sm"
+              >
+                <item.icon className="w-5 h-5 text-[#FFDC00]" />
+                <span className="text-center leading-snug">{item.text}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── MIDNATSKAJAK (parallax) ─── */}
       <section className="relative w-full overflow-hidden">
         <div
