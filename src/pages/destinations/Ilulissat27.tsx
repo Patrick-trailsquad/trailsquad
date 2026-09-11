@@ -285,7 +285,7 @@ const Ilulissat27 = () => {
 
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-40 max-w-3xl text-center">
           <p className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4">
-            Dag 2 · eftermiddag
+            DAG 1 · EFTERMIDDAG
           </p>
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
             Fisketur og middag af egen fangst
