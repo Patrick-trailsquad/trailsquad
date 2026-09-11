@@ -1,0 +1,1 @@
+ALTER TABLE public.testimonials ADD CONSTRAINT testimonials_review_min_length CHECK (length(btrim(review)) >= 25) NOT VALID;
