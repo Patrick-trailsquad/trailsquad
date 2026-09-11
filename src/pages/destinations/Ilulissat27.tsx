@@ -465,7 +465,7 @@ const Ilulissat27 = () => {
               },
               {
                 q: "Hvad er midnatskajak?",
-                a: "Vi tager kajakkerne ud sent om aftenen på dag 3 og padler mellem isbjergene i det bløde natlys. Ingen erfaring nødvendig — der er instruktør med.",
+                a: "Vi tager kajakkerne ud sent om aftenen på dag 3 og padler mellem isbjergene i det bløde natlys. Ingen erfaring nødvendig - der er instruktør med.",
               },
               {
                 q: "Hvad koster turen?",
