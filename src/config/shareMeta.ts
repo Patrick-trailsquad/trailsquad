@@ -48,6 +48,13 @@ export const SHARE_META: ShareMeta[] = [
     image: "/lovable-uploads/transylvania27-hero.jpg",
   },
   {
+    path: "/destinations/ilulissat27",
+    title: "Ilulissat, Grønland 2027 – Trail Squad",
+    description:
+      "Løb ved Ilulissat Isfjord, fisketur og midnatskajak mellem isbjergene. 25.-28. august 2027 med Trail Squad.",
+    image: "/lovable-uploads/ilulissat27-hero.jpg",
+  },
+  {
     path: "/destinations/hengill27",
     title: "Hengill Ultra, Island 2027 – Trail Squad",
     description:
