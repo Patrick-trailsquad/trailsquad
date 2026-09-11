@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Ilulissat27Itinerary from "../../components/destinations/ilulissat27/Ilulissat27Itinerary";
 import Ilulissat27Accommodation from "../../components/destinations/ilulissat27/Ilulissat27Accommodation";
 import Ilulissat27WaitlistForm from "../../components/destinations/ilulissat27/Ilulissat27WaitlistForm";
+import ParallaxBackground from "../../components/destinations/ilulissat27/ParallaxBackground";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import heroImage from "../../assets/ilulissat27-hero.jpg";
