@@ -28,6 +28,7 @@ import SquadTraining from "./pages/SquadTraining";
 import Fyri26 from "./pages/destinations/Fyri26";
 import MallorcaTraining from "./pages/destinations/MallorcaTraining";
 import Hengill27 from "./pages/destinations/Hengill27";
+import Ilulissat27 from "./pages/destinations/Ilulissat27";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +69,7 @@ const App = () => (
             <Route path="/destinations/fyri26" element={<Fyri26 />} />
             <Route path="/destinations/mallorca-training" element={<MallorcaTraining />} />
             <Route path="/destinations/hengill27" element={<Hengill27 />} />
+            <Route path="/destinations/ilulissat27" element={<Ilulissat27 />} />
             <Route path="/swiss-alps-100_2" element={<SwissAlps100 />} />
             <Route path="/kangnu_2" element={<KangNu26 />} />
             <Route path="/trailfox" element={<TrailFox />} />
