@@ -9,6 +9,8 @@ import Ilulissat27WaitlistForm from "../../components/destinations/ilulissat27/I
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import heroImage from "../../assets/ilulissat27-hero.jpg";
+import kayakAsset from "../../assets/ilulissat-kayak.jpg.asset.json";
+import { assetUrl } from "../../lib/assetUrl";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
