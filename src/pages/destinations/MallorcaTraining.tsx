@@ -330,11 +330,11 @@ const MallorcaTraining = () => {
               },
               {
                 q: "Hvor skal vi løbe?",
-                a: "Coach Emil har løbet UTMB Mallorca, og har styr på ruterne i lokalområdet. Vi finder de bedste segmenter af UTMB løbet og løber dér.",
+                 a: "Coach Emil har løbet UTMB Mallorca, og har styr på ruterne i lokalområdet. Vi finder de bedste segmenter af UTMB løbet og løber dér.\nVi opdaterer denne side med mere præcise GPX-filer inden længe. ",
               },
               {
                 q: "Hvornår åbner tilmeldingen?",
-                a: "Turen løber af stablen 5–8 februar 2027. Pris og endelig tilmelding åbner snart — skriv dig op, så får du besked først.",
+                 a: "Nu! Og det er klart billigst hvis man deler et værelse med en ven, træningsmakker, løbekonkurrent, kæreste, søster, fætter eller lignende. Så tænkt lige over, om I skal to afsted 👯‍♂️ 👯‍♀️",
               },
             ].map((item, i) => (
               <motion.div
