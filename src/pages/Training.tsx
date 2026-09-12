@@ -51,7 +51,7 @@ const trainingSessions = [
     location: "Dyrehaven",
     meetingPlace: "Peter Liebs Vej 5",
     description: "Det bliver tidligere mørkt og det er tid til at støve vores pandelamper af 🔦\nVi kender Dyrehaven, som vores egen bukselomme, så vi lover at finde de de små stier og sørge for, at I er helt forsvundet i mørket. For så at lede ekspeditionen tilbage på sporet igen. \nBliver syper sjovt og hyggeligt. ",
-    image: assetUrl(squadTraining13ImageAsset),
+    image: assetUrl(squadTraining14ImageAsset),
   },
   {
     title: "Træningssession #14",
@@ -63,7 +63,7 @@ const trainingSessions = [
     location: "Hareskoven",
     meetingPlace: "Hareskov Station",
     description: "Vi skal ud i Hareskovens mountainbikespor og løbe kuperet - i mørket! Yay! 🎉\n\nDer er point, hvis man har nissehuen på - det er jo blevet december 🎅",
-    image: assetUrl(squadTraining14ImageAsset),
+    image: assetUrl(squadTraining13ImageAsset),
   },
 ];
 
