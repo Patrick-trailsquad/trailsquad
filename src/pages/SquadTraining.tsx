@@ -70,7 +70,7 @@ const trainingSessions: TrainingSession[] = [
     meetingPlace: "Peter Liebs Vej 5",
     description:
       "Tema: Pandelampetræning 🔦\n\nVi løber i mørket i Dyrehaven og vænner os til at navigere på trails med pandelampe.",
-    image: squadTraining13Image,
+    image: squadTraining14Image,
     isActive: true,
   },
   {
@@ -83,7 +83,7 @@ const trainingSessions: TrainingSession[] = [
     meetingPlace: "Hareskov Station",
     description:
       "Tema: Pandelampetræning og mountainbikespor 🔦\n\nVi løber på de tekniske mountainbikespor i mørket – teknik, fodarbejde og masser af grin.",
-    image: squadTraining14Image,
+    image: squadTraining13Image,
     isActive: true,
   },
 ];
