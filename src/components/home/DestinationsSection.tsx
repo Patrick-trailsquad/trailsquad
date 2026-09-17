@@ -112,13 +112,13 @@ const destinations = [
     spots: "Åben for tilmelding",
     href: "/destinations/transylvania27"
   },
-  {
-    image: "/lovable-uploads/hengill27-hero.jpg",
-    location: "Hengill Ultra, Island",
-    date: "Juni 2027",
-    spots: "Åbner senere",
-    href: "/destinations/hengill27",
-  },
+  // {
+  //   image: "/lovable-uploads/hengill27-hero.jpg",
+  //   location: "Hengill Ultra, Island",
+  //   date: "Juni 2027",
+  //   spots: "Åbner senere",
+  //   href: "/destinations/hengill27",
+  // },
   {
     image: "/lovable-uploads/fyri-hero.jpg",
     location: "Fýri Trail, Norge",
