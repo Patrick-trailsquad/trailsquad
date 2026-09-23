@@ -15,20 +15,21 @@ const days = [
   {
     day: 2,
     date: "fredag 4. juni 2027",
-    title: "🏃 Shakeout & varme kilder",
+    title: "🏃 Shakeout & start på 106 km",
     items: [
       { icon: Footprints, text: "Shakeout run i Reykjadalur-dalen" },
       { icon: Mountain, text: "Bad i den varme flod ved Reykjadalur" },
       { icon: Users, text: "Afhentning af startnumre og race brief" },
+      { icon: Trophy, text: "Eftermiddag: start på 106 km" },
       { icon: UtensilsCrossed, text: "Pasta-middag — husk at carb-loade 🍝" },
     ],
   },
   {
     day: 3,
     date: "lørdag 5. juni 2027",
-    title: "🏁 Løbsdag — alle distancer",
+    title: "🏁 Løbsdag — 5, 10, 26 og 53 km",
     items: [
-      { icon: Trophy, text: "Race day: 5, 10, 26, 53 eller 106 km" },
+      { icon: Trophy, text: "Morgenstart: 5, 10, 26 eller 53 km" },
       { icon: Mountain, text: "Start og mål midt i Hveragerði" },
       { icon: Users, text: "Fejring ved målstregen med squaden" },
       { icon: UtensilsCrossed, text: "Finisher-middag og geotermisk spa" },
