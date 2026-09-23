@@ -207,7 +207,7 @@ const Hengill27 = () => {
                 items: [
                   "Fly København → Keflavík",
                   "Privat transport til Hveragerði",
-                  "3 overnatninger tæt på start og mål",
+                  "3 overnatninger på 4-⭐️ hotel tæt på start og mål",
                   "Transport til alle aktiviteter",
                 ],
               },
