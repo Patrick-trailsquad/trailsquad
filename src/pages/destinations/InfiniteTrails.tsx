@@ -65,6 +65,8 @@ const InfiniteTrails = () => {
         </div>
       </div>
 
+      <InfiniteTrailsTripVideoCTA />
+
       <InfiniteTrailsTestimonials />
 
       <InfiniteTrailsInfoBanner />
