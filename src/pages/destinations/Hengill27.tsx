@@ -335,7 +335,7 @@ const Hengill27 = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-10">
             <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Udforsk ruten</h2>
-            <p className="text-white/60 text-lg">Klik på kortet for at interagere</p>
+            <p className="text-white/60 text-lg">Klik på kortet for at interagere (106 km ruten løber 2 ens loops)</p>
           </div>
           <div
             className="relative rounded-2xl overflow-hidden shadow-lg"
