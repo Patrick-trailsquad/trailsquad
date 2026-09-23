@@ -21,6 +21,7 @@ import { assetUrl } from "@/lib/assetUrl";
 import infiniteTrailsDagplanBg from "../../assets/infinite-trails-dagplan-bg.jpg.asset.json";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import VideoBackgroundSection from "../../components/home/VideoBackgroundSection";
+import InfiniteTrailsTripVideoCTA from "../../components/destinations/infinite-trails/InfiniteTrailsTripVideoCTA";
 
 const InfiniteTrails = () => {
   const [isLinesVisible, setIsLinesVisible] = useState(false);
@@ -63,6 +64,8 @@ const InfiniteTrails = () => {
           </h1>
         </div>
       </div>
+
+      <InfiniteTrailsTripVideoCTA />
 
       <InfiniteTrailsTestimonials />
 
