@@ -27,6 +27,12 @@ const videos = [
     title: "KangNu26 (2026)",
     thumbnail: "https://img.youtube.com/vi/t4QHSDlkUqM/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/t4QHSDlkUqM?autoplay=1"
+  },
+  {
+    id: 5,
+    title: "Infinite Trails (2026)",
+    thumbnail: "https://img.youtube.com/vi/2bsJkYm7OOU/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/2bsJkYm7OOU?autoplay=1"
   }
 ];
 
