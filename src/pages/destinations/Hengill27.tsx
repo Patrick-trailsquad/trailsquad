@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import Hengill27Itinerary from "../../components/destinations/hengill27/Hengill27Itinerary";
-import Hengill27WaitlistForm from "../../components/destinations/hengill27/Hengill27WaitlistForm";
+import Hengill27PricingSection from "../../components/destinations/hengill27/Hengill27PricingSection";
 import Hengill27Accommodation from "../../components/destinations/hengill27/Hengill27Accommodation";
 import Hengill27RaceVideo from "../../components/destinations/hengill27/Hengill27RaceVideo";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
@@ -112,7 +112,7 @@ const Hengill27 = () => {
                 onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
               >
-                Få besked når turen åbner
+                Book din plads
               </button>
             </motion.div>
           )}
@@ -136,7 +136,7 @@ const Hengill27 = () => {
             onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
             className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-cabinet font-medium hover:border-white/60 transition-all"
           >
-            Få besked når turen åbner
+            Book din plads
           </button>
         </div>
       )}
@@ -307,7 +307,7 @@ const Hengill27 = () => {
               },
               {
                 q: "Hvad koster turen?",
-                a: "Prisen og tilmeldingen er endnu ikke åben. Skriv dig op med din email nederst på siden, så får du besked først, når turen åbner for booking.",
+                a: "Delt dobbeltværelse koster 14.500 DKK per person, og solo på dobbeltværelse koster 18.200 DKK. Du reserverer din plads med 5.000 DKK i depositum, og resten betales 60 dage før afrejse.",
               },
             ].map((item, i) => (
               <motion.div
@@ -403,16 +403,16 @@ const Hengill27 = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            TILMELDING ÅBNER SNART 🎟️
+            TILMELDING ER ÅBEN
           </div>
 
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Vær først i køen</h2>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Sikr din plads</h2>
           <p className="text-white/60 text-lg mb-10">
-            Pris og tilmelding er endnu ikke klar. Skriv dig op, og du får en email, så snart turen åbner.
+            Betal 5.000 DKK i depositum og reservér din plads på Hengill Ultra 2027.
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-xl text-left">
-            <Hengill27WaitlistForm />
+            <Hengill27PricingSection />
 
             <div className="mt-4">
               <CallMeBackCTA />
