@@ -116,7 +116,7 @@ const destinations = [
     image: "/lovable-uploads/hengill27-hero.jpg",
     location: "Hengill Ultra, Island",
     date: "Juni 2027",
-    spots: "Åbner senere",
+    spots: "Åben for tilmelding",
     href: "/destinations/hengill27",
   },
   {
