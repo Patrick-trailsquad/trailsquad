@@ -20,8 +20,8 @@ const days = [
       { icon: Footprints, text: "Shakeout run i Reykjadalur-dalen" },
       { icon: Mountain, text: "Bad i den varme flod ved Reykjadalur" },
       { icon: Users, text: "Afhentning af startnumre og race brief" },
-      { icon: Trophy, text: "20:00 - Start på 106 km" },
       { icon: UtensilsCrossed, text: "Pasta-middag — husk at carb-loade 🍝" },
+      { icon: Trophy, text: "20:00 - Start på 106 km" },
     ],
   },
   {
