@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,7 +24,13 @@ const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTes
   const [distance, setDistance] = useState("");
   const [photos, setPhotos] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [website, setWebsite] = useState(""); // honeypot
+  const [openedAt, setOpenedAt] = useState(Date.now());
   const { toast } = useToast();
+
+  useEffect(() => {
+    if (isOpen) setOpenedAt(Date.now());
+  }, [isOpen]);
 
   const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -85,8 +91,16 @@ const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTes
       });
       return;
     }
-    
-    
+
+    // Spam protection: honeypot filled, submitted too fast, or obvious test content
+    const tooFast = Date.now() - openedAt < 5000;
+    const looksLikeTest = /please ignore|automated .*test|^qa[\s-]/i.test(`${name} ${review}`) || /^qa/i.test(location.trim());
+    if (website || tooFast || looksLikeTest) {
+      toast({ title: "Tak for din anmeldelse!", description: "Din anmeldelse er nu online." });
+      onClose();
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -141,6 +155,10 @@ const AddTestimonialModal = ({ isOpen, onClose, destination, distances }: AddTes
         </DialogHeader>
         
         <form onSubmit={handleSubmit} className="space-y-4">
+          <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
+            <label htmlFor="website">Website</label>
+            <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} />
+          </div>
           <div>
             <Label htmlFor="name">Navn *</Label>
             <Input
