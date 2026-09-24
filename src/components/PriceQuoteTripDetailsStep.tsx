@@ -54,12 +54,16 @@ const PriceQuoteTripDetailsStep = ({
     ? Math.min(maxParticipants, selectedOption.spotsRemaining)
     : maxParticipants;
 
-  // Only auto-switch to "single" for default accommodation options (not custom ones like KangNu)
+  // A shared room only makes sense with 2+ participants — disable shared options for solo travelers
+  const isSingleOption = (value?: string) => !!value && (value === "single" || value.startsWith("single-"));
+  const soloTraveler = participants === 1;
+  const firstSingleOption = (accommodationOptions.find(o => isSingleOption(o.value)) ?? accommodationOptions[0])?.value;
+
   useEffect(() => {
-    if (!isCustomAccommodation && participants === 1 && accommodationPreference !== "single") {
-      setValue("accommodationPreference", "single");
+    if (soloTraveler && accommodationPreference && !isSingleOption(accommodationPreference) && firstSingleOption) {
+      setValue("accommodationPreference", firstSingleOption);
     }
-  }, [participants, accommodationPreference, setValue, isCustomAccommodation]);
+  }, [soloTraveler, accommodationPreference, firstSingleOption, setValue]);
 
   // If participants exceeds effective max, clamp it down
   useEffect(() => {
@@ -134,10 +138,12 @@ const PriceQuoteTripDetailsStep = ({
           {accommodationOptions.map((option) => {
             const isSoldOut = option.spotsRemaining !== undefined && option.spotsRemaining <= 0;
             const hasSpotInfo = option.spotsRemaining !== undefined;
+            const disabledBySolo = soloTraveler && !isSingleOption(option.value);
+            const isDisabled = isSoldOut || disabledBySolo;
             return (
-              <div key={option.value} className={`flex items-center space-x-2 ${isSoldOut ? 'opacity-50' : ''}`}>
-                <RadioGroupItem value={option.value} id={`room-${option.value}`} disabled={isSoldOut} />
-                <Label htmlFor={`room-${option.value}`} className={isSoldOut ? 'line-through' : ''}>
+              <div key={option.value} className={`flex items-center space-x-2 ${isDisabled ? 'opacity-50' : ''}`}>
+                <RadioGroupItem value={option.value} id={`room-${option.value}`} disabled={isDisabled} />
+                <Label htmlFor={`room-${option.value}`} className={`${isSoldOut ? 'line-through' : ''} ${isDisabled ? 'cursor-not-allowed' : ''}`}>
                   {option.label}
                   {hasSpotInfo && (
                     <span className={`ml-2 text-xs font-semibold ${isSoldOut ? 'text-destructive' : 'text-terra'}`}>
