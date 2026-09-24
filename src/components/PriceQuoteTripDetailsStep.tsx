@@ -54,12 +54,16 @@ const PriceQuoteTripDetailsStep = ({
     ? Math.min(maxParticipants, selectedOption.spotsRemaining)
     : maxParticipants;
 
-  // Only auto-switch to "single" for default accommodation options (not custom ones like KangNu)
+  // A shared room only makes sense with 2+ participants — disable shared options for solo travelers
+  const isSingleOption = (value?: string) => !!value && (value === "single" || value.startsWith("single-"));
+  const soloTraveler = participants === 1;
+  const firstSingleOption = (accommodationOptions.find(o => isSingleOption(o.value)) ?? accommodationOptions[0])?.value;
+
   useEffect(() => {
-    if (!isCustomAccommodation && participants === 1 && accommodationPreference !== "single") {
-      setValue("accommodationPreference", "single");
+    if (soloTraveler && accommodationPreference && !isSingleOption(accommodationPreference) && firstSingleOption) {
+      setValue("accommodationPreference", firstSingleOption);
     }
-  }, [participants, accommodationPreference, setValue, isCustomAccommodation]);
+  }, [soloTraveler, accommodationPreference, firstSingleOption, setValue]);
 
   // If participants exceeds effective max, clamp it down
   useEffect(() => {
