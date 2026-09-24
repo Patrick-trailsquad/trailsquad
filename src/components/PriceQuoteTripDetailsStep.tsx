@@ -138,10 +138,12 @@ const PriceQuoteTripDetailsStep = ({
           {accommodationOptions.map((option) => {
             const isSoldOut = option.spotsRemaining !== undefined && option.spotsRemaining <= 0;
             const hasSpotInfo = option.spotsRemaining !== undefined;
+            const disabledBySolo = soloTraveler && !isSingleOption(option.value);
+            const isDisabled = isSoldOut || disabledBySolo;
             return (
-              <div key={option.value} className={`flex items-center space-x-2 ${isSoldOut ? 'opacity-50' : ''}`}>
-                <RadioGroupItem value={option.value} id={`room-${option.value}`} disabled={isSoldOut} />
-                <Label htmlFor={`room-${option.value}`} className={isSoldOut ? 'line-through' : ''}>
+              <div key={option.value} className={`flex items-center space-x-2 ${isDisabled ? 'opacity-50' : ''}`}>
+                <RadioGroupItem value={option.value} id={`room-${option.value}`} disabled={isDisabled} />
+                <Label htmlFor={`room-${option.value}`} className={`${isSoldOut ? 'line-through' : ''} ${isDisabled ? 'cursor-not-allowed' : ''}`}>
                   {option.label}
                   {hasSpotInfo && (
                     <span className={`ml-2 text-xs font-semibold ${isSoldOut ? 'text-destructive' : 'text-terra'}`}>
