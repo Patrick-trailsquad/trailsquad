@@ -16,6 +16,9 @@ import { DESTINATIONS, type Destination } from '@/config/destinations';
 const AdminDashboard = () => {
   const { signOut, user } = useAuth();
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
+  const activeDestinations = DESTINATIONS.filter(destination => !['completed', 'closed', 'tickets-closed'].includes(destination.status));
+  const completedDestinations = DESTINATIONS.filter(destination => ['completed', 'closed', 'tickets-closed'].includes(destination.status));
+  const [destinationView, setDestinationView] = useState<'active' | 'completed'>('active');
   const [activeTab, setActiveTab] = useState(() => {
     // Find the next upcoming trip (priority: open > upcoming > others)
     const upcomingTrip = DESTINATIONS.find(d => d.status === 'open') || 
@@ -27,6 +30,13 @@ const AdminDashboard = () => {
   // Get participants for the active destination
   const activeDestination = DESTINATIONS.find(d => d.id === activeTab);
   const { participants, loading, addParticipant, updateParticipant, deleteParticipant } = useParticipants(activeDestination?.name);
+  const visibleDestinations = destinationView === 'active' ? activeDestinations : completedDestinations;
+
+  const changeDestinationView = (view: 'active' | 'completed') => {
+    const destinations = view === 'active' ? activeDestinations : completedDestinations;
+    setDestinationView(view);
+    setActiveTab(destinations[0]?.id || 'image-optimizer');
+  };
 
   const getStatusColor = (status: Destination['status']) => {
     switch (status) {
@@ -69,8 +79,30 @@ const AdminDashboard = () => {
       <main className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="mb-6">
+            <div className="mb-4 inline-flex rounded-lg border border-border bg-muted p-1">
+              <Button
+                type="button"
+                size="sm"
+                variant={destinationView === 'active' ? 'default' : 'ghost'}
+                onClick={() => changeDestinationView('active')}
+                className="gap-2"
+              >
+                Aktive ture
+                <Badge variant="secondary">{activeDestinations.length}</Badge>
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                variant={destinationView === 'completed' ? 'default' : 'ghost'}
+                onClick={() => changeDestinationView('completed')}
+                className="gap-2"
+              >
+                Afsluttede ture
+                <Badge variant="secondary">{completedDestinations.length}</Badge>
+              </Button>
+            </div>
             <div className="flex flex-wrap gap-2">
-              {DESTINATIONS.map((destination) => (
+              {visibleDestinations.map((destination) => (
                 <button
                   key={destination.id}
                   onClick={() => setActiveTab(destination.id)}
@@ -90,17 +122,19 @@ const AdminDashboard = () => {
                   <ParticipantCounter destinationName={destination.name} />
                 </button>
               ))}
-              <button
-                onClick={() => setActiveTab('image-optimizer')}
-                className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-all duration-200 ${
-                  activeTab === 'image-optimizer'
-                    ? 'bg-yellow-400 text-yellow-900 shadow-lg shadow-yellow-400/25 scale-105 font-semibold'
-                    : 'bg-card hover:bg-primary/10 hover:text-primary border border-border hover:border-primary/30 hover:shadow-sm'
-                }`}
-              >
-                <Image className="h-4 w-4" />
-                <span className="font-medium">Image Optimizer</span>
-              </button>
+              {destinationView === 'active' && (
+                <button
+                  onClick={() => setActiveTab('image-optimizer')}
+                  className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-all duration-200 ${
+                    activeTab === 'image-optimizer'
+                      ? 'bg-yellow-400 text-yellow-900 shadow-lg shadow-yellow-400/25 scale-105 font-semibold'
+                      : 'bg-card hover:bg-primary/10 hover:text-primary border border-border hover:border-primary/30 hover:shadow-sm'
+                  }`}
+                >
+                  <Image className="h-4 w-4" />
+                  <span className="font-medium">Image Optimizer</span>
+                </button>
+              )}
             </div>
           </div>
 
