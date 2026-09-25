@@ -31,6 +31,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
   const [highlightedItemId, setHighlightedItemId] = useState<string | null>(null);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<TimelineItem | null>(null);
+  const [addType, setAddType] = useState<TimelineItem['type']>('deadline');
   const [newItem, setNewItem] = useState({
     title: '',
     date: format(new Date(), 'yyyy-MM-dd'),
@@ -238,7 +239,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                 Add Item
               </Button>
             </DialogTrigger>
-            <ItemDialog isOpen={isAddDialogOpen} onClose={() => setIsAddDialogOpen(false)} />
+            <ItemDialog isOpen={isAddDialogOpen} onClose={() => setIsAddDialogOpen(false)} defaultType={addType} />
           </Dialog>
         </div>
       </CardHeader>
