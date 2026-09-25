@@ -45,23 +45,16 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'ribeira-sacra-2026',
-    name: 'Ribeira Sacra 2026',
-    route: '/destinations/ribeira-sacra-2026',
+    id: 'mallorca-training',
+    name: 'Mallorca Træningslejr',
+    route: '/destinations/mallorca-training',
     status: 'open' as const,
     published: true
   },
   {
-    id: 'la-boucle-de-l-etoile',
-    name: 'La Boucle de l\'Étoile',
-    route: '/destinations/la-boucle-de-l-etoile',
-    status: 'upcoming' as const,
-    published: true
-  },
-  {
-    id: 'fyri26',
-    name: 'Fyri Trail 2027',
-    route: '/destinations/fyri26',
+    id: 'transylvania27',
+    name: 'Transylvania 100 2027',
+    route: '/destinations/transylvania27',
     status: 'open' as const,
     published: true
   },
@@ -73,10 +66,10 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
-    id: 'transylvania27',
-    name: 'Transylvania 100 2027',
-    route: '/destinations/transylvania27',
-    status: 'upcoming' as const,
+    id: 'fyri26',
+    name: 'Fyri Trail 2027',
+    route: '/destinations/fyri26',
+    status: 'open' as const,
     published: true
   }
 ];
