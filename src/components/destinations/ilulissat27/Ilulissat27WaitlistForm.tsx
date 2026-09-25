@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Mail, ThumbsUp } from "lucide-react";
+import { isBotSubmission } from "@/lib/spamGuard";
 
 const WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/21931910/2l4yeck/";
 const DESTINATION_NAME = "Ilulissat Træningslejr 2027";
@@ -14,11 +15,19 @@ const Ilulissat27WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [openedAt] = useState(() => Date.now());
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const trimmedEmail = email.trim();
+
+    // Silent bot drop: fake success, nothing is saved or sent
+    if (isBotSubmission(honeypot, openedAt, name, trimmedEmail)) {
+      setIsSuccess(true);
+      return;
+    }
     const trimmedName = name.trim();
     const trimmedPhone = phone.trim();
 
@@ -92,6 +101,17 @@ const Ilulissat27WaitlistForm = () => {
         <Mail className="h-4 w-4 shrink-0" />
         <span>Få besked på email, når turen åbner for tilmelding</span>
       </div>
+      {/* Honeypot: invisible to humans, bots fill it */}
+      <input
+        type="text"
+        name="company"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-0 w-0 opacity-0"
+      />
       <Input
         type="text"
         required
