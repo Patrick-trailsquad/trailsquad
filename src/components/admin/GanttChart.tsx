@@ -107,11 +107,11 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
     await deleteItem(id);
   };
 
-  const ItemDialog = ({ item, isOpen, onClose }: { item?: TimelineItem, isOpen: boolean, onClose: () => void }) => {
+  const ItemDialog = ({ item, isOpen, onClose, defaultType }: { item?: TimelineItem, isOpen: boolean, onClose: () => void, defaultType?: TimelineItem['type'] }) => {
     const [formData, setFormData] = useState({
       title: item?.title || '',
       date: item ? format(item.date, 'yyyy-MM-dd') : format(new Date(), 'yyyy-MM-dd'),
-      type: item?.type || 'deadline' as const,
+      type: item?.type || defaultType || 'deadline',
       description: item?.description || ''
     });
 
@@ -329,7 +329,10 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                         variant="ghost"
                         size="sm"
                         className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
-                        onClick={() => setIsAddDialogOpen(true)}
+                        onClick={() => {
+                          setAddType(typeConfig.value);
+                          setIsAddDialogOpen(true);
+                        }}
                       >
                         <Plus className="h-3 w-3" />
                       </Button>
