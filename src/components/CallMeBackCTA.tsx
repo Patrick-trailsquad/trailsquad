@@ -6,6 +6,7 @@ import PhoneInput from './PhoneInput';
 import { Phone, CheckCircle2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { isBotSubmission } from '@/lib/spamGuard';
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/u13r20b/';
 
@@ -15,10 +16,17 @@ const CallMeBackCTA = () => {
   const [fullName, setFullName] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
+  const [openedAt] = useState(() => Date.now());
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Silent bot drop: fake success, nothing is saved or sent
+    if (isBotSubmission(honeypot, openedAt, fullName, '')) {
+      setIsSubmitted(true);
+      return;
+    }
     setIsLoading(true);
     
     try {
@@ -80,6 +88,17 @@ const CallMeBackCTA = () => {
   if (showPhoneInput) {
     return (
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Honeypot: invisible to humans, bots fill it */}
+        <input
+          type="text"
+          name="company"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute -left-[9999px] h-0 w-0 opacity-0"
+        />
         <div className="space-y-1.5">
           <Label htmlFor="fullName">Fulde navn</Label>
           <Input

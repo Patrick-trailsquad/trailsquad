@@ -3,6 +3,7 @@ import { X, CheckCircle2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { isBotSubmission } from '@/lib/spamGuard';
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/u13r20b/';
 const DELAY_MS = 20_000;
@@ -19,6 +20,8 @@ const CallMeBackPopup = ({ destinationName, storageKey }: CallMeBackPopupProps) 
   const [phone, setPhone] = useState('+45 ');
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
+  const [openedAt] = useState(() => Date.now());
   const { toast } = useToast();
 
   useEffect(() => {
@@ -41,6 +44,12 @@ const CallMeBackPopup = ({ destinationName, storageKey }: CallMeBackPopupProps) 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Silent bot drop: fake success, nothing is saved or sent
+    if (isBotSubmission(honeypot, openedAt, fullName, '')) {
+      sessionStorage.setItem(key, '1');
+      setIsSubmitted(true);
+      return;
+    }
     setIsLoading(true);
     try {
       // Fail-safe: log the lead in the database before hitting Zapier
@@ -134,6 +143,17 @@ const CallMeBackPopup = ({ destinationName, storageKey }: CallMeBackPopupProps) 
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Honeypot: invisible to humans, bots fill it */}
+                <input
+                  type="text"
+                  name="company"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute -left-[9999px] h-0 w-0 opacity-0"
+                />
                 <div>
                   <label className="block text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-1.5 ml-1">
                     Fulde navn
