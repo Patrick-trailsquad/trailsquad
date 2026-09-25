@@ -331,7 +331,7 @@ export const GanttChart: React.FC<GanttChartProps> = ({ destinationName }) => {
                         size="sm"
                         className="h-6 w-6 p-0 opacity-60 hover:opacity-100"
                         onClick={() => {
-                          setAddType(typeConfig.value);
+                          setAddType(typeConfig.value as TimelineItem['type']);
                           setIsAddDialogOpen(true);
                         }}
                       >
