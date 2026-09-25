@@ -83,22 +83,38 @@ const AdminDashboard = () => {
               <Button
                 type="button"
                 size="sm"
-                variant={destinationView === 'active' ? 'default' : 'ghost'}
                 onClick={() => changeDestinationView('active')}
-                className="gap-2"
+                className={`gap-2 font-semibold transition-all ${
+                  destinationView === 'active'
+                    ? 'bg-orange text-white hover:bg-orange/90 shadow-md shadow-orange/30'
+                    : 'bg-transparent text-muted-foreground hover:bg-transparent hover:text-foreground'
+                }`}
               >
                 Aktive ture
-                <Badge variant="secondary">{activeDestinations.length}</Badge>
+                <Badge
+                  variant="secondary"
+                  className={destinationView === 'active' ? 'bg-white/20 text-white' : ''}
+                >
+                  {activeDestinations.length}
+                </Badge>
               </Button>
               <Button
                 type="button"
                 size="sm"
-                variant={destinationView === 'completed' ? 'default' : 'ghost'}
                 onClick={() => changeDestinationView('completed')}
-                className="gap-2"
+                className={`gap-2 font-semibold transition-all ${
+                  destinationView === 'completed'
+                    ? 'bg-orange text-white hover:bg-orange/90 shadow-md shadow-orange/30'
+                    : 'bg-transparent text-muted-foreground hover:bg-transparent hover:text-foreground'
+                }`}
               >
                 Afsluttede ture
-                <Badge variant="secondary">{completedDestinations.length}</Badge>
+                <Badge
+                  variant="secondary"
+                  className={destinationView === 'completed' ? 'bg-white/20 text-white' : ''}
+                >
+                  {completedDestinations.length}
+                </Badge>
               </Button>
             </div>
             <div className="flex flex-wrap gap-2">
