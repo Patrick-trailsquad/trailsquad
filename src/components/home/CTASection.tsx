@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
 import { ThumbsUp } from "lucide-react";
+import { isBotSubmission } from "@/lib/spamGuard";
 const CTASection = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
+  const [openedAt] = useState(() => Date.now());
   const {
     toast
   } = useToast();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Silent bot drop: fake success, nothing is sent
+    if (isBotSubmission(honeypot, openedAt, '', email)) {
+      setEmail('');
+      setIsSuccess(true);
+      return;
+    }
     setIsSubmitting(true);
     const payload = {
       email,
@@ -50,6 +59,8 @@ const CTASection = () => {
           </h2>
           <p className="font-inter text-xl text-black/90 mb-8">Bliv en del af vores fællesskab af trailløbere og vær den første til at høre, når vi planlægger nye løbsdestinationer. Tilmeld dig vores nyhedsbrev for at blive holdt opdateret. </p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            {/* Honeypot: invisible to humans, bots fill it */}
+            <input type="text" name="company" value={honeypot} onChange={e => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" />
             <input type="email" value={email} onChange={e => setEmail(e.target.value)} required disabled={isSuccess} placeholder={isSuccess ? '' : 'Indtast email'} className="flex-1 px-6 py-4 rounded-full font-inter focus:outline-none focus:ring-2 focus:ring-black/20 disabled:opacity-50" />
             {isSuccess ? <div className="bg-transparent border-2 border-black text-black px-8 py-4 rounded-full flex items-center justify-center">
                 <ThumbsUp className="w-6 h-6 animate-fade-in text-black" />
