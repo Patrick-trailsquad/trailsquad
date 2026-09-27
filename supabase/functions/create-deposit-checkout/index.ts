@@ -8,6 +8,9 @@ const corsHeaders = {
 };
 
 const DEPOSIT_PRICE_ID = "price_1TjciOA7DrFBs7Aa0t4eEqkR";
+// Midlertidigt 1 kr-testprodukt, kun til Transylvania 2027 (til betalingstest).
+const TEST_PRICE_ID = "price_1UKF8AA7DrFBs7AaIxql5fsL";
+const TEST_DESTINATIONS = new Set(["Transylvania 100 2027"]);
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
