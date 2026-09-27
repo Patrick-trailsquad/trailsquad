@@ -201,7 +201,7 @@ const Transylvania27 = () => {
               Hvad du får med Trail Squad
             </h2>
             <p className="text-charcoal/60 text-lg max-w-xl mx-auto">
-              Alt er inkluderet. Du skal bare fokusere på at løbe.
+              Vi sørger for alt det praktiske. Du skal bare fokusere på at løbe.
             </p>
           </div>
 
