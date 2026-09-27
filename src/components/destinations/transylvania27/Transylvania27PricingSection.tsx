@@ -80,8 +80,8 @@ const Transylvania27PricingSection = () => {
         availableDistances={["20km", "30km", "50km", "80km", "100km"]}
         depositPercentage={50}
         onSubmitOverride={handleStripeCheckout}
-        customInfoText="Reservér din plads ved at betale 5.000 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse."
-        getSubmitButtonLabel={(p) => `Betal ${(5000 * p).toLocaleString('da-DK')} DKK i depositum`}
+        customInfoText="Reservér din plads ved at betale 1 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse."
+        getSubmitButtonLabel={(p) => `Betal ${(1 * p).toLocaleString('da-DK')} DKK i depositum`}
       />
       <div className="mt-4">
         <CallMeBackCTA />
