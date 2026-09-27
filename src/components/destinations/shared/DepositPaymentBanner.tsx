@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CheckCircle2, X } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-
-const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/21931910/2qey8br/";
 
 const DepositPaymentBanner = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -15,46 +12,7 @@ const DepositPaymentBanner = () => {
     if (paymentStatus !== "success" || sentRef.current) return;
     sentRef.current = true;
 
-    const stored = sessionStorage.getItem("deposit_booking_data");
-    if (!stored) return;
-
-    let bookingData: Record<string, unknown> = {};
-    try {
-      bookingData = JSON.parse(stored);
-    } catch {
-      return;
-    }
-
-    const destination = String(bookingData.destination ?? "");
-
-    supabase
-      .from("quote_requests")
-      .insert({
-        destination,
-        full_name: String(bookingData.fullName ?? ""),
-        email: String(bookingData.email ?? ""),
-        phone: String(bookingData.phone ?? ""),
-        preferred_distance: String(bookingData.preferredDistance ?? ""),
-        participants: Number(bookingData.participants ?? 1),
-        accommodation_preference: String(bookingData.accommodationPreference ?? ""),
-        source: "stripe_deposit",
-        payment_status: "success",
-      })
-      .then(() => {});
-
-    fetch(ZAPIER_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      mode: "no-cors",
-      body: JSON.stringify({
-        ...bookingData,
-        source: "stripe_deposit",
-        payment_status: "success",
-        submitted_at: new Date().toISOString(),
-        triggered_from: window.location.origin,
-      }),
-    }).catch((err) => console.error("Zapier webhook error:", err));
-
+    // Booking data is saved + sent to Zapier server-side by the stripe-webhook function.
     sessionStorage.removeItem("deposit_booking_data");
   }, [paymentStatus]);
 
