@@ -122,6 +122,7 @@ serve(async (req) => {
       mode: "payment",
       metadata: {
         destination: destinationName.slice(0, 200),
+        email: email.slice(0, 255),
         full_name: fullName.trim().slice(0, 200),
         phone: sanitizedPhone,
         preferred_distance: sanitizedDistance,
