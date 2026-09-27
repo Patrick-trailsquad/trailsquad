@@ -8,6 +8,9 @@ const corsHeaders = {
 };
 
 const DEPOSIT_PRICE_ID = "price_1TjciOA7DrFBs7Aa0t4eEqkR";
+// Midlertidigt 1 kr-testprodukt, kun til Transylvania 2027 (til betalingstest).
+const TEST_PRICE_ID = "price_1UKF8AA7DrFBs7AaIxql5fsL";
+const TEST_DESTINATIONS = new Set(["Transylvania 100 2027"]);
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
@@ -110,12 +113,16 @@ serve(async (req) => {
         ? returnPath
         : "/";
 
+    const isTestDestination = TEST_DESTINATIONS.has(destinationName);
+    const priceId = isTestDestination ? TEST_PRICE_ID : DEPOSIT_PRICE_ID;
+    const depositPerTicket = isTestDestination ? "1" : "5000";
+
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : email,
       line_items: [
         {
-          price: DEPOSIT_PRICE_ID,
+          price: priceId,
           quantity: qty,
         },
       ],
@@ -128,7 +135,7 @@ serve(async (req) => {
         preferred_distance: sanitizedDistance,
         participants: String(qty),
         accommodation: sanitizedAccommodation,
-        deposit_per_ticket_dkk: "5000",
+        deposit_per_ticket_dkk: depositPerTicket,
       },
       success_url: `${origin}${redirectBase}?payment=success`,
       cancel_url: `${origin}${redirectBase}?payment=cancelled`,
