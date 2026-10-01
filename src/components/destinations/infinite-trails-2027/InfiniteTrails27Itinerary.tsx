@@ -1,6 +1,12 @@
 import { Beer, Bus, Footprints, Mountain, Plane, Trophy, Users, UtensilsCrossed } from "lucide-react";
 
-const days = [
+type ItineraryItem = {
+  icon: React.ComponentType<{ className?: string }>;
+  text: string;
+  scrollTo?: string;
+};
+
+const days: { day: number; date: string; title: string; items: ItineraryItem[] }[] = [
   {
     day: 1,
     date: "torsdag 2. september 2027",
