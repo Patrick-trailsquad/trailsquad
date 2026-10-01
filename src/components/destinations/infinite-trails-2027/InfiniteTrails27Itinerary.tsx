@@ -16,7 +16,7 @@ const days = [
     date: "fredag 3. september 2027",
     title: "🎒 Registrering & race brief",
     items: [
-      { icon: Footprints, text: "17:00 – Global Meets Local Shake Out Run ved Felsentherme, Bad Gastein" },
+      { icon: Footprints, text: "17:00 – Global Meets Local Shake Out Run ved Felsentherme, Bad Gastein", scrollTo: "shakeout-run-section" },
       { icon: Users, text: "Registrering og obligatorisk udstyrstjek" },
       { icon: Mountain, text: "Expo i Alpenarena" },
       { icon: Beer, text: "Fællesmiddag med et par store fadøl" },
@@ -73,7 +73,17 @@ const InfiniteTrails27Itinerary = () => (
                 {day.items.map((item) => (
                   <li key={item.text} className="flex items-start gap-3">
                     <item.icon className="w-4 h-4 mt-1 shrink-0 text-on-dark/50" />
-                    <span className="text-on-dark/85">{item.text}</span>
+                    {item.scrollTo ? (
+                      <button
+                        type="button"
+                        onClick={() => document.getElementById(item.scrollTo!)?.scrollIntoView({ behavior: "smooth" })}
+                        className="text-left text-on-dark/85 underline decoration-on-dark/40 underline-offset-4 hover:decoration-yellow hover:text-on-dark transition-colors cursor-pointer"
+                      >
+                        {item.text}
+                      </button>
+                    ) : (
+                      <span className="text-on-dark/85">{item.text}</span>
+                    )}
                   </li>
                 ))}
               </ul>
