@@ -36,7 +36,7 @@ const days: { day: number; date: string; title: string; items: ItineraryItem[] }
     title: "🏁 Løbsdag",
     items: [
       { icon: Trophy, text: "Start: 60K kl. 6:00 · 45K kl. 6:30 · hold kl. 7:00 · 30K kl. 7:30 · 15K kl. 7:45" },
-      { icon: Users, text: "Community Get-Together i Alpentherme efter målgang" },
+      { icon: Users, text: "High-5's 🤚 og afslapning i Alpentherme efter race" },
       { icon: Trophy, text: "Fællesmiddag med et par store fadøl" },
     ],
   },
