@@ -178,9 +178,9 @@ const InfiniteTrails27 = () => {
           </div>
           <div className="relative rounded-xl overflow-hidden shadow-lg" onMouseLeave={() => setIsMapActive(false)}>
             {!isMapActive && (
-              <button type="button" aria-label="Aktivér rutekort" className="absolute inset-0 z-10 flex items-center justify-center bg-charcoal/30 cursor-pointer" onClick={() => setIsMapActive(true)}>
+              <Button type="button" variant="ghost" aria-label="Aktivér rutekort" className="absolute inset-0 z-10 h-full w-full rounded-none flex items-center justify-center bg-charcoal/30 cursor-pointer hover:bg-charcoal/30" onClick={() => setIsMapActive(true)}>
                 <span className="bg-background/90 text-charcoal px-5 py-2.5 rounded-full font-medium text-sm shadow-md">Klik for at interagere</span>
-              </button>
+              </Button>
             )}
             <iframe src="https://app.racedaymap.com/infinite-trails" className={`w-full h-[350px] md:h-[500px] border-0 ${isMapActive ? "pointer-events-auto" : "pointer-events-none"}`} allow="geolocation" loading="lazy" title="Infinite Trails rutekort" />
           </div>

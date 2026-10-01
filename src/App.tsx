@@ -18,6 +18,7 @@ import RibeiraSacra2026 from "./pages/destinations/RibeiraSacra2026";
 import Transylvania100 from "./pages/destinations/Transylvania100";
 import Transylvania27 from "./pages/destinations/Transylvania27";
 import InfiniteTrails from "./pages/destinations/InfiniteTrails";
+import InfiniteTrails27 from "./pages/destinations/InfiniteTrails27";
 import SwissAlps100 from "./pages/destinations/SwissAlps100";
 import LaBoucleDeLEtoile from "./pages/destinations/LaBoucleDeLEtoile";
 import KangNu26 from "./pages/destinations/KangNu26";
@@ -63,6 +64,7 @@ const App = () => (
             <Route path="/destinations/transylvania" element={<Transylvania100 />} />
             <Route path="/destinations/transylvania27" element={<Transylvania27 />} />
             <Route path="/destinations/infinite-trails" element={<InfiniteTrails />} />
+            <Route path="/destinations/infinite-trails27" element={<InfiniteTrails27 />} />
             <Route path="/destinations/swiss-alps-100" element={<SwissAlps100V2 />} />
             <Route path="/destinations/la-boucle-de-l-etoile" element={<LaBoucleDeLEtoile />} />
             <Route path="/destinations/kangnu26" element={<KangNu26V2 />} />

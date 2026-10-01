@@ -120,6 +120,14 @@ const destinations = [
     href: "/destinations/hengill27",
   },
   {
+    image: "/lovable-uploads/infinite-trails.jpg",
+    location: "Infinite Trails, Østrig",
+    date: "September 2027",
+    spots: "Åbner senere",
+    href: "/destinations/infinite-trails27",
+    testimonialDestination: "Infinite Trails",
+  },
+  {
     image: "/lovable-uploads/fyri-hero.jpg",
     location: "Fýri Trail, Norge",
     date: "September 2027",

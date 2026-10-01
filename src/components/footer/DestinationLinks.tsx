@@ -16,6 +16,7 @@ const destinations = [
   { name: "Træningslejr: Mallorca 🇪🇸", href: "/destinations/mallorca-training", spots: "Åben for tilmelding", year: "2027" },
   { name: "Transylvania 100 🇷🇴", href: "/destinations/transylvania27", spots: "Åben for tilmelding", year: "2027" },
   { name: "Hengill Ultra 🇮🇸", href: "/destinations/hengill27", spots: "Åben for tilmelding", year: "2027" },
+  { name: "Infinite Trails 🇦🇹", href: "/destinations/infinite-trails27", spots: "Åbner senere", year: "2027" },
   { name: "Fýri Trail 🇳🇴", href: "/destinations/fyri26", spots: "Åbner senere", year: "2027" },
 ];
 
