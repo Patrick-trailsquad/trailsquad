@@ -49,7 +49,7 @@ const InfiniteTrails27 = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center mt-24 md:mt-0">
           <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-yellow font-cabinet font-semibold text-sm uppercase mb-4">
-            3.–6. september 2027 · Bad Hofgastein, Østrig
+            2.–5. september 2027 · Bad Hofgastein, Østrig
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.6 }} className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-bold text-on-dark leading-[1.1] mb-6">
             Infinite Trails 2027

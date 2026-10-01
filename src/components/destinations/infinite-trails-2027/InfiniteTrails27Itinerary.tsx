@@ -3,43 +3,44 @@ import { Bus, Coffee, Footprints, Mountain, Plane, Trophy, Users, UtensilsCrosse
 const days = [
   {
     day: 1,
-    date: "fredag 3. september 2027",
-    title: "✈️ Udrejse til Østrig",
+    date: "torsdag 2. september 2027",
+    title: "✈️ Udrejse & shakeout",
     items: [
       { icon: Plane, text: "Fly fra København til München" },
-      { icon: Bus, text: "Transfer til Bad Hofgastein" },
-      { icon: Coffee, text: "Check-in på The Comodo" },
-      { icon: Users, text: "Startnumre, race brief og fælles forberedelse" },
+      { icon: Bus, text: "Transfer til Bad Hofgastein og check-in på The Comodo" },
+      { icon: Footprints, text: "17:00 – Global Meets Local Shake Out Run ved Felsentherme, Bad Gastein" },
+      { icon: Users, text: "19:30 – Trail Movie Night i Felsentherme" },
     ],
   },
   {
     day: 2,
-    date: "lørdag 4. september 2027",
-    title: "🏁 Løbsdag",
+    date: "fredag 3. september 2027",
+    title: "🎒 Registrering & race brief",
     items: [
-      { icon: Trophy, text: "Race day for 15K, 30K, 45K, 60K og holdstafetten" },
-      { icon: Mountain, text: "Alpine spor og bjergtoppe i Gasteinertal" },
-      { icon: Users, text: "Fejring med squaden i Athlete Garden" },
-      { icon: UtensilsCrossed, text: "Fælles middag efter løbet" },
+      { icon: Users, text: "Registrering og obligatorisk udstyrstjek" },
+      { icon: Mountain, text: "Expo i Alpenarena" },
+      { icon: Footprints, text: "15:00–18:00 – Marktlauf (Market Run) i Bad Hofgastein" },
+      { icon: Users, text: "16:00 – Race briefing på engelsk i Congress Center" },
+      { icon: UtensilsCrossed, text: "Fælles pastamiddag og tidlig sengetid" },
     ],
   },
   {
     day: 3,
-    date: "søndag 5. september 2027",
-    title: "♨️ Restitution & fællesskab",
+    date: "lørdag 4. september 2027",
+    title: "🏁 Løbsdag",
     items: [
-      { icon: Coffee, text: "Morgenmad og rolig start på dagen" },
-      { icon: Footprints, text: "Let restitutionstur i Bad Hofgastein" },
-      { icon: Users, text: "Eventets afslutning og fællesskab i Gastein" },
-      { icon: Mountain, text: "Tid til termalbad og bjergby" },
+      { icon: Trophy, text: "Start: 60K kl. 6:00 · 45K kl. 6:30 · hold kl. 7:00 · 30K kl. 7:30 · 15K kl. 7:45" },
+      { icon: Mountain, text: "Cheering Mile ved vandfaldet i Bad Gastein" },
+      { icon: Users, text: "Community Get-Together i Alpentherme efter målgang" },
+      { icon: Trophy, text: "20:30 – Prisoverrækkelse og Celebrate the Sport" },
     ],
   },
   {
     day: 4,
-    date: "mandag 6. september 2027",
-    title: "✈️ Hjemrejse",
+    date: "søndag 5. september 2027",
+    title: "🥞 Kaiserschmarren & hjemrejse",
     items: [
-      { icon: Coffee, text: "Morgenmad på hotellet" },
+      { icon: Coffee, text: "10:00–13:00 – Kaiserschmarren Party på Stubnerkogel" },
       { icon: Bus, text: "Transfer tilbage til München" },
       { icon: Plane, text: "Fly hjem til København" },
     ],
@@ -83,7 +84,7 @@ const InfiniteTrails27Itinerary = () => (
       </div>
     </div>
     <p className="text-center text-xs text-on-dark/50 mt-10">
-      Programmet er foreløbigt og tilpasses flytider og løbsarrangørens endelige program.
+      Programmet er foreløbigt og baseret på arrangørens program for 2026. Tider tilpasses flytider og det endelige 2027-program.
     </p>
   </div>
 );
