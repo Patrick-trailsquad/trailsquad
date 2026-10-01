@@ -21,7 +21,7 @@ const days = [
       { icon: Mountain, text: "Expo i Alpenarena" },
       { icon: Beer, text: "Fællesmiddag med et par store fadøl" },
       { icon: Users, text: "16:00 – Race briefing på engelsk i Congress Center" },
-      { icon: UtensilsCrossed, text: "Fælles pastamiddag og tidlig sengetid" },
+      { icon: UtensilsCrossed, text: "Fælles pastamiddag og tidligt i seng 🛌" },
     ],
   },
   {
