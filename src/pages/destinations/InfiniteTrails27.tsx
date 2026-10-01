@@ -41,7 +41,7 @@ const InfiniteTrails27 = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/80" />
 
         <div className="absolute top-6 left-6 z-20">
-          <Link to="/" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+          <Link to="/" className="flex items-center gap-2 text-on-dark/80 hover:text-on-dark transition-colors text-sm">
             <ArrowLeft className="w-4 h-4" />
             Trail Squad
           </Link>
@@ -51,23 +51,23 @@ const InfiniteTrails27 = () => {
           <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-yellow font-cabinet font-semibold text-sm uppercase mb-4">
             3.–6. september 2027 · Bad Hofgastein, Østrig
           </motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.6 }} className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.1] mb-6">
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.6 }} className="font-cabinet text-4xl md:text-6xl lg:text-7xl font-bold text-on-dark leading-[1.1] mb-6">
             Infinite Trails 2027
             <br />
             <span className="text-yellow">tilbage til Gastein</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+          <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-on-dark/80 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
             Vi vender tilbage til de østrigske alper. Du får bjergløb, termalbad og en erfaren dansk squad omkring dig hele vejen.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }} className="grid grid-cols-2 md:grid-cols-4 gap-3 text-primary-foreground/90 text-sm mb-10 max-w-3xl mx-auto">
+          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }} className="grid grid-cols-2 md:grid-cols-4 gap-3 text-on-dark/90 text-sm mb-10 max-w-3xl mx-auto">
             {[
               { icon: Shield, text: "Erfaring fra vores tur i 2026" },
               { icon: Plane, text: "Rejse og logistik håndteret" },
               { icon: Users, text: "Lille dansk gruppe" },
               { icon: Mountain, text: "15K til 60K og holdstafet" },
             ].map((item) => (
-              <div key={item.text} className="flex flex-col items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-xl px-3 py-4">
+              <div key={item.text} className="flex flex-col items-center gap-2 bg-on-dark/10 backdrop-blur-sm rounded-xl px-3 py-4">
                 <item.icon className="w-5 h-5 text-yellow" />
                 <span className="text-center leading-snug">{item.text}</span>
               </div>
@@ -77,17 +77,17 @@ const InfiniteTrails27 = () => {
           {!isMobile && (
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.85 }} className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button onClick={scrollToDetails} size="lg" className="rounded-full bg-yellow text-charcoal hover:bg-yellow/90 font-cabinet font-bold text-lg px-8">Se hvad du får</Button>
-              <Button onClick={scrollToWaitlist} variant="outline" size="lg" className="rounded-full border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-cabinet px-8">Skriv dig på ventelisten</Button>
+              <Button onClick={scrollToWaitlist} variant="outline" size="lg" className="rounded-full border-on-dark/40 bg-transparent text-on-dark hover:bg-on-dark/10 hover:text-on-dark font-cabinet px-8">Skriv dig på ventelisten</Button>
             </motion.div>
           )}
         </div>
-        <ChevronDown className="absolute bottom-8 left-1/2 -translate-x-1/2 w-6 h-6 text-primary-foreground/50 animate-bounce hidden md:block" />
+        <ChevronDown className="absolute bottom-8 left-1/2 -translate-x-1/2 w-6 h-6 text-on-dark/50 animate-bounce hidden md:block" />
       </section>
 
       {isMobile && (
         <div className="bg-charcoal px-6 py-6 flex flex-col gap-3">
           <Button onClick={scrollToDetails} size="lg" className="rounded-full bg-yellow text-charcoal hover:bg-yellow/90 font-cabinet font-bold">Se hvad du får</Button>
-          <Button onClick={scrollToWaitlist} variant="outline" size="lg" className="rounded-full border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">Skriv dig på ventelisten</Button>
+          <Button onClick={scrollToWaitlist} variant="outline" size="lg" className="rounded-full border-on-dark/40 bg-transparent text-on-dark hover:bg-on-dark/10 hover:text-on-dark">Skriv dig på ventelisten</Button>
         </div>
       )}
 
@@ -145,15 +145,15 @@ const InfiniteTrails27 = () => {
         <img src={heroImage} alt="Alpint terræn omkring Gastein" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-charcoal/70" />
         <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-primary-foreground mb-6">Én dal. Fem måder at opleve den.</h2>
-          <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed mb-10">Infinite Trails løber gennem Gasteinertals alpine enge, skovstier og bjergkamme. Vælg en individuel distance eller del cirka 100 kilometer som et hold på tre.</p>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-on-dark mb-6">Én dal. Fem måder at opleve den.</h2>
+          <p className="text-on-dark/80 text-lg md:text-xl leading-relaxed mb-10">Infinite Trails løber gennem Gasteinertals alpine enge, skovstier og bjergkamme. Vælg en individuel distance eller del cirka 100 kilometer som et hold på tre.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { label: "15K", value: "ca. 900 hm" },
               { label: "30K / 45K", value: "alpine distancer" },
               { label: "60K", value: "3 bjergtoppe" },
               { label: "Hold", value: "21K + 35K + 44K" },
-            ].map((item) => <div key={item.label}><p className="text-yellow font-cabinet font-bold mb-1">{item.label}</p><p className="text-primary-foreground/80 text-sm">{item.value}</p></div>)}
+            ].map((item) => <div key={item.label}><p className="text-yellow font-cabinet font-bold mb-1">{item.label}</p><p className="text-on-dark/80 text-sm">{item.value}</p></div>)}
           </div>
         </div>
       </section>
@@ -161,8 +161,8 @@ const InfiniteTrails27 = () => {
       <section className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-10">
-            <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-primary-foreground mb-4">Se løbet fra arrangøren</h2>
-            <p className="text-primary-foreground/60 text-lg">Bjergene, stemningen og de forskellige ruter i Gastein.</p>
+            <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-on-dark mb-4">Se løbet fra arrangøren</h2>
+            <p className="text-on-dark/60 text-lg">Bjergene, stemningen og de forskellige ruter i Gastein.</p>
           </div>
           <div className="rounded-xl overflow-hidden aspect-video shadow-lg">
             <iframe src="https://www.youtube.com/embed/Cu6Tg-eQ-cQ" title="Infinite Trails Bad Hofgastein" className="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy" />
@@ -202,8 +202,8 @@ const InfiniteTrails27 = () => {
       <section id="waitlist" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center bg-orange text-orange-foreground px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">TUREN ER ENDNU IKKE ÅBEN</div>
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-primary-foreground mb-4">Kom først på listen</h2>
-          <p className="text-primary-foreground/60 text-lg mb-10">Løbet er allerede udsolgt hos arrangøren. Skriv dig op, så kontakter vi dig, når Trail Squad-turen og vores pladser er klar.</p>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-on-dark mb-4">Kom først på listen</h2>
+          <p className="text-on-dark/70 text-lg mb-10">Løbet er allerede udsolgt hos arrangøren. Skriv dig op, så kontakter vi dig, når Trail Squad-turen og vores pladser er klar.</p>
           <div className="bg-background rounded-xl p-8 shadow-xl text-left"><InfiniteTrails27WaitlistForm /></div>
         </div>
       </section>

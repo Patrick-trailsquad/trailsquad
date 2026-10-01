@@ -48,10 +48,10 @@ const days = [
 
 const InfiniteTrails27Itinerary = () => (
   <div className="w-full">
-    <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-center text-primary-foreground mb-4">
+    <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-center text-on-dark mb-4">
       4 dage i de østrigske alper
     </h2>
-    <p className="text-center text-lg text-primary-foreground/70 mb-12 max-w-2xl mx-auto">
+    <p className="text-center text-lg text-on-dark/70 mb-12 max-w-2xl mx-auto">
       Fra København til Gastein — trailløb, termalbad og et stærkt fællesskab
     </p>
 
@@ -64,16 +64,16 @@ const InfiniteTrails27Itinerary = () => (
               <span className="font-cabinet text-[10px] md:text-xs font-bold text-charcoal leading-none">DAG</span>
               <span className="font-cabinet text-lg md:text-2xl font-bold text-charcoal leading-none">{day.day}</span>
             </div>
-            <div className="rounded-xl shadow-sm border bg-primary-foreground/10 backdrop-blur-md border-primary-foreground/20 p-5 md:p-6">
+            <div className="rounded-xl shadow-sm border bg-on-dark/10 backdrop-blur-md border-on-dark/20 p-5 md:p-6">
               <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-3">
-                <h3 className="font-cabinet text-xl md:text-2xl font-bold text-primary-foreground">{day.title}</h3>
-                <span className="text-sm font-medium text-primary-foreground/50">{day.date}</span>
+                <h3 className="font-cabinet text-xl md:text-2xl font-bold text-on-dark">{day.title}</h3>
+                <span className="text-sm font-medium text-on-dark/50">{day.date}</span>
               </div>
               <ul className="space-y-2.5">
                 {day.items.map((item) => (
                   <li key={item.text} className="flex items-start gap-3">
-                    <item.icon className="w-4 h-4 mt-1 shrink-0 text-primary-foreground/50" />
-                    <span className="text-primary-foreground/85">{item.text}</span>
+                    <item.icon className="w-4 h-4 mt-1 shrink-0 text-on-dark/50" />
+                    <span className="text-on-dark/85">{item.text}</span>
                   </li>
                 ))}
               </ul>
@@ -82,7 +82,7 @@ const InfiniteTrails27Itinerary = () => (
         ))}
       </div>
     </div>
-    <p className="text-center text-xs text-primary-foreground/50 mt-10">
+    <p className="text-center text-xs text-on-dark/50 mt-10">
       Programmet er foreløbigt og tilpasses flytider og løbsarrangørens endelige program.
     </p>
   </div>
