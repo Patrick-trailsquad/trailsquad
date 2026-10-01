@@ -66,6 +66,13 @@ export const DESTINATIONS: Destination[] = [
     published: true
   },
   {
+    id: 'infinite-trails27',
+    name: 'Infinite Trails 2027',
+    route: '/destinations/infinite-trails27',
+    status: 'upcoming' as const,
+    published: true
+  },
+  {
     id: 'fyri26',
     name: 'Fyri Trail 2027',
     route: '/destinations/fyri26',

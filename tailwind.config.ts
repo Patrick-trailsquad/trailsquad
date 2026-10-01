@@ -34,6 +34,7 @@ export default {
         },
         charcoal: '#2C3539',
         yellow: '#FFD700',
+        'on-dark': 'hsl(var(--primary-foreground))',
         orange: {
           DEFAULT: 'hsl(var(--orange))',
           foreground: 'hsl(var(--orange-foreground))'
