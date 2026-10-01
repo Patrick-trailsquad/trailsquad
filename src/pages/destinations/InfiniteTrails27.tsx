@@ -9,7 +9,7 @@ import { useIsMobile } from "../../hooks/use-mobile";
 import InfiniteTrailsTripVideoCTA from "../../components/destinations/infinite-trails/InfiniteTrailsTripVideoCTA";
 import InfiniteTrailsTestimonials from "../../components/destinations/infinite-trails/InfiniteTrailsTestimonials";
 import InfiniteTrailsAccommodation from "../../components/destinations/infinite-trails/InfiniteTrailsAccommodation";
-import InfiniteTrails27Itinerary from "../../components/destinations/infinite-trails-2027/InfiniteTrails27Itinerary";
+import SwissAlps100Itinerary from "../../components/destinations/swiss-alps-100/SwissAlps100Itinerary";
 import InfiniteTrails27WaitlistForm from "../../components/destinations/infinite-trails-2027/InfiniteTrails27WaitlistForm";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
@@ -196,7 +196,7 @@ const InfiniteTrails27 = () => {
       <section className="w-full relative overflow-hidden">
         <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${heroImage})` }} />
         <div className="absolute inset-0 bg-charcoal/70" />
-        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24"><InfiniteTrails27Itinerary /></div>
+        <div className="relative z-10 container mx-auto px-4 md:px-6 py-16 md:py-24"><SwissAlps100Itinerary variant="overlay" /></div>
       </section>
 
       <ShakeoutRunBanner />
