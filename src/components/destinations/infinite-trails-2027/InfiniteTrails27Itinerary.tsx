@@ -8,7 +8,7 @@ const days = [
     items: [
       { icon: Plane, text: "Fly fra København til München" },
       { icon: Bus, text: "Transfer til Bad Gastein og check-in på The Comodo" },
-      { icon: Users, text: "19:30 – Trail Movie Night i Felsentherme" },
+      { icon: UtensilsCrossed, text: "19:30 – Fælles middag på hotellet" },
     ],
   },
   {
