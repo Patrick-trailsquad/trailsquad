@@ -37,7 +37,7 @@ const days: { day: number; date: string; title: string; items: ItineraryItem[] }
     items: [
       { icon: Trophy, text: "Start: 60K kl. 6:00 · 45K kl. 6:30 · hold kl. 7:00 · 30K kl. 7:30 · 15K kl. 7:45" },
       { icon: Users, text: "Community Get-Together i Alpentherme efter målgang" },
-      { icon: Trophy, text: "20:30 – Prisoverrækkelse og Celebrate the Sport" },
+      { icon: Trophy, text: "Fællesmiddag med et par store fadøl" },
     ],
   },
   {
