@@ -13,8 +13,10 @@ import InfiniteTrails27Itinerary from "../../components/destinations/infinite-tr
 import InfiniteTrails27WaitlistForm from "../../components/destinations/infinite-trails-2027/InfiniteTrails27WaitlistForm";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
+import { assetUrl } from "../../lib/assetUrl";
+import heroAsset from "../../assets/infinite-trails-27-hero.png.asset.json";
 
-const heroImage = "/lovable-uploads/infinite-trails.jpg";
+const heroImage = assetUrl(heroAsset);
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -142,7 +144,7 @@ const InfiniteTrails27 = () => {
       </section>
 
       <section className="relative py-20 md:py-32 overflow-hidden">
-        <img src={heroImage} alt="Alpint terræn omkring Gastein" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <img src="/lovable-uploads/infinite-trails.jpg" alt="Alpint terræn omkring Gastein" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-charcoal/70" />
         <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-on-dark mb-6">Én dal. Fem måder at opleve den.</h2>
