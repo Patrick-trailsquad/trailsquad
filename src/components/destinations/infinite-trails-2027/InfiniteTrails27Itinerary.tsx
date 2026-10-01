@@ -22,7 +22,7 @@ const days: { day: number; date: string; title: string; items: ItineraryItem[] }
     date: "fredag 3. september 2027",
     title: "🎒 Registrering & race brief",
     items: [
-      { icon: Footprints, text: "17:00 – Global Meets Local Shake Out Run ved Felsentherme, Bad Gastein", scrollTo: "shakeout-run-section" },
+      { icon: Footprints, text: "Shake Out Run ved Felsentherme, Bad Gastein", scrollTo: "shakeout-run-section" },
       { icon: Users, text: "Registrering og obligatorisk udstyrstjek" },
       { icon: Mountain, text: "Expo i Alpenarena" },
       { icon: Beer, text: "Fællesmiddag med et par store fadøl" },
