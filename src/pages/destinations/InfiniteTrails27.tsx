@@ -144,7 +144,7 @@ const InfiniteTrails27 = () => {
       </section>
 
       <section className="relative py-20 md:py-32 overflow-hidden">
-        <img src={heroImage} alt="Alpint terræn omkring Gastein" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <img src="/lovable-uploads/infinite-trails.jpg" alt="Alpint terræn omkring Gastein" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-charcoal/70" />
         <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-on-dark mb-6">Én dal. Fem måder at opleve den.</h2>
