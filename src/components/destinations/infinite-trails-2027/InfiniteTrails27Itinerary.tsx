@@ -1,4 +1,4 @@
-import { Bus, Footprints, Mountain, Plane, Trophy, Users, UtensilsCrossed } from "lucide-react";
+import { Beer, Bus, Footprints, Mountain, Plane, Trophy, Users, UtensilsCrossed } from "lucide-react";
 
 const days = [
   {
@@ -19,7 +19,7 @@ const days = [
       { icon: Footprints, text: "17:00 – Global Meets Local Shake Out Run ved Felsentherme, Bad Gastein" },
       { icon: Users, text: "Registrering og obligatorisk udstyrstjek" },
       { icon: Mountain, text: "Expo i Alpenarena" },
-      { icon: Footprints, text: "15:00–18:00 – Marktlauf (Market Run) i Bad Hofgastein" },
+      { icon: Beer, text: "Fællesmiddag med et par store fadøl" },
       { icon: Users, text: "16:00 – Race briefing på engelsk i Congress Center" },
       { icon: UtensilsCrossed, text: "Fælles pastamiddag og tidlig sengetid" },
     ],
