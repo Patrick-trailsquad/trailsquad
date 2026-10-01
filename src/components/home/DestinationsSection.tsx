@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 import { useDestinationRatings } from "@/hooks/useDestinationRatings";
+import { assetUrl } from "@/lib/assetUrl";
+import infiniteTrails27Hero from "@/assets/infinite-trails-27-hero.png.asset.json";
+
+const INFINITE_TRAILS_27_HERO = assetUrl(infiniteTrails27Hero);
 
 const destinations = [
   {
