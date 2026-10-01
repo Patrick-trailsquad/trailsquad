@@ -39,7 +39,6 @@ const days = [
     date: "søndag 5. september 2027",
     title: "🥞 Kaiserschmarren & hjemrejse",
     items: [
-      { icon: Coffee, text: "10:00–13:00 – Kaiserschmarren Party på Stubnerkogel" },
       { icon: Bus, text: "Transfer tilbage til München" },
       { icon: Plane, text: "Fly hjem til København" },
     ],
