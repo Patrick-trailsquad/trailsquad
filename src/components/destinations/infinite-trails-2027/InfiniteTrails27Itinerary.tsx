@@ -16,6 +16,7 @@ const days = [
     date: "fredag 3. september 2027",
     title: "🎒 Registrering & race brief",
     items: [
+      { icon: Footprints, text: "17:00 – Global Meets Local Shake Out Run ved Felsentherme, Bad Gastein" },
       { icon: Users, text: "Registrering og obligatorisk udstyrstjek" },
       { icon: Mountain, text: "Expo i Alpenarena" },
       { icon: Footprints, text: "15:00–18:00 – Marktlauf (Market Run) i Bad Hofgastein" },
