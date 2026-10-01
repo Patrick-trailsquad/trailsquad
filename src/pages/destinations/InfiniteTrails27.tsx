@@ -13,8 +13,10 @@ import InfiniteTrails27Itinerary from "../../components/destinations/infinite-tr
 import InfiniteTrails27WaitlistForm from "../../components/destinations/infinite-trails-2027/InfiniteTrails27WaitlistForm";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
 import Footer from "../../components/Footer";
+import { assetUrl } from "../../lib/assetUrl";
+import heroAsset from "../../assets/infinite-trails-27-hero.png.asset.json";
 
-const heroImage = "/lovable-uploads/infinite-trails.jpg";
+const heroImage = assetUrl(heroAsset);
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
