@@ -125,9 +125,8 @@ export const TrainingRegistrationModal = ({
       try {
         await fetch('https://hooks.zapier.com/hooks/catch/21931910/u53jr77/', {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
           mode: "no-cors",
-          body: JSON.stringify(webhookData),
+          body: new URLSearchParams(Object.fromEntries(Object.entries(webhookData).map(([k, v]) => [k, String(v)]))),
         });
       } catch (webhookError) {
         console.error("Webhook error:", webhookError);

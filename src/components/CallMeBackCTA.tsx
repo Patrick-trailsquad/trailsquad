@@ -45,11 +45,8 @@ const CallMeBackCTA = () => {
 
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
         mode: 'no-cors',
-        body: JSON.stringify({
+        body: new URLSearchParams({
           full_name: fullName,
           phone_number: phoneNumber,
           request_type: 'call_back_request',

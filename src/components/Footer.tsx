@@ -34,11 +34,8 @@ const Footer = () => {
       
       const response = await fetch(webhookUrl, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
         mode: "no-cors",
-        body: JSON.stringify({
+        body: new URLSearchParams({
           email: email,
           type: "newsletter_signup",
           timestamp: new Date().toISOString(),

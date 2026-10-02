@@ -63,9 +63,8 @@ const Ilulissat27WaitlistForm = () => {
     try {
       await fetch(WEBHOOK_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         mode: "no-cors",
-        body: JSON.stringify({
+        body: new URLSearchParams({
           name: trimmedName,
           phone: trimmedPhone,
           email: trimmedEmail,
