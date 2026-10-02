@@ -39,11 +39,8 @@ const VoucherCTA: FC = () => {
     try {
       await fetch('https://hooks.zapier.com/hooks/catch/21931910/uka1iy0/', {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
         mode: "no-cors",
-        body: JSON.stringify({
+        body: new URLSearchParams({
           name: name,
           email: email,
           timestamp: new Date().toISOString(),
