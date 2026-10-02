@@ -136,7 +136,7 @@ const destinations = [
     location: "Fýri Trail, Norge",
     date: "September 2027",
     spots: "Åbner senere",
-    href: "/destinations/fyri26",
+    href: "/destinations/fyri27",
   },
 ];
 

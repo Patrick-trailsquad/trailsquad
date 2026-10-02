@@ -62,7 +62,7 @@ export const SHARE_META: ShareMeta[] = [
     image: "/lovable-uploads/hengill27-hero.jpg",
   },
   {
-    path: "/destinations/fyri26",
+    path: "/destinations/fyri27",
     title: "Fýri Trail, Norge 2027 – Trail Squad",
     description:
       "Norske fjelde, lækkert resort og trailløb i verdensklasse. Fýri Trail med Trail Squad i september 2027.",

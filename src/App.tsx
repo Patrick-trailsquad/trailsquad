@@ -68,7 +68,9 @@ const App = () => (
             <Route path="/destinations/swiss-alps-100" element={<SwissAlps100V2 />} />
             <Route path="/destinations/la-boucle-de-l-etoile" element={<LaBoucleDeLEtoile />} />
             <Route path="/destinations/kangnu26" element={<KangNu26V2 />} />
+            <Route path="/destinations/fyri27" element={<Fyri26 />} />
             <Route path="/destinations/fyri26" element={<Fyri26 />} />
+
             <Route path="/destinations/mallorca-training" element={<MallorcaTraining />} />
             <Route path="/destinations/hengill27" element={<Hengill27 />} />
             <Route path="/destinations/ilulissat27" element={<Ilulissat27 />} />

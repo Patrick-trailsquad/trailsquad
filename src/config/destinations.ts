@@ -75,7 +75,7 @@ export const DESTINATIONS: Destination[] = [
   {
     id: 'fyri26',
     name: 'Fyri Trail 2027',
-    route: '/destinations/fyri26',
+    route: '/destinations/fyri27',
     status: 'open' as const,
     published: true
   }

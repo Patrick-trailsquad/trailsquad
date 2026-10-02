@@ -137,7 +137,7 @@ const Footer = () => {
                       <a href="/squadtraining" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                         Squad Training
                       </a>
-                      <a href="/destinations/fyri26" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                      <a href="/destinations/fyri27" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                         Fyri Trail
                       </a>
                       <a href="/destinations/mallorca-training" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
@@ -166,7 +166,7 @@ const Footer = () => {
                     <a href="/squadtraining" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                       Squad Training
                     </a>
-                    <a href="/destinations/fyri26" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+                    <a href="/destinations/fyri27" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                       Fyri Trail
                     </a>
                     <a href="/destinations/mallorca-training" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
