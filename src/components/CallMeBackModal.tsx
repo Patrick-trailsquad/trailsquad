@@ -180,7 +180,7 @@ const CallMeBackModal = ({ open, onDismiss, destinationName }: CallMeBackModalPr
                   <Button
                     type="submit"
                     disabled={isLoading || !fullName || !phone || phone.trim() === '+45'}
-                    className="w-full py-4 h-auto bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg border-0"
+                    className="w-full h-12 bg-yellow text-charcoal hover:bg-yellow/90 rounded-full font-cabinet font-bold text-lg shadow-md border-0"
                   >
                     {isLoading ? 'Sender...' : 'Send anmodning'}
                   </Button>
