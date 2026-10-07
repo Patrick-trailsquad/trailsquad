@@ -41,7 +41,7 @@ const days = [
     title: "✈️ Farvel til Sóller",
     items: [
       { icon: Coffee, text: "Morgenmad på hotellet" },
-      { icon: Footprints, text: "Afsluttende let social run" },
+      { icon: Footprints, text: "Sidste trailtræning - fuld dag til sidste lange tur" },
       { icon: Bus, text: "Transport tilbage til Palma" },
       { icon: Plane, text: "18:35 - Fly hjem til København via Frankfurt (direkte fly via SAS er blevet aflyst, og dette er bedste alternativ)." },
       { icon: Clock, text: "Ankomst i København 23:45" },
