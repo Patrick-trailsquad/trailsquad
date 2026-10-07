@@ -136,6 +136,31 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
     );
   }
 
+  if (variant === 'banner') {
+    return (
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6 max-w-xl text-center">
+          <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-3">
+            🤔 Stadig i tvivl?
+          </h2>
+          <p className="font-cabinet text-xl md:text-2xl text-charcoal mb-2">
+            Lad Patrick eller Emil ringe dig op
+          </p>
+          <p className="text-charcoal/60 text-lg mb-8">
+            Få svar på spørgsmål om niveau, træning, værelser, program osv.
+          </p>
+          <Button
+            onClick={() => setShowPhoneInput(true)}
+            className="bg-yellow text-charcoal hover:bg-yellow/90 rounded-full font-cabinet font-bold text-lg px-8 h-12 shadow-md border-0"
+          >
+            <Phone className="h-5 w-5" />
+            Ja tak – ring mig op
+          </Button>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <Button
       onClick={() => setShowPhoneInput(true)}
