@@ -99,7 +99,7 @@ const MallorcaTraining = () => {
               { icon: Sun, text: "Sol og bjerge på Mallorca" },
               { icon: Users, text: "Lille dansk løbegruppe" },
               { icon: Dumbbell, text: "Træning for alle niveauer" },
-              { icon: Tag, text: "Direkte fly og transport" },
+              { icon: Tag, text: "Priser fra 9.200 kr" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-3 py-4">
                 <item.icon className="w-5 h-5 text-[#FFDC00]" />
