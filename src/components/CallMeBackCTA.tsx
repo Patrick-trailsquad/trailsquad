@@ -1,3 +1,5 @@
+// ============= Full file contents =============
+
 import React, { useState } from 'react';
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -171,15 +173,10 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
     return (
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex items-center justify-center gap-6 lg:gap-12">
-            <img
-              src={patrickPortrait}
-              alt="Patrick fra Trail Squad"
-              className="hidden md:block w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl shrink-0"
-            />
-            <div className="max-w-xl text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-16">
+            <div className="max-w-xl text-center md:text-left">
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-3">
-                Har du spørgsmål?
+                🤔 Stadig i tvivl?
               </h2>
               <p className="font-cabinet text-xl md:text-2xl text-charcoal mb-2">
                 Lad Patrick eller Emil ringe dig op
@@ -195,11 +192,18 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
                 Ja tak – ring mig op
               </Button>
             </div>
-            <img
-              src={emilPortrait}
-              alt="Emil fra Trail Squad"
-              className="hidden md:block w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl shrink-0"
-            />
+            <div className="hidden md:flex items-center shrink-0">
+              <img
+                src={patrickPortrait}
+                alt="Patrick fra Trail Squad"
+                className="w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl -rotate-6 relative z-0"
+              />
+              <img
+                src={emilPortrait}
+                alt="Emil fra Trail Squad"
+                className="w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl rotate-6 -ml-10 lg:-ml-12 relative z-10"
+              />
+            </div>
           </div>
         </div>
       </section>
