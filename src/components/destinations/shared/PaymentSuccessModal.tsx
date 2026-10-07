@@ -4,13 +4,10 @@ import { X, PartyPopper } from "lucide-react";
 import finisherAsset from "@/assets/finisher-celebration.png.asset.json";
 import { assetUrl } from "@/lib/assetUrl";
 
-const AUTO_CLOSE_SECONDS = 10;
-
 const PaymentSuccessModal = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const paymentStatus = searchParams.get("payment");
   const [open, setOpen] = useState(paymentStatus === "success");
-  const [secondsLeft, setSecondsLeft] = useState(AUTO_CLOSE_SECONDS);
   const sentRef = useRef(false);
 
   const closeModal = () => {
@@ -26,25 +23,18 @@ const PaymentSuccessModal = () => {
     sessionStorage.removeItem("deposit_booking_data");
   }, [paymentStatus]);
 
+  // Luk med Escape-tasten
   useEffect(() => {
     if (!open) return;
-    const interval = setInterval(() => {
-      setSecondsLeft((s) => {
-        if (s <= 1) {
-          clearInterval(interval);
-          closeModal();
-          return 0;
-        }
-        return s - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   if (!open) return null;
-
-  const progress = (secondsLeft / AUTO_CLOSE_SECONDS) * 100;
 
   return (
     <div
@@ -101,19 +91,6 @@ const PaymentSuccessModal = () => {
           >
             Fortsæt
           </button>
-
-          {/* Auto-luk */}
-          <div className="mt-4">
-            <div className="h-1 w-full bg-gray-200 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-yellow rounded-full transition-all duration-1000 ease-linear"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
-            <p className="text-xs text-foreground/50 mt-2">
-              Lukker automatisk om {secondsLeft} sek.
-            </p>
-          </div>
         </div>
       </div>
     </div>
