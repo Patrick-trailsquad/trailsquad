@@ -33,7 +33,12 @@ const CallMeBackCTA = ({ variant = 'default', destinationName }: CallMeBackCTAPr
                 Lad Patrick eller Emil ringe dig op
               </p>
               <p className="text-charcoal/60 text-lg mb-8">
-                Få svar på spørgsmål om niveau, træning, værelser, program osv.
+                Vi kan fortælle mere om:
+                <br />- Om træningen passer til dit niveau
+                <br />- Hvordan dagene foregår
+                <br />- Hvem der typisk tager med
+                <br />- Værelser og praktiske detaljer
+                <br />- Hvad du får for pengene
               </p>
               <Button
                 onClick={() => setModalOpen(true)}
