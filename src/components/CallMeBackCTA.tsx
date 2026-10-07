@@ -87,7 +87,7 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
   }
 
   if (showPhoneInput) {
-    return (
+    const form = (
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Honeypot: invisible to humans, bots fill it */}
         <input
@@ -116,15 +116,15 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
           onChange={setPhoneNumber}
         />
         <div className="flex gap-2">
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             disabled={isLoading || !phoneNumber || !fullName}
             className="flex-1 bg-green-600 text-white hover:bg-green-700 border-0"
           >
             {isLoading ? "Sender..." : "Send anmodning"}
           </Button>
-          <Button 
-            type="button" 
+          <Button
+            type="button"
             className="bg-red-600 text-white hover:bg-red-700 border-0"
             onClick={() => setShowPhoneInput(false)}
             disabled={isLoading}
@@ -134,6 +134,21 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
         </div>
       </form>
     );
+
+    if (variant === 'banner') {
+      return (
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-6 max-w-xl text-center">
+            <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              🤔 Stadig i tvivl?
+            </h2>
+            <div className="text-left">{form}</div>
+          </div>
+        </section>
+      );
+    }
+
+    return form;
   }
 
   if (variant === 'banner') {
