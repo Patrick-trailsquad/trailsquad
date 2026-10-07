@@ -43,7 +43,7 @@ const days = [
       { icon: Footprints, text: "Afsluttende let social run" },
       { icon: Coffee, text: "Morgenmad på hotellet" },
       { icon: Bus, text: "Transport tilbage til Palma" },
-      { icon: Plane, text: "Fly hjem til København" },
+      { icon: Plane, text: "18:35 - Fly hjem til København via Frankfurt (direkte fly via SAS er blevet aflyst, og dette er bedste alternativ)." },
     ],
   },
 ];
