@@ -8,6 +8,7 @@ import MallorcaTrainingItinerary from "../../components/destinations/mallorca-tr
 import MallorcaTrainingAccommodation from "../../components/destinations/mallorca-training/MallorcaTrainingAccommodation";
 import MallorcaTrainingPricingSection from "../../components/destinations/mallorca-training/MallorcaTrainingPricingSection";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
+import PaymentSuccessModal from "../../components/destinations/shared/PaymentSuccessModal";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import { assetUrl } from "@/lib/assetUrl";
@@ -41,6 +42,7 @@ const MallorcaTraining = () => {
 
   return (
     <div className="min-h-screen bg-stone">
+      <PaymentSuccessModal />
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
