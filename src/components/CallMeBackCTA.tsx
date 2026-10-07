@@ -176,7 +176,7 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
           <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 lg:gap-16">
             <div className="max-w-xl text-center md:text-left">
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-3">
-                🤔 Har du spørgsmål?
+                Har du spørgsmål? 🙋
               </h2>
               <p className="font-cabinet text-xl md:text-2xl text-charcoal mb-2">
                 Lad Patrick eller Emil ringe dig op
