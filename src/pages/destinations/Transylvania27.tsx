@@ -5,7 +5,7 @@ import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Pl
 import { motion } from "framer-motion";
 import Transylvania27Itinerary from "../../components/destinations/transylvania27/Transylvania27Itinerary";
 import Transylvania27PricingSection from "../../components/destinations/transylvania27/Transylvania27PricingSection";
-import DepositPaymentBanner from "../../components/destinations/shared/DepositPaymentBanner";
+import PaymentSuccessModal from "../../components/destinations/shared/PaymentSuccessModal";
 import CallMeBackPopup from "../../components/CallMeBackPopup";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
@@ -33,7 +33,7 @@ const Transylvania27 = () => {
 
   return (
     <div className="min-h-screen bg-stone">
-      <DepositPaymentBanner />
+      <PaymentSuccessModal />
       <CallMeBackPopup destinationName="Transylvania 100 2027" />
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
