@@ -166,23 +166,37 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
   if (variant === 'banner') {
     return (
       <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-xl text-center">
-          <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-3">
-            Har du spørgsmål?
-          </h2>
-          <p className="font-cabinet text-xl md:text-2xl text-charcoal mb-2">
-            Lad Patrick eller Emil ringe dig op
-          </p>
-          <p className="text-charcoal/60 text-lg mb-8">
-            Få svar på spørgsmål om niveau, træning, værelser, program osv.
-          </p>
-          <Button
-            onClick={() => setShowPhoneInput(true)}
-            className="bg-yellow text-charcoal hover:bg-yellow/90 rounded-full font-cabinet font-bold text-lg px-8 h-12 shadow-md border-0"
-          >
-            <Phone className="h-5 w-5" />
-            Ja tak – ring mig op
-          </Button>
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-center gap-6 lg:gap-12">
+            <img
+              src={patrickPortrait.url}
+              alt="Patrick fra Trail Squad"
+              className="hidden md:block w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl shrink-0"
+            />
+            <div className="max-w-xl text-center">
+              <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-3">
+                Har du spørgsmål?
+              </h2>
+              <p className="font-cabinet text-xl md:text-2xl text-charcoal mb-2">
+                Lad Patrick eller Emil ringe dig op
+              </p>
+              <p className="text-charcoal/60 text-lg mb-8">
+                Få svar på spørgsmål om niveau, træning, værelser, program osv.
+              </p>
+              <Button
+                onClick={() => setShowPhoneInput(true)}
+                className="bg-yellow text-charcoal hover:bg-yellow/90 rounded-full font-cabinet font-bold text-lg px-8 h-12 shadow-md border-0"
+              >
+                <Phone className="h-5 w-5" />
+                Ja tak – ring mig op
+              </Button>
+            </div>
+            <img
+              src={emilPortrait.url}
+              alt="Emil fra Trail Squad"
+              className="hidden md:block w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl shrink-0"
+            />
+          </div>
         </div>
       </section>
     );
