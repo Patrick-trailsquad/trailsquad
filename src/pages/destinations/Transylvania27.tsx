@@ -33,7 +33,7 @@ const Transylvania27 = () => {
 
   return (
     <div className="min-h-screen bg-stone">
-      <DepositPaymentBanner />
+      <PaymentSuccessModal />
       <CallMeBackPopup destinationName="Transylvania 100 2027" />
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
