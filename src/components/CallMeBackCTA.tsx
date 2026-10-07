@@ -7,8 +7,12 @@ import { Phone, CheckCircle2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { isBotSubmission } from '@/lib/spamGuard';
-import patrickPortrait from '@/assets/patrick-portrait.png.asset.json';
-import emilPortrait from '@/assets/emil-portrait.png.asset.json';
+import { assetUrl } from '@/lib/assetUrl';
+import patrickPortraitAsset from '@/assets/patrick-portrait.png.asset.json';
+import emilPortraitAsset from '@/assets/emil-portrait.png.asset.json';
+
+const patrickPortrait = assetUrl(patrickPortraitAsset);
+const emilPortrait = assetUrl(emilPortraitAsset);
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/u13r20b/';
 
