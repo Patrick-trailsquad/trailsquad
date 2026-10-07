@@ -173,7 +173,7 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
     return (
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-16">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 lg:gap-16">
             <div className="max-w-xl text-center md:text-left">
               <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-3">
                 🤔 Stadig i tvivl?
@@ -192,16 +192,16 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
                 Ja tak – ring mig op
               </Button>
             </div>
-            <div className="hidden md:flex items-center shrink-0">
+            <div className="flex items-center justify-center shrink-0">
               <img
                 src={patrickPortrait}
                 alt="Patrick fra Trail Squad"
-                className="w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl -rotate-6 relative z-0"
+                className="w-28 h-36 md:w-40 lg:w-48 md:h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl -rotate-6 relative z-0"
               />
               <img
                 src={emilPortrait}
                 alt="Emil fra Trail Squad"
-                className="w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl rotate-6 -ml-10 lg:-ml-12 relative z-10"
+                className="w-28 h-36 md:w-40 lg:w-48 md:h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl rotate-6 -ml-6 md:-ml-10 lg:-ml-12 relative z-10"
               />
             </div>
           </div>
