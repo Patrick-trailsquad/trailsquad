@@ -9,6 +9,7 @@ import Hengill27Accommodation from "../../components/destinations/hengill27/Heng
 import Hengill27RaceVideo from "../../components/destinations/hengill27/Hengill27RaceVideo";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
 import ShakeoutRunBanner from "../../components/home/ShakeoutRunBanner";
+import PaymentSuccessModal from "../../components/destinations/shared/PaymentSuccessModal";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 
@@ -30,6 +31,7 @@ const Hengill27 = () => {
 
   return (
     <div className="min-h-screen bg-stone">
+      <PaymentSuccessModal />
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden pb-16 md:pb-0">
         <img
