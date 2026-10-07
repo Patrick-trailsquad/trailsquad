@@ -2,7 +2,7 @@ import { useState } from "react";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Sun, Tag, Dumbbell } from "lucide-react";
+import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Sun, Plane, Tag, Dumbbell } from "lucide-react";
 import { motion } from "framer-motion";
 import MallorcaTrainingItinerary from "../../components/destinations/mallorca-training/MallorcaTrainingItinerary";
 import MallorcaTrainingAccommodation from "../../components/destinations/mallorca-training/MallorcaTrainingAccommodation";
@@ -99,7 +99,7 @@ const MallorcaTraining = () => {
               { icon: Sun, text: "Sol og bjerge på Mallorca" },
               { icon: Users, text: "Lille dansk løbegruppe" },
               { icon: Dumbbell, text: "Træning for alle niveauer" },
-              { icon: Plane, text: "Direkte fly og transport" },
+              { icon: Tag, text: "Direkte fly og transport" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-3 py-4">
                 <item.icon className="w-5 h-5 text-[#FFDC00]" />
