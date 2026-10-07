@@ -2,7 +2,7 @@ import { useState } from "react";
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Sun, Plane, Dumbbell } from "lucide-react";
+import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Sun, Tag, Dumbbell } from "lucide-react";
 import { motion } from "framer-motion";
 import MallorcaTrainingItinerary from "../../components/destinations/mallorca-training/MallorcaTrainingItinerary";
 import MallorcaTrainingAccommodation from "../../components/destinations/mallorca-training/MallorcaTrainingAccommodation";
