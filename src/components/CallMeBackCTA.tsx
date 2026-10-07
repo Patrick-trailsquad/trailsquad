@@ -34,11 +34,11 @@ const CallMeBackCTA = ({ variant = 'default', destinationName }: CallMeBackCTAPr
               </p>
               <p className="text-charcoal/60 text-lg mb-8">
                 Vi kan fortælle mere om:
-                <br />- Om træningen passer til dit niveau
-                <br />- Hvordan dagene foregår
-                <br />- Hvem der typisk tager med
-                <br />- Værelser og praktiske detaljer
-                <br />- Hvad du får for pengene
+                <br />• Om træningen passer til dit niveau
+                <br />• Hvordan dagene foregår
+                <br />• Hvem der typisk tager med
+                <br />• Værelser og praktiske detaljer
+                <br />• Hvad du får for pengene
               </p>
               <Button
                 onClick={() => setModalOpen(true)}
