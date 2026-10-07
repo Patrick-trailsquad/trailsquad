@@ -166,7 +166,7 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <h2 className="font-cabinet text-3xl md:text-4xl font-bold text-charcoal mb-3">
-            🤔 Stadig i tvivl?
+            Har du spørgsmål?
           </h2>
           <p className="font-cabinet text-xl md:text-2xl text-charcoal mb-2">
             Lad Patrick eller Emil ringe dig op
