@@ -9,7 +9,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { isBotSubmission } from '@/lib/spamGuard';
 import { assetUrl } from '@/lib/assetUrl';
 import patrickPortraitAsset from '@/assets/patrick-portrait.png.asset.json';
-import emilPortraitAsset from '@/assets/emil-portrait.png.asset.json';
+import emilPortraitAsset from '@/assets/emil-portrait-2.png.asset.json';
 
 const patrickPortrait = assetUrl(patrickPortraitAsset);
 const emilPortrait = assetUrl(emilPortraitAsset);
