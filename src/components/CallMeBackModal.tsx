@@ -182,7 +182,7 @@ const CallMeBackModal = ({ open, onDismiss, destinationName }: CallMeBackModalPr
                     disabled={isLoading || !fullName || !phone || phone.trim() === '+45'}
                     className="w-full h-12 bg-yellow text-charcoal hover:bg-yellow/90 rounded-full font-cabinet font-bold text-lg shadow-md border-0"
                   >
-                    {isLoading ? 'Sender...' : 'Send anmodning'}
+                    {isLoading ? 'Sender...' : '📞 Ja tak - ring mig op'}
                   </Button>
                   <button
                     type="button"
