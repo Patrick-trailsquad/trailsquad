@@ -78,12 +78,22 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
   };
 
   if (isSubmitted) {
-    return (
+    const confirmation = (
       <div className="bg-green-50 rounded-full p-4 flex items-center justify-center gap-2 border border-green-200">
         <CheckCircle2 className="h-4 w-4 text-green-600" />
         <span className="text-green-800 font-medium">Vi ringer til dig snarest!</span>
       </div>
     );
+
+    if (variant === 'banner') {
+      return (
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-6 max-w-xl text-center">{confirmation}</div>
+        </section>
+      );
+    }
+
+    return confirmation;
   }
 
   if (showPhoneInput) {
