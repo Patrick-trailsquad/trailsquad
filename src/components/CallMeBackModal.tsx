@@ -102,7 +102,7 @@ const CallMeBackModal = ({ open, onDismiss, destinationName }: CallMeBackModalPr
         className="relative w-full max-w-md bg-stone-50 rounded-2xl shadow-2xl border border-stone-200 overflow-hidden animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="h-2 w-full bg-gradient-to-r from-orange via-yellow-400 to-orange" />
+        <div className="h-2 w-full bg-gradient-to-r from-orange via-yellow to-orange" />
 
         <button
           type="button"
