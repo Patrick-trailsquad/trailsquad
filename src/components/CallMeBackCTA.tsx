@@ -10,7 +10,11 @@ import { isBotSubmission } from '@/lib/spamGuard';
 
 const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21931910/u13r20b/';
 
-const CallMeBackCTA = () => {
+interface CallMeBackCTAProps {
+  variant?: 'default' | 'banner';
+}
+
+const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
   const [showPhoneInput, setShowPhoneInput] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [fullName, setFullName] = useState('');
