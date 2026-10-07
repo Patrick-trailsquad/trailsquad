@@ -1,4 +1,4 @@
-import { Plane, Bus, Coffee, UtensilsCrossed, Footprints, Mountain, Dumbbell, Sun, Heart } from "lucide-react";
+import { Plane, Bus, Coffee, UtensilsCrossed, Footprints, Mountain, Dumbbell, Sun, Heart, Clock } from "lucide-react";
 
 const days = [
   {
@@ -44,6 +44,7 @@ const days = [
       { icon: Coffee, text: "Morgenmad på hotellet" },
       { icon: Bus, text: "Transport tilbage til Palma" },
       { icon: Plane, text: "18:35 - Fly hjem til København via Frankfurt (direkte fly via SAS er blevet aflyst, og dette er bedste alternativ)." },
+      { icon: Clock, text: "Ankomst i København 23:45" },
     ],
   },
 ];
