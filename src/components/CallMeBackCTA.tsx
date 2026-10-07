@@ -173,7 +173,7 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-center gap-6 lg:gap-12">
             <img
-              src={patrickPortrait.url}
+              src={patrickPortrait}
               alt="Patrick fra Trail Squad"
               className="hidden md:block w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl shrink-0"
             />
@@ -196,7 +196,7 @@ const CallMeBackCTA = ({ variant = 'default' }: CallMeBackCTAProps) => {
               </Button>
             </div>
             <img
-              src={emilPortrait.url}
+              src={emilPortrait}
               alt="Emil fra Trail Squad"
               className="hidden md:block w-40 lg:w-48 h-52 lg:h-64 object-cover rounded-2xl border-4 border-yellow shadow-xl shrink-0"
             />
