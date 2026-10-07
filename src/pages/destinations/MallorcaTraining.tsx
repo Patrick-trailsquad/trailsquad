@@ -154,9 +154,6 @@ const MallorcaTraining = () => {
         </div>
       )}
 
-      {/* ─── RING MIG OP CTA ─── */}
-      <CallMeBackCTA variant="banner" />
-
       {/* ─── IS THIS FOR YOU? ─── */}
       <section className="py-16 md:py-24 bg-stone">
         <div className="container mx-auto px-6 max-w-3xl text-center">
@@ -192,6 +189,9 @@ const MallorcaTraining = () => {
           </div>
         </div>
       </section>
+
+      {/* ─── RING MIG OP CTA ─── */}
+      <CallMeBackCTA variant="banner" />
 
       {/* ─── 4-DAGS PLAN ─── */}
       <section className="w-full relative overflow-hidden">
