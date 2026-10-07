@@ -40,8 +40,8 @@ const days = [
     date: "mandag 8. februar 2027",
     title: "✈️ Farvel til Sóller",
     items: [
-      { icon: Footprints, text: "Afsluttende let social run" },
       { icon: Coffee, text: "Morgenmad på hotellet" },
+      { icon: Footprints, text: "Afsluttende let social run" },
       { icon: Bus, text: "Transport tilbage til Palma" },
       { icon: Plane, text: "18:35 - Fly hjem til København via Frankfurt (direkte fly via SAS er blevet aflyst, og dette er bedste alternativ)." },
       { icon: Clock, text: "Ankomst i København 23:45" },
