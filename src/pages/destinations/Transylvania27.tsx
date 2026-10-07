@@ -5,7 +5,7 @@ import { ArrowLeft, CheckCircle, Mountain, Users, Heart, Shield, ChevronDown, Pl
 import { motion } from "framer-motion";
 import Transylvania27Itinerary from "../../components/destinations/transylvania27/Transylvania27Itinerary";
 import Transylvania27PricingSection from "../../components/destinations/transylvania27/Transylvania27PricingSection";
-import DepositPaymentBanner from "../../components/destinations/shared/DepositPaymentBanner";
+import PaymentSuccessModal from "../../components/destinations/shared/PaymentSuccessModal";
 import CallMeBackPopup from "../../components/CallMeBackPopup";
 import TransylvaniaAccommodation from "../../components/destinations/transylvania/TransylvaniaAccommodation";
 import TransylvaniaTestimonials from "../../components/destinations/transylvania/TransylvaniaTestimonials";
