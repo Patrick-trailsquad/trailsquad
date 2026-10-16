@@ -294,7 +294,7 @@ const Ilulissat27 = () => {
       </section>
 
       {/* ─── RESTAURANT EGEDE ─── */}
-      <section className="py-16 md:py-24 bg-charcoal">
+      <section id="restaurant" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <motion.div
