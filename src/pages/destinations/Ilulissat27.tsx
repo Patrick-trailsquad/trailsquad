@@ -168,7 +168,7 @@ const Ilulissat27 = () => {
               "Du vil se isbjerge fra kajak ved midnat",
               "Du foretrækker fællesskab frem for at træne alene",
               "Du vil bo tæt på naturen i en grønlandsk bygd",
-              "Du har lyst til at fange din egen aftensmad 🎣",
+              "Du er frisk på at få en oplevelse for livet!",
             ].map((item, i) => (
               <motion.div
                 key={i}
