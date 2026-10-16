@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves, MapPin, UtensilsCrossed, Sandwich, Landmark, Info } from "lucide-react";
+import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves, MapPin, Info } from "lucide-react";
 import { motion } from "framer-motion";
 import Ilulissat27Itinerary from "../../components/destinations/ilulissat27/Ilulissat27Itinerary";
 import Ilulissat27Accommodation from "../../components/destinations/ilulissat27/Ilulissat27Accommodation";
@@ -347,20 +347,6 @@ const Ilulissat27 = () => {
                 mere end bare et måltid.
               </p>
 
-              <ul className="space-y-4 mb-8">
-                {[
-                  { icon: UtensilsCrossed, text: "Signaturmiddag sammensat efter sæsonens råvarer" },
-                  { icon: Sandwich, text: "Luksus madpakke med ud på løbeturen" },
-                  { icon: Landmark, text: "Middag i historiske rammer fra 1741" },
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-white/75">
-                    <span className="w-8 h-8 rounded-full bg-yellow/15 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-4 h-4 text-yellow" />
-                    </span>
-                    <span className="leading-snug pt-1">{item.text}</span>
-                  </li>
-                ))}
-              </ul>
 
               <p className="flex items-start gap-2 text-white/45 text-sm">
                 <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
