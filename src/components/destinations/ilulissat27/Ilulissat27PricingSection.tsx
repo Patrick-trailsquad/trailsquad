@@ -68,8 +68,8 @@ const Ilulissat27PricingSection = () => {
             <AccordionContent className="px-0 pt-2 text-gray-700 text-sm">
               <div>
                 <b>Delt dobbeltværelse</b> er 30.000 DKK per person, og du deler værelset med en anden deltager fra din egen gruppe. Det betyder, at du ikke kan booke et delt værelse, hvis du tilmelder dig alene.<br /><br />
-                <b>Soloværelse</b> er 32.800 DKK per person — du får dit eget værelse dag 1 og dag 3.<br /><br />
-                <b>Nat 2 på Ilimanaq Lodge</b> er for alle en fælles overnatning i delte hytter — uanset om du har valgt delt værelse eller soloværelse. Valget gælder altså hotelnætterne i Ilulissat (nat 1 og 3).<br /><br />
+                <b>Soloværelse</b> er 32.800 DKK per person - du får dit eget værelse dag 1 og dag 3.<br /><br />
+                <b>Nat 2 på Ilimanaq Lodge</b> er for alle en fælles overnatning i delte hytter uanset om du har valgt delt værelse eller soloværelse. Valget gælder altså hotelnætterne i Ilulissat (nat 1 og 3).<br /><br />
                 Moms er inkluderet i alle priser.
               </div>
             </AccordionContent>
