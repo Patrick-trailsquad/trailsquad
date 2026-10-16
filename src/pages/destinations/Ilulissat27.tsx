@@ -5,9 +5,10 @@ import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Fo
 import { motion } from "framer-motion";
 import Ilulissat27Itinerary from "../../components/destinations/ilulissat27/Ilulissat27Itinerary";
 import Ilulissat27Accommodation from "../../components/destinations/ilulissat27/Ilulissat27Accommodation";
-import Ilulissat27WaitlistForm from "../../components/destinations/ilulissat27/Ilulissat27WaitlistForm";
+import Ilulissat27PricingSection from "../../components/destinations/ilulissat27/Ilulissat27PricingSection";
 import ParallaxBackground from "../../components/destinations/ilulissat27/ParallaxBackground";
 import CallMeBackCTA from "../../components/CallMeBackCTA";
+import PaymentSuccessModal from "../../components/destinations/shared/PaymentSuccessModal";
 import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import heroImage from "../../assets/ilulissat27-hero.jpg";
@@ -112,7 +113,7 @@ const Ilulissat27 = () => {
                 onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
                 className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
               >
-                Skriv dig op
+                Book din plads
               </button>
               <button
                 onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
@@ -136,7 +137,7 @@ const Ilulissat27 = () => {
             onClick={() => document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#FFDC00] text-charcoal px-8 py-4 rounded-full font-cabinet font-bold text-lg hover:bg-[#FFDC00]/90 transition-all shadow-lg shadow-[#FFDC00]/20"
           >
-            Skriv dig op
+            Book din plads
           </button>
           <button
             onClick={() => document.getElementById("what-you-get")?.scrollIntoView({ behavior: "smooth" })}
@@ -487,7 +488,7 @@ const Ilulissat27 = () => {
             <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-charcoal mb-4">
               Godt at vide
             </h2>
-            <p className="text-charcoal/60 text-lg">Turen er stadig under planlægning — her er det, vi ved nu.</p>
+            <p className="text-charcoal/60 text-lg">Her er svar på det, de fleste spørger om før turen.</p>
           </div>
 
           <div className="space-y-4">
@@ -498,7 +499,7 @@ const Ilulissat27 = () => {
               },
               {
                 q: "Hvordan kommer vi til Ilulissat?",
-                a: "Vi flyver direkte tur/retur fra København til Ilulissat. Detaljerne omkring afgange lander sammen med prisen.",
+                a: "Vi flyver direkte tur/retur fra København til Ilulissat. De endelige flytider følger med bekræftelsen.",
               },
               {
                 q: "Hvad er midnatskajak?",
@@ -506,7 +507,7 @@ const Ilulissat27 = () => {
               },
               {
                 q: "Hvad koster turen?",
-                a: "Pris og endelig tilmelding åbner senere. Skriv dig op, så får du besked først.",
+                a: "30.000 kr pr. person i delt dobbeltværelse og 32.800 kr i soloværelse — inkl. moms. Du reserverer din plads med 5.000 kr i depositum pr. billet; resten opkræves 60 dage før afrejse. Nat 2 på Ilimanaq Lodge er en fælles overnatning i delte hytter, uanset værelsesvalg.",
               },
             ].map((item, i) => (
               <motion.div
@@ -537,19 +538,21 @@ const Ilulissat27 = () => {
       <section id="final-cta" className="py-16 md:py-24 bg-charcoal">
         <div className="container mx-auto px-6 max-w-xl text-center">
           <div className="inline-flex items-center gap-2 bg-[#FFDC00] text-charcoal px-4 py-2 rounded-full text-sm font-cabinet font-bold mb-6 shadow-md">
-            ÅBNER SENERE
+            TILMELDING ER ÅBEN
           </div>
 
-          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Vær først på listen</h2>
+          <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Book din plads</h2>
           <p className="text-white/60 text-lg mb-10">
-            Pladserne er få. Skriv dig op, så kontakter vi dig, når pris og tilmelding er klar.
+            30.000 DKK for delt dobbeltværelse og 32.800 DKK for soloværelse. Reservér med 5.000 DKK i depositum pr. billet.
           </p>
 
-          <Ilulissat27WaitlistForm />
+          <Ilulissat27PricingSection />
 
           <p className="text-white/40 text-xs text-center mt-6">Vi vender tilbage inden for 48 timer.</p>
         </div>
       </section>
+
+      <PaymentSuccessModal />
 
       <Footer />
     </div>
