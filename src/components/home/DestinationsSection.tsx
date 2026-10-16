@@ -104,7 +104,7 @@ const destinations = [
   },
   {
     image: "/lovable-uploads/mallorca-training-hero.jpg",
-    location: "Træningslejr: Mallorca, Spanien",
+    location: "Træningslejr: Into the Wild Mallorca, Spanien",
     date: "Februar 2027",
     spots: "Åben for tilmelding",
     href: "/destinations/mallorca-training"
