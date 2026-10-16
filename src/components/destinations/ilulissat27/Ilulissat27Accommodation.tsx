@@ -23,7 +23,7 @@ const nights = [
     location: "Ilulissat",
     images: [assetUrl(arctic1), assetUrl(arctic2), assetUrl(falk1), assetUrl(falk2)],
     text:
-      "Vi bor centralt i Ilulissat med udsigt over Diskobugten. Hotel Arctic ligger højt med panorama over isbjergene, mens Hotel Den Hvide Falk ligger tæt på havnen og byens caféer. Vi fordeler squaden på de to hoteller — begge med kort afstand til startlinjen for dagens løbeture.",
+      "Vi bor centralt i Ilulissat med udsigt over Diskobugten. Hotel Arctic ligger højt med panorama over isbjergene, mens Hotel Den Hvide Falk ligger tæt på havnen og byens caféer. Du kan komme med dine præferencer efter at du har booket din plads!",
   },
   {
     night: "Nat 2 · 26. august",
