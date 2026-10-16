@@ -337,13 +337,12 @@ const Ilulissat27 = () => {
                 Vi spiser på Restaurant Egede
               </h2>
               <p className="text-white/70 text-lg leading-relaxed mb-5">
-                Aftenen på dag 2 slutter vi af med middag på Restaurant Egede — restauranten på Ilimanaq Lodge,
+                Aftenen på dag 2 slutter vi af med middag på Restaurant Egede - restauranten på Ilimanaq Lodge,
                 få skridt fra vores hytter. Køkkenet arbejder med grønlandske sæsonråvarer og et kreativt twist,
                 og aftenens signaturmiddag sammensættes efter, hvad naturen omkring bygden giver den dag.
               </p>
               <p className="text-white/70 leading-relaxed mb-8">
-                Rammerne er helt særlige: Restauranten holder til i den gamle koloniale bestyrerbolig fra 1741 —
-                bygget af Paul Egede, søn af missionæren Hans Egede — og er en af Grønlands ældste bygninger.
+                Rammerne er helt særlige: Restauranten holder til i den gamle koloniale bestyrerbolig fra 1741 - bygget af Paul Egede, søn af missionæren Hans Egede - og er en af Grønlands ældste bygninger.
                 Originalbrædder fra 1700-tallet, lærredsvægge og et sejl fra et hvalfangerskib gør middagen til
                 mere end bare et måltid.
               </p>
@@ -366,7 +365,7 @@ const Ilulissat27 = () => {
               <p className="flex items-start gap-2 text-white/45 text-sm">
                 <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span>
-                  Oplys allergier og særlige kosthensyn i god tid inden afrejse — Ilimanaq ligger afsides uden for
+                  Oplys allergier og særlige kosthensyn i god tid inden afrejse - Ilimanaq ligger afsides uden for
                   Ilulissat, og der kan ikke skaffes alternative råvarer med kort varsel.
                 </span>
               </p>
