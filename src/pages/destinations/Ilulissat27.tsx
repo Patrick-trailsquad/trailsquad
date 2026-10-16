@@ -306,20 +306,20 @@ const Ilulissat27 = () => {
               className="relative"
             >
               <img
-                src={assetUrl(restaurantFoodAsset)}
-                alt="Signaturret på Restaurant Egede på Ilimanaq Lodge med rå fisk, spiselige blomster og urter"
-                className="w-full h-[320px] md:h-[520px] object-cover rounded-2xl border-2 border-yellow shadow-2xl"
-                loading="lazy"
-                width={1152}
-                height={928}
-              />
-              <img
                 src={assetUrl(restaurantChefAsset)}
                 alt="Kok i gang med at tilberede grønlandske retter i køkkenet på Restaurant Egede"
-                className="hidden md:block absolute -bottom-10 -right-4 w-56 h-40 object-cover rounded-xl border-2 border-yellow shadow-xl rotate-2"
+                className="w-full h-[320px] md:h-[520px] object-cover rounded-2xl border-2 border-yellow shadow-2xl"
                 loading="lazy"
                 width={1920}
                 height={1283}
+              />
+              <img
+                src={assetUrl(restaurantFoodAsset)}
+                alt="Signaturret på Restaurant Egede på Ilimanaq Lodge med rå fisk, spiselige blomster og urter"
+                className="hidden md:block absolute -bottom-10 -right-4 w-56 h-40 object-cover rounded-xl border-2 border-yellow shadow-xl rotate-2"
+                loading="lazy"
+                width={1152}
+                height={928}
               />
             </motion.div>
 
