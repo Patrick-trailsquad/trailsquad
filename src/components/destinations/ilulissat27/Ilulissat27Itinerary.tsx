@@ -1,4 +1,4 @@
-import { Plane, Coffee, UtensilsCrossed, Footprints, Mountain, Fish, Ship, Waves, Moon, Sun, MapPin } from "lucide-react";
+import { Plane, Coffee, UtensilsCrossed, Footprints, Mountain, Ship, Waves, Moon, Sun, MapPin } from "lucide-react";
 
 const days = [
   {
@@ -9,7 +9,7 @@ const days = [
       { icon: Plane, text: "Direkte fly tur/retur fra København til Ilulissat" },
       { icon: Coffee, text: "Check-in på Hotel Arctic eller Hotel Den Hvide Falk" },
       { icon: Footprints, text: "Første løbetur langs isfjorden" },
-      { icon: Fish, text: "Fisketur i isfjorden — middag af egen fangst" },
+      { icon: Waves, text: "Hvalsafari i isfjorden" },
     ],
   },
   {
@@ -62,7 +62,7 @@ const Ilulissat27Itinerary = ({ variant = "default" }: Ilulissat27ItineraryProps
           4 dage i Ilulissat
         </h2>
         <p className={`text-center text-lg mb-12 max-w-2xl mx-auto ${isOverlay ? "text-white/70" : "text-charcoal/70"}`}>
-          Løb hver dag, fisketur i fjorden og kajak mellem isbjergene
+          Løb hver dag, hvalsafari i fjorden og kajak mellem isbjergene
         </p>
 
         <div className="relative max-w-2xl mx-auto">

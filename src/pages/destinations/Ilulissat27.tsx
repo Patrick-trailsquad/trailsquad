@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves, Fish, MapPin } from "lucide-react";
+import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import Ilulissat27Itinerary from "../../components/destinations/ilulissat27/Ilulissat27Itinerary";
 import Ilulissat27Accommodation from "../../components/destinations/ilulissat27/Ilulissat27Accommodation";
@@ -11,7 +11,7 @@ import Footer from "../../components/Footer";
 import { useIsMobile } from "../../hooks/use-mobile";
 import heroImage from "../../assets/ilulissat27-hero.jpg";
 import kayakAsset from "../../assets/ilulissat-kayak.jpg.asset.json";
-import fishingAsset from "../../assets/ilulissat-fishing.jpg.asset.json";
+import whaleSafariAsset from "../../assets/kangnu-whale-safari.jpg";
 import day2TourAsset from "../../assets/ilulissat-day2-tour.jpg.asset.json";
 
 import { assetUrl } from "../../lib/assetUrl";
@@ -77,7 +77,7 @@ const Ilulissat27 = () => {
             transition={{ delay: 0.5 }}
             className="text-white/80 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed"
           >
-            4 dages træningslejr i Ilulissat med løb hver dag, fisketur i fjorden og midnatskajak mellem
+            4 dages træningslejr i Ilulissat med løb hver dag, hvalsafari i fjorden og midnatskajak mellem
             isbjergene.
           </motion.p>
 
@@ -90,7 +90,7 @@ const Ilulissat27 = () => {
             {[
               { icon: Snowflake, text: "UNESCO-isfjord som baggrund" },
               { icon: Footprints, text: "Løb alle fire dage" },
-              { icon: Ship, text: "Fisketur og midnatskajak" },
+              { icon: Ship, text: "Hvalsafari og midnatskajak" },
               { icon: Users, text: "Lille dansk løbegruppe" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl px-3 py-4">
@@ -315,7 +315,7 @@ const Ilulissat27 = () => {
                 icon: Ship,
                 title: "Oplevelser undervejs",
                 items: [
-                  "Fisketur i isfjorden",
+                  "Hvalsafari i isfjorden",
                   "Midnatskajak mellem isbjergene",
                   "Bådtur til bygden Ilimanaq",
                   "Grønlandsk mad og lokale råvarer",
@@ -359,27 +359,27 @@ const Ilulissat27 = () => {
         </div>
       </section>
 
-      {/* ─── FISKETUR DAG 2 (parallax) ─── */}
+      {/* ─── HVALSAFARI DAG 1 (parallax) ─── */}
       <section className="relative w-full overflow-hidden">
-        <ParallaxBackground image={assetUrl(fishingAsset)} />
+        <ParallaxBackground image={whaleSafariAsset} />
 
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-40 max-w-3xl text-center">
           <p className="text-[#FFDC00] font-cabinet font-semibold text-sm tracking-widest uppercase mb-4">
             DAG 1 · EFTERMIDDAG
           </p>
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
-            Fisketur og middag af egen fangst
+            Hvalsafari i isfjorden
           </h2>
           <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-10">
-            Vi sejler gennem isfjorden til Ilimanaq, kaster stængerne ud og fisker efter dagens måltid. Fangsten tager vi med
-            tilbage, hvor den bliver tilberedt og serveret som aftensmad — helt frisk og helt vores egen.
+            Vi sejler ud i isfjorden, hvor hvalerne kommer tæt på båden. Vi holder øje med pusterne ved overfladen —
+            og er klar med kameraet, når de bryder vandet mellem isbjergene.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
             {[
               { icon: Ship, text: "Sejltur gennem isfjorden" },
-              { icon: Fish, text: "Fang din egen middag" },
-              { icon: Users, text: "Fælles måltid af dagens fangst" },
+              { icon: Waves, text: "Hvalsafari blandt isbjerge" },
+              { icon: Users, text: "Oplevelse med hele squad'en" },
             ].map((item, i) => (
               <motion.div
                 key={i}
