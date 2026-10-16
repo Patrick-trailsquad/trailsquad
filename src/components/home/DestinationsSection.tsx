@@ -125,7 +125,7 @@ const destinations = [
   },
   {
     image: "/lovable-uploads/ilulissat27-hero.jpg",
-    location: "Ilulissat Running Race, Grønland",
+    location: "Træningslejr: Ice Ice Baby\nIlulissat, Grønland",
     date: "August 2027",
     spots: "Åben for tilmelding",
     href: "/destinations/ilulissat27",
