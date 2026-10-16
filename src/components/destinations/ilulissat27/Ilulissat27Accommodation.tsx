@@ -36,7 +36,7 @@ const nights = [
       assetUrl(ilimanaq4),
     ],
     text:
-      "En af Grønlands mest specielle overnatninger: moderne hytter på pæle ude ved fjorden i den lille bygd Ilimanaq. Store vinduer mod isbjergene, stilhed hele natten og middag lavet på lokale råvarer — inklusiv dagens fangst fra vores egen fisketur.",
+      "En af Grønlands mest specielle overnatninger: moderne hytter på pæle ude ved fjorden i den lille bygd Ilimanaq. Store vinduer mod isbjergene, stilhed hele natten og middag lavet på lokale råvarer — med chancen for at se hvaler, når vi sejler ud på hvalsafari.",
   },
   {
     night: "Nat 3 · 27. august",
