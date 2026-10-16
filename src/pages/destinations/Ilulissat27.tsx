@@ -293,6 +293,88 @@ const Ilulissat27 = () => {
         </div>
       </section>
 
+      {/* ─── RESTAURANT EGEDE ─── */}
+      <section className="py-16 md:py-24 bg-charcoal">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={0}
+              className="relative"
+            >
+              <img
+                src={assetUrl(restaurantInteriorAsset)}
+                alt="Spisesal i Restaurant Egede på Ilimanaq Lodge"
+                className="w-full h-[320px] md:h-[520px] object-cover rounded-2xl border-2 border-yellow shadow-2xl"
+                loading="lazy"
+                width={1536}
+                height={2048}
+              />
+              <img
+                src={assetUrl(restaurantChefAsset)}
+                alt="Kok i gang med at tilberede grønlandske retter i køkkenet på Restaurant Egede"
+                className="hidden md:block absolute -bottom-10 -right-4 w-56 h-40 object-cover rounded-xl border-2 border-yellow shadow-xl rotate-2"
+                loading="lazy"
+                width={1920}
+                height={1283}
+              />
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={1}
+            >
+              <p className="text-yellow font-cabinet font-semibold text-sm tracking-widest uppercase mb-4">
+                Dag 2 · aftenmad i Ilimanaq
+              </p>
+              <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-6">
+                Vi spiser på Restaurant Egede
+              </h2>
+              <p className="text-white/70 text-lg leading-relaxed mb-5">
+                Aftenen på dag 2 slutter vi af med middag på Restaurant Egede — restauranten på Ilimanaq Lodge,
+                få skridt fra vores hytter. Køkkenet arbejder med grønlandske sæsonråvarer og et kreativt twist,
+                og aftenens signaturmiddag sammensættes efter, hvad naturen omkring bygden giver den dag.
+              </p>
+              <p className="text-white/70 leading-relaxed mb-8">
+                Rammerne er helt særlige: Restauranten holder til i den gamle koloniale bestyrerbolig fra 1741 —
+                bygget af Paul Egede, søn af missionæren Hans Egede — og er en af Grønlands ældste bygninger.
+                Originalbrædder fra 1700-tallet, lærredsvægge og et sejl fra et hvalfangerskib gør middagen til
+                mere end bare et måltid.
+              </p>
+
+              <ul className="space-y-4 mb-8">
+                {[
+                  { icon: UtensilsCrossed, text: "Signaturmiddag sammensat efter sæsonens råvarer" },
+                  { icon: Sandwich, text: "Luksus madpakke med ud på løbeturen" },
+                  { icon: Landmark, text: "Middag i historiske rammer fra 1741" },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-white/75">
+                    <span className="w-8 h-8 rounded-full bg-yellow/15 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-4 h-4 text-yellow" />
+                    </span>
+                    <span className="leading-snug pt-1">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="flex items-start gap-2 text-white/45 text-sm">
+                <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>
+                  Oplys allergier og særlige kosthensyn i god tid inden afrejse — Ilimanaq ligger afsides uden for
+                  Ilulissat, og der kan ikke skaffes alternative råvarer med kort varsel.
+                </span>
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── WHAT YOU GET ─── */}
       <section id="what-you-get" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
