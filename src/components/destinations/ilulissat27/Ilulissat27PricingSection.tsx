@@ -86,8 +86,8 @@ const Ilulissat27PricingSection = () => {
         depositPercentage={50}
         onSubmitOverride={handleStripeCheckout}
         hideDistance={true}
-        customInfoText="Reservér din plads ved at betale 5.000 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse. Bemærk: Nat 2 på Ilimanaq Lodge er en fælles overnatning i delte hytter, uanset værelsesvalg."
-        getSubmitButtonLabel={(p) => `Betal ${(5000 * p).toLocaleString('da-DK')} DKK i depositum`}
+        customInfoText="Reservér din plads ved at betale 10.000 DKK i depositum pr. billet. Vi vender personligt tilbage inden for 48 timer på hverdage med en bekræftelse, og det resterende beløb opkræves 60 dage før afrejse. Bemærk: Nat 2 på Ilimanaq Lodge er en fælles overnatning i delte hytter, uanset værelsesvalg."
+        getSubmitButtonLabel={(p) => `Betal ${(10000 * p).toLocaleString('da-DK')} DKK i depositum`}
       />
       <div className="mt-4">
         <CallMeBackCTA />

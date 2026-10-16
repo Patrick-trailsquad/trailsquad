@@ -8,6 +8,7 @@ const corsHeaders = {
 };
 
 const DEPOSIT_PRICE_ID = "price_1TjciOA7DrFBs7Aa0t4eEqkR";
+const ILULISSAT_PRICE_ID = "price_1URDSyA7DrFBs7Aa5OmJ5N2p";
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
@@ -110,8 +111,9 @@ serve(async (req) => {
         ? returnPath
         : "/";
 
-    const priceId = DEPOSIT_PRICE_ID;
-    const depositPerTicket = "5000";
+    const isIlulissat = destinationName.toLowerCase().includes("ilulissat");
+    const priceId = isIlulissat ? ILULISSAT_PRICE_ID : DEPOSIT_PRICE_ID;
+    const depositPerTicket = isIlulissat ? "10000" : "5000";
 
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
