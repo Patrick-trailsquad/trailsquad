@@ -51,7 +51,7 @@ export const SHARE_META: ShareMeta[] = [
     path: "/destinations/ilulissat27",
     title: "Ilulissat, Grønland 2027 – Trail Squad",
     description:
-      "Løb ved Ilulissat Isfjord, fisketur og midnatskajak mellem isbjergene. 25.-28. august 2027 med Trail Squad.",
+      "Løb ved Ilulissat Isfjord, hvalsafari og midnatskajak mellem isbjergene. 25.-28. august 2027 med Trail Squad.",
     image: "/lovable-uploads/ilulissat27-hero.jpg",
   },
   {
