@@ -1,6 +1,19 @@
-import { Plane, Coffee, UtensilsCrossed, Footprints, Mountain, Ship, Waves, Moon, Sun, MapPin } from "lucide-react";
+import { Plane, Coffee, UtensilsCrossed, Footprints, Mountain, Ship, Waves, Moon, Sun, MapPin, type LucideIcon } from "lucide-react";
 
-const days = [
+type ItineraryItem = {
+  icon: LucideIcon;
+  text: string;
+  targetId?: string;
+};
+
+type ItineraryDay = {
+  day: number;
+  date: string;
+  title: string;
+  items: ItineraryItem[];
+};
+
+const days: ItineraryDay[] = [
   {
     day: 1,
     date: "onsdag 25. august 2027",
@@ -20,6 +33,7 @@ const days = [
       { icon: Ship, text: "Sejltur gennem isfjorden til Ilimanaq" },
       { icon: MapPin, text: "Guidet rundtur i Ilimanaq bygden med lokal" },
       { icon: Footprints, text: "Løbetur i det kuperede landskab omkring bygden" },
+      { icon: UtensilsCrossed, text: "Lækker middag i Restaurant Egede", targetId: "restaurant" },
       { icon: Coffee, text: "Overnatning i hytterne på Ilimanaq Lodge" },
     ],
   },
@@ -89,7 +103,22 @@ const Ilulissat27Itinerary = ({ variant = "default" }: Ilulissat27ItineraryProps
                     {day.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-3">
                         <item.icon className={`w-4 h-4 flex-shrink-0 ${isOverlay ? "text-white/50" : "text-charcoal/40"}`} />
-                        <span className={isOverlay ? "text-white/85" : "text-charcoal/80"}>{item.text}</span>
+                        {item.targetId ? (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const id = item.targetId;
+                              if (id) document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }}
+                            className={`text-left underline decoration-dotted underline-offset-4 transition-colors hover:text-[#FFDC00] ${
+                              isOverlay ? "text-white/85" : "text-charcoal/80"
+                            }`}
+                          >
+                            {item.text}
+                          </button>
+                        ) : (
+                          <span className={isOverlay ? "text-white/85" : "text-charcoal/80"}>{item.text}</span>
+                        )}
                       </li>
                     ))}
                   </ul>
