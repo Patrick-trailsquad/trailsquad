@@ -15,7 +15,7 @@ import heroImage from "../../assets/ilulissat27-hero.jpg";
 import kayakAsset from "../../assets/ilulissat-kayak.jpg.asset.json";
 import whaleSafariAsset from "../../assets/kangnu-whale-safari.jpg";
 import day2TourAsset from "../../assets/ilulissat-day2-tour.jpg.asset.json";
-import restaurantInteriorAsset from "../../assets/ilimanaq-restaurant-interior.jpg.asset.json";
+import restaurantFoodAsset from "../../assets/ilimanaq-restaurant-food.webp.asset.json";
 import restaurantChefAsset from "../../assets/ilimanaq-restaurant-chef.jpg.asset.json";
 
 import { assetUrl } from "../../lib/assetUrl";
@@ -306,12 +306,12 @@ const Ilulissat27 = () => {
               className="relative"
             >
               <img
-                src={assetUrl(restaurantInteriorAsset)}
-                alt="Spisesal i Restaurant Egede på Ilimanaq Lodge"
+                src={assetUrl(restaurantFoodAsset)}
+                alt="Signaturret på Restaurant Egede på Ilimanaq Lodge med rå fisk, spiselige blomster og urter"
                 className="w-full h-[320px] md:h-[520px] object-cover rounded-2xl border-2 border-yellow shadow-2xl"
                 loading="lazy"
-                width={1536}
-                height={2048}
+                width={1152}
+                height={928}
               />
               <img
                 src={assetUrl(restaurantChefAsset)}
