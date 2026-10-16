@@ -1,7 +1,7 @@
 import { usePageTitle } from "../../hooks/usePageTitle";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves, MapPin } from "lucide-react";
+import { ArrowLeft, CheckCircle, Users, Shield, ChevronDown, Snowflake, Ship, Footprints, Mountain, Moon, Waves, MapPin, UtensilsCrossed, Sandwich, Landmark, Info } from "lucide-react";
 import { motion } from "framer-motion";
 import Ilulissat27Itinerary from "../../components/destinations/ilulissat27/Ilulissat27Itinerary";
 import Ilulissat27Accommodation from "../../components/destinations/ilulissat27/Ilulissat27Accommodation";
@@ -15,6 +15,8 @@ import heroImage from "../../assets/ilulissat27-hero.jpg";
 import kayakAsset from "../../assets/ilulissat-kayak.jpg.asset.json";
 import whaleSafariAsset from "../../assets/kangnu-whale-safari.jpg";
 import day2TourAsset from "../../assets/ilulissat-day2-tour.jpg.asset.json";
+import restaurantInteriorAsset from "../../assets/ilimanaq-restaurant-interior.jpg.asset.json";
+import restaurantChefAsset from "../../assets/ilimanaq-restaurant-chef.jpg.asset.json";
 
 import { assetUrl } from "../../lib/assetUrl";
 
