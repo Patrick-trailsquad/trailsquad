@@ -507,7 +507,7 @@ const Ilulissat27 = () => {
               },
               {
                 q: "Hvad koster turen?",
-                a: "30.000 kr pr. person i delt dobbeltværelse og 32.800 kr i soloværelse — inkl. moms. Du reserverer din plads med 5.000 kr i depositum pr. billet; resten opkræves 60 dage før afrejse. Nat 2 på Ilimanaq Lodge er en fælles overnatning i delte hytter, uanset værelsesvalg.",
+                a: "30.000 kr pr. person i delt dobbeltværelse og 32.800 kr i soloværelse — inkl. moms. Du reserverer din plads med 10.000 kr i depositum pr. billet; resten opkræves 60 dage før afrejse. Nat 2 på Ilimanaq Lodge er en fælles overnatning i delte hytter, uanset værelsesvalg.",
               },
             ].map((item, i) => (
               <motion.div
@@ -543,7 +543,7 @@ const Ilulissat27 = () => {
 
           <h2 className="font-cabinet text-3xl md:text-5xl font-bold text-white mb-4">Book din plads</h2>
           <p className="text-white/60 text-lg mb-10">
-            30.000 DKK for delt dobbeltværelse og 32.800 DKK for soloværelse. Reservér med 5.000 DKK i depositum pr. billet.
+            30.000 DKK for delt dobbeltværelse og 32.800 DKK for soloværelse. Reservér med 10.000 DKK i depositum pr. billet.
           </p>
 
           <Ilulissat27PricingSection />
