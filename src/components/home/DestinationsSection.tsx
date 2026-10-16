@@ -124,6 +124,13 @@ const destinations = [
     href: "/destinations/hengill27",
   },
   {
+    image: "/lovable-uploads/ilulissat27-hero.jpg",
+    location: "Ilulissat Running Race, Grønland",
+    date: "August 2027",
+    spots: "Åben for tilmelding",
+    href: "/destinations/ilulissat27",
+  },
+  {
     image: INFINITE_TRAILS_27_HERO,
     location: "Infinite Trails, Østrig",
     date: "September 2027",
