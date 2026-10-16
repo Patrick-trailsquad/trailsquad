@@ -137,9 +137,6 @@ const Footer = () => {
                       <a href="/squadtraining" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                         Squad Training
                       </a>
-                      <a href="/destinations/fyri27" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                        Fyri Trail
-                      </a>
 
                     </CollapsibleContent>
                   </Collapsible>
@@ -159,9 +156,6 @@ const Footer = () => {
                     </a>
                     <a href="/squadtraining" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
                       Squad Training
-                    </a>
-                    <a href="/destinations/fyri27" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                      Fyri Trail
                     </a>
 
                   </>
