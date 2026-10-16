@@ -144,7 +144,7 @@ const Footer = () => {
                         Mallorca Træningslejr
                       </a>
                       <a href="/destinations/ilulissat27" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                        Ilulissat Træningslejr
+                        Træningslejr: Ilulissat
                       </a>
 
                     </CollapsibleContent>
@@ -173,7 +173,7 @@ const Footer = () => {
                       Mallorca Træningslejr
                     </a>
                     <a href="/destinations/ilulissat27" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
-                      Ilulissat Træningslejr
+                      Træningslejr: Ilulissat
                     </a>
 
                   </>
