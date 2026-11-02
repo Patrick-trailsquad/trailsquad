@@ -210,15 +210,22 @@ Så vil vores trail træningssessions være noget for dig!</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mt-12 px-2 md:px-0">
-              {trainingSessions.map((session) => (
+              {trainingSessions.map((session) => {
+                const isPast = isPastSession(session);
+                return (
                 <div
                   key={session.title}
-                  onClick={() => handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace)}
-                  className="bg-stone rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col"
+                  onClick={isPast ? undefined : () => handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace)}
+                  className={`bg-stone rounded-lg overflow-hidden shadow-lg flex flex-col ${isPast ? "opacity-50 grayscale pointer-events-none" : "transition-transform duration-300 hover:scale-105 cursor-pointer"}`}
                 >
                   <div className="relative h-80 bg-charcoal/20">
                     <img src={session.image} alt={`${session.title} – ${session.location}`} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+                    {isPast && (
+                      <span className="absolute top-3 right-3 z-10 bg-charcoal text-white text-xs font-cabinet font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
+                        Overstået
+                      </span>
+                    )}
                     <h3 className="font-cabinet text-2xl font-bold text-white mb-0 absolute bottom-2 left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">
                       {session.title}<br />[{session.month}]
                     </h3>
@@ -237,13 +244,15 @@ Så vil vores trail træningssessions være noget for dig!</p>
                         event.stopPropagation();
                         handleSessionRegistration(session.title, session.date, session.meetingTime, session.endTime, session.location, session.meetingPlace);
                       }}
-                      className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black"
+                      disabled={isPast}
+                      className="w-full bg-[#FFDC00] text-black px-8 py-4 rounded-full font-cabinet font-medium hover:bg-[#FFDC00]/90 transition-colors duration-300 border-2 border-black disabled:cursor-not-allowed"
                     >
-                      Tilmeld
+                      {isPast ? "Overstået" : "Tilmeld"}
                     </button>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
 
           </div>
