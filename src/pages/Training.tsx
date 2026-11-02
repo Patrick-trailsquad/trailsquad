@@ -15,6 +15,7 @@ import squadTraining11ImageAsset from "@/assets/squad-training-11.png.asset.json
 import squadTraining13ImageAsset from "@/assets/squad-training-13.png.asset.json";
 import squadTraining14ImageAsset from "@/assets/squad-training-14.png.asset.json";
 import { assetUrl } from "@/lib/assetUrl";
+import { isPastSession } from "@/lib/trainingSessionStatus";
 
 const trainingSessions = [
   {
