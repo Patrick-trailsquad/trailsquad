@@ -24,9 +24,9 @@ const destinations = [
 const DestinationLinks = () => {
   const navigateAndScroll = useNavigateAndScroll();
   
-  // Filter out Vesuvio, Chianti, Istria, La Boucle and Ribeira Sacra 2026 destinations
+  // Filter out Vesuvio, Chianti, Istria, La Boucle, Ribeira Sacra 2026, Mallorca and Transylvania 2027 destinations
   const visibleDestinations = destinations.filter(dest => 
-    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/la-boucle-de-l-etoile" && dest.href !== "/destinations/ribeira-sacra-2026"
+    dest.href !== "/destinations/vesuvio" && dest.href !== "/destinations/chianti" && dest.href !== "/destinations/istria" && dest.href !== "/destinations/la-boucle-de-l-etoile" && dest.href !== "/destinations/ribeira-sacra-2026" && dest.href !== "/destinations/mallorca-training" && dest.href !== "/destinations/transylvania27"
   );
 
   // Group by year, preserving the chronological order of the list
